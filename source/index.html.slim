@@ -5,8 +5,21 @@ title: Joshua Ogle
 .top
   section
     h1 Joshua Ogle
-    h2 Design Director, Developer, Co-founder of #{link_to "Brightbit", "http://brightbit.com"}
-    p I help make the internet better for humans. I also write articles & give talks on all things web.
+    h2 Desiger, Developer, Co-founder of #{link_to "Brightbit", "http://brightbit.com"}
+    p I help make the internet better for humans
+    ul
+      li
+        = link_to "http://dribbble.com/joshuaogle", target: "_new", class: "ss-social-dribbble" do
+          span Dribbble
+      li
+        = link_to "http://github.com/joshuaogle", target: "_new", class: "ss-social-octocat" do
+          span Github
+      li
+        = link_to "http://twitter.com/joshuaogle", target: "_new", class: "ss-social-twitter" do
+          span Twitter
+      li
+        = link_to "mailto:joshua@joshuaogle.com", class: "ss-send" do
+          span Email
 
 section.projects
   h2.section-title Just launched
