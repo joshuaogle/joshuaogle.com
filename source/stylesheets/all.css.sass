@@ -1,0 +1,137 @@
+@import 'bourbon'
+@import 'jquery.ui.all'
+@import 'jquery.fullPage'
+
+@charset "utf-8"
+
+// Settings
+$offwhite: #f2efed
+$brown: #403d39
+$red: #BF370A
+$gray: #AAA
+$text-color: mix($brown, $offwhite, 50%)
+$link-color: $red
+$link-hover: lighten($red, 10%)
+$break-small: 480px
+$break-medium: 1024px
+$break-large: 1600px
+
+@import 'http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800'
+$sans-serif: "Open Sans", Helvetica, sans-serif
+
+
+// Global
+html, body
+  background: $offwhite
+
+body
+  color: $text-color
+  font-family: $sans-serif
+  font-size: 125%
+
+ul
+  margin: 0 0 1em
+  padding: 0 0 0 0.5em
+  list-style: inside square
+  &.list-simple
+    list-style: none
+    padding: 0
+  &.list-inline
+    @extend .list-simple
+    li
+      display: inline-block
+      margin: 0 0.5em
+
+img
+  display: block
+  max-width: 100%
+
+#{headings()}
+  margin: 0 0 1em
+  font-weight: 300
+
+p
+  margin: 0 0 1em
+
+a
+  color: $link-color
+  text-decoration: none
+  +transition(color, 250ms)
+  &:hover
+    color: $link-hover
+    text-decoration: none
+
+.container
+  +clearfix
+  max-width: 58em
+  margin: 0 auto
+  padding: 5em 1em
+  //
+    &:before
+      content: ""
+      display: block
+      position: fixed
+      top: 0
+      left: 0
+      right: 0
+      height: 5px
+      background: $brown
+
+section, .page
+  @extend .container
+
+.section-title
+  text-align: center
+  font-size: 150%
+  @media only screen and (max-width: $break-medium)
+    font-size: 100%
+
+.top
+  +radial-gradient(mix($brown, white, 90%), $brown)
+  color: white
+  text-align: center
+  border-bottom: 1px solid white
+  a
+    color: $link-hover
+
+
+
+// Footer
+footer
+  @extend .container
+  padding: 1em
+  color: $gray
+  text-align: center
+  ul
+    @extend .list-inline
+
+
+
+// Home
+section.dribbble
+  max-width: 1800px
+
+ul#dribbble
+  @extend .list-inline
+  li
+    margin: 0 1% 1%
+    width: 23%
+    h3
+      @media only screen and (max-width: $break-medium)
+        font-size: 75%
+      @media only screen and (max-width: $break-small)
+        display: none
+  img
+    overflow: hidden
+    border-radius: 5px
+    +box-shadow(0 2px 3px -1px rgba(black, 0.35))
+  h3
+    height: 1.5em
+    font-size: 100%
+    line-height: 1.5em
+    text-align: center
+    font-weight: 300
+    margin: 0.5em 0 2em
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
