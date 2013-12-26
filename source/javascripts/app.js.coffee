@@ -13,9 +13,3 @@ $ ->
     $.jribbble.getShotsByPlayerId 'joshuaogle', renderDribbbleShots,
       page: 1
       per_page: 12
-
-  if $("body.index")
-    $.fn.fullpage
-      scrollingSpeed: 500
-      anchors: ['top', 'projects', 'dribbble']
-      slidesColor: ['#403d39', '#18a5cc', '']

@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 gem 'bourbon',                      '~> 3.1.8'            # Sass mixins gem
 gem 'jquery-middleman',             '~> 3.0.4'            # jQuery yo
-gem 'jquery-ui-middleman',          '~> 4.1.0'
 gem 'middleman',                    '~> 3.1.4'
 gem 'middleman-blog',               '~> 3.3.0'
 gem 'middleman-gh-pages',           '~> 0.0.2'
