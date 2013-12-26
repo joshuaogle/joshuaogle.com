@@ -6,8 +6,8 @@
 
 // Settings
 $offwhite: #f2efed
-$brown: #403a33
-$red: #bf460a
+$brown: #33312f
+$red: #bf370a
 $gray: #AAA
 $blue: #17a1e5
 $text-color: mix($brown, $offwhite, 50%)
@@ -73,6 +73,8 @@ a
   padding: 5em 1em
   &:before
     content: ""
+    position: absolute
+    z-index: 100
     display: block
     position: fixed
     top: 0
@@ -92,27 +94,74 @@ section, .page
 
 .top
   height: 100%
+  width: 100%
   border-bottom: 1px solid white
-  background: $red
+  background: $brown
   color: white
   text-align: center
-  +box(vertical, center)
+  +box(vertical, center, center)
   .no-flexbox &
     padding-top: 20%
+
+.btn
+  display: inline-block
+  margin: 0
+  padding: .75em 2em .65em
+  border: none
+  border-radius: 5px
+  background: white
+  background-repeat: repeat-x
+  font-size: .75em
+  line-height: 2em
+  text-transform: uppercase
+  text-shadow: none
+  color: $link-color
+  &:hover
+    color: lighten($link-color, 10%)
+  &.btn-primary
+    border: none
+    background: $link-color
+    color: #fff
+    text-shadow: none
+    &:hover
+      background: lighten($link-color, 2%)
+
+.btn-large
+  font-size: 1em
+  line-height: 1em
+  padding: 1em
+
+.btn-small
+  padding: .25em 1.5em .2em
+
+.btn-outline
+  background: none
+  border: 2px solid $link-color
+  &:hover
+    border: 2px solid lighten($link-color, 10%)
 
 
 
 // Header
 header
-  padding: 1em 2em
-  h1.logo a
-    display: block
-    overflow: hidden
-    white-space: nowrap
-    text-indent: 1000%
-    width: 50px
-    height: 50px
-    background: image-url("logo-header.svg") no-repeat
+  margin-top: 0.5em
+  display: block
+  h1.logo
+    a
+      display: block
+      height: 70px
+      color: white
+      font-size: 35px
+      line-height: 70px
+      vertical-align: top
+      color: mix(white, $brown)
+      &:before
+        content: ""
+        display: inline-block
+        height: 70px
+        width: 70px
+        margin-right: 10px
+        background: image-url("logo-header.svg") 10px 10px no-repeat
 
 
 
@@ -135,6 +184,8 @@ body.index
   header
     position: absolute
     z-index: 2
+    .logo a:before
+      background-image: image-url("logo-header-top.svg")
 
   .top
     position: relative
@@ -149,9 +200,11 @@ body.index
       color: $text-color
       overflow: hidden
 
+    h1, h2, p
+      margin: 0.25em
+
     h1
       font-size: 200%
-      margin: 0.25em 0
       color: $brown
 
     h2
@@ -169,9 +222,8 @@ body.index
       li
         position: relative
         z-index: 1
-        width: 21%
+        width: 25%
         margin: 0
-        padding: 2%
         overflow: hidden
         &:after
           content: ""
@@ -182,14 +234,30 @@ body.index
           right: 0
           width: 1px
           +radial-gradient(circle at 50% 50%, #ddd, white)
-          &:last-child
-            display: none
+        &:last-child:after
+          display: none
         a
-          color: $red
+          display: block
+          padding: 0.5em 2%
+          color: $link-color
           &:before
             padding: 0
+          &:hover
+            color: $link-hover
         span
           display: none
+
+    .scroll-link
+      position: absolute
+      z-index: 2
+      bottom: 2em
+      left: 50%
+      width: 6em
+      margin-left: -5em
+      border: 1px solid rgba(white, 0.5)
+      font-size: .6em
+      text-align: center
+      color: white
 
 section.dribbble
   max-width: 1800px

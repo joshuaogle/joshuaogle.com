@@ -7,23 +7,25 @@
 html:hover [class^="ss-"]
   -ms-zoom: 1
 
-.ss-icon, [class^="ss-"], [class*=" ss-"]
+.ss-icon, [class^="ss-"]:before, [class^="ss-"].right:after, [class*=" ss-"]:before, [class*=" ss-"].right:after
   vertical-align: middle
-  &:before, &.right:after
-    font-family: "SSStandard"
-    font-style: normal
-    font-weight: normal
-    text-decoration: none
-    white-space: nowrap
-    text-rendering: optimizeLegibility
-    -moz-font-feature-settings: "liga=1"
-    -moz-font-feature-settings: "liga"
-    -ms-font-feature-settings: "liga" 1
-    -o-font-feature-settings: "liga"
-    font-feature-settings: "liga"
-    -webkit-font-smoothing: antialiased
-    padding-right: .5em
-    vertical-align: middle
+  font-family: "SSStandard"
+  font-style: normal
+  font-weight: normal
+  text-decoration: none
+  white-space: nowrap
+  text-rendering: optimizeLegibility
+  -moz-font-feature-settings: "liga=1"
+  -moz-font-feature-settings: "liga"
+  -ms-font-feature-settings: "liga" 1
+  -o-font-feature-settings: "liga"
+  font-feature-settings: "liga"
+  -webkit-font-smoothing: antialiased
+  padding-right: .5em
+  vertical-align: middle
+
+.ss-icon
+  padding: 0
 
 [class^="ss-"], [class*=" ss-"]
   &.right

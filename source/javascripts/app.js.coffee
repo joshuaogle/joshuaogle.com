@@ -13,3 +13,10 @@ $ ->
     $.jribbble.getShotsByPlayerId 'joshuaogle', renderDribbbleShots,
       page: 1
       per_page: 12
+
+  replaceSVG = do ->
+    unless Modernizr.svg
+      $("img.svg").each ->
+        img = $(this)
+        png_src = img.attr("src").replace(".svg", ".png")
+        img.attr("src", png_src)
