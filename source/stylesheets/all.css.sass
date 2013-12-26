@@ -21,6 +21,8 @@ $sans-serif: "Open Sans", Helvetica, sans-serif
 // Global
 html, body
   background: $offwhite
+  min-height: 100%
+  height: 100%
 
 body
   color: $text-color
@@ -85,10 +87,14 @@ section, .page
     font-size: 100%
 
 .top
+  height: 100%
+  border-bottom: 1px solid white
   +radial-gradient(mix($brown, white, 90%), $brown)
   color: white
   text-align: center
-  border-bottom: 1px solid white
+  +box(vertical, center)
+  .no-flexbox &
+    padding-top: 20%
   a
     color: $link-hover
 
