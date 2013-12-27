@@ -1,5 +1,7 @@
 $ ->
 
+  $.stellar()
+
   if $("#dribbble").length > 0
     renderDribbbleShots = (data) ->
       html = ''
