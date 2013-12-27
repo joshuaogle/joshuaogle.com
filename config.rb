@@ -12,3 +12,9 @@ configure :build do
   activate :relative_assets
   set :relative_links, true
 end
+
+activate :deploy do |deploy|
+  deploy.method = :git
+  deploy.remote   = "deploy"
+  deploy.branch   = "master"
+end
