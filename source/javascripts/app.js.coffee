@@ -20,3 +20,14 @@ $ ->
         img = $(this)
         png_src = img.attr("src").replace(".svg", ".png")
         img.attr("src", png_src)
+
+  $(".scroll-link").click (event) ->
+    event.preventDefault()
+    full_url = @href
+    parts = full_url.split("#")
+    trgt = parts[1]
+    target_offset = $("#" + trgt).offset()
+    target_top = target_offset.top
+    $("html, body").animate
+      scrollTop: target_top
+
