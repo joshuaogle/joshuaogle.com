@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem "rake",                         '~> 10.0.3',          :require => false
 gem 'bourbon',                      '~> 3.1.8'            # Sass mixins gem
 gem 'jquery-middleman',             '~> 3.0.4'            # jQuery yo
 gem 'middleman',                    '~> 3.1.4'
