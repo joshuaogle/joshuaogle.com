@@ -97,7 +97,7 @@ section, .page
   width: 100%
   border-bottom: 1px solid white
   background: $brown
-  color: white
+  +radial-gradient(lighten($brown, 10%), $brown)
   text-align: center
   +box(vertical, center, center)
   .no-flexbox &
@@ -145,6 +145,7 @@ section, .page
 // Header
 header
   margin-top: 0.5em
+  padding: 1em
   display: block
   h1.logo
     a
@@ -190,34 +191,28 @@ body.index
   .top
     position: relative
     z-index: 1
-    padding: 0 20px
-
-    section
-      max-width: ($break-small - 40px)
-      border-radius: 8px
-      padding: 0
-      background: white
-      color: $text-color
-      overflow: hidden
-
-    h1, h2, p
-      margin: 0.25em
-
-    h1
-      font-size: 200%
-      color: $brown
 
     h2
-      font-size: 100%
+      margin: 0.25em 20px
+      font-size: 200%
+      color: white
+
+    p
+      margin: 0 20px
+      font-size: 125%
+      line-height: 1.5em
       a
         color: $text-color
         &:hover
-          color: rgba($text-color, 0.5)
+          color: $link-hover
+
 
     ul
       @extend .list-inline
-      margin: 1em 0 0
-      border-top: 1px solid #ddd
+      width: $break-small
+      max-width: 90%
+      margin: 1em auto 0
+      padding: 0 20px
       text-align: center
       li
         position: relative
@@ -225,21 +220,11 @@ body.index
         width: 25%
         margin: 0
         overflow: hidden
-        &:after
-          content: ""
-          position: absolute
-          z-index: 2
-          top: 0
-          bottom: 0
-          right: 0
-          width: 1px
-          +radial-gradient(circle at 50% 50%, #ddd, white)
-        &:last-child:after
-          display: none
         a
           display: block
           padding: 0.5em 2%
-          color: $link-color
+          color: white
+          font-size: 150%
           &:before
             padding: 0
           &:hover
@@ -254,7 +239,7 @@ body.index
       left: 50%
       width: 6em
       margin-left: -5em
-      border: 1px solid rgba(white, 0.5)
+      border: 1px solid rgba(white, 0.25)
       font-size: .6em
       text-align: center
       color: white
