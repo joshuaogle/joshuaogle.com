@@ -55,6 +55,7 @@ img
 #{headings()}
   margin: 0 0 1em
   font-weight: 300
+  line-height: 1.25em
 
 p
   margin: 0 0 1em
@@ -225,7 +226,6 @@ body.index
         &:hover
           color: $link-hover
 
-
     ul
       @extend .list-inline
       width: $break-small
@@ -299,6 +299,7 @@ ul#dribbble
 section.work
   max-width: none
   text-align: center
+  color: white
   background: #333 center center
   background-size: cover
 
@@ -311,7 +312,8 @@ section.work
     box-shadow: 0 0 0 1px white
 
   .work-desktop
-    display: inline-block
+    max-width: 600px
+    margin: 0 auto 1em
     &:before
       content: "•••"
       display: block
@@ -327,7 +329,28 @@ section.work
   .section-link a
     @extend .btn-outline-light
 
+  &.thunderplains
+    background-color: #2d373e
+    background-image: image_url("portfolio/thunderplains-bg.jpg")
+
   &.baton
     color: #8c979b
     background-color: #333d41
     background-image: image_url("portfolio/baton-bg.png")
+
+  &.reddirtruby
+    background-color: #cc2d1e
+    background-image: image_url("portfolio/reddirtruby-bg.jpg")
+
+  &.healpay
+    background-color: #65993D
+    background-image: image_url("portfolio/healpay-bg.jpg")
+
+  &.refreshokc
+    color: #fce687
+    background-color: #4a5618
+    background-image: image_url("portfolio/refreshokc-bg.jpg")
+
+  &.wimgo
+    background-color: #54707e
+    background-image: image_url("portfolio/wimgo-bg.jpg")

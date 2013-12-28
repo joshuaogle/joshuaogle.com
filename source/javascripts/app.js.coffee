@@ -1,6 +1,7 @@
 $ ->
 
-  $.stellar()
+  $.stellar
+    verticalOffset: 0
 
   if $("#dribbble").length > 0
     renderDribbbleShots = (data) ->
