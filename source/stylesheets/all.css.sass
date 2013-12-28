@@ -94,6 +94,7 @@ section, .page
     font-size: 100%
 
 .section-link
+  margin-top: 2.5em
   text-align: center
   a
     @extend .btn
@@ -148,6 +149,12 @@ section, .page
   border: 2px solid $link-color
   &:hover
     border: 2px solid lighten($link-color, 10%)
+
+.btn-outline-light
+  border: 1px solid rgba(white, 0.25)
+  color: white
+  &:hover
+    border-color: white
 
 
 
@@ -245,13 +252,13 @@ body.index
           display: none
 
     .scroll-link
+      @extend .btn-outline-light
       position: absolute
       z-index: 2
       bottom: 2em
       left: 50%
       width: 6em
       margin-left: -5em
-      border: 1px solid rgba(white, 0.25)
       font-size: .6em
       text-align: center
       color: white
@@ -285,3 +292,42 @@ ul#dribbble
     overflow: hidden
     text-overflow: ellipsis
     white-space: nowrap
+
+
+
+// Portfolio
+section.work
+  max-width: none
+  text-align: center
+  background: #333 center center
+  background-size: cover
+
+  h2
+    font-size: 200%
+
+  img
+    display: block
+    margin: 0 auto
+    box-shadow: 0 0 0 1px white
+
+  .work-desktop
+    display: inline-block
+    &:before
+      content: "•••"
+      display: block
+      height: 1em
+      border-radius: 0.25em 0.25em 0 0
+      box-shadow: 0 0 0 1px white
+      padding: 0 0.5em
+      color: rgba(black, 0.2)
+      background: white
+      text-align: left
+      line-height: 1.1em
+
+  .section-link a
+    @extend .btn-outline-light
+
+  &.baton
+    color: #8c979b
+    background-color: #333d41
+    background-image: image_url("portfolio/baton-bg.png")
