@@ -4,17 +4,25 @@
   p I help make the internet better for humans
   ul
     li
+      = link_to "/portfolio", class: "ss-rows" do
+        .label
+          span Portfolio
+    li
       = link_to "http://dribbble.com/joshuaogle", target: "_new", class: "ss-social-dribbble" do
-        span Dribbble
+        .label
+          span Dribbble
     li
       = link_to "http://github.com/joshuaogle", target: "_new", class: "ss-social-octocat" do
-        span Github
+        .label
+          span Github
     li
       = link_to "http://twitter.com/joshuaogle", target: "_new", class: "ss-social-twitter" do
-        span Twitter
+        .label
+          span Twitter
     li
       = link_to "mailto:joshua@joshuaogle.com", class: "ss-send" do
-        span Email
+        .label
+          span Email
   = link_to "See More", "#more", class: "btn btn-outline scroll-link"
 
 #more

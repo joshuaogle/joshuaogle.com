@@ -239,9 +239,13 @@ body.index
       li
         position: relative
         z-index: 1
-        width: 25%
+        width: 20%
         margin: 0
+        padding-bottom: 1.5em
         overflow: hidden
+        .label
+          display: none
+
         a
           display: block
           padding: 0.5em 2%
@@ -251,8 +255,36 @@ body.index
             padding: 0
           &:hover
             color: $link-hover
-        span
-          display: none
+            @media only screen and (min-width: $break-medium)
+              .label
+                display: block
+                position: absolute
+                z-index: 2
+                left: 0
+                right: 0
+                bottom: 0.25em
+                span
+                  font-size: 40%
+                  line-height: 1em
+                  color: $brown
+                  background: white
+                  border-radius: 5px
+                  padding: 0.2em 0.8em
+                  &:before
+                    content: ""
+                    height: 0
+                    width: 0
+                    position: absolute
+                    z-index: 2
+                    bottom: 1.5em
+                    left: 50%
+                    margin-left: -5px
+                    border: 5px solid transparent
+                    border-bottom-color: white
+          &.ss-rows:before
+            position: relative
+            z-index: 1
+            top: 0.15em
 
     .scroll-link
       @extend .btn-outline-light
