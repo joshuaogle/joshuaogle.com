@@ -31,6 +31,7 @@ body
   color: $text-color
   font-family: $sans-serif
   font-size: 125%
+  line-height: 1.5em
   @media only screen and (max-width: $break-medium)
     font-size: 100%
 
@@ -68,7 +69,7 @@ a
 
 .container
   +clearfix
-  max-width: 58em
+  max-width: $break-medium
   margin: 0 auto
   padding: 5em 1em
   &:before
@@ -92,6 +93,12 @@ section, .page
   @media only screen and (max-width: $break-medium)
     font-size: 100%
 
+.section-link
+  text-align: center
+  a
+    @extend .btn
+    @extend .btn-outline
+
 .top
   height: 100%
   width: 100%
@@ -102,6 +109,8 @@ section, .page
   +box(vertical, center, center)
   .no-flexbox &
     padding-top: 20%
+  @media only screen and (max-width: $break-medium)
+    font-size: 60%
 
 .btn
   display: inline-block
@@ -246,6 +255,10 @@ body.index
       font-size: .6em
       text-align: center
       color: white
+
+  .profile
+    font-size: 125%
+    line-height: 1.5em
 
 section.dribbble
   max-width: 1800px
