@@ -51,6 +51,7 @@ ul
 img
   display: block
   max-width: 100%
+  margin: 0 auto
 
 #{headings()}
   margin: 0 0 1em
@@ -67,6 +68,13 @@ a
   &:hover
     color: $link-hover
     text-decoration: none
+
+@media only screen and (min-width: $break-small)
+  .pull-left
+    float: left
+
+  .pull-right
+    float: right
 
 .container
   +clearfix
@@ -303,6 +311,13 @@ body.index
   .profile
     font-size: 125%
     line-height: 1.5em
+
+    img
+      border-radius: 0.5em
+      margin-bottom: 1em
+      @media only screen and (min-width: $break-small)
+        &.pull-left
+          margin: 0 1em 1em 0
 
 section.dribbble
   max-width: 1800px

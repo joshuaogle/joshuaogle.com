@@ -1,8 +1,7 @@
 $ ->
 
   unless typeof(window.ontouchstart) != 'undefined'
-    $.stellar
-      verticalOffset: 0
+    $.stellar()
 
   if $("#dribbble").length > 0
     renderDribbbleShots = (data) ->
