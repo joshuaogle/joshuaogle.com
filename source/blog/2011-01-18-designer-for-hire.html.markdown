@@ -1,0 +1,15 @@
+---
+title: Designer for Hire
+date: 2011-01-18
+category: article
+tags: freelance, news
+link: ["Get in touch", "mailto:joshua@joshuaogle.com"]
+---
+
+Last year was an incredibly busy year for me. I started several long-term projects with <a href="http://brightb.it">Brightbit</a>, got a few personal projects off the ground and helped to push <a href="http://wimgo.com">wimgo</a> through huge milestones while being active in the local design and development community here in Oklahoma City.
+
+This year is when many of those projects come to fruition, and I have had the opportunity to work with some great clients on exciting projects that I can't wait to share.
+
+I have decided to work on freelance and contract work full time while I continue to work with Brightbit and build some ideas I've been working on for some time. Exciting things ahead. Make sure to follow me on <a href="http://dribbble.com/joshuaogle">Dribbble</a> and <a href="http://forrst.com/people/joshuaogle">Forrst</a> to see what I'm up to.
+
+So if you are building a mobile or web app, or just need a designer to polish that brand or website...

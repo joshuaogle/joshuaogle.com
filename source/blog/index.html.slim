@@ -1,0 +1,15 @@
+---
+blog: 'blog'
+---
+
+.blog-index
+  //h1.section-title Articles
+  - if page_articles.any?
+    - page_articles.each_with_index do |post, i|
+        article.post
+          = link_to post do
+            h2.post-title= post.title
+            p.post-meta Posted on #{post.date.strftime('%b %e, %Y')}
+  - else
+    p Sorry, no articles yet
+

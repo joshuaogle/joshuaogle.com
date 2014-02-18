@@ -1,25 +1,9 @@
 @import 'bourbon'
 @import 'normalize'
 @import 'symbolset'
-
-@charset "utf-8"
-
-// Settings
-$offwhite: #f2efed
-$brown: #33312f
-$red: #bf370a
-$gray: #AAA
-$blue: #17a1e5
-$text-color: mix($brown, $offwhite, 50%)
-$link-color: $blue
-$link-hover: lighten($blue, 10%)
-$break-small: 480px
-$break-medium: 1024px
-$break-large: 1600px
-
-@import 'http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800'
-$sans-serif: "Open Sans", Helvetica, sans-serif
-
+@import 'settings'
+@import 'blog'
+@import 'code'
 
 // Global
 html, body
@@ -32,6 +16,7 @@ body
   font-family: $sans-serif
   font-size: 125%
   line-height: 1.5em
+  -webkit-font-smoothing: antialiased
   @media only screen and (max-width: $break-medium)
     font-size: 100%
 
@@ -54,12 +39,12 @@ img
   margin: 0 auto
 
 #{headings()}
-  margin: 0 0 1em
+  margin: 0 0 .5em
   font-weight: 300
   line-height: 1.25em
 
 p
-  margin: 0 0 1em
+  margin: 0 0 1.5em
 
 a
   color: $link-color
@@ -184,7 +169,7 @@ header
       font-size: 35px
       line-height: 70px
       vertical-align: top
-      color: mix(white, $brown)
+      color: $gray
       &:before
         content: ""
         display: inline-block
@@ -199,11 +184,20 @@ header
 // Footer
 footer
   @extend .container
+  margin-top: 8em
   padding: 1em
+  font-size: .8em
   color: $gray
   text-align: center
   ul
     @extend .list-inline
+    li
+      &:after
+        display: inline-block
+        content: "•"
+        margin-left: 1em
+      &:last-child:after
+        display: none
 
 
 

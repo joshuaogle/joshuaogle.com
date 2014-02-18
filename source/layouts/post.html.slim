@@ -1,0 +1,7 @@
+- wrap_layout :layout do
+  article.post
+    h2.post-title= current_page.title
+    p.post-meta Posted on #{current_page.date.strftime('%b %e, %Y')}
+    = yield
+    - if current_page.data.link
+      p.post-link= link_to current_page.data.link[0], current_page.data.link[1], class: "btn btn-outline"

@@ -76,6 +76,9 @@ GEM
       sprockets (~> 2.1)
       sprockets-helpers (~> 1.0.0)
       sprockets-sass (~> 1.0.0)
+    middleman-syntax (1.2.1)
+      middleman-core (~> 3.0)
+      rouge (~> 0.3.0)
     modernizr-rails (2.7.0)
     multi_json (1.8.2)
     net-sftp (2.1.2)
@@ -93,6 +96,8 @@ GEM
     rb-kqueue (0.2.0)
       ffi (>= 0.5.0)
     redcarpet (3.0.0)
+    rouge (0.3.10)
+      thor
     sass (3.2.13)
     slim (2.0.2)
       temple (~> 0.6.6)
@@ -126,6 +131,7 @@ DEPENDENCIES
   middleman-blog (~> 3.3.0)
   middleman-deploy (~> 0.1.4)
   middleman-livereload (~> 3.1.0)
+  middleman-syntax (~> 1.2.1)
   modernizr-rails
   rb-fsevent
   redcarpet (~> 3.0.0)
