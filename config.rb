@@ -10,6 +10,9 @@ set :images_dir, 'images'
 
 activate :directory_indexes
 
+require "lib/post_helpers"
+helpers PostHelpers
+
 configure :build do
   activate :minify_css
   activate :minify_javascript
@@ -27,5 +30,6 @@ activate :blog do |blog|
   blog.layout            = "post"
   blog.permalink         = ":title"
   blog.prefix            = "blog"
-  #blog.tag_template      = "tag.html"
+  blog.tag_template      = "tag.html"
+  blog.year_template     = "calendar.html"
 end
