@@ -173,6 +173,5 @@ Looking around any of Yahoo's sites is a great way to get some good ideas on how
 ###A note on text styles
 Nicole recommends using your headline tags (H1, H2, et cetera) to set the font-size of your text. In theory, if your H2 really is more important than your H3 then it should also reflect that in your visual hierarchy. Things can get a bit tricky here when SEO disagrees with usability, but it's worked out well for us. Another thing to consider is using classes for your text colors. Use your styleguide to create classes like &#8216;color1, color2, color3&#8242; or &#8216;color-primary, color-link, color-highlight&#8217; (that way you don&#8217;t have to change our class names if you change colors later) and your blocks of code can be plugged into another section. Just change the headline tag and color class to match the new area and you&#8217;re done in a matter of seconds.
 
-###To be continued
-You'll still have non-object stuff, and that's okay too, but you will be amazed by how much of the code that you write every day fits into this model. Coming up in a future post, I&#8217;ll talk about the differences between the OOCSS approach and something like SASS or LESS. I&#8217;ll even talk a little about how they can live together and make your life a lot easier.
+You'll still have non-object stuff, and that's okay too, but you will be amazed by how much of the code that you write every day fits into this model.
 

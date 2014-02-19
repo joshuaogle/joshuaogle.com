@@ -2,8 +2,8 @@ source 'https://rubygems.org'
 
 gem 'bourbon',                      '~> 3.1.8'            # Sass mixins gem
 gem 'jquery-middleman',             '~> 3.0.4'            # jQuery yo
-gem 'middleman',                    '~> 3.1.4'            # Middleman is runnin this shiz
-gem 'middleman-blog',               '~> 3.3.0'            # Blog Engine
+gem 'middleman',                    '~> 3.2.2'            # Middleman is runnin this shiz
+gem 'middleman-blog',               '~> 3.5.1'            # Blog Engine
 gem 'middleman-deploy',             '~> 0.1.4'            # Easy deploying to Github pages
 gem 'middleman-livereload',         '~> 3.1.0'            # Be nice to your refresh button
 gem 'middleman-syntax',             '~> 1.2.1'            # Styles code blocks in blog posts
