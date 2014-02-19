@@ -1,0 +1,69 @@
+---
+title: "Color Theory for the Web"
+date: 2013-11-20
+tags: talks, design, color
+---
+In early 2011 I gave a talk [at RefreshOKC](http://refreshokc.org/2011/02/15/february-refresh-meeting-tonight/) on the subject of Color Theory. I still get a lot of questions about this talk from both designers and developers who are interested in using color effectively in their projects. What I like most about these talks is seeing people get excited about something that most of us don't give any thought to. I'm happy to say there has been a lot more attention being put into design details in web applications since that talk and I have updated the examples.
+
+
+
+## Let's start at the beginning
+<%= figure("/images/blog/color-theory-spectrum.png", "Light Spectrum") %>
+
+What we call color (and light) is just a small part of the electromagnetic radiation that washes over us all the time. While some animals perceive more to one side or the other of this spectrum than we do, few can see such a wide array of colors. [Dogs](http://www.livescience.com/34029-dog-color-vision.html) and [cats](http://www.livescience.com/40459-what-do-cats-see.html) do see less of the spectrum than humans (but aren't completely colorblind). [Flowers have intricate patterns](http://en.wikipedia.org/wiki/Nectar_guide) in ultraviolet that we can't naturally see, but bees can. [The variation](http://en.wikipedia.org/wiki/Cephalopod_eye) in [eyes in animals](http://en.wikipedia.org/wiki/Eye) are very interesting if you are into that kind of thing.
+
+Let's talk specifically about how humans process light and why we sometimes prefer some colors or combinations of colors. You can probably tell that the chart above doesn't distribute color the same way we do on a color wheel. That's because our [cone cells](http://en.wikipedia.org/wiki/Cone_cell) are specialized and don't give us an even sensitivity to light. It's concentrated in blue, green and red, with the parts in between being a little less sensitive.
+
+![Light Sensitivity](/images/blog/color-theory-sensitivity.png)
+
+So not only is it hard for us to tell the difference between very blue and very red, but it's also hard for us to see yellow and cyan in some situations.
+
+
+
+## RGB HSL CMYK HEX WTF
+
+This comes into play again when we start talking about mixing colors. The model we deal with in light-emitting displays, like the one you're looking at now, is [RGB](http://en.wikipedia.org/wiki/RGB_color_model) (Red/Green/Blue). When we mix colors we're creating an area that emits both colors. In this case, a combination of red and blue creates magenta. Print designers deal with [CMYK](http://en.wikipedia.org/wiki/CMYK_color_model) (Cyan/Magenta/Yellow/blacK), which has to do with how pigments reflect light, but we aren't dealing with pigments so we won't worry about that right now.
+
+![Color Models](/images/blog/color-theory-models.png)
+
+![Photoshop](/images/blog/color-theory-photoshop.png)
+
+The important part to remember is that these different models just tell us how to mix colors to get the one we want. We can even use multiple models to describe the same color. You might describe the red below in RGB for computer displays, CMYK for printing, or even a hexidecimal (which is just a shorthand RGB description) for use in CSS for the web.
+
+
+
+## Using Color
+Bored of the sciencey bits? That's alright, this is where the art comes in.
+
+Everyone has a favorite color. You might even think that your color preferences say something about your personality, but our brains are set up to make mental associations to certain colors and our preferences aren't as unique as we like to think. For instance, [over 40% of the people in the world prefer blue](http://awp.diaart.org/km/surveyresults.html). Red and green follow at around 10%, and it continues down the secondary colors around 3-4% and tertiary colors around 1-2%. If you look back up to the color sensitivity chart you can probably guess that we prefer colors that we see most clearly.
+
+Making things a little more complicated, we also associate colors with ideas. Red, yellow, and orange are the color of fire and the hot sun. These are the "warm" colors, and they tend to bring to mind action and dynamism. Blue and green are the color of the cool water and grass. These "cool" colors feel reserved and dependable and make people relaxed.
+
+Does your startup offer financial services or want your airline to feel safe? Better use cool colors. Does your brand target kids, promote sports and health, or just need to set itself apart from the established brand? Warm colors are a good bet.
+
+<%= figure("/images/blog/color-theory-combinations.png", "Color Combinations") %>
+
+After you have your primary color, you may want to spice things up a little. Monotone is fine for some, but having a color palette gives you a toolbelt of weapons to choose from.
+
+
+
+## Real World&trade; Examples
+<%= figure("/images/blog/color-theory-example-warm.png", "Ubuntu feels fun and friendly with its oranges, reds and warm purples.") %>
+
+<%= figure("/images/blog/color-theory-example-cool.png", "Stripe gives an impression of trustworthiness and safety for their online payment processing.") %>
+
+<%= figure("/images/blog/color-theory-example-complimentary.png", "Firefox OS takes advantage of the complimentary orange and blue logo to make their site feel exciting.") %>
+
+<%= figure("/images/blog/color-theory-example-triad.png", "Bank of America makes banking feel elementary with a red/yellow/blue color scheme.") %>
+
+<%= figure("/images/blog/color-theory-example-analagous.png", "Typekit uses greens and browns to form an analagous palette that maintains a strong brand.") %>
+
+<%= figure("/images/blog/color-theory-example-achromatic.png", "Apple intentionally avoids color in the interface for their products to make a splash.") %>
+
+
+
+## Make your own
+
+[Brand Colors](http://brandcolors.com) is a good way to explore how brands are using color to promote an idea about their product or just to set themselves apart. Take some time to explore a few and see how they are using colors in different ways on their sites.
+
+There are a lot of good sites to explore color combinations, but my favorite by far is [Adobe's Kuler](https://kuler.adobe.com). Try out different palettes to craft your existing brand or get out there and make something brand new.

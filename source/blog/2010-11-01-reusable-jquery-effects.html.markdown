@@ -1,7 +1,6 @@
 ---
 title: Reusable jQuery Effects
 date: 2010/11/01
-category: article
 tags: jquery
 ---
 One of my favorite things about writing javascript is finding ways to write less of it. Javascript is one of those things that tends to build up and pretty soon your site is crawling under all the weight. There's a few things we can do to keep it lean.
