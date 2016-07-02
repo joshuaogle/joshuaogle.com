@@ -1,0 +1,18 @@
+@mixin container
+  $_left: calc(#{$header-width} + 1vw)
+  +clearfix
+  margin: 0 auto
+  padding: $large-spacing $base-spacing $large-spacing $_left
+
+@mixin split-layout
+  display: flex
+  justify-content: center
+
+@mixin split-primary
+  flex: 2
+
+@mixin split-secondary
+  justify-content: center
+  display: flex
+  flex: 1
+  flex-direction: column

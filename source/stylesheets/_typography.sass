@@ -1,0 +1,71 @@
+h1,
+h2,
+h3,
+h4
+  font-weight: bold
+  line-height: 1.25
+  margin: 0 0 $small-spacing
+
+h2
+  color: $red
+
+ul
+  list-style: inside square
+  margin: 0 0 $base-spacing
+  padding: 0 0 0 $small-spacing
+
+  &.list-simple
+    list-style: none
+    padding: 0
+
+  &.list-inline
+    @extend .list-simple
+
+    li
+      display: inline-block
+      margin: 0 $small-spacing
+
+p
+  margin: 0 0 $base-spacing
+
+a
+  color: $link-color
+  text-decoration: none
+  transition: color 250ms
+
+  &:hover
+    color: $link-hover
+    text-decoration: none
+
+img
+  display: block
+  margin: 0 auto
+  max-width: 100%
+
+%small
+  color: $muted-color
+  font-size: $small-font-size
+  font-weight: normal
+  text-transform: uppercase
+
+mark
+  +linear-gradient(transparent 0%, transparent 30%, $highlight-color 30%, $highlight-color 80%, transparent 80%, $fallback: transparent)
+  color: $light-brown
+  padding: 0.05em 0.1em
+
+.year
+  border: 1px solid $gray
+  border-radius: 1em
+  color: $light-brown
+  font-size: $small-font-size
+  font-weight: normal
+  line-height: 1
+  padding: 0.2em 0.75em 0.15em
+  vertical-align: middle
+
+  .portfolio-title &,
+  .brand-label &
+    margin-left: 0.5em
+
+  .brand-label &
+    font-size: 0.7em

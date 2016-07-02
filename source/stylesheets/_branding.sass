@@ -1,0 +1,90 @@
+.branding
+  ul
+    display: flex
+    flex-wrap: wrap
+    list-style: none
+    margin-top: $large-spacing
+    padding: 0
+
+.brand
+  align-items: center
+  background-color: mix($offwhite, $light-brown, 75%)
+  justify-content: center
+  margin: 0 0 $base-spacing
+  padding: 5%
+  position: relative
+  transition: background-color 150ms, transform 150ms
+  width: 100%
+
+  @media (min-width: $break-small)
+    display: flex
+    flex-direction: column
+    margin-right: 2%
+    width: 48%
+
+    &:nth-child(2n)
+      margin-right: 0
+
+  @media (min-width: $break-medium)
+    padding: 3%
+    width: 23%
+
+    &:nth-child(2n)
+      margin-right: 2%
+
+    &:nth-child(4n)
+      margin-right: 0
+
+  &:hover
+    transform: scale(1.15)
+
+  &.gemini:hover
+    background-color: #59b1d2
+
+  &.husk:hover
+    background-color: #be3a26
+
+  &.sheriff:hover
+    background-color: #f3c36e
+
+  &.wifiguru:hover
+    background-color: #7b7dbc
+
+  &.armada:hover
+    background-color: #206c91
+
+  &.brightbit:hover
+    background-color: #f7931e
+
+  &.thunderplains:hover
+    background-color: #524866
+
+  &.skyhelm:hover
+    background-color: #37a5dd
+
+  svg
+    +size(100%)
+    display: block
+
+    path,
+    polygon
+      fill: $white
+
+.brand-label
+  +position(absolute, 100% 0 null)
+  color: $muted-color
+  font-size: $smallest-font-size
+  font-weight: bold
+  line-height: 1
+  margin-top: 0.25em
+  text-align: center
+  text-transform: uppercase
+
+  @media (min-width: $break-small)
+    opacity: 0
+    transition: opacity 150ms
+    z-index: -1
+
+  .brand:hover &
+    @media (min-width: $break-small)
+      opacity: 1

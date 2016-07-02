@@ -1,45 +1,6 @@
-.top data-stellar-background-ratio="0.5"
-  h2 Hi, I'm Joshua
-  p UX Designer, Developer
-  p I help make the internet better for humans
-  ul
-    li
-      = link_to "/portfolio", class: "ss-openbook" do
-        .label
-          span Portfolio
-    li
-      = link_to "http://dribbble.com/joshuaogle", target: "_new", class: "ss-social-dribbble" do
-        .label
-          span Dribbble
-    li
-      = link_to "http://github.com/joshuaogle", target: "_new", class: "ss-social-octocat" do
-        .label
-          span Github
-    li
-      = link_to "http://twitter.com/joshuaogle", target: "_new", class: "ss-social-twitter" do
-        .label
-          span Twitter
-    li
-      = link_to "mailto:joshua@joshuaogle.com", class: "ss-send" do
-        .label
-          span Email
-  = link_to "See More", "#more", class: "btn btn-outline scroll-link"
+= partial "intro"
 
-#more
-
-section.profile
-  = image_tag "joshua.png", class: "pull-left"
-  p I'm a designer and developer living in Oklahoma City. I have been creating web and mobile apps for startups for over five years and designing for the web for almost 15. I think it's important for designers to get their hands dirty in code, and spend a lot of my time pushing the limits of CSS, Javascript, and Ruby. I enjoy technology, science fiction, foreign languages, and an annoying curiosity about nearly everything.
-  p Did I mention I'm available for hire? #{link_to "Get in touch", "mailto:joshua@joshuaogle.com", class: "btn btn-small btn-outline"}
-
-section.work.soundingboard data-stellar-background-ratio="0.5"
-  h2 Just Launched
-  .work-desktop= image_tag "portfolio/soundingboard.jpg"
-  p Sounding Board
-  .section-link= link_to "See more in the portfolio", "/portfolio"
-
-section.dribbble
-  h2.section-title A peek of what I'm working on now
-  ul#dribbble
-    // Dribble Shots placed by jribbble.js.coffee
-  .section-link= link_to "More at Dribbble", "http://dribbble.com/joshuaogle"
+main.content
+  = partial "about"
+  = partial "interaction-design"
+  = partial "branding"

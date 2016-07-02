@@ -1,0 +1,24 @@
+.intro
+  +position(fixed, 0 0 null)
+  align-items: center
+  background-color: $brown
+  color: $offwhite
+  display: flex
+  justify-content: center
+  flex-direction: column
+  height: 97.5vh
+
+  h1,
+  h2,
+  p,
+  nav
+    animation: rise 1s ease-in-out
+
+  h1
+    margin-bottom: 0
+
+  p
+    margin: 0
+
+    &.intro-job-title
+      color: $muted-color

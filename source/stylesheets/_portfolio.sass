@@ -1,0 +1,107 @@
+.portfolio
+  padding-right: 0
+
+  @media (max-width: $break-medium)
+    padding-left: 0
+
+.portfolio-section
+  position: relative
+
+  @media (min-width: $break-medium)
+    +split-layout
+    margin-bottom: 5vh
+    height: 600px
+
+  @media (max-width: $break-medium)
+    +container
+
+    @each $brand, $color in $brand-colors
+      &.#{$brand}
+        background-color: $color
+        color: $white
+
+        *
+          border-color: $white
+          color: $white
+
+.portfolio-description
+  box-sizing: border-box
+  margin-right: $small-spacing
+  padding-right: $base-spacing
+  position: relative
+
+  @media (min-width: $break-medium)
+    +split-secondary
+
+    &::before,
+    &::after
+      +position(absolute, 0 null null 0)
+      +size($small-spacing)
+      border: 1px solid transparent
+      border-left-color: $gray
+      content: ""
+
+    &::before
+      border-top-color: $gray
+
+    &::after
+      border-bottom-color: $gray
+      bottom: 0
+      top: auto
+
+  p
+    font-size: $small-font-size
+    line-height: 1.5
+
+.portfolio-title
+  margin-bottom: $smallest-spacing
+
+.portfolio-preview
+  background-color: $light-brown
+  background-size: cover
+  background-position: center center
+  background-repeat: no-repeat
+  box-sizing: border-box
+
+  @media (min-width: $break-medium)
+    +split-primary
+    align-items: flex-end
+    display: flex
+    justify-content: center
+    flex-direction: row
+    overflow: hidden
+    margin-left: $small-spacing
+    padding: $base-spacing $base-spacing 0
+
+  @each $brand, $color in $brand-colors
+    .#{$brand} &
+      background-color: $color
+
+      .device-outer
+        fill: $color
+
+.portfolio-screen
+  position: relative
+
+.portfolio-phone
+  +size(295px 615px)
+  margin: 0 auto
+  position: relative
+  transform: rotate(-30deg)
+
+  svg
+    background-size: cover
+    position: absolute
+    z-index: 1
+
+  img
+    max-width: none
+    left: 25px
+    position: absolute
+    top: 85px
+    z-index: 2
+
+.portfolio-float
+  +position(absolute, 50% null null 50%)
+  transform: translate(-50%, -50%)
+  z-index: 2
