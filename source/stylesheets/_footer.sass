@@ -1,12 +1,57 @@
-footer
-  @extend %small
-  +clearfix
-  background-color: $brown
-  color: $muted-color
-  font-size: $smallest-font-size
-  padding: 0 0 $small-spacing
-  position: relative
-  text-align: center
+@mixin icon-link($color, $icon)
+  color: $color
+  white-space: nowrap
 
-  a
+  &:hover
+    color: shade($color, 20%)
+
+    &::after
+      opacity: 0.75
+
+  &::after
+    +size(1em)
+    background-image: image-url("icon-#{$icon}.svg")
+    background-size: 1em
+    content: ""
+    display: inline-block
+    margin-left: 0.15em
+    vertical-align: middle
+    transition: opacity 250ms
+
+footer
+  background-color: $brown
+  color: $white
+  position: relative
+
+  section
+    @media(min-width: $break-medium)
+      max-width: 66vw
+
+  h2
+    color: $white
+
+  .copyright
+    @extend %small
     color: $muted-color
+    font-size: $smallest-font-size
+    text-align: center
+
+    a
+      color: $muted-color
+
+.link-email
+  &::before
+    +size(1em)
+    content: ""
+
+.link-dribbble
+  +icon-link(#ea4c89, "dribbble")
+
+.link-github
+  +icon-link(#999999, "github")
+
+.link-twitter
+  +icon-link(#1da1f2, "twitter")
+
+.link-linkedin
+  +icon-link(#00a0dc, "linkedin")
