@@ -1,3 +1,3 @@
 //= require modernizr
 //= require jquery
-//= require app
+//= require_tree .
