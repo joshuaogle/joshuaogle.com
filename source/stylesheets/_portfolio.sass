@@ -10,6 +10,8 @@
 
 .portfolio-section
   position: relative
+  transform: translateY($large-spacing)
+  transition: transform 1000ms ease-in-out
 
   @media (min-width: $break-medium)
     +split-layout
@@ -27,6 +29,9 @@
         *
           border-color: $white
           color: $white
+
+  &.animated
+    transform: translateY(0)
 
 .portfolio-description
   box-sizing: border-box
@@ -64,6 +69,7 @@
   @each $brand, $color in $brand-colors
     .#{$brand} &
       background-color: $color
+      border-radius: $base-border-radius 0 0 $base-border-radius
 
       .device-outer
         fill: $color

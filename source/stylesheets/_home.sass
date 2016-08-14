@@ -8,3 +8,27 @@
   $↙: repeating-linear-gradient(45deg, $light, $light 1px, transparent 1px, transparent 30px, $lighter 30px, $lighter 31px, transparent 31px, transparent 60px)
   animation: sliiide 30s linear
   background-image: $↘, $↙
+
+  .intro-content
+    @media(min-width: $break-medium)
+      +container
+      +split-layout
+
+  .home-intro-content
+    @media(min-width: $break-medium)
+      +split-primary
+      display: flex
+      flex-direction: column
+      justify-content: center
+
+  .home-intro-portrait
+    margin-bottom: $base-spacing
+
+    @media(min-width: $break-medium)
+      +split-secondary
+      margin-bottom: 0
+      margin-right: $base-spacing
+
+    img
+      border-radius: $base-border-radius
+      max-width: 12em

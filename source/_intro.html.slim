@@ -1,22 +1,8 @@
 .intro.home-intro
   .intro-content
-    h1 Joshua Ogle
-    p.intro-job-title Digital Product Designer, Developer
-    p I help make the internet better for humans
-    //
-      nav
-        = link_to "http://dribbble.com/joshuaogle",
-          target: "_new",
-          "data-label": "Dribbble" do
-          = partial "images/icon-dribbble.svg"
-        = link_to "http://github.com/joshuaogle",
-          target: "_new",
-          "data-label": "Github" do
-          = partial "images/icon-github.svg"
-        = link_to "http://twitter.com/joshuaogle",
-          target: "_new",
-          "data-label": "Twitter" do
-          = partial "images/icon-twitter.svg"
-        = link_to "mailto:joshua@joshuaogle.com",
-          "data-label": "Email" do
-          = partial "images/icon-email.svg"
+    .home-intro-portrait
+      = image_tag "portrait.png"
+    .home-intro-content
+      h1 Joshua Ogle
+      p.intro-job-title Digital Product Designer, Developer
+      p I help make the internet better for humans
