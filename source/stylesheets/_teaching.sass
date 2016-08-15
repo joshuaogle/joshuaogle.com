@@ -1,0 +1,21 @@
+.teaching
+  @media(min-width: $break-medium)
+    +split-layout
+
+.teaching-portrait
+  margin-bottom: $base-spacing
+
+  @media(min-width: $break-medium)
+    +split-secondary
+
+  img
+    border-radius: $base-border-radius
+    max-width: 12em
+
+    @media(min-width: $break-medium)
+      margin-right: 0
+
+.teaching-content
+  @media(min-width: $break-medium)
+    margin-left: $base-spacing
+    +split-primary
