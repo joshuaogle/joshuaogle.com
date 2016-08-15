@@ -70,14 +70,36 @@
         fill: $color
 
 .portfolio-screen
+  border: 1px solid $white
+  border-radius: $smallest-spacing $smallest-spacing 0 0
   opacity: 0
+  padding-top: $small-spacing
   position: relative
   transform: translateY($large-spacing)
   transition: opacity 500ms, transform 500ms ease-in-out
 
+  @each $brand, $color in $brand-colors
+    .#{$brand} &
+      background-color: $color
+
+  &::before
+    +position(absolute, 0 null null 0)
+    background: radial-gradient(#fff 40%, rgba(#000, 0) 41%)
+    background-position: 0 0, #{$small-spacing} #{$small-spacing}
+    background-size: #{$small-spacing} #{$small-spacing}
+    content: ""
+    display: block
+    margin-left: $smallest-spacing
+    opacity: 0.25
+    height: $small-spacing
+    width: $small-spacing * 3
+
   .animated &
     opacity: 1
-    transform: translateY(0)
+    transform: translateY(1px)
+
+  img
+    border-top: 1px solid $white
 
 .portfolio-phone
   +size(295px 615px)
