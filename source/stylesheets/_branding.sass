@@ -5,6 +5,11 @@
     list-style: none
     margin-top: $large-spacing
     padding: 0
+    transform: translateY($large-spacing)
+    transition: transform 500ms ease-in-out
+
+    &.animated
+      transform: translateY(0)
 
 .brand
   align-items: center
@@ -42,8 +47,18 @@
   &.gemini:hover
     background-color: #59b1d2
 
-  &.husk:hover
-    background-color: #be3a26
+  &.proteus
+    padding-bottom: $small-spacing
+    padding-top: $small-spacing
+
+    svg
+      height: 110px
+
+    &:hover
+      background-color: #4abaB0
+
+      #logo #P
+        fill: #4ABAB0
 
   &.sheriff:hover
     background-color: #f3c36e
