@@ -18,20 +18,27 @@
       +split-layout
 
   .home-intro-content
+    text-align: center
+
     @media(min-width: $break-medium)
       +split-primary
       display: flex
       flex-direction: column
+      margin-left: $base-spacing
       justify-content: center
+      text-align: left
 
   .home-intro-portrait
     margin-bottom: $base-spacing
 
     @media(min-width: $break-medium)
       +split-secondary
+      margin-left: $small-spacing
       margin-bottom: 0
-      margin-right: $base-spacing
 
     img
       border-radius: $base-border-radius
       max-width: 12em
+
+      @media(min-width: $break-medium)
+        margin-right: 0
