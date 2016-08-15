@@ -105,13 +105,15 @@
   +size(295px 615px)
   align-self: center
   margin: 0 auto
-  max-width: 24vh
-  max-height: 50vh
-  margin-top: -$base-spacing
+  max-width: 26.5vh
+  max-height: 55vh
   opacity: 0
   position: relative
   transform: rotate(-15deg)
   transition: opacity 500ms, transform 500ms ease-in-out
+
+  @media (min-width: $break-medium)
+    margin-top: -$base-spacing
 
   .animated &
     opacity: 1
