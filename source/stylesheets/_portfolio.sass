@@ -10,8 +10,6 @@
 
 .portfolio-section
   position: relative
-  transform: translateY($large-spacing)
-  transition: transform 500ms ease-in-out
 
   @media (min-width: $break-medium)
     +split-layout
@@ -29,9 +27,6 @@
         *
           border-color: $white
           color: $white
-
-  &.animated
-    transform: translateY(0)
 
 .portfolio-description
   box-sizing: border-box
@@ -75,13 +70,26 @@
         fill: $color
 
 .portfolio-screen
+  opacity: 0
   position: relative
+  transform: translateY($large-spacing)
+  transition: opacity 500ms, transform 500ms ease-in-out
+
+  .animated &
+    opacity: 1
+    transform: translateY(0)
 
 .portfolio-phone
   +size(295px 615px)
   margin: 0 auto
+  opacity: 0
   position: relative
-  transform: rotate(-30deg)
+  transform: rotate(-15deg)
+  transition: opacity 500ms, transform 500ms ease-in-out
+
+  .animated &
+    opacity: 1
+    transform: rotate(-30deg)
 
   svg
     background-size: cover

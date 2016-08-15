@@ -4,20 +4,37 @@ function isOnScreen($element) {
   var scrollTop = window.pageYOffset;
   var screenHeight = $(window).height();
   var screenBottom = scrollTop + screenHeight;
-  var offset = 50;
+  var offset = 150;
 
   return screenBottom > (elementTop + offset);
 }
 
-$(function() {
-  window.onscroll = function () {
-    $(".animate").each(function(i) {
-      var $el = $(this);
-      if (!$el.hasClass("animated")) {
-        if (isOnScreen($el)) {
-          $el.addClass("animated");
-        }
+function debounce(func, wait, immediate) {
+	var timeout;
+	return function() {
+		var context = this, args = arguments;
+		var later = function() {
+			timeout = null;
+			if (!immediate) func.apply(context, args);
+		};
+		var callNow = immediate && !timeout;
+		clearTimeout(timeout);
+		timeout = setTimeout(later, wait);
+		if (callNow) func.apply(context, args);
+	};
+};
+
+var markAnimated = debounce(function() {
+  $(".animate").each(function(i) {
+    var $el = $(this);
+    if (!$el.hasClass("animated")) {
+      if (isOnScreen($el)) {
+        $el.addClass("animated");
       }
-    });
-  };
+    }
+  });
+});
+
+$(function() {
+  window.addEventListener("scroll", markAnimated);
 });
