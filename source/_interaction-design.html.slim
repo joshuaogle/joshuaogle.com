@@ -57,6 +57,23 @@ section.portfolio
         = partial "images/phone.svg"
         = image_tag "portfolio-summit-screen.png"
 
+  article.animate.portfolio-section.ooo
+    .portfolio-description
+      h3.portfolio-title
+        | thoughtbot OOO
+        time.year 2015
+      .section-title Design &amp; Prototyping
+      p
+        |
+          This is a little something we experimented on at thoughtbot for Out of Office (OOO) notifications.
+          We came up with a way to automate the hassle of telling your team you would be gone and made it much simpler.
+          We ended up integrating many of these ideas and designs into our larger internal planning app, but I still love the way the original idea looked.
+
+
+    .portfolio-preview
+      .portfolio-screen
+        = image_tag "portfolio-ooo-screen.png"
+
   article.animate.portfolio-section.ember
     .portfolio-description
       h3.portfolio-title
@@ -88,19 +105,3 @@ section.portfolio
     .portfolio-preview
       .portfolio-screen
         = image_tag "portfolio-carma-screen.png"
-
-  article.animate.portfolio-section.aps
-    .portfolio-description
-      h3.portfolio-title
-        | American Physical Society
-        time.year 2014
-      .section-title User Interface Design &amp; Illustration
-      p
-        |
-          The American Physical Society (APS) is the world’s largest organization of physicists, representing over 50,000 scientists.
-          They needed a way to accept research papers while tagging them with the right subjects to get them to the right editors.
-          I helped them design an intuitive interface for their tagging system and learned a lot of #{link_to "Angular", "https://angularjs.org"} too.
-
-    .portfolio-preview
-      .portfolio-screen
-        = image_tag "portfolio-aps-screen.png"
