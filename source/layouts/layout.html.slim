@@ -15,7 +15,11 @@ html
     = javascript_include_tag "all"
 
   body class=page_classes
-    = partial "header"
-    = yield
-    = partial "footer"
+    = yield_content :intro
+
+    main.content
+      = partial "header"
+      = yield
+      = partial "footer"
+
     = partial "tracking"
