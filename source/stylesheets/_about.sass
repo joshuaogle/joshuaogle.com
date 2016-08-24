@@ -1,0 +1,32 @@
+.section-about
+  margin-top: $intro-height
+
+  @media(min-width: $break-medium)
+    +container
+    +split-layout
+    margin-top: $intro-height
+
+.about-content
+  @media(min-width: $break-medium)
+    +split-primary
+    display: flex
+    flex-direction: column
+    margin-left: $base-spacing
+    justify-content: center
+    text-align: left
+
+.about-portrait
+  margin-bottom: $base-spacing
+
+  @media(min-width: $break-medium)
+    +split-secondary
+    justify-content: flex-start
+    margin-left: $small-spacing
+    margin-bottom: 0
+
+  img
+    border-radius: $base-border-radius
+    max-width: 12em
+
+    @media(min-width: $break-medium)
+      margin-right: 0
