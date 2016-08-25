@@ -14,7 +14,7 @@
   margin: 0 0 $base-spacing
   padding: 5%
   position: relative
-  transition: background-color 150ms, transform 150ms
+  transition: background-color $fast-timing, transform $fast-timing
   width: 100%
 
   @media (min-width: $break-small)
@@ -93,7 +93,7 @@
 
   @media (min-width: $break-small)
     opacity: 0
-    transition: opacity 150ms
+    transition: opacity $fast-timing
     z-index: -1
 
   .brand:hover &

@@ -1,32 +1,15 @@
-.btn
+.button
   background-repeat: repeat-x
-  background: $text-color
+  background-color: $link-color
   border-radius: 5px
   border: none
-  color: $background-color
+  color: $offwhite
   display: inline-block
-  font-size: 0.75em
   line-height: 2
-  margin: 0 1em
   padding: .25em 1em .15em
   text-shadow: none
+  transition: background-color $fast-timing
 
   &:hover
-    color: $link-color
-
-  &.btn-primary
-    background: $link-color
-    border: none
-    color: $text-color
-    text-shadow: none
-
-    &:hover
-      background: lighten($link-color, 2%)
-
-.btn-outline
-  background: transparent
-  border: 2px solid $offwhite
-  color: $text-color
-
-  &:hover
-    border-color: $text-color
+    background-color: $link-hover
+    color: $offwhite

@@ -18,7 +18,7 @@ $background-color: $offwhite
 $text-color: $brown
 $muted-color: mix($text-color, $background-color, 66%)
 $link-color: $blue
-$link-hover: shade($blue, 20%)
+$link-hover: shade($blue, 15%)
 $logo-color: $offwhite
 $highlight-color: mix($yellow, $background-color, 25%)
 
@@ -35,7 +35,7 @@ $intro-height: 85vh
 $sans-serif: "Brand", Helvetica, sans-serif
 
 // Sizes
-$base-font-size: calc(1rem + 0.33 * (100vw - 20em) / 80)
+$base-font-size: calc(1rem + 0.25 * (100vw - 20em) / 80)
 $small-font-size: 0.8rem
 $smallest-font-size: 0.6rem
 $base-spacing: 2rem
@@ -55,3 +55,8 @@ $z-header: 5
 
 // Brand Colors
 $brand-colors: (armada: #1aa9ef, summit: #ed3e44, ember: #e46651, schoolkeep: #23bd84, carma: #555756, ooo: #41434e)
+
+// Animations
+$base-timing: 250ms
+$fast-timing: $base-timing / 2
+$slow-timing: $base-timing * 2

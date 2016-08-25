@@ -856,7 +856,7 @@
         animation-duration: 96s; }
       #logo #P {
         fill: #c9c6c4;
-        transition: fill 250ms;
+        transition: fill $base-timing;
       }
   </style>
 

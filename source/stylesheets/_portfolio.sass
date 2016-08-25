@@ -76,7 +76,7 @@
   padding-top: $small-spacing
   position: relative
   transform: translateY($large-spacing)
-  transition: opacity 500ms, transform 500ms ease-in-out
+  transition: opacity $slow-timing, transform $slow-timing ease-in-out
 
   @each $brand, $color in $brand-colors
     .#{$brand} &
@@ -110,7 +110,7 @@
   opacity: 0
   position: relative
   transform: rotate(-15deg)
-  transition: opacity 500ms, transform 500ms ease-in-out
+  transition: opacity $slow-timing, transform $slow-timing ease-in-out
 
   @media (min-width: $break-medium)
     margin-top: -$base-spacing

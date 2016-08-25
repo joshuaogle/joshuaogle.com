@@ -31,7 +31,7 @@ p
 a
   color: $link-color
   text-decoration: none
-  transition: color 250ms
+  transition: color $base-timing
 
   &:hover
     color: $link-hover
@@ -57,12 +57,17 @@ mark
 .year
   border: 1px solid $gray
   border-radius: 1em
+  display: inline-block
   color: $light-brown
   font-size: $small-font-size
   font-weight: normal
   line-height: 1
   padding: 0.2em 0.75em 0.15em
   vertical-align: middle
+
+  .intro &
+    border-color: $offwhite
+    color: $offwhite
 
   .portfolio-title &,
   .brand-label &

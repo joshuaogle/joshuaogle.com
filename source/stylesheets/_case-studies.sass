@@ -1,0 +1,8 @@
+@each $brand, $color in $brand-colors
+  .case-studies_#{$brand}
+    .intro
+      background-color: $color
+      text-align: center
+
+    .content
+      box-shadow: 0 0 2em shade($color, 20%)

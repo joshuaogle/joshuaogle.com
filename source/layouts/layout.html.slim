@@ -15,7 +15,11 @@ html
     = javascript_include_tag "all"
 
   body class=page_classes
-    = yield_content :intro
+    - if content_for? :intro
+      .intro
+        = partial "header"
+        .intro-content
+          = yield_content :intro
 
     main.content
       = partial "header"
