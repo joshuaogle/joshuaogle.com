@@ -10,100 +10,20 @@ section.portfolio
         A great design isn't even about your product.
         <mark>It's about them.</mark>
 
-  article.animate.portfolio-section.armada
-    .portfolio-description
-      h3.portfolio-title
-        | Armada Telematics
-        time.year 2014
-      .section-title Branding &amp; Product Design
-      p
-        |
-          This OKC based team is bringing a modern startup approach to fleet and asset tracking.
-          I helped them design their entire product and identity and did a fair bit of Ruby and Google Maps Javascript too.
-      p
-        = link_to "Case Study", "case-studies/armada", class: "button"
+  - blog.articles.each do |item|
+    article.animate.portfolio-section(class="#{item.data.short_name}")
+      .portfolio-description
+        h3.portfolio-title
+          = item.title
+          time.year= item.date.strftime("%Y")
+        .section-title= item.data.role
+        p= item.data.summary
+        - if item.body.present?
+          p
+            = link_to "Case Study", item.url, class: "button"
 
-    .portfolio-preview
-      .portfolio-screen
-        = image_tag "portfolio-armada-screen.svg"
-
-  article.animate.portfolio-section.schoolkeep
-    .portfolio-description
-      h3.portfolio-title
-        | Schoolkeep
-        time.year 2014
-      .section-title Design &amp; User Experience
-      p
-        |
-          The world of online learning is exploding, and Schoolkeep is leading the way by offering custom-branded school sites.
-          While at thoughtbot, I got the chance to help them build their product to MVP and help onboard their first few hires.
-          My history designing CMS sites and admin sections came in handy to create a great experience for both teachers and students.
-
-    .portfolio-preview
-      .portfolio-screen
-        = image_tag "portfolio-schoolkeep-screen.png"
-
-  article.animate.portfolio-section.summit
-    .portfolio-description
-      h3.portfolio-title
-        | Summer Summit Guide
-        time.year 2015
-      .section-title Hybrid Mobile App Development
-      p
-        |
-          I worked together with other thoughtbot Denver designers to design and build a mobile app to help our friends get around town for our annual company summit.
-          I was the sole developer, and using #{link_to "Ionic", "https://ionic.io"} made it possible to build quickly and work on everyone's devices.
-
-    .portfolio-preview
-      .portfolio-phone
-        = partial "images/phone.svg"
-        = image_tag "portfolio-summit-screen.png"
-
-  article.animate.portfolio-section.ooo
-    .portfolio-description
-      h3.portfolio-title
-        | thoughtbot OOO
-        time.year 2015
-      .section-title Design &amp; Prototyping
-      p
-        |
-          This is a little something we experimented on at thoughtbot for Out of Office (OOO) notifications.
-          We came up with a way to automate the hassle of telling your team you would be gone and made it much simpler.
-          We ended up integrating many of these ideas and designs into our larger internal planning app, but I still love the way the original idea looked.
-
-
-    .portfolio-preview
-      .portfolio-screen
-        = image_tag "portfolio-ooo-screen.png"
-
-  article.animate.portfolio-section.ember
-    .portfolio-description
-      h3.portfolio-title
-        | Ember Guides
-        time.year 2015
-      .section-title Design &amp; Front-end Development
-      p
-        |
-          thoughtbot volunteered some time to help work on a redesign of the Ember.js Guides.
-          Ember is my favorite Javascript framework, mainly because of its amazing community, so I was happy to help out with their guides.
-          It's a fairly simple #{link_to "Middleman", "http://middlemanapp.com"} set up, but I'm proud that we produced one of the best looking guides of any open-source project.
-
-    .portfolio-preview
-      .portfolio-screen
-        = image_tag "portfolio-ember-screen.png"
-
-  article.animate.portfolio-section.carma
-    .portfolio-description
-      h3.portfolio-title
-        | Carma
-        time.year 2015
-      .section-title Design &amp; Data Visualization
-      p
-        |
-          Carma provides insight into what the world is saying about your brand.
-          This was the most intensive data-visualization project that I have had the chance to work on, and I got to dig into #{link_to "D3 and custom charting", "https://d3js.org"}, which was a lot of fun.
-          There were around ten custom charts to design and develop and creating a shared framework for them was a fun challenge.
-
-    .portfolio-preview
-      .portfolio-screen
-        = image_tag "portfolio-carma-screen.png"
+      .portfolio-preview
+        div(class="portfolio-#{item.data.preview_type}")
+          - if item.data.preview_type == "phone"
+            = partial "images/phone.svg"
+          = image_tag item.data.preview

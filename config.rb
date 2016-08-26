@@ -3,6 +3,14 @@ set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'
 
+activate :blog do |blog|
+  blog.name = "case-studies"
+  blog.layout = "case-studies"
+  blog.paginate = false
+  blog.permalink = "case-studies/{title}"
+  blog.sources = "case-studies/{title}.html"
+end
+
 configure :development do
   activate :livereload
 end
