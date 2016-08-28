@@ -72,6 +72,7 @@
 .portfolio-screen
   border: 1px solid $white
   border-radius: $smallest-spacing $smallest-spacing 0 0
+  display: inline-block
   opacity: 0
   padding-top: $small-spacing
   position: relative
@@ -84,13 +85,13 @@
 
   &::before
     +position(absolute, 0 null null 0)
-    background: radial-gradient(rgba(#fff, 0) 32%,#fff 33%, #fff 40%, rgba(#fff, 0) 41%)
+    background: radial-gradient(rgba(#fff, 0) 32%, #fff 33%, #fff 40%, rgba(#fff, 0) 41%)
     background-position: 0 0, #{$small-spacing} #{$small-spacing}
     background-size: #{$small-spacing} #{$small-spacing}
     content: ""
     display: block
     margin-left: $smallest-spacing
-    opacity: 0.25
+    opacity: 0.33
     height: $small-spacing
     width: $small-spacing * 3
 

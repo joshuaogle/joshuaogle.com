@@ -55,17 +55,16 @@ mark
   padding: 0.05em 0.1em
 
 .year
-  border: 1px solid $gray
-  border-radius: 1em
+  @extend mark
   display: inline-block
-  color: $light-brown
-  font-size: $small-font-size
+  color: $muted-color
+  font-size: 0.7em
   font-weight: normal
   line-height: 1
-  padding: 0.2em 0.75em 0.15em
-  vertical-align: middle
+  padding: 0.2em 0.5em 0.15em
 
   .intro &
+    +linear-gradient(transparent 0%, transparent 30%, $intro-highlight-color 30%, $intro-highlight-color 80%, transparent 80%, $fallback: transparent)
     border-color: $offwhite
     color: $offwhite
 
@@ -73,8 +72,12 @@ mark
   .brand-label &
     margin-left: 0.5em
 
+  .portfolio-title &
+    @media (max-width: $break-medium)
+      +linear-gradient(transparent 0%, transparent 30%, $intro-highlight-color 30%, $intro-highlight-color 80%, transparent 80%, $fallback: transparent)
+
   .brand-label &
-    font-size: 0.7em
+    font-size: 1em
 
 blockquote
   background-color: $background-color
