@@ -3,15 +3,17 @@
   background-color: $link-color
   border-radius: 2em
   border: none
-  box-shadow: 0 0.25em 0.5em rgba($link-color, 0.5)
   color: $offwhite
   display: inline-block
   font-weight: 700
   line-height: 2
   padding: .2em 1em .25em
   text-shadow: none
-  transition: background-color $fast-timing
+  transition: background-color $fast-timing, transform $fast-timing
 
   &:hover
     background-color: $link-hover
     color: $offwhite
+
+  &:active
+    transform: translateY(0.1rem)

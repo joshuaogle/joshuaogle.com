@@ -1,3 +1,6 @@
+@mixin highlight($color)
+  +linear-gradient(transparent 0%, transparent 50%, $color 50%, $fallback: transparent)
+
 h1,
 h2,
 h3,
@@ -50,7 +53,7 @@ svg
   text-transform: uppercase
 
 mark
-  +linear-gradient(transparent 0%, transparent 30%, $highlight-color 30%, $highlight-color 80%, transparent 80%, $fallback: transparent)
+  +highlight($highlight-color)
   color: $light-brown
   padding: 0.05em 0.1em
 
@@ -64,7 +67,7 @@ mark
   padding: 0.2em 0.5em 0.15em
 
   .intro &
-    +linear-gradient(transparent 0%, transparent 30%, $intro-highlight-color 30%, $intro-highlight-color 80%, transparent 80%, $fallback: transparent)
+    +highlight($intro-highlight-color)
     border-color: $offwhite
     color: $offwhite
 
@@ -74,7 +77,7 @@ mark
 
   .portfolio-title &
     @media (max-width: $break-medium)
-      +linear-gradient(transparent 0%, transparent 30%, $intro-highlight-color 30%, $intro-highlight-color 80%, transparent 80%, $fallback: transparent)
+      +highlight($intro-highlight-color)
 
   .brand-label &
     font-size: 1em

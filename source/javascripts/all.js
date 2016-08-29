@@ -9,26 +9,7 @@ function isOnScreen($element) {
   return screenBottom > (elementTop + offset);
 }
 
-function debounce(func, wait, immediate) {
-	var timeout;
-	return function() {
-		var context = this, args = arguments;
-		var callNow = immediate && !timeout;
-
-		var later = function() {
-			timeout = null;
-			if (!immediate) func.apply(context, args);
-		};
-
-		clearTimeout(timeout);
-		timeout = setTimeout(later, wait);
-		if (callNow) {
-      func.apply(context, args)
-    };
-	};
-};
-
-var markAnimated = debounce(function() {
+var markAnimated = function() {
   $(".animate").each(function(i) {
     var $element = $(this);
 
@@ -38,7 +19,7 @@ var markAnimated = debounce(function() {
       }
     }
   });
-});
+};
 
 var fadeIntro = function() {
   var scrollTop = window.pageYOffset;

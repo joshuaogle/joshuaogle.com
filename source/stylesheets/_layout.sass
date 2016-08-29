@@ -9,11 +9,31 @@
   flex-direction: row
   justify-content: center
 
+.split-layout
+  @media (min-width: $break-medium)
+    @include split-layout
+
 @mixin split-primary
   flex: 3
+
+.split-primary
+  @media (min-width: $break-medium)
+    @include split-primary
 
 @mixin split-secondary
   justify-content: center
   display: flex
   flex: 1
   flex-direction: column
+
+.split-secondary
+  @media (min-width: $break-medium)
+    @include split-secondary
+
+  &:first-child
+    @media (min-width: $break-medium)
+      margin-right: $base-spacing
+
+  &:last-child
+    @media (min-width: $break-medium)
+      margin-left: $base-spacing

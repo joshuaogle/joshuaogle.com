@@ -18,15 +18,22 @@
 
   @media (max-width: $break-medium)
     +container
+    color: $white
 
     @each $brand, $color in $brand-colors
       &.#{$brand}
         background-color: $color
-        color: $white
 
         *
           border-color: $white
           color: $white
+
+        .button
+          color: $color
+
+    .button
+      background-color: $white
+      box-shadow: none
 
 .portfolio-description
   box-sizing: border-box
@@ -63,7 +70,8 @@
 
   @each $brand, $color in $brand-colors
     .#{$brand} &
-      background-color: $color
+      background: $color image-url("case-studies/#{$brand}-intro.svg") center center
+      background-size: 50%
       border-radius: $base-border-radius 0 0 $base-border-radius
 
       .device-outer
