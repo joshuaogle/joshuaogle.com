@@ -18,9 +18,11 @@ section.portfolio
           time.year= item.date.strftime("%Y")
         .section-title= item.data.role
         p= item.data.summary
-        - if item.body.present?
-          p
+        p
+          - if item.body.present?
             = link_to "Case Study", item.url, class: "button"
+          - if item.data.url.present?
+            = link_to "Visit #{item.title}", item.data.url, class: "button"
 
       .portfolio-preview
         div(class="portfolio-#{item.data.preview_type}")
