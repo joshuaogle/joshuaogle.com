@@ -22,6 +22,9 @@ html
         .section-title= current_article.data.role
         .year= current_article.date.strftime("%Y")
 
+    - if current_article.data.icon.present?
+      = image_tag current_article.data.icon, class: "intro-icon"
+
     main.content
       = partial "header"
       = yield
