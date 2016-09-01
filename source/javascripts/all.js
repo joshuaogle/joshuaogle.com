@@ -41,6 +41,7 @@ var fadeIntro = function() {
 
 $(function() {
   if ($(".animate").length > 0) {
+    markAnimated();
     window.addEventListener("scroll", markAnimated);
   }
 

@@ -28,8 +28,7 @@ ul
       display: inline-block
       margin: 0 $small-spacing
 
-p,
-figure
+p
   margin: 0 0 $base-spacing
 
 a
@@ -103,9 +102,17 @@ blockquote
     font-size: 0.75em
     font-weight: bold
 
+figure
+  margin: $large-spacing 0
+
+  .split-secondary &
+    margin: 0
+
+  .case-study-example
+    margin: 0 auto
+
 figcaption
   color: $muted-color
   font-size: small
-  margin: -$base-spacing auto $base-spacing
-  padding-top: $smallest-spacing
+  margin: $smallest-spacing auto $base-spacing
   text-align: center
