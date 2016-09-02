@@ -11,6 +11,8 @@ activate :blog do |blog|
   blog.sources = "case-studies/{title}.html"
 end
 
+page "/exercises/*", layout: "case-studies"
+
 configure :development do
   activate :livereload
 end

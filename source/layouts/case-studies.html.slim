@@ -18,12 +18,13 @@ html
     .intro
       = partial "header"
       .intro-content
-        h1= current_article.title
-        .section-title= current_article.data.role
-        .year= current_article.date.strftime("%Y")
+        h1= current_page.data.title
+        .section-title= current_page.data.role
+        - if defined? current_page.date
+          .year= current_page.date.strftime("%Y")
 
-    - if current_article.data.icon.present?
-      = image_tag current_article.data.icon, class: "intro-icon"
+    - if current_page.data.icon.present?
+      = image_tag current_page.data.icon, class: "intro-icon"
 
     main.content
       = partial "header"

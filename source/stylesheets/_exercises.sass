@@ -1,0 +1,63 @@
+.exercises_invision
+  .intro
+    background-color: #FF4070
+    text-align: center
+
+  .content
+    box-shadow: 0 0 2em shade(#FF4070, 20%)
+    color: #1F2532
+
+    .logo
+      svg
+        path,
+        ellipse
+          fill: #757B8C
+
+    h2
+      color: #FF4070
+
+  footer
+    background-color: #1F2532
+
+.exercises_nom
+  .intro
+    background-color: #2196F3
+    text-align: center
+
+  .content
+    box-shadow: 0 0 2em shade(#2196F3, 20%)
+    color: #212121
+
+    .logo
+      svg
+        path,
+        ellipse
+          fill: #B0BEC5
+
+    h2
+      color: #FF5722
+
+  footer
+    background-color: #212121
+
+  .nom-mocks
+    @media (min-width: $break-medium)
+      margin-bottom: $large-spacing * 3
+      position: relative
+
+  .nom-mocks-mobile
+    @media (min-width: $break-medium)
+      +position(absolute, 50% $large-spacing null null)
+      max-width: 24%
+      opacity: 0
+      transform: translateY($large-spacing)
+      transition: opacity $slow-timing, transform $slow-timing ease-in-out
+
+    &.animated
+      @media (min-width: $break-medium)
+        opacity: 1
+        transform: translateY(1px)
+
+    .case-study-example
+      @media (min-width: $break-medium)
+        box-shadow: 0 0.2rem 1.2rem -0.2rem $black
