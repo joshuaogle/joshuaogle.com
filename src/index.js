@@ -3,11 +3,10 @@ import { render } from 'react-dom';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
 import App from './components/App';
-import Home from './components/Home';
-import PageNotFound from './components/PageNotFound';
-import ExampleComponent from './components/ExampleComponent';
-import ExampleTwoDeepComponent from './components/ExampleTwoDeepComponent';
-
+import Home from './components/pages/Home';
+import PageNotFound from './components/pages/PageNotFound';
+import ExampleComponent from './components/pages/ExampleComponent';
+import ExampleTwoDeepComponent from './components/pages/ExampleTwoDeepComponent';
 
 const routes = (
   <Route path="/" mapMenuTitle="Home" component={App}>
@@ -20,7 +19,6 @@ const routes = (
     <Route path="*" mapMenuTitle="Page Not Found" component={PageNotFound} />
   </Route>
 );
-
 
 render(
   <Router

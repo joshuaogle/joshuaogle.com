@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import s from '../styles/pageNotFound.style';
+import s from '../../styles/pageNotFound.style';
 
 const propTypes = {
   location: PropTypes.object.isRequired,

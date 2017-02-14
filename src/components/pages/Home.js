@@ -1,7 +1,7 @@
 import React from 'react';
 import Interactive from 'react-interactive';
 import { Link } from 'react-router';
-import s from '../styles/home.style';
+import s from '../../styles/home.style';
 
 function Home() {
   const repoReadmeLink = text => (
