@@ -7,9 +7,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rafrex/spa-github-pages.git"
+    "url": "git+https://github.com/joshuaogle/joshuaogle-react.git"
   },
-  "author": "Rafael Pedicini <code@rafrex.com>",
+  "author": "Joshua Ogle <joshua@joshuaogle.com",
   "license": "MIT",
   "dependencies": {
     "react": "^15.4.1",
