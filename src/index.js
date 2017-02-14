@@ -1,6 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+import './application.sass';
 
 import App from './components/App';
 import Home from './components/pages/Home';

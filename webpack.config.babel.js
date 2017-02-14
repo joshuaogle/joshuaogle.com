@@ -7,17 +7,23 @@ export default {
     publicPath: '/build/',
     filename: 'bundle.js',
   },
-
+  devtool: 'source-map',
   module: {
     loaders: [
-      { test: /\.jsx?$/, exclude: /node_modules/, loader: 'babel' },
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        loader: 'babel'
+      },
+      {
+        test: /\.sass$/,
+        loaders: ["style", "css?sourceMap", "sass?sourceMap"]
+      },
     ],
   },
-
   resolve: {
     extensions: ['', '.js', '.jsx'],
   },
-
   plugins: process.argv.indexOf('-p') === -1 ? null : [
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production'),

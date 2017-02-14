@@ -1,0 +1,61 @@
+@charset "utf-8"
+
+// Colors
+$black: #000
+$white: #fff
+$offwhite: #f2efed
+$brown: #33312f
+$light-brown: #4E4B48
+$red: #f15729
+$gray: #bbb
+$blue: #53B1E1
+$yellow: #f4da5c
+$green: #bfd849
+$magenta: #c76baa
+$cyan: #66ddd2
+
+$background-color: $offwhite
+$text-color: $brown
+$muted-color: mix($text-color, $background-color, 66%)
+$link-color: $blue
+$link-hover: shade($blue, 15%)
+$logo-color: $offwhite
+$highlight-color: mix($yellow, $background-color, 25%)
+$intro-highlight-color: rgba($white, 0.15)
+
+// Layout
+$break-small: 480px
+$break-medium: 1024px
+$break-large: 1600px
+$intro-height: 85vh
+$case-studies-intro-height: $intro-height / 2
+
+// Fonts
+$sans-serif: "Brandon", Helvetica, sans-serif
+
+// Sizes
+$base-font-size: calc(1rem + 0.33 * (100vw - 20em) / 80)
+$small-font-size: 0.8rem
+$smallest-font-size: 0.6rem
+$base-spacing: 2rem
+$small-spacing: $base-spacing / 2
+$smallest-spacing: $base-spacing / 4
+$large-spacing: $base-spacing * 2
+$header-width: 4rem
+$base-border-radius: 0.2rem
+
+// Shodows
+$base-box-shadow: 0 0.25em 1em 0.25em rgba($black, 0.4)
+$card-box-shadow: 0.25em 0.25em 0.25em rgba($black, 0.2)
+
+// Z-indeces
+$z-base: 1
+$z-header: 5
+
+// Brand Colors
+$brand-colors: (armada: #1aa9ef, summit: #ed3e44, ember: #e46651, schoolkeep: #23bd84, carma: #555756, ooo: #41434e, sharespost: #211A4E)
+
+// Animations
+$base-timing: 250ms
+$fast-timing: $base-timing / 2
+$slow-timing: $base-timing * 2
