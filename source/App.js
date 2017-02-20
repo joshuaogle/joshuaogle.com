@@ -1,19 +1,20 @@
 import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
 
-const propTypes = {
-  children: PropTypes.element.isRequired,
-  routes: PropTypes.array.isRequired,
-};
+import Footer from './components/Footer';
 
 function App({ children, routes }) {
   return (
     <div>
       {children}
+      <Footer />
     </div>
   );
 }
 
-App.propTypes = propTypes;
+App.propTypes = {
+  children: PropTypes.element.isRequired,
+  routes: PropTypes.array.isRequired,
+};
 
 export default App;

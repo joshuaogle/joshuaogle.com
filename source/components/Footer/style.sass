@@ -1,0 +1,60 @@
+@import "../../variables"
+
+@mixin icon-link($color, $icon)
+  color: $color
+  white-space: nowrap
+
+  &:hover
+    color: shade($color, 20%)
+
+    &::after
+      opacity: 0.75
+
+  &::after
+    +size(1em)
+    background-image: image-url("icon-#{$icon}.svg")
+    background-size: 1em
+    content: ""
+    display: inline-block
+    margin-left: 0.15em
+    vertical-align: middle
+    transition: opacity $base-timing
+
+footer
+  background-color: $brown
+  color: $white
+  position: relative
+  z-index: 1
+
+  section
+    @media(min-width: $break-medium)
+      max-width: 66vw
+
+  h2
+    color: $white
+
+  .copyright
+    color: $muted-color
+    font-size: $smallest-font-size
+    font-weight: normal
+    margin-bottom: 0
+    padding-bottom: $base-spacing
+    text-align: center
+
+    a
+      color: $muted-color
+
+.link-email
+  +icon-link($link-color, "email")
+
+.link-dribbble
+  +icon-link(#ea4c89, "dribbble")
+
+.link-github
+  +icon-link(#999999, "github")
+
+.link-twitter
+  +icon-link(#1da1f2, "twitter")
+
+.link-linkedin
+  +icon-link(#00a0dc, "linkedin")

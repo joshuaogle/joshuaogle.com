@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import './application.sass';
 
-import App from './components/App';
+import App from './App';
 import Home from './pages/Home';
 import PageNotFound from './pages/PageNotFound';
 

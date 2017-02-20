@@ -1,4 +1,5 @@
 import webpack from 'webpack';
+const bourbon = require('bourbon');
 
 export default {
   entry: `${__dirname}/source/index.js`,
@@ -17,7 +18,7 @@ export default {
       },
       {
         test: /\.sass$/,
-        loaders: ["style", "css?sourceMap", "sass?sourceMap"]
+        loaders: ["style", "css?sourceMap", "sass?includePaths[]=" + bourbon.includePaths + "&sourceMap"]
       },
     ],
   },

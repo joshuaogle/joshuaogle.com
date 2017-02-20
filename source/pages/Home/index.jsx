@@ -1,14 +1,18 @@
 import React from 'react';
 import './style.sass';
 
-function Home() {
-  return (
-    <article>
-      <p>
-        Home
-      </p>
-    </article>
-  );
+class Home extends React.Component {
+  render() {
+    return (
+      <article>
+        Intro
+        About
+        Interaction Design
+        Branding
+        Teaching
+      </article>
+    );
+  }
 }
 
 export default Home;
