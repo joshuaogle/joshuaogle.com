@@ -7,7 +7,7 @@ class Teaching extends React.Component {
     return (
       <section className="teaching">
         <div className="teaching-portrait">
-          <img src="/images/speaking-d2211f0a.png" alt="Speaking" />
+          <img src="/assets/images/speaking.png" alt="Speaking" />
         </div>
 
         <div className="teaching-content">

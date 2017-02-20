@@ -14,16 +14,20 @@ export default {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: 'babel'
+        loader: 'babel-loader'
       },
       {
         test: /\.sass$/,
-        loaders: ["style", "css?sourceMap", "sass?includePaths[]=" + bourbon.includePaths + "&sourceMap"]
+        loaders: ["style-loader", "css-loader?sourceMap", "sass-loader?includePaths[]=" + bourbon.includePaths + "&sourceMap"]
+      },
+      {
+        test: /\.woff$/,
+        loader: 'file-loader?name=fonts/[name].[ext]'
       },
     ],
   },
   resolve: {
-    extensions: ['', '.js', '.jsx'],
+    extensions: ['.js', '.jsx'],
   },
   plugins: process.argv.indexOf('-p') === -1 ? null : [
     new webpack.DefinePlugin({
