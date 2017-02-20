@@ -1,5 +1,7 @@
 import React from 'react';
-import './style.sass';
+import './branding.sass';
+
+import InlineSVG from '../../components/InlineSVG';
 
 class Branding extends React.Component {
   render() {
@@ -15,49 +17,56 @@ class Branding extends React.Component {
 
         <ul className="animate">
           <li className="brand armada">
-            Armada.svg
+            <InlineSVG src="brand-armada.svg" />
             <div className="brand-label">
               Armada Telematics
               <time className="year">2014</time>
             </div>
           </li>
           <li className="brand wifiguru">
-            Wifiguru.svg
+            <InlineSVG src="brand-wifiguru.svg" />
             <div className="brand-label">
               Wifi Guru
               <time className="year">2016</time>
             </div>
           </li>
           <li className="brand brightbit">
-            Brightbit.svg
+            <InlineSVG src="brand-brightbit.svg" />
             <div className="brand-label">
               Brightbit
               <time className="year">2013</time>
             </div>
           </li>
           <li className="brand proteus">
-            Proteus.svg
+            <InlineSVG src="brand-proteus.svg" />
             <div className="brand-label">
               Proteus
               <time className="year">2015</time>
             </div>
           </li>
           <li className="brand sheriff">
-            Sheriff.svg
+            <InlineSVG src="brand-sheriff.svg" />
             <div className="brand-label">
               Sheriff Signs
               <time className="year">2015</time>
             </div>
           </li>
           <li className="brand gemini">
-            Gemini.svg
+            <InlineSVG src="brand-gemini.svg" />
+            <div className="brand-label">
+              Gemini SBS
+              <time className="year">2009</time>
+            </div>
+          </li>
+          <li className="brand thunderplains">
+            <InlineSVG src="brand-thunderplains.svg" />
             <div className="brand-label">
               Thunder Plains Conference
               <time className="year">2013</time>
             </div>
           </li>
           <li className="brand skyhelm">
-            Skyhelm.svg
+            <InlineSVG src="brand-skyhelm.svg" />
             <div className="brand-label">
               Skyhelm Technology
               <time className="year">2015</time>

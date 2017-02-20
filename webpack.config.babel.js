@@ -24,6 +24,17 @@ export default {
         test: /\.woff$/,
         loader: 'file-loader?name=fonts/[name].[ext]'
       },
+      {
+        test: /\.(jpg|png)$/,
+        loader: 'file-loader',
+        options: {
+          name: '[path][name].[hash].[ext]',
+        },
+      },
+      {
+        test: /\.svg$/,
+        loader: 'svg-inline-loader'
+      }
     ],
   },
   resolve: {
