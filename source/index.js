@@ -4,8 +4,8 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import './application.sass';
 
 import App from './components/App';
-import Home from './components/pages/Home';
-import PageNotFound from './components/pages/PageNotFound';
+import Home from './pages/Home';
+import PageNotFound from './pages/PageNotFound';
 
 const routes = (
   <Route path="/" mapMenuTitle="Home" component={App}>
