@@ -1,0 +1,152 @@
+---
+title: nom
+role: "&ldquo;Faces &amp; Names&rdquo; Design Exercise"
+icon: "exercises/nom-icon.svg"
+---
+
+section
+  .section-title The Challenge
+  h2 What's your name again?
+  p
+    |
+      Teaching a university class is hard enough, but one thing that is especially frustrating is having to memorize the names and faces of your students.
+      It's something everyone has trouble with.
+      <mark>Professors have to do it with a fresh batch of dozens of new students every semester.</mark>
+      Let's start by talking about an imaginary user before sketching solutions and creating a mockup of our idea.
+
+section
+  .section-title The User
+  h2 Fresh faces, new names
+
+  .split-layout
+    .split-primary
+      p
+        |
+          Lisa is a professor at the University of Colorado Boulder.
+          She teaches English 1110, a freshman English class that has 60 new students every semester.
+          She loves teaching and meeting new students, but <mark>she feels awful when she can't remember their names</mark>.
+      p
+        |
+          Lisa isn't a computer whiz, but she enjoys mobile games.
+          As a teacher, <mark>she knows how much easier it is to learn while having fun</mark>.
+          If there was a way to learn names and faces the way that some apps help you learn languages, she feels she would have a closer connection with her students.
+
+    .split-secondary
+      figure
+        = image_tag "exercises/nom-teacher.png", class: "case-study-example"
+        figcaption Meet Lisa, a professor at CU Boulder
+
+section
+  .section-title Ideation
+  h2 Hacking the human brain
+  p
+    |
+      <mark>The science of learning has come a long way the last few years.</mark>
+      With techniques like #{link_to "spaced repetition", "https://en.wikipedia.org/wiki/Spaced_repetition"} and the #{link_to "Leitner system", "https://en.wikipedia.org/wiki/Leitner_system"}, we can make memorization both fast and fun.
+      Ideally the user won't even know this is how the system works.
+      It will helpfully bring up the people you need the most help with, while occasionally slipping in ones that you already mastered to make sure it stays that way.
+
+  div There are a few goals that will make this app a success:
+  ul
+    li Give the user an experience close to seeing the person in real life by using large photos of the person centered on their face.
+    li Start with just first names, which are easier to remember
+    li Display the progress of their mastery in a format that's easy to understand at a glance
+    li As the user gets better with the person, add in last names to provide a challenge
+    li Copy should always be friendly and encouraging
+
+  p
+    |
+      I started by sketching the general layout of the app.
+      We want to focus on the task of matching faces and names, so that should be nearly the entire focus of this view.
+      <mark>People can be arranged as distinct cards</mark> that will hold their portrait, name choices and learning progress.
+      The active card should be front and center, and for extra emphasis we will scale it larger as it slides into view with a graceful animation.
+      Previously answered cards and cards coming up next will be visible if the screen is large enough.
+      Having previously answered cards visible helps reinforce the positive or negative response, and showing cards that are next up will help prime the brain to answer the question when it becomes active.
+
+  figure
+    = image_tag "exercises/nom-card-sketch.png", class: "case-study-example"
+    figcaption Sketching the card layout
+
+  p
+    |
+      A group of fewer than ten people probably isn't the main use-case of the app, but there would at least be a time while populating the group that there will be very few cards.
+      To make things a little more challenging, <mark>we should have a list of random names that we can use for extra choices to keep things fresh</mark>.
+      If we ask for each person's gender, we can limit things somewhat but we should also have some gender-neutral names available.
+      I can imagine a situation where a girl from Taiwan is a student in this class and it would be tempting to limit the alternative names to ones that are also common in Taiwan, but names are very fluid across cultures and providing a mix could sometimes be helpful.
+      You would probably remember that her name is closer to Huiwen than Michelle, but the act of choosing the correct name is more important than making the choice very challenging.
+
+  .split-layout
+    .split-primary
+      p
+        |
+          Although the cards are very simple, there are several ways to arrange their parts.
+          My original design placed the learning progress bar between the portrait and names as a divider.
+          #{link_to "Gestalt Principles", "https://robots.thoughtbot.com/gestalt-principles"} would encourage the face and name choices to be next to each other, and so it should be moved outside the card to the top or bottom.
+      p
+        |
+          Another alternative had the names on the side to more closely match a photo badge which would preserve the vertical portrait and make centering easier, but I think the animation when a card slides into the active position would be awkward.
+          This card design would be much less attractive in a vertical mobile app, and we should be as consistent across platforms as possible.
+
+    .split-secondary
+      figure
+        = image_tag "exercises/nom-card-alternative.png", class: "case-study-example"
+        figcaption A discarded card design
+
+  p
+    |
+      <mark>Adding new people should be easy.</mark>
+      On the desktop web, clicking on the link would pop in a new card that replaces the &ldquo;active&rdquo; and slides it left.
+      There would be a very short form to upload someone's photo and enter their name and gender (which is optional of course, but would help make the alternative names similar to the correct one).
+      On the mobile app, we could simply just bring up the camera to start the short form.
+      I chose not to mock up this screen, but hopefully you'll get the idea.
+
+  figure
+    = image_tag "exercises/nom-upload-alternative.png", class: "case-study-example"
+    figcaption A discarded upload design
+
+  p
+    |
+      With these screens more or less figured out, I began the high-fidelity mockup in Sketch.
+      I spent a few minutes on a quick app logo and name, which I had also sketched out.
+      I was worried I wouldn't have enough time before the prescribed limit, so I borrowed colors from Material Design to keep things bright and friendly.
+
+section
+  .section-title Mock-up
+  h2 Say hello to Nom
+
+  p
+    |
+      Nom helps you remember <em>names</em> with <em>bite-sized</em> sessions.
+      In the mockups below, we're going to focus just on the task of matching names to faces.
+      We'll pretend that Lisa has already set up this class and has played for a few sessions.
+      Let's take a look and see if we accomplished our goals.
+
+  .nom-mocks
+    figure.nom-mocks-web
+      = image_tag "exercises/nom-practice.png", class: "case-study-example"
+      figcaption The finished desktop screen
+
+    figure.nom-mocks-mobile.animate
+      = image_tag "exercises/nom-mobile.png", class: "case-study-example"
+      figcaption A mobile design translation
+
+  p
+    |
+      We have large photos on each of the cards, so you get as much of a clue as possible while making your guess.
+      On larger or horizontal screens, we expand the face to take up the whole card.
+      As you can see in the mobile example, we start out with just first names which I think will feel much easier until the names start to come automatically.
+      You should always be able to skip the person and it won't count against you.
+      A simple progress bar above the card shows how well you have answered before, but I intentionally did not use a percent or specific number because I don't want it to cause stress for the user.
+
+  p
+    |
+      There are a few more things I would focus on if this were a real app.
+      <mark>It should be easy to create groups and add people to them.</mark>
+      In our scenario, there might be a whole classroom of people to take photos of and we don't want people standing around awkwardly waiting for their turn.
+      I'd have trouble asking thirty people to do that, so it should also be easy to just upload a photo from something like a student profile.
+      The app should also carry the &ldquo;friendly assistant&rdquo; philosophy to all of the screens, most importantly by walking them through the set up process.
+      It's easy to give up on a learning app, but one that congratulates your successes and encourages you when you stumble will keep you coming back.
+
+  p
+    |
+      I think we accomplished all of the goals that were set, and Lisa's students will notice the work she put in to know each of them.

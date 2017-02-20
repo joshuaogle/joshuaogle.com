@@ -1,0 +1,19 @@
+.button
+  background-repeat: repeat-x
+  background-color: $link-color
+  border-radius: 2em
+  border: none
+  color: $offwhite
+  display: inline-block
+  font-weight: 700
+  line-height: 2
+  padding: .2em 1em .25em
+  text-shadow: none
+  transition: background-color $fast-timing, transform $fast-timing
+
+  &:hover
+    background-color: $link-hover
+    color: $offwhite
+
+  &:active
+    transform: translateY(0.1rem)

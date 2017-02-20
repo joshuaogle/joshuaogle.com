@@ -1,0 +1,119 @@
+@mixin highlight($color)
+  +linear-gradient(transparent 0%, transparent 50%, $color 50%, $fallback: transparent)
+
+h1,
+h2,
+h3,
+h4
+  font-family: $heading-font
+  font-weight: bold
+  line-height: 1.25
+  margin: 0 0 $small-spacing
+
+h2
+  color: $red
+
+ul
+  list-style: outside square
+  margin: 0 0 $base-spacing $smallest-spacing
+  padding: 0 0 0 $small-spacing
+
+  &.list-simple
+    list-style: none
+    padding: 0
+
+  &.list-inline
+    @extend .list-simple
+
+    li
+      display: inline-block
+      margin: 0 $small-spacing
+
+p
+  margin: 0 0 $base-spacing
+
+a
+  color: $link-color
+  text-decoration: none
+  transition: color $base-timing
+
+  &:hover
+    color: $link-hover
+    text-decoration: none
+
+img,
+svg
+  display: block
+  margin: 0 auto
+  max-width: 100%
+
+%small
+  color: $muted-color
+  font-size: $small-font-size
+  font-weight: normal
+  text-transform: uppercase
+
+mark
+  +highlight($highlight-color)
+  color: $light-brown
+  padding: 0.05em 0.1em
+
+.year
+  @extend mark
+  display: inline-block
+  color: $muted-color
+  font-size: 0.7em
+  font-weight: normal
+  line-height: 1
+  padding: 0.2em 0.5em 0.15em
+
+  .intro &
+    +highlight($intro-highlight-color)
+    border-color: $offwhite
+    color: $offwhite
+
+  .portfolio-title &,
+  .brand-label &
+    margin-left: 0.5em
+
+  .portfolio-title &
+    @media (max-width: $break-medium)
+      +highlight($intro-highlight-color)
+
+  .brand-label &
+    font-size: 1em
+
+blockquote
+  background-color: $background-color
+  border-left: 5px solid shade($background-color, 5%)
+  margin-left: $base-spacing
+  padding-left: $small-spacing
+  position: relative
+
+  &::before
+    +position(absolute, -0.1em null null -0.5em)
+    color: shade($background-color, 15%)
+    content: "“"
+    font-family: Georgia, serif
+    font-size: 4.5em
+    line-height: 1
+
+  .quote-author
+    color: $red
+    font-size: 0.75em
+    font-weight: bold
+
+figure
+  margin: $large-spacing 0
+
+  .split-secondary &
+    margin: 0
+
+  .case-study-example
+    margin: 0 auto
+
+figcaption
+  color: $muted-color
+  font-size: small
+  margin: $smallest-spacing auto $base-spacing
+  text-align: center

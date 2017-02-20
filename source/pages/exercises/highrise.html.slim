@@ -1,0 +1,114 @@
+---
+title: Highrise Tasks
+role: Design Exercise
+icon: "exercises/highrise-icon.svg"
+---
+
+section
+  .section-title The Challenge
+  h2 Things that never get done
+  p
+    |
+      Those of us that are addicted to to-do apps always start off with good intentions.
+      For a few days, the list is manageable and you feel focused and productive.
+      Then you get a big project that takes a little longer than it should.
+      And a few more things sneak by, and a few more, and pretty soon you've got an undefeatable army of undone tasks under a red &ldquo;Overdue&rdquo; banner to remind you what a horrible person you are.
+      Or at least that's what it feels like.
+
+section
+  .section-title The problem of overdue tasks
+  h2 Cleaning house
+  p
+    |
+      This was a really interesting problem and one that there are a lot of solutions to.
+      In the interest of keeping things practical, I went with the simplest possible solution so the user can quickly handle their overdue tasks.
+      There are cleverer ways to solve this, but it's such a we're talking about users that obviously don't prune their lists as it is, so simple wins.
+      Along the way, you'll also see some other design improvements that help reinforce the interface.
+      You can go directly to this part of the prototype by #{link_to "taking a shortcut here", "https://invis.io/2K8IL7V98#/186674213_Overdue_Tasks_With_Batch_Options"}.
+  p
+    |
+      The other UI elements probably are jumping out at you first, and we'll talk about those in a moment.
+      My solution for overdue tasks is in the new &ldquo;Heads Up&rdquo; section.
+      I think part of the reason we abandon task management apps is the shame that builds as our overdue tasks pile up.
+      By giving it a more positive sounding title, we can offer some encouragement to get these things done.
+
+  figure
+    = image_tag "exercises/highrise-heads-up.png", class: "case-study-example"
+    figcaption The new &ldquo;Heads Up&rdquo; section.
+
+  p
+    |
+      The &ldquo;Manage Tasks&rdquo; link in the upper-right might appear when you’ve built up more than twenty overdue items.
+      This brings down an action bar for the most realistic actions people take.
+      I've noticed that people tend to handle old items in just a few different ways.
+      Some are packrats and might prefer to keep their tasks but just remove the due date.
+      Others, like myself, might be inclined to just archive or delete them.
+
+  figure
+    = image_tag "exercises/highrise-batch-actions.png", class: "case-study-example"
+    figcaption Helpful links to get back to square one.
+
+  p
+    |
+      There are more clever solutions, but I believe simple and minimal save the day here.
+      These are nice design patterns to bring into other sections and will make the UI look a little more modern while also being more useful.
+      The current style looks a little dated, but I love that it sticks to what works.
+      Highrise is a slightly different audience than Basecamp, but there are a few parts you might see where I drew inspiration to make things more bright and helpful.
+
+section
+  .section-title UI Improvements
+  h2 Helping people get things done
+  p
+    |
+      There is a lot we can do to try to mitigate the build-up of overdue tasks, but what do we do about the ones already there?
+      There are some good ideas from task management desktop apps that we can use to find a solution.
+      You can see #{link_to "what I mean at the beginning of the prototype", "https://invis.io/2K8IL7V98#/186587199_Tasks_Index"} what I mean.
+
+  figure
+    = image_tag "exercises/highrise-new.png", class: "case-study-example"
+    figcaption Prime the user to start thinking about their task.
+
+  p
+    |
+      Probably one of the first things you noticed was the “Add your first task” prompt.
+      I love this feature in Wunderlist and it primes the user into thinking about the task.
+      I still like the “Add Task” button at the top for a quick action from another part of the site and wouldn’t want that to go away.
+  p
+    |
+      The UI could be slightly more robust and less like a text list.
+      The redesigned tasks are easier to tell apart and the whole list becomes easier to read.
+      The long text lists could get pretty dense and there is some fatigue that can happen when content isn't differentiated.
+      Just a little more room can really help here without losing too much screen space.
+
+  figure
+    = image_tag "exercises/highrise-tasks.png", class: "case-study-example"
+    figcaption Ahhhh, some breathing room.
+
+  .split-layout
+    .split-primary
+      p
+        |
+          I added a red notification badge in the sidebar to indicate overdue items, so they don’t ignore the feature completely.
+          And in case they do, I redesigned the &ldquo;Your Highrise task today&rdquo; email so it's more helpful and more reminiscent of the Highrise brand.
+          Some to-do lists can start to feel like they are badgering you about overdue tasks, and that just makes things worse.
+          Highrise should feel like a helpful assistant and mailers can be an important part of that.
+
+    .split-secondary
+      figure
+        = image_tag "exercises/highrise-mailer.png", class: "case-study-example"
+        figcaption Good morning to you too, Highrise
+
+section
+  .section-title Conclusion
+  h2 Small changes, big improvement
+  p
+    |
+      As you mentioned, it’s a good idea to design it to break up into small iterations.
+      I don’t think the current UI would handle the “Manage Tasks” interaction very well, so I would start with some of the visual improvements to tasks first.
+      The batch action bar would come next and offers the most productive change for the users we're trying to help.
+      I would guess that the back end for these changes should fit into a short sprint as well.
+      Things like color and typography changes could come along later of course, but I thought you might like the change of personality and how it fits in.
+
+  p
+    |
+      I hope you enjoy looking over the prototype and I can't wait to hear what you all think.

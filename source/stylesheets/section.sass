@@ -1,0 +1,22 @@
+section
+  +container
+  overflow-x: hidden
+
+.section-title
+  @extend %small
+  margin-bottom: $smallest-spacing
+
+  .intro &
+    color: $offwhite
+
+.content
+  background-color: $background-color
+  box-shadow: 0 0 2em $brown
+  margin-top: $intro-height
+  overflow: hidden
+  position: relative
+  z-index: 1
+
+  .case-studies &,
+  .exercises &
+    margin-top: $case-studies-intro-height

@@ -1,0 +1,147 @@
+.portfolio
+  padding-right: 0
+
+  @media (max-width: $break-medium)
+    padding-left: 0
+
+.portfolio-intro
+  @media (max-width: $break-medium)
+    +container
+
+.portfolio-section
+  position: relative
+
+  @media (min-width: $break-medium)
+    +split-layout
+    margin-bottom: 5vh
+    height: 600px
+
+  @media (max-width: $break-medium)
+    +container
+    color: $white
+
+    @each $brand, $color in $brand-colors
+      &.#{$brand}
+        background-color: $color
+
+        *
+          border-color: $white
+          color: $white
+
+        .button
+          color: $color
+
+    .button
+      background-color: $white
+      box-shadow: none
+
+.portfolio-description
+  box-sizing: border-box
+  margin-right: $small-spacing
+  padding-right: $base-spacing
+  position: relative
+
+  @media (min-width: $break-medium)
+    +split-secondary
+
+  p
+    font-size: $small-font-size
+    line-height: 1.5
+
+.portfolio-title
+  margin-bottom: $smallest-spacing
+
+.portfolio-preview
+  background-color: $light-brown
+  background-size: cover
+  background-position: center center
+  background-repeat: no-repeat
+  box-sizing: border-box
+
+  @media (min-width: $break-medium)
+    +split-primary
+    align-items: flex-end
+    display: flex
+    justify-content: center
+    flex-direction: row
+    overflow: hidden
+    margin-left: $small-spacing
+    padding: $base-spacing $base-spacing 0
+
+  @each $brand, $color in $brand-colors
+    .#{$brand} &
+      background: $color image-url("case-studies/#{$brand}-intro.svg") center center
+      background-size: 50%
+      border-radius: $base-border-radius 0 0 $base-border-radius
+
+      .device-outer
+        fill: $color
+
+.portfolio-screen
+  border: 1px solid $white
+  border-radius: $smallest-spacing $smallest-spacing 0 0
+  display: inline-block
+  opacity: 0
+  padding-top: $small-spacing
+  position: relative
+  transform: translateY($large-spacing)
+  transition: opacity $slow-timing, transform $slow-timing ease-in-out
+
+  @each $brand, $color in $brand-colors
+    .#{$brand} &
+      background-color: $color
+
+  &::before
+    +position(absolute, 0 null null 0)
+    background: radial-gradient(rgba(#fff, 0) 32%, #fff 33%, #fff 40%, rgba(#fff, 0) 41%)
+    background-position: 0 0, #{$small-spacing} #{$small-spacing}
+    background-size: #{$small-spacing} #{$small-spacing}
+    content: ""
+    display: block
+    margin-left: $smallest-spacing
+    opacity: 0.33
+    height: $small-spacing
+    width: $small-spacing * 3
+
+  .animated &
+    opacity: 1
+    transform: translateY(1px)
+
+  img
+    border-top: 1px solid $white
+
+.portfolio-phone
+  +size(295px 615px)
+  align-self: center
+  margin: 0 auto
+  max-width: 26.5vh
+  max-height: 55vh
+  opacity: 0
+  position: relative
+  transform: rotate(-15deg)
+  transition: opacity $slow-timing, transform $slow-timing ease-in-out
+
+  @media (min-width: $break-medium)
+    margin-top: -$base-spacing
+
+  .animated &
+    opacity: 1
+    transform: rotate(-30deg)
+
+  svg
+    background-size: cover
+    position: absolute
+    z-index: 1
+
+  img
+    max-width: none
+    left: 8.5%
+    position: absolute
+    top: 13.5%
+    width: 85%
+    z-index: 2
+
+.portfolio-float
+  +position(absolute, 50% null null 50%)
+  transform: translate(-50%, -50%)
+  z-index: 2

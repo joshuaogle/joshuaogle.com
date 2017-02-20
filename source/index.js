@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
-import './application.sass';
+import './stylesheets/application.sass';
 
 import App from './App';
 import Home from './pages/Home';
