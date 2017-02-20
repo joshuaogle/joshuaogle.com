@@ -21,8 +21,8 @@ export default {
         loaders: ["style-loader", "css-loader?sourceMap", "sass-loader?includePaths[]=" + bourbon.includePaths + "&sourceMap"]
       },
       {
-        test: /\.woff$/,
-        loader: 'file-loader?name=fonts/[name].[ext]'
+        test: /\.(png|woff|woff2|eot|ttf)$/,
+        loader: 'url-loader?limit=100000'
       },
       {
         test: /\.(jpg|png)$/,

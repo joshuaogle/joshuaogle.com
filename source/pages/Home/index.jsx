@@ -8,6 +8,36 @@ import Branding from './Branding';
 import Teaching from './Teaching';
 
 class Home extends React.Component {
+  componentDidMount() {
+    const animates = document.getElementsByClassName("animate");
+
+    function isOnScreen(element) {
+      var elementPosition = element.getBoundingClientRect();
+      var elementTop = elementPosition.top;
+      var scrollTop = window.pageYOffset;
+      var screenHeight = window.clientHeight;
+      var screenBottom = scrollTop + screenHeight;
+      var offset = 150;
+
+      return screenBottom > (elementTop + offset);
+    }
+
+    var markAnimated = function() {
+      for (var element of animates) {
+        if (!element.classList.contains("animated")) {
+          if (isOnScreen(element)) {
+            element.classList.add("animated");
+          }
+        }
+      }
+    };
+
+    if (animates.length > 0) {
+      markAnimated();
+      window.addEventListener("scroll", markAnimated);
+    }
+  }
+
   render() {
     return (
       <article>

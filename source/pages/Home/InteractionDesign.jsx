@@ -68,7 +68,7 @@ class InteractionDesign extends React.Component {
             It's not enough to make something pretty, and you can't just make it functional either.
             A great experience is making the user feel at home, showing them a better way to get things done.
             A great design isn't even about your product.
-            <mark>It's about them.</mark>
+            &nbsp;<mark>It's about them.</mark>
           </p>
         </div>
 

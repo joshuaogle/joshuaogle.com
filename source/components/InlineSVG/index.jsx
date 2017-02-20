@@ -1,6 +1,5 @@
 import React from 'react';
 import {Link} from 'react-router';
-import './style.sass';
 
 class InlineSVG extends React.Component {
 
