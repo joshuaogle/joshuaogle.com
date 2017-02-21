@@ -20,7 +20,7 @@ class Footer extends React.Component {
           </p>
 
           <p>
-            You can also check out more of my work <Link href="http://dribbble.com/joshuaogle" className="link-dribbble">on Dribbble</Link>
+            You can also check out more of my work <Link href="http://dribbble.com/joshuaogle" className="link-dribbble">on Dribbble</Link>&nbsp;
             and <Link href="http://github.com/joshuaogle" className="link-github">on Github</Link>,
             take a look at where I've worked <Link href="http://linkedin.com/in/joshuaogle" className="link-linkedin">on LinkedIn</Link>,
             and see what I'm up to today <Link href="http://twitter.com/joshuaogle" className="link-twitter">on Twitter</Link>.
@@ -28,9 +28,9 @@ class Footer extends React.Component {
         </section>
 
         <p className="copyright">
-          &copy; Joshua Ogle.
-          <Link href="https://www.youtube.com/watch?v=du6TW4fKOmk" target="_blank">This website updated by witches.</Link>
-          All rights reserved.
+          &copy; Joshua Ogle.&nbsp;
+         <Link href="https://www.youtube.com/watch?v=du6TW4fKOmk" target="_blank">This website updated by witches.</Link>&nbsp;
+         All rights reserved.
         </p>
       </footer>
     );

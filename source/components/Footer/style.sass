@@ -1,27 +1,7 @@
 @import "../../stylesheets/variables"
 
-@mixin icon-link($color, $icon)
-  color: $color
-  white-space: nowrap
-
-  &:hover
-    color: shade($color, 20%)
-
-    &::after
-      opacity: 0.75
-
-  &::after
-    +size(1em)
-    background-image: url("/images/imagesicon-#{$icon}.svg")
-    background-size: 1em
-    content: ""
-    display: inline-block
-    margin-left: 0.15em
-    vertical-align: middle
-    transition: opacity $base-timing
-
 footer
-  background-color: $brown
+  $muted-color: rgba($white, 0.33)
   color: $white
   position: relative
   z-index: 1
@@ -30,11 +10,22 @@ footer
     @media(min-width: $break-medium)
       max-width: 66vw
 
+  .section-title
+    color: $muted-color
+
   h2
     color: $white
 
-  .copyright
+  a
     color: $muted-color
+    text-decoration: underline
+
+    &:hover
+      color: rgba($white, 0.5)
+      text-decoration: underline
+
+  .copyright
+    color:
     font-size: $smallest-font-size
     font-weight: normal
     margin-bottom: 0
@@ -44,17 +35,9 @@ footer
     a
       color: $muted-color
 
-.link-email
-  +icon-link($link-color, "email")
-
-.link-dribbble
-  +icon-link(#ea4c89, "dribbble")
-
-.link-github
-  +icon-link(#999999, "github")
-
-.link-twitter
-  +icon-link(#1da1f2, "twitter")
-
+.link-email,
+.link-dribbble,
+.link-github,
+.link-twitter,
 .link-linkedin
-  +icon-link(#00a0dc, "linkedin")
+  white-space: nowrap

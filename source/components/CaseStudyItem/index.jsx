@@ -2,27 +2,32 @@ import React from 'react';
 import {Link} from 'react-router';
 import './style.sass';
 
+import InlineSVG from '../InlineSVG';
+
 class CaseStudyItem extends React.Component {
-  getYear(item) {
-    const date = new Date(item.date);
+  getYear(props) {
+    const date = new Date(props.date);
     return date.getFullYear();
   }
 
-  viewMoreLink(item) {
-    if (item.body) {
+  viewMoreLink(props) {
+    if (props.url) {
       return (
-        <Link href={item.url} className="button">Case Study</Link>
+        <Link href={props.url} className="button" target="_new">
+          Visit {props.title}
+        </Link>
       )
-    }
-    if (item.url) {
+    } else {
       return (
-        <Link href={item.url} className="button">Visit {item.title}</Link>
+        <Link href={`/case-studies/${props.shortName}`} className="button">
+          Case Study
+        </Link>
       )
     }
   }
 
-  phone(item) {
-    if (item.preview_type == "phone") {
+  phone(props) {
+    if (props.preview_type == "phone") {
       return (
         <InlineSVG src="phone.svg" />
       )
@@ -30,30 +35,30 @@ class CaseStudyItem extends React.Component {
   }
 
   render() {
-    const item = this.props.item;
+    const props = this.props.item.defaultProps;
 
     return (
-      <article className={`animate portfolio-section ${item.shortName}`}>
+      <article className={`animate portfolio-section ${props.shortName}`}>
         <div className="portfolio-description">
           <h3 className="portfolio-title">
-            {item.title}
-            <time className="year">{this.getYear(item)}</time>
+            {props.title}
+            <time className="year">{this.getYear(props)}</time>
           </h3>
           <div className="section-title">
-            {item.role}
+            {props.role}
           </div>
           <p>
-            {item.summary}
+            {props.summary}
           </p>
           <p>
-            {this.viewMoreLink(item)}
+            {this.viewMoreLink(props)}
           </p>
         </div>
 
         <div className="portfolio-preview">
-          <div className="portfolio-{item.preview_type}">
-            {this.phone(item)}
-            <img src={item.preview} />
+          <div className="portfolio-{props.preview_type}">
+            {this.phone(props)}
+            <img src={props.preview} />
           </div>
         </div>
       </article>

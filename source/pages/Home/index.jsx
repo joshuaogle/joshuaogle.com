@@ -1,6 +1,6 @@
 import React from 'react';
-import './style.sass';
 
+import BodyClass from '../../components/BodyClass';
 import Intro from '../../components/Intro';
 import About from './About';
 import InteractionDesign from './InteractionDesign';
@@ -40,7 +40,7 @@ class Home extends React.Component {
 
   render() {
     return (
-      <article>
+      <BodyClass className="home">
         <Intro className="home-intro">
           <h1>Joshua Ogle</h1>
           <p className="intro-job-title">Digital Product Designer, Developer</p>
@@ -53,7 +53,7 @@ class Home extends React.Component {
           <Branding />
           <Teaching />
         </div>
-      </article>
+      </BodyClass>
     );
   }
 }

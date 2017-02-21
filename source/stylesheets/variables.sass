@@ -37,7 +37,7 @@ $heading-font: "Branding", $sans-serif
 // Sizes
 $base-font-size: calc(1rem + 0.33 * (100vw - 20em) / 80)
 $small-font-size: 0.8rem
-$smallest-font-size: 0.6rem
+$smallest-font-size: 0.66rem
 $base-spacing: 2rem
 $small-spacing: $base-spacing / 2
 $smallest-spacing: $base-spacing / 4
@@ -62,10 +62,9 @@ $fast-timing: $base-timing / 2
 $slow-timing: $base-timing * 2
 
 @mixin container
-  $_left: calc(#{$header-width} + 2vw)
   +clearfix
   margin: 0 auto
-  padding: $large-spacing $large-spacing $large-spacing $_left
+  padding: $large-spacing $base-spacing
 
 @mixin split-layout
   display: flex

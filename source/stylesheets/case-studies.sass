@@ -1,8 +1,9 @@
 @each $brand, $color in $brand-colors
-  .case_study--#{$brand}
+  html[data-current="case_study--#{$brand}"]
+    background: $color url("/source/images/case-studies/#{$brand}-intro.svg") center center
+    background-size: contain
+
     .intro
-      background: $color url("/source/images/case-studies/#{$brand}-intro.svg") center center
-      background-size: contain
       text-align: center
 
     .content

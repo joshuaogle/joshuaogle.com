@@ -1,5 +1,6 @@
 import React from 'react';
 
+import BodyClass from '../../components/BodyClass';
 import Intro from '../../components/Intro';
 
 class CaseStudy extends React.Component {
@@ -17,7 +18,7 @@ class CaseStudy extends React.Component {
   render() {
     const introProps = this.props.introProps;
     return (
-      <div className={`case_study--${introProps.shortName}`}>
+      <BodyClass className={`case_study--${introProps.shortName}`}>
         <Intro className="case-studies--intro">
           <h1>
             {introProps.title}
@@ -34,7 +35,7 @@ class CaseStudy extends React.Component {
         <article className="content case-studies--content">
           {this.props.children}
         </article>
-      </div>
+      </BodyClass>
     );
   }
 }
