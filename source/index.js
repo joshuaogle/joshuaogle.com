@@ -9,6 +9,7 @@ import Home from './pages/Home';
 import ArmadaCaseStudy from './pages/case-studies/Armada';
 import OOOCaseStudy from './pages/case-studies/OOO';
 import SharespostCaseStudy from './pages/case-studies/Sharespost';
+import SummitCaseStudy from './pages/case-studies/Summit';
 import PageNotFound from './pages/PageNotFound';
 
 const routes = (
@@ -18,6 +19,7 @@ const routes = (
     <Route path="/case-studies/armada" mapMenuTitle="Armada" component={ArmadaCaseStudy} />
     <Route path="/case-studies/ooo" mapMenuTitle="OOO" component={OOOCaseStudy} />
     <Route path="/case-studies/sharespost" mapMenuTitle="Sharespost" component={SharespostCaseStudy} />
+    <Route path="/case-studies/summit" mapMenuTitle="Summit" component={SummitCaseStudy} />
 
     <Route path="*" mapMenuTitle="Page Not Found" component={PageNotFound} />
   </Route>
