@@ -12,14 +12,14 @@ class SummitCaseStudy extends React.Component {
             Background
           </div>
           <p>
-            Every year, <Link to="http://thoughtbot.com" target="_new">thoughtbot</Link> assembles the entire team from all of its offices to celebrate the year and get to know the other people you may not have seen in person yet.
+            Every year, <a href="http://thoughtbot.com" target="_new">thoughtbot</a> assembles the entire team from all of its offices to celebrate the year and get to know the other people you may not have seen in person yet.
             In 2015, it was Denver's turn and we were excited to greet our friends from around the world.
             <mark>Denver has a lot of great things to offer</mark>, but many of those visiting were in town for the first time and we wanted to share some of our favorite spots with them.
             Besides our favorite coffee spots and restaurants, we also wanted to warn our friends about drinking at altitude.
             And because it was Denver shortly after legalized recreational marijuana, we wanted to include some tips so no one had a bad time.
           </p>
           <p>
-            Since we had both iPhone and Android users, I suggested we use <Link to="http://ionic.io" target="_new">Ionic</Link> so we could support them both.
+            Since we had both iPhone and Android users, I suggested we use <a href="http://ionic.io" target="_new">Ionic</a> so we could support them both.
             I had an idea that we could use this framework to help speed up development and it meant we should be able to build it without the help from a back-end developer.
           </p>
           <p>
@@ -37,7 +37,7 @@ class SummitCaseStudy extends React.Component {
           <p>
             We weren't just welcoming random strangers, we knew most of the people coming and wanted to give our guide a personal touch.
             <mark>It was also going to be a surprise.</mark>
-            We had no official time to spend on the project, so after <Link to="https://robots.thoughtbot.com/design-spiking" target="_new">a very short Design Sprint</Link>, we decided to work with just myself and another designer.
+            We had no official time to spend on the project, so after <a href="https://robots.thoughtbot.com/design-spiking" target="_new">a very short Design Sprint</a>, we decided to work with just myself and another designer.
           </p>
         </section>
 
@@ -104,7 +104,7 @@ class SummitCaseStudy extends React.Component {
             Summits are always busy, but we heard several happy stories about people that found time to visit our favorite spots.
             The health warnings also made sure that there weren't any incidents with either alcohol or marijuana, which feels like a success by itself.
             Overall, it was well worth the evenings and weekends we spent on it, and it came together very well.
-            &nbsp;<Link to="http://summit-guide-2015.herokuapp.com" target="_new">Check it out in your browser</Link> to get an idea for your next visit to Denver.
+            &nbsp;<a href="http://summit-guide-2015.herokuapp.com" target="_new">Check it out in your browser</a> to get an idea for your next visit to Denver.
           </p>
         </section>
       </CaseStudy>
