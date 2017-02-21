@@ -13,13 +13,13 @@ class CaseStudyItem extends React.Component {
   viewMoreLink(props) {
     if (props.url) {
       return (
-        <Link href={props.url} className="button" target="_new">
+        <Link to={props.url} className="button" target="_new">
           Visit {props.title}
         </Link>
       )
     } else {
       return (
-        <Link href={`/case-studies/${props.shortName}`} className="button">
+        <Link to={`/case-studies/${props.shortName}`} className="button">
           Case Study
         </Link>
       )

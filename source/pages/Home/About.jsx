@@ -20,13 +20,13 @@ class About extends React.Component {
             </h2>
             <p>
               For over ten years, I've been helping companies of all sizes to establish their brand and <mark>improve their connection to their users</mark>.
-              I live in Denver, where I work at <Link href="http://thoughtbot.com">thoughtbot</Link>, helping companies of all sizes realize their ideal product.
-              Before that, I was a co-founder and Creative Director at a consultancy in OKC called <Link href="http://brightbit.com">Brightbit</Link>.
+              I live in Denver, where I work at <Link to="http://thoughtbot.com">thoughtbot</Link>, helping companies of all sizes realize their ideal product.
+              Before that, I was a co-founder and Creative Director at a consultancy in OKC called <Link to="http://brightbit.com">Brightbit</Link>.
             </p>
             <p>
               I have a passion for visual communication, problem-solving, usability, and storytelling.
               Designing with code and working side-by-side with developers helps to create a better product, and I like to encourage designers to get into code and vice versa.
-              I also help maintain and develop the <Link href="http://bourbon.io">Bourbon Suite of design tools</Link> to help designers and front-end developers write better CSS.
+              I also help maintain and develop the <Link to="http://bourbon.io">Bourbon Suite of design tools</Link> to help designers and front-end developers write better CSS.
             </p>
           </div>
         </section>

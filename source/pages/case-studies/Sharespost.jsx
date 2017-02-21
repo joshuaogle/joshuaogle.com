@@ -63,7 +63,7 @@ class SharespostCaseStudy extends React.Component {
           </p>
           <p>
             We usually like to start designing in the browser as soon as possible, but since the developers had some very complicated back-end code to figure out we spent time polishing the wireframes into high-fidelity mockups.
-            These mockups were refined in <Link href="http://invisionapp.com" target="_new">InVision</Link> so we could give the client a realistic look at how the views were connected.
+            These mockups were refined in <Link to="http://invisionapp.com" target="_new">InVision</Link> so we could give the client a realistic look at how the views were connected.
           </p>
 
           <figure>
