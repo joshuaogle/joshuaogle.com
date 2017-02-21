@@ -28,10 +28,10 @@ class SharespostCaseStudy extends React.Component {
             It's more interesting than it sounds
           </h2>
           <p>
-            Financial apps may not sound like the most interesting thing to work on, but I the thing I love most about consulting is diving deep into a new field.
-            Even among financial apps, private securities are a unique challenge for a couple of different reasons.
-            Private securities are shares of stock in a company that isn't publically traded.
-            It's easy to get a price for a company on the stock exchange, but <mark>private companies require a lot more expertise</mark> to estimate the value with authority.
+            Financial apps may not sound like the most interesting thing to work on, but the thing I love most about consulting is diving deep into a new field.
+            Even among financial apps, private securities are a unique challenge.
+            Private securities are shares of stock in a company that isn't publically traded, so while
+            it's easy to get a price for a company on the stock exchange, <mark>private companies require a lot more expertise</mark> to estimate the value with authority.
           </p>
           <p>
             This company is the largest marketplace of private securities, and to maintain that position they approached thoughtbot to build a new platform.
