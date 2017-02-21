@@ -15,7 +15,7 @@ class Home extends React.Component {
       var elementPosition = element.getBoundingClientRect();
       var elementTop = elementPosition.top;
       var scrollTop = window.pageYOffset;
-      var screenHeight = window.clientHeight;
+      var screenHeight = document.documentElement.clientHeight;
       var screenBottom = scrollTop + screenHeight;
       var offset = 150;
 

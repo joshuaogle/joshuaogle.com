@@ -56,7 +56,7 @@ class CaseStudyItem extends React.Component {
         </div>
 
         <div className="portfolio-preview">
-          <div className="portfolio-{props.preview_type}">
+          <div className={`portfolio-${props.preview_type}`}>
             {this.phone(props)}
             <img src={props.preview} />
           </div>
