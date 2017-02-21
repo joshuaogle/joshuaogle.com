@@ -62,10 +62,10 @@ $fast-timing: $base-timing / 2
 $slow-timing: $base-timing * 2
 
 @mixin container
-  $_left: calc(#{$header-width} + 1vw)
+  $_left: calc(#{$header-width} + 2vw)
   +clearfix
   margin: 0 auto
-  padding: $large-spacing $base-spacing $large-spacing $_left
+  padding: $large-spacing $large-spacing $large-spacing $_left
 
 @mixin split-layout
   display: flex

@@ -39,4 +39,8 @@ class Intro extends React.Component {
   }
 }
 
+Intro.defaultProps = {
+  className: ""
+}
+
 export default Intro;

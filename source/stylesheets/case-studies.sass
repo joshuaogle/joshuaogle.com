@@ -1,0 +1,14 @@
+@each $brand, $color in $brand-colors
+  .case_study--#{$brand}
+    .intro
+      background: $color url("/source/images/case-studies/#{$brand}-intro.svg") center center
+      background-size: contain
+      text-align: center
+
+    .content
+      box-shadow: 0 0 2em shade($color, 20%)
+
+.case-study-example
+  border-radius: $base-border-radius
+  box-shadow: 0 0.2rem 0.8rem -0.2rem rgba($light-brown, 0.75)
+  margin: $base-spacing auto $large-spacing
