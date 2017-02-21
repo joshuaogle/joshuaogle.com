@@ -20,13 +20,12 @@ class About extends React.Component {
             </h2>
             <p>
               For over ten years, I've been helping companies of all sizes to establish their brand and <mark>improve their connection to their users</mark>.
-              I live in Denver, where I work at <Link to="http://thoughtbot.com">thoughtbot</Link>, helping companies of all sizes realize their ideal product.
-              Before that, I was a co-founder and Creative Director at a consultancy in OKC called <Link to="http://brightbit.com">Brightbit</Link>.
+              I live in Denver, where I work at <Link to="http://citrusbyte.com">Citrusbyte</Link>, helping companies of all sizes realize their ideal product.
+              Before that, I worked at <Link to="http://thoughtbot.com">thoughtbot</Link> and before <em>that</em>, I was co-founder and Creative Director of a consultancy in OKC called <Link to="http://brightbit.com">Brightbit</Link>.
             </p>
             <p>
               I have a passion for visual communication, problem-solving, usability, and storytelling.
               Designing with code and working side-by-side with developers helps to create a better product, and I like to encourage designers to get into code and vice versa.
-              I also help maintain and develop the <Link to="http://bourbon.io">Bourbon Suite of design tools</Link> to help designers and front-end developers write better CSS.
             </p>
           </div>
         </section>
@@ -38,6 +37,7 @@ class About extends React.Component {
           <blockquote>
             <p>
               Joshua has the uncanny ability to execute and ship successful design. I am consistently amazed at his breadth and depth of design knowledge. He's also one of the rare designers with the skills and ability to cross over to development while still remaining an expert in design.
+              &nbsp;
               <span className="quote-author">
                 Kyle Fielder, Chief Design Officer at thoughtbot
               </span>
