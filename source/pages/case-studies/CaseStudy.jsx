@@ -8,11 +8,17 @@ class CaseStudy extends React.Component {
     return date.getFullYear();
   }
 
+  getIcon() {
+    if (this.props.introProps.icon) {
+      return <img src={this.props.introProps.icon} className="intro-icon" />;
+    }
+  }
+
   render() {
     const introProps = this.props.introProps;
     return (
       <div className={`case_study--${introProps.shortName}`}>
-        <Intro>
+        <Intro className="case-studies--intro">
           <h1>
             {introProps.title}
           </h1>
@@ -23,9 +29,9 @@ class CaseStudy extends React.Component {
             {this.getYear()}
           </div>
         </Intro>
-        <img src={introProps.icon} className="intro-icon" />
+        {this.getIcon()}
 
-        <article className="content">
+        <article className="content case-studies--content">
           {this.props.children}
         </article>
       </div>

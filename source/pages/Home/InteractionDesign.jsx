@@ -8,6 +8,8 @@ import ArmadaCaseStudy from '../case-studies/Armada';
 import EmberCaseStudy from '../case-studies/Ember';
 import OOOCaseStudy from '../case-studies/OOO';
 import SchoolkeepCaseStudy from '../case-studies/Schoolkeep';
+import SharespostCaseStudy from '../case-studies/Sharespost';
+
 
 class InteractionDesign extends React.Component {
   renderItems() {
@@ -16,6 +18,7 @@ class InteractionDesign extends React.Component {
       EmberCaseStudy.defaultProps,
       OOOCaseStudy.defaultProps,
       SchoolkeepCaseStudy.defaultProps,
+      SharespostCaseStudy.defaultProps,
     ];
     return caseStudyProps.map((item) => <CaseStudyItem item={item} key={item.shortName} />);
   }

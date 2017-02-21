@@ -8,7 +8,7 @@ import App from './App';
 import Home from './pages/Home';
 import ArmadaCaseStudy from './pages/case-studies/Armada';
 import OOOCaseStudy from './pages/case-studies/OOO';
-import SchoolkeepCaseStudy from './pages/case-studies/Schoolkeep';
+import SharespostCaseStudy from './pages/case-studies/Sharespost';
 import PageNotFound from './pages/PageNotFound';
 
 const routes = (
@@ -17,7 +17,7 @@ const routes = (
 
     <Route path="/case-studies/armada" mapMenuTitle="Armada" component={ArmadaCaseStudy} />
     <Route path="/case-studies/ooo" mapMenuTitle="OOO" component={OOOCaseStudy} />
-    <Route path="/case-studies/schoolkeep" mapMenuTitle="Schoolkeep" component={SchoolkeepCaseStudy} />
+    <Route path="/case-studies/sharespost" mapMenuTitle="Sharespost" component={SharespostCaseStudy} />
 
     <Route path="*" mapMenuTitle="Page Not Found" component={PageNotFound} />
   </Route>
