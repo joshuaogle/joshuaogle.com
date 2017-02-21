@@ -5,15 +5,17 @@ import './style.sass';
 import InlineSVG from '../../components/InlineSVG';
 import CaseStudyItem from '../../components/CaseStudyItem';
 import ArmadaCaseStudy from '../case-studies/Armada';
+import EmberCaseStudy from '../case-studies/Ember';
+import OOOCaseStudy from '../case-studies/OOO';
 
 class InteractionDesign extends React.Component {
   renderItems() {
-    const caseStudyProps = [ArmadaCaseStudy.defaultProps];
-    for (let item of caseStudyProps) {
-      return (
-        <CaseStudyItem item={item} />
-      );
-    }
+    const caseStudyProps = [
+      ArmadaCaseStudy.defaultProps,
+      EmberCaseStudy.defaultProps,
+      OOOCaseStudy.defaultProps,
+    ];
+    return caseStudyProps.map((item) => <CaseStudyItem item={item} key={item.shortName} />);
   }
 
   render() {
