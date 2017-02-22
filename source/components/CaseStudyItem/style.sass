@@ -80,7 +80,11 @@ $unskew: skew(0, 5deg)
     overflow: hidden
     margin-left: $small-spacing
     padding: $base-spacing $base-spacing 0
-    transform: $skew
+    transform: $skew translateX(0)
+    transition: transform $slow-timing
+
+    &:hover
+      transform: $skew translateX(-$base-spacing)
 
   @each $brand, $color in $brand-colors
     .#{$brand} &

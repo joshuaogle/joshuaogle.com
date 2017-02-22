@@ -10,19 +10,19 @@ class CaseStudyItem extends React.Component {
     return date.getFullYear();
   }
 
-  viewMoreLink(props) {
+  viewMoreText(props) {
     if (props.url) {
-      return (
-        <Link to={props.url} className="button" target="_new">
-          Visit {props.title}
-        </Link>
-      )
+      return "Visit {props.title}";
     } else {
-      return (
-        <Link to={`/case-studies/${props.shortName}`} className="button">
-          Case Study
-        </Link>
-      )
+      return "Case Study";
+    }
+  }
+
+  viewMorePath(props) {
+    if (props.url) {
+      return props.url;
+    } else {
+      return `/case-studies/${props.shortName}`;
     }
   }
 
@@ -51,16 +51,18 @@ class CaseStudyItem extends React.Component {
             {props.summary}
           </p>
           <p>
-            {this.viewMoreLink(props)}
+            <Link to={this.viewMorePath(props)} className="button">
+              {this.viewMoreText(props)}
+            </Link>
           </p>
         </div>
 
-        <div className="portfolio-preview">
+        <Link to={this.viewMorePath(props)} className="portfolio-preview">
           <div className={`portfolio-${props.preview_type}`}>
             {this.phone(props)}
             <img src={props.preview} />
           </div>
-        </div>
+        </Link>
       </article>
     );
   }
