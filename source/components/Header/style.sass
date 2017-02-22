@@ -1,16 +1,68 @@
 @import "../../stylesheets/variables"
 
 .site-header
-  +position(fixed, 0 null null 0)
+  +position(fixed, 0 null 0 0)
   padding: $small-spacing
+  transition: width $base-timing
   width: $header-width
   z-index: $z-header
 
+  .nav-active &
+    width: $header-width-wide
+
 .logo
+  display: block
+  width: 2rem
+
   svg
     display: block
-    width: 100%
+    width: 2rem
 
     path,
     ellipse
       fill: $white
+
+.site-nav
+  margin-top: $base-spacing
+  opacity: 0
+  pointer-events: none
+
+  .nav-active &
+    opacity: 1
+    pointer-events: all
+    transition: opacity $slow-timing
+    transition-delay: $fast-timing
+
+  ul
+    margin: 0
+    padding: 0
+
+  li
+    list-style: none
+    margin: 0
+    padding: 0
+    transform: translateX(1em)
+    transition: transform $base-timing
+
+    &:nth-child(1)
+      transition-delay: $fast-timing
+
+    &:nth-child(2)
+      transition-delay: $fast-timing * 1.5
+
+    &:nth-child(3)
+      transition-delay: $fast-timing * 2
+
+    .nav-active &
+      transform: translateX(0)
+
+  a
+    color: $muted-color-white
+    display: block
+    font-size: $small-font-size
+    font-weight: 700
+    line-height: 3
+    text-transform: uppercase
+
+    &:hover
+      color: $white

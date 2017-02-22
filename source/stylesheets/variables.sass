@@ -17,6 +17,7 @@ $cyan: #66ddd2
 $background-color: $offwhite
 $text-color: $brown
 $muted-color: mix($text-color, $background-color, 66%)
+$muted-color-white: rgba($white, 0.33)
 $link-color: $blue
 $link-hover: shade($blue, 15%)
 $logo-color: $offwhite
@@ -27,8 +28,8 @@ $intro-highlight-color: rgba($white, 0.15)
 $break-small: 480px
 $break-medium: 1024px
 $break-large: 1600px
-$intro-height: 75vh
-$case-studies-intro-height: $intro-height / 2
+$intro-height: 35vh
+$home-intro-height: 75vh
 
 // Fonts
 $sans-serif: "Brandon", -apple-system, BlinkMacSystemFont, sans-serif
@@ -43,7 +44,8 @@ $small-spacing: $base-spacing / 2
 $smallest-spacing: $base-spacing / 4
 $large-spacing: $base-spacing * 2
 $header-width: 4rem
-$base-border-radius: 0.2rem
+$header-width-wide: 6rem
+$base-border-radius: 0.33rem
 
 // Z-indeces
 $z-base: 1
@@ -99,3 +101,7 @@ $slow-timing: $base-timing * 2
   &:last-child
     @media (min-width: $break-medium)
       margin-left: $base-spacing
+
+@mixin brand-gradient($color)
+  $shifted-color: tint(adjust-hue($color, 20%), 10%)
+  background: $color linear-gradient(135deg, $color 60%, $shifted-color)

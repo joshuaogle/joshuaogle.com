@@ -1,10 +1,13 @@
 @import "../../stylesheets/variables"
 
 footer
-  $muted-color: rgba($white, 0.33)
   color: $white
   position: relative
+  transition: transform $base-timing
   z-index: 1
+
+  .nav-active &
+    transform: translateX($header-width-wide)
 
   section
     padding-left: $header-width
@@ -13,13 +16,13 @@ footer
       max-width: 66vw
 
   .section-title
-    color: $muted-color
+    color: $muted-color-white
 
   h2
     color: $white
 
   a
-    color: $muted-color
+    color: $muted-color-white
     font-weight: 500
     text-decoration: underline
 

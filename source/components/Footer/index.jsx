@@ -5,7 +5,7 @@ import './style.sass';
 class Footer extends React.Component {
   render() {
     return (
-      <footer>
+      <footer className="site-footer">
         <section>
           <div className="section-title">
             You've got good taste

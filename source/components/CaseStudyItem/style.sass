@@ -88,8 +88,7 @@ $unskew: skew(0, 5deg)
 
   @each $brand, $color in $brand-colors
     .#{$brand} &
-      $shifted-color: tint(desaturate(adjust-hue($color, -15%), 10%), 5%)
-      background: linear-gradient(90deg, $color 55%, $shifted-color)
+      +brand-gradient($color)
       border-radius: $base-border-radius 0 0 $base-border-radius
 
       .device-outer

@@ -8,11 +8,12 @@
   justify-content: center
   flex-direction: column
   height: $intro-height
-  z-index: -1
+  text-align: center
+  transition: transform $base-timing
+  z-index: 1
 
-  &.case-studies--intro,
-  &.exercises--intro
-    height: $case-studies-intro-height
+  .nav-active &
+    transform: translate($header-width-wide)
 
   .intro-content
     animation: rise 1s ease-in-out
@@ -26,7 +27,7 @@
     margin: 0
 
   .section-title
-    color: rgba($white, 0.4)
+    color: $muted-color-white
     font-weight: 800
     margin: 0.25rem 0 0
 
@@ -42,5 +43,9 @@
   height: 4rem
   width: 4rem
   border-radius: 50%
-  transform: translate(-50%, -50%)
+  margin: -2rem 0 0 -2rem
+  transition: transform $base-timing
   z-index: 1000
+
+  .nav-active &
+    transform: translate($header-width-wide)

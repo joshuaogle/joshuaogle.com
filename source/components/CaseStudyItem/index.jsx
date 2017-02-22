@@ -22,15 +22,13 @@ class CaseStudyItem extends React.Component {
     if (props.url) {
       return props.url;
     } else {
-      return `/case-studies/${props.shortName}`;
+      return `/work/${props.shortName}`;
     }
   }
 
   viewMoreTarget(props) {
     if (props.url) {
       return "_new";
-    } else {
-      return "_self";
     }
   }
 

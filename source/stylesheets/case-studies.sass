@@ -1,10 +1,8 @@
 @each $brand, $color in $brand-colors
   html[data-current="case_study--#{$brand}"]
-    background: $color url("/images/case-studies/#{$brand}-intro.svg") center center
+    +brand-gradient($color)
+    background-attachment: fixed
     background-size: contain
-
-    .intro
-      text-align: center
 
     .content
       box-shadow: 0 1rem 1rem -0.5rem shade($color, 33%), 0 1rem 3rem rgba(shade($color, 33%), 0.75)

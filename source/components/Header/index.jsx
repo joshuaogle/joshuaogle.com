@@ -5,12 +5,39 @@ import './style.sass';
 import InlineSVG from '../InlineSVG';
 
 class Header extends React.Component {
+  componentDidMount() {
+    const navs = document.getElementsByClassName("site-header");
+    for (let nav of navs) {
+      nav.addEventListener("mouseover", function() {
+        document.body.classList.add("nav-active")
+      });
+
+      nav.addEventListener("mouseout", function() {
+        document.body.classList.remove("nav-active")
+      });
+    }
+  }
+
   render() {
     return (
       <header className="site-header">
-        <a href="/" className="logo">
+        <Link to="/" className="logo">
           <InlineSVG src="logo-header.svg" />
-        </a>
+        </Link>
+
+        <nav className="site-nav">
+          <ul>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/work">Work</Link>
+            </li>
+            <li>
+              <Link to="/articles">Articles</Link>
+            </li>
+          </ul>
+        </nav>
       </header>
     );
   }

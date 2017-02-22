@@ -84,11 +84,11 @@ class SummitCaseStudy extends React.Component {
             It would have been nice to have notifications for events if we had had more time, but this was already more than the other summits had done.
             In the end, we only used about four days worth of time between both design and development.
           </p>
-          <p style={{"text-align": "center"}}>
+          <div style={{textAlign: "center"}}>
             <img src="/source/images/case-studies/summit-schedule.png" className="case-study-example" style={{"display": "inline-block"}} />
             &nbsp;
             <img src="/source/images/case-studies/summit-warnings.png" className="case-study-example" style={{"display": "inline-block"}} />
-          </p>
+          </div>
         </section>
 
         <section>

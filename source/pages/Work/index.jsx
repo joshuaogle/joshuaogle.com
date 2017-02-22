@@ -1,10 +1,11 @@
 import React from 'react';
-import './style.sass';
 
 import BodyClass from '../../components/BodyClass';
 import Intro from '../../components/Intro';
+import InteractionDesign from './InteractionDesign';
+import Branding from './Branding';
 
-class Home extends React.Component {
+class Work extends React.Component {
   componentDidMount() {
     const animates = document.getElementsByClassName("animate");
 
@@ -37,19 +38,18 @@ class Home extends React.Component {
 
   render() {
     return (
-      <BodyClass className="home">
-        <Intro className="home-intro">
-          <h1>Joshua Ogle</h1>
-          <div className="section-title">Digital Product Designer, Developer</div>
-          <p>I help make the internet better for humans</p>
+      <BodyClass className="work">
+        <Intro className="work-intro">
+          <h1>Some projects I've worked on</h1>
+          <div className="section-title">User Experience & Interface Design</div>
         </Intro>
-
         <div className="content">
-          X
+          <InteractionDesign />
+          <Branding />
         </div>
       </BodyClass>
     );
   }
 }
 
-export default Home;
+export default Work;

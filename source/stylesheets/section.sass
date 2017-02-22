@@ -12,14 +12,21 @@ section
   background-color: $background-color
   border-radius: $base-border-radius
   box-shadow: 0 1rem 1rem -0.5rem #000, 0 1rem 3rem rgba(#000, 0.5)
-  margin: $intro-height $small-spacing 0 $header-width
+  margin: $large-spacing $small-spacing 0 $header-width
+  padding: $base-spacing 0
   position: relative
-  transition: box-shadow $fast-timing
-  z-index: 1
+  transition: box-shadow $fast-timing, transform $base-timing
+  z-index: 2
+
+  .intro + &
+    margin-top: $intro-height
+
+  .nav-active &
+    transform: translate($header-width-wide)
 
   @media (min-width: $break-medium)
     margin-right: $large-spacing
 
   &.case-studies--content,
   &.exercises--content
-    margin-top: $case-studies-intro-height
+    margin-top: $intro-height
