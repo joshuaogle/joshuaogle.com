@@ -88,8 +88,8 @@ $unskew: skew(0, 5deg)
 
   @each $brand, $color in $brand-colors
     .#{$brand} &
-      background: $color url("/source/images/case-studies/#{$brand}-intro.svg") center center
-      background-size: 50%
+      $shifted-color: tint(desaturate(adjust-hue($color, -15%), 10%), 5%)
+      background: linear-gradient(90deg, $color 55%, $shifted-color)
       border-radius: $base-border-radius 0 0 $base-border-radius
 
       .device-outer

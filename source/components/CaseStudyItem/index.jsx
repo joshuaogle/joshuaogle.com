@@ -12,7 +12,7 @@ class CaseStudyItem extends React.Component {
 
   viewMoreText(props) {
     if (props.url) {
-      return "Visit {props.title}";
+      return `Visit ${props.title}`;
     } else {
       return "Case Study";
     }
@@ -23,6 +23,14 @@ class CaseStudyItem extends React.Component {
       return props.url;
     } else {
       return `/case-studies/${props.shortName}`;
+    }
+  }
+
+  viewMoreTarget(props) {
+    if (props.url) {
+      return "_new";
+    } else {
+      return "_self";
     }
   }
 
@@ -51,13 +59,13 @@ class CaseStudyItem extends React.Component {
             {props.summary}
           </p>
           <p>
-            <Link to={this.viewMorePath(props)} className="button">
+            <Link to={this.viewMorePath(props)} className="button" target={this.viewMoreTarget(props)}>
               {this.viewMoreText(props)}
             </Link>
           </p>
         </div>
 
-        <Link to={this.viewMorePath(props)} className="portfolio-preview">
+        <Link to={this.viewMorePath(props)} className="portfolio-preview" target={this.viewMoreTarget(props)}>
           <div className={`portfolio-${props.preview_type}`}>
             {this.phone(props)}
             <img src={props.preview} />
