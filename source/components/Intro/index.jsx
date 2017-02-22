@@ -10,7 +10,7 @@ class Intro extends React.Component {
 
       for (var intro of intros) {
         var percent = scrollTop / intro.clientHeight;
-        var slideUp = "translateY(-" + ((intro.clientHeight / 5) * percent) + "px)";
+        var slideUp = "translateY(-" + ((intro.clientHeight / 3) * percent) + "px)";
         var zoomOut = "scale(" + (1 - (percent / 10)) + ")";
         var blur = "blur(" + (percent * 5) + "px)";
 

@@ -1,4 +1,6 @@
 @import "../../stylesheets/variables"
+$skew: skew(0, -5deg)
+$unskew: skew(0, 5deg)
 
 .portfolio
   padding-right: 0
@@ -12,11 +14,13 @@
 
 .portfolio-section
   position: relative
+  transform: $skew
 
   @media (min-width: $break-medium)
     +split-layout
-    margin-bottom: 5vh
+    margin-bottom: $small-spacing
     height: 600px
+    transform: none
 
   @media (max-width: $break-medium)
     +container
@@ -30,21 +34,21 @@
           border-color: $white
           color: $white
 
-        .button
-          color: $color
-
-    .button
-      background-color: $white
-      box-shadow: none
+  @each $brand, $color in $brand-colors
+    &.#{$brand}
+      .button
+        color: $color
 
 .portfolio-description
   box-sizing: border-box
   margin-right: $small-spacing
   padding-right: $base-spacing
   position: relative
+  transform: $unskew
 
   @media (min-width: $break-medium)
     +split-secondary
+    transform: none
 
   .section-title
     font-size: $smallest-font-size
@@ -61,7 +65,11 @@
   background-size: cover
   background-position: center center
   background-repeat: no-repeat
+  box-shadow: 0 1.1rem 0.33rem -0.75rem rgba(#000, 0.3), 0 0.5rem 1rem rgba(#000, 0.1)
   box-sizing: border-box
+  margin-right: -$small-spacing
+  overflow: hidden
+  position: relative
 
   @media (min-width: $break-medium)
     +split-primary
@@ -72,6 +80,7 @@
     overflow: hidden
     margin-left: $small-spacing
     padding: $base-spacing $base-spacing 0
+    transform: $skew
 
   @each $brand, $color in $brand-colors
     .#{$brand} &
@@ -89,7 +98,7 @@
   opacity: 0
   padding-top: $small-spacing
   position: relative
-  transform: translateY($large-spacing)
+  transform: translateY($large-spacing) $unskew
   transition: opacity $slow-timing, transform $slow-timing ease-in-out
 
   @each $brand, $color in $brand-colors
@@ -110,13 +119,13 @@
 
   .animated &
     opacity: 1
-    transform: translateY(1px)
+    transform: translateY($base-spacing) $unskew
 
   img
     border-top: 1px solid $white
 
 .portfolio-phone
-  +size(295px 615px)
+  +size(147px 308px)
   align-self: center
   margin: 0 auto
   max-width: 26.5vh
@@ -127,6 +136,7 @@
   transition: opacity $slow-timing, transform $slow-timing ease-in-out
 
   @media (min-width: $break-medium)
+    +size(295px 615px)
     margin-top: -$base-spacing
 
   .animated &

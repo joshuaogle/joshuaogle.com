@@ -1,6 +1,5 @@
 section
   +container
-  overflow-x: hidden
 
 .section-title
   @extend %small
@@ -13,11 +12,13 @@ section
   background-color: $background-color
   border-radius: $base-border-radius
   box-shadow: 0 1rem 1rem -0.5rem #000, 0 1rem 3rem rgba(#000, 0.5)
-  margin: $intro-height $base-spacing 0 $header-width
-  overflow: hidden
+  margin: $intro-height $small-spacing 0 $header-width
   position: relative
   transition: box-shadow $fast-timing
   z-index: 1
+
+  @media (min-width: $break-medium)
+    margin-right: $large-spacing
 
   &.case-studies--content,
   &.exercises--content

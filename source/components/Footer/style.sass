@@ -1,12 +1,14 @@
 @import "../../stylesheets/variables"
 
 footer
-  $muted-color: rgba($white, 0.5)
+  $muted-color: rgba($white, 0.33)
   color: $white
   position: relative
   z-index: 1
 
   section
+    padding-left: $header-width
+
     @media(min-width: $break-medium)
       max-width: 66vw
 
@@ -18,10 +20,11 @@ footer
 
   a
     color: $muted-color
+    font-weight: 500
     text-decoration: underline
 
     &:hover
-      color: rgba($white, 0.75)
+      color: rgba($white, 0.5)
       text-decoration: underline
 
   .copyright
@@ -31,9 +34,6 @@ footer
     margin-bottom: 0
     padding-bottom: $base-spacing
     text-align: center
-
-    a
-      color: $muted-color
 
 .link-email,
 .link-dribbble,

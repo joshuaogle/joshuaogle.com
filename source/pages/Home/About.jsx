@@ -21,7 +21,7 @@ class About extends React.Component {
             <p>
               For over ten years, I've been helping companies of all sizes to establish their brand and <mark>improve their connection to their users</mark>.
               I live in Denver, where I work at <a href="http://citrusbyte.com">Citrusbyte</a>, helping companies of all sizes realize their ideal product.
-              Before that, I worked at <a href="http://thoughtbot.com">thoughtbot</a> and before <em>that</em>, I was co-founder and Creative Director of a consultancy in OKC called <a href="http://brightbit.com">Brightbit</a>.
+              I previously worked at <a href="http://thoughtbot.com">thoughtbot</a>, and before that I was co-founder and Creative Director of a consultancy in OKC called <a href="http://brightbit.com">Brightbit</a>.
             </p>
             <p>
               I have a passion for visual communication, problem-solving, usability, and storytelling.

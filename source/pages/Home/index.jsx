@@ -43,7 +43,7 @@ class Home extends React.Component {
       <BodyClass className="home">
         <Intro className="home-intro">
           <h1>Joshua Ogle</h1>
-          <p className="intro-job-title">Digital Product Designer, Developer</p>
+          <div className="section-title">Digital Product Designer, Developer</div>
           <p>I help make the internet better for humans</p>
         </Intro>
 

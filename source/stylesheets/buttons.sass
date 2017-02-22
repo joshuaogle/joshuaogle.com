@@ -1,19 +1,19 @@
 .button
-  background-repeat: repeat-x
-  background-color: $link-color
-  border-radius: 2em
+  background-color: tint($offwhite, 33%)
   border: none
-  color: $offwhite
+  border-radius: $base-border-radius
+  box-shadow: 0 0.5rem 0.33rem -0.33rem rgba($black, 0.1), 0 0.25rem 1rem rgba($black, 0.1)
+  color: $light-brown
   display: inline-block
   font-weight: 500
   line-height: 2
   padding: .2em 1em .25em
   text-shadow: none
-  transition: background-color $fast-timing, transform $fast-timing
+  transition: color $fast-timing, transform $fast-timing, box-shadow $base-timing
 
   &:hover
-    background-color: $link-hover
-    color: $offwhite
+    color: $blue
 
   &:active
     transform: translateY(0.1rem)
+    box-shadow: 0 0.25rem 0.25rem -0.25rem rgba($black, 0.33), 0 0.1rem 0.25rem rgba($black, 0.1)
