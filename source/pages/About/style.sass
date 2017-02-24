@@ -4,15 +4,11 @@
   @media(min-width: $break-medium)
     +container
     +split-layout
+    flex-direction: row-reverse
 
 .about-content
   @media(min-width: $break-medium)
     +split-primary
-    display: flex
-    flex-direction: column
-    margin-left: $base-spacing
-    justify-content: center
-    text-align: left
 
 .about-portrait
   margin-bottom: $base-spacing
@@ -24,5 +20,6 @@
 
   img
     border-radius: $base-border-radius
+    box-shadow: $base-shadow
     max-width: 300px
     width: 100%

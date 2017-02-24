@@ -1,12 +1,27 @@
 @import "../../stylesheets/variables"
 
 html[data-current="home"]
+  main
+    display: flex
+    height: 100vh
+    flex-direction: column
+
   .intro
-    height: $home-intro-height
+    flex: 1
+    position: relative
     text-align: left
 
   .content
-    margin-top: $home-intro-height
+    display: flex
+    flex: 0 0 10em
+    margin-bottom: $small-spacing
+    margin-top: 0
+
+    .card
+      flex: 1
+
+      &:not(:last-child)
+        margin-right: $base-spacing
 
   .site-footer
     display: none

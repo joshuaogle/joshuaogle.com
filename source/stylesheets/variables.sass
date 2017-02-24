@@ -24,19 +24,23 @@ $logo-color: $offwhite
 $highlight-color: rgba(mix($yellow, $red, 80%), 0.25)
 $intro-highlight-color: rgba($white, 0.15)
 
+$base-shadow: 0 1.1rem 0.33rem -0.75rem rgba(#000, 0.3), 0 0.5rem 1rem rgba(#000, 0.1)
+$large-shadow: 0 1rem 1rem -0.5rem #000, 0 1rem 3rem rgba(#000, 0.5)
+$small-shadow: 0 0.5rem 0.33rem -0.33rem rgba($black, 0.1), 0 0.25rem 1rem rgba($black, 0.1)
+$smallest-shadow: 0 0.25rem 0.25rem -0.25rem rgba($black, 0.33), 0 0.1rem 0.25rem rgba($black, 0.1)
+
 // Layout
 $break-small: 480px
 $break-medium: 1024px
 $break-large: 1600px
 $intro-height: 35vh
-$home-intro-height: 75vh
 
 // Fonts
 $sans-serif: "Brandon", -apple-system, BlinkMacSystemFont, sans-serif
-$heading-font: "Branding", $sans-serif
+$heading-font: "Libre Baskerville", $sans-serif
 
 // Sizes
-$base-font-size: calc(1rem + 0.2 * (100vw - 20em) / 80)
+$base-font-size: calc(1rem + 0.25 * (100vw - 20em) / 80)
 $small-font-size: 0.8rem
 $smallest-font-size: 0.66rem
 $base-spacing: 2rem
@@ -45,7 +49,7 @@ $smallest-spacing: $base-spacing / 4
 $large-spacing: $base-spacing * 2
 $header-width: 4rem
 $header-width-wide: 6rem
-$base-border-radius: 0.33rem
+$base-border-radius: 0.25rem
 
 // Z-indeces
 $z-base: 1
@@ -62,7 +66,7 @@ $slow-timing: $base-timing * 2
 @mixin container
   +clearfix
   margin: 0 auto
-  padding: $large-spacing $base-spacing
+  padding: $base-spacing
 
   @media (min-width: $break-medium)
     padding: $large-spacing
@@ -103,5 +107,5 @@ $slow-timing: $base-timing * 2
       margin-left: $base-spacing
 
 @mixin brand-gradient($color)
-  $shifted-color: tint(adjust-hue($color, 20%), 10%)
-  background: $color linear-gradient(135deg, $color 60%, $shifted-color)
+  $shifted-color: tint(adjust-hue($color, 25%), 10%)
+  background: $color linear-gradient(135deg, $color 55%, $shifted-color)

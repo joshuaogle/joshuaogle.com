@@ -32,7 +32,7 @@ class CaseStudy extends React.Component {
         </Intro>
         {this.getIcon()}
 
-        <article className="content case-studies--content">
+        <article className="content case-studies--content card">
           {this.props.children}
         </article>
       </BodyClass>

@@ -12,6 +12,36 @@ import SchoolkeepCaseStudy from '../case-studies/Schoolkeep';
 
 
 class InteractionDesign extends React.Component {
+  componentDidMount() {
+    const animates = document.getElementsByClassName("animate");
+
+    function isOnScreen(element) {
+      var elementPosition = element.getBoundingClientRect();
+      var elementTop = elementPosition.top;
+      var scrollTop = window.pageYOffset;
+      var screenHeight = document.documentElement.clientHeight;
+      var screenBottom = scrollTop + screenHeight;
+      var offset = 150;
+
+      return screenBottom > (elementTop + offset);
+    }
+
+    var markAnimated = function() {
+      for (var element of animates) {
+        if (!element.classList.contains("animated")) {
+          if (isOnScreen(element)) {
+            element.classList.add("animated");
+          }
+        }
+      }
+    };
+
+    if (animates.length > 0) {
+      markAnimated();
+      window.addEventListener("scroll", markAnimated);
+    }
+  }
+
   renderItems() {
     const caseStudyProps = [
       SharespostCaseStudy,
@@ -29,6 +59,7 @@ class InteractionDesign extends React.Component {
       <section className="portfolio">
         <div className="portfolio-intro">
           <div className="section-title">User Experience & Interface Design</div>
+          <h2>Some projects I've worked on</h2>
           <p>
             Great experience design is what makes a user fall in love with your product.
             It's not enough to make something pretty, and you can't just make it functional either.

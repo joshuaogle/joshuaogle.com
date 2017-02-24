@@ -8,22 +8,22 @@ class Summary extends React.Component {
     const article = this.props.article;
 
     return (
-      <article className="article article-summary">
-        <header>
-          <h2>{article.title}</h2>
-          <time className="year">{article.date}</time>
-          <div>
-            <Link to={article.url} target="_new">
+      <Link to={article.url} target="_new">
+        <article className="article article-summary card">
+          <header>
+            <h2 className="article-title">{article.title}</h2>
+            <time className="year">{article.date}</time>
+            <div className="article-meta">
               Published by
-              <InlineSVG src={article.source_icon} />
+              <InlineSVG src={article.source_icon} className="article-source-icon" />
               {article.source}
-            </Link>
-          </div>
-        </header>
-        <section>
-          {article.summary}
-        </section>
-      </article>
+            </div>
+          </header>
+          <section>
+            {article.summary}
+          </section>
+        </article>
+      </Link>
     );
   }
 }

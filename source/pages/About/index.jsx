@@ -2,17 +2,13 @@ import React from 'react';
 import './style.sass';
 
 import BodyClass from '../../components/BodyClass';
-import Intro from '../../components/Intro';
 import Teaching from './Teaching';
 
 class About extends React.Component {
   render() {
     return (
       <BodyClass className="about">
-        <Intro className="work-intro">
-          <h1>Howdy</h1>
-        </Intro>
-        <div className="content">
+        <div className="content card">
           <section className="section-about">
             <div className="about-portrait">
               <img src="/source/images/portrait.png" />

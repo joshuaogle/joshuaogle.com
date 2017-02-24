@@ -8,24 +8,25 @@ section
   .intro &
     color: $offwhite
 
-.content
+.card
   background-color: $background-color
-  border-radius: $base-border-radius
-  box-shadow: 0 1rem 1rem -0.5rem #000, 0 1rem 3rem rgba(#000, 0.5)
-  margin: $large-spacing $small-spacing 0 $header-width
-  padding: $base-spacing 0
+  box-shadow: $large-shadow
+  margin-bottom: $small-spacing
   position: relative
+
+.content
+  margin: $small-spacing $small-spacing $small-spacing $header-width
   transition: box-shadow $fast-timing, transform $base-timing
   z-index: 2
+
+  @media (min-width: $break-medium)
+    margin-right: $large-spacing
 
   .intro + &
     margin-top: $intro-height
 
   .nav-active &
     transform: translate($header-width-wide)
-
-  @media (min-width: $break-medium)
-    margin-right: $large-spacing
 
   &.case-studies--content,
   &.exercises--content

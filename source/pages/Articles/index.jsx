@@ -1,4 +1,5 @@
 import React from 'react';
+import './style.sass';
 
 import BodyClass from '../../components/BodyClass';
 import Intro from '../../components/Intro';
@@ -13,29 +14,36 @@ var articles = [
 ];
 
 class Articles extends React.Component {
+  summarize(summaryArticles) {
+    return (
+      Array.from(summaryArticles).map((article) => {
+        console.log(article);
+        <Summary key={`article-${article.title}`} article={article} />
+      })
+    );
+  }
   render() {
     const featured = articles.shift();
-    const summaries = articles.map((article) =>
-      <Summary key={`article-${article.title}`} article={article} />
-    );
+    const featuredSummaries = articles.shift();
 
     return (
       <BodyClass className="articles">
         <Intro className="work-intro">
-          <h1>Articles</h1>
+          <h1>I write about design on the web</h1>
+          <div className="section-title">
+            Articles by Joshua Ogle
+          </div>
         </Intro>
         <div className="content">
           <div className="split-layout">
             <div className="split-primary">
-              <div className="section-title">
-                The Latest
-              </div>
-              <Summary key={`article-${featured.title}`} article={featured} />
+              {this.summarize(featured)}
             </div>
             <div className="split-secondary">
-              {summaries}
+              {this.summarize(featuredSummaries)}
             </div>
           </div>
+          {this.summarize(articles)}
         </div>
       </BodyClass>
     );

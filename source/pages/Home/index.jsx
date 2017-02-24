@@ -47,8 +47,11 @@ class Home extends React.Component {
           </p>
         </Intro>
 
-        <div className="content">
-          X
+        <div className="content home-content">
+          <div className="card">About</div>
+          <div className="card">UX</div>
+          <div className="card">Brand</div>
+          <div className="card">Article</div>
         </div>
       </BodyClass>
     );
