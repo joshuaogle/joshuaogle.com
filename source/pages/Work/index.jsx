@@ -41,7 +41,6 @@ class Work extends React.Component {
       <BodyClass className="work">
         <Intro className="work-intro">
           <h1>Some projects I've worked on</h1>
-          <div className="section-title">User Experience & Interface Design</div>
         </Intro>
         <div className="content">
           <InteractionDesign />

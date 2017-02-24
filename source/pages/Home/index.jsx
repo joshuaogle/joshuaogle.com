@@ -40,8 +40,11 @@ class Home extends React.Component {
       <BodyClass className="home">
         <Intro className="home-intro">
           <h1>Joshua Ogle</h1>
-          <div className="section-title">Digital Product Designer, Developer</div>
-          <p>I help make the internet better for humans</p>
+          <div className="section-title"></div>
+          <p>
+            I'm a Product Designer and Developer,<br />
+            making the internet a better place to live.
+          </p>
         </Intro>
 
         <div className="content">

@@ -12,6 +12,7 @@
   "author": "Joshua Ogle <joshua@joshuaogle.com",
   "license": "MIT",
   "dependencies": {
+    "markdown-with-front-matter-loader": "^0.1.0",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
     "react-interactive": "^0.4.0",

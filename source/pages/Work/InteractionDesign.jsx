@@ -28,6 +28,7 @@ class InteractionDesign extends React.Component {
     return (
       <section className="portfolio">
         <div className="portfolio-intro">
+          <div className="section-title">User Experience & Interface Design</div>
           <p>
             Great experience design is what makes a user fall in love with your product.
             It's not enough to make something pretty, and you can't just make it functional either.

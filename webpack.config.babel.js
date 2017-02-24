@@ -5,7 +5,7 @@ export default {
   entry: `${__dirname}/source/index.js`,
   output: {
     path: `${__dirname}/build`,
-    publicPath: './build/',
+    publicPath: '/build/',
     filename: 'bundle.js',
   },
   devtool: 'source-map',
@@ -34,6 +34,10 @@ export default {
       {
         test: /\.svg$/,
         loader: 'svg-inline-loader'
+      },
+      {
+        test: /\.md$/,
+        loader: 'markdown-with-front-matter-loader'
       }
     ],
   },
