@@ -1,11 +1,11 @@
 ---
-title: "Design for the Web: Form and Space on the Web"
+title: "Form and Space on the Web"
 date: "02/14/2017"
 tags: ["Design"]
 url: "https://robots.thoughtbot.com/form-and-space"
 source: "thoughtbot"
 source_icon: "source-thoughtbot.svg"
-summary: "How to use space, depth and gestalt to make your designs better"
+summary: "How to use space and depth to make your designs better. A journey into the scary (sounding) Gestalt theory."
 ---
 
 We occupy three-dimensional space.

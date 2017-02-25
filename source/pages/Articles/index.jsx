@@ -15,16 +15,22 @@ var articles = [
 
 class Articles extends React.Component {
   summarize(summaryArticles) {
+    if (!summaryArticles.length) {
+      summaryArticles = [summaryArticles];
+    }
+
+    return summaryArticles.map((article) => this.renderSummary(article));
+  }
+
+  renderSummary(article) {
     return (
-      Array.from(summaryArticles).map((article) => {
-        console.log(article);
-        <Summary key={`article-${article.title}`} article={article} />
-      })
+      <Summary key={`article-${article.title}`} article={article} />
     );
   }
+
   render() {
-    const featured = articles.shift();
-    const featuredSummaries = articles.shift();
+    const featured = articles.splice(0, 1);
+    const featuredSummaries = articles.splice(0,1);
 
     return (
       <BodyClass className="articles">
@@ -35,15 +41,17 @@ class Articles extends React.Component {
           </div>
         </Intro>
         <div className="content">
-          <div className="split-layout">
-            <div className="split-primary">
+          <div className="article-summary__featured">
+            <div className="article-summary__featured__latest">
               {this.summarize(featured)}
             </div>
-            <div className="split-secondary">
+            <div className="article-summary__featured__other">
               {this.summarize(featuredSummaries)}
             </div>
           </div>
-          {this.summarize(articles)}
+          <div className="article-summary__list">
+            {this.summarize(articles)}
+          </div>
         </div>
       </BodyClass>
     );

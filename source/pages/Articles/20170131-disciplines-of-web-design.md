@@ -1,11 +1,11 @@
 ---
-title: "Design for the Web: Disciplines of Web Design"
+title: "Disciplines of Web Design"
 date: "01/31/2017"
 tags: ["Design"]
 url: "https://robots.thoughtbot.com/designing-for-the-web"
 source: "thoughtbot"
 source_icon: "source-thoughtbot.svg"
-summary: "A map through the confusing territory of modern web design"
+summary: "A map through the confusing territory of modern web design, and a history of how we got here."
 ---
 
 Fundamentally, the web is a content delivery system.

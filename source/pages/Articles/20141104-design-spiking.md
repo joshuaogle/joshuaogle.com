@@ -5,7 +5,7 @@ tags: ["Design", "Prototyping"]
 url: "https://robots.thoughtbot.com/design-spiking"
 source: "thoughtbot"
 source_icon: "source-thoughtbot.svg"
-summary: "Use tricks from the Design Sprint toolkit to focus on the right things"
+summary: "Let's take a look at some tricks from the Design Sprint toolkit to make sure our product is focusing the right things."
 ---
 
 A "spike" is a development term

@@ -1,18 +1,63 @@
 @import "../../stylesheets/variables"
 
 .article-summary
+  display: block
   padding: $base-spacing
 
   .article-title
     font-size: 1.25rem
+    line-height: 1.4
+    margin-bottom: 0
 
   .article-meta
     color: $muted-color
     font-size: $small-font-size
+    margin-bottom: $small-spacing
 
     > *
       display: inline-block
       vertical-align: middle
 
   .article-source-icon
-    +size(1rem)
+    +size(1.1em)
+    margin-left: 0.25em
+    vertical-align: -0.25em
+
+  .article-summary-body
+    color: $text-color
+    font-size: $small-font-size
+
+@media (min-width: $break-medium)
+  .article-summary
+    &__featured
+      display: flex
+
+      &__latest
+        align-content: stretch
+        display: flex
+        flex: 2.5
+        margin-right: $small-spacing
+
+        > *
+          width: 100%
+
+        .article-title
+          font-size: 2rem
+
+        .article-summary-body
+          font-size: 1.25rem
+
+      &__other
+        align-content: stretch
+        display: flex
+        flex: 1.5
+
+    &__list
+      display: flex
+      flex-wrap: wrap
+
+      > *
+        flex: 0 0 24%
+
+        &:not(:nth-child(4n))
+          margin-right: $small-spacing

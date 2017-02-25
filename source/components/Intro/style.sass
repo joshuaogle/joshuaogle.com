@@ -1,7 +1,7 @@
 @import "../../stylesheets/variables"
 
 .intro
-  +position(fixed, 0 0 null)
+  +position(fixed, 0 0 null $header-width)
   align-items: center
   color: $offwhite
   display: flex
@@ -10,7 +10,7 @@
   height: $intro-height
   text-align: center
   transition: transform $base-timing
-  z-index: 1
+  z-index: -1
 
   .nav-active &
     transform: translate($header-width-wide)
