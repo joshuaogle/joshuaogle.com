@@ -45,12 +45,11 @@ class InteractionDesign extends React.Component {
       <section className="portfolio">
         <div className="portfolio-intro">
           <div className="section-title">User Experience & Interface Design</div>
-          <h2>Some projects I've worked on</h2>
+          <h2>Great experience design makes the user fall in love</h2>
           <p>
-            Great experience design is what makes a user fall in love with your product.
             It's not enough to make something pretty, and you can't just make it functional either.
             A great experience is making the user feel at home, showing them a better way to get things done.
-            A great design isn't even about your product.
+            A great design isn't even about you.
             &nbsp;<mark>It's about them.</mark>
           </p>
         </div>
