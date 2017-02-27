@@ -1,17 +1,10 @@
 import React from 'react';
 import './style.sass';
 
+import articles from '../../data/articles';
 import BodyClass from '../../components/BodyClass';
 import Intro from '../../components/Intro';
 import Summary from './Summary';
-
-var articles = [
-  require('./20170221-balance.md'),
-  require('./20170214-form-and-space-on-the-web.md'),
-  require('./20170207-color.md'),
-  require('./20170131-disciplines-of-web-design.md'),
-  require('./20141104-design-spiking.md')
-];
 
 class Articles extends React.Component {
   summarize(summaryArticles) {
@@ -30,7 +23,7 @@ class Articles extends React.Component {
 
   render() {
     const featured = articles.splice(0, 1);
-    const featuredSummaries = articles.splice(0,1);
+    const featuredSummaries = articles.splice(0, 1);
 
     return (
       <BodyClass className="articles">

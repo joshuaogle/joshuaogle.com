@@ -41,7 +41,7 @@ class CaseStudyItem extends React.Component {
   }
 
   render() {
-    const props = this.props.item.defaultProps;
+    const props = this.props.item;
 
     return (
       <article className={`animate portfolio-section ${props.shortName}`}>

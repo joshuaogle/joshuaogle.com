@@ -8,20 +8,41 @@ html[data-current="home"]
 
   .intro
     flex: 1
-    position: relative
+    position: static
     text-align: left
 
   .content
     display: flex
-    flex: 0 0 10em
     margin-bottom: $small-spacing
     margin-top: 0
 
-    .card
-      flex: 1
-
-      &:not(:last-child)
-        margin-right: $base-spacing
-
   .site-footer
     display: none
+
+.home-section
+  display: flex
+  flex: 1
+  flex-direction: column
+
+  &:not(:last-child)
+    margin-right: $base-spacing
+
+  .card
+    flex: 1
+    padding: $base-spacing
+
+  h2
+    font-size: 1.25rem
+
+  p
+    color: $text-color
+    font-size: $small-font-size
+    margin: 0
+
+  .article-summary
+    header,
+    .article-summary-body
+      padding: 0
+
+.card
+  min-height: 9rem

@@ -2,7 +2,9 @@
 
 .article-summary
   display: block
-  padding: $base-spacing
+
+  header
+    padding: $small-spacing $base-spacing 0
 
   .article-title
     font-size: 1.25rem
@@ -11,7 +13,7 @@
 
   .article-meta
     color: $muted-color
-    font-size: $small-font-size
+    font-size: $smallest-font-size
     margin-bottom: $small-spacing
 
     > *
@@ -26,6 +28,14 @@
   .article-summary-body
     color: $text-color
     font-size: $small-font-size
+    padding: 0 $base-spacing $base-spacing
+
+  .article-summary__image
+    background-blend-mode: multiply
+    background-color: $offwhite
+    background-position: center center
+    background-size: cover
+    padding-top: 10rem
 
 @media (min-width: $break-medium)
   .article-summary
@@ -35,14 +45,14 @@
       &__latest
         align-content: stretch
         display: flex
-        flex: 2.5
+        flex: 3
         margin-right: $small-spacing
 
         > *
           width: 100%
 
         .article-title
-          font-size: 2rem
+          font-size: 2.5rem
 
         .article-summary-body
           font-size: 1.25rem
@@ -50,14 +60,14 @@
       &__other
         align-content: stretch
         display: flex
-        flex: 1.5
+        flex: 1
 
     &__list
       display: flex
       flex-wrap: wrap
 
       > *
-        flex: 0 0 24%
+        flex: 0 0 calc(25% - #{$small-spacing})
 
         &:not(:nth-child(4n))
           margin-right: $small-spacing

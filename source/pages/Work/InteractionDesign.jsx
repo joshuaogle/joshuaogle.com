@@ -1,15 +1,9 @@
 import React from 'react';
 import {Link} from 'react-router';
 
+import caseStudyProps from '../../data/case-studies';
 import InlineSVG from '../../components/InlineSVG';
 import CaseStudyItem from '../../components/CaseStudyItem';
-import SharespostCaseStudy from '../case-studies/Sharespost';
-import SummitCaseStudy from '../case-studies/Summit';
-import EmberCaseStudy from '../case-studies/Ember';
-import ArmadaCaseStudy from '../case-studies/Armada';
-import OOOCaseStudy from '../case-studies/OOO';
-import SchoolkeepCaseStudy from '../case-studies/Schoolkeep';
-
 
 class InteractionDesign extends React.Component {
   componentDidMount() {
@@ -43,15 +37,7 @@ class InteractionDesign extends React.Component {
   }
 
   renderItems() {
-    const caseStudyProps = [
-      SharespostCaseStudy,
-      SummitCaseStudy,
-      EmberCaseStudy,
-      ArmadaCaseStudy,
-      OOOCaseStudy,
-      SchoolkeepCaseStudy,
-    ];
-    return caseStudyProps.map((item) => <CaseStudyItem item={item} key={item.defaultProps.shortName} />);
+    return caseStudyProps.map((props) => <CaseStudyItem item={props} key={props.shortName} />);
   }
 
   render() {

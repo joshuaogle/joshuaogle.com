@@ -1,7 +1,7 @@
 import React from 'react';
 
-import BodyClass from '../../components/BodyClass';
-import Intro from '../../components/Intro';
+import BodyClass from '../../../components/BodyClass';
+import Intro from '../../../components/Intro';
 
 class CaseStudy extends React.Component {
   getYear() {

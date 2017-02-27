@@ -1,8 +1,12 @@
 import React from 'react';
+import {Link} from 'react-router';
 import './style.sass';
 
+import {latestArticle} from '../../data/articles';
+import {latestCaseStudy} from '../../data/case-studies';
 import BodyClass from '../../components/BodyClass';
 import Intro from '../../components/Intro';
+import ArticleSummary from '../Articles/Summary';
 
 class Home extends React.Component {
   componentDidMount() {
@@ -48,11 +52,28 @@ class Home extends React.Component {
         </Intro>
 
         <div className="content home-content">
-          <div className="card">About</div>
-          <div className="card">UX</div>
-          <div className="card">Brand</div>
-          <div className="card">Article</div>
-        </div>
+          <div className="home-section">
+            <div className="section-title">
+            More about me
+            </div>
+            <div className="card">About</div>
+          </div>
+          <div className="home-section">
+            <div className="section-title">
+            New Case Study
+            </div>
+            <Link to={`/work/${latestCaseStudy.shortName}`} className="card">
+              <h2>{latestCaseStudy.title}</h2>
+              <p>{latestCaseStudy.summary}</p>
+            </Link>
+          </div>
+          <div className="home-section">
+            <div className="section-title">
+            New Article
+            </div>
+            <ArticleSummary key={`article-${latestArticle.title}`} article={latestArticle} />
+          </div>
+          </div>
       </BodyClass>
     );
   }
