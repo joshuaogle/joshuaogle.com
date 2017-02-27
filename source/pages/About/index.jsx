@@ -19,7 +19,7 @@ class About extends React.Component {
                 A little bit about me
               </div>
               <h2>
-                I make things
+                Designer. Developer. I make things.
               </h2>
               <p>
                 For over ten years, I've been helping companies of all sizes to establish their brand and <mark>improve their connection to their users</mark>.
