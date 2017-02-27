@@ -1,6 +1,6 @@
 @each $brand, $color in $brand-colors
   html[data-current="case_study--#{$brand}"]
-    +brand-gradient($color)
+    background-color: $color
     background-attachment: fixed
     background-size: contain
 

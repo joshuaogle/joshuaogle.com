@@ -25,6 +25,8 @@ $unskew: skew(0, 5deg)
   @media (max-width: $break-medium)
     +container
     color: $white
+    padding-bottom: $large-spacing
+    padding-top: $large-spacing
 
     @each $brand, $color in $brand-colors
       &.#{$brand}

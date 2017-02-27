@@ -45,7 +45,7 @@
       &__latest
         align-content: stretch
         display: flex
-        flex: 3
+        flex: 0 0 calc(75% - #{$small-spacing * 1/2})
         margin-right: $small-spacing
 
         > *
@@ -60,14 +60,14 @@
       &__other
         align-content: stretch
         display: flex
-        flex: 1
+        flex: 0 0 calc(25% - #{$small-spacing * 1/2})
 
     &__list
       display: flex
       flex-wrap: wrap
 
       > *
-        flex: 0 0 calc(25% - #{$small-spacing})
+        flex: 0 0 calc(25% - #{$small-spacing * 3/4})
 
         &:not(:nth-child(4n))
           margin-right: $small-spacing

@@ -54,23 +54,26 @@ class Home extends React.Component {
         <div className="content home-content">
           <div className="home-section">
             <div className="section-title">
-            More about me
+              About
             </div>
-            <div className="card">About</div>
+            <Link to="/about" className="card">
+              <h2>Hello there</h2>
+              <p>I believe strongly that blurring the lines between design and development makes for a better product, and I've been doing just that for almost 15 years.</p>
+            </Link>
           </div>
           <div className="home-section">
-            <div className="section-title">
-            New Case Study
-            </div>
+            <Link to="/work" className="section-title">
+              Work
+            </Link>
             <Link to={`/work/${latestCaseStudy.shortName}`} className="card">
               <h2>{latestCaseStudy.title}</h2>
               <p>{latestCaseStudy.summary}</p>
             </Link>
           </div>
           <div className="home-section">
-            <div className="section-title">
-            New Article
-            </div>
+            <Link to="/articles" className="section-title">
+              Articles
+            </Link>
             <ArticleSummary key={`article-${latestArticle.title}`} article={latestArticle} />
           </div>
           </div>

@@ -22,8 +22,9 @@ class Articles extends React.Component {
   }
 
   render() {
-    const featured = articles.splice(0, 1);
-    const featuredSummaries = articles.splice(0, 1);
+    const primarySummary = articles.slice(0, 1);
+    const secondarySummaries = articles.slice(1, 2);
+    const otherSummaries = articles.slice(0);
 
     return (
       <BodyClass className="articles">
@@ -36,14 +37,14 @@ class Articles extends React.Component {
         <div className="content">
           <div className="article-summary__featured">
             <div className="article-summary__featured__latest">
-              {this.summarize(featured)}
+              {this.summarize(primarySummary)}
             </div>
             <div className="article-summary__featured__other">
-              {this.summarize(featuredSummaries)}
+              {this.summarize(secondarySummaries)}
             </div>
           </div>
           <div className="article-summary__list">
-            {this.summarize(articles)}
+            {this.summarize(otherSummaries)}
           </div>
         </div>
       </BodyClass>
