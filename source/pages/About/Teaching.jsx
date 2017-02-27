@@ -14,10 +14,10 @@ class Teaching extends React.Component {
           <div className="section-title">Paying it forward</div>
           <h2>Speaking, writing, etc</h2>
           <p>
-            I want the next generation of designers and developers to have an easier time learning than we did when I was getting started.
+            I want the next generation of designers and developers to have an easier time learning than we did when my generation was getting started.
             That's why I spend time speaking (most recently at <a href="http://thunderplainsconf.com">Thunder Plains</a> and <a href="http://www.meetup.com/refreshdenver">Refresh Denver</a>), and running workshops
             to teach people about the <a href="https://github.com/joshuaogle/presentation-design-sprints">Product Design Sprint</a>.
-            I have been working on a book on Design for the Web while working at thoughtbot, and I've been recording videos for a large online learning platform.
+            I worked on a book on Design for the Web (now a blog series) while working at thoughtbot, and I've been recording videos for a large online learning platform.
             I look forward to helping others learn however I can.
           </p>
         </div>

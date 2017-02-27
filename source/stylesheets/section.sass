@@ -1,12 +1,28 @@
 section
   +container
 
-.section-title
+.section-title,
+.section-footer
   @extend %small
   margin-bottom: $smallest-spacing
 
   .intro &
     color: $offwhite
+
+.section-footer
+  text-align: right
+
+.more
+  &::after
+    border: 3px solid transparent
+    border-bottom-color: $muted-color-white
+    border-right-color: $muted-color-white
+    content: ""
+    display: inline-block
+    margin-left: 0.25rem
+    height: 0.2rem
+    width: 0.2rem
+    transform: rotate(-45deg)
 
 .card
   background-color: $background-color

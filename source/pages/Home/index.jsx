@@ -44,7 +44,6 @@ class Home extends React.Component {
       <BodyClass className="home">
         <Intro className="home-intro">
           <h1>Joshua Ogle</h1>
-          <div className="section-title"></div>
           <p>
             I'm a Product Designer and Developer,<br />
             making the internet a better place to live.
@@ -56,25 +55,31 @@ class Home extends React.Component {
             <div className="section-title">
               About
             </div>
-            <Link to="/about" className="card">
+            <Link to="/about">
               <h2>Hello there</h2>
               <p>I believe strongly that blurring the lines between design and development makes for a better product, and I've been doing just that for almost 15 years.</p>
             </Link>
           </div>
           <div className="home-section">
-            <Link to="/work" className="section-title">
+            <div className="section-title">
               Work
-            </Link>
-            <Link to={`/work/${latestCaseStudy.shortName}`} className="card">
+            </div>
+            <Link to={`/work/${latestCaseStudy.shortName}`}>
               <h2>{latestCaseStudy.title}</h2>
               <p>{latestCaseStudy.summary}</p>
             </Link>
+            <Link to="/work" className="section-footer more">
+              More work
+            </Link>
           </div>
           <div className="home-section">
-            <Link to="/articles" className="section-title">
+            <div className="section-title">
               Articles
-            </Link>
+            </div>
             <ArticleSummary key={`article-${latestArticle.title}`} article={latestArticle} />
+            <Link to="/articles" className="section-footer more">
+              More articles
+            </Link>
           </div>
           </div>
       </BodyClass>

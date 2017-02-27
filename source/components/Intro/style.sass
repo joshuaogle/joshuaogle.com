@@ -1,13 +1,14 @@
 @import "../../stylesheets/variables"
 
 .intro
-  +position(fixed, 0 $base-spacing null $header-width)
+  +position(fixed, 0 0 null 0)
   align-items: center
   color: $offwhite
   display: flex
   justify-content: center
   flex-direction: column
   height: $intro-height
+  padding: 0 $base-spacing 0 $header-width
   text-align: center
   transition: transform $base-timing
   z-index: -1

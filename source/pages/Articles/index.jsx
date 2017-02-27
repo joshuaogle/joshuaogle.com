@@ -24,14 +24,14 @@ class Articles extends React.Component {
   render() {
     const primarySummary = articles.slice(0, 1);
     const secondarySummaries = articles.slice(1, 2);
-    const otherSummaries = articles.slice(0);
+    const otherSummaries = articles.slice(2);
 
     return (
       <BodyClass className="articles">
         <Intro className="work-intro">
-          <h1>I write about design on the web</h1>
+          <h1>Articles</h1>
           <div className="section-title">
-            Articles by Joshua Ogle
+            by Joshua Ogle
           </div>
         </Intro>
         <div className="content">

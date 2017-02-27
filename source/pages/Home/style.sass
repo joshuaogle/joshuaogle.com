@@ -2,47 +2,75 @@
 
 html[data-current="home"]
   main
-    display: flex
-    height: 100vh
-    flex-direction: column
+    @media (min-width: $break-medium)
+      display: flex
+      height: 100vh
+      flex-direction: column
 
   .intro
-    flex: 1
-    position: static
+    position: relative
     text-align: left
 
+    @media (min-width: $break-medium)
+      flex: 1
+
+    p
+      color: $muted-color
+      margin-top: $small-spacing / 2
+
   .content
-    display: flex
     margin-bottom: $small-spacing
     margin-top: 0
+
+    @media (min-width: $break-medium)
+      display: flex
 
   .site-footer
     display: none
 
 .home-section
-  display: flex
-  flex: 1
-  flex-direction: column
+  position: relative
+  padding: $base-spacing 0 $small-spacing
+
+  @media (min-width: $break-medium)
+    display: flex
+    flex: 1
+    flex-direction: column
+    padding: $base-spacing
 
   &:not(:last-child)
-    margin-right: $base-spacing
+    @media (min-width: $break-medium)
+      margin-right: $base-spacing
+
+  .section-title
+    color: $muted-color-white
 
   .card
-    flex: 1
-    padding: $base-spacing
+    background-color: transparent
+    box-shadow: none
+    margin: 0
+
+    @media (min-width: $break-medium)
+      padding: 0
+
+    .article-summary-body
+      color: $white
 
   h2
     font-size: 1.25rem
+    margin-bottom: 0.5rem
 
   p
-    color: $text-color
+    color: $white
     font-size: $small-font-size
     margin: 0
 
   .article-summary
     header,
+    .article-meta,
     .article-summary-body
+      margin-bottom: 0.25rem
       padding: 0
 
-.card
-  min-height: 9rem
+  .more
+    +position(absolute, null 0 0 null)

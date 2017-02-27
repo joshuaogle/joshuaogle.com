@@ -1,5 +1,7 @@
 @mixin highlight($color)
-  +linear-gradient(transparent 0%, transparent 50%, $color 50%, $color 90%, transparent 90%, $fallback: transparent)
+  +linear-gradient(transparent 0%, transparent 35%, $color 35%, $color 85%, transparent 85%, $fallback: transparent)
+  border-radius: 1rem
+  padding: 0 0.25rem
 
 h1,
 h2,
@@ -62,10 +64,14 @@ svg
   text-transform: uppercase
 
 mark
-  +highlight($highlight-color)
-  color: mix($text-color, $highlight-color, 80%)
+  +highlight($intro-highlight-color)
+  color: $white
   font-weight: 300
   padding: 0.05em 0.1em
+
+  .content &
+    +highlight($highlight-color)
+    color: mix($text-color, $highlight-color, 85%)
 
 .year
   @extend mark
