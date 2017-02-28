@@ -7,20 +7,17 @@ import InlineSVG from '../InlineSVG';
 class Header extends React.Component {
   componentDidMount() {
     const nav = document.getElementsByClassName("site-header")[0];
-    nav.addEventListener("mouseover", function() {
-      document.body.classList.add("nav-active");
-    });
 
-    nav.addEventListener("mouseout", function() {
-      document.body.classList.remove("nav-active");
-    });
+    const isMobile = document.documentElement.clientWidth < 1024;
+    if (!isMobile) {
+      nav.addEventListener("mouseover", function() {
+        document.body.classList.add("nav-active")
+      });
 
-    const links = nav.getElementsByTagName("a");
-    Array.from(links).forEach(function(link, index, array) {
-      link.onclick = function() {
-        document.body.classList.remove("nav-active");
-      };
-    });
+      nav.addEventListener("mouseout", function() {
+        document.body.classList.remove("nav-active")
+      });
+    }
   }
 
   render() {
