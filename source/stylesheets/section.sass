@@ -32,11 +32,12 @@ section
   position: relative
 
 .content
-  margin: $base-spacing $small-spacing $small-spacing $header-width
+  margin: $base-spacing $small-spacing $small-spacing ($header-width * 0.8)
   transition: box-shadow $fast-timing, transform $base-timing
   z-index: 2
 
   @media (min-width: $break-medium)
+    margin-left: $header-width
     margin-right: $large-spacing
 
   .intro + &

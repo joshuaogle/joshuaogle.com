@@ -7,6 +7,9 @@
   width: $header-width
   z-index: $z-header
 
+  @media (max-width: $break-medium)
+    width: $header-width * 0.8
+
   .nav-active &
     width: $header-width-wide
 
@@ -14,9 +17,15 @@
   display: block
   width: 2rem
 
+  @media (max-width: $break-medium)
+    width: 1.5rem
+
   svg
     display: block
     width: 2rem
+
+    @media (max-width: $break-medium)
+      width: 1.5rem
 
     path,
     ellipse

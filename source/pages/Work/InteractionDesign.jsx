@@ -21,19 +21,16 @@ class InteractionDesign extends React.Component {
     }
 
     var markAnimated = function() {
-      for (var element of animates) {
-        if (!element.classList.contains("animated")) {
-          if (isOnScreen(element)) {
-            element.classList.add("animated");
-          }
+      Array.from(animates).forEach(function(element, index, array) {
+        const isMarked = element.classList.contains("animated");
+        if (!isMarked && isOnScreen(element)) {
+          element.classList.add("animated");
         }
-      }
+      });
     };
 
-    if (animates.length > 0) {
-      markAnimated();
-      window.addEventListener("scroll", markAnimated);
-    }
+    window.addEventListener("scroll", markAnimated);
+    markAnimated();
   }
 
   renderItems() {

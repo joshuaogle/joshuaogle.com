@@ -13,6 +13,9 @@
   transition: transform $base-timing
   z-index: -1
 
+  @media (max-width: $break-medium)
+    padding-left: $header-width * 0.8
+
   .nav-active &
     transform: translate($header-width-wide)
 

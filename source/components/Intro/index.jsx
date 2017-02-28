@@ -8,7 +8,7 @@ class Intro extends React.Component {
       const scrollTop = window.pageYOffset;
       const intros = document.getElementsByClassName("intro");
 
-      for (var intro of intros) {
+      Array.from(intros).forEach(function(intro, index, array) {
         var percent = scrollTop / intro.clientHeight;
         var slideUp = "translateY(-" + ((intro.clientHeight / 3) * percent) + "px)";
         var zoomOut = "scale(" + (1 - (percent / 10)) + ")";
@@ -20,7 +20,7 @@ class Intro extends React.Component {
           "transform": slideUp + " " + zoomOut,
           "webkitFilter": blur,
         });
-      }
+      });
     };
 
     if (document.getElementsByClassName("intro-content").length > 0) {
