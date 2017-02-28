@@ -3,7 +3,8 @@
   "version": "3.0.0",
   "description": "Single Page Apps for GitHub Pages",
   "scripts": {
-    "start": "webpack-dev-server -d --inline --host 0.0.0.0 --port 3200 --history-api-fallback --progress"
+    "start": "webpack-dev-server -d --inline --host 0.0.0.0 --port 3200 --history-api-fallback --progress",
+    "deploy": "webpack -p; git add .; git commit -am 'Production build'; git push origin master;"
   },
   "repository": {
     "type": "git",
