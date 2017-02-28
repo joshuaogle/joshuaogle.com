@@ -3,6 +3,7 @@ import React from 'react';
 import BodyClass from '../../components/BodyClass';
 import InteractionDesign from './InteractionDesign';
 import Branding from './Branding';
+import Dribbble from './Dribbble';
 
 class Work extends React.Component {
   render() {
@@ -26,6 +27,8 @@ class Work extends React.Component {
               </p>
             </blockquote>
           </section>
+
+          <Dribbble />
         </div>
       </BodyClass>
     );
