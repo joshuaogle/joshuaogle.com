@@ -13,6 +13,8 @@
   "author": "Joshua Ogle <joshua@joshuaogle.com",
   "license": "MIT",
   "dependencies": {
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
     "markdown-with-front-matter-loader": "^0.1.0",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
