@@ -1,4 +1,5 @@
 const articles = [
+  require('./20170307-typography.md'),
   require('./20170228-abstraction-vs-skeuomorphism.md'),
   require('./20170221-balance.md'),
   require('./20170214-form-and-space-on-the-web.md'),

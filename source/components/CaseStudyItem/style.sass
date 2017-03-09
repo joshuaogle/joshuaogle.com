@@ -2,16 +2,6 @@
 $skew: skew(0, -5deg)
 $unskew: skew(0, 5deg)
 
-.portfolio
-  padding-right: 0
-
-  @media (max-width: $break-medium)
-    padding-left: 0
-
-.portfolio-intro
-  @media (max-width: $break-medium)
-    +container
-
 .portfolio-section
   position: relative
   transform: $skew
@@ -30,7 +20,7 @@ $unskew: skew(0, 5deg)
 
     @each $brand, $color in $brand-colors
       &.#{$brand}
-        background-color: $color
+        +brand-gradient($color)
 
         *
           border-color: $white

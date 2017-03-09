@@ -5,6 +5,8 @@ import caseStudyProps from '../../data/case-studies';
 import InlineSVG from '../../components/InlineSVG';
 import CaseStudyItem from '../../components/CaseStudyItem';
 
+import './interactiondesign.sass';
+
 class InteractionDesign extends React.Component {
   componentDidMount() {
     const animates = document.getElementsByClassName("animate");

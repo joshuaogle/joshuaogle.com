@@ -8,13 +8,13 @@
   justify-content: center
   flex-direction: column
   height: $intro-height
-  padding: 0 $base-spacing 0 $header-width
   text-align: center
   transition: transform $base-timing
   z-index: -1
 
   @media (max-width: $break-medium)
-    padding-left: $header-width * 0.8
+    margin-left: $header-width * 0.8
+    margin-right: $small-spacing
 
   .nav-active &
     transform: translate($header-width-wide)
@@ -47,9 +47,11 @@
   height: 4rem
   width: 4rem
   border-radius: 50%
-  margin: -2rem 0 0 -2rem
-  transition: transform $base-timing
+  transform: translate(-50%, -50%)
   z-index: 1000
+
+  @media (max-width: $break-medium)
+    display: none
 
   .nav-active &
     transform: translate($header-width-wide)

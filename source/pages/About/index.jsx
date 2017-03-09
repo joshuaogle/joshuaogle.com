@@ -2,6 +2,7 @@ import React from 'react';
 import './style.sass';
 
 import BodyClass from '../../components/BodyClass';
+import Clients from './Clients';
 import Teaching from './Teaching';
 
 class About extends React.Component {
@@ -32,6 +33,8 @@ class About extends React.Component {
               </p>
             </div>
           </section>
+
+          <Clients />
 
           <Teaching />
         </div>
