@@ -1,6 +1,7 @@
 import React from 'react';
 import './style.sass';
 
+import {Link} from 'react-router';
 import articles from '../../data/articles';
 import BodyClass from '../../components/BodyClass';
 import Intro from '../../components/Intro';
@@ -21,32 +22,41 @@ class Articles extends React.Component {
     );
   }
 
+  prettyDate(articleDate) {
+    const date = new Date(articleDate);
+    const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const monthName = monthNames[date.getMonth()];
+    return `${monthName} ${date.getDate()}, ${date.getFullYear()}`;
+  }
+
   render() {
-    const primarySummary = articles.slice(0, 1);
-    const secondarySummaries = articles.slice(1, 2);
-    const otherSummaries = articles.slice(2);
+    const latestArticle = articles.slice(0, 1)[0];
+    const olderArticles = articles.slice(1);
 
     return (
       <BodyClass className="articles">
         <Intro className="work-intro">
-          <h1>Articles</h1>
-          <div className="section-title">
-            by Joshua Ogle
-          </div>
+          <h1>Articles by Joshua Ogle</h1>
         </Intro>
-        <div className="content">
-          <div className="article-summary__featured">
-            <div className="article-summary__featured__latest">
-              {this.summarize(primarySummary)}
-            </div>
-            <div className="article-summary__featured__other">
-              {this.summarize(secondarySummaries)}
-            </div>
-          </div>
+        <section className="content">
+          <Link to={latestArticle.url} target="_new" className="article article-summary article-summary__featured">
+            <article>
+              <header>
+                <h3 className="article-title">{latestArticle.title}</h3>
+                <div className="article-meta">
+                  {this.prettyDate(latestArticle.date)}
+                </div>
+                <p>
+                  {latestArticle.summary}
+                </p>
+              </header>
+            </article>
+          </Link>
+
           <div className="article-summary__list">
-            {this.summarize(otherSummaries)}
+            {this.summarize(olderArticles)}
           </div>
-        </div>
+        </section>
       </BodyClass>
     );
   }

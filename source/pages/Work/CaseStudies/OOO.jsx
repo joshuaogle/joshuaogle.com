@@ -145,10 +145,7 @@ OOOCaseStudy.defaultProps = {
   date: "2014/12/15",
   shortName: "ooo",
   role: "Design & Prototyping",
-  preview: "/source/images/portfolio-ooo-screen.png",
-  preview_type: "screen",
-  icon: "/source/images/case-studies/ooo-icon.svg",
-  summary: "This is a little something we experimented on at thoughtbot for Out of Office (OOO) notifications. We came up with a way to automate the hassle of telling your team you would be gone and made it much simpler. We ended up integrating many of these ideas and designs into our larger internal planning app, but I still love the way the original idea looked."
+  icon: "case-study-logo-ooo.svg"
 }
 
 export default OOOCaseStudy;

@@ -10,3 +10,4 @@ const articles = [
 export default articles;
 
 export const latestArticle = articles[0];
+export const featuredArticles = articles.slice(0, 4);

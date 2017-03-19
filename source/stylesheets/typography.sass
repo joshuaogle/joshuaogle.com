@@ -1,8 +1,3 @@
-@mixin highlight($color)
-  +linear-gradient(transparent 0%, transparent 35%, $color 35%, $color 85%, transparent 85%, $fallback: transparent)
-  border-radius: 1rem
-  padding: 0 0.25rem
-
 h1,
 h2,
 h3,
@@ -13,15 +8,15 @@ h4
   line-height: 1.2
   margin: 0 0 $small-spacing
 
-h2
-  color: $red
+h1
   font-size: 2.5rem
 
-h3
-  font-size: 1.75rem
+h2
+  color: $red
+  font-size: 2rem
 
-h4
-  font-size: 1.5rem
+h3
+  font-size: 1.25rem
 
 ul
   list-style: outside square
@@ -65,14 +60,9 @@ svg
   text-transform: uppercase
 
 mark
-  +highlight($intro-highlight-color)
-  color: $white
+  color: mix($text-color, $highlight-color, 90%)
+  +highlight($highlight-color)
   font-weight: 300
-  padding: 0.05em 0.1em
-
-  .content &
-    +highlight($highlight-color)
-    color: mix($text-color, $highlight-color, 85%)
 
 .year
   @extend mark
@@ -84,18 +74,9 @@ mark
   line-height: 1
   padding: 0.2em 0.5em 0.15em
 
-  .intro &
-    +highlight($intro-highlight-color)
-    border-color: $offwhite
-    color: $offwhite
-
   .portfolio-title &,
   .brand-label &
     margin-left: 0.5em
-
-  .portfolio-title &
-    @media (max-width: $break-medium)
-      +highlight($intro-highlight-color)
 
   .brand-label &
     font-size: 1em
@@ -124,9 +105,6 @@ blockquote
 
 figure
   margin: $large-spacing 0
-
-  .split-secondary &
-    margin: 0
 
   .case-study-example
     margin: 0 auto

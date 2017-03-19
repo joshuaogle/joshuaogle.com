@@ -14,18 +14,16 @@ $green: #bfd849
 $magenta: #c76baa
 $cyan: #66ddd2
 
-$background-color: $offwhite
+$background-color: $white
 $text-color: $brown
 $muted-color: mix($text-color, $background-color, 50%)
-$muted-color-white: rgba($white, 0.33)
 $link-color: $blue
 $link-hover: shade($blue, 15%)
 $logo-color: $offwhite
-$highlight-color: rgba(mix($yellow, $red, 75%), 0.15)
-$intro-highlight-color: rgba($white, 0.15)
+$highlight-color: rgba(mix($yellow, $red, 95%), 0.25)
 
 $base-shadow: 0 1.1rem 0.33rem -0.75rem rgba(#000, 0.3), 0 0.5rem 1rem rgba(#000, 0.1)
-$large-shadow: 0 1rem 1rem -0.5rem #000, 0 1rem 3rem rgba(#000, 0.5)
+$large-shadow: 0 1rem 1rem -0.5rem rgba(#000, 0.3), 0 1rem 3rem rgba(#000, 0.1)
 $small-shadow: 0 0.5rem 0.33rem -0.33rem rgba($black, 0.1), 0 0.25rem 1rem rgba($black, 0.1)
 $smallest-shadow: 0 0.25rem 0.25rem -0.25rem rgba($black, 0.33), 0 0.1rem 0.25rem rgba($black, 0.1)
 
@@ -33,22 +31,20 @@ $smallest-shadow: 0 0.25rem 0.25rem -0.25rem rgba($black, 0.33), 0 0.1rem 0.25re
 $break-small: 480px
 $break-medium: 1024px
 $break-large: 1600px
-$intro-height: 35vh
 
 // Fonts
 $sans-serif: "Brandon", -apple-system, BlinkMacSystemFont, sans-serif
 $heading-font: "Libre Baskerville", $sans-serif
 
 // Sizes
-$base-font-size: calc(1rem + 0.2 * (100vw - 25em) / 100)
+$base-font-size: calc(1rem + 0.15 * (100vw - 25em) / 100)
 $small-font-size: 0.8rem
 $smallest-font-size: 0.66rem
+$body-padding: 1rem
 $base-spacing: 2rem
 $small-spacing: $base-spacing / 2
 $smallest-spacing: $base-spacing / 4
 $large-spacing: $base-spacing * 2
-$header-width: 4rem
-$header-width-wide: 6rem
 $base-border-radius: 0.25rem
 
 // Z-indeces
@@ -66,46 +62,53 @@ $slow-timing: $base-timing * 2
 @mixin container
   +clearfix
   margin: 0 auto
+  max-width: $break-medium
   padding: $base-spacing
 
   @media (min-width: $break-medium)
-    padding: $large-spacing
-
-@mixin split-layout
-  display: flex
-  flex-direction: row
-  justify-content: center
-
-.split-layout
-  @media (min-width: $break-medium)
-    @include split-layout
-    margin-bottom: $base-spacing
-
-@mixin split-primary
-  flex: 1 1 61.8%
-
-.split-primary
-  @media (min-width: $break-medium)
-    @include split-primary
-
-@mixin split-secondary
-  justify-content: center
-  display: flex
-  flex: 1 1 28.2%
-  flex-direction: column
-
-.split-secondary
-  @media (min-width: $break-medium)
-    @include split-secondary
-
-  &:first-child
-    @media (min-width: $break-medium)
-      margin-right: $base-spacing
-
-  &:last-child
-    @media (min-width: $break-medium)
-      margin-left: $base-spacing
+    padding-left: $large-spacing
+    padding-right: $large-spacing
 
 @mixin brand-gradient($color)
   $shifted-color: tint(adjust-hue($color, 10%), 10%)
   background: $color linear-gradient(135deg, $color 66%, $shifted-color)
+
+@mixin highlight($color)
+  +linear-gradient(transparent 0%, transparent 10%, $color 10%, $color 95%, transparent 95%, $fallback: transparent)
+  border-radius: 1rem
+  padding: 0 0.25rem
+
+@mixin title-line($color: currentColor, $width: $small-spacing)
+  position: relative
+
+  &::before
+    +position(absolute, 0.6em 100% null null)
+    background-color: $color
+    content: ""
+    display: block
+    height: 1px
+    margin-right: $small-spacing
+    width: $width
+
+@mixin angle
+  overflow: hidden
+  position: relative
+  &::after
+    +position(absolute, null 0)
+    background-color: $background-color
+    content: ""
+    height: 6vw
+    transform: skewY(3deg)
+    z-index: 1
+
+@mixin angle-bottom
+  +angle
+  &::after
+    bottom: 0
+    transform-origin: 0 50%
+
+@mixin angle-top
+  +angle
+  &::after
+    top: 0
+    transform-origin: 100% 50%

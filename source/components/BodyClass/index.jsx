@@ -2,15 +2,18 @@ import React from 'react';
 
 class BodyClass extends React.Component {
   componentDidMount() {
-    document.documentElement.setAttribute("data-current", this.props.className);
+    document.body.setAttribute("data-current", this.props.className);
+    document.body.setAttribute("data-intro", this.props.hasIntro);
   }
 
   componentWillReceiveProps(nextProps) {
-    document.documentElement.setAttribute("data-current", nextProps.className);
+    document.body.setAttribute("data-current", nextProps.className);
+    document.body.setAttribute("data-intro", nextProps.hasIntro);
   }
 
   componentWillUnmount() {
-    document.documentElement.removeAttribute("data-current");
+    document.body.removeAttribute("data-current");
+    document.body.removeAttribute("data-intro");
   }
 
   render() {

@@ -16,4 +16,4 @@ const caseStudyProps = [
 
 export default caseStudyProps;
 
-export const latestCaseStudy = caseStudyProps[0];
+export const featuredCaseStudies = caseStudyProps;

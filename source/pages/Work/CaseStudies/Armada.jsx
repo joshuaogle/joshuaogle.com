@@ -98,10 +98,7 @@ ArmadaCaseStudy.defaultProps = {
   date: "2015/01/01",
   shortName: "armada",
   role: "Branding, Product Design & Development",
-  preview: "/source/images/portfolio-armada-screen.svg",
-  preview_type: "screen",
-  icon: "/source/images/case-studies/armada-icon.png",
-  summary: "This OKC based team is bringing a modern startup approach to fleet and asset tracking. I helped them design their entire product and identity and did a fair bit of Ruby and Google Maps Javascript too."
+  icon: "case-study-logo-armada.svg"
 }
 
 export default ArmadaCaseStudy;

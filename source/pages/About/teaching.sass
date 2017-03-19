@@ -1,22 +1,23 @@
 @import "../../stylesheets/variables"
 
 .teaching
-  @media(min-width: $break-medium)
-    +split-layout
+  @media (min-width: $break-medium)
+    display: flex
+    flex-direction: row
 
-.teaching-portrait
-  margin-bottom: $base-spacing
+  &-portrait
+    margin-bottom: $base-spacing
 
-  @media(min-width: $break-medium)
-    +split-secondary
+    @media (min-width: $break-medium)
+      flex: 1
+      margin-right: $base-spacing
 
-  img
-    border-radius: $base-border-radius
-    box-shadow: $base-shadow
-    max-width: 300px
-    width: 100%
+    img
+      border-radius: $base-border-radius
+      box-shadow: $base-shadow
+      max-width: 300px
+      width: 100%
 
-.teaching-content
-  @media(min-width: $break-medium)
-    +split-primary
-    margin-left: $base-spacing
+  &-content
+    @media (min-width: $break-medium)
+      flex: 3

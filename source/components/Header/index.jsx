@@ -5,21 +5,6 @@ import './style.sass';
 import InlineSVG from '../InlineSVG';
 
 class Header extends React.Component {
-  componentDidMount() {
-    const nav = document.getElementsByClassName("site-header")[0];
-
-    const isMobile = document.documentElement.clientWidth < 1024;
-    if (!isMobile) {
-      nav.addEventListener("mouseover", function() {
-        document.body.classList.add("nav-active")
-      });
-
-      nav.addEventListener("mouseout", function() {
-        document.body.classList.remove("nav-active")
-      });
-    }
-  }
-
   render() {
     return (
       <header className="site-header">

@@ -18,18 +18,15 @@ export default {
       },
       {
         test: /\.sass$/,
-        loaders: ["style-loader", "css-loader?sourceMap", "sass-loader?includePaths[]=" + bourbon.includePaths + "&sourceMap"]
+        loaders: ["style-loader", "css-loader", "sass-loader?includePaths[]=" + bourbon.includePaths]
       },
       {
         test: /\.(png|woff|woff2|eot|ttf)$/,
         loader: 'url-loader?limit=100000'
       },
       {
-        test: /\.(jpg|png)$/,
-        loader: 'file-loader',
-        options: {
-          name: '[path][name].[hash].[ext]',
-        },
+        test: /\.jpe?g$|\.gif$|\.png$/i,
+        loader: `file-loader?name=[path][name].[ext]`,
       },
       {
         test: /\.svg$/,

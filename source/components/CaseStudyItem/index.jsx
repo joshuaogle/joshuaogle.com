@@ -5,19 +5,6 @@ import './style.sass';
 import InlineSVG from '../InlineSVG';
 
 class CaseStudyItem extends React.Component {
-  getYear(props) {
-    const date = new Date(props.date);
-    return date.getFullYear();
-  }
-
-  viewMoreText(props) {
-    if (props.url) {
-      return `Visit ${props.title}`;
-    } else {
-      return "Case Study";
-    }
-  }
-
   viewMorePath(props) {
     if (props.url) {
       return props.url;
@@ -32,44 +19,21 @@ class CaseStudyItem extends React.Component {
     }
   }
 
-  phone(props) {
-    if (props.preview_type == "phone") {
-      return (
-        <InlineSVG src="phone.svg" />
-      )
-    }
-  }
-
   render() {
     const props = this.props.item;
 
     return (
-      <article className={`animate portfolio-section ${props.shortName}`}>
-        <div className="portfolio-description">
-          <h3 className="portfolio-title">
+      <Link to={this.viewMorePath(props)} target={this.viewMoreTarget(props)}>
+        <article className={`animate case-study-item case-study-item--${props.shortName}`}>
+          <InlineSVG className="case-study-item--icon" src={props.icon} />
+          <h3>
             {props.title}
-            <time className="year">{this.getYear(props)}</time>
           </h3>
-          <div className="section-title">
+          <p>
             {props.role}
-          </div>
-          <p>
-            {props.summary}
           </p>
-          <p>
-            <Link to={this.viewMorePath(props)} className="button" target={this.viewMoreTarget(props)}>
-              {this.viewMoreText(props)}
-            </Link>
-          </p>
-        </div>
-
-        <Link to={this.viewMorePath(props)} className="portfolio-preview" target={this.viewMoreTarget(props)}>
-          <div className={`portfolio-${props.preview_type}`}>
-            {this.phone(props)}
-            <img src={props.preview} />
-          </div>
-        </Link>
-      </article>
+        </article>
+      </Link>
     );
   }
 }

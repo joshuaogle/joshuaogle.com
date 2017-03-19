@@ -2,56 +2,81 @@ import React from 'react';
 import {Link} from 'react-router';
 import './style.sass';
 
-import {latestArticle} from '../../data/articles';
-import {latestCaseStudy} from '../../data/case-studies';
+import {featuredArticles} from '../../data/articles';
+import {featuredCaseStudies} from '../../data/case-studies';
+import Footer from '../../components/Footer';
 import BodyClass from '../../components/BodyClass';
 import Intro from '../../components/Intro';
 import ArticleSummary from '../Articles/Summary';
 
 class Home extends React.Component {
+  renderCaseStudies() {
+    return featuredCaseStudies.map((study) =>
+      <Link to={`/work/${study.shortName}`} className={`home-work--${study.shortName}`}>
+        <h3>{study.title}</h3>
+        <p>{study.role}</p>
+      </Link>
+    );
+  }
+
+  renderArticles() {
+    return featuredArticles.map((article) =>
+      <ArticleSummary key={`article-${article.title}`} article={article} />
+    );
+  }
+
   render() {
     return (
-      <BodyClass className="home">
-        <Intro className="home-intro">
-          <h1>Joshua Ogle</h1>
-          <p>
-            I'm a Product Designer and Developer,<br />
-            making the internet a better place to live.
-          </p>
+      <BodyClass className="home" hasIntro="true">
+        <Intro>
+          <div className="home-intro--portrait">
+            <img src="/source/images/portrait.png" />
+          </div>
+          <div className="home-intro--copy">
+            <h1>Joshua Ogle</h1>
+            <p>
+              I’m a Product Designer & Developer. I help companies of all sizes
+              to bring their ideas to life and make their customers happy.
+              Follow along on Dribbble and Twitter.
+            </p>
+          </div>
         </Intro>
 
-        <div className="content home-content">
-          <div className="home-section">
-            <div className="section-title">
-              About
-            </div>
-            <Link to="/about">
-              <h2>Hello there</h2>
-              <p>I believe strongly that blurring the lines between design and development makes for a better product, and I've been doing just that for almost 15 years.</p>
-            </Link>
+        <section className="home-work">
+          <div className="section-title">
+            Work
           </div>
-          <div className="home-section">
-            <div className="section-title">
-              Work
-            </div>
-            <Link to={`/work/${latestCaseStudy.shortName}`}>
-              <h2>{latestCaseStudy.title}</h2>
-              <p>{latestCaseStudy.summary}</p>
-            </Link>
-            <Link to="/work" className="section-footer more">
+          <h2>Selected Projects</h2>
+          <p>
+            I’m a Product Designer & Developer. I help companies of all sizes
+            to bring their ideas to life and make their customers happy.&nbsp;
+            <Link to="/work">
               More work
             </Link>
+          </p>
+
+          <div className="home-work--list">
+            {this.renderCaseStudies()}
           </div>
-          <div className="home-section">
+        </section>
+
+        <section className="home-articles">
+          <div className="home-articles--copy">
             <div className="section-title">
-              Articles
+              Latest Articles
             </div>
-            <ArticleSummary key={`article-${latestArticle.title}`} article={latestArticle} />
-            <Link to="/articles" className="section-footer more">
-              More articles
-            </Link>
+            <h2>Some light reading</h2>
+            <p>
+              I occassionally write about design basics and front-end tips for
+              designers and developers. Done with these?&nbsp;
+              <Link to="/articles">There's lots more.</Link>
+            </p>
           </div>
+          <div className="home-articles--list">
+            {this.renderArticles()}
           </div>
+        </section>
+        <Footer />
       </BodyClass>
     );
   }

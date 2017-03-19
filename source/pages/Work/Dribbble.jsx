@@ -25,7 +25,6 @@ class Dribbble extends React.Component {
     const dribbbleSection = document.getElementsByClassName("dribbble")[0];
     const dribbbleList = document.getElementsByClassName("dribbble-list")[0];
     for (const shot of firstEight) {
-      console.log(shot.images);
       const image_url = (shot.images.hidpi != null) ? shot.images.hidpi : shot.images.normal;
       const image = `<img src='${image_url}' alt='${shot.title}' />`;
       const imageLink = `<a href='${shot.html_url}' target='_new'>${image}</a>`;
@@ -47,7 +46,7 @@ class Dribbble extends React.Component {
         <ul className="dribbble-list" />
 
         <div className="section-footer">
-          <a href="http://dribbble.com/joshuaogle" target="_new" className="button">
+          <a href="http://dribbble.com/joshuaogle" target="_new">
             More on Dribbble
           </a>
         </div>

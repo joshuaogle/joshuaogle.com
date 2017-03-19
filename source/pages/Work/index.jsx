@@ -9,7 +9,7 @@ class Work extends React.Component {
   render() {
     return (
       <BodyClass className="work">
-        <div className="content card">
+        <div className="content">
           <InteractionDesign />
           <Branding />
 

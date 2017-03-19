@@ -12,6 +12,13 @@ class Summary extends React.Component {
     }
   }
 
+  prettyDate(articleDate) {
+    const date = new Date(articleDate);
+    const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const monthName = monthNames[date.getMonth()];
+    return `${monthName} ${date.getDate()}, ${date.getFullYear()}`;
+  }
+
   render() {
     const article = this.props.article;
 
@@ -19,14 +26,11 @@ class Summary extends React.Component {
       <Link to={article.url} target="_new" className="article article-summary card">
         <article>
           <header>
-            <h2 className="article-title">{article.title}</h2>
+            <h3 className="article-title">{article.title}</h3>
             <div className="article-meta">
-              Published by {this.sourceIcon(article.source_icon)} {article.source} on {article.date}
+              {this.prettyDate(article.date)}
             </div>
           </header>
-          <div className="article-summary-body">
-            {article.summary}
-          </div>
         </article>
       </Link>
     );

@@ -1,41 +1,23 @@
 @import "../../stylesheets/variables"
 
 footer
-  color: $white
+  +angle-top
+  background-color: #F7F7F7
+  padding-top: $large-spacing
   position: relative
   transition: transform $base-timing
   z-index: 1
 
-  .nav-active &
-    transform: translateX($header-width-wide)
-
   section
-    padding-left: $header-width
-
-    @media(min-width: $break-medium)
-      max-width: 66vw
-
-  .section-title
-    color: $muted-color-white
-
-  h2
-    color: $white
+    padding-bottom: $base-spacing
 
   a
-    color: $muted-color-white
     font-weight: 500
-    text-decoration: underline
-
-    &:hover
-      color: rgba($white, 0.75)
-      text-decoration: underline
 
   .copyright
-    color:
     font-size: $smallest-font-size
     font-weight: normal
     margin-bottom: 0
-    padding-bottom: $base-spacing
     text-align: center
 
 .link-email,

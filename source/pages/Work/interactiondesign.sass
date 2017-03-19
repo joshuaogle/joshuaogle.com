@@ -1,14 +1,16 @@
 @import "../../stylesheets/variables"
 
-.portfolio
-  padding-right: 0
+.case-study--list
+  padding-top: 0
 
-  @media (max-width: $break-medium)
-    padding-left: 0
+  @media (min-width: $break-medium)
+    columns: 2
+    column-gap: $small-spacing
 
-.portfolio-intro
-  padding-right: $base-spacing
+  > a
+    display: block
+    margin-bottom: $small-spacing
 
-  @media (max-width: $break-medium)
-    +container
-    margin-bottom: $large-spacing
+    &:first-child
+      @media (min-width: $break-medium)
+        margin-top: 9rem

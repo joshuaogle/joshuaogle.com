@@ -25,13 +25,13 @@ class Footer extends React.Component {
             take a look at where I've worked <a href="http://linkedin.com/in/joshuaogle" className="link-linkedin">on LinkedIn</a>,
             and see what I'm up to today <a href="http://twitter.com/joshuaogle" className="link-twitter">on Twitter</a>.
           </p>
-        </section>
 
-        <p className="copyright">
-          &copy; Joshua Ogle.&nbsp;
-         <a href="https://www.youtube.com/watch?v=du6TW4fKOmk" target="_blank">This website updated by witches.</a>&nbsp;
-         All rights reserved.
-        </p>
+          <p className="copyright">
+            &copy; Joshua Ogle.&nbsp;
+           <a href="https://www.youtube.com/watch?v=du6TW4fKOmk" target="_blank">This website updated by witches.</a>&nbsp;
+           All rights reserved.
+          </p>
+        </section>
       </footer>
     );
   }

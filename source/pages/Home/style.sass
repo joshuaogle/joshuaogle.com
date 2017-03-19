@@ -1,76 +1,95 @@
 @import "../../stylesheets/variables"
 
-html[data-current="home"]
-  main
-    @media (min-width: $break-medium)
-      display: flex
-      height: 100vh
-      flex-direction: column
-
+body[data-current="home"]
   .intro
-    position: relative
-    text-align: left
+    background-image: url("../../images/intro-home.jpg")
 
+  .intro-content
     @media (min-width: $break-medium)
-      flex: 1
+      align-items: center
+      display: flex
+      flex-direction: row
+      justify-content: center
+      margin-bottom: -$base-spacing
+      margin-top: -$base-spacing
+      padding-bottom: 0
 
-    p
-      color: $muted-color
-      margin-top: $small-spacing / 2
+    .home-intro--portrait
+      box-shadow: $base-shadow
+      display: none
+      padding-top: $large-spacing
 
-  .content
-    margin-bottom: $base-spacing
-    margin-top: 0
+      @media (min-width: $break-medium)
+        display: block
+        max-width: 20rem
+
+    .home-intro--copy
+      font-size: 0.9rem
+
+      @media (min-width: $break-medium)
+        margin-left: $base-spacing
+        max-width: 25rem
+
+    h1
+      +title-line($red, $base-spacing)
+      margin-bottom: $smallest-spacing
+
+      &::before
+        @media (max-width: $break-medium)
+          display: none
+
+.home-work
+  margin-top: $large-spacing
+
+  &--list
+    margin: $base-spacing 0
 
     @media (min-width: $break-medium)
       display: flex
+      flex-direction: row
+      flex-wrap: wrap
 
-  .site-footer
-    display: none
+    > a
+      display: block
+      flex: 0 0 48%
+      padding: 0 $small-spacing
 
-.home-section
-  position: relative
-  padding: $base-spacing 0 $base-spacing
+      &:nth-child(odd)
+        margin-top: $base-spacing
 
+        @media (min-width: $break-medium)
+          margin-right: 2%
+
+      &:nth-child(even)
+        margin-bottom: $base-spacing
+
+      @each $brand, $color in $brand-colors
+        &.home-work--#{$brand}
+          color: $color
+
+      h3
+        +title-line()
+        font-size: 1.5rem
+        margin-bottom: $smallest-spacing
+
+      p
+        color: $muted-color
+        font-size: $small-font-size
+
+.home-articles
   @media (min-width: $break-medium)
     display: flex
-    flex: 1
-    flex-direction: column
-    padding: $base-spacing
+    flex-direction: row
 
-  &:not(:last-child)
-    @media (min-width: $break-medium)
-      margin-right: $base-spacing
+    &--copy,
+    &--list
+      flex: 0 0 48%
 
-  .section-title
-    color: $muted-color-white
+    &--copy
+      padding-right: 4%
 
-  .card
-    background-color: transparent
-    box-shadow: none
-    margin: 0
+  &--list
+    margin-top: 2.5rem
 
-    @media (min-width: $break-medium)
-      padding: 0
-
-    .article-summary-body
-      color: $white
-
-  h2
-    font-size: 1.25rem
-    margin-bottom: 0.5rem
-
-  p
-    color: $white
-    font-size: $small-font-size
-    margin: 0
-
-  .article-summary
-    header,
-    .article-meta,
-    .article-summary-body
-      margin-bottom: 0.25rem
-      padding: 0
-
-  .more
-    +position(absolute, null 0 0 null)
+    .article
+      padding-right: 0

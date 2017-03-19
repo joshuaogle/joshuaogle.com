@@ -2,72 +2,34 @@
 
 .article-summary
   display: block
+  margin-bottom: $base-spacing
+  padding: 0 $base-spacing
 
-  header
-    padding: $base-spacing $base-spacing 0
+  h3
+    +title-line()
+    margin-bottom: $smallest-spacing
 
-  .article-title
-    font-size: 1.25rem
-    line-height: 1.4
-    margin-bottom: 0
-
-  .article-meta
-    color: $muted-color
-    font-size: $smallest-font-size
-    margin-bottom: $small-spacing
-
-    > *
-      display: inline-block
-      vertical-align: middle
-
-  .article-source-icon
-    +size(1.1em)
-    margin-left: 0.25em
-    vertical-align: -0.25em
-
-  .article-summary-body
+  p
     color: $text-color
-    font-size: $small-font-size
-    padding: 0 $base-spacing $base-spacing
+    margin-top: $smallest-spacing
 
-  .article-summary__image
-    background-blend-mode: multiply
-    background-color: $offwhite
-    background-position: center center
-    background-size: cover
-    padding-top: 10rem
+.article-meta
+  color: $muted-color
+  font-size: $small-font-size
 
-@media (min-width: $break-medium)
-  .article-summary
-    &__featured
-      display: flex
+.article-summary__featured
+  margin-bottom: $large-spacing
 
-      &__latest
-        align-content: stretch
-        display: flex
-        flex: 0 0 calc(75% - #{$small-spacing * 1/2})
-        margin-right: $small-spacing
+  h3
+    font-size: 2rem
 
-        > *
-          width: 100%
+  p
+    font-size: 1.25rem
+    font-weight: 200
 
-        .article-title
-          font-size: 2.5rem
+.article-summary__list
+  display: flex
+  flex-wrap: wrap
 
-        .article-summary-body
-          font-size: 1.1rem
-
-      &__other
-        align-content: stretch
-        display: flex
-        flex: 0 0 calc(25% - #{$small-spacing * 1/2})
-
-    &__list
-      display: flex
-      flex-wrap: wrap
-
-      > *
-        flex: 0 0 calc(25% - #{$small-spacing * 3/4})
-
-        &:not(:nth-child(4n))
-          margin-right: $small-spacing
+  .article
+    flex: 0 0 50%

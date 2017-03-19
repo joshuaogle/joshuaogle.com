@@ -161,13 +161,11 @@ class SharespostCaseStudy extends React.Component {
 }
 
 SharespostCaseStudy.defaultProps = {
-  title: "Investment App",
+  title: "Sharespost",
   date: "2016/08/01",
   shortName: "sharespost",
   role: "Design & Front-End Development",
-  preview: "/source/images/portfolio-sharespost-screen.png",
-  preview_type: "screen",
-  summary: "This secret app launches soon, but I wanted to go ahead and show it off. We helped one of the largest private securities firms make the process of buying and selling shares easy."
+  icon: "case-study-logo-sharespost.svg"
 }
 
 export default SharespostCaseStudy;

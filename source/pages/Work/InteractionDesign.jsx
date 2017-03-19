@@ -2,8 +2,8 @@ import React from 'react';
 import {Link} from 'react-router';
 
 import caseStudyProps from '../../data/case-studies';
-import InlineSVG from '../../components/InlineSVG';
 import CaseStudyItem from '../../components/CaseStudyItem';
+import Intro from '../../components/Intro';
 
 import './interactiondesign.sass';
 
@@ -41,20 +41,21 @@ class InteractionDesign extends React.Component {
 
   render() {
     return (
-      <section className="portfolio">
-        <div className="portfolio-intro">
-          <div className="section-title">User Experience & Interface Design</div>
-          <h2>Great experience design makes the user fall in love</h2>
+      <div>
+        <Intro>
+          <h1>Make them fall in love</h1>
           <p>
             It's not enough to make something pretty, and you can't just make it functional either.
             A great experience is making the user feel at home, showing them a better way to get things done.
             A great design isn't even about you.
             &nbsp;<mark>It's about them.</mark>
           </p>
-        </div>
+        </Intro>
 
-        {this.renderItems()}
-      </section>
+        <section className="case-study--list">
+          {this.renderItems()}
+        </section>
+      </div>
     );
   }
 }

@@ -117,10 +117,7 @@ SummitCaseStudy.defaultProps = {
   date: "2015/08/15",
   shortName: "summit",
   role: "Hybrid Mobile App Development",
-  preview: "/source/images/portfolio-summit-screen.png",
-  preview_type: "phone",
-  icon: "/source/images/case-studies/summit-icon.svg",
-  summary: "I worked together with other thoughtbot Denver designers to design and build a mobile app to help our friends get around town for our annual company summit. I was the sole developer, and using Ionic made it possible to build quickly and work on everyone's devices."
+  icon: "case-study-logo-thoughtbot.svg"
 }
 
 export default SummitCaseStudy;
