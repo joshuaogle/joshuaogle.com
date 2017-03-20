@@ -2,10 +2,10 @@
   body[data-current="case_study--#{$brand}"]
     main .intro
       background-color: $color
-      background-size: contain
 
     h2
-      color: $color
+      +brand-text($color)
+      display: inline-block
 
   .case-study-item.case-study-item--#{$brand}
     background-color: $color

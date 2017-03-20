@@ -64,7 +64,9 @@ body[data-current="home"]
 
       @each $brand, $color in $brand-colors
         &.home-work--#{$brand}
-          color: $color
+          h3
+            +brand-text($color)
+            display: inline-block
 
       h3
         +title-line()

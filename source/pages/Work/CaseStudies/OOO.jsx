@@ -145,6 +145,7 @@ OOOCaseStudy.defaultProps = {
   date: "2014/12/15",
   shortName: "ooo",
   role: "Design & Prototyping",
+  background: "case-study-bg-ooo.png",
   icon: "case-study-logo-ooo.svg"
 }
 

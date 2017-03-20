@@ -2,6 +2,7 @@ import React from 'react';
 
 import BodyClass from '../../../components/BodyClass';
 import Intro from '../../../components/Intro';
+import Footer from '../../../components/Footer';
 
 class CaseStudy extends React.Component {
   getYear() {
@@ -13,7 +14,7 @@ class CaseStudy extends React.Component {
     const introProps = this.props.introProps;
     return (
       <BodyClass className={`case_study--${introProps.shortName}`} hasIntro="true">
-        <Intro className="case-studies--intro">
+        <Intro className="case-studies--intro" styles={{backgroundImage: `url(/source/images/${introProps.background})`}}>
           <h1>
             {introProps.title}
           </h1>
@@ -24,6 +25,7 @@ class CaseStudy extends React.Component {
         <article className="content case-studies--content">
           {this.props.children}
         </article>
+        <Footer />
       </BodyClass>
     );
   }

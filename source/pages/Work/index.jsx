@@ -4,6 +4,7 @@ import BodyClass from '../../components/BodyClass';
 import InteractionDesign from './InteractionDesign';
 import Branding from './Branding';
 import Dribbble from './Dribbble';
+import Footer from '../../components/Footer';
 
 class Work extends React.Component {
   render() {
@@ -30,6 +31,7 @@ class Work extends React.Component {
 
           <Dribbble />
         </div>
+        <Footer />
       </BodyClass>
     );
   }

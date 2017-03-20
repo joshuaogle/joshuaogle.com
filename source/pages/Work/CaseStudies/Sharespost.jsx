@@ -165,6 +165,7 @@ SharespostCaseStudy.defaultProps = {
   date: "2016/08/01",
   shortName: "sharespost",
   role: "Design & Front-End Development",
+  background: "case-study-bg-sharespost.png",
   icon: "case-study-logo-sharespost.svg"
 }
 

@@ -16,6 +16,7 @@ SchoolkeepCaseStudy.defaultProps = {
   shortName: "schoolkeep",
   role: "Design & User Experience",
   url: "http://schoolkeep.com",
+  background: "case-study-bg-schoolkeep.png",
   icon: "case-study-logo-schoolkeep.svg"
 }
 

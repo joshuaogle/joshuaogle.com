@@ -16,6 +16,7 @@ EmberCaseStudy.defaultProps = {
   shortName: "ember",
   role: "Design & Front-end Development",
   url: "https://guides.emberjs.com/v2.7.0/",
+  background: "case-study-bg-ember.png",
   icon: "case-study-logo-ember.svg"
 }
 

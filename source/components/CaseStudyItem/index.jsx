@@ -24,7 +24,10 @@ class CaseStudyItem extends React.Component {
 
     return (
       <Link to={this.viewMorePath(props)} target={this.viewMoreTarget(props)}>
-        <article className={`animate case-study-item case-study-item--${props.shortName}`}>
+        <article
+          className={`animate case-study-item case-study-item--${props.shortName}`}
+          style={{backgroundImage: `url(/source/images/${props.background})`}}
+        >
           <InlineSVG className="case-study-item--icon" src={props.icon} />
           <h3>
             {props.title}

@@ -98,6 +98,7 @@ ArmadaCaseStudy.defaultProps = {
   date: "2015/01/01",
   shortName: "armada",
   role: "Branding, Product Design & Development",
+  background: "case-study-bg-armada.png",
   icon: "case-study-logo-armada.svg"
 }
 

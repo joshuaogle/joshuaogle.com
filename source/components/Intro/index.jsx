@@ -5,7 +5,7 @@ import './style.sass';
 class Intro extends React.Component {
   render() {
     return (
-      <div className={`intro ${this.props.className}`}>
+      <div className={`intro ${this.props.className}`} style={this.props.styles}>
         <div className="intro-content">
           {this.props.children}
         </div>
@@ -15,7 +15,8 @@ class Intro extends React.Component {
 }
 
 Intro.defaultProps = {
-  className: ""
+  className: "",
+  styles: {}
 }
 
 export default Intro;

@@ -5,6 +5,7 @@ import BodyClass from '../../components/BodyClass';
 import Intro from '../../components/Intro';
 import Clients from './Clients';
 import Teaching from './Teaching';
+import Footer from '../../components/Footer';
 
 class About extends React.Component {
   render() {
@@ -31,6 +32,7 @@ class About extends React.Component {
 
           <Teaching />
         </div>
+        <Footer />
       </BodyClass>
     );
   }
