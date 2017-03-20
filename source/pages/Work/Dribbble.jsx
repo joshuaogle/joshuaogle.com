@@ -41,7 +41,7 @@ class Dribbble extends React.Component {
     return (
       <section className="dribbble">
         <div className="section-title">On Dribbble</div>
-        <h2>A peak of some smaller designs</h2>
+        <h2>A peek at some smaller designs</h2>
 
         <ul className="dribbble-list" />
 
