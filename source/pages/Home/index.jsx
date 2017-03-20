@@ -48,12 +48,11 @@ class Home extends React.Component {
           </div>
           <h2>Selected Projects</h2>
           <p>
-            I’m a Product Designer & Developer. I help companies of all sizes
-            to bring their ideas to life and make their customers happy.&nbsp;
-            <Link to="/work">
-              More work
-            </Link>
+            I have a passion for visual communication, problem-solving, usability, and storytelling.
+            Designing with code and working side-by-side with developers helps to create a better product, and I like to encourage designers to get into code and vice versa.
+            You can see more of my work in interaction design and branding
           </p>
+          <Link to="/work" className="more">More work</Link>
 
           <div className="home-work--list">
             {this.renderCaseStudies()}
@@ -69,8 +68,8 @@ class Home extends React.Component {
             <p>
               I occassionally write about design basics and front-end tips for
               designers and developers. Done with these?&nbsp;
-              <Link to="/articles">There's lots more.</Link>
             </p>
+            <Link to="/articles" className="more">More articles</Link>
           </div>
           <div className="home-articles--list">
             {this.renderArticles()}

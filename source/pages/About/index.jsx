@@ -25,10 +25,6 @@ class About extends React.Component {
             <p>
               <a href="/files/joshuaogle-resume.pdf" target="_new">You can read more about my work history on my resume</a>
             </p>
-            <p>
-              I have a passion for visual communication, problem-solving, usability, and storytelling.
-              Designing with code and working side-by-side with developers helps to create a better product, and I like to encourage designers to get into code and vice versa.
-            </p>
           </section>
 
           <Clients />

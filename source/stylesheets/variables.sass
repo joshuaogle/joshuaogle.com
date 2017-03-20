@@ -3,7 +3,7 @@
 // Colors
 $black: #000
 $white: #fff
-$offwhite: #f2efed
+$offwhite: #f7f4f2
 $brown: #33312f
 $light-brown: #4E4B48
 $red: #f15729
@@ -20,7 +20,7 @@ $muted-color: mix($text-color, $background-color, 50%)
 $link-color: $blue
 $link-hover: shade($blue, 15%)
 $logo-color: $offwhite
-$highlight-color: rgba(mix($yellow, $red, 95%), 0.66)
+$highlight-color: rgba(mix($yellow, $red, 95%), 0.33)
 
 $base-shadow: 0 1.1rem 0.33rem -0.75rem rgba(#000, 0.3), 0 0.5rem 1rem rgba(#000, 0.1)
 $large-shadow: 0 1rem 1rem -0.5rem rgba(#000, 0.3), 0 1rem 3rem rgba(#000, 0.1)
@@ -83,8 +83,8 @@ $slow-timing: $base-timing * 2
   -webkit-background-clip: text
 
 @mixin highlight($color)
-  +linear-gradient(transparent 0%, transparent 83%, $color 83%, $color 95%, transparent 95%, $fallback: transparent)
-  color: mix($text-color, $highlight-color)
+  +linear-gradient(transparent 0%, transparent 85%, $color 85%, $color 100%, transparent 100%, $fallback: transparent)
+  color: mix($text-color, $highlight-color, 66%)
   padding: 0 0.25rem
 
 @mixin title-line($color: currentColor, $width: $small-spacing)

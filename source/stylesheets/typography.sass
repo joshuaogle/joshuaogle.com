@@ -114,3 +114,22 @@ figcaption
   font-size: small
   margin: $smallest-spacing auto $base-spacing
   text-align: center
+
+.more
+  @extend %small
+  color: $blue
+  display: block
+  margin-top: -$small-spacing
+
+  &::after
+    border: 0.37em solid transparent
+    border-left-color: currentColor
+    content: ""
+    display: inline-block
+    height: 0
+    margin-left: 0.5em
+    transition: transform $base-timing
+    width: 0
+
+  &:hover::after
+    transform: translateX(0.5em)
