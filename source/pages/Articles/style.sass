@@ -28,8 +28,9 @@
     font-weight: 200
 
 .article-summary__list
-  display: flex
-  flex-wrap: wrap
+  @media (min-width: $break-medium)
+    display: flex
+    flex-wrap: wrap
 
   .article
     flex: 0 0 50%

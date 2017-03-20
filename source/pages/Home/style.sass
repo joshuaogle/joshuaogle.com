@@ -10,7 +10,7 @@ body[data-current="home"]
       display: flex
       flex-direction: row
       justify-content: center
-      margin-bottom: -$base-spacing
+      margin-bottom: -$large-spacing
       margin-top: -$base-spacing
       padding-bottom: 0
 
@@ -52,16 +52,15 @@ body[data-current="home"]
     > a
       display: block
       flex: 0 0 48%
-      padding: 0 $small-spacing
+      margin-bottom: $base-spacing
+      padding: 0 $base-spacing
 
       &:nth-child(odd)
         margin-top: $base-spacing
 
         @media (min-width: $break-medium)
+          margin-bottom: 0
           margin-right: 2%
-
-      &:nth-child(even)
-        margin-bottom: $base-spacing
 
       @each $brand, $color in $brand-colors
         &.home-work--#{$brand}
@@ -75,6 +74,7 @@ body[data-current="home"]
       p
         color: $muted-color
         font-size: $small-font-size
+        margin: 0
 
 .home-articles
   @media (min-width: $break-medium)
