@@ -1,4 +1,6 @@
 const articles = [
+  require('./20170321-on-markup-and-layout.md'),
+  require('./20170314-whitespace.md'),
   require('./20170307-typography.md'),
   require('./20170228-abstraction-vs-skeuomorphism.md'),
   require('./20170221-balance.md'),
