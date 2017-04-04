@@ -3,7 +3,7 @@
 // Colors
 $black: #000
 $white: #fff
-$offwhite: #f7f4f2
+$offwhite: #f6f4f3
 $brown: #33312f
 $light-brown: #4E4B48
 $red: #f15729
@@ -64,18 +64,18 @@ $slow-timing: $base-timing * 2
   +clearfix
   margin: 0 auto
   max-width: $break-medium
-  padding: $base-spacing
+  padding: $large-spacing $base-spacing
 
   @media (min-width: $break-medium)
     padding-left: $large-spacing
     padding-right: $large-spacing
 
 @mixin brand-gradient($color)
-  $shifted-color: tint(desaturate($color, 10%), 20%)
+  $shifted-color: tint(desaturate($color, 10%), 25%)
   background: $color linear-gradient(135deg, $color 50%, $shifted-color)
 
 @mixin brand-text($color)
-  $shifted-color: tint(desaturate($color, 20%), 30%)
+  $shifted-color: tint(desaturate($color, 25%), 25%)
   color: $color
   -webkit-text-fill-color: transparent
   background: $color linear-gradient(90deg, $color 33%, $shifted-color)
@@ -91,12 +91,14 @@ $slow-timing: $base-timing * 2
   position: relative
 
   &::before
-    +position(absolute, 0.6em 100% null null)
+    +position(absolute, 50% 100% null null)
     background-color: $color
+    border-radius: 0.25rem 0
     content: ""
     display: block
-    height: 2px
+    height: 0.2rem
     margin-right: $small-spacing
+    transform: skewX(-20deg) translateY(-50%)
     width: $width
 
 @mixin angle
