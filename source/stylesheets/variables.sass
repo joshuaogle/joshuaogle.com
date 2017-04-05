@@ -70,15 +70,11 @@ $slow-timing: $base-timing * 2
     padding-left: $large-spacing
     padding-right: $large-spacing
 
-@mixin brand-gradient($color)
-  $shifted-color: tint(desaturate($color, 10%), 25%)
-  background: $color linear-gradient(135deg, $color 50%, $shifted-color)
-
 @mixin brand-text($color)
-  $shifted-color: tint(desaturate($color, 25%), 25%)
+  $shifted-color: tint(adjust-hue($color, 15%), 25%)
   color: $color
   -webkit-text-fill-color: transparent
-  background: $color linear-gradient(90deg, $color 33%, $shifted-color)
+  background: $color linear-gradient(90deg, $color 10%, $shifted-color)
   background: -o-linear-gradient(transparent, transparent)
   -webkit-background-clip: text
 
@@ -96,10 +92,10 @@ $slow-timing: $base-timing * 2
     border-radius: 0.25rem 0
     content: ""
     display: block
-    height: 0.2rem
+    height: 0.15em
     margin-right: $small-spacing
     transform: skewX(-20deg) translateY(-50%)
-    width: $width
+    width: $small-spacing
 
 @mixin angle
   position: relative

@@ -37,7 +37,7 @@
   li
     display: inline-block
     list-style: none
-    margin: 0 0 0 $small-spacing
+    margin: 0 0 0 $base-spacing
     padding: 0
 
   a
@@ -45,13 +45,39 @@
     display: block
     font-size: $small-font-size
     font-weight: 500
-    line-height: 3
+    line-height: 1.2
+    position: relative
+
+    &::after
+      +position(absolute, null null -0.33rem 50%)
+      background-color: $muted-color
+      border-radius: 0.25rem 0
+      height: 3px
+      content: ""
+      display: block
+      opacity: 0
+      transform: skewX(-20deg) translateX(-50%)
+      transition: bottom $base-timing, opacity $fast-timing, width $base-timing
+      width: 0
 
     body[data-intro="true"] &
       color: $white
 
+    body[data-current="about"] &[data-link-to="about"],
+    body[data-current="articles"] &[data-link-to="articles"],
+    body[data-current="work"] &[data-link-to="work"]
+      &::after
+        background-color: $red
+        opacity: 1
+        width: 90%
+
+
     &:hover
       color: $muted-color
+
+      &::after
+        opacity: 1
+        width: 90%
 
       body[data-intro="true"] &
         color: $white
