@@ -10,9 +10,22 @@ import Intro from '../../components/Intro';
 import ArticleSummary from '../Articles/Summary';
 
 class Home extends React.Component {
+  caseStudyPath(study) {
+    return study.url ? study.url : `/work/${study.shortName}`;
+  }
+
+  caseStudyTarget(study) {
+    return study.url ? "_new" : "";
+  }
+
   renderCaseStudies() {
     return featuredCaseStudies.map((study) =>
-      <Link to={`/work/${study.shortName}`} className={`home-work--${study.shortName}`}>
+      <Link
+        key={study.shortName}
+        to={this.caseStudyPath(study)}
+        target={this.caseStudyTarget(study)}
+        className={`home-work--${study.shortName}`}
+      >
         <h3>{study.title}</h3>
         <p>{study.role}</p>
       </Link>

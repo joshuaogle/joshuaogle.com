@@ -12,6 +12,7 @@ class CaseStudy extends React.Component {
 
   render() {
     const introProps = this.props.introProps;
+
     return (
       <BodyClass className={`case_study--${introProps.shortName}`} hasIntro="true">
         <Intro className="case-studies--intro" styles={{backgroundImage: `url(/source/images/${introProps.background})`}}>
