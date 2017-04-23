@@ -19,20 +19,20 @@ h3
   font-size: 1.33rem
 
 ul
-  list-style: outside square
-  margin: 0 0 $base-spacing $smallest-spacing
-  padding: 0 0 0 $small-spacing
+  list-style: none
+  margin: 0 0 $base-spacing 0
+  padding: 0
 
-  &.list-simple
-    list-style: none
-    padding: 0
+  li
+    padding-left: 0
 
-  &.list-inline
-    @extend .list-simple
-
-    li
+    &::before
+      color: $muted-color
+      content: "•"
       display: inline-block
-      margin: 0 $small-spacing
+      font-size: 1.5em
+      line-height: 0
+      margin-right: $smallest-spacing
 
 p
   margin: 0 0 $base-spacing

@@ -3,6 +3,7 @@ title: "Typography"
 date: "03/07/2017"
 tags: ["Design"]
 url: "https://robots.thoughtbot.com/typography"
+path: "typography"
 source: "thoughtbot"
 source_icon: "source-thoughtbot.svg"
 summary: "An overview of typography, from choosing the right typeface for your brand to combining fonts to make an impact."
@@ -53,7 +54,7 @@ There’s a lot of terminology to learn
 if you’re going to impress your designer friends,
 so let’s get down to it.
 
-### Parts of a Typeface
+## Parts of a Typeface
 
 ![](https://images.thoughtbot.com/cp-design-for-the-web/t74TMLcyS8SJjvQOnMMA_elements-typography-anatomy.png)
 
@@ -73,9 +74,9 @@ so let’s get down to it.
 *   *Tail*: The diagonal descending stroke of a **Q**, **K** and **R**, or on lowercase letters like **g** and **y**.
 *   *Terminal*: The end of a stroke that does not have a serif.
 
-### Types of Type
+## Types of Type
 
-#### Serifs
+### Serifs
 
 *Serif* typefaces have a very long history,
 starting in ancient Rome
@@ -121,7 +122,7 @@ So if you are designing
 for news articles, books or something dominated by lots of text,
 buck the trend and pick a nice serif.
 
-#### Sans-serifs
+### Sans-serifs
 
 *Sans-serif* types are a much more recent development
 relative to the long history of type.
@@ -160,7 +161,7 @@ and sans-serif typeface,
 don’t worry,
 we’ll cover [combining typefaces](#pairing-typefaces) in a bit.
 
-#### Display
+### Display
 
 *Display* typefaces are meant to grab attention.
 Some look like various forms of handwriting,
@@ -190,7 +191,7 @@ in a user interface elements or long-form articles.
 Sometimes you need the big guns,
 just be sure you use them responsibly.
 
-#### A quick note about other languages
+### A quick note about other languages
 
 Serif and sans-serif types appear in other writing systems too,
 not just the Latin alphabet,
@@ -211,7 +212,7 @@ the more obvious the influence becomes.
 
 ![Hangul, Kanji, Hindi, and Arabic - in traditional and modern typefaces](https://images.thoughtbot.com/cp-design-for-the-web/LX1PFfgT1ifMUXDuZ5FL_elements-typography-nonlatin.png)
 
-### Pairing Typefaces
+## Pairing Typefaces
 
 Now that we know the strengths and weaknesses
 of these kinds of typefaces,
@@ -277,7 +278,7 @@ it will be confusing.
 
 ![](https://images.thoughtbot.com/cp-design-for-the-web/4C02arz6SfmX8J16KjFW_elements-typography-pairs-3.png)
 
-### Symbol and Icon Fonts
+## Symbol and Icon Fonts
 
 There’s one more category of font
 that almost doesn’t count as a typeface,
@@ -334,7 +335,7 @@ for your particular project whether it’s worth it
 to use a font or something fancier
 like [inline SVG icons] instead.
 
-### Font Performance
+## Font Performance
 
 The ability to easily [use web fonts with CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face)
 has improved dramatically over the last few years,

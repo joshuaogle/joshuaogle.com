@@ -3,6 +3,7 @@ title: "Disciplines of Web Design"
 date: "01/31/2017"
 tags: ["Design"]
 url: "https://robots.thoughtbot.com/designing-for-the-web"
+path: "disciplines-of-web-design"
 source: "thoughtbot"
 source_icon: "source-thoughtbot.svg"
 summary: "A map through the confusing territory of modern web design, and a history of how we got here."
@@ -171,11 +172,8 @@ the physical and abstract,
 using established conventions
 while familiarizing the user
 with new design patterns.
-<h2 id="user-experience-design">
-  <a href="#user-experience-design">
-    User Experience Design
-  </a>
-</h2>
+
+## User Experience Design
 
 <em>User Experience design</em> (or <em>UX design</em>) is the sum
 of the other disciplines,

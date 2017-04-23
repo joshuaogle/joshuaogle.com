@@ -1,25 +1,31 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Router, Route, IndexRoute, browserHistory, Redirect } from 'react-router';
+import articles from './data/articles';
 import './stylesheets/application.sass';
 import './fonts/fonts.sass';
 
 import App from './App';
 import Home from './pages/Home';
 import About from './pages/About';
+import Process from './pages/Process';
 import Work from './pages/Work';
 import Articles from './pages/Articles';
+import Article from './pages/Articles/show';
 import ArmadaCaseStudy from './pages/Work/CaseStudies/Armada';
 import OOOCaseStudy from './pages/Work/CaseStudies/OOO';
 import SharespostCaseStudy from './pages/Work/CaseStudies/Sharespost';
 import SummitCaseStudy from './pages/Work/CaseStudies/Summit';
 import PageNotFound from './pages/PageNotFound';
 
+const articleRoutes = articles.map((article) => <Route key={article.title} path={`/articles/${article.path}`} component={Article} article={article} />);
+
 const routes = (
   <Route path="/" mapMenuTitle="Home" component={App}>
     <IndexRoute component={Home} />
 
     <Route path="/about" mapMenuTitle="About" component={About} />
+    <Route path="/process" mapMenuTitle="How I Work" component={Process} />
     <Route path="/articles" mapMenuTitle="Articles" component={Articles} />
 
     <Route path="/work" mapMenuTitle="Work" component={Work} />
@@ -32,6 +38,7 @@ const routes = (
     <Route path="/work/summit" mapMenuTitle="Summit" component={SummitCaseStudy} />
       <Redirect from="/Work/CaseStudies/summit" to="/work/summit" />
 
+    {articleRoutes}
     <Route path="*" mapMenuTitle="Page Not Found" component={PageNotFound} />
   </Route>
 );

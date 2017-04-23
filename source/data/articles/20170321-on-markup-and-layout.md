@@ -3,6 +3,7 @@ title: "On Markup and Layout"
 date: "03/14/2017"
 tags: ["Design"]
 url: "https://robots.thoughtbot.com/on-markup-and-layout"
+path: "on-markup-and-layout"
 source: "thoughtbot"
 source_icon: "source-thoughtbot.svg"
 summary: "Let’s talk a bit what makes designing for the web a unique challenge."

@@ -3,6 +3,7 @@ title: "Form and Space on the Web"
 date: "02/14/2017"
 tags: ["Design"]
 url: "https://robots.thoughtbot.com/form-and-space"
+path: "form-and-space"
 source: "thoughtbot"
 source_icon: "source-thoughtbot.svg"
 summary: "How to use space and depth to make your designs better. A journey into the scary (sounding) Gestalt theory."
@@ -95,7 +96,7 @@ to be related if:
 
 <img src="https://images.thoughtbot.com/cp-design-for-the-web/R9iZF6FtQbi0aAN0S7fU_elements-gestalt.png" alt="" title="Gestalt principles">
 
-### Proximity
+## Proximity
 
 Things that are alike
 should be grouped together.
@@ -144,7 +145,7 @@ should not appear on the page
 and should be moved
 to a page of its own.
 
-### Enclosure
+## Enclosure
 
 Enclosure can be used
 to reinforce proximity;
@@ -188,7 +189,7 @@ for your user if things get complex,
 so default to grouping with proximity
 and keep your enclosures subtle.
 
-### Similarity
+## Similarity
 
 If visual elements have the same style,
 we will also expect them
@@ -217,7 +218,7 @@ will cut down your design time
 and shorten the learning curve
 for your users.
 
-### Figure and ground
+## Figure and ground
 
 Another way to distinguish new content
 is to create the illusion

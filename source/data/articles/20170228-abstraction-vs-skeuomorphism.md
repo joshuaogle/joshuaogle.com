@@ -3,6 +3,7 @@ title: "Abstraction vs Skeuomorphism"
 date: "02/28/2017"
 tags: ["Design"]
 url: "https://robots.thoughtbot.com/abstraction-vs-skeuomorphism"
+path: "abstraction-vs-skeuomorphism"
 source: "thoughtbot"
 source_icon: "source-thoughtbot.svg"
 summary: "The ebb and flow of skeuomorphism and how to effectively use it in your design."
@@ -88,7 +89,7 @@ then it should take a very good reason not to use it.
 Some concepts are implicitly complicated
 and a visual clue can make them seem simpler.
 
-### Using Skeuomorphs
+## Using Skeuomorphs
 
 Let’s take a look at some ways
 to use skeuomorphs
@@ -151,7 +152,7 @@ where layout and complicated textures
 could copy the popular style of Print Design
 that many web designers had come from.
 
-### Skeuomorphism Is Dead
+## Skeuomorphism Is Dead
 
 Interfaces full of gradients, shadows, and glossy overlays
 distract from the actual content.
@@ -249,7 +250,7 @@ I called the move toward abstraction a “pendulum” earlier
 because what came next was a swing back
 in order to take from the best of both worlds.
 
-### Long Live Skeuomorphism)
+## Long Live Skeuomorphism)
 
 Many people describe flat design
 as being “clean and simple”

@@ -3,6 +3,7 @@ title: "Positioning Elements on the Web"
 date: "04/04/2017"
 tags: ["Design"]
 url: "https://robots.thoughtbot.com/positioning"
+path: "positioning"
 source: "thoughtbot"
 source_icon: "source-thoughtbot.svg"
 summary: "Choosing how to position an element in CSS is sometimes really a choice about what side effects are most acceptable."
@@ -30,7 +31,7 @@ that remain easy to change
 and flexible enough
 to handle multiple screen sizes.
 
-### Floats
+## Floats
 
 *Floats* are the most commonly used layout technique
 in CSS,
@@ -105,7 +106,7 @@ You may find that
 using `display: inline-block`
 is better for these situations.
 
-### Position CSS Property
+## Position CSS Property
 
 *Positioning* gives us
 a completely different layout method.
@@ -274,7 +275,7 @@ This can get pretty unmanageable
 and it is better to use positioning
 and z-indexes conservatively.
 
-### Flexbox
+## Flexbox
 
 A good way to handle elements
 of variable sizes is to use

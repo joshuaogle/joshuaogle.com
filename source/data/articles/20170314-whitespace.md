@@ -3,6 +3,7 @@ title: "Whitespace"
 date: "03/14/2017"
 tags: ["Design"]
 url: "https://robots.thoughtbot.com/whitespace"
+path: "whitespace"
 source: "thoughtbot"
 source_icon: "source-thoughtbot.svg"
 summary: "Whitespace is probably the most under-appreciated yet impactful part of a good design."
@@ -14,7 +15,7 @@ An app that doesn’t use it well feels cluttered and it is difficult to disting
 
 Whitespace happens on two different levels in a design, one at the layout level between large blocks of content, and at the much smaller level of text. While they work together to create a beautiful whole, these two different kinds of whitespace are managed very differently.
 
-### Creating focus with Macro-whitespace
+## Creating focus with Macro-whitespace
 
 _Macro-whitespace_, you might guess from the name, is the larger of the levels that I mentioned. It creates breathing room between large elements to create hierarchy on the page, and generally making the page feel approachable. This is essential when [grouping like objects](https://robots.thoughtbot.com/form-and-space) because part of making elements feel related is pushing the surrounding elements away. You’re managing the space between objects, but in a weird way you are also managing time (feels powerful, doesn’t it?). Adjusting the space between elements controls the pacing of the page, which affects the user’s attention and experience of your application. When you give your content ample room your pages do get longer, and product owners will often fight against that. However, the result is that your content is faster and easier for your user to process.
 
@@ -26,7 +27,7 @@ As you can see in the example above, Apple uses generous amounts of whitespace. 
 
 Whitespace also creates [balance](https://robots.thoughtbot.com/balance). After all, centering an element could be thought of as adding whitespace to the sides. Making two sections symmetrical is often about managing the whitespace around those sections. Being aware of whitespace when composing your design will make balancing elements easier, and you may also [discover ways to use the negative space](https://photographylife.com/negative-space-in-photography) to your advantage.
 
-### Improving readability with Micro-whitespace
+## Improving readability with Micro-whitespace
 
 The other end of the whitespace scale works very differently. On the small scale, you’re talking about the space between lines of text, or even between and within characters. As Mark Boulton describes it in [his excellent A List Apart article](http://alistapart.com/article/whitespace), this is “the itty-bitty stuff”. It’s the space between an icon and label, between an image and the surrounding text, and the space between paragraphs.
 

@@ -3,6 +3,7 @@ title: "Design Spiking"
 date: "11/04/2014"
 tags: ["Design", "Prototyping"]
 url: "https://robots.thoughtbot.com/design-spiking"
+path: "design-spiking"
 source: "thoughtbot"
 source_icon: "source-thoughtbot.svg"
 summary: "Let's take a look at some tricks from the Design Sprint toolkit to make sure our product is focusing the right things."
@@ -94,7 +95,7 @@ on how to get those ideas onto paper.
 
 <hr>
 
-### Mapping the Critical Path
+## Mapping the Critical Path
 
 Making a sketch of the critical path
 can help get a good picture
@@ -104,7 +105,7 @@ of the [job to be done](https://medium.com/the-job-to-be-done).
 
 <hr>
 
-### Divergent Sketching
+## Divergent Sketching
 
 - Keep things simple.
   Use a Sharpie or fat marker
@@ -135,7 +136,7 @@ of the [job to be done](https://medium.com/the-job-to-be-done).
 
 <hr>
 
-### Convergent Sketching
+## Convergent Sketching
 
 - Collect the rejected sketches
   for reference.

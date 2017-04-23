@@ -17,6 +17,18 @@
   color: $muted-color
   font-size: $small-font-size
 
+  svg
+    display: inline-block
+    margin: 0 0.05rem 0 0.15rem
+    max-width: 1rem
+    vertical-align: -0.35em
+
+  a
+    color: $muted-color
+
+    &:hover
+      color: $link-color
+
 .article-summary__featured
   margin-bottom: $large-spacing
 
@@ -34,3 +46,11 @@
 
   .article
     flex: 0 0 50%
+
+.article-content
+  h2:not(:first-child),
+  h3
+    margin-top: $large-spacing
+
+  img
+    margin: $large-spacing auto

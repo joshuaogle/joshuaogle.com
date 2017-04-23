@@ -12,7 +12,7 @@ class InlineSVG extends React.Component {
   render() {
     const className = this.props.className || "";
     return (
-      <div dangerouslySetInnerHTML={{__html: this.imagePath()}} className={className} />
+      <span dangerouslySetInnerHTML={{__html: this.imagePath()}} className={className} />
     );
   }
 }

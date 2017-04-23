@@ -2,6 +2,7 @@ import React from 'react';
 import './style.sass';
 
 import {Link} from 'react-router';
+import {prettyDate} from '../../utils';
 import articles from '../../data/articles';
 import BodyClass from '../../components/BodyClass';
 import Intro from '../../components/Intro';
@@ -23,13 +24,6 @@ class Articles extends React.Component {
     );
   }
 
-  prettyDate(articleDate) {
-    const date = new Date(articleDate);
-    const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-    const monthName = monthNames[date.getMonth()];
-    return `${monthName} ${date.getDate()}, ${date.getFullYear()}`;
-  }
-
   render() {
     const latestArticle = articles.slice(0, 1)[0];
     const olderArticles = articles.slice(1);
@@ -40,12 +34,12 @@ class Articles extends React.Component {
           <h1>Articles by Joshua Ogle</h1>
         </Intro>
         <section className="content">
-          <Link to={latestArticle.url} target="_new" className="article article-summary article-summary__featured">
+          <Link to={`/articles/$  {latestArticle.path}`} target="_new" className="article article-summary article-summary__featured">
             <article>
               <header>
                 <h3 className="article-title">{latestArticle.title}</h3>
                 <div className="article-meta">
-                  {this.prettyDate(latestArticle.date)}
+                  {prettyDate(latestArticle.date)}
                 </div>
                 <p>
                   {latestArticle.summary}
