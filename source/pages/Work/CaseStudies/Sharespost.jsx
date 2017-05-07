@@ -12,12 +12,18 @@ class SharespostCaseStudy extends React.Component {
             Background
           </div>
           <p>
-            This secret app launches soon, but I wanted to go ahead and show it off.
             At thoughtbot, we helped one of the largest private securities firms make the process of buying and selling shares easy.
             <mark>Their existing process was very manual, relying on brokers to do almost everything.</mark>
             To help them scale even bigger, they would need to find a way to automate as much of the process.
             This would free up the brokers to provide better service to even more users.
           </p>
+
+          <figure>
+            <img src="/source/images/case-studies/sharespost-chart.png" className="case-study-example" />
+            <figcaption>
+              The home page greets users with an up-to-date evaluation of their holdings.
+            </figcaption>
+          </figure>
         </section>
 
         <section>

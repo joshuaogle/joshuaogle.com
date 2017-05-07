@@ -8,19 +8,20 @@ import Intro from '../../components/Intro';
 import './interactiondesign.sass';
 
 class InteractionDesign extends React.Component {
+  isOnScreen(element) {
+    var elementPosition = element.getBoundingClientRect();
+    var elementTop = elementPosition.top;
+    var scrollTop = window.pageYOffset;
+    var screenHeight = document.documentElement.clientHeight;
+    var screenBottom = scrollTop + screenHeight;
+    var offset = element.offsetHeight / 2;
+
+    return screenBottom > (elementTop + offset);
+  }
+
   componentDidMount() {
     const animates = document.getElementsByClassName("animate");
-
-    function isOnScreen(element) {
-      var elementPosition = element.getBoundingClientRect();
-      var elementTop = elementPosition.top;
-      var scrollTop = window.pageYOffset;
-      var screenHeight = document.documentElement.clientHeight;
-      var screenBottom = scrollTop + screenHeight;
-      var offset = 150;
-
-      return screenBottom > (elementTop + offset);
-    }
+    const isOnScreen = this.isOnScreen;
 
     var markAnimated = function() {
       Array.from(animates).forEach(function(element, index, array) {

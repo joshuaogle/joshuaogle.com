@@ -21,9 +21,6 @@ class Header extends React.Component {
               <Link data-link-to="work" to="/work">Work</Link>
             </li>
             <li>
-              <Link data-link-to="process" to="/process">Process</Link>
-            </li>
-            <li>
               <Link data-link-to="articles" to="/articles">Articles</Link>
             </li>
           </ul>

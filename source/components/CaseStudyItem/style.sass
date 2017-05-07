@@ -4,12 +4,19 @@
   background-color: $muted-color
   background-position: center center
   background-size: cover
+  border-radius: $base-border-radius
   box-shadow: $base-shadow
   break-inside: avoid
   color: $white
   margin-bottom: $small-spacing
   padding: $base-spacing $small-spacing
   text-align: center
+  transform: translateY($base-spacing)
+  transition: transform $slow-timing
+  transition-delay: $base-timing
+
+  &.animated
+    transform: translateY(0)
 
   &--icon
     align-items: center
