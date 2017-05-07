@@ -34,7 +34,7 @@ class Articles extends React.Component {
           <h1>Articles by Joshua Ogle</h1>
         </Intro>
         <section className="content">
-          <Link to={`/articles/$  {latestArticle.path}`} target="_new" className="article article-summary article-summary__featured">
+          <Link to={`/articles/${latestArticle.path}`} target="_new" className="article article-summary article-summary__featured">
             <article>
               <header>
                 <h3 className="article-title">{latestArticle.title}</h3>
