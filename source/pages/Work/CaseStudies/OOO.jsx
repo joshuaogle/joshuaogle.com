@@ -22,7 +22,7 @@ class OOOCaseStudy extends React.Component {
             The Challenge
           </div>
           <h2>
-            If only we knew some developers
+            If only we knew some developers, right?
           </h2>
           <p>
             Being a consultant sometimes means you have to notify a lot of different people when something comes up.
@@ -130,6 +130,8 @@ class OOOCaseStudy extends React.Component {
             We were working on this project in our investment time on Fridays, so progress wasn't very fast.
             By the time we were ready to start diving into the back-end and wrangling APIs, a separate project for a unified scheduling system called Hub was beginning to take shape.
             The ideas from OOO were folded into Hub and improved the schedule view, which was much needed.
+          </p>
+          <p>
             Even though Hub is a much more useful and fully-featured application, I keep looking back at the much simpler philosophy of OOO and the helpfulness of our digital friend.
             If we can't use technology to solve our own problems, we can't very well use it to solve problems for others.
             <mark>Take some time to improve a process that annoys you</mark>, you might just get a new appreciation for what we do.

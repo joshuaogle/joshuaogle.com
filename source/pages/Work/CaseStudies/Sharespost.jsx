@@ -60,6 +60,14 @@ class SharespostCaseStudy extends React.Component {
             As with most projects at thoughtbot, we started with a week-long Product Design Sprint.
             Two developers were with the client in our San Francisco office, while another designer and I joined remotely using Google Hangouts.
           </p>
+
+          <figure>
+            <img src="/source/images/case-studies/sharespost-sprint.jpg" className="case-study-example" />
+            <figcaption>
+              So much paper, so many ideas. Design Sprints are my favorite way to start a project
+            </figcaption>
+          </figure>
+
           <p>
             I had done remote design sprints where I was the only one remote, which usually ends up a little awkward.
             With half the team being remote, we were diligent about uploading photos of sketches directly to the Trello board we had set up for the sprint via the Trello mobile app.

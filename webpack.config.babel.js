@@ -30,7 +30,13 @@ export default {
       },
       {
         test: /\.svg$/,
+        exclude: [/images\/background-svg/],
         loader: 'svg-inline-loader'
+      },
+      {
+        test: /\.svg$/,
+        include: [/images\/background-svg/],
+        loader: 'url-loader'
       },
       {
         test: /\.md$/,

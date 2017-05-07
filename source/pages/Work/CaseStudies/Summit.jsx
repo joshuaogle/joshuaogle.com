@@ -23,7 +23,14 @@ class SummitCaseStudy extends React.Component {
             I had an idea that we could use this framework to help speed up development and it meant we should be able to build it without the help from a back-end developer.
           </p>
           <p>
-            <img src="/source/images/case-studies/summit-map.png" className="case-study-example" />
+            <figure>
+              <div className="case-study-phone">
+                <img src="/source/images/case-studies/summit-map.png" />
+              </div>
+              <figcaption>
+                Easily see what is around you with helpful icons
+              </figcaption>
+            </figure>
           </p>
         </section>
 
@@ -76,7 +83,14 @@ class SummitCaseStudy extends React.Component {
             Ionic made this extremely simple, and this was the key reason that development was fairly trivial.
           </p>
           <p>
-            <img src="/source/images/case-studies/summit-categories.png" className="case-study-example" />
+            <figure>
+              <div className="case-study-phone">
+                <img src="/source/images/case-studies/summit-categories.png" />
+              </div>
+              <figcaption>
+                Looking for something specific? We've broken down our picks into categories
+              </figcaption>
+            </figure>
           </p>
           <p>
             The other pages are simple information, but we hoped they would make things run smoothly.
@@ -84,11 +98,18 @@ class SummitCaseStudy extends React.Component {
             It would have been nice to have notifications for events if we had had more time, but this was already more than the other summits had done.
             In the end, we only used about four days worth of time between both design and development.
           </p>
-          <div style={{textAlign: "center"}}>
-            <img src="/source/images/case-studies/summit-schedule.png" className="case-study-example" style={{"display": "inline-block"}} />
-            &nbsp;
-            <img src="/source/images/case-studies/summit-warnings.png" className="case-study-example" style={{"display": "inline-block"}} />
-          </div>
+          <figure style={{textAlign: "center"}}>
+            <div className="case-study-phone" style={{"display": "inline-block"}}>
+              <img src="/source/images/case-studies/summit-schedule.png" style={{"display": "inline-block"}} />
+            </div>
+            &nbsp;&nbsp;&nbsp;
+            <div className="case-study-phone" style={{"display": "inline-block"}}>
+              <img src="/source/images/case-studies/summit-warnings.png" style={{"display": "inline-block"}} />
+            </div>
+            <figcaption>
+              A handy schedule and helpful tips, right in your pocket
+            </figcaption>
+          </figure>
         </section>
 
         <section>

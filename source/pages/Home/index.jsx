@@ -50,7 +50,6 @@ class Home extends React.Component {
             <p>
               I’m a Product Designer & Developer. I help companies of all sizes
               to bring their ideas to life and make their customers happy.
-              Follow along on Dribbble and Twitter.
             </p>
           </div>
         </Intro>

@@ -7,6 +7,7 @@ $offwhite: #f6f4f3
 $brown: #33312f
 $light-brown: #4E4B48
 $red: #f15729
+$light-gray: #ddd
 $gray: #bbb
 $blue: #53B1E1
 $yellow: #f4da5c
@@ -16,7 +17,7 @@ $cyan: #66ddd2
 
 $background-color: $white
 $text-color: $brown
-$muted-color: mix($text-color, $background-color, 40%)
+$muted-color: mix($text-color, $background-color)
 $link-color: $blue
 $link-hover: shade($blue, 15%)
 $logo-color: $offwhite
@@ -97,6 +98,7 @@ $slow-timing: $base-timing * 2
 
 @mixin angle
   position: relative
+  z-index: 1
   &::after
     +position(absolute, null 0)
     background-color: $background-color
