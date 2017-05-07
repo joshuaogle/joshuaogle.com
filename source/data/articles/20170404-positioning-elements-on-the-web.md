@@ -80,23 +80,27 @@ just using CSS if possible.
 By using an `::after` pseudo-element,
 you can create a *[clearfix](http://cssmojo.com/latest_new_clearfix_so_far)*:
 
+<pre>
 <code>
-  <span class="nc">.container</span><span class="nd">::after</span> <span class="p">{</span>
+<span class="nc">.container</span><span class="nd">::after</span> <span class="p">{</span>
   <span class="nl">clear</span><span class="p">:</span> <span class="nb">both</span><span class="p">;</span>
   <span class="nl">content</span><span class="p">:</span> <span class="s1">""</span><span class="p">;</span>
   <span class="nl">display</span><span class="p">:</span> <span class="n">table</span><span class="p">;</span>
-  <span class="p">}</span>
+<span class="p">}</span>
 </code>
+</pre>
 
 Using a preprocessor like [Bourbon](http://bourbon.io)
 makes it easy to add this
 as a Sass mixin:
 
+<pre>
 <code>
-  <span class="nc">.container</span> <span class="p">{</span>
+<span class="nc">.container</span> <span class="p">{</span>
   <span class="err">@include</span> <span class="err">clearfix;</span>
-  <span class="p">}</span>
+<span class="p">}</span>
 </code>
+</pre>
 
 Floats work best for large containers,
 but may not work so well
@@ -117,6 +121,7 @@ Using `position: relative`
 lets you specify an offset with
 `top`, `bottom`, `left`, and `right`.
 
+<pre>
 <code>
 <span class="nc">.logo</span> <span class="p">{</span>
   <span class="nl">position</span><span class="p">:</span> <span class="nb">relative</span><span class="p">;</span>
@@ -124,6 +129,7 @@ lets you specify an offset with
   <span class="nl">top</span><span class="p">:</span> <span class="m">1em</span><span class="p">;</span>
 <span class="p">}</span>
 </code>
+</pre>
 
 This can be useful
 to do a simple offset
@@ -137,17 +143,19 @@ that has `position: relative` set.
 If it can’t find one,
 it will be relative to the document.
 
+<pre>
 <code>
-  <span class="nc">.hero</span> <span class="p">{</span>
+<span class="nc">.hero</span> <span class="p">{</span>
   <span class="nl">position</span><span class="p">:</span> <span class="nb">relative</span><span class="p">;</span>
-  <span class="p">}</span>
+<span class="p">}</span>
 
-  <span class="nc">.hero-icon</span> <span class="p">{</span>
+<span class="nc">.hero-icon</span> <span class="p">{</span>
   <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
   <span class="nl">left</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
   <span class="nl">top</span><span class="p">:</span> <span class="m">10%</span><span class="p">;</span>
-  <span class="p">}</span>
+<span class="p">}</span>
 </code>
+</pre>
 
 ![](https://images.thoughtbot.com/cp-design-for-the-web/zG7dmAAqSkK24vFr81Gg_layout-absolute.png)
 
@@ -210,12 +218,13 @@ right where we want it.
 The resulting CSS
 should look something like this:
 
+<pre>
 <code>
-  <span class="nc">.container</span> <span class="p">{</span>
+<span class="nc">.container</span> <span class="p">{</span>
   <span class="nl">position</span><span class="p">:</span> <span class="nb">relative</span><span class="p">;</span>
-  <span class="p">}</span>
+<span class="p">}</span>
 
-  <span class="nc">.centered-element</span> <span class="p">{</span>
+<span class="nc">.centered-element</span> <span class="p">{</span>
   <span class="nl">height</span><span class="p">:</span> <span class="m">100px</span><span class="p">;</span>
   <span class="nl">width</span><span class="p">:</span> <span class="m">100px</span><span class="p">;</span>
   <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
@@ -223,8 +232,9 @@ should look something like this:
   <span class="nl">margin-left</span><span class="p">:</span> <span class="m">-50px</span><span class="p">;</span>
   <span class="nl">top</span><span class="p">:</span> <span class="m">50%</span><span class="p">;</span>
   <span class="nl">margin-top</span><span class="p">:</span> <span class="m">-50px</span><span class="p">;</span>
-  <span class="p">}</span>
+<span class="p">}</span>
 </code>
+</pre>
 
 *Fixed positioning* works like `absolute`,
 but is always relative to the viewport
@@ -305,21 +315,25 @@ Let’s jump in.
 Here is how to set up
 an element to use flexbox.
 
+<pre>
 <code>
-  <span class="nt"><div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">></span>
-  <span class="nt"><div</span> <span class="na">class=</span><span class="s">"item"</span><span class="nt">></div></span>
-  <span class="nt"><div</span> <span class="na">class=</span><span class="s">"item"</span><span class="nt">></div></span>
-  <span class="nt"><div</span> <span class="na">class=</span><span class="s">"item"</span><span class="nt">></div></span>
-  <span class="nt"><div</span> <span class="na">class=</span><span class="s">"item"</span><span class="nt">></div></span>
-  <span class="nt"></div></span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
 </code>
+</pre>
 
+<pre>
 <code>
-  <span class="nc">.container</span> <span class="p">{</span>
+<span class="nc">.container</span> <span class="p">{</span>
   <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
   <span class="nl">flex-direction</span><span class="p">:</span> <span class="n">row</span><span class="p">;</span>
-  <span class="p">}</span>
+<span class="p">}</span>
 </code>
+</pre>
 
 Setting the container to `display: flex`
 simply lets the browser know
@@ -342,12 +356,14 @@ horizontally.
 You can also use `column`
 to switch to a vertical orientation.
 
+<pre>
 <code>
-  <span class="nc">.container</span> <span class="p">{</span>
+<span class="nc">.container</span> <span class="p">{</span>
   <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
   <span class="nl">flex-direction</span><span class="p">:</span> <span class="n">row</span><span class="p">;</span>
-  <span class="p">}</span>
+<span class="p">}</span>
 </code>
+</pre>
 
 ![](https://images.thoughtbot.com/cp-design-for-the-web/MwnTUG5TBaJHUM7hnMaw_layout-flex-direction.png)
 
@@ -377,12 +393,14 @@ will let you use flexbox’s
 other properties
 without affecting the widths.
 
+<pre>
 <code>
-  <span class="nc">.container</span> <span class="p">{</span>
+<span class="nc">.container</span> <span class="p">{</span>
   <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
   <span class="nl">flex-wrap</span><span class="p">:</span> <span class="n">wrap</span><span class="p">;</span>
-  <span class="p">}</span>
+<span class="p">}</span>
 </code>
+</pre>
 
 ![](https://images.thoughtbot.com/cp-design-for-the-web/Flonm9P5TgSzWVtiqFyR_layout-flex-wrap.png)
 
@@ -417,12 +435,14 @@ between items but not on the ends,
 while `space-around` gives equal
 spacing to the ends as well.
 
+<pre>
 <code>
-  <span class="nc">.container</span> <span class="p">{</span>
+<span class="nc">.container</span> <span class="p">{</span>
   <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
   <span class="nl">justify-content</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
-  <span class="p">}</span>
+<span class="p">}</span>
 </code>
+</pre>
 
 ![](https://images.thoughtbot.com/cp-design-for-the-web/rJPfdQBaR1toJmmH87ao_layout-justify-content.png)
 
@@ -456,12 +476,14 @@ to make each item
 span from one end of the axis
 to the other with `stretch`.
 
+<pre>
 <code>
-  <span class="nc">.container</span> <span class="p">{</span>
+<span class="nc">.container</span> <span class="p">{</span>
   <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
   <span class="nl">align-items</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
-  <span class="p">}</span>
+<span class="p">}</span>
 </code>
+</pre>
 
 ![](https://images.thoughtbot.com/cp-design-for-the-web/SOtxyVsFR5uFGQAps9wW_layout-align-content.png)
 
@@ -490,12 +512,14 @@ that the items in each line
 maintain their normal heights
 (unless you are using `stretch`).
 
+<pre>
 <code>
-  <span class="nc">.container</span> <span class="p">{</span>
+<span class="nc">.container</span> <span class="p">{</span>
   <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
   <span class="nl">align-content</span><span class="p">:</span> <span class="n">stretch</span><span class="p">;</span>
-  <span class="p">}</span>
+<span class="p">}</span>
 </code>
+</pre>
 
 ![](https://images.thoughtbot.com/cp-design-for-the-web/9IoOcGARiqjCjtCGARkw_layout-align-items.png)
 
@@ -569,23 +593,25 @@ You probably won’t be using all
 of these together,
 but such a monstrosity would look like this:
 
+<pre>
 <code>
-  <span class="nc">.container</span> <span class="p">{</span>
+<span class="nc">.container</span> <span class="p">{</span>
   <span class="nl">align-items</span><span class="p">:</span> <span class="n">flex-start</span><span class="p">;</span>
   <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
   <span class="nl">height</span><span class="p">:</span> <span class="m">40em</span><span class="p">;</span>
-  <span class="p">}</span>
+<span class="p">}</span>
 
-  <span class="nc">.item</span> <span class="p">{</span>
+<span class="nc">.item</span> <span class="p">{</span>
   <span class="nl">flex</span><span class="p">:</span> <span class="m">1</span> <span class="m">1</span> <span class="m">2em</span><span class="p">;</span>
-  <span class="p">}</span>
+<span class="p">}</span>
 
-  <span class="nc">.item</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">3</span><span class="o">)</span> <span class="p">{</span>
+<span class="nc">.item</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">3</span><span class="o">)</span> <span class="p">{</span>
   <span class="nl">align-self</span><span class="p">:</span> <span class="n">flex-end</span><span class="p">;</span>
   <span class="nl">flex</span><span class="p">:</span> <span class="m">2</span> <span class="m">10</span> <span class="m">5em</span><span class="p">;</span>
   <span class="nl">order</span><span class="p">:</span> <span class="m">-1</span><span class="p">;</span>
-  <span class="p">}</span>
+<span class="p">}</span>
 </code>
+</pre>
 
 * * *
 
