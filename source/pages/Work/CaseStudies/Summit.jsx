@@ -2,6 +2,7 @@ import React from 'react';
 import {Link} from 'react-router';
 
 import CaseStudy from './CaseStudy';
+import Phone from './Phone';
 
 class SummitCaseStudy extends React.Component {
   render() {
@@ -22,16 +23,11 @@ class SummitCaseStudy extends React.Component {
             Since we had both iPhone and Android users, I suggested we use <a href="http://ionic.io" target="_new">Ionic</a> so we could support them both.
             I had an idea that we could use this framework to help speed up development and it meant we should be able to build it without the help from a back-end developer.
           </p>
-          <p>
-            <figure>
-              <div className="case-study-phone">
-                <img src="/source/images/case-studies/summit-map.png" />
-              </div>
-              <figcaption>
-                Easily see what is around you with helpful icons
-              </figcaption>
-            </figure>
-          </p>
+
+          <Phone
+            image="summit-map.png"
+            caption="Easily see what is around you with helpful icons"
+          />
         </section>
 
         <section>
@@ -82,22 +78,19 @@ class SummitCaseStudy extends React.Component {
             These were stored in a JSON file, so we didn't even need a database and it could be passed directly into the Javascript for the maps and lists.
             Ionic made this extremely simple, and this was the key reason that development was fairly trivial.
           </p>
-          <p>
-            <figure>
-              <div className="case-study-phone">
-                <img src="/source/images/case-studies/summit-categories.png" />
-              </div>
-              <figcaption>
-                Looking for something specific? We've broken down our picks into categories
-              </figcaption>
-            </figure>
-          </p>
+
+          <Phone
+            image="summit-categories.png"
+            caption="Looking for something specific? We've broken down our picks into categories"
+          />
+
           <p>
             The other pages are simple information, but we hoped they would make things run smoothly.
             The schedule meant that everyone would have a list of activities in their pocket.
             It would have been nice to have notifications for events if we had had more time, but this was already more than the other summits had done.
             In the end, we only used about four days worth of time between both design and development.
           </p>
+
           <figure style={{textAlign: "center"}}>
             <div className="case-study-phone" style={{"display": "inline-block"}}>
               <img src="/source/images/case-studies/summit-schedule.png" style={{"display": "inline-block"}} />

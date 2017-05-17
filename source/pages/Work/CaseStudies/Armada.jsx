@@ -1,6 +1,7 @@
 import React from 'react';
 
 import CaseStudy from './CaseStudy';
+import Example from './Example';
 
 class ArmadaCaseStudy extends React.Component {
   render() {
@@ -14,9 +15,9 @@ class ArmadaCaseStudy extends React.Component {
             The largest companies in the space have strong connections to the trucking and transportation industries, but the opportunity was there to bring a modern startup approach and design focus to create something they would switch for.
           </p>
 
-          <p>
-            <img src="/source/images/case-studies/armada-home.png" className="case-study-example" alt="Armada home" />
-          </p>
+          <Example
+            image="armada-home.png"
+          />
         </section>
 
         <section>
@@ -40,7 +41,9 @@ class ArmadaCaseStudy extends React.Component {
             </div>
 
             <div className="split-secondary">
-              <img src="/source/images/case-studies/armada-device.png" alt="Armada device" />
+              <Example
+                image="armada-device.png"
+              />
             </div>
           </div>
         </section>
@@ -55,18 +58,18 @@ class ArmadaCaseStudy extends React.Component {
             Because we had a lot of experience working together, we were able to really quickly put together the structure of the app and describe the user experience.
             After that, we dove straight in and started building the core functionality while I worked on creating the views that we whiteboarded.
           </p>
-          <p>
-            <img src="/source/images/case-studies/armada-users.png" className="case-study-example" alt="Armada users" />
-          </p>
+          <Example
+            image="armada-users.png"
+          />
           <p>
             I think this process of iterative design is a powerful tool that not enough people get comfortable with.
             A "waterfall" approach (one that starts with wireframes and then high-fidelity mockups before code even begins) ignores the fluid nature of the web and discourages experimentation.
             Around this time, the device prototypes were ready and we were able to start testing them on our own cars.
             Seeing the data and maps populate in real-time was <mark>magical</mark>, and not something you get to experience on every project.
           </p>
-          <p>
-            <img src="/source/images/case-studies/armada-user.png" className="case-study-example" alt="Armada user" />
-          </p>
+          <Example
+            image="armada-user.png"
+          />
           <p>
             Now that we had all of this data streaming in, we got to work on how to surface the most important parts to the users.
             We started by allowing supervisors to opt-in to text or email notifications about bad behavior as it happened, so they can make sure their drivers were being safe.
@@ -75,9 +78,9 @@ class ArmadaCaseStudy extends React.Component {
             You can scrub through a timeline of activity, with the start and stop location for each trip laid out on the map.
             All of this together made for a unique experience that was miles ahead of the competition.
           </p>
-          <p>
-            <img src="/source/images/case-studies/armada-trips.png" className="case-study-example" alt="Armada trips" />
-          </p>
+          <Example
+            image="armada-trips.png"
+          />
         </section>
         <section>
           <div className="section-title">In Summary</div>

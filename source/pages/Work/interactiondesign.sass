@@ -4,13 +4,14 @@
   padding-top: 0
 
   @media (min-width: $break-medium)
-    columns: 2
-    column-gap: $small-spacing
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-gap: 0 $small-spacing
+    margin-bottom: $large-spacing
 
   > a
     display: block
-    margin-bottom: $small-spacing
 
-    &:first-child
+    &:nth-child(even)
       @media (min-width: $break-medium)
-        margin-top: $large-spacing * 2
+        transform: translateY($large-spacing * 2)

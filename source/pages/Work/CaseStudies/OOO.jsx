@@ -1,6 +1,7 @@
 import React from 'react';
 
 import CaseStudy from './CaseStudy';
+import Example from './Example';
 
 class OOOCaseStudy extends React.Component {
   render() {
@@ -35,12 +36,10 @@ class OOOCaseStudy extends React.Component {
             <mark>We wanted to answer the question &ldquo;Where is everyone?&rdquo;</mark>.
           </p>
 
-          <figure>
-            <img src="/source/images/case-studies/ooo-concept.png" className="case-study-example" />
-            <figcaption>
-              Design exploration and a fun color palette. Office icons by Kyle Fiedler.
-            </figcaption>
-          </figure>
+          <Example
+            image="ooo-concept.png"
+            caption="Design exploration and a fun color palette. Office icons by Kyle Fiedler."
+          />
         </section>
 
         <section>
@@ -76,13 +75,10 @@ class OOOCaseStudy extends React.Component {
             <mark>We put a lot of thought into how a user might ask these sorts of questions</mark> and made sure that was reflected in the interface.
           </p>
 
-
-          <figure>
-            <img src="/source/images/case-studies/ooo-monthly.png" className="case-study-example" />
-            <figcaption>
-              Monthly calendar view with office picker
-            </figcaption>
-          </figure>
+          <Example
+            image="ooo-monthly.png"
+            caption="Monthly calendar view with office picker"
+          />
 
           <p>
             We discovered that there were really two different ways that someone looks for information on a calendar.
@@ -92,13 +88,10 @@ class OOOCaseStudy extends React.Component {
             Since we aren't combining people in the same Other Office status bars, we can be more helpful and display the specific office they would be in.
           </p>
 
-
-          <figure>
-            <img src="/source/images/case-studies/ooo-weekly.png" className="case-study-example" />
-            <figcaption>
-              A simpler weekly view to keep track of your team
-            </figcaption>
-          </figure>
+          <Example
+            image="ooo-weekly.png"
+            caption="A simpler weekly view to keep track of your team"
+          />
 
           <div className="split-layout">
             <div className="split-primary">

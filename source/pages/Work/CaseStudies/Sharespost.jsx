@@ -2,6 +2,7 @@ import React from 'react';
 import {Link} from 'react-router';
 
 import CaseStudy from './CaseStudy';
+import Example from './Example';
 
 class SharespostCaseStudy extends React.Component {
   render() {
@@ -18,12 +19,10 @@ class SharespostCaseStudy extends React.Component {
             This would free up the brokers to provide better service to even more users.
           </p>
 
-          <figure>
-            <img src="/source/images/case-studies/sharespost-chart.png" className="case-study-example" />
-            <figcaption>
-              The home page greets users with an up-to-date evaluation of their holdings.
-            </figcaption>
-          </figure>
+          <Example
+            image="sharespost-chart.png"
+            caption="The home page greets users with an up-to-date evaluation of their holdings."
+          />
         </section>
 
         <section>
@@ -40,12 +39,10 @@ class SharespostCaseStudy extends React.Component {
             it's easy to get a price for a company on the stock exchange, <mark>private companies require a lot more expertise</mark> to estimate the value with authority.
           </p>
 
-          <figure>
-            <img src="/source/images/case-studies/sharespost-wires.png" className="case-study-example" />
-            <figcaption>
-              One of the earliest "wireflows" from our Product Design Sprint. More detail was added as we got closer to development.
-            </figcaption>
-          </figure>
+          <Example
+            image="sharespost-wires.png"
+            caption="One of the earliest 'wireflows' from our Product Design Sprint. More detail was added as we got closer to development."
+          />
 
           <p>
             This company is the largest marketplace of private securities, and to maintain that position they approached thoughtbot to build a new platform.
@@ -69,12 +66,10 @@ class SharespostCaseStudy extends React.Component {
             Two developers were with the client in our San Francisco office, while another designer and I joined remotely using Google Hangouts.
           </p>
 
-          <figure>
-            <img src="/source/images/case-studies/sharespost-sprint.jpg" className="case-study-example" />
-            <figcaption>
-              So much paper, so many ideas. Design Sprints are my favorite way to start a project
-            </figcaption>
-          </figure>
+          <Example
+            image="sharespost-sprint.jpg"
+            caption="So much paper, so many ideas. Design Sprints are my favorite way to start a project"
+          />
 
           <p>
             I had done remote design sprints where I was the only one remote, which usually ends up a little awkward.
@@ -84,24 +79,20 @@ class SharespostCaseStudy extends React.Component {
             Having two designers on the same end also meant that we were able to quickly toss around ideas and soon all of the whiteboard walls were covered in sketches and flows.
           </p>
 
-          <figure>
-            <img src="/source/images/case-studies/sharespost-invision.png" className="case-study-example" />
-            <figcaption>
-              InVision is perfect for user testing at any stage of production
-            </figcaption>
-          </figure>
+          <Example
+            image="sharespost-invision.png"
+            caption="InVision is perfect for user testing at any stage of production"
+          />
 
           <p>
             We usually like to start designing in the browser as soon as possible, but since the developers had some very complicated back-end code to figure out we spent time polishing the wireframes into high-fidelity mockups.
             These mockups were refined in <a href="http://invisionapp.com" target="_new">InVision</a> so we could give the client a realistic look at how the views were connected.
           </p>
 
-          <figure>
-            <img src="/source/images/case-studies/sharespost-home.png" className="case-study-example" />
-            <figcaption>
-              The home page greets users with an up-to-date evaluation of their holdings.
-            </figcaption>
-          </figure>
+          <Example
+            image="sharespost-home.png"
+            caption="The home page greets users with an up-to-date evaluation of their holdings."
+          />
 
           <p>
             Here's a look at one of those mockups.
@@ -120,12 +111,10 @@ class SharespostCaseStudy extends React.Component {
             </div>
 
             <div className="split-secondary">
-              <figure>
-                <img src="/source/images/case-studies/sharespost-card.png" className="case-study-example" />
-                <figcaption>
-                  An early Opportunity Card wireframe
-                </figcaption>
-              </figure>
+              <Example
+                image="sharespost-card.png"
+                caption="An early Opportunity Card wireframe"
+              />
             </div>
           </div>
 
@@ -137,12 +126,10 @@ class SharespostCaseStudy extends React.Component {
             With a set of feature flags and a flexible layout system, we iteratively released the new system to VIP members for testing.
           </p>
 
-          <figure>
-            <img src="/source/images/case-studies/sharespost-waterfall.png" className="case-study-example" />
-            <figcaption>
-              The &ldquo;waterfall chart&rdquo; was the most technically difficult, but also the most informative.
-            </figcaption>
-          </figure>
+          <Example
+            image="sharespost-waterfall.png"
+            caption="The &ldquo;waterfall chart&rdquo; was the most technically difficult, but also the most informative."
+          />
 
           <p>
             The piece that took the longest was the waterfall chart.
@@ -153,12 +140,10 @@ class SharespostCaseStudy extends React.Component {
             The back-end that provides the data for this piece is extremely complicated, and frankly I'm glad I wasn't the one working on it.
           </p>
 
-          <figure>
-            <img src="/source/images/case-studies/sharespost-admin.png" className="case-study-example" />
-            <figcaption>
-              The admin system that gives the brokers access to all of the data
-            </figcaption>
-          </figure>
+          <Example
+            image="sharespost-admin.png"
+            caption="The admin system that gives the brokers access to all of the data."
+          />
 
           <p>
             With all of this data, the brokers and admins needed a system to help them manage it all.

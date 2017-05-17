@@ -12,11 +12,11 @@ class Footer extends React.Component {
           </div>
 
           <h2>
-            Let's work together
+            Maybe you should get in touch
           </h2>
 
           <p>
-            For work inquiries, email me at <a href="mailto:joshua@joshuaogle.com" className="link-email">joshua@joshuaogle.com</a>
+            Say hi at <a href="mailto:joshua@joshuaogle.com" className="link-email">joshua@joshuaogle.com</a>
           </p>
 
           <p>

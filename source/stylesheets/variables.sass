@@ -21,10 +21,10 @@ $muted-color: mix($text-color, $background-color)
 $link-color: $blue
 $link-hover: shade($blue, 15%)
 $logo-color: $offwhite
-$highlight-color: rgba(mix($yellow, $red, 95%), 0.33)
+$highlight-color: rgba(mix($yellow, $red, 95%), 0.25)
 
-$base-shadow: 0 1.1rem 0.33rem -0.75rem rgba(#000, 0.3), 0 0.5rem 1rem rgba(#000, 0.1)
-$large-shadow: 0 1rem 1rem -0.5rem rgba(#000, 0.3), 0 1rem 3rem rgba(#000, 0.1)
+$base-shadow: 0 1.1rem 0.33rem -0.75rem rgba(#000, 0.25), 0 0.5rem 1rem rgba(#000, 0.1)
+$large-shadow: 0 1rem 1rem -0.5rem rgba(#000, 0.25), 0 1rem 3rem rgba(#000, 0.1)
 $small-shadow: 0 0.5rem 0.33rem -0.33rem rgba($black, 0.1), 0 0.25rem 1rem rgba($black, 0.1)
 $smallest-shadow: 0 0.25rem 0.25rem -0.25rem rgba($black, 0.33), 0 0.1rem 0.25rem rgba($black, 0.1)
 
@@ -52,7 +52,7 @@ $z-base: 1
 $z-header: 5
 
 // Brand Colors
-$brand-colors: (armada: #1b6c94, summit: #B93A32, ember: #e46651, schoolkeep: #23bd84, carma: #555756, ooo: #41434e, sharespost: #332D8D)
+$brand-colors: (armada: #1b6c94, summit: #B93A32, ember: #dd6a58, schoolkeep: #23bd84, carma: #555756, ooo: #41434e, sharespost: #332D8D, kitmath: #F76707)
 
 // Animations
 $base-timing: 250ms
@@ -70,7 +70,7 @@ $slow-timing: $base-timing * 2
     padding-right: $large-spacing
 
 @mixin brand-text($color)
-  $shifted-color: tint(adjust-hue($color, 15%), 25%)
+  $shifted-color: tint(adjust-hue($color, 15%), 15%)
   color: $color
   -webkit-text-fill-color: transparent
   background: $color linear-gradient(90deg, $color 10%, $shifted-color)
@@ -78,8 +78,8 @@ $slow-timing: $base-timing * 2
   -webkit-background-clip: text
 
 @mixin highlight($color)
-  +linear-gradient(transparent 0%, transparent 85%, $color 85%, $color 100%, transparent 100%, $fallback: transparent)
-  color: mix($text-color, $highlight-color, 66%)
+  +linear-gradient(transparent 0%, transparent 60%, $color 60%, $color 100%, transparent 100%, $fallback: transparent)
+  color: mix($text-color, $highlight-color, 80%)
   padding: 0 0.25rem
 
 @mixin title-line($color: currentColor, $width: $small-spacing)
