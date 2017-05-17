@@ -24,6 +24,7 @@ class Clients extends React.Component {
           <InlineSVG src="client-amex.svg" />
           <InlineSVG src="client-dollarshaveclub.svg" />
           <InlineSVG src="client-att.svg" />
+          <InlineSVG src="client-sharespost.svg" />
         </div>
       </section>
     );
