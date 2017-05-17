@@ -58,6 +58,8 @@ class KitMathCaseStudy extends React.Component {
             They're old friends. They get excited about their lives and what they discovered.
             They see themselves in these heroes, and scary things seem doable.
             So if we can introduce those heroes that way from the beginning we might just keep things from seeming scary in the first place.
+            We want to introduce kids to these heroes as aspirational figures, with a little biography and what they contributed.
+            It's also very important to us to recognize the diversity behind these fields so every child can find someone they identify with.
           </p>
 
           <Example
