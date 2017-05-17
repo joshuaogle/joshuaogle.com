@@ -39,6 +39,14 @@ class SharespostCaseStudy extends React.Component {
             Private securities are shares of stock in a company that isn't publically traded, so while
             it's easy to get a price for a company on the stock exchange, <mark>private companies require a lot more expertise</mark> to estimate the value with authority.
           </p>
+
+          <figure>
+            <img src="/source/images/case-studies/sharespost-wires.png" className="case-study-example" />
+            <figcaption>
+              One of the earliest "wireflows" from our Product Design Sprint. More detail was added as we got closer to development.
+            </figcaption>
+          </figure>
+
           <p>
             This company is the largest marketplace of private securities, and to maintain that position they approached thoughtbot to build a new platform.
             The new app <mark>would blend the best parts</mark> of the close relationships that their users have with their brokers, while also providing up-to-date information on companies and opportunities that might be interested them.
@@ -75,6 +83,14 @@ class SharespostCaseStudy extends React.Component {
             You never know when that one idea from a random sketch might come in handy later.
             Having two designers on the same end also meant that we were able to quickly toss around ideas and soon all of the whiteboard walls were covered in sketches and flows.
           </p>
+
+          <figure>
+            <img src="/source/images/case-studies/sharespost-invision.png" className="case-study-example" />
+            <figcaption>
+              InVision is perfect for user testing at any stage of production
+            </figcaption>
+          </figure>
+
           <p>
             We usually like to start designing in the browser as soon as possible, but since the developers had some very complicated back-end code to figure out we spent time polishing the wireframes into high-fidelity mockups.
             These mockups were refined in <a href="http://invisionapp.com" target="_new">InVision</a> so we could give the client a realistic look at how the views were connected.
