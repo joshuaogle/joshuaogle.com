@@ -106,6 +106,15 @@ class KitMathCaseStudy extends React.Component {
             caption="The basic structure of the app captured early in the Design Sprint"
           />
 
+          <p>
+            We're still heavy into the development of this app, but I wanted to go ahead and show off what we've done so far.
+            I'll update this case study as we get closer to launch.
+            I'm especially proud of the screens below, showing the Collections card stacks and the individual problem screen.
+            We wanted to make sure it's easy to dive right in and start practicing, while also giving you little things to look at along the way.
+            Our mascot Kit will appear on these screens as well, serving as your buddy on your learning adventure.
+            The "heroes" will show up at the beginning of a new collection, providing encouragement and letting you learn a little about those that came before you.
+          </p>
+
           <figure style={{textAlign: "center"}}>
             <div className="case-study-phone" style={{"display": "inline-block"}}>
               <img src="/source/images/case-studies/kitmath-index.png" style={{"display": "inline-block"}} />
@@ -118,6 +127,11 @@ class KitMathCaseStudy extends React.Component {
               A simple interface for problems, with scenery to keep things fun
             </figcaption>
           </figure>
+
+          <p>
+            This has been a great project to show off my illustration talents while learning a lot about animation and character design.
+            The reactions so far have been very reassuring and I can't wait to see it released.
+          </p>
         </section>
 
         <section>
