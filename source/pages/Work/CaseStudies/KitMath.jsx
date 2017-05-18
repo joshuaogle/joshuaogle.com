@@ -13,12 +13,17 @@ class KitMathCaseStudy extends React.Component {
           <div className="section-title">
             Background
           </div>
+
           <p>
             I've been making products for years, but rarely get to work on something that truly makes the world a better place.
-            That's why I was really excited to work on a mobile app with Husk,
-            who are on a mission to use their powers for good and make apps that make a difference.
+            That's why I was really excited to work on a mobile app with people who are on a mission to use their powers for good and make apps that make a difference.
             And they're starting with making education fun.
           </p>
+
+          <Example
+            image="kitmath-congrats.svg"
+            caption="Albert Einstein stops by to give some encouragement"
+          />
         </section>
 
         <section>
@@ -40,6 +45,13 @@ class KitMathCaseStudy extends React.Component {
             I especially loved Mister Wizard and Captain Planet, Cosmos and EPCOT.
             I like educatonal entertainment that doesn't talk down to kids, but instead empowers them.
             We have big problems here on Earth, but I believe we can solve them by setting up future generations for success.
+          </p>
+
+          <figure>
+            <img src="/source/images/case-studies/kitmath-northstar.svg" />
+          </figure>
+
+          <p>
             <mark>A project always goes better when you've got a "North Star" to center your conversation around</mark>, and that is ours.
           </p>
         </section>
@@ -89,6 +101,11 @@ class KitMathCaseStudy extends React.Component {
             It will helpfully bring up the items you need the most help with, while occasionally slipping in ones that you already mastered to make sure it stays that way.
           </p>
 
+          <Example
+            image="kitmath-wires.png"
+            caption="The basic structure of the app captured early in the Design Sprint"
+          />
+
           <figure style={{textAlign: "center"}}>
             <div className="case-study-phone" style={{"display": "inline-block"}}>
               <img src="/source/images/case-studies/kitmath-index.png" style={{"display": "inline-block"}} />
@@ -98,7 +115,7 @@ class KitMathCaseStudy extends React.Component {
               <img src="/source/images/case-studies/kitmath-problem.png" style={{"display": "inline-block"}} />
             </div>
             <figcaption>
-              A simple interface for problems, with scenery missing for now
+              A simple interface for problems, with scenery to keep things fun
             </figcaption>
           </figure>
         </section>
