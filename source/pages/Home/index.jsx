@@ -48,7 +48,8 @@ class Home extends React.Component {
           <div className="home-intro--copy">
             <h1>Joshua Ogle</h1>
             <p>
-              I’m a Product Designer at <a href="http://citrusbyte.com" target="_new">Citrusbyte</a>, previously at <a href="http://thoughtbot.com" target="_new">thoughtbot</a>.
+              I’m a freelance Senior Product Designer in Denver.
+              Previously at <a href="http://citrusbyte.com" target="_new">Citrusbyte</a> and <a href="http://thoughtbot.com" target="_new">thoughtbot</a>.
               I help companies of all sizes bring their ideas to life and make their customers happy.
             </p>
           </div>
@@ -78,7 +79,7 @@ class Home extends React.Component {
             </div>
             <h2>Some light reading</h2>
             <p>
-              I occassionally write about design basics and front-end tips for
+              I occasionally write about design basics and front-end tips for
               designers and developers. Done with these?&nbsp;
             </p>
             <Link to="/articles" className="more">More articles</Link>
