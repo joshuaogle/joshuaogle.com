@@ -120,12 +120,11 @@ class OOOCaseStudy extends React.Component {
             Take the time to solve your own problems
           </h2>
           <p>
-            We were working on this project in our investment time on Fridays, so progress wasn't very fast.
-            By the time we were ready to start diving into the back-end and wrangling APIs, a separate project for a unified scheduling system called Hub was beginning to take shape.
-            The ideas from OOO were folded into Hub and improved the schedule view, which was much needed.
+            We worked on this project in our "investment time" on Fridays.
+            The ideas from OOO enabled us to make the process of registering time off much easier while still customizing our own processes.
           </p>
           <p>
-            Even though Hub is a much more useful and fully-featured application, I keep looking back at the much simpler philosophy of OOO and the helpfulness of our digital friend.
+            I keep looking back at the much simpler philosophy of OOO and the helpfulness of our digital friend.
             If we can't use technology to solve our own problems, we can't very well use it to solve problems for others.
             <mark>Take some time to improve a process that annoys you</mark>, you might just get a new appreciation for what we do.
           </p>
