@@ -1,10 +1,12 @@
 import React from 'react';
 import './style.sass';
+import './timeline.sass';
 
 import BodyClass from '../../components/BodyClass';
 import Intro from '../../components/Intro';
 import Clients from './Clients';
 import Teaching from './Teaching';
+import Timeline from './Timeline';
 import Footer from '../../components/Footer';
 
 class About extends React.Component {
@@ -26,6 +28,8 @@ class About extends React.Component {
               <a href="/files/joshuaogle-resume.pdf" target="_new">You can read more about my work history on my resume</a>
             </p>
           </section>
+
+          <Timeline />
 
           <Clients />
 

@@ -7,8 +7,8 @@ import OOOCaseStudy from '../pages/Work/CaseStudies/OOO';
 import SchoolkeepCaseStudy from '../pages/Work/CaseStudies/Schoolkeep';
 
 const caseStudyProps = [
-  KitMathCaseStudy.defaultProps,
   SharespostCaseStudy.defaultProps,
+  KitMathCaseStudy.defaultProps,
   SummitCaseStudy.defaultProps,
   ArmadaCaseStudy.defaultProps,
   OOOCaseStudy.defaultProps,
