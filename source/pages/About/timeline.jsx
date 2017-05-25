@@ -54,7 +54,8 @@ class Timeline extends React.Component {
                 Co-Founder & Creative Director, 2010-2014
               </div>
               <p className="timeline-summary">
-                I was co-founder and Creative Director, leading design and front-end development for a team of seven.
+                I helped build the company and led design and front-end development for a team of seven.
+                We focused on Ruby on Rails, Javascript and hybrid mobile apps, refining best practices from companies like thoughtbot into our own.
                 Consulting came easy after working mostly customer service jobs through college, and I think consulting gives invaluable skills for any designer or developer.
                 We were one of the leading development shops in the region and I'm really proud of the company and team we built.
               </p>

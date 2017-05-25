@@ -3,6 +3,7 @@
 
 $timeline-line-width: 4px
 $timeline-line-color: $light-gray
+$timeline-breakpoint: $break-small
 
 .timeline-section
   +angle-top
@@ -16,10 +17,8 @@ $timeline-line-color: $light-gray
 
   li
     font-size: $small-font-size
-    padding: $small-spacing $base-spacing $base-spacing 0
+    padding: $small-spacing 0 $large-spacing $base-spacing
     position: relative
-    text-align: right
-    width: 50%
 
     &::before
       background-color: $timeline-line-color
@@ -27,6 +26,7 @@ $timeline-line-color: $light-gray
       bottom: 0
       content: ""
       height: $timeline-line-width
+      left: -$timeline-line-width / 2
       margin: 0
       position: absolute
       right: -$timeline-line-width / 2
@@ -38,26 +38,31 @@ $timeline-line-color: $light-gray
       bottom: 0
       content: ""
       margin: 0
+      left: 0
       position: absolute
-      right: 0
       top: 0
-      transform: translateX(50%)
+      transform: translateX(-50%)
       width: $timeline-line-width
 
-    &:nth-child(odd)
+    @media (min-width: $timeline-breakpoint)
       left: 50%
-      padding-left: $base-spacing
-      padding-right: 0
-      text-align: left
+      padding-bottom: $base-spacing
+      width: 50%
 
-      &::before
-        left: -$timeline-line-width / 2
-        right: auto
-
-      &::after
+      &:nth-child(even)
         left: 0
-        right: auto
-        transform: translateX(-50%)
+        padding-left: 0
+        padding-right: $base-spacing
+        text-align: right
+
+        &::before
+          left: auto
+          right: 0
+
+        &::after
+          left: auto
+          right: 0
+          transform: translateX(50%)
 
     p
       margin-bottom: $small-spacing
@@ -76,9 +81,10 @@ $timeline-line-color: $light-gray
     max-width: 2rem
     vertical-align: -0.25rem
 
-    .timeline li:nth-child(odd) &
-      margin-left: 0
-      margin-right: 0.5rem
+    @media (min-width: $timeline-breakpoint)
+      .timeline li:nth-child(odd) &
+        margin-left: 0
+        margin-right: 0.5rem
 
 .timeline-span
   @extend %small
