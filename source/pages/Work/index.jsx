@@ -1,34 +1,28 @@
 import React from 'react';
 
 import BodyClass from '../../components/BodyClass';
-import InteractionDesign from './InteractionDesign';
-import Branding from './Branding';
-import Dribbble from './Dribbble';
+import Intro from '../../components/Intro';
 import Footer from '../../components/Footer';
+import Gallery from './Gallery';
+import InteractionDesign from './InteractionDesign';
+import Dribbble from './Dribbble';
 
 class Work extends React.Component {
   render() {
     return (
       <BodyClass className="work">
+        <Intro className="work-intro">
+          <h1>Make them fall in love</h1>
+          <p>
+            It's not enough to make something pretty, and you can't just make it functional either.
+            A great experience is making the user feel at home, showing them a better way to get things done.
+            A great design isn't even about you.
+            &nbsp;<mark>It's about what it does for the user.</mark>
+          </p>
+        </Intro>
         <div className="content">
+          <Gallery />
           <InteractionDesign />
-          <Branding />
-
-          <section className="section-quote">
-            <div className="section-title">
-              I've worked with some nice folks who had nice things to say
-            </div>
-            <blockquote>
-              <p>
-                Joshua has the uncanny ability to execute and ship successful design. I am consistently amazed at his breadth and depth of design knowledge. He's also one of the rare designers with the skills and ability to cross over to development while still remaining an expert in design.
-                &nbsp;
-                <span className="quote-author">
-                  Kyle Fielder, Chief Design Officer at thoughtbot
-                </span>
-              </p>
-            </blockquote>
-          </section>
-
           <Dribbble />
         </div>
         <Footer />

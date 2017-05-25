@@ -42,21 +42,21 @@ class InteractionDesign extends React.Component {
 
   render() {
     return (
-      <div>
-        <Intro>
-          <h1>Make them fall in love</h1>
-          <p>
-            It's not enough to make something pretty, and you can't just make it functional either.
-            A great experience is making the user feel at home, showing them a better way to get things done.
-            A great design isn't even about you.
-            &nbsp;<mark>It's about them.</mark>
-          </p>
-        </Intro>
+      <section>
+        <div className="section-title">
+          Case Studies
+        </div>
 
-        <section className="case-study--list">
+        <h2>Dig a little deeper</h2>
+        <p>
+          I wish I could show some of the bigger projects I've done, but you know how clients are with Non-Disclosure Agreements.
+          Here are the ones I can show to give you a sense of my process.
+        </p>
+
+        <div className="case-study--list">
           {this.renderItems()}
-        </section>
-      </div>
+        </div>
+      </section>
     );
   }
 }

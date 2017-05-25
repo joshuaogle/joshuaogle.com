@@ -44,25 +44,11 @@ class Branding extends React.Component {
               <time className="year">2015</time>
             </div>
           </li>
-          <li className="brand sheriff">
-            <InlineSVG src="brand-sheriff.svg" />
-            <div className="brand-label">
-              Sheriff Signs
-              <time className="year">2015</time>
-            </div>
-          </li>
           <li className="brand gemini">
             <InlineSVG src="brand-gemini.svg" />
             <div className="brand-label">
               Gemini SBS
               <time className="year">2009</time>
-            </div>
-          </li>
-          <li className="brand thunderplains">
-            <InlineSVG src="brand-thunderplains.svg" />
-            <div className="brand-label">
-              Thunder Plains Conference
-              <time className="year">2013</time>
             </div>
           </li>
           <li className="brand skyhelm">

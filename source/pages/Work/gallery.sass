@@ -1,0 +1,123 @@
+@import "../../stylesheets/variables"
+
+.gallery
+  +angle-top
+  +angle-bottom
+  background-color: $offwhite
+  display: none
+  padding: $large-spacing 0
+  position: relative
+
+  @supports (display: grid)
+    display: block
+
+  section
+    @supports (display: grid)
+      display: grid
+      grid-template-columns: repeat(12, 1fr)
+      grid-gap: 0 0
+
+    > *
+      //background-color: shade($offwhite, 5%)
+      padding: $smallest-spacing
+      z-index: 0
+
+  img,
+  svg
+    box-shadow: $small-shadow
+    max-width: 100%
+
+  svg
+    background-color: #fff
+    padding: 5% 10%
+
+  // Desktop
+  .gallery-armada-users
+    grid-area: 15 / 1 / span 6 / span 6
+
+  .gallery-sharespost-chart
+    grid-area: 3 / 7 / span 6 / span 6
+
+  .gallery-armada-home
+    grid-area: 9 / 7 / span 10 / span 6
+
+  .gallery-armada-user
+    grid-area: 1 / 1 / span 2 / span 6
+
+  .gallery-nom-practice
+    grid-area: 12 / 1 / span 3 / span 6
+
+  .gallery-cmr-wires
+    grid-area: 19 / 1 / span 6 / span 12
+
+  // Mobile
+  .gallery-summit-map
+    grid-area: 5 / 3 / span 7 / span 4
+
+  .gallery-smartpanel
+    grid-area: 15 / 7 / span 6 / span 4
+    z-index: 2
+
+  // Bits
+  .gallery-summit-popover
+    grid-area: 6 / 6 / span 2 / span 4
+    z-index: 1
+
+    img
+      box-shadow: $base-shadow
+
+  .gallery-expedia-fb
+    grid-area: 22 / 7 / span 4 / span 5
+    z-index: 1
+
+    img
+      box-shadow: $base-shadow
+
+  .gallery-brand-armada
+    +svg-fill(#206c91)
+    grid-area: 14 / 4 / span 2 / span 4
+    z-index: 3
+
+    svg
+      box-shadow: $base-shadow
+
+    path
+      fill: map-get($brand-colors, armada)
+
+  .gallery-brand-wifiguru
+    +svg-fill(#7b7dbc)
+    grid-area: 18 / 2 / span 2 / span 4
+
+    svg
+      box-shadow: $base-shadow
+
+  .gallery-brand-brightbit
+    +svg-fill(#F7931E)
+    align-self: flex-end
+    grid-area: 2 / 7 / span 1 / span 4
+
+  .gallery-brand-proteus
+    grid-area: 4 / 1 / span 2 / span 3
+
+    svg
+      box-shadow: $base-shadow
+
+    #logo #nucleus,
+    #logo #particles circle
+      fill: #4abaB0
+
+    #logo #P
+      fill: #fff
+
+  .gallery-brand-gemini
+    +svg-fill(#59b1d2)
+    grid-area: 3 / 4 / span 2 / span 3
+    z-index: 3
+
+  .gallery-brand-skyhelm
+    +svg-fill(#37a5dd)
+    grid-area: 8 / 2 / span 2 / span 3
+    z-index: 2
+
+    svg
+      box-shadow: $base-shadow

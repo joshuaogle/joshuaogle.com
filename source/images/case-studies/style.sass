@@ -1,0 +1,100 @@
+@import "../../stylesheets/variables"
+@import "../../stylesheets/typography"
+
+body[data-current="home"]
+  .intro
+    background-image: url("../../images/intro-home.jpg")
+
+  .intro-content
+    @media (min-width: $break-medium)
+      align-items: center
+      display: flex
+      flex-direction: row
+      justify-content: center
+      margin-bottom: -$base-spacing
+      margin-top: -$small-spacing
+      padding-bottom: 0
+
+    .home-intro--portrait
+      box-shadow: $base-shadow
+      display: none
+      margin-bottom: -$large-spacing
+
+      @media (min-width: $break-medium)
+        display: block
+        max-width: 20rem
+
+    .home-intro--copy
+      font-size: 0.9rem
+
+      @media (min-width: $break-medium)
+        margin-left: $base-spacing
+        max-width: 25rem
+
+    h1
+      +title-line($red, $base-spacing)
+      margin-bottom: $smallest-spacing
+
+      &::before
+        width: $base-spacing
+
+        @media (max-width: $break-medium)
+          display: none
+
+.home-work
+  margin-top: $base-spacing
+  padding: $large-spacing 0
+
+  &--list
+    margin: $base-spacing 0
+
+    @media (min-width: $break-small)
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+
+    > a
+      display: block
+      flex: 0 0 48%
+      margin-bottom: $base-spacing
+      padding: 0 $base-spacing
+
+      &:nth-child(odd)
+        margin-top: $base-spacing
+
+        @media (min-width: $break-medium)
+          margin-bottom: 0
+          margin-right: 2%
+
+      @each $brand, $color in $brand-colors
+        &.home-work--#{$brand}
+          h3
+            +brand-text($color)
+            display: inline-block
+
+      h3
+        +title-line()
+        margin-bottom: $smallest-spacing
+
+      p
+        color: $muted-color
+        font-size: $small-font-size
+        margin: 0
+
+.home-articles
+  @media (min-width: $break-small)
+    display: flex
+    flex-direction: row
+
+    &--copy,
+    &--list
+      flex: 0 0 48%
+
+    &--copy
+      padding-right: 4%
+
+  &--list
+    margin-top: 2.5rem
+
+    .article
+      padding-right: 0
