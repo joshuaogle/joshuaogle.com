@@ -43,19 +43,15 @@ body[data-current="home"]
 
 .home-work
   margin-top: $base-spacing
-  padding: $large-spacing 0
+  padding-bottom: $large-spacing 
+  padding-top: $large-spacing
 
   &--list
+    +two-column
     margin: $base-spacing 0
-
-    @media (min-width: $break-small)
-      display: flex
-      flex-direction: row
-      flex-wrap: wrap
 
     > a
       display: block
-      flex: 0 0 48%
       margin-bottom: $base-spacing
       padding: 0 $base-spacing
 

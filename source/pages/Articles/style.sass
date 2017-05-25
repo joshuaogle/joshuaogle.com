@@ -40,12 +40,7 @@
     font-weight: 200
 
 .article-summary__list
-  @media (min-width: $break-medium)
-    display: flex
-    flex-wrap: wrap
-
-  .article
-    flex: 0 0 50%
+  +two-column
 
 .article-content
   h2:not(:first-child),

@@ -2,11 +2,19 @@
 
 .branding
   ul
-    display: flex
-    flex-wrap: wrap
     list-style: none
     margin-top: $large-spacing
     padding: 0
+
+    @supports (display: grid)
+      display: grid
+      grid-gap: 0 $small-spacing
+      grid-template-columns: repeat(2, 1fr)
+
+    @media (min-width: $break-small)
+
+      @supports (display: grid)
+        grid-template-columns: repeat(4, 1fr)
 
     li::before
       display: none
@@ -15,31 +23,14 @@
   align-items: center
   background-color: mix($offwhite, $light-brown, 75%)
   border-radius: $base-border-radius
+  display: flex
+  flex-direction: column
   justify-content: center
   margin: 0 0 $base-spacing
   padding: 10%
   position: relative
   transition: background-color $fast-timing, transform $fast-timing
   width: 100%
-
-  @media (min-width: $break-small)
-    display: flex
-    flex-direction: column
-    margin-right: 2%
-    width: 48%
-
-    &:nth-child(2n)
-      margin-right: 0
-
-  @media (min-width: $break-medium)
-    padding: 3%
-    width: 23%
-
-    &:nth-child(2n)
-      margin-right: 2%
-
-    &:nth-child(4n)
-      margin-right: 0
 
   &:hover
     transform: scale(1.15)

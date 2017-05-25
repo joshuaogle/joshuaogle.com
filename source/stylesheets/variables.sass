@@ -121,3 +121,10 @@ $slow-timing: $base-timing * 2
     +angle
     top: 0
     transform-origin: 100% 50%
+
+@mixin two-column
+  @media (min-width: $break-small)
+    @supports (display: grid)
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      grid-gap: 0 $small-spacing
