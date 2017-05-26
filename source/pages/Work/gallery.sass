@@ -36,41 +36,50 @@
 
   // Desktop
   .gallery-armada-users
-    grid-area: 15 / 1 / span 6 / span 6
+    grid-area: 1 / 1 / span 5 / span 8
 
   .gallery-sharespost-chart
-    grid-area: 3 / 7 / span 6 / span 6
+    grid-area: 18 / 1 / span 6 / span 6
+    z-index: 2
 
   .gallery-armada-home
-    grid-area: 9 / 7 / span 10 / span 6
+    grid-area: 12 / 7 / span 10 / span 6
+
+    img
+      box-shadow: $base-shadow
 
   .gallery-armada-user
-    grid-area: 1 / 1 / span 2 / span 6
+    grid-area: 24 / 5 / span 2 / span 8
 
   .gallery-nom-practice
-    grid-area: 12 / 1 / span 3 / span 6
+    grid-area: 20 / 5 / span 8 / span 8
+    z-index: 2
 
   .gallery-cmr-wires
-    grid-area: 19 / 1 / span 6 / span 12
+    grid-area: 6 / 1 / span 12 / span 12
 
   // Mobile
   .gallery-summit-map
-    grid-area: 4 / 3 / span 7 / span 4
+    grid-area: 3 / 9 / span 6 / span 4
+    z-index: 2
+
+    img
+      box-shadow: $base-shadow
 
   .gallery-smartpanel
-    grid-area: 15 / 7 / span 6 / span 4
+    grid-area: 24 / 1 / span 6 / span 4
     z-index: 2
 
   // Bits
   .gallery-summit-popover
-    grid-area: 6 / 6 / span 2 / span 4
+    grid-area: 28 / 7 / span 3 / span 6
     z-index: 1
 
     img
       box-shadow: $base-shadow
 
   .gallery-expedia-fb
-    grid-area: 22 / 7 / span 5 / span 5
+    grid-area: 26 / 1 / span 6 / span 6
     z-index: 1
 
     img
@@ -78,7 +87,7 @@
 
   .gallery-brand-armada
     +svg-fill(#206c91)
-    grid-area: 14 / 4 / span 2 / span 4
+    grid-area: 24 / 2 / span 2 / span 4
     z-index: 3
 
     svg
@@ -90,21 +99,20 @@
   .gallery-brand-wifiguru
     +svg-fill(#7b7dbc)
     grid-area: 18 / 2 / span 2 / span 4
+    z-index: 2
 
     svg
       box-shadow: $base-shadow
 
   .gallery-brand-brightbit
     +svg-fill(#F7931E)
-    align-self: flex-end
-    grid-area: 2 / 7 / span 1 / span 4
-
-  .gallery-brand-proteus
-    grid-area: 5 / 1 / span 2 / span 3
-    z-index: 3
+    grid-area: 5 / 4 / span 2 / span 4
 
     svg
       box-shadow: $base-shadow
+
+  .gallery-brand-proteus
+    grid-area: 29 / 7 / span 2 / span 3
 
     #logo #nucleus,
     #logo #particles circle
@@ -115,12 +123,8 @@
 
   .gallery-brand-gemini
     +svg-fill(#59b1d2)
-    grid-area: 3 / 4 / span 1 / span 3
+    grid-area: 29 / 10 / span 1 / span 3
 
   .gallery-brand-skyhelm
     +svg-fill(#37a5dd)
-    grid-area: 8 / 2 / span 2 / span 3
-    z-index: 2
-
-    svg
-      box-shadow: $base-shadow
+    grid-area: 1 / 8 / span 2 / span 3
