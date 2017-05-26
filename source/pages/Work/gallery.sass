@@ -22,6 +22,9 @@
       padding: $smallest-spacing
       z-index: 0
 
+  .parallax
+    z-index: 10
+
   img,
   svg
     box-shadow: $small-shadow
@@ -52,7 +55,7 @@
 
   // Mobile
   .gallery-summit-map
-    grid-area: 5 / 3 / span 7 / span 4
+    grid-area: 4 / 3 / span 7 / span 4
 
   .gallery-smartpanel
     grid-area: 15 / 7 / span 6 / span 4
@@ -67,7 +70,7 @@
       box-shadow: $base-shadow
 
   .gallery-expedia-fb
-    grid-area: 22 / 7 / span 4 / span 5
+    grid-area: 22 / 7 / span 5 / span 5
     z-index: 1
 
     img
@@ -97,7 +100,8 @@
     grid-area: 2 / 7 / span 1 / span 4
 
   .gallery-brand-proteus
-    grid-area: 4 / 1 / span 2 / span 3
+    grid-area: 5 / 1 / span 2 / span 3
+    z-index: 3
 
     svg
       box-shadow: $base-shadow
@@ -111,8 +115,7 @@
 
   .gallery-brand-gemini
     +svg-fill(#59b1d2)
-    grid-area: 3 / 4 / span 2 / span 3
-    z-index: 3
+    grid-area: 3 / 4 / span 1 / span 3
 
   .gallery-brand-skyhelm
     +svg-fill(#37a5dd)

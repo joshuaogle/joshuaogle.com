@@ -11,8 +11,9 @@ class InlineSVG extends React.Component {
 
   render() {
     const className = this.props.className || "";
+    const parallax = this.props["data-rellax-speed"] || "";
     return (
-      <span dangerouslySetInnerHTML={{__html: this.imagePath()}} className={className} />
+      <span dangerouslySetInnerHTML={{__html: this.imagePath()}} className={className} data-rellax-speed={parallax} />
     );
   }
 }
