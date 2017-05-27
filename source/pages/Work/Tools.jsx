@@ -6,7 +6,7 @@ class Tools extends React.Component {
     return (
       <section>
         <div className="section-title">Tools</div>
-        <h2>What I use</h2>
+        <h2>What I like to use</h2>
 
         <ul className="tools-list">
           <li>
@@ -73,10 +73,10 @@ class Tools extends React.Component {
           <li>
             <h3>Ruby/Elixir</h3>
             <p>
-              I'm not afraid to push into new territory.
+              I love learning new things.
               I worked at consultancies specializing in Ruby on Rails for most of my career
               and am more than handy on the front-end of a Rails app.
-              Lately though I've been learning Elixir for some small projects and love it.
+              Lately, though, I've been learning Elixir for some small projects and love it.
             </p>
           </li>
         </ul>
