@@ -6,6 +6,7 @@ import Footer from '../../components/Footer';
 import Gallery from './Gallery';
 import InteractionDesign from './InteractionDesign';
 import Dribbble from './Dribbble';
+import Tools from './Tools';
 
 class Work extends React.Component {
   render() {
@@ -24,6 +25,7 @@ class Work extends React.Component {
           <Gallery />
           <InteractionDesign />
           <Dribbble />
+          <Tools />
         </div>
         <Footer />
       </BodyClass>
