@@ -11,19 +11,33 @@ class CaseStudy extends React.Component {
   }
 
   render() {
-    const introProps = this.props.introProps;
+    const studyProps = this.props.introProps;
 
     return (
-      <BodyClass className={`case_study--${introProps.shortName}`} hasIntro="true">
-        <Intro className="case-studies--intro" styles={{backgroundImage: `url(/source/images/${introProps.background})`}}>
+      <BodyClass className={`case_study--${studyProps.shortName}`} hasIntro="true">
+        <Intro className="case-studies--intro" styles={{backgroundImage: `url(/source/images/${studyProps.background})`}}>
           <h1>
-            {introProps.title}
+            {studyProps.title}
           </h1>
           <p className="intro-meta">
-            {this.getYear()} • {introProps.role}
+            {this.getYear()}
           </p>
         </Intro>
         <article className="content case-studies--content">
+          <section className="case-studies--meta">
+            <li>
+              <div className="section-title">My Role</div>
+              {studyProps.role}
+            </li>
+            <li>
+              <div className="section-title">Full Team</div>
+              {studyProps.team}
+            </li>
+            <li>
+              <div className="section-title">Time Frame</div>
+              {studyProps.time}
+            </li>
+          </section>
           {this.props.children}
         </article>
         <Footer />

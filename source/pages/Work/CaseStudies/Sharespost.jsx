@@ -180,6 +180,8 @@ SharespostCaseStudy.defaultProps = {
   date: "2016/08/01",
   shortName: "sharespost",
   role: "Design & Front-End Development",
+  time: "9 months",
+  team: "2 Designers, 3 Developers",
   background: "case-study-bg-sharespost.png",
   icon: "case-study-logo-sharespost.svg"
 }

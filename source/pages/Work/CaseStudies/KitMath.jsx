@@ -172,6 +172,8 @@ KitMathCaseStudy.defaultProps = {
   date: "2017/05/01",
   shortName: "kitmath",
   role: "Design",
+  time: "In Progress",
+  team: "1 Designer, 2 Developers",
   background: "case-study-bg-kitmath.png",
   icon: "case-study-logo-kit.svg"
 }

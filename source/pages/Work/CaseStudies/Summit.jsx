@@ -131,6 +131,8 @@ SummitCaseStudy.defaultProps = {
   date: "2015/08/15",
   shortName: "summit",
   role: "Hybrid Mobile App Development",
+  time: "1 month",
+  team: "1 Designer, 1 Developer",
   background: "case-study-bg-summit.png",
   icon: "case-study-logo-thoughtbot.svg"
 }
