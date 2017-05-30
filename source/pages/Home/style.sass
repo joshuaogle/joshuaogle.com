@@ -43,24 +43,17 @@ body[data-current="home"]
 
 .home-work
   margin-top: $base-spacing
-  padding-bottom: $large-spacing 
+  padding-bottom: $large-spacing
   padding-top: $large-spacing
 
   &--list
     +two-column
-    margin: $base-spacing 0
+    margin: $large-spacing 0 $base-spacing
 
     > a
       display: block
       margin-bottom: $base-spacing
       padding: 0 $base-spacing
-
-      &:nth-child(odd)
-        margin-top: $base-spacing
-
-        @media (min-width: $break-medium)
-          margin-bottom: 0
-          margin-right: 2%
 
       @each $brand, $color in $brand-colors
         &.home-work--#{$brand}
@@ -70,7 +63,7 @@ body[data-current="home"]
 
       h3
         +title-line()
-        margin-bottom: $smallest-spacing
+        margin-bottom: 0
 
       p
         color: $muted-color
