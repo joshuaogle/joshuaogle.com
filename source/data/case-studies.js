@@ -6,9 +6,9 @@ import OOOCaseStudy from '../pages/Work/CaseStudies/OOO';
 
 const caseStudyProps = [
   SharespostCaseStudy.defaultProps,
+  ArmadaCaseStudy.defaultProps,
   KitMathCaseStudy.defaultProps,
   SummitCaseStudy.defaultProps,
-  ArmadaCaseStudy.defaultProps,
   OOOCaseStudy.defaultProps,
 ];
 
