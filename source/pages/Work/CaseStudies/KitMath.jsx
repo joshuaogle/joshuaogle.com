@@ -10,16 +10,6 @@ class KitMathCaseStudy extends React.Component {
     return (
       <CaseStudy introProps={this.props}>
         <section>
-          <div className="section-title">
-            Background
-          </div>
-
-          <p>
-            I've been making products for years, but rarely get to work on something that truly makes the world a better place.
-            That's why I was really excited to work on a mobile app with people who are on a mission to use their powers for good and make apps that make a difference.
-            And they're starting with making education fun.
-          </p>
-
           <Example
             image="kitmath-congrats.svg"
             caption="Albert Einstein stops by to give some encouragement"
@@ -114,20 +104,26 @@ class KitMathCaseStudy extends React.Component {
             Our mascot Kit will appear on these screens as well, serving as your buddy on your learning adventure.
             The "heroes" will show up at the beginning of a new collection, providing encouragement and letting you learn a little about those that came before you.
           </p>
+        </section>
 
-          <figure style={{textAlign: "center"}}>
-            <div className="case-study-phone" style={{"display": "inline-block"}}>
-              <img src="/source/images/case-studies/kitmath-index.png" style={{"display": "inline-block"}} />
-            </div>
-            &nbsp;&nbsp;&nbsp;
-            <div className="case-study-phone" style={{"display": "inline-block"}}>
-              <img src="/source/images/case-studies/kitmath-problem.png" style={{"display": "inline-block"}} />
-            </div>
-            <figcaption>
-              A simple interface for problems, with scenery to keep things fun
-            </figcaption>
-          </figure>
+        <div className="inset inset--phone">
+          <section>
+            <figure style={{textAlign: "center"}}>
+              <div className="case-study-phone" style={{"display": "inline-block"}}>
+                <img src="/source/images/case-studies/kitmath-index.png" style={{"display": "inline-block"}} />
+              </div>
+              &nbsp;&nbsp;&nbsp;
+              <div className="case-study-phone" style={{"display": "inline-block"}}>
+                <img src="/source/images/case-studies/kitmath-problem.png" style={{"display": "inline-block"}} />
+              </div>
+              <figcaption>
+                A simple interface for problems, with scenery to keep things fun
+              </figcaption>
+            </figure>
+          </section>
+        </div>
 
+        <section>
           <p>
             This has been a great project to show off my illustration talents while learning a lot about animation and character design.
             The reactions so far have been very reassuring and I can't wait to see it released.
@@ -175,7 +171,11 @@ KitMathCaseStudy.defaultProps = {
   time: "In Progress",
   team: "1 Designer, 2 Developers",
   background: "case-study-bg-kitmath.png",
-  icon: "case-study-logo-kit.svg"
+  icon: "case-study-logo-kit.svg",
+  client: "Husk",
+  intro: "I've been making products for years, but rarely get to work on something that truly makes the world a better place. \
+    That's why I was really excited to work on a mobile app with people who are on a mission to use their powers for good and make apps that make a difference. \
+    And they're starting with making education fun."
 }
 
 export default KitMathCaseStudy;

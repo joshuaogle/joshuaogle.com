@@ -8,22 +8,14 @@ class SharespostCaseStudy extends React.Component {
   render() {
     return (
       <CaseStudy introProps={this.props}>
-        <section>
-          <div className="section-title">
-            Background
-          </div>
-          <p>
-            At thoughtbot, we helped one of the largest private securities firms make the process of buying and selling shares easy.
-            <mark>Their existing process was very manual, relying on brokers to do almost everything.</mark>
-            To help them scale even bigger, they would need to find a way to automate as much of the process.
-            This would free up the brokers to provide better service to even more users.
-          </p>
-
-          <Example
-            image="sharespost-chart.png"
-            caption="The home page greets users with an up-to-date evaluation of their holdings."
-          />
-        </section>
+        <div className="inset inset--desktop">
+          <section>
+            <Example
+              image="sharespost-chart.png"
+              caption="The home page greets users with an up-to-date evaluation of their holdings."
+            />
+          </section>
+        </div>
 
         <section>
           <div className="section-title">
@@ -88,12 +80,18 @@ class SharespostCaseStudy extends React.Component {
             We usually like to start designing in the browser as soon as possible, but since the developers had some very complicated back-end code to figure out we spent time polishing the wireframes into high-fidelity mockups.
             These mockups were refined in <a href="http://invisionapp.com" target="_new">InVision</a> so we could give the client a realistic look at how the views were connected.
           </p>
+        </section>
 
-          <Example
-            image="sharespost-home.png"
-            caption="The home page greets users with an up-to-date evaluation of their holdings."
-          />
+        <div className="inset inset--desktop">
+          <section>
+            <Example
+              image="sharespost-home.png"
+              caption="The home page greets users with an up-to-date evaluation of their holdings."
+            />
+          </section>
+        </div>
 
+        <section>
           <p>
             Here's a look at one of those mockups.
             The home page prominently features an &ldquo;Estimated Valuation&rdquo; chart to summarize the user's portfolio over time.
@@ -125,12 +123,18 @@ class SharespostCaseStudy extends React.Component {
             It's important to start getting user feedback as early as possible, so we put together a plan to deploy the pieces of the interface as they were ready.
             With a set of feature flags and a flexible layout system, we iteratively released the new system to VIP members for testing.
           </p>
+        </section>
 
-          <Example
-            image="sharespost-waterfall.png"
-            caption="The &ldquo;waterfall chart&rdquo; was the most technically difficult, but also the most informative."
-          />
+        <div className="inset inset--desktop">
+          <section>
+            <Example
+              image="sharespost-waterfall.png"
+              caption="The &ldquo;waterfall chart&rdquo; was the most technically difficult, but also the most informative."
+            />
+          </section>
+        </div>
 
+        <section>
           <p>
             The piece that took the longest was the waterfall chart.
             Depending on the class of your shares and when you acquired them, they would be valued differently.
@@ -139,12 +143,18 @@ class SharespostCaseStudy extends React.Component {
             I designed the charts and wrote the javascript for them, and then the developers fed in the data in a simple format.
             The back-end that provides the data for this piece is extremely complicated, and frankly I'm glad I wasn't the one working on it.
           </p>
+        </section>
 
-          <Example
-            image="sharespost-admin.png"
-            caption="The admin system that gives the brokers access to all of the data."
-          />
+        <div className="inset inset--desktop">
+          <section>
+            <Example
+              image="sharespost-admin.png"
+              caption="The admin system that gives the brokers access to all of the data."
+            />
+          </section>
+        </div>
 
+        <section>
           <p>
             With all of this data, the brokers and admins needed a system to help them manage it all.
             We developed an admin system that makes it all simple <mark>and works well on mobile too</mark>.
@@ -183,7 +193,10 @@ SharespostCaseStudy.defaultProps = {
   time: "9 months",
   team: "2 Designers, 3 Developers",
   background: "case-study-bg-sharespost.png",
-  icon: "case-study-logo-sharespost.svg"
+  icon: "case-study-logo-sharespost.svg",
+  client: "Sharespost",
+  client_url: "http://sharespost.com",
+  intro: "At thoughtbot, we helped one of the largest private securities firms make the process of buying and selling shares easy. Their existing process was very manual, relying on brokers to do almost everything. To help them scale even bigger, they would need to find a way to automate as much of the process. This would free up the brokers to provide better service to even more users."
 }
 
 export default SharespostCaseStudy;

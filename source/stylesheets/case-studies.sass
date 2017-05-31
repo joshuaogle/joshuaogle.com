@@ -1,7 +1,8 @@
 @each $brand, $color in $brand-colors
   body[data-current="case_study--#{$brand}"]
-    main .intro
-      background-color: $color
+    main
+      .intro
+        background-color: $color
 
     h2
       +brand-text($color)
@@ -15,14 +16,21 @@
   list-style: none
   padding-bottom: 0
 
-  @media (min-width: $break-small)
-    @supports (display: grid)
-      display: grid
-      grid-template-columns: repeat(3, 1fr)
-      grid-gap: 0 $small-spacing
+  ul
+    @media (min-width: $break-small)
+      @supports (display: grid)
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        grid-gap: 0 $small-spacing
 
   li
     margin-bottom: $base-spacing
+
+    &::before
+      display: none
+
+  p
+    font-size: $large-font-size
 
 .case-study-example
   border: 1px solid $light-gray

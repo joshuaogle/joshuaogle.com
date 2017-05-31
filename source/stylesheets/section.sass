@@ -11,3 +11,34 @@ section
 
 .section-footer
   text-align: right
+
+.inset
+  +angle-top
+  +angle-bottom
+  background-color: $lightest-gray
+  padding: $large-spacing 0
+  position: relative
+
+  &.inset--desktop
+    margin-top: 3vw
+    padding: 0
+
+  &.inset--phone
+    margin-top: 0
+    padding: 0
+
+    .case-study-phone
+      margin-top: 0
+
+  section
+    padding-bottom: 0
+    padding-top: 0
+
+  figure
+    margin: 0
+    position: relative
+    z-index: 3
+
+  figcaption
+    margin-bottom: $base-spacing
+    padding-bottom: $large-spacing

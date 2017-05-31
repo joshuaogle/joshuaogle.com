@@ -7,18 +7,13 @@ class ArmadaCaseStudy extends React.Component {
   render() {
     return (
       <CaseStudy introProps={this.props}>
-        <section>
-          <div className="section-title">Background</div>
-          <p>
-            <a href="http://armadatracking.com" target="_new" rel="noopener">Armada</a> helps companies keep track of their vehicles with an easy to use map-based interface.
-            The asset tracking industry is dominated by apps with frustrating user experiences, and so Armada set out to make something better.
-            The largest companies in the space have strong connections to the trucking and transportation industries, but the opportunity was there to bring a modern startup approach and design focus to create something they would switch for.
-          </p>
-
-          <Example
-            image="armada-home.png"
-          />
-        </section>
+        <div className="inset inset--desktop">
+          <section>
+            <Example
+              image="armada-home.png"
+            />
+          </section>
+        </div>
 
         <section>
           <div className="section-title">The Challenge</div>
@@ -29,24 +24,23 @@ class ArmadaCaseStudy extends React.Component {
             Armada was working on developing a set of tracking devices for several different scenarios.
           </p>
 
-          <div className="split-layout">
-            <div className="split-primary">
-              <p>
-                Assets like trailers just need GPS tracking, but don't typically have their own battery power, so they were developing a device with a long-lasting rechargable battery.
-                Modern vehicles have a data port that can power a small GPS tracker and also provides it with some vehicle information like maintenance alerts.
-                Both devices would have an accelerometer included too, which means you can track things like speed warnings and sudden stops.
-                These devices could give you an incredible amount of insight into the location history and driver behavior.
-                But <mark>all of this information is useless without an easy to understand interface</mark> that provides this information in real-time.
-              </p>
-            </div>
-
-            <div className="split-secondary">
-              <Example
-                image="armada-device.png"
-              />
-            </div>
-          </div>
+          <p>
+            Assets like trailers just need GPS tracking, but don't typically have their own battery power, so they were developing a device with a long-lasting rechargable battery.
+            Modern vehicles have a data port that can power a small GPS tracker and also provides it with some vehicle information like maintenance alerts.
+            Both devices would have an accelerometer included too, which means you can track things like speed warnings and sudden stops.
+            These devices could give you an incredible amount of insight into the location history and driver behavior.
+            But <mark>all of this information is useless without an easy to understand interface</mark> that provides this information in real-time.
+          </p>
         </section>
+
+        <div className="inset inset--desktop">
+          <section>
+            <Example
+              image="sharespost-admin.png"
+              caption="The admin system that gives the brokers access to all of the data."
+            />
+          </section>
+        </div>
 
         <section>
           <div className="section-title">The Solution</div>
@@ -58,18 +52,34 @@ class ArmadaCaseStudy extends React.Component {
             Because we had a lot of experience working together, we were able to really quickly put together the structure of the app and describe the user experience.
             After that, we dove straight in and started building the core functionality while I worked on creating the views that we whiteboarded.
           </p>
-          <Example
-            image="armada-users.png"
-          />
+        </section>
+
+        <div className="inset inset--desktop">
+          <section>
+            <Example
+              image="armada-users.png"
+            />
+          </section>
+        </div>
+
+        <section>
           <p>
             I think this process of iterative design is a powerful tool that not enough people get comfortable with.
             A "waterfall" approach (one that starts with wireframes and then high-fidelity mockups before code even begins) ignores the fluid nature of the web and discourages experimentation.
             Around this time, the device prototypes were ready and we were able to start testing them on our own cars.
             Seeing the data and maps populate in real-time was <mark>magical</mark>, and not something you get to experience on every project.
           </p>
-          <Example
-            image="armada-user.png"
-          />
+        </section>
+
+        <div className="inset inset--desktop">
+          <section>
+            <Example
+              image="armada-user.png"
+            />
+          </section>
+        </div>
+
+        <section>
           <p>
             Now that we had all of this data streaming in, we got to work on how to surface the most important parts to the users.
             We started by allowing supervisors to opt-in to text or email notifications about bad behavior as it happened, so they can make sure their drivers were being safe.
@@ -78,10 +88,16 @@ class ArmadaCaseStudy extends React.Component {
             You can scrub through a timeline of activity, with the start and stop location for each trip laid out on the map.
             All of this together made for a unique experience that was miles ahead of the competition.
           </p>
-          <Example
-            image="armada-trips.png"
-          />
         </section>
+
+        <div className="inset inset--desktop">
+          <section>
+            <Example
+              image="armada-trips.png"
+            />
+          </section>
+        </div>
+
         <section>
           <div className="section-title">In Summary</div>
           <h2>Never underestimate a small team</h2>
@@ -104,7 +120,10 @@ ArmadaCaseStudy.defaultProps = {
   team: "1 Designer, 1 Developer",
   role: "Branding, Product Design & Development",
   background: "case-study-bg-armada.png",
-  icon: "case-study-logo-armada.svg"
+  icon: "case-study-logo-armada.svg",
+  client: "Armada Telematics",
+  client_url: "http://armadatracking.com",
+  intro: "Armada helps companies keep track of their vehicles with an easy to use map-based interface. The asset tracking industry is dominated by apps with frustrating user experiences, and so Armada set out to make something better. The largest companies in the space have strong connections to the trucking and transportation industries, but the opportunity was there to bring a modern startup approach and design focus to create something they would switch for."
 }
 
 export default ArmadaCaseStudy;

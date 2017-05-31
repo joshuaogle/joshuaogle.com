@@ -10,6 +10,16 @@ class CaseStudy extends React.Component {
     return date.getFullYear();
   }
 
+  clientLink(studyProps) {
+    if (studyProps.client_url) {
+      return (
+        <a href={`${studyProps.client_url}`}>{studyProps.client}</a>
+      )
+    } else {
+      return studyProps.client;
+    }
+  }
+
   render() {
     const studyProps = this.props.introProps;
 
@@ -25,18 +35,25 @@ class CaseStudy extends React.Component {
         </Intro>
         <article className="content case-studies--content">
           <section className="case-studies--meta">
-            <li>
-              <div className="section-title">My Role</div>
-              {studyProps.role}
-            </li>
-            <li>
-              <div className="section-title">Full Team</div>
-              {studyProps.team}
-            </li>
-            <li>
-              <div className="section-title">Time Frame</div>
-              {studyProps.time}
-            </li>
+            <ul>
+              <li>
+                <div className="section-title">Client</div>
+                {this.clientLink(studyProps)}
+              </li>
+              <li>
+                <div className="section-title">My Role</div>
+                {studyProps.role}
+              </li>
+              <li>
+                <div className="section-title">Full Team</div>
+                {studyProps.team}
+              </li>
+              <li>
+                <div className="section-title">Time Frame</div>
+                {studyProps.time}
+              </li>
+            </ul>
+            <p>{studyProps.intro}</p>
           </section>
           {this.props.children}
         </article>

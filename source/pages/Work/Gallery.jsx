@@ -32,7 +32,7 @@ class Gallery extends React.Component {
 
   render() {
     return (
-      <div className="gallery">
+      <div className="gallery inset">
         <section>
           {this.renderImage("armada-users", "case-studies/armada-users.png")}
           {this.renderImage("sharespost-chart", "case-studies/sharespost-chart.png")}

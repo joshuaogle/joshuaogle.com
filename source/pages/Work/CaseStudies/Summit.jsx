@@ -8,27 +8,14 @@ class SummitCaseStudy extends React.Component {
   render() {
     return (
       <CaseStudy introProps={this.props}>
-        <section>
-          <div className="section-title">
-            Background
-          </div>
-          <p>
-            Every year, <a href="http://thoughtbot.com" target="_new">thoughtbot</a> assembles the entire team from all of its offices to celebrate the year and get to know the other people you may not have seen in person yet.
-            In 2015, it was Denver's turn and we were excited to greet our friends from around the world.
-            <mark>Denver has a lot of great things to offer</mark>, but many of those visiting were in town for the first time and we wanted to share some of our favorite spots with them.
-            Besides our favorite coffee spots and restaurants, we also wanted to warn our friends about drinking at altitude.
-            And because it was Denver shortly after legalized recreational marijuana, we wanted to include some tips so no one had a bad time.
-          </p>
-          <p>
-            Since we had both iPhone and Android users, I suggested we use <a href="http://ionic.io" target="_new">Ionic</a> so we could support them both.
-            I had an idea that we could use this framework to help speed up development and it meant we should be able to build it without the help from a back-end developer.
-          </p>
-
-          <Phone
-            image="summit-map.png"
-            caption="Easily see what is around you with helpful icons"
-          />
-        </section>
+        <div className="inset inset--phone">
+          <section>
+            <Phone
+              image="summit-map.png"
+              caption="Easily see what is around you with helpful icons"
+            />
+          </section>
+        </div>
 
         <section>
           <div className="section-title">
@@ -52,25 +39,23 @@ class SummitCaseStudy extends React.Component {
             A personal guide
           </h2>
           <p>
+            Since we had both iPhone and Android users, I suggested we use <a href="http://ionic.io" target="_new">Ionic</a> so we could support them both.
+            I had an idea that we could use this framework to help speed up development and it meant we should be able to build it without the help from a back-end developer.
+          </p>
+          <p>
             Andrew Cohen did a fantastic job with the visual design, and I would do the front-end development and design the interactions.
             I had done some small fun projects with Ionic before and knew I could work quickly with such a simple app.
           </p>
 
-          <div className="split-layout">
-            <div className="split-primary">
-              <p>
-                The main view is the map, which shows the thoughtbot office and the locations of our picks so that they could easily find something fun nearby.
-                When the user taps on an icon it brings up a card with the name of the place and the hours of operation.
-                The best part though is that it also has the picture of a Denver team member and why they recommended that place.
-              </p>
-            </div>
+          <p>
+            The main view is the map, which shows the thoughtbot office and the locations of our picks so that they could easily find something fun nearby.
+            When the user taps on an icon it brings up a card with the name of the place and the hours of operation.
+            The best part though is that it also has the picture of a Denver team member and why they recommended that place.
+          </p>
 
-            <div className="split-secondary">
-              <p>
-                <img src="/source/images/case-studies/summit-popover.png" className="case-study-example" />
-              </p>
-            </div>
-          </div>
+          <p>
+            <img src="/source/images/case-studies/summit-popover.png" className="case-study-example" />
+          </p>
 
           <p>
             If you want to find something specific, the guide has several categories: Restaurants, Coffeeshops, Bars &amp; Breweries, Dispensaries, Local Goods, Activites, and Neighborhoods &amp; Parks.
@@ -78,32 +63,42 @@ class SummitCaseStudy extends React.Component {
             These were stored in a JSON file, so we didn't even need a database and it could be passed directly into the Javascript for the maps and lists.
             Ionic made this extremely simple, and this was the key reason that development was fairly trivial.
           </p>
+        </section>
 
-          <Phone
-            image="summit-categories.png"
-            caption="Looking for something specific? We've broken down our picks into categories"
-          />
+        <div className="inset inset--phone">
+          <section>
+            <Phone
+              image="summit-categories.png"
+              caption="Looking for something specific? We've broken down our picks into categories"
+            />
+          </section>
+        </div>
 
+        <section>
           <p>
             The other pages are simple information, but we hoped they would make things run smoothly.
             The schedule meant that everyone would have a list of activities in their pocket.
             It would have been nice to have notifications for events if we had had more time, but this was already more than the other summits had done.
             In the end, we only used about four days worth of time between both design and development.
           </p>
-
-          <figure style={{textAlign: "center"}}>
-            <div className="case-study-phone" style={{"display": "inline-block"}}>
-              <img src="/source/images/case-studies/summit-schedule.png" style={{"display": "inline-block"}} />
-            </div>
-            &nbsp;&nbsp;&nbsp;
-            <div className="case-study-phone" style={{"display": "inline-block"}}>
-              <img src="/source/images/case-studies/summit-warnings.png" style={{"display": "inline-block"}} />
-            </div>
-            <figcaption>
-              A handy schedule and helpful tips, right in your pocket
-            </figcaption>
-          </figure>
         </section>
+
+        <div className="inset inset--phone">
+          <section>
+            <figure style={{textAlign: "center"}}>
+              <div className="case-study-phone" style={{"display": "inline-block"}}>
+                <img src="/source/images/case-studies/summit-schedule.png" style={{"display": "inline-block"}} />
+              </div>
+              &nbsp;&nbsp;&nbsp;
+              <div className="case-study-phone" style={{"display": "inline-block"}}>
+                <img src="/source/images/case-studies/summit-warnings.png" style={{"display": "inline-block"}} />
+              </div>
+              <figcaption>
+                A handy schedule and helpful tips, right in your pocket
+              </figcaption>
+            </figure>
+          </section>
+        </div>
 
         <section>
           <div className="section-title">
@@ -134,7 +129,8 @@ SummitCaseStudy.defaultProps = {
   time: "1 month",
   team: "1 Designer, 1 Developer",
   background: "case-study-bg-summit.png",
-  icon: "case-study-logo-thoughtbot.svg"
+  icon: "case-study-logo-thoughtbot.svg",
+  intro: "Every year, thoughtbot assembles the entire team from all of its offices to celebrate the year and get to know the other people you may not have seen in person yet. In 2015, it was Denver's turn and we were excited to greet our friends from around the world. Denver has a lot of great things to offer, but many of those visiting were in town for the first time and we wanted to share some of our favorite spots with them. Besides our favorite coffee spots and restaurants, we also wanted to warn our friends about drinking at altitude. And because it was Denver shortly after legalized recreational marijuana, we wanted to include some tips so no one had a bad time."
 }
 
 export default SummitCaseStudy;

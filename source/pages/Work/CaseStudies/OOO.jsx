@@ -9,17 +9,6 @@ class OOOCaseStudy extends React.Component {
       <CaseStudy introProps={this.props}>
         <section>
           <div className="section-title">
-            Background
-          </div>
-          <p>
-            This is a little something we experimented on at thoughtbot for Out of Office (OOO) notifications.
-            We came up with a way to automate the hassle of telling your team you would be gone and made it much simpler.
-            We ended up integrating many of these ideas and designs into our larger internal planning app, but I still love the way the original idea looked.
-          </p>
-        </section>
-
-        <section>
-          <div className="section-title">
             The Challenge
           </div>
           <h2>
@@ -50,23 +39,19 @@ class OOOCaseStudy extends React.Component {
             Let the app do the work
           </h2>
 
-          <div className="split-layout">
-            <div className="split-primary">
-              <p>
-                What started out as a short design sprint turned into experimenting with the APIs of the various systems to automate all of this process.
-                We had in mind a simple interface, one that could work quickly on a phone, even if you were sick.
-                You should be able to just enter in the dates and what you were out for, and the system could handle the rest.
-              </p>
-              <p>
-                We adopted the name OOO (pronounced &ldquo;Triple-O&rdquo;) and got to work drawing up plans for an easy to read calendar and an efficient entry form.
-                Things like PTO (Paid Time Off) have a lot more steps than WFH (Working from Home) or WFOO (Working from Other Office), and <mark>the app should be a helpful assistant, knowing just want to do</mark>.
-              </p>
-            </div>
+          <p>
+            What started out as a short design sprint turned into experimenting with the APIs of the various systems to automate all of this process.
+            We had in mind a simple interface, one that could work quickly on a phone, even if you were sick.
+            You should be able to just enter in the dates and what you were out for, and the system could handle the rest.
+          </p>
+          <p>
+            We adopted the name OOO (pronounced &ldquo;Triple-O&rdquo;) and got to work drawing up plans for an easy to read calendar and an efficient entry form.
+            Things like PTO (Paid Time Off) have a lot more steps than WFH (Working from Home) or WFOO (Working from Other Office), and <mark>the app should be a helpful assistant, knowing just want to do</mark>.
+          </p>
 
-            <div className="split-secondary">
-              <img src="/source/images/case-studies/ooo-form.png" />
-            </div>
-          </div>
+          <p>
+            <img src="/source/images/case-studies/ooo-form.png" />
+          </p>
 
           <p>
             The calendar views serve as the dashboard of information, but also the starting point in entering new OOO time.
@@ -74,12 +59,18 @@ class OOOCaseStudy extends React.Component {
             This helps keep the calendar easy to scan, but also more naturally fits the question &ldquo;Who is on vacation next week?&rdquo;.
             <mark>We put a lot of thought into how a user might ask these sorts of questions</mark> and made sure that was reflected in the interface.
           </p>
+        </section>
 
-          <Example
-            image="ooo-monthly.png"
-            caption="Monthly calendar view with office picker"
-          />
+        <div className="inset inset--desktop">
+          <section>
+            <Example
+              image="ooo-monthly.png"
+              caption="Monthly calendar view with office picker"
+            />
+          </section>
+        </div>
 
+        <section>
           <p>
             We discovered that there were really two different ways that someone looks for information on a calendar.
             One is where you are looking for an overview of the office activity, the second is when you are looking for specific information on one person.
@@ -87,29 +78,31 @@ class OOOCaseStudy extends React.Component {
             It wouldn't be common for someone to have more than one status per day, so that lets us use a much simpler bar interface to show each person on their own.
             Since we aren't combining people in the same Other Office status bars, we can be more helpful and display the specific office they would be in.
           </p>
+        </section>
 
-          <Example
-            image="ooo-weekly.png"
-            caption="A simpler weekly view to keep track of your team"
-          />
+        <div className="inset inset--desktop">
+          <section>
+            <Example
+              image="ooo-weekly.png"
+              caption="A simpler weekly view to keep track of your team"
+            />
+          </section>
+        </div>
 
-          <div className="split-layout">
-            <div className="split-primary">
-              <p>
-                My favorite feature is the success message.
-                It may not look like much, but this little message reassures the user that everything was done and they can relax.
-                Messaging like this would appear in the emails as well, always cordial and enthusiastic.
-              </p>
-              <p>
-                <mark>I think our tools should be an extension of ourselves</mark>, and this is where the helpful assistant idea comes to life.
-                As technologists we may be more optimistic about technology in general, but I think the world could use a lot more fun and friendly in their apps.
-              </p>
-            </div>
+        <section>
+          <p>
+            My favorite feature is the success message.
+            It may not look like much, but this little message reassures the user that everything was done and they can relax.
+            Messaging like this would appear in the emails as well, always cordial and enthusiastic.
+          </p>
+          <p>
+            <mark>I think our tools should be an extension of ourselves</mark>, and this is where the helpful assistant idea comes to life.
+            As technologists we may be more optimistic about technology in general, but I think the world could use a lot more fun and friendly in their apps.
+          </p>
 
-            <div className="split-secondary">
-              <img src="/source/images/case-studies/ooo-complete.png" />
-            </div>
-          </div>
+          <p>
+            <img src="/source/images/case-studies/ooo-complete.png" />
+          </p>
         </section>
 
         <section>
@@ -142,7 +135,10 @@ OOOCaseStudy.defaultProps = {
   time: "1 month",
   team: "1 Designer, 2 Developers",
   background: "case-study-bg-ooo.png",
-  icon: "case-study-logo-ooo.svg"
+  icon: "case-study-logo-ooo.svg",
+  client: "thoughtbot",
+  client_url: "http://thoughtbot.com",
+  intro: "This is a little something we experimented on at thoughtbot for Out of Office notifications. We came up with a way to automate the hassle of telling your team you would be gone and made it much simpler. We ended up integrating many of these ideas and designs into our larger internal planning app, but I still love the way the original idea looked."
 }
 
 export default OOOCaseStudy;
