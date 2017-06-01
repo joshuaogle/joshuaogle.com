@@ -1,7 +1,7 @@
 {
-  "name": "spa-github-pages",
-  "version": "3.0.0",
-  "description": "Single Page Apps for GitHub Pages",
+  "name": "joshuaogle.com",
+  "version": "1.0.0",
+  "description": "Personal Portfolio of Joshua Ogle",
   "scripts": {
     "start": "webpack-dev-server -d --inline --host 0.0.0.0 --port 3200 --history-api-fallback --progress",
     "deploy": "webpack -p && git add . && git commit -am 'Production build' && git push origin master"
@@ -42,7 +42,7 @@
     "style-loader": "^0.13.1",
     "svg-inline-loader": "^0.7.1",
     "url-loader": "^0.5.7",
-    "webpack": "^2.0.0",
-    "webpack-dev-server": "^1.16.2"
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^1.16.5"
   }
 }
