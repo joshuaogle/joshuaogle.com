@@ -1,14 +1,13 @@
 import React from 'react';
 import './style.sass';
-import './timeline.sass';
 
 import BodyClass from '../../components/BodyClass';
 import Intro from '../../components/Intro';
-import InlineSVG from '../../components/InlineSVG';
-import Clients from './Clients';
-import Teaching from './Teaching';
-import Timeline from './Timeline';
 import Footer from '../../components/Footer';
+import InlineSVG from '../../components/InlineSVG';
+import Clients from '../../sections/Clients';
+import Teaching from '../../sections/Teaching';
+import Timeline from '../../sections/Timeline';
 
 class About extends React.Component {
   render() {

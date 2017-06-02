@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router';
 
 import CaseStudy from './CaseStudy';
-import Phone from './Phone';
+import Phone from '../../../components/Phone';
 
 class SummitCaseStudy extends React.Component {
   render() {

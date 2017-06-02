@@ -1,11 +1,11 @@
 import React from 'react';
 import {Link} from 'react-router';
 
-import caseStudyProps from '../../data/case-studies';
-import CaseStudyItem from '../../components/CaseStudyItem';
-import Intro from '../../components/Intro';
+import caseStudyProps from '../data/case-studies';
+import CaseStudyItem from '../components/CaseStudyItem';
+import Intro from '../components/Intro';
 
-import './interactiondesign.sass';
+import './casestudies.sass';
 
 class InteractionDesign extends React.Component {
   isOnScreen(element) {

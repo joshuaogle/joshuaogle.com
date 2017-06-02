@@ -1,7 +1,7 @@
 import React from 'react';
 import './branding.sass';
 
-import InlineSVG from '../../components/InlineSVG';
+import InlineSVG from '../components/InlineSVG';
 
 class Branding extends React.Component {
   render() {

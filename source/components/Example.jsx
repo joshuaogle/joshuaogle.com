@@ -1,8 +1,8 @@
 import React from 'react';
 
-import BodyClass from '../../../components/BodyClass';
-import Intro from '../../../components/Intro';
-import Footer from '../../../components/Footer';
+import BodyClass from './BodyClass';
+import Intro from './Intro';
+import Footer from './Footer';
 
 class Example extends React.Component {
   renderCaption() {

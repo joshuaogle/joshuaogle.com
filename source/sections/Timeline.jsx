@@ -1,5 +1,5 @@
 import React from 'react';
-import InlineSVG from '../../components/InlineSVG';
+import InlineSVG from '../components/InlineSVG';
 import './timeline.sass';
 
 class Timeline extends React.Component {

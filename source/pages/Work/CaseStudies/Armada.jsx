@@ -1,7 +1,7 @@
 import React from 'react';
 
 import CaseStudy from './CaseStudy';
-import Example from './Example';
+import Example from '../../../components/Example';
 
 class ArmadaCaseStudy extends React.Component {
   render() {

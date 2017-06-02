@@ -2,8 +2,8 @@ import React from 'react';
 import {Link} from 'react-router';
 
 import CaseStudy from './CaseStudy';
-import Example from './Example';
-import Phone from './Phone';
+import Example from '../../../components/Example';
+import Phone from '../../../components/Phone';
 
 class KitMathCaseStudy extends React.Component {
   render() {

@@ -2,7 +2,7 @@ import React from 'react';
 import Rellax from 'rellax';
 import './gallery.sass';
 
-import InlineSVG from '../../components/InlineSVG';
+import InlineSVG from '../components/InlineSVG';
 
 class Gallery extends React.Component {
   componentDidMount() {
