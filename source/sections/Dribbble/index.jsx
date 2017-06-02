@@ -1,5 +1,5 @@
 import React from 'react';
-import './dribbble.sass';
+import './style.sass';
 
 class Dribbble extends React.Component {
   getDribbbleFeed() {

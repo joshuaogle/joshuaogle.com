@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router';
-import InlineSVG from '../components/InlineSVG';
-import './clients.sass';
+import InlineSVG from '../../components/InlineSVG';
+import './style.sass';
 
 class Clients extends React.Component {
   render() {

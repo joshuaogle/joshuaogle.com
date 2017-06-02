@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router';
-import './teaching.sass';
+import './style.sass';
 
 class Teaching extends React.Component {
   render() {
