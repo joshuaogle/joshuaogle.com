@@ -23,6 +23,7 @@
       z-index: 2
 
       &::after
+        opacity: 1
         transform: translateY(0)
 
     &::after
@@ -31,9 +32,10 @@
       content: attr(data-name)
       display: block
       font-size: $smallest-font-size
+      opacity: 0
       padding-top: 0.25rem
       transform: translateY(-100%)
-      transition: transform $base-timing
+      transition: transform $base-timing, opacity $slow-timing
       text-align: center
       z-index: -1
 
