@@ -23,11 +23,21 @@ class Clients extends React.Component {
           Here are a few clients you might have heard of:
         </p>
         <div className="clients-logos">
-          <InlineSVG src="client-expedia.svg" />
-          <InlineSVG src="client-amex.svg" />
-          <InlineSVG src="client-dollarshaveclub.svg" />
-          <InlineSVG src="client-att.svg" />
-          <InlineSVG src="client-sharespost.svg" />
+          <div className="client-logo" data-name="Expedia">
+            <InlineSVG src="client-expedia.svg" />
+          </div>
+          <div className="client-logo" data-name="American Express">
+            <InlineSVG src="client-amex.svg" />
+          </div>
+          <div className="client-logo" data-name="Dollar Shave Club">
+            <InlineSVG src="client-dollarshaveclub.svg" />
+          </div>
+          <div className="client-logo" data-name="AT&T">
+            <InlineSVG src="client-att.svg" />
+          </div>
+          <div className="client-logo" data-name="Sharespost">
+            <InlineSVG src="client-sharespost.svg" />
+          </div>
         </div>
       </section>
     );

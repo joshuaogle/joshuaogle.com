@@ -4,6 +4,7 @@ import BodyClass from '../../components/BodyClass';
 import Intro from '../../components/Intro';
 import Footer from '../../components/Footer';
 import Gallery from '../../sections/Gallery';
+import Clients from '../../sections/Clients';
 import CaseStudies from '../../sections/CaseStudies';
 import Dribbble from '../../sections/Dribbble';
 import Tools from '../../sections/Tools';
@@ -23,6 +24,7 @@ class Work extends React.Component {
         </Intro>
         <div className="content">
           <Gallery />
+          <Clients />
           <CaseStudies />
           <Dribbble />
           <Tools />

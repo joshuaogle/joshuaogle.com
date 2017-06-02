@@ -5,7 +5,6 @@ import BodyClass from '../../components/BodyClass';
 import Intro from '../../components/Intro';
 import Footer from '../../components/Footer';
 import InlineSVG from '../../components/InlineSVG';
-import Clients from '../../sections/Clients';
 import Teaching from '../../sections/Teaching';
 import Timeline from '../../sections/Timeline';
 
@@ -48,8 +47,6 @@ class About extends React.Component {
               </p>
             </blockquote>
           </section>
-
-          <Clients />
 
           <Teaching />
         </div>
