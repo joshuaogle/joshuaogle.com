@@ -19,18 +19,18 @@ class Home extends React.Component {
 
   renderCaseStudies() {
     return featuredCaseStudies.map((study) =>
-      <Link
+      <div
         key={study.shortName}
-        to={this.caseStudyPath(study)}
-        target={this.caseStudyTarget(study)}
-        className={`home-work--${study.shortName}`}
+        className={`home-work-item home-work-item--${study.shortName}`}
       >
-        <div className="home-work-thumbnail">
-          <div className="home-work-thumbnail-image" style={{backgroundImage: `url(${study.thumbnail})`}}></div>
-        </div>
-        <h3>{study.title}</h3>
-        <p>{study.role}</p>
-      </Link>
+        <Link to={this.caseStudyPath(study)} target={this.caseStudyTarget(study)} >
+          <div className="home-work-thumbnail">
+            <div className="home-work-thumbnail-image" style={{backgroundImage: `url(${study.thumbnail})`}}></div>
+          </div>
+          <h3>{study.title}</h3>
+          <p>{study.role}</p>
+        </Link>
+      </div>
     );
   }
 

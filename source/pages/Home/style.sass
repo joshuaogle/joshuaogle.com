@@ -53,27 +53,27 @@ body[data-current="home"]
 
     > a
       display: block
-      margin-bottom: $large-spacing
-      padding: 0 $base-spacing
-      position: relative
-      text-align: center
 
-      @each $brand, $color in $brand-colors
-        &.home-work--#{$brand}
-          h3
-            +brand-text($color)
-            display: inline-block
+  &-item
+    margin-bottom: $large-spacing
+    position: relative
+    text-align: center
 
-          .home-work-thumbnail::after
-            +brand-gradient($color)
+    @each $brand, $color in $brand-colors
+      &--#{$brand}
+        h3
+          +brand-text($color)
 
-      h3
-        margin-bottom: 0
+        .home-work-thumbnail::after
+          +brand-gradient($color)
 
-      p
-        color: $muted-color
-        font-size: $small-font-size
-        margin: 0
+    h3
+      margin-bottom: 0
+
+    p
+      color: $muted-color
+      font-size: $small-font-size
+      margin: 0
 
   .home-work-thumbnail
     margin: 0 0 $small-spacing
@@ -89,7 +89,7 @@ body[data-current="home"]
       border-radius: $base-border-radius
       content: ""
       display: block
-      padding-top: 45%
+      padding-top: 50%
       transform: skewY(3deg)
       z-index: 1
 
@@ -97,12 +97,12 @@ body[data-current="home"]
       background-color: $offwhite
       background-size: cover
       box-shadow: $base-shadow, $small-shadow
-      margin: 0 15%
-      padding-top: 70%
+      margin: 0 20%
+      padding-top: 60%
       position: relative
       transform: scale(1)
       transition: box-shadow $base-timing, transform $fast-timing
-      width: 70%
+      width: 60%
       z-index: 2
 
 
