@@ -31,16 +31,11 @@ class ArmadaCaseStudy extends React.Component {
             These devices could give you an incredible amount of insight into the location history and driver behavior.
             But <mark>all of this information is useless without an easy to understand interface</mark> that provides this information in real-time.
           </p>
-        </section>
 
-        <div className="inset inset--desktop">
-          <section>
-            <Example
-              image="sharespost-admin.png"
-              caption="The admin system that gives the brokers access to all of the data."
-            />
-          </section>
-        </div>
+          <p>
+            <img src="/source/images/case-studies/armada-device.png" />
+          </p>
+        </section>
 
         <section>
           <div className="section-title">The Solution</div>
@@ -124,7 +119,7 @@ ArmadaCaseStudy.defaultProps = {
   client: "Armada Telematics",
   client_url: "http://armadatracking.com",
   intro: "Armada helps companies keep track of their vehicles with an easy to use map-based interface. The asset tracking industry is dominated by apps with frustrating user experiences, and so Armada set out to make something better. The largest companies in the space have strong connections to the trucking and transportation industries, but the opportunity was there to bring a modern startup approach and design focus to create something they would switch for.",
-  thumbnail: "/source/images/case-studies/sharespost-admin.png"
+  thumbnail: "/source/images/case-studies/armada-home.png"
 }
 
 export default ArmadaCaseStudy;
