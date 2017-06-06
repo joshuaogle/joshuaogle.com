@@ -32,9 +32,12 @@ class ArmadaCaseStudy extends React.Component {
             But <mark>all of this information is useless without an easy to understand interface</mark> that provides this information in real-time.
           </p>
 
-          <p>
-            <img src="/source/images/case-studies/armada-device.png" />
-          </p>
+          <figure>
+              <img src="/source/images/case-studies/armada-device.png" />
+            <figcaption>
+              A device plugs into the car's data (OBD2) port to send readings and location data via a cellular chip
+            </figcaption>
+          </figure>
         </section>
 
         <section>
