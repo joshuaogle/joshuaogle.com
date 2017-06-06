@@ -3,7 +3,6 @@ import './style.sass';
 
 import BodyClass from '../../components/BodyClass';
 import Intro from '../../components/Intro';
-import Footer from '../../components/Footer';
 import InlineSVG from '../../components/InlineSVG';
 import Teaching from '../../sections/Teaching';
 import Timeline from '../../sections/Timeline';
@@ -50,7 +49,6 @@ class About extends React.Component {
 
           <Teaching />
         </div>
-        <Footer />
       </BodyClass>
     );
   }

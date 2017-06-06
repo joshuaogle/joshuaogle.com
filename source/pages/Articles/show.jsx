@@ -5,7 +5,6 @@ import {Link} from 'react-router';
 import {renderSource} from '../../utils';
 import BodyClass from '../../components/BodyClass';
 import Intro from '../../components/Intro';
-import Footer from '../../components/Footer';
 
 class Articles extends React.Component {
   render() {
@@ -21,7 +20,6 @@ class Articles extends React.Component {
           className="content article-content"
           dangerouslySetInnerHTML={{__html: article.__content}}
         />
-        <Footer />
       </BodyClass>
     );
   }

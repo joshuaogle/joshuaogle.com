@@ -83,8 +83,8 @@ mark
     font-size: 1em
 
 blockquote
-  background-color: $background-color
-  border-left: 5px solid shade($background-color, 5%)
+  background-color: #fff
+  border-left: 5px solid rgba($muted-color, 0.33)
   margin-left: $base-spacing
   margin-right: 0
   padding-left: $small-spacing
@@ -92,7 +92,7 @@ blockquote
 
   &::before
     +position(absolute, -0.1em null null -0.5em)
-    color: shade($background-color, 15%)
+    color: rgba($muted-color, 0.33)
     content: "“"
     font-family: Georgia, serif
     font-size: 4.5em

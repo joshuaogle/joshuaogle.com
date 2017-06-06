@@ -3,7 +3,6 @@ import './style.sass';
 
 import BodyClass from '../../components/BodyClass';
 import Intro from '../../components/Intro';
-import Footer from '../../components/Footer';
 
 class About extends React.Component {
   render() {
@@ -58,7 +57,6 @@ class About extends React.Component {
             </p>
           </section>
         </div>
-        <Footer />
       </BodyClass>
     );
   }

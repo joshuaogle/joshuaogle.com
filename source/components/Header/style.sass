@@ -1,11 +1,16 @@
 @import "../../stylesheets/variables"
 
 .site-header
-  +position(absolute, $small-spacing $small-spacing null)
+  +position(absolute, $base-spacing $base-spacing null)
   display: flex
   justify-content: space-between
   padding: $small-spacing $base-spacing 0
   z-index: $z-header
+
+  @media (max-width: $break-small)
+    left: $smallest-spacing
+    right: $smallest-spacing
+    top: $small-spacing
 
 .logo
   display: block
@@ -40,6 +45,9 @@
     list-style: none
     margin: 0 0 0 $base-spacing
     padding: 0
+
+    @media (max-width: $break-small)
+      margin-left: $small-spacing
 
     &::before
       display: none

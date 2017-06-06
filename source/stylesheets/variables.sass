@@ -16,7 +16,7 @@ $green: #bfd849
 $magenta: #c76baa
 $cyan: #66ddd2
 
-$background-color: $white
+$background-color: $offwhite
 $text-color: $brown
 $muted-color: mix($text-color, $background-color)
 $link-color: $blue
@@ -77,13 +77,14 @@ $slow-timing: $base-timing * 2
 
 @mixin brand-gradient($color)
   $shifted-color: saturate(tint(adjust-hue($color, 15%), 20%), 20%)
-  color: $color
-  -webkit-text-fill-color: transparent
+  color: #fff
   background: $color linear-gradient(-15deg, $color 10%, $shifted-color)
   background: -o-linear-gradient(transparent, transparent)
 
 @mixin brand-text($color)
   +brand-gradient($color)
+  color: $color
+  -webkit-text-fill-color: transparent
   -webkit-background-clip: text
 
 @mixin highlight($color)
@@ -95,7 +96,7 @@ $slow-timing: $base-timing * 2
   position: relative
 
   &::before
-    +position(absolute, 50% 100% null null)
+    +position(absolute, 0.66em 100% null null)
     background-color: $color
     border-radius: 0.25rem 0
     content: ""
@@ -107,7 +108,7 @@ $slow-timing: $base-timing * 2
 
 @mixin angle
   +position(absolute, null 0)
-  background-color: $background-color
+  background-color: $white
   content: ""
   display: block
   height: $base-angle

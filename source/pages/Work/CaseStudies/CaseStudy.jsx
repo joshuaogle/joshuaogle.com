@@ -2,7 +2,6 @@ import React from 'react';
 
 import BodyClass from '../../../components/BodyClass';
 import Intro from '../../../components/Intro';
-import Footer from '../../../components/Footer';
 
 class CaseStudy extends React.Component {
   getYear() {
@@ -57,7 +56,6 @@ class CaseStudy extends React.Component {
           </section>
           {this.props.children}
         </article>
-        <Footer />
       </BodyClass>
     );
   }

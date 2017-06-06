@@ -2,7 +2,6 @@ import React from 'react';
 
 import BodyClass from '../../components/BodyClass';
 import Intro from '../../components/Intro';
-import Footer from '../../components/Footer';
 import Gallery from '../../sections/Gallery';
 import Clients from '../../sections/Clients';
 import CaseStudies from '../../sections/CaseStudies';
@@ -29,7 +28,6 @@ class Work extends React.Component {
           <Dribbble />
           <Tools />
         </div>
-        <Footer />
       </BodyClass>
     );
   }

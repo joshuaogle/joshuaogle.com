@@ -14,9 +14,9 @@
                         <use xlink:href="#path-1"></use>
                     </mask>
                     <g id="Mask"></g>
-                    <rect fill="#38677E" mask="url(#mask-2)" x="35.3094058" y="41.7203757" width="201.768033" height="250.322254" rx="100"></rect>
-                    <rect id="Rectangle-6" fill="#FFFFFF" mask="url(#mask-2)" transform="translate(170.504434, 68.507766) rotate(-60.000000) translate(-170.504434, -68.507766) " x="132.672928" y="51.8196161" width="75.6630125" height="33.3763006"></rect>
-                    <rect id="Rectangle-6" fill="#FFFFFF" mask="url(#mask-2)" transform="translate(104.095918, 69.231745) scale(-1, 1) rotate(-60.000000) translate(-104.095918, -69.231745) " x="66.2644121" y="52.543595" width="75.6630125" height="33.3763006"></rect>
+                    <rect fill="#38677E" mask="url(#kitmath-congrats-mask-2)" x="35.3094058" y="41.7203757" width="201.768033" height="250.322254" rx="100"></rect>
+                    <rect id="Rectangle-6" fill="#FFFFFF" mask="url(#kitmath-congrats-mask-2)" transform="translate(170.504434, 68.507766) rotate(-60.000000) translate(-170.504434, -68.507766) " x="132.672928" y="51.8196161" width="75.6630125" height="33.3763006"></rect>
+                    <rect id="Rectangle-6" fill="#FFFFFF" mask="url(#kitmath-congrats-mask-2)" transform="translate(104.095918, 69.231745) scale(-1, 1) rotate(-60.000000) translate(-104.095918, -69.231745) " x="66.2644121" y="52.543595" width="75.6630125" height="33.3763006"></rect>
                 </g>
                 <rect id="Rectangle-4" fill="#FBDECC" x="35.3094058" y="31.7074855" width="201.768033" height="250.322254" rx="100"></rect>
                 <g id="Group-3" transform="translate(85.751414, 145.186907)">

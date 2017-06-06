@@ -30,14 +30,18 @@
       color: $link-color
 
 .article-summary__featured
-  margin-bottom: $large-spacing
+  @media (min-width: $break-small)
+    margin-bottom: $large-spacing
 
   h3
-    font-size: 2rem
+    @media (min-width: $break-small)
+      font-size: 2rem
 
   p
-    font-size: 1.25rem
     font-weight: 200
+
+    @media (min-width: $break-small)
+      font-size: 1.25rem
 
 .article-summary__list
   +two-column

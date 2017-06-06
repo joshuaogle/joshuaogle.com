@@ -4,7 +4,6 @@ import './style.sass';
 
 import {featuredArticles} from '../../data/articles';
 import {featuredCaseStudies} from '../../data/case-studies';
-import Footer from '../../components/Footer';
 import BodyClass from '../../components/BodyClass';
 import Intro from '../../components/Intro';
 import ArticleSummary from '../Articles/Summary';
@@ -91,7 +90,6 @@ class Home extends React.Component {
             {this.renderArticles()}
           </div>
         </section>
-        <Footer />
       </BodyClass>
     );
   }

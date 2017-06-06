@@ -7,7 +7,6 @@ import articles from '../../data/articles';
 import BodyClass from '../../components/BodyClass';
 import Intro from '../../components/Intro';
 import Summary from './Summary';
-import Footer from '../../components/Footer';
 
 class Articles extends React.Component {
   summarize(summaryArticles) {
@@ -52,7 +51,6 @@ class Articles extends React.Component {
             {this.summarize(olderArticles)}
           </div>
         </section>
-        <Footer />
       </BodyClass>
     );
   }

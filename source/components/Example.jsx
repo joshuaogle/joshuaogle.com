@@ -2,7 +2,6 @@ import React from 'react';
 
 import BodyClass from './BodyClass';
 import Intro from './Intro';
-import Footer from './Footer';
 
 class Example extends React.Component {
   renderCaption() {

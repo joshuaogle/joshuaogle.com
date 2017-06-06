@@ -1,16 +1,15 @@
 @import "../../stylesheets/variables"
 
 footer
-  +angle-top
   background-color: $offwhite
+  color: $muted-color
   margin-top: $base-spacing
-  padding-top: $large-spacing
   position: relative
   transition: transform $base-timing
   z-index: 1
 
   section
-    padding-bottom: $base-spacing
+    padding: $small-spacing $base-spacing
 
   h2
     font-size: 1.5rem
@@ -19,6 +18,12 @@ footer
     color: $muted-color
     font-weight: 500
     text-decoration: underline
+
+    &:hover
+      text-decoration: underline
+
+  p
+    margin-bottom: $small-spacing
 
   .copyright
     font-size: $smallest-font-size

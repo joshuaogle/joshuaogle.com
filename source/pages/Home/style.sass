@@ -91,7 +91,7 @@ body[data-current="home"]
       display: block
       padding-top: 45%
       transform: skewY(3deg)
-      z-index: -1
+      z-index: 1
 
     &-image
       background-color: $offwhite
@@ -99,9 +99,11 @@ body[data-current="home"]
       box-shadow: $base-shadow, $small-shadow
       margin: 0 15%
       padding-top: 70%
+      position: relative
       transform: scale(1)
       transition: box-shadow $base-timing, transform $fast-timing
       width: 70%
+      z-index: 2
 
 
 .home-articles
