@@ -197,7 +197,7 @@ SharespostCaseStudy.defaultProps = {
   client: "Sharespost",
   client_url: "http://sharespost.com",
   intro: "At thoughtbot, we helped one of the largest private securities firms make the process of buying and selling shares easy. Their existing process was very manual, relying on brokers to do almost everything. To help them scale even bigger, they would need to find a way to automate as much of the process. This would free up the brokers to provide better service to even more users.",
-  thumbnail: "/source/images/case-studies/sharespost-waterfall.png"
+  thumbnail: "/source/images/case-studies/sharespost-home.png"
 }
 
 export default SharespostCaseStudy;
