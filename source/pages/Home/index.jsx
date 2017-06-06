@@ -50,7 +50,7 @@ class Home extends React.Component {
           <div className="home-intro--copy">
             <h1>Joshua Ogle</h1>
             <p>
-              I’m a freelance Senior Product Designer in Denver.
+              I’m a Senior Product Designer in Denver.
               Previously at <a href="http://citrusbyte.com" target="_new">Citrusbyte</a> and <a href="http://thoughtbot.com" target="_new">thoughtbot</a>.
               I help companies of all sizes bring their ideas to life and make their customers happy.
             </p>
