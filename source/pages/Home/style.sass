@@ -51,6 +51,10 @@ body[data-current="home"]
     +two-column
     margin: $large-spacing 0 $base-spacing
 
+    @supports (display: grid)
+      display: grid
+      grid-auto-rows: minmax(22rem, auto)
+
     > a
       display: block
 
