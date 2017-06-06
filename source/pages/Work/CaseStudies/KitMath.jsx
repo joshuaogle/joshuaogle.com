@@ -175,7 +175,8 @@ KitMathCaseStudy.defaultProps = {
   client: "Husk",
   intro: "I've been making products for years, but rarely get to work on something that truly makes the world a better place. \
     That's why I was really excited to work on a mobile app with people who are on a mission to use their powers for good and make apps that make a difference. \
-    And they're starting with making education fun."
+    And they're starting with making education fun.",
+  thumbnail: "/source/images/case-studies/kitmath-index.png"
 }
 
 export default KitMathCaseStudy;

@@ -53,8 +53,10 @@ body[data-current="home"]
 
     > a
       display: block
-      margin-bottom: $base-spacing
+      margin-bottom: $large-spacing
       padding: 0 $base-spacing
+      position: relative
+      text-align: center
 
       @each $brand, $color in $brand-colors
         &.home-work--#{$brand}
@@ -62,14 +64,45 @@ body[data-current="home"]
             +brand-text($color)
             display: inline-block
 
+          .home-work-thumbnail::after
+            +brand-gradient($color)
+
       h3
-        +title-line()
         margin-bottom: 0
 
       p
         color: $muted-color
         font-size: $small-font-size
         margin: 0
+
+  .home-work-thumbnail
+    margin: 0 0 $small-spacing
+
+    &:hover
+      .home-work-thumbnail-image
+        box-shadow: $large-shadow, $base-shadow
+        transform: scale(1.025)
+
+    &::after
+      +position(absolute, 10% $base-spacing null)
+      background-color: $offwhite
+      border-radius: $base-border-radius
+      content: ""
+      display: block
+      padding-top: 45%
+      transform: skewY(3deg)
+      z-index: -1
+
+    &-image
+      background-color: $offwhite
+      background-size: cover
+      box-shadow: $base-shadow, $small-shadow
+      margin: 0 15%
+      padding-top: 70%
+      transform: scale(1)
+      transition: box-shadow $base-timing, transform $fast-timing
+      width: 70%
+
 
 .home-articles
   @media (min-width: $break-small)

@@ -130,7 +130,8 @@ SummitCaseStudy.defaultProps = {
   team: "1 Designer, 1 Developer",
   background: "case-study-bg-summit.png",
   icon: "case-study-logo-thoughtbot.svg",
-  intro: "Every year, thoughtbot assembles the entire team from all of its offices to celebrate the year and get to know the other people you may not have seen in person yet. In 2015, it was Denver's turn and we were excited to greet our friends from around the world. Denver has a lot of great things to offer, but many of those visiting were in town for the first time and we wanted to share some of our favorite spots with them. Besides our favorite coffee spots and restaurants, we also wanted to warn our friends about drinking at altitude. And because it was Denver shortly after legalized recreational marijuana, we wanted to include some tips so no one had a bad time."
+  intro: "Every year, thoughtbot assembles the entire team from all of its offices to celebrate the year and get to know the other people you may not have seen in person yet. In 2015, it was Denver's turn and we were excited to greet our friends from around the world. Denver has a lot of great things to offer, but many of those visiting were in town for the first time and we wanted to share some of our favorite spots with them. Besides our favorite coffee spots and restaurants, we also wanted to warn our friends about drinking at altitude. And because it was Denver shortly after legalized recreational marijuana, we wanted to include some tips so no one had a bad time.",
+  thumbnail: "/source/images/case-studies/summit-map.png"
 }
 
 export default SummitCaseStudy;

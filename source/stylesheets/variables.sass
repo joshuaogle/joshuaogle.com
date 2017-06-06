@@ -24,9 +24,9 @@ $link-hover: shade($blue, 15%)
 $logo-color: $offwhite
 $highlight-color: rgba(mix($yellow, $red, 95%), 0.25)
 
-$base-shadow: 0 1rem 0.33rem -0.75rem rgba(#000, 0.25), 0 0.33rem 1rem rgba(#000, 0.1)
+$base-shadow: 0 1rem 0.33rem -0.75rem rgba(#000, 0.1), 0 0.33rem 1rem rgba(#000, 0.25)
 $dark-shadow: 0 1rem 0.33rem -0.75rem rgba(#000, 0.25), 0 0.33rem 1rem rgba(#000, 0.25)
-$large-shadow: 0 1rem 1rem -0.5rem rgba(#000, 0.25), 0 1rem 3rem rgba(#000, 0.1)
+$large-shadow: 0 1rem 1rem -0.5rem rgba(#000, 0.1), 0 1rem 3rem rgba(#000, 0.1)
 $small-shadow: 0 0.5rem 0.33rem -0.33rem rgba($black, 0.1), 0 0.25rem 1rem rgba($black, 0.1)
 $smallest-shadow: 0 0.25rem 0.25rem -0.25rem rgba($black, 0.33), 0 0.1rem 0.25rem rgba($black, 0.1)
 
@@ -75,12 +75,15 @@ $slow-timing: $base-timing * 2
     padding-left: $large-spacing
     padding-right: $large-spacing
 
-@mixin brand-text($color)
-  $shifted-color: tint(adjust-hue($color, 15%), 15%)
+@mixin brand-gradient($color)
+  $shifted-color: saturate(tint(adjust-hue($color, 15%), 20%), 20%)
   color: $color
   -webkit-text-fill-color: transparent
-  background: $color linear-gradient(90deg, $color 10%, $shifted-color)
+  background: $color linear-gradient(-15deg, $color 10%, $shifted-color)
   background: -o-linear-gradient(transparent, transparent)
+
+@mixin brand-text($color)
+  +brand-gradient($color)
   -webkit-background-clip: text
 
 @mixin highlight($color)

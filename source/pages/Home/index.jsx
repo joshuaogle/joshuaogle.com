@@ -26,6 +26,9 @@ class Home extends React.Component {
         target={this.caseStudyTarget(study)}
         className={`home-work--${study.shortName}`}
       >
+        <div className="home-work-thumbnail">
+          <div className="home-work-thumbnail-image" style={{backgroundImage: `url(${study.thumbnail})`}}></div>
+        </div>
         <h3>{study.title}</h3>
         <p>{study.role}</p>
       </Link>
