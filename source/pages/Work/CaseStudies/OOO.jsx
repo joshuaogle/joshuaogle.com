@@ -136,7 +136,7 @@ OOOCaseStudy.defaultProps = {
   team: "1 Designer, 2 Developers",
   background: "case-study-bg-ooo.png",
   icon: "case-study-logo-ooo.svg",
-  client: "thoughtbot",
+  client: "Internal Project",
   client_url: "http://thoughtbot.com",
   intro: "This is a little something we experimented on at thoughtbot for Out of Office notifications. We came up with a way to automate the hassle of telling your team you would be gone and made it much simpler. We ended up integrating many of these ideas and designs into our larger internal planning app, but I still love the way the original idea looked.",
   thumbnail: "/source/images/case-studies/ooo-weekly.png"
