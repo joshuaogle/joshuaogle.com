@@ -65,7 +65,6 @@ class Home extends React.Component {
           <p>
             I have a passion for visual communication, problem-solving, usability, and storytelling.
             Designing with code and working side-by-side with developers helps to create a better product, and I like to encourage designers to get into code and vice versa.
-            You can see more of my work in interaction design and branding
           </p>
           <Link to="/work" className="more">More work</Link>
 
@@ -81,8 +80,7 @@ class Home extends React.Component {
             </div>
             <h2>Some light reading</h2>
             <p>
-              I occasionally write about design basics and front-end tips for
-              designers and developers. Done with these?&nbsp;
+              I occasionally write about design basics, leadership, and front-end tips for designers and developers.
             </p>
             <Link to="/articles" className="more">More articles</Link>
           </div>
