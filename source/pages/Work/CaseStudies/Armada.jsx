@@ -10,7 +10,7 @@ class ArmadaCaseStudy extends React.Component {
         <div className="inset inset--desktop">
           <section>
             <Example
-              image="armada-home.png"
+              image="case-studies/armada-home.png"
             />
           </section>
         </div>
@@ -55,7 +55,7 @@ class ArmadaCaseStudy extends React.Component {
         <div className="inset inset--desktop">
           <section>
             <Example
-              image="armada-users.png"
+              image="case-studies/armada-users.png"
             />
           </section>
         </div>
@@ -72,7 +72,7 @@ class ArmadaCaseStudy extends React.Component {
         <div className="inset inset--desktop">
           <section>
             <Example
-              image="armada-user.png"
+              image="case-studies/armada-user.png"
             />
           </section>
         </div>
@@ -91,7 +91,7 @@ class ArmadaCaseStudy extends React.Component {
         <div className="inset inset--desktop">
           <section>
             <Example
-              image="armada-trips.png"
+              image="case-studies/armada-trips.png"
             />
           </section>
         </div>

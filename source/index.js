@@ -17,6 +17,7 @@ import OOOCaseStudy from './pages/Work/CaseStudies/OOO';
 import SharespostCaseStudy from './pages/Work/CaseStudies/Sharespost';
 import KitMathCaseStudy from './pages/Work/CaseStudies/KitMath';
 import SummitCaseStudy from './pages/Work/CaseStudies/Summit';
+import NetkixExercise from './pages/Exercise/netkix';
 import PageNotFound from './pages/PageNotFound';
 
 const articleRoutes = articles.map((article) => <Route key={article.title} path={`/articles/${article.path}`} component={Article} article={article} />);
@@ -40,6 +41,8 @@ const routes = (
       <Redirect from="/Work/CaseStudies/kitmath" to="/work/kitmath" />
     <Route path="/work/summit" mapMenuTitle="Summit" component={SummitCaseStudy} />
       <Redirect from="/Work/CaseStudies/summit" to="/work/summit" />
+
+    <Route path="/exercise/netkix" mapMenuTitle="Netkix" component={NetkixExercise} />
 
     {articleRoutes}
     <Route path="*" mapMenuTitle="Page Not Found" component={PageNotFound} />

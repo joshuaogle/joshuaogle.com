@@ -17,7 +17,7 @@ class Example extends React.Component {
   render() {
     return (
       <figure>
-        <img src={`/source/images/case-studies/${this.props.image}`} className="case-study-example" />
+        <img src={`/source/images/${this.props.image}`} className="case-study-example" />
         {this.renderCaption()}
       </figure>
     );

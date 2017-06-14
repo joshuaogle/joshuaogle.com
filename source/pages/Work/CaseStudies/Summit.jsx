@@ -11,7 +11,7 @@ class SummitCaseStudy extends React.Component {
         <div className="inset inset--phone">
           <section>
             <Phone
-              image="summit-map.png"
+              image="case-studies/summit-map.png"
               caption="Easily see what is around you with helpful icons"
             />
           </section>
@@ -68,7 +68,7 @@ class SummitCaseStudy extends React.Component {
         <div className="inset inset--phone">
           <section>
             <Phone
-              image="summit-categories.png"
+              image="case-studies/summit-categories.png"
               caption="Looking for something specific? We've broken down our picks into categories"
             />
           </section>

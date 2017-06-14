@@ -11,7 +11,7 @@ class SharespostCaseStudy extends React.Component {
         <div className="inset inset--desktop">
           <section>
             <Example
-              image="sharespost-chart.png"
+              image="case-studies/sharespost-chart.png"
               caption="The home page greets users with an up-to-date evaluation of their holdings."
             />
           </section>
@@ -32,7 +32,7 @@ class SharespostCaseStudy extends React.Component {
           </p>
 
           <Example
-            image="sharespost-wires.png"
+            image="case-studies/sharespost-wires.png"
             caption="One of the earliest 'wireflows' from our Product Design Sprint. More detail was added as we got closer to development."
           />
 
@@ -59,7 +59,7 @@ class SharespostCaseStudy extends React.Component {
           </p>
 
           <Example
-            image="sharespost-sprint.jpg"
+            image="case-studies/sharespost-sprint.jpg"
             caption="So much paper, so many ideas. Design Sprints are my favorite way to start a project"
           />
 
@@ -72,7 +72,7 @@ class SharespostCaseStudy extends React.Component {
           </p>
 
           <Example
-            image="sharespost-invision.png"
+            image="case-studies/sharespost-invision.png"
             caption="InVision is perfect for user testing at any stage of production"
           />
 
@@ -85,7 +85,7 @@ class SharespostCaseStudy extends React.Component {
         <div className="inset inset--desktop">
           <section>
             <Example
-              image="sharespost-home.png"
+              image="case-studies/sharespost-home.png"
               caption="The home page greets users with an up-to-date evaluation of their holdings."
             />
           </section>
@@ -110,7 +110,7 @@ class SharespostCaseStudy extends React.Component {
 
             <div className="split-secondary">
               <Example
-                image="sharespost-card.png"
+                image="case-studies/sharespost-card.png"
                 caption="An early Opportunity Card wireframe"
               />
             </div>
@@ -128,7 +128,7 @@ class SharespostCaseStudy extends React.Component {
         <div className="inset inset--desktop">
           <section>
             <Example
-              image="sharespost-waterfall.png"
+              image="case-studies/sharespost-waterfall.png"
               caption="The &ldquo;waterfall chart&rdquo; was the most technically difficult, but also the most informative."
             />
           </section>
@@ -148,7 +148,7 @@ class SharespostCaseStudy extends React.Component {
         <div className="inset inset--desktop">
           <section>
             <Example
-              image="sharespost-admin.png"
+              image="case-studies/sharespost-admin.png"
               caption="The admin system that gives the brokers access to all of the data."
             />
           </section>

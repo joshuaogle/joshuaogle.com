@@ -1,0 +1,52 @@
+body[data-current="exercise--netkix"]
+  .intro,
+  .inset
+    background: linear-gradient(-15deg, #4AD7D8, #2E5E8A)
+
+  h2
+    +brand-text(#2E5E8A)
+    display: inline-block
+
+  .inset
+    figcaption
+      color: #fff
+
+.netkix-personas
+  +two-column
+
+  .case-study-example
+    background: #F8F8F8 linear-gradient(#fff, #F8F8F8 10%)
+    display: flex
+    flex-direction: column
+    margin-bottom: $smallest-spacing
+    padding-top: $base-spacing
+    text-align: left
+
+  .netkix-personas-number,
+  h3,
+  p
+    margin: 0 0 $smallest-spacing
+    padding: 0 $base-spacing
+
+  p
+    flex: 1
+
+  .netkix-personas-number
+    @extend .section-title
+    margin-bottom: 0
+
+.netkix-widgets
+  section
+    position: relative
+
+  .netkix-widget-mobile
+    +position(absolute, 10% $small-spacing null null)
+    transform: scale(0.2)
+    transform-origin: 100% 0
+    z-index: 4
+
+    @media (min-width: $break-small)
+      transform: scale(0.33)
+
+    @media (min-width: $break-medium)
+      transform: scale(0.5)

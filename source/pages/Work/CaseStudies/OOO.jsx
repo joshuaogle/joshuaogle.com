@@ -26,7 +26,7 @@ class OOOCaseStudy extends React.Component {
           </p>
 
           <Example
-            image="ooo-concept.png"
+            image="case-studies/ooo-concept.png"
             caption="Design exploration and a fun color palette. Office icons by Kyle Fiedler."
           />
         </section>
@@ -64,7 +64,7 @@ class OOOCaseStudy extends React.Component {
         <div className="inset inset--desktop">
           <section>
             <Example
-              image="ooo-monthly.png"
+              image="case-studies/ooo-monthly.png"
               caption="Monthly calendar view with office picker"
             />
           </section>
@@ -83,7 +83,7 @@ class OOOCaseStudy extends React.Component {
         <div className="inset inset--desktop">
           <section>
             <Example
-              image="ooo-weekly.png"
+              image="case-studies/ooo-weekly.png"
               caption="A simpler weekly view to keep track of your team"
             />
           </section>

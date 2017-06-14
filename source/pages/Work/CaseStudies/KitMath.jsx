@@ -11,7 +11,7 @@ class KitMathCaseStudy extends React.Component {
       <CaseStudy introProps={this.props}>
         <section>
           <Example
-            image="kitmath-congrats.svg"
+            image="case-studies/kitmath-congrats.svg"
             caption="Albert Einstein stops by to give some encouragement"
           />
         </section>
@@ -65,7 +65,7 @@ class KitMathCaseStudy extends React.Component {
           </p>
 
           <Example
-            image="kitmath-characters.png"
+            image="case-studies/kitmath-characters.png"
             caption="Early sketch of our fun-loving cast of characters"
           />
 
@@ -78,7 +78,7 @@ class KitMathCaseStudy extends React.Component {
           </p>
 
           <Example
-            image="kitmath-pds.jpg"
+            image="case-studies/kitmath-pds.jpg"
             caption="Sketching every possible approach"
           />
 
@@ -92,7 +92,7 @@ class KitMathCaseStudy extends React.Component {
           </p>
 
           <Example
-            image="kitmath-wires.png"
+            image="case-studies/kitmath-wires.png"
             caption="The basic structure of the app captured early in the Design Sprint"
           />
 

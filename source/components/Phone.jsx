@@ -18,7 +18,7 @@ class Phone extends React.Component {
     return (
       <figure>
         <div className="case-study-phone">
-          <img src={`/source/images/case-studies/${this.props.image}`} />
+          <img src={`/source/images/${this.props.image}`} />
         </div>
         {this.renderCaption()}
       </figure>
