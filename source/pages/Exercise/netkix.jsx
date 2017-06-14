@@ -206,8 +206,28 @@ class Netkix extends React.Component {
             A painter's palette
           </h2>
           <p>
-            Let's focus on just the customizatino step.
+            Let's focus on just the customization step.
             This part of the product is all about empowering users to create just the right style without getting in their way.
+          </p>
+        </section>
+
+        <div className="inset inset--desktop">
+          <section>
+            <Example
+              image="exercises/netkix-widget-sketch.png"
+              caption="A mockup of our simpler experience"
+            />
+          </section>
+        </div>
+
+        <section>
+          <p>
+            By using the entire screen, we can let the user get to work without having to scroll or skip through steps.
+            We give most of the screen to the show with great photos to let the user see every side.
+            The app design should take back seat to their weird and wonderful design, so we're going with white and light gray so we don't influence their decisions.
+            The left sidebar lets them click through different parts of the shoe and <mark>a slide-out drawer gives them a wide palette of colors</mark> arranged by popularity (we might implement sorting by hue later).
+            Using these industry terms may get confusing, so we may want to create little previews next to the names, but I also think half the fun is just clicking around and experimenting so it might not be an issue.
+            We should know pretty quickly when observing the testers.
           </p>
         </section>
 
@@ -226,15 +246,6 @@ class Netkix extends React.Component {
         </div>
 
         <section>
-          <p>
-            By using the entire screen, we can let the user get to work without having to scroll or skip through steps.
-            We give most of the screen to the show with great photos to let the user see every side.
-            The app design should take back seat to their weird and wonderful design, so we're going with white and light gray so we don't influence their decisions.
-            The left sidebar lets them click through different parts of the shoe and <mark>a slide-out drawer gives them a wide palette of colors</mark> arranged by popularity (we might implement sorting by hue later).
-            Using these industry terms may get confusing, so we may want to create little previews next to the names, but I also think half the fun is just clicking around and experimenting so it might not be an issue.
-            We should know pretty quickly when observing the testers.
-          </p>
-
           <p>
             Right next to the "Add to Cart" button are links to Share and Save.
             If the user wants to save, they can name this shoe and it will be saved to their profile.
