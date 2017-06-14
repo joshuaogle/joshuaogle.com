@@ -217,6 +217,10 @@ class Netkix extends React.Component {
               image="exercises/netkix-widget-sketch.png"
               caption="A mockup of our simpler experience"
             />
+            <Example
+              image="exercises/netkix-widget-sketch-alt.png"
+              caption="An alternate version involved tying the navigatino more closely together, but was abandoned because it didn't make good use of the space"
+            />
           </section>
         </div>
 
@@ -252,6 +256,11 @@ class Netkix extends React.Component {
             This name will also show up if they share the shoe with friends.
             Sharing uses a unique URL that contains the shoe and color information, so we don't need to generate and store a bunch of similar designs.
             I think <mark>we can also use OpenGraph to show a preview of the shoe when linking on social media</mark>, which should really help with engagement.
+          </p>
+
+          <p>
+            Remember that alternate sketch we abandoned earlier? Well, the vertical layout of a phone means it makes a lot more sense and we get to bring it back in.
+            I love when exploration comes in handy.
           </p>
         </section>
 
