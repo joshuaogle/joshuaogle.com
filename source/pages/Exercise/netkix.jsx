@@ -70,7 +70,7 @@ class Netkix extends React.Component {
 
           <p>
             I think this is a great strategy for them, but we're not there yet.
-            <mark>I believe we should focus on a great customization experience and sharing your creatinos with friends.</mark>
+            <mark>I believe we should focus on a great customization experience and sharing your creations with friends.</mark>
             We'll want to ask our testers if these are their most important features.
             We'll do this by asking them about whether they would be interesting in sharing with friends and seeing their friends' shoes, and letting them explore these features in the app.
           </p>
@@ -219,7 +219,7 @@ class Netkix extends React.Component {
             />
             <Example
               image="exercises/netkix-widget-sketch-alt.png"
-              caption="An alternate version involved tying the navigatino more closely together, but was abandoned because it didn't make good use of the space"
+              caption="An alternate version involved tying the navigation more closely together, but was abandoned because it didn't make good use of the space"
             />
           </section>
         </div>
