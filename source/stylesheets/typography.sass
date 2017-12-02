@@ -3,8 +3,8 @@ h2,
 h3,
 h4
   font-family: $heading-font
-  font-weight: normal
-  letter-spacing: -0.025em
+  font-weight: $font-weight-medium
+  letter-spacing: -0.005em
   line-height: 1.4
   margin: 0 0 $small-spacing
 
@@ -37,11 +37,11 @@ ul
 
 p
   margin: 0 0 $base-spacing
-  font-weight: 200
+  font-weight: $font-weight-light
 
 a
   color: $link-color
-  font-weight: 500
+  font-weight: $font-weight-medium
   text-decoration: none
   transition: color $base-timing
 
@@ -50,7 +50,7 @@ a
     text-decoration: none
 
 strong
-  font-weight: 600
+  font-weight: $font-weight-medium
 
 img,
 svg
@@ -61,14 +61,14 @@ svg
 %small
   color: $muted-color
   font-size: $small-font-size
-  font-weight: 600
+  font-weight: $font-weight-medium
   opacity: 0.66
   text-transform: uppercase
 
 mark
   color: mix($text-color, $highlight-color, 90%)
   +highlight($highlight-color)
-  font-weight: 300
+  font-weight: $font-weight-regular
 
 .year
   @extend mark
@@ -76,7 +76,7 @@ mark
   color: $muted-color
   font-family: $sans-serif
   font-size: 0.7em
-  font-weight: normal
+  font-weight: $font-weight-regular
   line-height: 1
   padding: 0.2em 0.5em 0.15em
 

@@ -16,7 +16,7 @@
 .article-meta
   color: $muted-color
   font-size: $small-font-size
-  font-weight: 300
+  font-weight: $font-weight-regular
 
   svg
     display: inline-block
@@ -39,10 +39,8 @@
       font-size: 2rem
 
   p
-    font-weight: 200
-
-    @media (min-width: $break-small)
-      font-size: 1.25rem
+    color: $muted-color
+    font-weight: $font-weight-light
 
 .article-summary__list
   +two-column
