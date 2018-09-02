@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="72px" height="72px" viewBox="0 0 72 72" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <title>timeline-hashicorp</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="timeline-hashicorp" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval" fill="#000000" fill-rule="nonzero" cx="36" cy="36" r="36"></circle>
+        <g id="hashicorp" transform="translate(13.000000, 11.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <polygon id="Shape" points="28.4157303 37.0833333 36 32.9166667 36 4.44444444 28.4157303 0 28.4157303 21.25 18.7247191 21.25 18.7247191 12.9166667 11 17.0833333 11 45.5555556 18.7247191 50 18.7247191 28.75 28.4157303 28.75"></polygon>
+            <path d="M39.030303,6.38888889 L39.030303,35.2777778 L27.8787879,41.3888889 L27.8787879,50 L46,39.5833333 L46,10.4166667 L39.030303,6.38888889 Z M18.2606061,0 L0,10.4166667 L0,39.5833333 L7.10909091,43.6111111 L7.10909091,14.7222222 L18.2606061,8.61111111 L18.2606061,0 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

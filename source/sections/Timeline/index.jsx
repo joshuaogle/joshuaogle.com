@@ -15,6 +15,21 @@ class Timeline extends React.Component {
           <ul className="timeline">
             <li>
               <h3 className="timeline-company">
+                <InlineSVG src="timeline-hashicorp.svg" />
+                HashiCorp
+              </h3>
+              <div className="timeline-span">
+                Product Designer, 2017-Present
+              </div>
+              <p className="timeline-summary">
+                I joined the HashiCorp design team as the second product designer in what would soon become a full product design team.
+                I am proud to have helped hire our designers, define our process, and develop a custom Design System named "Structure".
+                I am the lead design of the Web UI for <a href="http://hashicorp.com/products/vault" target="_new">Vault</a>, a secrets management tool used by some of the world's biggest companies.
+                After a complete redesign, we brought the UI from Enterprise to the Open Source edition for thousands of users.
+              </p>
+            </li>
+            <li>
+              <h3 className="timeline-company">
                 <InlineSVG src="timeline-citrusbyte.svg" />
                 Citrusbyte
               </h3>

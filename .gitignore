@@ -7,5 +7,9 @@ node_modules
 # Files marked with gitigx
 *gitigx*
 
+# Don't include dist since it is built on deploy
+dist
+
 .DS_Store
 npm-debug.log
+tmp

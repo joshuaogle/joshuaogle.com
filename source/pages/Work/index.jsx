@@ -5,7 +5,6 @@ import Intro from '../../components/Intro';
 import Gallery from '../../sections/Gallery';
 import Clients from '../../sections/Clients';
 import CaseStudies from '../../sections/CaseStudies';
-import Dribbble from '../../sections/Dribbble';
 import Tools from '../../sections/Tools';
 
 class Work extends React.Component {
@@ -22,10 +21,9 @@ class Work extends React.Component {
           </p>
         </Intro>
         <div className="content">
-          <Gallery />
           <Clients />
           <CaseStudies />
-          <Dribbble />
+          <Gallery />
           <Tools />
         </div>
       </BodyClass>
