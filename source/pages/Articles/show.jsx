@@ -20,6 +20,12 @@ class Articles extends React.Component {
           className="content article-content"
           dangerouslySetInnerHTML={{__html: article.__content}}
         />
+        <script
+          src="https://static.cruton.app/js/cruton.js"
+          data-tags={article.tags.join(", ")}
+          defer
+        >
+        </script>
       </BodyClass>
     );
   }
