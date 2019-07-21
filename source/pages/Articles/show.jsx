@@ -22,7 +22,7 @@ class Articles extends React.Component {
         />
         <script
           src="https://static.cruton.app/js/cruton.js"
-          data-tags={article.tags.join(", ")}
+          data-tags={article.tags.join(",")}
           defer
         >
         </script>
