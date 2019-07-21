@@ -1,7 +1,7 @@
 ---
 title: "Design Spiking"
 date: "11/04/2014"
-tags: ["Design", "Prototyping"]
+tags: ["Design", "Prototyping", "Design Sprints", "Consulting"]
 url: "https://robots.thoughtbot.com/design-spiking"
 path: "design-spiking"
 source: "thoughtbot"

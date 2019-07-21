@@ -1,7 +1,7 @@
 ---
 title: "Disciplines of Web Design"
 date: "01/31/2017"
-tags: ["Design"]
+tags: ["Design", "Careers"]
 url: "https://robots.thoughtbot.com/designing-for-the-web"
 path: "disciplines-of-web-design"
 source: "thoughtbot"

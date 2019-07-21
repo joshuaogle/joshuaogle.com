@@ -1,7 +1,7 @@
 ---
 title: "Typography"
 date: "03/07/2017"
-tags: ["Design"]
+tags: ["Design", "Typography"]
 url: "https://robots.thoughtbot.com/typography"
 path: "typography"
 source: "thoughtbot"

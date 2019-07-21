@@ -1,7 +1,7 @@
 ---
 title: "Positioning Elements on the Web"
 date: "04/04/2017"
-tags: ["Design"]
+tags: ["Design", "CSS"]
 url: "https://robots.thoughtbot.com/positioning"
 path: "positioning"
 source: "thoughtbot"
