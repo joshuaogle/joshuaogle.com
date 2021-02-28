@@ -9,8 +9,8 @@
     "export": "next export"
   },
   "dependencies": {
-    "next": "9.4.0",
-    "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "next": "^10.0.3",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   }
 }
