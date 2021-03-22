@@ -57,37 +57,39 @@ class Home extends React.Component {
           </div>
         </Intro>
 
-        <section className="home-work">
-          <div className="section-title">
-            Work
-          </div>
-          <h2>Selected Projects</h2>
-          <p>
-            I have a passion for visual communication, problem-solving, usability, and storytelling.
-            Designing with code and working side-by-side with developers helps to create a better product, and I like to encourage designers to get into code and vice versa.
-          </p>
-          <Link to="/work" className="more">More work</Link>
-
-          <div className="home-work--list">
-            {this.renderCaseStudies()}
-          </div>
-        </section>
-
-        <section className="home-articles">
-          <div className="home-articles--copy">
+	<div className="page">
+          <section className="home-work">
             <div className="section-title">
-              Latest Articles
+              Work
             </div>
-            <h2>Some light reading</h2>
+            <h2>Selected Projects</h2>
             <p>
-              I occasionally write about design basics, leadership, and front-end tips for designers and developers.
+              I have a passion for visual communication, problem-solving, usability, and storytelling.
+              Designing with code and working side-by-side with developers helps to create a better product, and I like to encourage designers to get into code and vice versa.
             </p>
-            <Link to="/articles" className="more">More articles</Link>
-          </div>
-          <div className="home-articles--list">
-            {this.renderArticles()}
-          </div>
-        </section>
+            <Link to="/work" className="more">More work</Link>
+
+            <div className="home-work--list">
+              {this.renderCaseStudies()}
+            </div>
+          </section>
+
+          <section className="home-articles">
+            <div className="home-articles--copy">
+              <div className="section-title">
+                Latest Articles
+              </div>
+              <h2>Some light reading</h2>
+              <p>
+               	I occasionally write about design basics, leadership, and front-end tips for designers and developers.
+              </p>
+              <Link to="/articles" className="more">More articles</Link>
+            </div>
+            <div className="home-articles--list">
+              {this.renderArticles()}
+            </div>
+          </section>
+	</div>
       </BodyClass>
     );
   }

@@ -13,7 +13,7 @@
     +container
     animation: rise 1s ease-in-out
     margin: $large-spacing auto
-    padding: 15vh $base-spacing 0
+    padding: $large-spacing $base-spacing 0
     position: relative
     flex: 1
     transform-origin: $base-spacing 100%
@@ -37,17 +37,3 @@
     font-weight: $font-weight-medium
     opacity: 0.5
     text-transform: uppercase
-
-  body[data-intro="true"] &
-    +angle-bottom
-    background-color: $brown
-
-    h1,
-    p
-      color: $white
-
-    .logo
-      svg
-        path,
-        ellipse
-          fill: $white

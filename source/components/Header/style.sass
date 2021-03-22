@@ -1,11 +1,9 @@
 @import "../../stylesheets/variables"
 
 .site-header
-  +position(absolute, $base-spacing 5vw null)
   display: flex
   justify-content: space-between
-  padding: $small-spacing $large-spacing 0
-  z-index: $z-header
+  padding: $small-spacing $large-spacing $base-spacing
 
   @media (max-width: $break-small)
     left: $smallest-spacing
@@ -31,9 +29,6 @@
       fill: $muted-color
       transition: fill $base-timing
 
-      body[data-intro="true"] &
-        fill: $white
-
 .site-nav
   ul
     .list-inline
@@ -53,7 +48,7 @@
       display: none
 
   a
-    color: $light-brown
+    color: $muted-color
     display: block
     font-size: $small-font-size
     font-weight: $font-weight-regular
@@ -72,17 +67,11 @@
       transition: bottom $base-timing, opacity $fast-timing, width $base-timing
       width: 0
 
-    body[data-intro="true"] &
-      color: $white
-
-      &::after
-        background-color: rgba($white, 0.5)
-
     body[data-current="about"] &[data-link-to="about"],
     body[data-current="articles"] &[data-link-to="articles"],
     body[data-current="work"] &[data-link-to="work"]
       &::after
-        background-color: $red
+        background-color: $white
         opacity: 1
         width: 90%
 
@@ -93,6 +82,3 @@
       &::after
         opacity: 1
         width: 90%
-
-      body[data-intro="true"] &
-        color: $white

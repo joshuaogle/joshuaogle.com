@@ -5,6 +5,7 @@ import {Link} from 'react-router';
 import {prettyDate} from '../../utils';
 import articles from '../../data/articles';
 import BodyClass from '../../components/BodyClass';
+import Page from '../../components/Page';
 import Intro from '../../components/Intro';
 import Summary from './Summary';
 
@@ -29,28 +30,30 @@ class Articles extends React.Component {
 
     return (
       <BodyClass className="articles">
-        <Intro className="work-intro">
-          <h1>Articles by Joshua Ogle</h1>
-        </Intro>
-        <section className="content">
-          <Link to={`/articles/${latestArticle.path}`} target="_new" className="article article-summary article-summary__featured">
-            <article>
-              <header>
-                <h3 className="article-title">{latestArticle.title}</h3>
-                <div className="article-meta">
-                  {prettyDate(latestArticle.date)}
-                </div>
-                <p>
-                  {latestArticle.summary}
-                </p>
-              </header>
-            </article>
-          </Link>
+	<Page>
+          <Intro className="work-intro">
+            <h1>Articles by Joshua Ogle</h1>
+          </Intro>
+          <section className="content">
+            <Link to={`/articles/${latestArticle.path}`} target="_new" className="article article-summary article-summary__featured">
+              <article>
+                <header>
+                  <h3 className="article-title">{latestArticle.title}</h3>
+                  <div className="article-meta">
+                    {prettyDate(latestArticle.date)}
+                  </div>
+                  <p>
+                    {latestArticle.summary}
+                  </p>
+                </header>
+              </article>
+            </Link>
 
-          <div className="article-summary__list">
-            {this.summarize(olderArticles)}
-          </div>
-        </section>
+            <div className="article-summary__list">
+              {this.summarize(olderArticles)}
+            </div>
+          </section>
+        </Page>
       </BodyClass>
     );
   }

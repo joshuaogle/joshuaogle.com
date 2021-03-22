@@ -2,17 +2,18 @@
 @import "../../stylesheets/typography"
 
 body[data-current="home"]
-  .intro
-    background-image: url("../../images/intro-home.jpg")
+  background: $brown
+  background-image: url("../../images/intro-home.jpg")
 
   .intro-content
     @media (min-width: $break-medium)
       align-items: center
+      color: $white
       display: flex
       flex-direction: row
       justify-content: center
-      margin-bottom: -$base-spacing
-      margin-top: -$base-spacing
+      margin-bottom: -$large-spacing
+      margin-top: -$large-spacing
       padding-bottom: 0
 
     .home-intro--portrait
