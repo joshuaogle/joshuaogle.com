@@ -10,14 +10,14 @@
 *
   box-sizing: border-box
 
-  line-height: 1.5
-  min-height: 100%
-
 body
   background-color: $background-color
   font-family: $sans-serif
+  font-size: $base-font-size
   font-weight: $font-weight-light
+  line-height: 1.5
   margin: 0
+  min-height: 100%
   overflow-x: hidden
   padding: $small-spacing
   transition: background-color $base-timing
@@ -28,8 +28,9 @@ body
   width: $page-width
 
 .page
-  background-color: $white
+  background: linear-gradient(rgba($white, 0.85), rgba($white, 0.95) 10vh, $white 33vh)
   border-radius: 1rem
-  box-shadow: $base-shadow
+  box-shadow: $base-shadow, $highlight
   color: $text-color
+  overflow: hidden
 

@@ -14,7 +14,12 @@ class About extends React.Component {
       <BodyClass className="about">
 	<Page>
           <Intro>
-            <h1>I make things.</h1>
+            <h1>
+	      <strike>Web Designer</strike><br/>
+	      <strike>Front-end Developer</strike><br/>
+	      <strike>User Experience Designer</strike><br/>
+	      I make things.
+	    </h1>
           </Intro>
 
           <div className="content">

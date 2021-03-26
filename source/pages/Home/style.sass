@@ -4,6 +4,11 @@
 body[data-current="home"]
   background: $brown
   background-image: url("../../images/intro-home.jpg")
+  background-repeat: no-repeat
+  background-attachment: fixed
+
+  .intro
+    min-height: 400px
 
   .intro-content
     @media (min-width: $break-medium)
@@ -13,8 +18,8 @@ body[data-current="home"]
       flex-direction: row
       justify-content: center
       margin-bottom: -$large-spacing
-      margin-top: -$large-spacing
-      padding-bottom: 0
+      margin-top: -$small-spacing
+      padding-top: 0
 
     .home-intro--portrait
       box-shadow: $base-shadow
@@ -26,8 +31,6 @@ body[data-current="home"]
         max-width: 20rem
 
     .home-intro--copy
-      font-size: 0.9rem
-
       @media (min-width: $break-medium)
         margin-left: $base-spacing
         margin-top: $large-spacing

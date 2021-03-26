@@ -17,18 +17,19 @@ $magenta: #c76baa
 $cyan: #66ddd2
 
 $background-color: $brown
-$text-color: $brown
-$muted-color: $offwhite
+$text-color: $light-brown
+$muted-color: #aaa
 $link-color: $blue
 $link-hover: shade($blue, 15%)
 $logo-color: $offwhite
 $highlight-color: rgba(mix($yellow, $red, 95%), 0.25)
 
-$base-shadow: 0 1rem 0.33rem -0.75rem rgba(#000, 0.1), 0 0.33rem 1rem rgba(#000, 0.25)
-$dark-shadow: 0 1rem 0.33rem -0.75rem rgba(#000, 0.25), 0 0.33rem 1rem rgba(#000, 0.25)
-$large-shadow: 0 1rem 1rem -0.5rem rgba(#000, 0.1), 0 1rem 3rem rgba(#000, 0.1)
-$small-shadow: 0 0.5rem 0.33rem -0.33rem rgba($black, 0.1), 0 0.25rem 1rem rgba($black, 0.1)
-$smallest-shadow: 0 0.25rem 0.25rem -0.25rem rgba($black, 0.33), 0 0.1rem 0.25rem rgba($black, 0.1)
+$highlight: inset 0 2px 2px $white
+$base-shadow: 0 1rem 0.33rem -0.75rem rgba(#000, 0.2), 0 0.33rem 1rem rgba(#000, 0.33)
+$dark-shadow: 0 1rem 0.33rem -0.75rem rgba(#000, 0.33), 0 0.33rem 1rem rgba(#000, 0.33)
+$large-shadow: 0 1rem 1rem -0.5rem rgba(#000, 0.15), 0 1rem 3rem rgba(#000, 0.15)
+$small-shadow: 0 0.5rem 0.33rem -0.33rem rgba($black, 0.15), 0 0.25rem 1rem rgba($black, 0.15)
+$smallest-shadow: 0 0.25rem 0.25rem -0.25rem rgba($black, 0.33), 0 0.1rem 0.25rem rgba($black, 0.15)
 
 // Layout
 $break-small: 600px
@@ -43,16 +44,16 @@ $font-weight-regular: 400
 $font-weight-medium: 500
 
 // Sizes
-$base-font-size: calc(1rem + 0.15 * (100vw - 25em) / 100)
-$small-font-size: 0.8rem
-$smallest-font-size: 0.66rem
+$base-font-size: clamp(12px, 2vw, 18px)
+$small-font-size: 16px
+$smallest-font-size: 12px
 $large-font-size: 1.25rem
 $base-spacing: 2rem
 $small-spacing: $base-spacing / 2
 $smallest-spacing: $base-spacing / 4
 $large-spacing: $base-spacing * 2
 $base-border-radius: 0.25rem
-$page-width: 90vw
+$page-width: 80vw
 
 // Z-indeces
 $z-base: 1
@@ -72,7 +73,6 @@ $slow-timing: $base-timing * 2
 @mixin container
   +clearfix
   margin: 0 auto
-  max-width: $break-medium
   padding: $large-spacing $base-spacing
 
   @media (min-width: $break-medium)
