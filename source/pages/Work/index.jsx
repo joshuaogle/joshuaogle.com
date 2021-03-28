@@ -25,7 +25,7 @@ class Work extends React.Component {
           <div className="content">
             <Clients />
             <CaseStudies />
-            <Gallery />
+	    {/*<Gallery />*/}	
             <Tools />
           </div>
 	</Page>
