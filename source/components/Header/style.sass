@@ -12,6 +12,11 @@
   @media (max-width: $break-medium)
     width: 1.5rem
 
+  &:hover svg
+    path,
+    ellipse
+      fill: $red
+
   svg
     display: block
     width: 2rem
@@ -66,13 +71,12 @@
     body[data-current="articles"] &[data-link-to="articles"],
     body[data-current="work"] &[data-link-to="work"]
       &::after
-        background-color: $white
         opacity: 1
         width: 90%
 
 
     &:hover
-      color: $muted-color
+      color: $white
 
       &::after
         opacity: 1
