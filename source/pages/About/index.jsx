@@ -25,7 +25,7 @@ class About extends React.Component {
           <div className="content">
             <section>
               <p>
-                For over ten years, I've been helping companies of all sizes to establish their brand and <mark>improve their connection to their users</mark>.
+                For over fifteen years (oof), I've been helping companies of all sizes to establish their brand and <mark>improve their connection to their users</mark>.
                 I live in Denver, where I help companies of all sizes realize their ideal product.
                 I previously worked a a Senior Product Designer at <a href="http://citrusbyte.com" target="_new">Citrusbyte</a> and <a href="http://thoughtbot.com" target="_new">thoughtbot</a>, and before that I was co-founder and Creative Director of a consultancy in OKC called Brightbit.
               </p>
