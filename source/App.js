@@ -8,8 +8,8 @@ import Footer from './components/Footer';
 function App({ children, routes }) {
   return (
     <div>
-      <Header />
       <div className="app">
+        <Header />
         {children}
       </div>
       <Footer />

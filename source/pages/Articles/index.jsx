@@ -7,6 +7,7 @@ import articles from '../../data/articles';
 import BodyClass from '../../components/BodyClass';
 import Page from '../../components/Page';
 import Intro from '../../components/Intro';
+import Teaching from '../../sections/Teaching';
 import Summary from './Summary';
 
 class Articles extends React.Component {
@@ -30,10 +31,13 @@ class Articles extends React.Component {
 
     return (
       <BodyClass className="articles">
-	<Page>
+        <Page>
           <Intro className="work-intro">
             <h1>Articles by Joshua Ogle</h1>
           </Intro>
+
+          <Teaching />
+
           <section className="content">
             <Link to={`/articles/${latestArticle.path}`} target="_new" className="article article-summary article-summary__featured">
               <article>

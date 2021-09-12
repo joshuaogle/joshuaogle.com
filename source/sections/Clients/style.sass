@@ -1,21 +1,21 @@
 @import "../../stylesheets/variables"
 
 .clients-logos
+  background: #fff
+  border-radius: $base-border-radius
   display: flex
   gap: 1rem
   justify-content: space-around
   list-style: none
   margin-bottom: $base-spacing
-  padding: 0
+  padding: $base-spacing
 
   .client-logo
-    background: #fff
-    border-radius: $base-border-radius
+    color: $background-color
     display: flex
     flex: 1
     flex-direction: column
     justify-content: center
-    max-width: 10rem
     padding: $small-spacing
     position: relative
     transition: box-shadow $base-timing
@@ -33,9 +33,11 @@
       color: $muted-color
       content: attr(data-name)
       display: block
-      font-size: $smallest-font-size
+      font-family: $heading-font
+      font-size: $small-font-size
+      font-weight: $font-weight-semibold
       opacity: 0
-      padding-top: 0.25rem
+      padding-top: 0.2rem
       transform: translateY(-100%)
       transition: transform $base-timing, opacity $slow-timing
       text-align: center

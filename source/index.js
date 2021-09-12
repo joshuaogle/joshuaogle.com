@@ -7,8 +7,6 @@ import './fonts/fonts.sass';
 
 import App from './App';
 import Home from './pages/Home';
-import About from './pages/About';
-import Process from './pages/Process';
 import Work from './pages/Work';
 import Articles from './pages/Articles';
 import Article from './pages/Articles/show';
@@ -26,8 +24,6 @@ const routes = (
   <Route path="/" mapMenuTitle="Home" component={App}>
     <IndexRoute component={Home} />
 
-    <Route path="/about" mapMenuTitle="About" component={About} />
-    <Route path="/process" mapMenuTitle="How I Work" component={Process} />
     <Route path="/articles" mapMenuTitle="Articles" component={Articles} />
 
     <Route path="/work" mapMenuTitle="Work" component={Work} />

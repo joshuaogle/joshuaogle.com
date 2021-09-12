@@ -30,21 +30,6 @@ class Timeline extends React.Component {
             </li>
             <li>
               <h3 className="timeline-company">
-                <InlineSVG src="timeline-citrusbyte.svg" />
-                Citrusbyte
-              </h3>
-              <div className="timeline-span">
-                Senior Product Designer, 2016-2017
-              </div>
-              <p className="timeline-summary">
-                Working with both Fortune 500 companies and startups was a great experience.
-                This rapidly expanding cosultancy quickly became a big name in New York and Los Angeles, bringing a startup practice to enterprise clients.
-                I helped with designer hiring, reviewing and interviewing hundreds of designers.
-                Working remotely as a new design team has a lot of challenges but through regular critiques and collaboration, and built a great process to make happy clients.
-              </p>
-            </li>
-            <li>
-              <h3 className="timeline-company">
                 thoughtbot
                 <InlineSVG src="timeline-thoughtbot.svg" />
               </h3>
@@ -91,7 +76,7 @@ class Timeline extends React.Component {
             </li>
             <li>
               <p className="timeline-more">
-                4+ more years of freelance, designing marketing sites for small local businesses
+                <a href="/files/joshuaogle-resume.pdf" target="_new">Read more about my work history on my resume</a>
               </p>
             </li>
           </ul>

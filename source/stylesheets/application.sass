@@ -10,8 +10,10 @@
 *
   box-sizing: border-box
 
+html
+  background: $black
+
 body
-  background-color: $background-color
   background-attachment: fixed
   background-repeat: no-repeat
   background-size: cover
@@ -22,18 +24,16 @@ body
   margin: 0
   min-height: 100%
   overflow-x: hidden
-  padding: $small-spacing
+  padding: 0
   transition: background-color $base-timing
 
 .app
-  margin: 0 auto
-  padding-bottom: $base-spacing
-  max-width: $page-max-width
+  background-color: $background-color
+  padding-bottom: $small-spacing $small-spacing $base-spacing
 
 .page
-  background: linear-gradient(rgba($white, 0.85), rgba($white, 0.95) 10vh, $white 33vh)
-  border-radius: 1rem
-  box-shadow: $base-shadow, $highlight
   color: $text-color
+  margin: 0 auto
+  max-width: $page-max-width
   overflow: hidden
 

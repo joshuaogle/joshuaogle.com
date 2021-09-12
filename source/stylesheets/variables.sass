@@ -15,16 +15,16 @@ $yellow: #f4da5c
 $green: #bfd849
 $magenta: #c76baa
 $cyan: #66ddd2
+$prickly-pear: #382E33
 
 $background-color: $brown
-$text-color: $light-brown
-$muted-color: $gray
+$text-color: $white
+$muted-color: rgba($white, 0.5)
 $link-color: $blue
 $link-hover: shade($blue, 15%)
 $logo-color: $offwhite
-$highlight-color: rgba(mix($yellow, $red, 95%), 0.25)
+$highlight-color: rgba($black, 0.33)
 
-$highlight: inset 0 2px 2px $white
 $base-shadow: 0 1rem 0.33rem -0.75rem rgba(#000, 0.2), 0 0.33rem 1rem rgba(#000, 0.33)
 $dark-shadow: 0 1rem 0.33rem -0.75rem rgba(#000, 0.33), 0 0.33rem 1rem rgba(#000, 0.33)
 $large-shadow: 0 1rem 1rem -0.5rem rgba(#000, 0.15), 0 1rem 3rem rgba(#000, 0.15)
@@ -54,7 +54,7 @@ $small-spacing: $base-spacing / 2
 $smallest-spacing: $base-spacing / 4
 $large-spacing: $base-spacing * 2
 $base-border-radius: 0.25rem
-$page-max-width: calc(100ch + (#{$large-spacing} * 2))
+$page-max-width: calc(80ch + (#{$large-spacing} * 2))
 
 // Z-indeces
 $z-base: 1
@@ -93,9 +93,8 @@ $slow-timing: $base-timing * 2
   -webkit-background-clip: text
 
 @mixin highlight($color)
-  +linear-gradient(transparent 0%, transparent 60%, $color 60%, $color 100%, transparent 100%, $fallback: transparent)
-  color: mix($text-color, $highlight-color, 70%)
-  padding: 0 0.25rem
+  +linear-gradient(transparent 0%, transparent 35%, $color 35%, $color 100%, transparent 100%, $fallback: transparent)
+  padding: 0 0.5rem
 
 @mixin title-line($color: currentColor, $width: $small-spacing)
   position: relative
@@ -110,29 +109,6 @@ $slow-timing: $base-timing * 2
     margin-right: $small-spacing
     transform: skewX(-20deg) translateY(-50%)
     width: $small-spacing
-
-@mixin angle
-  +position(absolute, null 0)
-  background-color: $white
-  content: ""
-  display: block
-  height: $base-angle
-  transform: skewY(3deg)
-  z-index: 1
-
-@mixin angle-bottom
-  position: relative
-  &::after
-    +angle
-    bottom: 0
-    transform-origin: 0 50%
-
-@mixin angle-top
-  position: relative
-  &::before
-    +angle
-    top: 0
-    transform-origin: 100% 50%
 
 @mixin two-column
   @media (min-width: $break-small)

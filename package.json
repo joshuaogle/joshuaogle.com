@@ -1,7 +1,7 @@
 {
   "name": "joshuaogle.com",
   "version": "1.0.0",
-  "description": "Personal Portfolio of Joshua Ogle",
+  "description": "UX Design and Product Design Portfolio of Joshua Ogle",
   "scripts": {
     "start": "webpack-dev-server -d --inline --host 0.0.0.0 --port 3200 --history-api-fallback --progress",
     "deploy": "webpack -p && git add . && git commit -am 'Production build' && git push origin master"

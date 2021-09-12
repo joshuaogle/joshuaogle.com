@@ -6,7 +6,6 @@ import Intro from '../../components/Intro';
 import Gallery from '../../sections/Gallery';
 import Clients from '../../sections/Clients';
 import CaseStudies from '../../sections/CaseStudies';
-import Tools from '../../sections/Tools';
 
 class Work extends React.Component {
   render() {
@@ -25,8 +24,6 @@ class Work extends React.Component {
           <div className="content">
             <Clients />
             <CaseStudies />
-	    {/*<Gallery />*/}	
-            <Tools />
           </div>
 	</Page>
       </BodyClass>

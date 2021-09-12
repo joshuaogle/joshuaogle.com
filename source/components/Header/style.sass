@@ -3,7 +3,7 @@
 .site-header
   display: flex
   justify-content: space-between
-  padding: $small-spacing $large-spacing $base-spacing
+  padding: $base-spacing $large-spacing
 
 .logo
   display: block
@@ -15,7 +15,7 @@
   &:hover svg
     path,
     ellipse
-      fill: $red
+      fill: $white
 
   svg
     display: block
@@ -67,7 +67,6 @@
       transition: bottom $base-timing, opacity $fast-timing, width $base-timing
       width: 0
 
-    body[data-current="about"] &[data-link-to="about"],
     body[data-current="articles"] &[data-link-to="articles"],
     body[data-current="work"] &[data-link-to="work"]
       &::after
