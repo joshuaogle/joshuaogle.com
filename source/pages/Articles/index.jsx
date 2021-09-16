@@ -34,9 +34,11 @@ class Articles extends React.Component {
         <Page>
           <Intro className="work-intro">
             <h1>Articles by Joshua Ogle</h1>
+            <p>
+              I want the next generation of designers and developers to have an easier time learning than we did when I got getting started.
+              That's why I spend time speaking at conferences and running workshops. I also worked on a book on Design for the Web (now a blog series) while working at thoughtbot.
+            </p>
           </Intro>
-
-          <Teaching />
 
           <section className="content">
             <Link to={`/articles/${latestArticle.path}`} target="_new" className="article article-summary article-summary__featured">

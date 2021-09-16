@@ -8,8 +8,6 @@ import BodyClass from '../../components/BodyClass';
 import Intro from '../../components/Intro';
 import Page from '../../components/Page';
 import ArticleSummary from '../Articles/Summary';
-import InlineSVG from '../../components/InlineSVG';
-import Timeline from '../../sections/Timeline';
 
 class Home extends React.Component {
   caseStudyPath(study) {
@@ -99,24 +97,6 @@ class Home extends React.Component {
             <div className="home-articles--list">
               {this.renderArticles()}
             </div>
-          </section>
-
-          <Timeline />
-
-          <section className="section-quote">
-            <div className="section-title">
-              They've got nice things to say
-            </div>
-
-            <blockquote>
-              <p>
-                Joshua has the uncanny ability to execute and ship successful design. I am consistently amazed at his breadth and depth of design knowledge. He's also one of the rare designers with the skills and ability to cross over to development while still remaining an expert in design.
-                &nbsp;
-                <span className="quote-author">
-                  Kyle Fielder, Chief Design Officer at <InlineSVG src="source-thoughtbot.svg"/> thoughtbot
-                </span>
-              </p>
-            </blockquote>
           </section>
         </Page>
       </BodyClass>
