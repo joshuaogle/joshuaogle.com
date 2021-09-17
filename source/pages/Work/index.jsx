@@ -1,12 +1,11 @@
 import React from 'react';
 
 import BodyClass from '../../components/BodyClass';
-import Page from '../../components/Page';
-import Intro from '../../components/Intro';
-import Gallery from '../../sections/Gallery';
-import Clients from '../../sections/Clients';
 import CaseStudies from '../../sections/CaseStudies';
+import Clients from '../../sections/Clients';
 import InlineSVG from '../../components/InlineSVG';
+import Intro from '../../components/Intro';
+import Page from '../../components/Page';
 import Timeline from '../../sections/Timeline';
 
 class Work extends React.Component {
@@ -23,12 +22,12 @@ class Work extends React.Component {
               &nbsp;<mark>It's about what it does for the user.</mark>
             </p>
           </Intro>
-
+          
           <div className="content">
             <Clients />
             <CaseStudies />
           </div>
-
+          
           <Timeline />
 
           <section className="section-quote">

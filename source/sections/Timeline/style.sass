@@ -10,6 +10,7 @@ $timeline-breakpoint: $break-small
   padding-top: $large-spacing
 
 .timeline
+  list-style-type: none
   margin-top: $large-spacing
 
   li
@@ -18,48 +19,7 @@ $timeline-breakpoint: $break-small
     position: relative
 
     &::before
-      background-color: $timeline-line-color
-      border-radius: 0
-      bottom: 0
-      content: ""
-      height: $timeline-line-width
-      left: -$timeline-line-width / 2
-      margin: 0
-      position: absolute
-      right: -$timeline-line-width / 2
-      top: 0
-      width: $small-spacing
-
-    &:not(:last-child)::after
-      background-color: $timeline-line-color
-      bottom: 0
-      content: ""
-      margin: 0
-      left: 0
-      position: absolute
-      top: 0
-      transform: translateX(-50%)
-      width: $timeline-line-width
-
-    @media (min-width: $timeline-breakpoint)
-      left: 50%
-      padding-bottom: $base-spacing
-      width: 50%
-
-      &:nth-child(odd)
-        left: 0
-        padding-left: 0
-        padding-right: $base-spacing
-        text-align: right
-
-        &::before
-          left: auto
-          right: 0
-
-        &::after
-          left: auto
-          right: 0
-          transform: translateX(50%)
+      display: none
 
     p
       margin-bottom: $small-spacing
@@ -73,15 +33,10 @@ $timeline-breakpoint: $break-small
 
   svg
     display: inline-block
-    margin-left: 0.5rem
+    margin-right: 0.5rem
     max-height: 1.5rem
     max-width: 2rem
     vertical-align: -0.25rem
-
-    @media (min-width: $timeline-breakpoint)
-      .timeline li:nth-child(odd) &
-        margin-left: 0
-        margin-right: 0.5rem
 
 .timeline-span
   @extend %small

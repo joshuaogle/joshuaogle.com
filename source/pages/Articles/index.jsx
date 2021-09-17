@@ -7,7 +7,6 @@ import articles from '../../data/articles';
 import BodyClass from '../../components/BodyClass';
 import Page from '../../components/Page';
 import Intro from '../../components/Intro';
-import Teaching from '../../sections/Teaching';
 import Summary from './Summary';
 
 class Articles extends React.Component {
