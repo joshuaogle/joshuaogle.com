@@ -1,8 +1,27 @@
 import React from 'react';
-import {Link} from 'react-router';
 import InlineSVG from '../../components/InlineSVG';
+import CaseStudyItem from '../../components/CaseStudyItem';
 
 class TimelineItem extends React.Component {
+  renderCaseStudyItem(caseStudy, index) {
+    const caseStudyProps =  caseStudy.defaultProps;
+    return (
+      <li key={index}>
+        <CaseStudyItem item={caseStudyProps} key={index} />
+      </li>
+    )
+  }
+
+  renderCaseStudies(caseStudies) {
+    if (caseStudies) {
+      return (
+        <ul>
+          {caseStudies.map((caseStudy, index) => this.renderCaseStudyItem(caseStudy, index))}
+        </ul>
+      )
+    }
+  }
+
   render() {
     return (
       <li>
@@ -16,6 +35,8 @@ class TimelineItem extends React.Component {
         <p className="timeline-summary">
           {this.props.children}
         </p>
+
+        {this.renderCaseStudies(this.props.caseStudies)}
       </li>
     );
   }

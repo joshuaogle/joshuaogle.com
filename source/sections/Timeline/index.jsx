@@ -3,6 +3,12 @@ import InlineSVG from '../../components/InlineSVG';
 import TimelineItem from '../../components/TimelineItem';
 import './style.sass';
 
+// Case Study Files
+import SharespostCaseStudy from '../../pages/Work/CaseStudies/Sharespost';
+import SummitCaseStudy from '../../pages/Work/CaseStudies/Summit';
+import ArmadaCaseStudy from '../../pages/Work/CaseStudies/Armada';
+import OOOCaseStudy from '../../pages/Work/CaseStudies/OOO';
+
 class Timeline extends React.Component {
   render() {
     return (
@@ -31,6 +37,7 @@ class Timeline extends React.Component {
               when="2014-2016"
               title="Sr Product Designer"
               icon="timeline-thoughtbot.svg"
+              caseStudies={[SharespostCaseStudy, SummitCaseStudy, OOOCaseStudy]}
             >
               One of the biggest names in Ruby development and a model for how a consulting company should be run,
               I had the pleasure to work with some of the smartest people in the industry.
@@ -45,6 +52,7 @@ class Timeline extends React.Component {
               when="2010-2014"
               title="Co-Founder & Design Manager"
               icon="timeline-brightbit.svg"
+              caseStudies={[ArmadaCaseStudy]}
             >
               I helped build the company and led design and front-end development for a team of seven.
               We focused on Ruby on Rails, Javascript and hybrid mobile apps, refining best practices from companies like thoughtbot into our own.

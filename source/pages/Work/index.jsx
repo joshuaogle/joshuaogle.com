@@ -1,7 +1,6 @@
 import React from 'react';
 
 import BodyClass from '../../components/BodyClass';
-import CaseStudies from '../../sections/CaseStudies';
 import Clients from '../../sections/Clients';
 import InlineSVG from '../../components/InlineSVG';
 import Intro from '../../components/Intro';
@@ -25,7 +24,6 @@ class Work extends React.Component {
           
           <div className="content">
             <Clients />
-            <CaseStudies />
           </div>
           
           <Timeline />
