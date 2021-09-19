@@ -4,9 +4,12 @@
   background-color: $muted-color
   background-position: center center
   background-size: cover
-  border-radius: $base-border-radius
+  border-radius: $large-border-radius
   break-inside: avoid
   color: $white
+  display: flex
+  flex-direction: column
+  align-items: center
   margin-bottom: $small-spacing
   padding: $base-spacing $small-spacing
   text-align: center
@@ -22,7 +25,8 @@
     display: flex
     flex-direction: column
     justify-content: center
-    height: 15rem
+    margin-bottom: $small-spacing
+    width: 4rem
 
     svg
       flex: 0 0 33%
@@ -30,7 +34,7 @@
   h3
     color: $white
     font-size: 1.5rem
-    margin-bottom: $smallest-spacing
+    margin-bottom: 0
 
   p
     font-size: $small-font-size

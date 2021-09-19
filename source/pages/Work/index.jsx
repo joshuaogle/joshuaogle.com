@@ -22,11 +22,9 @@ class Work extends React.Component {
             </p>
           </Intro>
           
-          <div className="content">
-            <Clients />
-          </div>
-          
           <Timeline />
+          
+          <Clients />
 
           <section className="section-quote">
             <div className="section-title">

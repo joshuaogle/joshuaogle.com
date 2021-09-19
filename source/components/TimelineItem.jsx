@@ -6,18 +6,18 @@ class TimelineItem extends React.Component {
   renderCaseStudyItem(caseStudy, index) {
     const caseStudyProps =  caseStudy.defaultProps;
     return (
-      <li key={index}>
+      <div key={index}>
         <CaseStudyItem item={caseStudyProps} key={index} />
-      </li>
+      </div>
     )
   }
 
   renderCaseStudies(caseStudies) {
     if (caseStudies) {
       return (
-        <ul>
+        <nav className="timeline-case-studies">
           {caseStudies.map((caseStudy, index) => this.renderCaseStudyItem(caseStudy, index))}
-        </ul>
+        </nav>
       )
     }
   }
@@ -25,16 +25,18 @@ class TimelineItem extends React.Component {
   render() {
     return (
       <li>
-        <h3 className="timeline-company">
-          <InlineSVG src={this.props.icon} />
-          {this.props.company}
-        </h3>
-        <div className="timeline-span">
-          {this.props.title}, {this.props.when}
+        <div className="timeline-details">
+          <h3 className="timeline-company">
+            <InlineSVG src={this.props.icon} />
+            {this.props.company}
+          </h3>
+          <div className="timeline-span">
+            {this.props.title}, {this.props.when}
+          </div>
+          <p className="timeline-summary">
+            {this.props.children}
+          </p>
         </div>
-        <p className="timeline-summary">
-          {this.props.children}
-        </p>
 
         {this.renderCaseStudies(this.props.caseStudies)}
       </li>

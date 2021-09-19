@@ -8,7 +8,7 @@ class Clients extends React.Component {
     return (
       <section className="clients">
         <div className="section-title">Clients</div>
-        <h2>I've worked with companies of all sizes</h2>
+        <h2>And lots of other great companies too</h2>
         <div className="clients-logos">
           <div className="client-logo" data-name="Expedia">
             <InlineSVG src="client-expedia.svg" />

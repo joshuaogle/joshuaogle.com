@@ -2,8 +2,7 @@
 @import "../../stylesheets/typography"
 
 $timeline-line-width: 2px
-$timeline-line-color: $light-gray
-$timeline-breakpoint: $break-small
+$timeline-line-color: $muted-color
 
 .timeline-section
   padding-bottom: $large-spacing
@@ -12,15 +11,39 @@ $timeline-breakpoint: $break-small
 .timeline
   list-style-type: none
   margin-top: $large-spacing
+  position: relative
+
+  &::before
+    background-color: $timeline-line-color
+    border-radius: 1rem
+    bottom: 0
+    content: ""
+    left: 0
+    position: absolute
+    top: 0.75rem
+    width: $timeline-line-width
 
   li
+    display: flex
     font-size: $small-font-size
+    gap: $base-spacing
     margin: 0
-    padding: $small-spacing 0 $large-spacing
+    padding: 0 0 $large-spacing $large-spacing
     position: relative
 
+    &:last-child
+      padding-bottom: 0
+
     &::before
-      display: none
+      background-color: $timeline-line-color
+      border-radius: 1rem
+      content: ""
+      left: $small-spacing
+      position: absolute
+      top: 0.75rem
+      height: $timeline-line-width
+      width: $base-spacing
+
 
     p
       margin-bottom: $small-spacing
@@ -28,9 +51,16 @@ $timeline-breakpoint: $break-small
       &:last-child
         margin-bottom: 0
 
+.timeline-details
+  flex: 1
+
+.timeline-case-studies
+  flex: 1
+  
+
 .timeline-company
   color: $white
-  margin: -($small-spacing + 0.75rem) 0 0
+  margin: 0
 
   svg
     display: inline-block
@@ -46,4 +76,3 @@ $timeline-breakpoint: $break-small
 
 .timeline-more
   color: $muted-color
-  margin-top: -1.5rem
