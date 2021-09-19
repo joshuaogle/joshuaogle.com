@@ -5,7 +5,7 @@ class InlineSVG extends React.Component {
 
   imagePath() {
     return (
-      require(`../../images/${this.props.src}`)
+      require(`../images/${this.props.src}`)
     )
   }
 

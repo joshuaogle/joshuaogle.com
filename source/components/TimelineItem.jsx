@@ -1,6 +1,6 @@
 import React from 'react';
-import InlineSVG from '../../components/InlineSVG';
-import CaseStudyItem from '../../components/CaseStudyItem';
+import InlineSVG from './InlineSVG';
+import CaseStudyItem from './CaseStudyItem';
 
 class TimelineItem extends React.Component {
   renderCaseStudyItem(caseStudy, index) {
