@@ -10,15 +10,8 @@
   display: flex
   flex-direction: column
   align-items: center
-  margin-bottom: $small-spacing
   padding: $base-spacing $small-spacing
   text-align: center
-  transform: translateY($base-spacing)
-  transition: transform $slow-timing
-  transition-delay: $base-timing
-
-  &.animated
-    transform: translateY(0)
 
   &--icon
     align-items: center
@@ -26,9 +19,9 @@
     flex-direction: column
     justify-content: center
     margin-bottom: $small-spacing
-    width: 4rem
 
     svg
+      height: 3rem
       flex: 0 0 33%
 
   h3

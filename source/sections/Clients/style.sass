@@ -2,15 +2,16 @@
 
 .clients-logos
   background: #fff
-  border-radius: $base-border-radius
+  border-radius: $large-border-radius
   display: flex
-  gap: 1rem
+  gap: $smallest-spacing
   justify-content: space-around
   list-style: none
   margin-bottom: $base-spacing
   padding: $base-spacing
 
   .client-logo
+    border-radius: $base-border-radius
     color: $background-color
     display: flex
     flex: 1
@@ -30,14 +31,14 @@
 
     &::after
       +position(absolute, 100% 0 null)
-      color: $muted-color
+      color: $black
       content: attr(data-name)
       display: block
       font-family: $heading-font
-      font-size: $small-font-size
-      font-weight: $font-weight-semibold
+      font-size: $smallest-font-size
+      font-weight: $font-weight-regular
       opacity: 0
-      padding-top: 0.2rem
+      padding-top: $smallest-spacing
       transform: translateY(-100%)
       transition: transform $base-timing, opacity $slow-timing
       text-align: center

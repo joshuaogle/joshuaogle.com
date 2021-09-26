@@ -48,7 +48,10 @@ body[data-current="home"]
 
   &--list
     +two-column
+    background: $white
+    border-radius: $large-border-radius
     margin: $large-spacing 0 $base-spacing
+    padding-top: $large-spacing
 
     @media (min-width: $break-small)
       @supports (display: grid)
@@ -74,7 +77,7 @@ body[data-current="home"]
       margin-bottom: 0
 
     p
-      color: $muted-color
+      color: $black
       font-size: $small-font-size
       margin: 0
 

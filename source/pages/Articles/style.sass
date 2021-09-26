@@ -7,7 +7,12 @@
 
   h3
     +title-line()
+    color: $white
     margin-bottom: 0
+    transition: ease-in-out $fast-timing
+  
+  &:hover h3
+    color: $link-color
 
   p
     color: $text-color
@@ -23,12 +28,6 @@
     margin: 0 0.05rem 0 0.15rem
     max-width: 1rem
     vertical-align: -0.35em
-
-  a
-    color: $muted-color
-
-    &:hover
-      color: $link-color
 
 .article-summary__featured
   @media (min-width: $break-small)

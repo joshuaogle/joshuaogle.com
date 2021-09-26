@@ -6,9 +6,7 @@ class TimelineItem extends React.Component {
   renderCaseStudyItem(caseStudy, index) {
     const caseStudyProps =  caseStudy.defaultProps;
     return (
-      <div key={index}>
-        <CaseStudyItem item={caseStudyProps} key={index} />
-      </div>
+      <CaseStudyItem item={caseStudyProps} key={index} />
     )
   }
 
