@@ -23,7 +23,7 @@ $muted-color: rgba($white, 0.66)
 $link-color: $blue
 $link-hover: shade($blue, 15%)
 $logo-color: $offwhite
-$highlight-color: rgba($yellow, 0.2)
+$highlight-color: rgba($yellow, 0.25)
 
 $base-shadow: 0 1rem 0.33rem -0.75rem rgba(#000, 0.2), 0 0.33rem 1rem rgba(#000, 0.33)
 $dark-shadow: 0 1rem 0.33rem -0.75rem rgba(#000, 0.33), 0 0.33rem 1rem rgba(#000, 0.33)
@@ -56,7 +56,7 @@ $large-spacing: $base-spacing * 2
 $larger-spacing: $large-spacing * 2
 $base-border-radius: 0.25rem
 $large-border-radius: 1rem
-$page-max-width: calc(80ch + (#{$large-spacing} * 2))
+$page-max-width: calc(66ch + (#{$large-spacing} * 2))
 
 // Z-indeces
 $z-base: 1
@@ -96,6 +96,7 @@ $slow-timing: $base-timing * 2
 
 @mixin highlight($color)
   background-color: $color
+  border-radius: 2rem 0.5rem
   padding: 0 0.5rem
 
 @mixin title-line($color: currentColor, $width: $small-spacing)

@@ -1,28 +1,23 @@
 @import "../../stylesheets/variables"
 
 .clients-logos
-  background: #fff
-  border-radius: $large-border-radius
   display: flex
   gap: $smallest-spacing
   justify-content: space-around
   list-style: none
-  margin-bottom: $base-spacing
-  padding: $base-spacing
+  margin: $base-spacing 0
 
   .client-logo
     border-radius: $base-border-radius
-    color: $background-color
+    color: $white
     display: flex
     flex: 1
     flex-direction: column
     justify-content: center
-    padding: $small-spacing
     position: relative
     transition: box-shadow $base-timing
 
     &:hover
-      box-shadow: $small-shadow
       z-index: 2
 
       &::after
@@ -31,12 +26,12 @@
 
     &::after
       +position(absolute, 100% 0 null)
-      color: $black
+      color: $muted-color
       content: attr(data-name)
       display: block
       font-family: $heading-font
       font-size: $smallest-font-size
-      font-weight: $font-weight-regular
+      font-weight: $font-weight-light
       opacity: 0
       padding-top: $smallest-spacing
       transform: translateY(-100%)
@@ -45,4 +40,5 @@
       z-index: -1
 
     svg
-      max-height: 5rem
+      max-width: 6rem
+      max-height: 4rem

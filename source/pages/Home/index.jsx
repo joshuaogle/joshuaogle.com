@@ -1,40 +1,17 @@
 import React from 'react';
-import {Link} from 'react-router';
 import './style.sass';
 
 import {featuredArticles} from '../../data/articles';
-import {featuredCaseStudies} from '../../data/case-studies';
+import ArticleSummary from '../../sections/BlogPosts/Summary';
+import BlogPosts from '../../sections/BlogPosts';
 import BodyClass from '../../components/BodyClass';
+import Clients from '../../sections/Clients';
 import Intro from '../../components/Intro';
 import Page from '../../components/Page';
-import ArticleSummary from '../Articles/Summary';
+import Timeline from '../../sections/Timeline';
+import Testimonial from '../../sections/Testimonial';
 
 class Home extends React.Component {
-  caseStudyPath(study) {
-    return study.url ? study.url : `/work/${study.shortName}`;
-  }
-
-  caseStudyTarget(study) {
-    return study.url ? "_new" : "";
-  }
-
-  renderCaseStudies() {
-    return featuredCaseStudies.map((study) =>
-      <div
-        key={study.shortName}
-        className={`home-work-item home-work-item--${study.shortName}`}
-      >
-        <Link to={this.caseStudyPath(study)} target={this.caseStudyTarget(study)} >
-          <div className="home-work-thumbnail">
-            <div className="home-work-thumbnail-image" style={{backgroundImage: `url(${study.thumbnail})`}}></div>
-          </div>
-          <h3>{study.title}</h3>
-          <p>{study.role}</p>
-        </Link>
-      </div>
-    );
-  }
-
   renderArticles() {
     return featuredArticles.map((article) =>
       <ArticleSummary key={`article-${article.title}`} article={article} />
@@ -67,37 +44,13 @@ class Home extends React.Component {
             </p>
           </section>
 
-          <section className="home-work">
-            <div className="section-title">
-              Work
-            </div>
-            <h2>Selected Projects</h2>
-            <p>
-              I have a passion for visual communication, problem-solving, usability, and storytelling.
-              Designing with code and working side-by-side with developers helps to create a better product, and I like to encourage designers to get into code and vice versa.
-            </p>
-            <Link to="/work" className="more">More work</Link>
+          <Timeline />
+          
+          <Clients />
 
-            <div className="home-work--list">
-              {this.renderCaseStudies()}
-            </div>
-          </section>
+          <Testimonial />
 
-          <section className="home-articles">
-            <div className="home-articles--copy">
-              <div className="section-title">
-                Latest Articles
-              </div>
-              <h2>Some light reading</h2>
-              <p>
-                I occasionally write about design basics, leadership, and front-end tips for designers and developers.
-              </p>
-              <Link to="/articles" className="more">More articles</Link>
-            </div>
-            <div className="home-articles--list">
-              {this.renderArticles()}
-            </div>
-          </section>
+          <BlogPosts />
         </Page>
       </BodyClass>
     );

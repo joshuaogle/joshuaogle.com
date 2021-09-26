@@ -7,7 +7,6 @@ import './fonts/fonts.sass';
 
 import App from './App';
 import Home from './pages/Home';
-import Work from './pages/Work';
 import Articles from './pages/Articles';
 import Article from './pages/Articles/show';
 import ArmadaCaseStudy from './pages/Work/CaseStudies/Armada';
@@ -26,7 +25,6 @@ const routes = (
 
     <Route path="/articles" mapMenuTitle="Articles" component={Articles} />
 
-    <Route path="/work" mapMenuTitle="Work" component={Work} />
     <Route path="/work/armada" mapMenuTitle="Armada" component={ArmadaCaseStudy} />
       <Redirect from="/Work/CaseStudies/armada" to="/work/armada" />
     <Route path="/work/ooo" mapMenuTitle="OOO" component={OOOCaseStudy} />

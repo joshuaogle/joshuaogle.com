@@ -6,15 +6,15 @@
     <defs>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-sharespost-logo-1">
             <stop stop-color="currentColor" offset="0%"></stop>
-            <stop stop-color="#000000" stop-opacity="0.493857563" offset="100%"></stop>
+            <stop stop-color="currentColor" stop-opacity="0.25" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-sharespost-logo-2">
-            <stop stop-color="#000000" stop-opacity="0.504217618" offset="0%"></stop>
+            <stop stop-color="currentColor" stop-opacity="0.25" offset="0%"></stop>
             <stop stop-color="currentColor" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-sharespost-logo-3">
             <stop stop-color="currentColor" offset="0%"></stop>
-            <stop stop-color="#000000" stop-opacity="0.502604167" offset="100%"></stop>
+            <stop stop-color="currentColor" stop-opacity="0.25" offset="100%"></stop>
         </linearGradient>
     </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">

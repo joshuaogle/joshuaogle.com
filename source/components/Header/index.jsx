@@ -11,17 +11,6 @@ class Header extends React.Component {
         <Link to="/" className="logo">
           <InlineSVG src="logo-header.svg" />
         </Link>
-
-        <nav className="site-nav">
-          <ul>
-            <li>
-              <Link data-link-to="work" to="/work">Work</Link>
-            </li>
-            <li>
-              <Link data-link-to="articles" to="/articles">Articles</Link>
-            </li>
-          </ul>
-        </nav>
       </header>
     );
   }
