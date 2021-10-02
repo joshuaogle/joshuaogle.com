@@ -1,9 +1,9 @@
 import React from 'react';
 import {Link} from 'react-router';
 
-import {prettyDate} from '../../utils';
+import {prettyDate} from '../utils';
 
-class Summary extends React.Component {
+class BlogPostSummary extends React.Component {
   render() {
     const article = this.props.article;
 
@@ -22,4 +22,4 @@ class Summary extends React.Component {
   }
 }
 
-export default Summary;
+export default BlogPostSummary;

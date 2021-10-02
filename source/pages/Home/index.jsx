@@ -2,7 +2,7 @@ import React from 'react';
 import './style.sass';
 
 import {featuredArticles} from '../../data/articles';
-import ArticleSummary from '../../sections/BlogPosts/Summary';
+import BlogPostSummary from '../../components/BlogPostSummary';
 import BlogPosts from '../../sections/BlogPosts';
 import BodyClass from '../../components/BodyClass';
 import Clients from '../../sections/Clients';
@@ -14,7 +14,7 @@ import Testimonial from '../../sections/Testimonial';
 class Home extends React.Component {
   renderArticles() {
     return featuredArticles.map((article) =>
-      <ArticleSummary key={`article-${article.title}`} article={article} />
+      <BlogPostSummary key={`article-${article.title}`} article={article} />
     );
   }
 
@@ -45,10 +45,10 @@ class Home extends React.Component {
           </section>
 
           <Timeline />
-          
-          <Clients />
 
           <Testimonial />
+          
+          <Clients />
 
           <BlogPosts />
         </Page>
