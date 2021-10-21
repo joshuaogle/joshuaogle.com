@@ -11,10 +11,10 @@ class BlogPostSummary extends React.Component {
       <Link to={`/articles/${article.path}`} target="_new" className="article article-summary card">
         <article>
           <header>
-            <h3 className="article-title">{article.title}</h3>
             <div className="article-meta">
               {prettyDate(article.date)}
             </div>
+            <h3 className="article-title">{article.title}</h3>
           </header>
         </article>
       </Link>

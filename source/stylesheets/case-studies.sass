@@ -1,11 +1,9 @@
 @each $brand, $color in $brand-colors
   body[data-current="case_study--#{$brand}"]
-    main
-      .intro
-        background-color: $color
+    background-color: $color
 
-        h1
-          color: $white
+    .intro h1
+      color: $white
 
     .page h2
       +brand-text($color)
@@ -42,7 +40,7 @@
     font-size: $large-font-size
 
 .case-study-example
-  border-radius: $base-border-radius
+  border-radius: $large-border-radius
   box-shadow: 0 1rem 0.5rem -0.75rem rgba(#000, 0.25), 0 0.25rem 2rem rgba(#000, 0.15)
   margin: $base-spacing auto $large-spacing
 

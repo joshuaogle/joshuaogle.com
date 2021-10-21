@@ -1,8 +1,8 @@
 import React from 'react';
 
-import BodyClass from '../../../components/BodyClass';
-import Intro from '../../../components/Intro';
-import Page from '../../../components/Page';
+import BodyClass from '../../components/BodyClass';
+import Intro from '../../components/Intro';
+import Page from '../../components/Page';
 
 class CaseStudy extends React.Component {
   getYear() {
@@ -24,9 +24,9 @@ class CaseStudy extends React.Component {
     const studyProps = this.props.introProps;
 
     return (
-      <BodyClass className={`case_study--${studyProps.shortName}`} hasIntro="true">
-	<Page>
-          <Intro className="case-studies--intro" styles={{backgroundImage: `url(/source/images/${studyProps.background})`}}>
+      <BodyClass className={`case_study--${studyProps.shortName}`}  style={`background-image: url(/source/images/${studyProps.background})`} hasIntro="true">
+	      <Page>
+          <Intro className="case-studies--intro">
             <h1>
               {studyProps.title}
             </h1>
@@ -58,7 +58,7 @@ class CaseStudy extends React.Component {
             </section>
             {this.props.children}
            </article>
-	 </Page>
+	      </Page>
       </BodyClass>
     );
   }

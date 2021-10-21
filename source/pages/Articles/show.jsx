@@ -1,7 +1,6 @@
 import React from 'react';
 import './style.sass';
 
-import {Link} from 'react-router';
 import {renderSource} from '../../utils';
 import BodyClass from '../../components/BodyClass';
 import Page from '../../components/Page';
@@ -13,7 +12,7 @@ class Articles extends React.Component {
 
     return (
       <BodyClass className="articles">
-	<Page>
+	      <Page>
           <Intro className="work-intro">
             <h1>{article.title}</h1>
             {renderSource(article)}
@@ -28,7 +27,7 @@ class Articles extends React.Component {
             defer
           >
           </script>
-	</Page>
+	      </Page>
       </BodyClass>
     );
   }

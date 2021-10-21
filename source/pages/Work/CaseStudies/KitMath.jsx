@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router';
 
-import CaseStudy from './CaseStudy';
+import CaseStudy from '../CaseStudy';
 import Example from '../../../components/Example';
 import Phone from '../../../components/Phone';
 

@@ -36,13 +36,15 @@ class BlogPosts extends React.Component {
         <Link to={`/articles/${latestArticle.path}`} target="_new" className="article article-summary article-summary__featured">
           <article>
             <header>
-              <h3 className="article-title">{latestArticle.title}</h3>
               <div className="article-meta">
                 {prettyDate(latestArticle.date)}
               </div>
-              <p>
-                {latestArticle.summary}
-              </p>
+              <div className="article-content">
+                <h3 className="article-title">{latestArticle.title}</h3>
+                <p>
+                  {latestArticle.summary}
+                </p>
+              </div>
             </header>
           </article>
         </Link>

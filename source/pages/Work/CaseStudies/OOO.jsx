@@ -1,6 +1,6 @@
 import React from 'react';
 
-import CaseStudy from './CaseStudy';
+import CaseStudy from '../CaseStudy';
 import Example from '../../../components/Example';
 
 class OOOCaseStudy extends React.Component {

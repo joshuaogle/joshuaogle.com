@@ -3,25 +3,29 @@
 .article-summary
   display: block
   margin-bottom: $base-spacing
-  padding: 0 $base-spacing
 
   h3
-    +title-line()
     color: $white
     margin-bottom: 0
     transition: ease-in-out $fast-timing
-  
-  &:hover h3
-    color: $link-color
 
   p
     color: $text-color
     margin-top: $smallest-spacing
 
+  header
+    display: flex
+    gap: $base-spacing
+
+.article-content
+  flex: 1
+
 .article-meta
   color: $muted-color
   font-size: $small-font-size
   font-weight: $font-weight-regular
+  margin-top: 0.25rem
+  width: 8rem
 
   svg
     display: inline-block
@@ -30,20 +34,14 @@
     vertical-align: -0.35em
 
 .article-summary__featured
-  @media (min-width: $break-small)
-    margin-bottom: $large-spacing
-
   h3
     @media (min-width: $break-small)
       font-size: 2rem
 
-.article-summary__list
-  +two-column
+  p
+    color: $muted-color
+    margin: 0
 
 .article-content
-  h2:not(:first-child),
-  h3
-    margin-top: $large-spacing
-
   img
     margin: $large-spacing auto
