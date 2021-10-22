@@ -32,12 +32,10 @@ body[data-current="home"]
         max-width: 25rem
 
     h1
-      +title-line($red, $base-spacing)
+      +title-line($red)
       margin-bottom: $smallest-spacing
 
       &::before
-        width: $base-spacing
-
         @media (max-width: $break-medium)
           display: none
 

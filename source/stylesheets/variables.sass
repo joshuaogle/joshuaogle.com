@@ -103,15 +103,14 @@ $slow-timing: $base-timing * 2
   position: relative
 
   &::before
-    +position(absolute, 0.66em 100% null null)
+    +position(absolute, 0.66em null null 0)
     background-color: $color
     border-radius: 0.25rem 0
     content: ""
     display: block
-    height: 0.15em
-    margin-right: $small-spacing
-    transform: skewX(-20deg) translateY(-50%)
-    width: $small-spacing
+    height: 0.2em
+    transform: skewX(-20deg) translateY(-50%) translateX(calc(-100% - #{$small-spacing}))
+    width: 0.6em
 
 @mixin two-column
   @media (min-width: $break-small)

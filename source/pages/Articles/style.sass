@@ -21,10 +21,12 @@
   flex: 1
 
 .article-meta
+  +title-line($red)
   color: $muted-color
   font-size: $small-font-size
   font-weight: $font-weight-regular
   margin-top: 0.25rem
+  margin-left: $base-spacing
   width: 8rem
 
   svg
@@ -34,10 +36,6 @@
     vertical-align: -0.35em
 
 .article-summary__featured
-  h3
-    @media (min-width: $break-small)
-      font-size: 2rem
-
   p
     color: $muted-color
     margin: 0
