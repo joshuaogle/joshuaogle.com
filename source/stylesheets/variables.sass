@@ -19,7 +19,7 @@ $prickly-pear: #382E33
 
 $background-color: $brown
 $text-color: $white
-$muted-color: rgba($white, 0.66)
+$muted-color: rgba($white, 0.5)
 $link-color: $blue
 $link-hover: shade($blue, 15%)
 $logo-color: $offwhite
@@ -83,7 +83,7 @@ $slow-timing: $base-timing * 2
     padding-right: $large-spacing
 
 @mixin brand-gradient($color)
-  $shifted-color: saturate(tint(adjust-hue($color, 15%), 20%), 20%)
+  $shifted-color: tint(adjust-hue($color, 15%), 7%)
   color: #fff
   background: $color linear-gradient(-15deg, $color 10%, $shifted-color)
   background: -o-linear-gradient(transparent, transparent)

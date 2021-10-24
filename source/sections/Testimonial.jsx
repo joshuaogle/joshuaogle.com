@@ -6,7 +6,7 @@ class Testimonial extends React.Component {
     return (
       <section className="section-testiomonial">
         <div className="section-title">
-          They've got nice things to say
+          They're nice folks
         </div>
 
         <blockquote>
