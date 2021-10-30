@@ -7,15 +7,19 @@
   h3
     color: $white
     margin-bottom: 0
-    transition: ease-in-out $fast-timing
+    padding-left: $base-spacing
+
+    @media (min-width: $break-small)
+      padding-left: 0
 
   p
     color: $text-color
     margin-top: $smallest-spacing
 
   header
-    display: flex
-    gap: $base-spacing
+    @media (min-width: $break-small)
+      display: flex
+      gap: $base-spacing
 
 .article-content
   flex: 1
@@ -35,6 +39,10 @@
   p
     color: $muted-color
     margin: 0
+    padding-left: $base-spacing
+
+    @media (min-width: $break-small)
+      padding-left: 0
 
 .article-content
   img

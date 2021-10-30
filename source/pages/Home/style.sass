@@ -38,21 +38,3 @@ body[data-current="home"]
       &::before
         @media (max-width: $break-medium)
           display: none
-
-.home-articles
-  @media (min-width: $break-small)
-    display: flex
-    flex-direction: row
-
-    &--copy,
-    &--list
-      flex: 0 0 48%
-
-    &--copy
-      padding-right: 4%
-
-  &--list
-    margin-top: 2.5rem
-
-    .article
-      padding-right: 0
