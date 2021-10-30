@@ -42,6 +42,8 @@ class Timeline extends React.Component {
               One of the biggest names in Ruby development and a model for how a consulting company should be run,
               I had the pleasure to work with some of the smartest people in the industry.
               thoughtbot is known for their open source projects and community events, and that love for openness and pride in their craft really does run through everything we did together.
+              <br/>
+              <br/>
               I was one of the more senior designers and also the one with the most development experience, which led to me helping on a wide variety of client and open source projects.
               I helped mentor other designers and develop best practices such as the Product Design Sprint.
               Advising projects while leading design for client projects helped further my love for working with talented and multidisciplinary people.
