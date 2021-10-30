@@ -250,7 +250,7 @@ I called the move toward abstraction a “pendulum” earlier
 because what came next was a swing back
 in order to take from the best of both worlds.
 
-## Long Live Skeuomorphism)
+## Long Live Skeuomorphism
 
 Many people describe flat design
 as being “clean and simple”

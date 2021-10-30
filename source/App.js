@@ -11,8 +11,8 @@ function App({ children, routes }) {
       <div className="app">
         <Header />
         {children}
+        <Footer />
       </div>
-      <Footer />
     </div>
   );
 }

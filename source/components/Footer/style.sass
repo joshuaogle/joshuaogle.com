@@ -6,6 +6,7 @@ footer
   position: relative
   transition: transform $base-timing
   max-width: $page-max-width
+  padding: $base-spacing
   z-index: 1
 
   section
@@ -26,17 +27,19 @@ footer
     margin-bottom: $small-spacing
 
   .copyright
+    color: $muted-color
     font-size: $smallest-font-size
     font-weight: $font-weight-regular
     margin-bottom: 0
+    margin-top: $base-spacing
     text-align: center
 
     a
-      color: $white
+      color: $muted-color
       text-decoration: none
 
       &:hover
-        color: $link-color
+        color: $white
         text-decoration: underline
 
 .link-email,

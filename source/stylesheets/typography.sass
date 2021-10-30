@@ -41,9 +41,15 @@ p
   margin: 0 0 $base-spacing
   font-weight: $font-weight-light
 
+  + h2
+    margin-top: 2em
+
+  + h3
+    margin-top: 1em
+
 a
   color: $link-color
-  font-weight: $font-weight-semibold
+  font-weight: $font-weight-regular
   text-decoration: none
   transition: color $base-timing
 
@@ -66,7 +72,7 @@ svg
 %small
   color: $muted-color
   font-size: $small-font-size
-  font-weight: $font-weight-semibold
+  font-weight: $font-weight-regular
 
 mark
   color: mix($text-color, $highlight-color, 90%)
@@ -92,15 +98,14 @@ mark
 
 blockquote
   background-color: rgba($black, 0.25)
-  border-left: 5px solid rgba($muted-color, 0.33)
-  margin-left: $base-spacing
-  margin-right: 0
-  padding: $small-spacing
+  border-radius: $base-border-radius
+  margin: 0 0 $base-spacing
+  padding: $small-spacing $base-spacing
   position: relative
-
+ 
   &::before
     +position(absolute, -0.1em null null -0.5em)
-    color: rgba($muted-color, 0.33)
+    color: rgba($black, 0.25)
     content: "“"
     font-family: Georgia, serif
     font-size: 4.5em
