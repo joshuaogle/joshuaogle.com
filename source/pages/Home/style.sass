@@ -7,14 +7,18 @@ body[data-current="home"]
     max-width: $page-max-width
 
   .intro-content
+    padding-top: 0
+
     @media (min-width: $break-small)
       align-items: center
       display: flex
       flex-direction: row
       justify-content: center
-      padding-top: 0
 
     .home-intro--portrait
+      margin: 0 auto $base-spacing
+      max-width: 50vw
+
       @media (min-width: $break-small)
         flex: 1
 
