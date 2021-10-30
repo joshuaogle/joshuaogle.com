@@ -3,30 +3,24 @@
 
 body[data-current="home"]
   .intro
-    min-height: 400px
+    margin: 0 auto
+    max-width: $page-max-width
 
   .intro-content
-    color: $white
-
-    @media (min-width: $break-medium)
+    @media (min-width: $break-small)
       align-items: center
       display: flex
       flex-direction: row
       justify-content: center
-      margin-bottom: -$large-spacing
-      margin-top: -$small-spacing
       padding-top: 0
 
     .home-intro--portrait
-      display: none
-      margin-bottom: -$large-spacing
-
-      @media (min-width: $break-medium)
-        display: block
-        max-width: 20rem
+      @media (min-width: $break-small)
+        flex: 1
 
     .home-intro--copy
-      @media (min-width: $break-medium)
+      @media (min-width: $break-small)
+        flex: 2
         margin-left: $base-spacing
         margin-top: $small-spacing
         max-width: 25rem
@@ -36,5 +30,7 @@ body[data-current="home"]
       margin-bottom: $smallest-spacing
 
       &::before
-        @media (max-width: $break-medium)
-          display: none
+        display: none
+
+        @media (min-width: $break-small)
+          display: block

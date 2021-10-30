@@ -19,7 +19,7 @@ $prickly-pear: #382E33
 
 $background-color: $brown
 $text-color: $white
-$muted-color: rgba($white, 0.5)
+$muted-color: rgba($white, 0.55)
 $link-color: $blue
 $link-hover: shade($blue, 15%)
 $logo-color: $offwhite
@@ -45,7 +45,7 @@ $font-weight-semibold: 600
 $font-weight-black: 800
 
 // Sizes
-$base-font-size: clamp(12px, 2vw, 18px)
+$base-font-size: clamp(14px, 1.5vw, 18px)
 $small-font-size: clamp(12px, 1.75vw, 16px)
 $smallest-font-size: clamp(10px, 1.5vw, 12px)
 $large-font-size: 1.25rem
@@ -76,11 +76,10 @@ $slow-timing: $base-timing * 2
 @mixin container
   +clearfix
   margin: 0 auto
-  padding: $large-spacing $base-spacing
+  padding: $base-spacing
 
   @media (min-width: $break-medium)
-    padding-left: $large-spacing
-    padding-right: $large-spacing
+    padding: $large-spacing
 
 @mixin brand-gradient($color)
   $shifted-color: tint(adjust-hue($color, 15%), 5%)

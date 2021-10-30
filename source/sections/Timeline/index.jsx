@@ -50,7 +50,7 @@ class Timeline extends React.Component {
             <TimelineItem
               company="Brightbit"
               when="2010-2014"
-              title="Co-Founder & Design Manager"
+              title="Co-Founder & Design Lead"
               icon="timeline-brightbit.svg"
               caseStudies={[ArmadaCaseStudy]}
             >
