@@ -1,5 +1,4 @@
 import React from 'react';
-import InlineSVG from '../../components/InlineSVG';
 import TimelineItem from '../../components/TimelineItem';
 import './style.sass';
 
@@ -7,7 +6,8 @@ import './style.sass';
 import SharespostCaseStudy from '../../pages/Work/CaseStudies/Sharespost';
 import SummitCaseStudy from '../../pages/Work/CaseStudies/Summit';
 import ArmadaCaseStudy from '../../pages/Work/CaseStudies/Armada';
-import OOOCaseStudy from '../../pages/Work/CaseStudies/OOO';
+import VaultCaseStudy from '../../pages/Work/CaseStudies/Vault';
+import StructureCaseStudy from '../../pages/Work/CaseStudies/Structure';
 
 class Timeline extends React.Component {
   render() {
@@ -25,6 +25,7 @@ class Timeline extends React.Component {
               when="2017-Present"
               title="Sr Product Designer"
               icon="timeline-hashicorp.svg"
+              caseStudies={[VaultCaseStudy, StructureCaseStudy]}
             >
               I joined the HashiCorp design team as the second product designer in what would soon become a full product design team.
               I am proud to have helped hire our designers, define our process, and develop a custom Design System named "Structure".
@@ -37,14 +38,11 @@ class Timeline extends React.Component {
               when="2014-2016"
               title="Sr Product Designer"
               icon="timeline-thoughtbot.svg"
-              caseStudies={[SharespostCaseStudy, SummitCaseStudy, OOOCaseStudy]}
+              caseStudies={[SharespostCaseStudy, SummitCaseStudy]}
             >
               One of the biggest names in Ruby development and a model for how a consulting company should be run,
-              I had the pleasure to work with some of the smartest people in the industry.
-              thoughtbot is known for their open source projects and community events, and that love for openness and pride in their craft really does run through everything we did together.
-              <br/>
-              <br/>
-              I was one of the more senior designers and also the one with the most development experience, which led to me helping on a wide variety of client and open source projects.
+              thoughtbot is one of known for their open source projects and community events, and that love for openness and pride in their craft really does run through everything we did together.
+              My development experience helped on a wide variety of client and open source projects.
               I helped mentor other designers and develop best practices such as the Product Design Sprint.
               Advising projects while leading design for client projects helped further my love for working with talented and multidisciplinary people.
             </TimelineItem>

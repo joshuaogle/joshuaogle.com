@@ -16,18 +16,14 @@ body[data-current="home"]
       justify-content: center
 
     .home-intro--portrait
+      flex: 2
       margin: 0 auto $base-spacing
       max-width: 50vw
 
-      @media (min-width: $break-small)
-        flex: 1
-
     .home-intro--copy
       @media (min-width: $break-small)
-        flex: 2
+        flex: 3
         margin-left: $base-spacing
-        margin-top: $small-spacing
-        max-width: 25rem
 
     h1
       +title-line($red)
