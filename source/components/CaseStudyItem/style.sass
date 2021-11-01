@@ -1,17 +1,22 @@
 @import "../../stylesheets/variables"
 
 .case-study-item
+  align-items: center
   background-color: $muted-color
   background-position: center center
   background-size: cover
   border-radius: $large-border-radius
+  box-shadow: $large-shadow
   break-inside: avoid
   color: $white
   display: flex
   flex-direction: column
-  align-items: center
-  padding: $small-spacing
+  padding: $base-spacing $small-spacing
   text-align: center
+  transition: transform $fast-timing
+
+  &:hover
+    transform: scale(103%)
 
   &--icon
     align-items: center
@@ -22,7 +27,6 @@
 
     svg
       height: 3rem
-      flex: 0 0 33%
 
   h3
     color: $white

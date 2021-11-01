@@ -27,10 +27,9 @@ class Timeline extends React.Component {
               icon="timeline-hashicorp.svg"
               caseStudies={[VaultCaseStudy, StructureCaseStudy]}
             >
-              I joined the HashiCorp design team as the second product designer in what would soon become a full product design team.
-              I am proud to have helped hire our designers, define our process, and develop a custom Design System named "Structure".
-              I am the lead design of the Web UI for <a href="http://hashicorp.com/products/vault" target="_new">Vault</a>, a secrets management tool used by some of the world's biggest companies.
-              After a complete redesign, we brought the UI from Enterprise to the Open Source edition for thousands of users.  
+              HashiCorp makes developer-focused infrastructure software, with products that span everything from secrets management to mesh networking. 
+              I joined as the second product designer in what would soon become a 20+ person product design team and helped hire our designers, define our process, and develop a custom Design System named "Structure".
+              Throughout my time at HashiCorp, I have been the design lead for <a href="http://hashicorp.com/products/vault" target="_new">Vault</a>, Vault Cloud, and Boundary.
             </TimelineItem>
 
             <TimelineItem
@@ -41,9 +40,9 @@ class Timeline extends React.Component {
               caseStudies={[SharespostCaseStudy, SummitCaseStudy]}
             >
               One of the biggest names in Ruby development and a model for how a consulting company should be run,
-              thoughtbot is one of known for their open source projects and community events, and that love for openness and pride in their craft really does run through everything we did together.
-              My development experience helped on a wide variety of client and open source projects.
-              I helped mentor other designers and develop best practices such as the Product Design Sprint.
+              thoughtbot is known for their dedication to open-source and the startup community.
+              That love for openness and pride in their craft really does run through everything we did together.
+              I helped mentor other designers and develop best practices such as thoughtbot's influential Product Design Sprint.
               Advising projects while leading design for client projects helped further my love for working with talented and multidisciplinary people.
             </TimelineItem>
 
@@ -61,7 +60,7 @@ class Timeline extends React.Component {
             </TimelineItem>
             <li>
               <p className="timeline-more">
-                <a href="/files/joshuaogle-resume.pdf" target="_new">Read more about my work history on my resume</a>
+                <a href="/files/joshuaogle-resume.pdf" target="_new">Read more work history on my resume</a>
               </p>
             </li>
           </ul>
