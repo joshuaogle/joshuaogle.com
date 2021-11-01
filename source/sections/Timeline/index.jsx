@@ -28,8 +28,9 @@ class Timeline extends React.Component {
               caseStudies={[VaultCaseStudy, StructureCaseStudy]}
             >
               HashiCorp makes developer-focused infrastructure software, with products that span everything from secrets management to mesh networking. 
-              I joined as the second product designer in what would soon become a 20+ person product design team and helped hire our designers, define our process, and develop a custom Design System named "Structure".
-              Throughout my time at HashiCorp, I have been the design lead for <a href="http://hashicorp.com/products/vault" target="_new">Vault</a>, Vault Cloud, and Boundary.
+              I joined as the second product designer in what would soon become a 20+ person product design team.
+              I helped hire our designers, define our process, and created our Product Design System named "Structure".
+              Throughout my time at HashiCorp, I have been the design lead for <a href="http://hashicorp.com/products/vault" target="_new">Vault</a>, <a href="https://cloud.hashicorp.com/" target="_new">Vault Cloud</a>, and <a href="http://boundaryproject.io" target="_new">Boundary</a>.
             </TimelineItem>
 
             <TimelineItem
@@ -53,10 +54,9 @@ class Timeline extends React.Component {
               icon="timeline-brightbit.svg"
               caseStudies={[ArmadaCaseStudy]}
             >
-              I helped build the company and led design and front-end development for a team of seven.
-              We focused on Ruby on Rails, Javascript and hybrid mobile apps, refining best practices from companies like thoughtbot into our own.
-              Consulting came easy after working mostly customer service jobs through college, and I think consulting gives invaluable skills for any designer or developer.
-              We were one of the leading development shops in the region and I'm really proud of the company and team we built.
+              I co-founded the company and led design and front-end development for a team of seven.
+              We focused on Ruby on Rails, Javascript and hybrid mobile apps, folding best practices from companies like thoughtbot into our own.
+              Brightbit was one of the leading development shops in the region and I'm really proud of the company and team we built.
             </TimelineItem>
             <li>
               <p className="timeline-more">

@@ -26,10 +26,9 @@ class Home extends React.Component {
             <img src="/source/images/portrait.png" />
           </div>
           <div className="home-intro--copy">
-            <h1>Joshua Ogle</h1>
+            <h1>Hi, I'm Joshua</h1>
             <p>
-              I’m a Product Designer at <a href="http://hashicorp.com" target="_new">Hashicorp</a>, living in Denver.
-              Previously at <a href="http://thoughtbot.com" target="_new">thoughtbot</a>.
+              I am a Product Designer at <a href="http://hashicorp.com" target="_new">Hashicorp</a>, living in Denver, Colorado.
               I help companies of all sizes bring their ideas to life and make their customers happy.
             </p>
           </div>
@@ -39,7 +38,6 @@ class Home extends React.Component {
           <section>
             <p>
               For over fifteen years, I've been helping companies of all sizes to establish their brand and <mark>improve their connection to their users</mark>.
-              I live in Denver, where I help companies of all sizes realize their ideal product.
               I previously worked a a Senior Product Designer at <a href="http://citrusbyte.com" target="_new">Citrusbyte</a> and <a href="http://thoughtbot.com" target="_new">thoughtbot</a>, and before that I was co-founder and Design Lead of a consultancy in OKC called Brightbit.
             </p>
           </section>
