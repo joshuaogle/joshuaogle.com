@@ -6,17 +6,18 @@
   background-position: center center
   background-size: cover
   border-radius: $large-border-radius
-  box-shadow: $large-shadow
+  box-shadow: $base-shadow
   break-inside: avoid
   color: $white
   display: flex
   flex-direction: column
   padding: $base-spacing $small-spacing
   text-align: center
-  transition: transform $fast-timing
+  transition: transform $fast-timing, box-shadow $fast-timing
 
   &:hover
-    transform: scale(103%)
+    transform: scale(102%)
+    box-shadow: $large-shadow
 
   &--icon
     align-items: center

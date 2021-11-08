@@ -4,6 +4,7 @@ h3,
 h4
   font-family: $heading-font
   font-weight: $font-weight-semibold
+  letter-spacing: 0.015em
   line-height: 1.25
   margin: 0 0 $small-spacing
 
@@ -73,6 +74,7 @@ svg
   color: $muted-color
   font-size: $small-font-size
   font-weight: $font-weight-regular
+  letter-spacing: 0.015em
 
 mark
   color: mix($text-color, $highlight-color, 90%)
@@ -115,7 +117,7 @@ blockquote
     margin: 0
 
   .quote-author
-    color: $red
+    color: $red-500
     display: block
     font-size: 0.75em
     margin-top: 0.25em
@@ -140,7 +142,7 @@ figcaption
 
 .more
   @extend %small
-  color: $blue
+  color: $blue-500
   display: block
   margin-top: -$small-spacing
 
@@ -164,13 +166,13 @@ pre
 
   .nc,
   .s
-    color: shade($green, 25%)
+    color: shade($green-500, 25%)
 
   .nb
-    color: $blue
+    color: $blue-500
 
   .m
-    color: $cyan
+    color: $cyan-500
 
   .na
-    color: $magenta
+    color: $purple-500
