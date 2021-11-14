@@ -13,21 +13,16 @@
     width: 1.5rem
 
   &:hover svg
-    path,
-    ellipse
-      fill: $red-500
+    color: $red-500
 
   svg
+    color: $muted-color
     display: block
+    transition: color $base-timing
     width: 2rem
 
     @media (max-width: $break-medium)
       width: 1.5rem
-
-    path,
-    ellipse
-      fill: $muted-color
-      transition: fill $base-timing
 
 .site-nav
   ul
