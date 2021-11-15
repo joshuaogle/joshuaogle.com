@@ -8,6 +8,7 @@ import SummitCaseStudy from '../../pages/Work/CaseStudies/Summit';
 import ArmadaCaseStudy from '../../pages/Work/CaseStudies/Armada';
 import VaultCaseStudy from '../../pages/Work/CaseStudies/Vault';
 import StructureCaseStudy from '../../pages/Work/CaseStudies/Structure';
+import PasswordProtected from '../../components/PasswordProtected';
 
 class Timeline extends React.Component {
   render() {
@@ -20,18 +21,20 @@ class Timeline extends React.Component {
           <h2>I've worked with some amazing people</h2>
 
           <ul className="timeline">
-            <TimelineItem
-              company="HashiCorp"
-              when="2017-Present"
-              title="Sr Product Designer"
-              icon="timeline-hashicorp.svg"
-              caseStudies={[VaultCaseStudy, StructureCaseStudy]}
-            >
-              HashiCorp makes developer-focused infrastructure software, with products that span everything from secrets management to mesh networking. 
-              I joined as the second product designer in what would soon become a 20+ person product design team.
-              I helped hire our designers, define our process, and created our Product Design System named "Structure".
-              Throughout my time at HashiCorp, I have been the design lead for <a href="http://hashicorp.com/products/vault" target="_new">Vault</a>, <a href="https://cloud.hashicorp.com/" target="_new">Vault Cloud</a>, and <a href="http://boundaryproject.io" target="_new">Boundary</a>.
-            </TimelineItem>
+            <PasswordProtected contentName="hashicorp">
+              <TimelineItem
+                company="HashiCorp"
+                when="2017-Present"
+                title="Sr Product Designer"
+                icon="timeline-hashicorp.svg"
+                caseStudies={[VaultCaseStudy, StructureCaseStudy]}
+              >
+                HashiCorp makes developer-focused infrastructure software, with products that span everything from secrets management to mesh networking. 
+                I joined as the second product designer in what would soon become a 20+ person product design team.
+                I helped hire our designers, define our process, and created our Product Design System named "Structure".
+                Throughout my time at HashiCorp, I have been the design lead for <a href="http://hashicorp.com/products/vault" target="_new">Vault</a>, <a href="https://cloud.hashicorp.com/" target="_new">Vault Cloud</a>, and <a href="http://boundaryproject.io" target="_new">Boundary</a>.
+              </TimelineItem>
+            </PasswordProtected>
 
             <TimelineItem
               company="thoughtbot"
