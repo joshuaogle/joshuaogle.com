@@ -42,42 +42,6 @@ class VaultCaseStudy extends React.Component {
           </p>
         </section>
 
-        <div className="inset inset--desktop">
-          <section>
-            <Example
-              image="case-studies/armada-users.png"
-            />
-          </section>
-        </div>
-
-        <section>
-          <p>
-            Text
-          </p>
-        </section>
-
-        <div className="inset inset--desktop">
-          <section>
-            <Example
-              image="case-studies/armada-user.png"
-            />
-          </section>
-        </div>
-
-        <section>
-          <p>
-            Text
-          </p>
-        </section>
-
-        <div className="inset inset--desktop">
-          <section>
-            <Example
-              image="case-studies/armada-trips.png"
-            />
-          </section>
-        </div>
-
         <section>
           <div className="section-title">In Summary</div>
           <h2>Title</h2>
@@ -92,11 +56,11 @@ class VaultCaseStudy extends React.Component {
 
 VaultCaseStudy.defaultProps = {
   title: "Vault",
-  date: "2020/10/31",
+  date: "2021/10/31",
   shortName: "vault",
   time: "4 years",
   team: "1 Designer, 1 Developer",
-  role: "Product Design, User Research",
+  role: "Product Design Lead, User Research",
   background: "",
   icon: "case-study-logo-vault.svg",
   client: "HashiCorp",

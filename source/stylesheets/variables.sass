@@ -187,14 +187,14 @@ $slow-timing: $base-timing * 2
   position: relative
 
   &::before
-    +position(absolute, 0.66em null null 0)
-    background-color: $color
-    border-radius: 0.25rem 0
+    +position(absolute, 50% null null 0)
+    background: url("/source/images/dot-red.svg") repeat
+    background-size: 4px 4px
     content: ""
     display: block
-    height: 0.2em
-    transform: skewX(-20deg) translateY(-50%) translateX(calc(-100% - #{$small-spacing}))
-    width: 0.6em
+    height: #{4px * 2 + 1px}
+    transform: translateX(calc(-100% - #{$smallest-spacing})) translateY(-50%)
+    width: #{4px * 5 + 1px}
 
 @mixin two-column
   @media (min-width: $break-small)
