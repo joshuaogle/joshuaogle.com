@@ -29,9 +29,12 @@
   flex: 1
 
 .article-meta
+  +title-line($red-500)
   color: $muted-color
   font-size: $small-font-size
   font-weight: $font-weight-regular
+  margin-left: $base-spacing
+  
 
   svg
     display: inline-block
@@ -55,8 +58,6 @@
 .article-summary__list,
 .article-summary__featured
   .article-meta
-    +title-line($red-500)
     height: 1.5em
     margin-top: 0.5rem
-    margin-left: $base-spacing
     width: 8rem
