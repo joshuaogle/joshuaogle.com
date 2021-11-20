@@ -99,15 +99,14 @@ mark
     font-size: 1em
 
 blockquote
-  background-color: rgba($black, 0.25)
-  border-radius: $base-border-radius
-  margin: 0 0 $base-spacing
-  padding: $small-spacing $base-spacing
+  background: linear-gradient(-15deg, rgba($black, 0.4), rgba($black, 0.2))
+  border-radius: $large-border-radius
+  padding: $base-spacing
   position: relative
  
   &::before
     +position(absolute, -0.1em null null -0.5em)
-    color: rgba($black, 0.25)
+    color: rgba($black, 0.5)
     content: "“"
     font-family: Georgia, serif
     font-size: 4.5em
@@ -119,14 +118,14 @@ blockquote
   .quote-author
     color: $red-500
     display: block
-    font-size: 0.75em
-    margin-top: 0.25em
+    font-family: $heading-font
+    margin-top: $smallest-spacing
 
     svg
       display: inline-block
       margin: 0 0.05rem 0 0.15rem
       max-width: 1rem
-      vertical-align: -0.35em
+      vertical-align: -0.15em
 
 figure
   margin: $large-spacing 0

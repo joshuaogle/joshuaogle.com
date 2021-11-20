@@ -1,21 +1,23 @@
 @import "../../stylesheets/variables"
 
 footer
+  background: linear-gradient(-15deg, rgba($black, 0.66), rgba($black, 0.33))
+  border-radius: $large-border-radius
+  box-shadow: $large-shadow
   margin: $base-spacing auto 0
+  max-width: $page-max-width
+  padding: $small-spacing $base-spacing
   position: relative
   transition: transform $base-timing
-  max-width: $page-max-width
-  padding: $base-spacing
   z-index: 1
 
   @media (min-width: $break-medium)
-    padding: $large-spacing
+    padding: $base-spacing $large-spacing
 
   section
     padding: 0
 
   h2
-    color: $muted-color
     font-size: 1.5rem
 
   a

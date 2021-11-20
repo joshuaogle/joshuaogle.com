@@ -12,10 +12,9 @@ class Testimonial extends React.Component {
         <blockquote>
           <p>
             Joshua has the uncanny ability to execute and ship successful design. I am consistently amazed at his breadth and depth of design knowledge. He's also one of the rare designers with the skills and ability to cross over to development while still remaining an expert in design.
-            &nbsp;
-            <span className="quote-author">
+            <small className="quote-author">
               Kyle Fielder, Chief Design Officer at <InlineSVG src="source-thoughtbot.svg"/> thoughtbot
-            </span>
+            </small>
           </p>
         </blockquote>
       </section>
