@@ -1,8 +1,8 @@
 .button
+  @include elevation("low")
   background-color: tint($white, 33%)
   border: none
   border-radius: $base-border-radius
-  box-shadow: $small-shadow
   color: $blue-500
   display: inline-block
   font-weight: $font-weight-regular
@@ -15,5 +15,5 @@
     color: $blue-500
 
   &:active
+    @include elevation("low")
     transform: translateY(0.1rem)
-    box-shadow: $smallest-shadow

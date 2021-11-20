@@ -1,12 +1,12 @@
 @import "../../stylesheets/variables"
 
 .case-study-item
+  @include elevation("medium")
   align-items: center
   background-color: $muted-color
   background-position: center center
   background-size: cover
   border-radius: $large-border-radius
-  box-shadow: $base-shadow
   break-inside: avoid
   color: $white
   display: flex
@@ -16,8 +16,8 @@
   transition: transform $fast-timing, box-shadow $fast-timing
 
   &:hover
+    @include elevation("highest")
     transform: scale(102%)
-    box-shadow: $large-shadow
 
   &--icon
     align-items: center

@@ -2,7 +2,7 @@
 @import "../../stylesheets/typography"
 
 $timeline-line-width: 2px
-$timeline-line-color: rgba($muted-color, 0.2)
+$timeline-line-color: $neutral-700
 
 .timeline
   list-style-type: none
@@ -35,7 +35,7 @@ $timeline-line-color: rgba($muted-color, 0.2)
     &::before
       background-color: $neutral-300
       border-radius: 100%
-      box-shadow: 0 0 0 8px rgba($white, 0.1)
+      box-shadow: 0 0 0 8px $timeline-line-color
       content: ""
       left: $timeline-line-width / 2
       margin: 0
