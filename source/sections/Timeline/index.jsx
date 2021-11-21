@@ -16,9 +16,9 @@ class Timeline extends React.Component {
       <div className="timeline-section">
         <section>
           <div className="section-title">
-            Where I've been
+            Work history
           </div>
-          <h2>I've worked with some amazing people</h2>
+          <h2>I've been lucky to work with some amazing people</h2>
 
           <ul className="timeline">
             <PasswordProtected contentName="hashicorp">

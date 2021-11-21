@@ -35,6 +35,9 @@ class CaseStudyItem extends React.Component {
           <p>
             {props.role}
           </p>
+          <div className="case-study-thumbnail">
+            <img src={props.thumbnail} />
+          </div>
         </article>
       </Link>
     );

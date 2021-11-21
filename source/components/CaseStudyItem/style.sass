@@ -6,11 +6,12 @@
   background-color: $muted-color
   background-position: center center
   background-size: cover
-  border-radius: $large-border-radius
+  border-radius: $base-border-radius
   break-inside: avoid
   color: $white
   display: flex
   flex-direction: column
+  overflow: hidden
   padding: $base-spacing $small-spacing
   text-align: center
   transition: transform $fast-timing, box-shadow $fast-timing
@@ -37,3 +38,9 @@
   p
     font-size: $smallest-font-size
     margin: 0
+
+.case-study-thumbnail
+  margin-top: $base-spacing
+  min-height: 8rem
+  position: relative
+  height: 50vh
