@@ -8,7 +8,7 @@ class Clients extends React.Component {
     return (
       <section className="clients">
         <div className="section-title">Clients</div>
-        <h2>And lots of other great companies too</h2>
+        <h2>I've consulted for great companies too</h2>
         <div className="clients-logos">
           <div className="client-logo" data-name="Expedia">
             <InlineSVG src="client-expedia.svg" />
@@ -27,7 +27,7 @@ class Clients extends React.Component {
           </div>
         </div>
         <p>
-          I've been lucky enough to work with some of the biggest companies in the world,
+          I have been lucky enough to work with some of the biggest companies in the world,
           but most of my career has been spent working with startups and small businesses
           making their start in the world and bringing their ideas to life.
           The beginning of a venture is a truly exciting time, where every decision is important
