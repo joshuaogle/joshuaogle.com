@@ -29,9 +29,9 @@ class CaseStudyItem extends React.Component {
           style={{backgroundImage: `url(/source/images/${props.background})`}}
         >
           <InlineSVG className="case-study-item--icon" src={props.icon} />
-          <h3>
+          <h4>
             {props.title}
-          </h3>
+          </h4>
           <p>
             {props.role}
           </p>

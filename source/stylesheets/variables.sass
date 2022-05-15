@@ -105,7 +105,7 @@ $green-100: #F7FDDF
 
 $background-color: $neutral-900
 $text-color: $neutral-200
-$muted-color: rgba($white, 0.5)
+$muted-color: rgba($white, 0.66)
 $link-color: $cyan-500
 $link-hover: $cyan-300
 $highlight-color: rgba($yellow-500, 0.15)
@@ -124,9 +124,9 @@ $font-weight-semibold: 600
 $font-weight-black: 800
 
 // Sizes
-$base-font-size: clamp(14px, 1.5vw, 18px)
-$small-font-size: clamp(13px, 1.3vw, 16px)
-$smallest-font-size: clamp(10px, 1.5vw, 12px)
+$base-font-size: clamp(16px, 1.5vw, 24px)
+$small-font-size: clamp(14px, 1.3vw, 16px)
+$smallest-font-size: clamp(10px, 1.5vw, 16px)
 $large-font-size: 1.25rem
 $base-spacing: 2rem
 $small-spacing: $base-spacing / 2
@@ -135,7 +135,7 @@ $large-spacing: $base-spacing * 2
 $larger-spacing: $base-spacing * 4
 $base-border-radius: 0.25rem
 $large-border-radius: 1rem
-$page-max-width: calc(80ch + (#{$large-spacing} * 2))
+$page-max-width: calc(66ch + (#{$large-spacing} * 2))
 
 // Z-indeces
 $z-base: 1
@@ -155,7 +155,7 @@ $slow-timing: $base-timing * 2
 @mixin container
   +clearfix
   margin: 0 auto
-  padding: $base-spacing
+  padding: $large-spacing $base-spacing
 
   @media (min-width: $break-medium)
     padding: $large-spacing

@@ -6,12 +6,13 @@
   background-color: $muted-color
   background-position: center center
   background-size: cover
-  border-radius: $base-border-radius
+  border-radius: $large-border-radius
   break-inside: avoid
   color: $white
   display: flex
   flex-direction: column
   overflow: hidden
+  margin: $small-spacing 0
   padding: $base-spacing $small-spacing
   text-align: center
   transition: transform $fast-timing, box-shadow $fast-timing
@@ -30,9 +31,9 @@
     svg
       height: 3rem
 
-  h3
+  h4
     color: $white
-    font-size: 1.25rem
+    font-size: 2rem
     margin-bottom: 0
 
   p
@@ -40,7 +41,7 @@
     margin: 0
 
 .case-study-thumbnail
-  margin-top: $base-spacing
-  min-height: 8rem
-  position: relative
   height: 50vh
+  margin: $base-spacing $large-spacing 0
+  height: 15rem
+  position: relative

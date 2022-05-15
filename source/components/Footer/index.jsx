@@ -12,7 +12,7 @@ class Footer extends React.Component {
           </div>
 
           <h2>
-            I'd love to hear from you
+            Get in touch sometime
           </h2>
 
           <p>

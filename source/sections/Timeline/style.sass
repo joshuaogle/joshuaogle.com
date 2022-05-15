@@ -21,12 +21,15 @@ $timeline-line-color: $neutral-700
 
   li
     font-size: $small-font-size
-    margin: 0
-    padding: 0 0 $large-spacing $base-spacing
+    margin: 0 0 $base-spacing
+    padding: 0 0 $large-spacing $large-spacing
     position: relative
 
     &:last-child
       padding-bottom: 0
+
+      &::before
+        top: 0.5rem
 
     &::before
       background-color: $neutral-300
@@ -36,7 +39,7 @@ $timeline-line-color: $neutral-700
       left: $timeline-line-width / 2
       margin: 0
       position: absolute
-      top: 0.75rem
+      top: 0.95rem
       transform: translateX(-50%)
       height: 8px
       width: 8px
@@ -52,12 +55,13 @@ $timeline-line-color: $neutral-700
 
 .timeline-company
   color: $white
+  font-size: 2rem
   margin: 0
 
   svg
     display: inline-block
     margin-right: 0.5rem
-    max-height: 1.5rem
+    max-height: 2rem
     max-width: 2rem
     vertical-align: -0.25rem
 

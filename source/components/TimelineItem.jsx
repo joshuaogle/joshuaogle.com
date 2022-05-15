@@ -35,7 +35,6 @@ class TimelineItem extends React.Component {
             {this.props.children}
           </p>
         </div>
-
         {this.renderCaseStudies(this.props.caseStudies)}
       </li>
     );
