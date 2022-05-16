@@ -8,19 +8,16 @@ class Footer extends React.Component {
       <footer className="site-footer">
         <section>
           <div className="section-title">
-            You've got good taste
+            Contact
           </div>
 
           <h2>
-            Get in touch sometime
+            You've got good taste, get in touch sometime
           </h2>
 
           <p>
-            Say hi at <a href="mailto:joshua@joshuaogle.com" className="link-email">joshua@joshuaogle.com</a>
-          </p>
-
-          <p>
-            You can also check out more of my work <a href="http://dribbble.com/joshuaogle" className="link-dribbble">on Dribbble</a>&nbsp;
+            Say hi at <a href="mailto:joshua@joshuaogle.com" className="link-email">joshua@joshuaogle.com</a>.
+            You can check out more of my work <a href="http://dribbble.com/joshuaogle" className="link-dribbble">on Dribbble</a>&nbsp;
             and <a href="http://github.com/joshuaogle" className="link-github">on Github</a>,
             take a look at where I've worked <a href="http://linkedin.com/in/joshuaogle" className="link-linkedin">on LinkedIn</a>,
             and see what I'm up to today <a href="http://twitter.com/joshuaogle" className="link-twitter">on Twitter</a>.

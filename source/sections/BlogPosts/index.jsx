@@ -24,7 +24,6 @@ class BlogPosts extends React.Component {
 
     return (
       <section className="content">
-
         <div className="section-title">
           Articles
         </div>

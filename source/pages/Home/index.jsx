@@ -29,7 +29,7 @@ class Home extends React.Component {
             <h1>Hi, I'm Joshua</h1>
             <p>
               I am a Product Designer at <a href="http://hashicorp.com" target="_new">Hashicorp</a>, living in Denver, Colorado.
-              I help companies of all sizes to establish their brand and <mark>build products that people love</mark>.
+              I help make the cloud a better place to live and <mark>build things that people love</mark>.
             </p>
           </div>
         </Intro>
