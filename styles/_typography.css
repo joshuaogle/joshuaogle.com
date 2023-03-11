@@ -1,0 +1,186 @@
+h1, 
+h2,
+h3,
+h4 {
+  font-family: var(--heading-font);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.015em;
+  line-height: 1.25;
+  margin: 0 0 var(--small-spacing);
+}
+
+h1 {
+  color: var(--white);
+  font-size: 3em;
+  font-weight: var(--font-weight-semibold);
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-weight: var(--font-weight-semibold);
+  color: var(--muted-color);
+  font-size: 1.25em;
+}
+
+ul {
+  list-style: none;
+  margin: 0 0 var(--base-spacing) 0;
+  padding: 0;
+}
+
+li {
+  padding-left: 0
+}
+
+li::before {
+  color: var(--muted-color);
+  content: "•";
+  display: inline-block;
+  font-size: 1.5em;
+  line-height: 0;
+  margin-left: calc(var(--small-spacing) * -1);
+  margin-right: var(--smallest-spacing);
+}
+
+p {
+  margin: 0 0 var(--base-spacing);
+  font-weight: var(--font-weight-light);
+}
+p + h2 {
+  margin-top: 2em;
+}
+p + h3 {
+  margin-top: 1em;
+}
+
+a {
+  color: var(--link-color);
+  font-weight: var(--font-weight-regular);
+  text-decoration: none;
+  transition: color var(--base-timing);
+}
+a h2, a h3, a h3 {
+  color: var(--link-color);;
+}
+a:hover {
+  color: var(--link-hover);
+  text-decoration: none;
+}
+
+strong {
+  font-weight: var(--font-weight-semibold);
+}
+
+img,
+svg {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+small {
+  color: var(--muted-color);
+  font-size: var(--small-font-size);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: 0.015em;
+}
+
+mark,
+.year {
+  font-weight: var(--font-weight-regular);
+}
+
+.year {
+  display: inline-block;
+  color: var(--muted-color);
+  font-family: var(--sans-serif);
+  font-size: 0.7em;
+  font-weight: var(--font-weight-regular);
+  line-height: 1;
+  padding: 0.2em 0.5em 0.15em;
+}
+.portfolio-title .year,
+.brand-label .year {
+  margin-left: 0.5em;
+}
+.brand-label .year {
+  font-size: 1em;
+}
+
+blockquote {
+  background: var(--white);
+  border-radius: var(--large-border-radius);
+  color: var(--background-color);
+  margin: 0;
+  padding: var(--base-spacing) var(--base-spacing) var(--base-spacing) var(--large-spacing);
+  position: relative;
+}
+blockquote::before {
+  color: var(--neutral-200);
+  content: "“";
+  font-family: Georgia, serif;
+  font-size: 8em;
+  line-height: 1;
+  position: absolute;
+  top: 0.5rem;
+  left: 1rem;
+}
+
+blockquote p {
+  margin: 0;
+  position: relative;
+}
+
+blockquote .quote-author {
+  color: var(--red-500);
+  display: block;
+  font-family: var(--heading-font);
+  margin-top: var(--smallest-spacing);
+}
+
+blockquote svg {
+  display: inline-block;
+  margin: 0 0.05rem 0 0.15rem;
+  max-width: 1rem;
+  vertical-align: -0.15em;
+}
+
+figure {
+  margin: $large-spacing 0;
+}
+figure .case-study-example {
+  margin: 0 auto;
+}
+
+figcaption {
+  color: var(--muted-color);
+  font-size: small;
+  margin: var(--small-spacing) auto var(--base-spacing);
+  text-align: center;
+}
+
+pre {
+  background-color: var(--black);
+  font-size: var(--small-font-size);
+  padding: 0 var(--small-spacing);
+}
+
+pre .nc,
+pre .s {
+  color: shade(var(--green-500), 25%);
+}
+
+pre .nb {
+  color: var(--blue-500);
+}
+
+  pre  .m {
+    color: var(--cyan-500);
+  }
+
+  .na {
+    color: var(--purple-500);
+  }
