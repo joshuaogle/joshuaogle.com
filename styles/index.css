@@ -5,11 +5,27 @@
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
+html {
+  background: var(--black);
 }
 
-/* Container */
+body {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--text-color);
+  font-family: var(--sans-serif);
+  font-size: var(--base-font-size);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.5;
+  margin: 0;
+  min-height: 100%;
+  overflow-x: hidden;
+  padding: 0;
+  transition: background-color var(--base-timing);
+}
+
+/* Global elements */
 .container {
   --container-side-padding: var(--base-spacing); 
   margin: 0 auto;
