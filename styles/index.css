@@ -1,5 +1,23 @@
 @import "_variables.css";
 
+/* Layout */
+* {
+  box-sizing: border-box;
+}
+
 body {
-  color: var(--brand-colors.armada);
+  margin: 0;
+}
+
+/* Container */
+.container {
+  --container-side-padding: var(--base-spacing); 
+  margin: 0 auto;
+  padding: var(--large-spacing) var(--container-side-padding);
+}
+
+@media (min-width: 60ch) {
+  .container {
+    --container-side-padding: var(--large-spacing);
+  }
 }

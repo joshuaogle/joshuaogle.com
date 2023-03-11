@@ -129,7 +129,7 @@
   --larger-spacing: calc(var(--large-spacing) * 2);
   --base-border-radius: 0.25rem;
   --large-border-radius: 1rem;
-  --page-max-width: calc(66ch + var(--larger-spacing);
+  --page-max-width: calc(66ch + var(--larger-spacing));
 
   --z-base: 1;
   --z-header: 5;
