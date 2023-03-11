@@ -13,7 +13,7 @@ type Props = {
   slug: string
 }
 
-const HeroPost = ({
+const HeroArticle = ({
   title,
   coverImage,
   date,
@@ -30,8 +30,8 @@ const HeroPost = ({
         <div>
           <h3>
             <Link
-              as={`/posts/${slug}`}
-              href="/posts/[slug]"
+              as={`/articles/${slug}`}
+              href="/articles/[slug]"
               className="hover:underline"
             >
               {title}
@@ -50,4 +50,4 @@ const HeroPost = ({
   )
 }
 
-export default HeroPost
+export default HeroArticle

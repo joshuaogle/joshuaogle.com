@@ -1,26 +1,26 @@
-import PostPreview from './post-preview'
-import type Post from '../interfaces/post'
+import ArticlePreview from './article-preview'
+import type Article from '../interfaces/article'
 
 type Props = {
-  posts: Post[]
+  articles: Article[]
 }
 
-const MoreStories = ({ posts }: Props) => {
+const MoreStories = ({ articles }: Props) => {
   return (
     <section>
       <h2>
         More Stories
       </h2>
       <div>
-        {posts.map((post) => (
-          <PostPreview
-            key={post.slug}
-            title={post.title}
-            coverImage={post.coverImage}
-            date={post.date}
-            author={post.author}
-            slug={post.slug}
-            excerpt={post.excerpt}
+        {articles.map((article) => (
+          <ArticlePreview
+            key={article.slug}
+            title={article.title}
+            coverImage={article.coverImage}
+            date={article.date}
+            author={article.author}
+            slug={article.slug}
+            excerpt={article.excerpt}
           />
         ))}
       </div>

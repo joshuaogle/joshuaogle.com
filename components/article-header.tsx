@@ -1,7 +1,7 @@
 import Avatar from './avatar'
 import DateFormatter from './date-formatter'
 import CoverImage from './cover-image'
-import PostTitle from './post-title'
+import ArticleTitle from './article-title'
 import type Author from '../interfaces/author'
 
 type Props = {
@@ -11,10 +11,10 @@ type Props = {
   author: Author
 }
 
-const PostHeader = ({ title, coverImage, date, author }: Props) => {
+const ArticleHeader = ({ title, coverImage, date, author }: Props) => {
   return (
     <>
-      <PostTitle>{title}</PostTitle>
+      <ArticleTitle>{title}</ArticleTitle>
       <div>
         <Avatar name={author.name} picture={author.picture} />
       </div>
@@ -33,4 +33,4 @@ const PostHeader = ({ title, coverImage, date, author }: Props) => {
   )
 }
 
-export default PostHeader
+export default ArticleHeader

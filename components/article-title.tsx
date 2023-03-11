@@ -4,7 +4,7 @@ type Props = {
   children?: ReactNode
 }
 
-const PostTitle = ({ children }: Props) => {
+const ArticleTitle = ({ children }: Props) => {
   return (
     <h1>
       {children}
@@ -12,4 +12,4 @@ const PostTitle = ({ children }: Props) => {
   )
 }
 
-export default PostTitle
+export default ArticleTitle

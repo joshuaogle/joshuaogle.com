@@ -1,20 +1,20 @@
 import Container from '../components/container'
 import MoreStories from '../components/more-stories'
-import HeroPost from '../components/hero-post'
+import HeroArticle from '../components/hero-article'
 import Intro from '../components/intro'
 import Layout from '../components/layout'
-import { getAllPosts } from '../lib/api'
+import { getAllArticles } from '../lib/api'
 import Head from 'next/head'
 import { CMS_NAME } from '../lib/constants'
-import Post from '../interfaces/post'
+import Article from '../interfaces/article'
 
 type Props = {
-  allPosts: Post[]
+  allArticles: Article[]
 }
 
-export default function Articles({ allPosts }: Props) {
-  const heroPost = allPosts[0]
-  const morePosts = allPosts.slice(1)
+export default function Articles({ allArticles }: Props) {
+  const heroArticle = allArticles[0]
+  const moreArticles = allArticles.slice(1)
   return (
     <>
       <Layout>
@@ -22,18 +22,17 @@ export default function Articles({ allPosts }: Props) {
           <title>{`Next.js Blog Example with ${CMS_NAME}`}</title>
         </Head>
         <Container>
-          <Intro />
-          {heroPost && (
-            <HeroPost
-              title={heroPost.title}
-              coverImage={heroPost.coverImage}
-              date={heroPost.date}
-              author={heroPost.author}
-              slug={heroPost.slug}
-              excerpt={heroPost.excerpt}
+          {heroArticle && (
+            <HeroArticle
+              title={heroArticle.title}
+              coverImage={heroArticle.coverImage}
+              date={heroArticle.date}
+              author={heroArticle.author}
+              slug={heroArticle.slug}
+              excerpt={heroArticle.excerpt}
             />
           )}
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+          {moreArticles.length > 0 && <MoreStories articles={moreArticles} />}
         </Container>
       </Layout>
     </>
@@ -41,7 +40,7 @@ export default function Articles({ allPosts }: Props) {
 }
 
 export const getStaticProps = async () => {
-  const allPosts = getAllPosts([
+  const allArticles = getAllArticles([
     'title',
     'date',
     'slug',
@@ -51,6 +50,6 @@ export const getStaticProps = async () => {
   ])
 
   return {
-    props: { allPosts },
+    props: { allArticles },
   }
 }

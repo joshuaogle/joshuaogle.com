@@ -4,7 +4,7 @@ type Props = {
   content: string
 }
 
-const PostBody = ({ content }: Props) => {
+const ArticleBody = ({ content }: Props) => {
   return (
     <div>
       <div
@@ -15,4 +15,4 @@ const PostBody = ({ content }: Props) => {
   )
 }
 
-export default PostBody
+export default ArticleBody

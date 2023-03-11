@@ -1,22 +1,15 @@
-import { CMS_NAME } from '../lib/constants'
+import React from 'react';
 
-const Intro = () => {
-  return (
-    <section>
-      <h1>
-        Blog.
-      </h1>
-      <h4>
-        A statically generated blog example using{' '}
-        <a
-          href="https://nextjs.org/"
-        >
-          Next.js
-        </a>{' '}
-        and {CMS_NAME}.
-      </h4>
-    </section>
-  )
+class Intro extends React.Component {
+  render() {
+    return (
+      <div className={`intro ${this.props.className}`} style={this.props.styles}>
+        <div className="intro-content">
+          {this.props.children}
+        </div>
+      </div>
+    );
+  }
 }
 
-export default Intro
+export default Intro;

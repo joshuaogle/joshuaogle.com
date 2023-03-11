@@ -1,0 +1,35 @@
+@import "../../stylesheets/variables";
+
+.intro {
+  align-items: center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  transition: transform $base-timing;
+  z-index: 1;
+
+  .intro-content {
+    +container;
+    animation: rise 1s ease-in-out;
+    margin: $large-spacing auto 0;
+    padding: $large-spacing $base-spacing $base-spacing;
+    position: relative;
+    flex: 1;
+    transform-origin: $base-spacing 100%;
+    z-index: 2;
+  }
+
+  p {
+    font-size: 1.1em;
+    margin: 0
+  }
+
+  .intro-meta {
+    color: $white;
+    font-size: $small-font-size;
+    font-weight: $font-weight-semibold;
+    opacity: 0.5;
+    text-transform: uppercase;
+  }
+}

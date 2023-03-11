@@ -13,7 +13,7 @@ type Props = {
   slug: string
 }
 
-const PostPreview = ({
+const ArticlePreview = ({
   title,
   coverImage,
   date,
@@ -28,8 +28,8 @@ const PostPreview = ({
       </div>
       <h3>
         <Link
-          as={`/posts/${slug}`}
-          href="/posts/[slug]"
+          as={`/articles/${slug}`}
+          href="/articles/[slug]"
           className="hover:underline"
         >
           {title}
@@ -44,4 +44,4 @@ const PostPreview = ({
   )
 }
 
-export default PostPreview
+export default ArticlePreview
