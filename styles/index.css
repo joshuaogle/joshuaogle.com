@@ -1,2 +1,5 @@
-@import "./variables.scss";
-@import "components/intro.scss";
+@import "_variables.css";
+
+body {
+  color: var(--brand-colors.armada);
+}
