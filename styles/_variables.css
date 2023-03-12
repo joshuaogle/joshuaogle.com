@@ -100,9 +100,9 @@
   --green-300: #DFF69D;
   --green-200: #EEFCBF;
   --green-100: #F7FDDF;
-  --background-color: var(--neutral-900);
+  --theme-color: var(--neutral-900);
   --text-color:  var(--neutral-200);
-  --muted-color: rgba(  --white, 0.55);
+  --muted-color: rgba(--white, 0.55);
   --link-color: var(--cyan-500);
   --link-hover: var(--cyan-300);
   --highlight-color: rgba(var(--yellow-500), 0.2);
@@ -139,7 +139,6 @@
   --brand-color-sharespost: #332D8D;
   --brand-color-kitmath: #F76707;
   --brand-color-vault: #5a6370;
-  --brand-color-structure: #2e71e5;
 
   --base-timing: 250ms;
   --fast-timing: calc(var(--base-timing) / 2);

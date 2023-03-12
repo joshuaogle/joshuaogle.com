@@ -23,7 +23,7 @@ const Layout = ({ preview, children }: Props) => {
           max-width: var(--page-max-width);
           overflow: hidden;
         }
-        `}</style>
+      `}</style>
     </div>
   )
 }

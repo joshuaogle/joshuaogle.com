@@ -12,7 +12,6 @@ h4 {
 h1 {
   color: var(--white);
   font-size: 3em;
-  font-weight: var(--font-weight-semibold);
 }
 
 h2 {
@@ -20,7 +19,6 @@ h2 {
 }
 
 h3 {
-  font-weight: var(--font-weight-semibold);
   color: var(--muted-color);
   font-size: 1.25em;
 }
@@ -63,7 +61,7 @@ a {
   transition: color var(--base-timing);
 }
 a h2, a h3, a h3 {
-  color: var(--link-color);;
+  color: var(--link-color);
 }
 a:hover {
   color: var(--link-hover);
