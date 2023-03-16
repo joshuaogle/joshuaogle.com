@@ -7,7 +7,7 @@ type Props = {
 const Example = ({ caption, image }: Props) => {
   return (
     <figure>
-      <img src={`/source/images/${image}`} className="case-study-example" />
+      <img src={`/images/${image}`} className="case-study-example" />
       {caption && (
         <figcaption>
           {caption}

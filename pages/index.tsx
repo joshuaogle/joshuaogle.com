@@ -23,7 +23,7 @@ export default function Index({ allArticles }: Props) {
 
         <Intro>
           <div className="home-intro--portrait">
-            <img src="/source/images/portrait.png" />
+            <img src="/images/portrait.png" />
           </div>
           <div className="home-intro--copy">
             <h1>Hi, I'm Joshua</h1>
