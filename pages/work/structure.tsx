@@ -4,16 +4,12 @@ import Head from 'next/head'
 export default function StructureCaseStudy() {
   return (
     <>
-      <Layout>
-        <style>{`
-          :root {
-            --theme-color: #2e71e5;
-          }
-        `}</style>
+      <Head>
+        <title>{`Joshua Ogle | Work`}</title>
+      </Head>
 
-        <Head>
-          <title>{`Joshua Ogle | Work`}</title>
-        </Head>
+      <Layout>
+        <style jsx global>{'--theme-color: #2e71e5;'}</style>
         <div className="inset inset--desktop">
           <section>
             <img src="case-studies/armada-home.png" />
