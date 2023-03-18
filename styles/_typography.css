@@ -86,7 +86,14 @@ small {
   letter-spacing: 0.015em;
 }
 
-mark,
+mark {
+  background-color: rgb(var(--highlight-rgb), 0.2);
+  border-radius: 1.5rem 0.5rem;
+  color: var(--text-color);
+  padding: 0.1rem 0.5rem;
+}
+
+
 .year {
   font-weight: var(--font-weight-regular);
 }

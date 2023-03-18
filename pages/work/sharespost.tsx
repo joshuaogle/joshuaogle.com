@@ -14,6 +14,7 @@ export default function SharesPost() {
         <style>{`
           :root {
             --theme-color: #2e71e5;
+            --highlight-rgb: 255, 255, 255;
           }
         `}</style>
 

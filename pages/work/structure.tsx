@@ -9,7 +9,10 @@ export default function StructureCaseStudy() {
       </Head>
 
       <Layout>
-        <style jsx global>{'--theme-color: #2e71e5;'}</style>
+        <style jsx global>{'
+          --theme-color: #2e71e5;
+          --highlight: var(--white);
+        '}</style>
         <div className="inset inset--desktop">
           <section>
             <img src="case-studies/armada-home.png" />
