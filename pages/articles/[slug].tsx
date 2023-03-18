@@ -1,6 +1,5 @@
 import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
-import Container from '../../components/container'
 import ArticleBody from '../../components/article-body'
 import ArticleHeader from '../../components/article-header'
 import Layout from '../../components/layout'
@@ -25,27 +24,25 @@ export default function Article({ article, moreArticles, preview }: Props) {
   }
   return (
     <Layout preview={preview}>
-      <Container>
-        {router.isFallback ? (
-          <ArticleTitle>Loading…</ArticleTitle>
-        ) : (
-          <>
-            <article>
-              <Head>
-                <title>{title}</title>
-                <meta property="og:image" content={article.ogImage.url} />
-              </Head>
-              <ArticleHeader
-                title={article.title}
-                coverImage={article.coverImage}
-                date={article.date}
-                author={article.author}
-              />
-              <ArticleBody content={article.content} />
-            </article>
-          </>
-        )}
-      </Container>
+      {router.isFallback ? (
+        <ArticleTitle>Loading…</ArticleTitle>
+      ) : (
+        <>
+          <article>
+            <Head>
+              <title>{title}</title>
+              <meta property="og:image" content={article.ogImage.url} />
+            </Head>
+            <ArticleHeader
+              title={article.title}
+              coverImage={article.coverImage}
+              date={article.date}
+              author={article.author}
+            />
+            <ArticleBody content={article.content} />
+          </article>
+        </>
+      )}
     </Layout>
   )
 }

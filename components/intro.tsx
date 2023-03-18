@@ -1,15 +1,15 @@
 import React from 'react';
 
-class Intro extends React.Component {
-  render() {
-    return (
-      <div className="intro container">
-        <div className="intro-content">
-          {this.props.children}
-        </div>
-      </div>
-    );
-  }
+type Props = {
+  className: 'intro'
+}
+
+const Intro = ({ children }: Props) => {
+  return (
+    <header className="intro intro-content">
+      {children}
+    </header>
+  )
 }
 
 export default Intro;

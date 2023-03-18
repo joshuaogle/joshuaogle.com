@@ -1,4 +1,3 @@
-import Container from '../components/container'
 import MoreStories from '../components/more-stories'
 import HeroArticle from '../components/hero-article'
 import Intro from '../components/intro'
@@ -21,19 +20,18 @@ export default function Articles({ allArticles }: Props) {
         <Head>
           <title>{`Next.js Blog Example with ${CMS_NAME}`}</title>
         </Head>
-        <Container>
-          {heroArticle && (
-            <HeroArticle
-              title={heroArticle.title}
-              coverImage={heroArticle.coverImage}
-              date={heroArticle.date}
-              author={heroArticle.author}
-              slug={heroArticle.slug}
-              excerpt={heroArticle.excerpt}
-            />
-          )}
-          {moreArticles.length > 0 && <MoreStories articles={moreArticles} />}
-        </Container>
+
+        {heroArticle && (
+          <HeroArticle
+            title={heroArticle.title}
+            coverImage={heroArticle.coverImage}
+            date={heroArticle.date}
+            author={heroArticle.author}
+            slug={heroArticle.slug}
+            excerpt={heroArticle.excerpt}
+          />
+        )}
+        {moreArticles.length > 0 && <MoreStories articles={moreArticles} />}
       </Layout>
     </>
   )

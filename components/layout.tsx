@@ -12,6 +12,7 @@ const Layout = ({ preview, children }: Props) => {
     <div className="app">
       <Meta />
       <Header />
+
       <main className="page">
         {children}
       </main>

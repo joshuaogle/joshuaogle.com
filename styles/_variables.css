@@ -1,4 +1,5 @@
 :root {
+  /* Colors */
   --black: #000;
   --white: #fff;
   --neutral-900: #262322;
@@ -107,40 +108,65 @@
   --link-hover: var(--cyan-300);
   --highlight-color: rgba(var(--yellow-500), 0.2);
 
-  --break-small: 600px;
-  --break-medium: 1000px;
-  --break-large: 1400px;
-
-  --sans-serif: -apple-system, BlinkMacSystemFont, sans-serif;
-  --heading-font: "TiemposHeadline", Georgia, serif;
-  --font-weight-light: 300;
-  --font-weight-regular: 400;
-  --font-weight-semibold: 600;
-  --font-weight-black: 800;
-
-  --base-font-size: clamp(16px, 1.5vw, 24px);
-  --small-font-size: clamp(14px, 1.3vw, 18px);
-  --smallest-font-size: clamp(12px, 1.5vw, 16px);
-  --large-font-size: 1.25rem;
-  --base-spacing: 2rem;
-  --small-spacing: calc(var(--base-spacing) / 2);
-  --smallest-spacing: calc(var(--small-spacing) / 2);
-  --large-spacing: calc(var(--base-spacing) * 2);
-  --larger-spacing: calc(var(--large-spacing) * 2);
-  --base-border-radius: 0.25rem;
-  --large-border-radius: 1rem;
-  --page-max-width: calc(66ch + var(--larger-spacing));
-
-  --z-base: 1;
-  --z-header: 5;
-
+  /* Brand colors */
   --brand-color-armada: #1b6c94;
   --brand-color-summit: #B93A32;
   --brand-color-sharespost: #332D8D;
   --brand-color-kitmath: #F76707;
   --brand-color-vault: #5a6370;
 
+  /* Fonts */
+  --sans-serif: -apple-system, BlinkMacSystemFont, sans-serif;
+  --heading-font: "TiemposHeadline", Georgia, serif;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+  --font-weight-black: 800;
+  --base-font-size: clamp(16px, 1.5vw, 24px);
+  --small-font-size: clamp(14px, 1.3vw, 18px);
+  --smallest-font-size: clamp(12px, 1.5vw, 16px);
+  --large-font-size: 1.25rem;
+
+  /* Spacing */
+  --base-spacing: 2rem;
+  --small-spacing: calc(var(--base-spacing) / 2);
+  --smallest-spacing: calc(var(--small-spacing) / 2);
+  --large-spacing: calc(var(--base-spacing) * 2);
+  --larger-spacing: calc(var(--large-spacing) * 2);
+
+  /* Breakpoints */
+  --break-small: 600px;
+  --break-medium: 1000px;
+  --break-large: 1400px;
+  --page-max-width: calc(66ch + var(--larger-spacing));
+
+  /* Borders */
+  --base-border-radius: 0.25rem;
+  --large-border-radius: 1rem;
+
+  /* Timing */
   --base-timing: 250ms;
   --fast-timing: calc(var(--base-timing) / 2);
   --slow-timing: calc(var(--base-timing) * 2);
+
+  /* Elevations (from Material Design): */
+  --md-u: rgba(0, 0, 0, 0.2);
+  --md-p: rgba(0, 0, 0, 0.15);
+  --md-a: rgba(0, 0, 0, 0.1);
+  --md-2dp-u: 0 0.0rem 0.4rem 0 var(--md-u);
+  --md-2dp-p: 0 0.3rem 0.4rem 0 var(--md-p);
+  --md-2dp-a: 0 0.1rem 0.5rem 0 var(--md-a);
+  --md-4dp-u: 0 0.2rem 0.4rem 0 var(--md-u);
+  --md-4dp-p: 0 0.4rem 0.5rem 0 var(--md-p);
+  --md-4dp-a: 0 0.1rem 1.0rem 0 var(--md-a);
+  --md-8dp-u: 0 0.8rem 1.0rem 0 var(--md-u);
+  --md-8dp-p: 0 0.3rem 1.4rem 0 var(--md-p);
+  --md-8dp-a: 0 0.4rem 1.4rem 0 var(--md-a);
+  --md-12dp-u: 0 1.2rem 1.7rem 0 var(--md-u);
+  --md-12dp-p: 0 0.5rem 2.2rem 0 var(--md-p);
+  --md-12dp-a: 0 0.7rem 0.8rem 0 var(--md-a);
+  --shadow-low:    var(--md-2dp-u), var(--md-2dp-p), var(--md-2dp-a);
+  --shadow-base:   var(--md-4dp-u), var(--md-4dp-p), var(--md-4dp-a);
+  --shadow-medium: var(--md-8dp-u), var(--md-8dp-p), var(--md-8dp-a);
+  --shadow-high:   var(--md-12dp-u), var(--md-12dp-p), var(--md-12dp-a);
 }

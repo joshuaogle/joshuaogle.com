@@ -2,7 +2,6 @@
 @import "_typography.css";
 @import "_fonts.css";
 
-/* Layout */
 * {
   box-sizing: border-box;
 }
@@ -28,15 +27,8 @@ body {
   transition: background-color var(--slow-timing);
 }
 
-/* Global elements */
-.container {
-  --container-side-padding: var(--base-spacing); 
-  margin: 0 auto;
-  padding: var(--large-spacing) var(--container-side-padding);
-}
-
-@media (min-width: 60ch) {
-  .container {
-    --container-side-padding: var(--large-spacing);
-  }
+img {
+  background-color: var(--white);
+  border-radius: var(--large-border-radius);
+  box-shadow: var(--shadow-base);
 }
