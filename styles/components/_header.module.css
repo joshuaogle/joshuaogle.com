@@ -8,6 +8,7 @@
   color: var(--muted-color);
   display: block;
   transition: color var(--base-timing);
+  transform: scaleX(-1) rotate(60deg);
   width: 2rem;
 }
 
