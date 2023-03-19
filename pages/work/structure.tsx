@@ -10,8 +10,8 @@ export default function StructureCaseStudy() {
 
       <Layout>
         <style jsx global>{'
-          --theme-color: #2e71e5;
-          --highlight: var(--white);
+          --theme-background-color: #2e71e5;
+          --theme-highlight-color: var(--white);
         '}</style>
         <div className="inset inset--desktop">
           <section>

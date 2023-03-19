@@ -19,7 +19,7 @@ h2 {
 }
 
 h3 {
-  color: var(--muted-color);
+  color: var(--theme-muted-color);
   font-size: 1.25em;
 }
 
@@ -34,7 +34,7 @@ li {
 }
 
 li::before {
-  color: var(--muted-color);
+  color: var(--theme-muted-color);
   content: "•";
   display: inline-block;
   font-size: 1.5em;
@@ -57,14 +57,14 @@ p + h3 {
 }
 
 a {
-  color: var(--link-color);
+  color: var(--theme-link-color);
   font-weight: var(--font-weight-regular);
   text-decoration: none;
   transition: color var(--base-timing);
 }
 
 a h2, a h3, a h3 {
-  color: var(--link-color);
+  color: var(--theme-link-color);
 }
 
 a:hover {
@@ -88,9 +88,9 @@ figure {
 }
 
 mark {
-  background-color: rgb(var(--highlight-rgb), 0.1);
+  background-color: rgb(var(--theme-highlight-rgb), 0.1);
   border-radius: 1.5rem 0.5rem;
-  color: var(--text-color);
+  color: var(--theme-text-color);
   font-weight: var(--font-weight-regular);
   padding: 0.16rem 0.66rem;
 }
@@ -98,7 +98,7 @@ mark {
 blockquote {
   background: var(--white);
   border-radius: var(--large-border-radius);
-  color: var(--background-color);
+  color: var(--theme-background-color);
   margin: 0;
   padding: var(--base-spacing) var(--base-spacing) var(--base-spacing) var(--large-spacing);
   position: relative;
@@ -162,7 +162,7 @@ pre  .m {
 small,
 figcaption,
 .section-title {
-  color: var(--muted-color);
+  color: var(--theme-muted-color);
   font-size: var(--smallest-font-size);
   font-weight: var(--font-weight-regular);
   letter-spacing: 0.015em;

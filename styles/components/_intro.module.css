@@ -9,7 +9,7 @@
 }
 
 .content {
-  animation: rise 1s ease-in-out;
+  animation: rise var(--slow-timing) ease-out;
   margin: var(--large-spacing) auto 0;
   padding: var(--large-spacing) var(--base-spacing) var(--base-spacing);
   position: relative;
@@ -32,12 +32,16 @@
 }
 
 @keyframes rise {
-  from {
+  0% {
     opacity: 0;
     transform: translateY(var(--base-spacing));
   }
 
-  to {
+  10% {
+    opacity: 0;
+  }
+
+  100% {
     opacity: 1;
     transform: translateY(0);
   }

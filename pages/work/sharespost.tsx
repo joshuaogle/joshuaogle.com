@@ -13,7 +13,7 @@ export default function SharesPost() {
       <Layout>
         <style>{`
           :root {
-            --theme-color: #332D8D;
+            --theme-background-color: #332D8D;
           }
         `}</style>
 

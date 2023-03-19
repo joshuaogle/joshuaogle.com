@@ -5,13 +5,13 @@
 }
 
 .logo {
-  color: var(--muted-color);
+  color: var(--theme-muted-color);
   display: block;
-  transition: color var(--base-timing);
   transform: scaleX(-1) rotate(60deg);
+  transition: color var(--base-timing);
   width: 2rem;
 }
 
 .logo:hover {
-  color: var(--red-500);
+  color: var(--theme-accent-color);
 }

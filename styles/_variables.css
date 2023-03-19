@@ -110,13 +110,14 @@
   --green-100: #F7FDDF;
 
   /* Default theme */
-  --theme-color: var(--neutral-900);
-  --muted-color: rgba(255, 255, 255, 0.55);
-  --text-color:  var(--neutral-200);
-  --link-color: var(--cyan-500);
-  --link-hover: var(--cyan-300);
-  --highlight-rgb: 255, 239, 102;
-  --footer-background-rgb: 0, 0, 0;
+  --theme-background-color: var(--neutral-900);
+  --theme-accent-color: var(--yellow-300);
+  --theme-muted-color: rgba(255, 255, 255, 0.55);
+  --theme-text-color:  var(--neutral-200);
+  --theme-link-color: var(--cyan-500);
+  --theme-link-hover: var(--cyan-300);
+  --theme-highlight-rgb: 255, 239, 102;
+  --theme-footer-background-rgb: 0, 0, 0;
 
   /* Brand colors */
   --brand-color-armada: #1b6c94;
@@ -156,7 +157,7 @@
   /* Timing */
   --base-timing: 250ms;
   --fast-timing: 100ms;
-  --slow-timing: 1s;
+  --slow-timing: 750ms;
 
   /* Elevations (from Material Design): */
   --md-u: rgba(0, 0, 0, 0.2);

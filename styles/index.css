@@ -11,11 +11,11 @@ html {
 }
 
 body {
-  background: var(--theme-color);
+  background: var(--theme-background-color);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  color: var(--text-color);
+  color: var(--theme-text-color);
   font-family: var(--sans-serif);
   font-size: var(--base-font-size);
   font-weight: var(--font-weight-regular);

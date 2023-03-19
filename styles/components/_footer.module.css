@@ -1,5 +1,5 @@
 .container {
-  background: rgba(var(--footer-background-rgb), 0.33);
+  background: rgba(var(--theme-footer-background-rgb), 0.33);
   border-radius: var(--large-border-radius) var(--large-border-radius) 0 0;
   margin: var(--base-spacing) auto 0;
   max-width: var(--page-max-width);
@@ -25,14 +25,14 @@
 }
 
 .copyright {
-  color: var(--muted-color);
+  color: var(--theme-muted-color);
   font-size: var(--smallest-font-size);
   font-weight: var(--font-weight-light);
   text-align: center;
 }
 
 .copyright a {
-  color: var(--muted-color);
+  color: var(--theme-muted-color);
   text-decoration: none;
 }
 
