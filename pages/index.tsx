@@ -1,9 +1,9 @@
-import HeroArticle from '../components/hero-article'
-import Layout from '../components/layout'
-import { getAllArticles } from '../lib/api'
 import Head from 'next/head'
-import { CMS_NAME } from '../lib/constants'
 import Article from '../interfaces/article'
+import { getAllArticles } from '../lib/api'
+import Layout from '../components/layout'
+import Timeline from '../components/timeline'
+import HeroArticle from '../components/hero-article'
 import styles from '../styles/pages/home.module.css'
 
 type Props = {
@@ -15,7 +15,7 @@ export default function Index({ allArticles }: Props) {
   return (
     <Layout>
       <Head>
-        <title>{`Next.js Blog Example with ${CMS_NAME}`}</title>
+        <title>Joshua Ogle</title>
       </Head>
 
       <header className={styles.intro}>
@@ -32,6 +32,8 @@ export default function Index({ allArticles }: Props) {
           </p>
         </div>
       </header>
+
+      <Timeline />
 
       {heroArticle && (
         <HeroArticle

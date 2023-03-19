@@ -28,7 +28,6 @@ body {
 }
 
 img {
-  background-color: var(--white);
   border-radius: var(--large-border-radius);
   box-shadow: var(--shadow-base);
 }

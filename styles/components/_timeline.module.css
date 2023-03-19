@@ -1,0 +1,18 @@
+.list {
+  --timeline-line-width: 2px;
+  --timeline-line-color: var(--neutral-700);
+  list-style-type: none;
+  margin-top: var(--large-spacing);
+  padding-left: var(--small-spacing);
+  position: relative;
+}
+
+.list::before {
+  background-color: var(--timeline-line-color);
+  bottom: 0.6rem;
+  content: "";
+  left: var(--small-spacing);
+  position: absolute;
+  top: 0.75rem;
+  width: var(--timeline-line-width);
+}
