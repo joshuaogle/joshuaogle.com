@@ -1,15 +1,24 @@
-import React from 'react';
+import DateFormatter from './date-formatter'
+import styles from '../styles/components/_intro.module.css'
 
 type Props = {
-  className: 'intro'
+  title: string
+  coverImage: string
+  date: string
+  author: Author
 }
 
-const Intro = ({ children }: Props) => {
+const Intro = ({ title, coverImage, date, author }: Props) => {
   return (
-    <header className="intro intro-content">
-      {children}
-    </header>
+    <>
+      <header className={styles.container} >
+        <div className={styles.content} >
+          <h1>{title}</h1>
+          <DateFormatter dateString={date} />
+        </div>
+      </header>
+    </>
   )
 }
 
-export default Intro;
+export default Intro

@@ -1,0 +1,44 @@
+.container {
+  align-items: center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  transition: transform var(--base-timing);
+  z-index: 1;
+}
+
+.content {
+  animation: rise 1s ease-in-out;
+  margin: var(--large-spacing) auto 0;
+  padding: var(--large-spacing) var(--base-spacing) var(--base-spacing);
+  position: relative;
+  flex: 1;
+  transform-origin: var(--base-spacing) 100%;
+  z-index: 2;
+}
+
+.copy {
+  font-size: 1.1em;
+  margin: 0;
+}
+
+.intro-meta {
+  color: var(--white);
+  font-size: var(--small-font-size);
+  font-weight: var(--font-weight-semibold);
+  opacity: 0.5;
+  text-transform: uppercase;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(var(--base-spacing));
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

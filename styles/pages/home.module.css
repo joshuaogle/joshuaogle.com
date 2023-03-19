@@ -13,7 +13,7 @@
   max-width: 50vw;
 }
 
-@media (min-width: 60ch) {
+@media (min-width: 40em) {
   .introCopy {
     flex: 3;
     margin-left: var(--base-spacing);
@@ -22,17 +22,24 @@
 
 .introTitle {
   margin-bottom: var(--smallest-spacing);
+  position: relative;
 }
 
 .introTitle::before {
   background-image: url("/images/dot.svg");
+  background-size: 8px;
+  height: 34px;
+  width: 74px;
+  content: '';
   display: none;
   transform: translateX(calc(-100% - var(--small-spacing))) translateY(-50%);
+  position: absolute;
+  top: 50%;
+  left: 0;
 }
 
 @media (min-width: 40em) {
   .introTitle::before {
     display: block;
-    background-size: 8px;
   }
 }

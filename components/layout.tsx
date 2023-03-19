@@ -1,6 +1,7 @@
 import Header from './header';
 import Footer from './footer';
 import Meta from './meta';
+import styles from '../styles/components/_layout.module.css';
 
 type Props = {
   preview?: boolean
@@ -9,22 +10,14 @@ type Props = {
 
 const Layout = ({ preview, children }: Props) => {
   return (
-    <div className="app">
+    <div className={styles.app}>
       <Meta />
       <Header />
 
-      <main className="page">
+      <main className={styles.page}>
         {children}
       </main>
       <Footer />
-
-      <style jsx>{`
-        .page {
-          margin: 0 auto;
-          max-width: var(--page-max-width);
-          overflow: hidden;
-        }
-      `}</style>
     </div>
   )
 }

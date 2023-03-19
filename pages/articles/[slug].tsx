@@ -1,10 +1,9 @@
 import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
 import ArticleBody from '../../components/article-body'
-import ArticleHeader from '../../components/article-header'
+import Intro from '../../components/intro'
 import Layout from '../../components/layout'
 import { getArticleBySlug, getAllArticles } from '../../lib/api'
-import ArticleTitle from '../../components/article-title'
 import Head from 'next/head'
 import { CMS_NAME } from '../../lib/constants'
 import markdownToHtml from '../../lib/markdownToHtml'
@@ -33,11 +32,9 @@ export default function Article({ article, moreArticles, preview }: Props) {
               <title>{title}</title>
               <meta property="og:image" content={article.ogImage.url} />
             </Head>
-            <ArticleHeader
+            <Intro
               title={article.title}
-              coverImage={article.coverImage}
               date={article.date}
-              author={article.author}
             />
             <ArticleBody content={article.content} />
           </article>
@@ -58,10 +55,8 @@ export async function getStaticProps({ params }: Params) {
     'title',
     'date',
     'slug',
-    'author',
     'content',
     'ogImage',
-    'coverImage',
   ])
   const content = await markdownToHtml(article.content || '')
 

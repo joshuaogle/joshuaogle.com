@@ -108,17 +108,19 @@
   --green-300: #DFF69D;
   --green-200: #EEFCBF;
   --green-100: #F7FDDF;
+
+  /* Default theme */
   --theme-color: var(--neutral-900);
+  --muted-color: rgba(255, 255, 255, 0.55);
   --text-color:  var(--neutral-200);
-  --muted-color: rgba(--white, 0.55);
   --link-color: var(--cyan-500);
   --link-hover: var(--cyan-300);
   --highlight-rgb: 255, 239, 102;
+  --footer-background-rgb: 0, 0, 0;
 
   /* Brand colors */
   --brand-color-armada: #1b6c94;
   --brand-color-summit: #B93A32;
-  --brand-color-sharespost: #332D8D;
   --brand-color-kitmath: #F76707;
   --brand-color-vault: #5a6370;
 
@@ -153,8 +155,8 @@
 
   /* Timing */
   --base-timing: 250ms;
-  --fast-timing: calc(var(--base-timing) / 2);
-  --slow-timing: calc(var(--base-timing) * 2);
+  --fast-timing: 100ms;
+  --slow-timing: 1s;
 
   /* Elevations (from Material Design): */
   --md-u: rgba(0, 0, 0, 0.2);
