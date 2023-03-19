@@ -47,7 +47,7 @@ export default function SharesPost() {
 
           <p>
             This company is the largest marketplace of private securities, and to maintain that position they approached thoughtbot to build a new platform.
-            The new app <mark>would blend the best parts</mark> of the close relationships that their users have with their brokers, while also providing up-to-date information on companies and opportunities that might be interested them.
+            The new app would <mark>make the most of the relationships</mark> that their users have with their brokers by providing up-to-date information on companies and opportunities that might be interested them.
             So for instance, it would display investment opportunities that the broker has marked specifically for the user based on their conversations.
             It would show news stories relevant to companies they have invested in or are watching.
             And most importantly, it would make it easy to let your broker know that you are interested in acquiring or selling stock in these companies.

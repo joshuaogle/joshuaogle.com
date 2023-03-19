@@ -1,0 +1,16 @@
+.header {
+  justify-content: center;
+  display: flex;
+  margin: var(--base-spacing) 0 var(--large-spacing);
+}
+
+.logo {
+  color: var(--muted-color);
+  display: block;
+  transition: color var(--base-timing);
+  width: 2rem;
+}
+
+.logo:hover {
+  color: var(--red-500);
+}

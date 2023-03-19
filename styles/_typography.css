@@ -47,9 +47,11 @@ p {
   margin: 0 0 var(--base-spacing);
   font-weight: var(--font-weight-light);
 }
+
 p + h2 {
   margin-top: 2em;
 }
+
 p + h3 {
   margin-top: 1em;
 }
@@ -60,9 +62,11 @@ a {
   text-decoration: none;
   transition: color var(--base-timing);
 }
+
 a h2, a h3, a h3 {
   color: var(--link-color);
 }
+
 a:hover {
   color: var(--link-hover);
   text-decoration: none;
@@ -79,40 +83,16 @@ svg {
   max-width: 100%;
 }
 
-small {
-  color: var(--muted-color);
-  font-size: var(--small-font-size);
-  font-weight: var(--font-weight-regular);
-  letter-spacing: 0.015em;
+figure {
+  margin: $large-spacing 0;
 }
 
 mark {
-  background-color: rgb(var(--highlight-rgb), 0.2);
+  background-color: rgb(var(--highlight-rgb), 0.1);
   border-radius: 1.5rem 0.5rem;
   color: var(--text-color);
-  padding: 0.1rem 0.5rem;
-}
-
-
-.year {
   font-weight: var(--font-weight-regular);
-}
-
-.year {
-  display: inline-block;
-  color: var(--muted-color);
-  font-family: var(--sans-serif);
-  font-size: 0.7em;
-  font-weight: var(--font-weight-regular);
-  line-height: 1;
-  padding: 0.2em 0.5em 0.15em;
-}
-.portfolio-title .year,
-.brand-label .year {
-  margin-left: 0.5em;
-}
-.brand-label .year {
-  font-size: 1em;
+  padding: 0.16rem 0.66rem;
 }
 
 blockquote {
@@ -123,6 +103,7 @@ blockquote {
   padding: var(--base-spacing) var(--base-spacing) var(--base-spacing) var(--large-spacing);
   position: relative;
 }
+
 blockquote::before {
   color: var(--neutral-200);
   content: "“";
@@ -153,20 +134,7 @@ blockquote svg {
   vertical-align: -0.15em;
 }
 
-figure {
-  margin: $large-spacing 0;
-}
-figure .case-study-example {
-  margin: 0 auto;
-}
-
-figcaption {
-  color: var(--muted-color);
-  font-size: small;
-  margin: var(--small-spacing) auto var(--base-spacing);
-  text-align: center;
-}
-
+/* Code blocks */
 pre {
   background-color: var(--black);
   font-size: var(--small-font-size);
@@ -182,10 +150,25 @@ pre .nb {
   color: var(--blue-500);
 }
 
-  pre  .m {
-    color: var(--cyan-500);
-  }
+pre  .m {
+  color: var(--cyan-500);
+}
 
-  .na {
-    color: var(--purple-500);
-  }
+.na {
+  color: var(--purple-500);
+}
+
+/* Small text */
+small,
+figcaption,
+.section-title {
+  color: var(--muted-color);
+  font-size: var(--smallest-font-size);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: 0.015em;
+  margin: var(--small-spacing) auto var(--small-spacing);
+}
+
+figcaption {
+  text-align: center;
+}
