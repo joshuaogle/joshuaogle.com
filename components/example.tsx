@@ -3,7 +3,6 @@ type Props = {
   image: string
 }
 
-
 const Example = ({ caption, image }: Props) => {
   return (
     <figure>

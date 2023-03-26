@@ -10,10 +10,10 @@
 
 .content {
   animation: rise var(--slow-timing) ease-out;
-  margin: var(--large-spacing) auto 0;
-  padding: var(--large-spacing) var(--base-spacing) var(--base-spacing);
+  margin: var(--large-spacing) auto;
   position: relative;
   flex: 1;
+  text-align: center;
   transform-origin: var(--base-spacing) 100%;
   z-index: 2;
 }

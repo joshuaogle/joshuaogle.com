@@ -2,10 +2,10 @@ import DateFormatter from './date-formatter'
 import styles from '../styles/components/_intro.module.css'
 
 type Props = {
-  title: string
-  coverImage: string
-  date: string
-  author: Author
+  title: string,
+  coverImage: string,
+  date: string,
+  author: Author,
 }
 
 const Intro = ({ title, coverImage, date, author }: Props) => {

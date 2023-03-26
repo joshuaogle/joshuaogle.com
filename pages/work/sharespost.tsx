@@ -1,30 +1,51 @@
 import Layout from '../../components/layout'
 import Head from 'next/head'
+import Intro from '../../components/intro'
 import Example from '../../components/example'
 
+export const SharespostSummary = {
+  title: "Sharespost",
+  meta: {
+    date: "2016-08-01",
+    role: "Design & Front-End Development",
+    time: "9 months",
+    team: "2 Designers, 3 Developers",
+    client: "Sharespost",
+    client_url: "http://sharespost.com",
+  },
+  theme: {
+    color: "#332D8D",
+    icon: "/images/case-study-logo-sharespost.svg",
+    thumbnail: "/images/case-studies/sharespost-home.png",
+    background: "/images/case-study-bg-sharespost.png",
+  },
+  intro: "At thoughtbot, we helped one of the largest private securities firms make the process of buying and selling shares easy. Their existing process was very manual, relying on brokers to do almost everything. To help them scale even bigger, they would need to find a way to automate as much of the process. This would free up the brokers to provide better service to even more users.",
+}
 
-export default function SharesPost() {
+const Sharespost = () => {
   return (
     <>
       <Head>
-        <title>{`Joshua Ogle | Work`}</title>
+        <title>{`Joshua Ogle | Sharespost`}</title>
       </Head>
 
       <Layout>
-        <style>{`
+        <style jsx global>{`
           :root {
-            --theme-background-color: #332D8D;
+            --theme-background-color: ${SharespostSummary.theme.color};
+            --theme-highlight-color: var(--white);  
           }
         `}</style>
+      
+        <Intro
+          title={SharespostSummary.title}
+          date={SharespostSummary.meta.date}
+        />
 
-        <div className="inset inset--desktop">
-          <section>
-            <Example
-              image="case-studies/sharespost-chart.png"
-              caption="The home page greets users with an up-to-date evaluation of their holdings."
-            />
-          </section>
-        </div>
+        <Example
+          image="case-studies/sharespost-chart.png"
+          caption="The home page greets users with an up-to-date evaluation of their holdings."
+        />
 
         <section>
           <div className="section-title">
@@ -90,15 +111,11 @@ export default function SharesPost() {
             These mockups were refined in <a href="http://invisionapp.com" target="_new">InVision</a> so we could give the client a realistic look at how the views were connected.
           </p>
         </section>
-
-        <div className="inset inset--desktop">
-          <section>
-            <Example
-              image="case-studies/sharespost-home.png"
-              caption="The home page greets users with an up-to-date evaluation of their holdings."
-            />
-          </section>
-        </div>
+        
+        <Example
+          image="case-studies/sharespost-home.png"
+          caption="The home page greets users with an up-to-date evaluation of their holdings."
+        />
 
         <section>
           <p>
@@ -117,12 +134,10 @@ export default function SharesPost() {
               </p>
             </div>
 
-            <div className="split-secondary">
-              <Example
-                image="case-studies/sharespost-card.png"
-                caption="An early Opportunity Card wireframe"
-              />
-            </div>
+            <Example
+              image="case-studies/sharespost-card.png"
+              caption="An early Opportunity Card wireframe"
+            />
           </div>
 
           <p>
@@ -134,14 +149,10 @@ export default function SharesPost() {
           </p>
         </section>
 
-        <div className="inset inset--desktop">
-          <section>
-            <Example
-              image="case-studies/sharespost-waterfall.png"
-              caption="The &ldquo;waterfall chart&rdquo; was the most technically difficult, but also the most informative."
-            />
-          </section>
-        </div>
+        <Example
+          image="case-studies/sharespost-waterfall.png"
+          caption="The &ldquo;waterfall chart&rdquo; was the most technically difficult, but also the most informative."
+        />
 
         <section>
           <p>
@@ -154,14 +165,11 @@ export default function SharesPost() {
           </p>
         </section>
 
-        <div className="inset inset--desktop">
-          <section>
-            <Example
-              image="case-studies/sharespost-admin.png"
-              caption="The admin system that gives the brokers access to all of the data."
-            />
-          </section>
-        </div>
+
+        <Example
+          image="case-studies/sharespost-admin.png"
+          caption="The admin system that gives the brokers access to all of the data."
+        />
 
         <section>
           <p>
@@ -192,20 +200,6 @@ export default function SharesPost() {
       </Layout>
     </>
   );
-
-  defaultProps = {
-    title: "Sharespost",
-    date: "2016/08/01",
-    shortName: "sharespost",
-    role: "Design & Front-End Development",
-    time: "9 months",
-    team: "2 Designers, 3 Developers",
-    background: "case-study-bg-sharespost.png",
-    icon: "case-study-logo-sharespost.svg",
-    client: "Sharespost",
-    client_url: "http://sharespost.com",
-    intro: "At thoughtbot, we helped one of the largest private securities firms make the process of buying and selling shares easy. Their existing process was very manual, relying on brokers to do almost everything. To help them scale even bigger, they would need to find a way to automate as much of the process. This would free up the brokers to provide better service to even more users.",
-    thumbnail: "/source/images/case-studies/sharespost-home.png"
-  }
-  
 }
+
+export default Sharespost

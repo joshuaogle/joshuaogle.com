@@ -1,7 +1,27 @@
 import Layout from '../../components/layout'
 import Head from 'next/head'
+import Intro from '../../components/intro'
 
-export default function StructureCaseStudy() {
+export const StructureSummary = {
+  title: "Structure Design System",
+  meta: {
+    date: "2020-10-31",
+    role: "Design System Lead",
+    time: "4 years",
+    team: "12 Designers",
+    client: "HashiCorp",
+    client_url: "http://hashicorp.com",
+  },
+  theme: {
+    color: "#2e71e5",
+    background: "",
+    icon: "/images/case-study-logo-structure.svg",
+    thumbnail: "",
+  },
+  intro: "Description.",
+}
+
+const Structure = () => {
   return (
     <>
       <Head>
@@ -9,10 +29,16 @@ export default function StructureCaseStudy() {
       </Head>
 
       <Layout>
-        <style jsx global>{'
-          --theme-background-color: #2e71e5;
+        <style jsx global>{`
+          --theme-background-color: ${StructureSummary.theme.color};
           --theme-highlight-color: var(--white);
-        '}</style>
+        `}</style>
+      
+        <Intro
+          title={StructureSummary.title}
+          date={StructureSummary.meta.date}
+        />
+
         <div className="inset inset--desktop">
           <section>
             <img src="case-studies/armada-home.png" />
@@ -107,3 +133,5 @@ export default function StructureCaseStudy() {
     </>
   )
 }
+
+export default Structure

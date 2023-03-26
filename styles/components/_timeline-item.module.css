@@ -20,14 +20,6 @@
   width: 8px;
 }
 
-.place:last-child {
-  padding-bottom: 0;
-}
-
-.place:last-child::before {
-  top: 0.5rem;
-}
-
 .details {
   flex: 1;
 }
@@ -53,8 +45,9 @@
   vertical-align: -0.25rem;
 }
 
-.span {
-  margin-bottom: var(--smallest-spacing);
+.employment {
+  display: block;
+  margin: var(--smallest-spacing) 0;
   text-transform: none;
 }
 

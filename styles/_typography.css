@@ -83,10 +83,6 @@ svg {
   max-width: 100%;
 }
 
-figure {
-  margin: $large-spacing 0;
-}
-
 mark {
   background-color: rgb(var(--theme-highlight-rgb), 0.1);
   border-radius: 1.5rem 0.5rem;

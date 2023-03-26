@@ -9,7 +9,7 @@ type Props = {
   children: React.ReactNode
 }
 
-const Timeline = ({ icon, company, title, when, children }: Props) => {
+const TimelineItem = ({ icon, company, title, when, children }: Props) => {
   return (
     <li className={styles.place}>
       <div className={styles.details}>
@@ -19,18 +19,19 @@ const Timeline = ({ icon, company, title, when, children }: Props) => {
             height="32"
             width="32"
             className={styles.icon}
+            alt={company}
           />
           {company}
         </h3>
-        <div className={styles.span}>
+        <small className={styles.employment}>
           {title}, {when}
-        </div>
-        <p className={styles.summary}>
+        </small>
+        <div className={styles.summary}>
           {children}
-        </p>
+        </div>
       </div>
     </li>
   )
 }
 
-export default Timeline
+export default TimelineItem

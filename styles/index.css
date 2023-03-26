@@ -31,3 +31,7 @@ img {
   border-radius: var(--large-border-radius);
   box-shadow: var(--shadow-base);
 }
+
+section {
+  padding: var(--large-spacing) 0;
+}

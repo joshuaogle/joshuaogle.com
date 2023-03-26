@@ -1,5 +1,10 @@
 import TimelineItem from './timeline-item'
+import CasestudyCard from './casestudy-card'
 import styles from '../styles/components/_timeline.module.css'
+
+import {VaultSummary} from '../pages/work/vault';
+import {StructureSummary} from '../pages/work/structure';
+import {SharespostSummary} from '../pages/work/sharespost';
 
 const Timeline = () => {
   return (
@@ -7,6 +12,7 @@ const Timeline = () => {
       <div className="section-title">
         Case studies
       </div>
+
       <h2>A little bit of my work</h2>
 
       <ul className={styles.list}>
@@ -21,8 +27,10 @@ const Timeline = () => {
           I helped hire our designers, define our process, and created our Product Design System named "Structure".
           Throughout my time at HashiCorp, I have been the design lead for <a href="http://hashicorp.com/products/vault" target="_new">Vault</a>, <a href="https://cloud.hashicorp.com/" target="_new">Vault Cloud</a>, and <a href="http://boundaryproject.io" target="_new">Boundary</a>.
         
-          Vault
-          Structure
+          <div className={styles.caseStudies} >
+            <CasestudyCard summary={VaultSummary} href="/work/vault" />
+            <CasestudyCard summary={StructureSummary} href="/work/structure" />
+          </div>
         </TimelineItem>
 
         <TimelineItem
@@ -37,8 +45,8 @@ const Timeline = () => {
           I helped mentor other designers and develop best practices such as thoughtbot's influential Product Design Sprint.
           Advising projects while leading design for client projects helped further my love for working with talented and multidisciplinary people.
         
-          Sharespost
           Summit
+          <CasestudyCard summary={SharespostSummary} href="/work/sharespost" />
         </TimelineItem>
 
         <TimelineItem
@@ -53,7 +61,7 @@ const Timeline = () => {
         
           Armada
         </TimelineItem>
-        <li>
+        <li className={styles.moreItem}>
           <p className={styles.more}>
             <a href="/files/joshuaogle-resume.pdf" target="_new">Read more work history on my resume</a>
           </p>
