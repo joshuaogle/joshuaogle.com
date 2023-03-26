@@ -13,8 +13,10 @@ export const summary = {
     client_url: "http://hashicorp.com",
   },
   theme: {
-    color: "#2e71e5",
-    background: "",
+    backgroundColor: "#000",
+    backgroundImage: "",
+    accentColor: "#000000",
+    highlightRGB: "46, 113, 229",
     icon: "/images/case-study-logo-structure.svg",
     thumbnail: "",
   },
@@ -31,7 +33,10 @@ const Structure = () => {
       <Layout>
         <style jsx global>{`
           :root {
-            --theme-background-color: ${summary.theme.color};
+            --theme-background-color: ${summary.theme.backgroundColor};
+            --theme-background-image: ${summary.theme.backgroundImage};
+            --theme-accent-color: ${summary.theme.accentColor};
+            --theme-highlight-rgb: ${summary.theme.highlightRGB};
           }
         `}</style>
       

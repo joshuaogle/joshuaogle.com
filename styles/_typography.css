@@ -63,7 +63,9 @@ a {
   transition: color var(--base-timing);
 }
 
-a h2, a h3, a h3 {
+a h2,
+a h3,
+a h3 {
   color: var(--theme-link-color);
 }
 
@@ -88,7 +90,7 @@ mark {
   border-radius: 1.5rem 0.5rem;
   color: var(--theme-text-color);
   font-weight: var(--font-weight-regular);
-  padding: 0.16rem 0.66rem;
+  padding: 0 0.66rem 0.16rem;
 }
 
 blockquote {
@@ -162,7 +164,11 @@ figcaption,
   font-size: var(--smallest-font-size);
   font-weight: var(--font-weight-regular);
   letter-spacing: 0.015em;
-  margin: var(--small-spacing) auto var(--small-spacing);
+  margin: var(--small-spacing) auto;
+}
+
+figure {
+  padding: var(--base-spacing) 0;
 }
 
 figcaption {

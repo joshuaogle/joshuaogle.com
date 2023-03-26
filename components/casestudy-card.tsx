@@ -12,15 +12,21 @@ const CasestudyCard = ({summary, href}: Props) => {
       <article
         className={styles.card}
         style={{
-          backgroundColor: summary.theme.color,
-          backgroundImage: `url('${summary.theme.background}')`
+          backgroundImage: summary.theme.backgroundImage,
+          "--card-background-color": summary.theme.backgroundColor,
+          "--card-accent-color": summary.theme.accentColor,
+          "--card-highlight-rgb": summary.theme.highlightRGB
         }}
       >
         <div className={styles.icon}>
           <img src={summary.theme.icon} />
         </div>
-        <h4>{summary.title}</h4>
-        <p>{summary.meta.role}</p>
+        <h4>
+          {summary.title}
+        </h4>
+        <small className={styles.meta}>
+          {summary.meta.role}
+        </small>
         <div className={styles.thumbnail}>
           <img src={summary.theme.thumbnail} />
         </div>

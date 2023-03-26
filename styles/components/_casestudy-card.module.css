@@ -1,23 +1,28 @@
 .card {
+  /* background-image is not done with variables to prevent bug where bg disappears on hover*/
+  --card-background-color: var(--theme-muted-color);
+  --card-highlight-rgb: var(--theme-highlight-rgb);
+  --card-muted-color: var(--theme-muted-color);
+  --card-shadow-highlight: 0 1px 1px 1px rgba(var(--card-highlight-rgb), 0.25);
   align-items: center;
-  background-color: var(--muted-color);
+  background-color: var(--card-background-color);
   background-position: center center;
   background-size: cover;
   border-radius: var(--large-border-radius);
-  box-shadow: var(--shadow-base);
+  box-shadow: inset var(--card-shadow-highlight), var(--shadow-base);
   break-inside: avoid;
   color: var(--white);
   display: flex;
   flex-direction: column;
-  overflow: hidden;
   margin: var(--small-spacing) 0;
+  overflow: hidden;
   padding: var(--base-spacing) var(--small-spacing);
   text-align: center;
   transition: transform var(--fast-timing), box-shadow var(--fast-timing);
 }
 
 .card:hover {
-  box-shadow: var(--shadow-high);
+  box-shadow: inset var(--card-shadow-highlight), var(--shadow-high);
   transform: scale(102%);
 }
 
@@ -30,6 +35,11 @@
 .card p {
   font-size: var(--smallest-font-size);
   margin: 0;
+}
+
+.meta {
+  color: var(--card-muted-color);
+  margin-top: 0.5em;
 }
 
 .icon {
@@ -47,8 +57,7 @@
 }
 
 .thumbnail {
-  height: 50vh;
   margin: var(--base-spacing) var(--large-spacing) 0;
-  height: 15rem;
+  height: 10em;
   position: relative;
 }

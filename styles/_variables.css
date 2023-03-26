@@ -112,18 +112,12 @@
   /* Default theme */
   --theme-background-color: var(--neutral-900);
   --theme-accent-color: var(--yellow-300);
-  --theme-muted-color: rgba(255, 255, 255, 0.55);
+  --theme-muted-color: rgba(255, 255, 255, 0.5);
   --theme-text-color:  var(--neutral-200);
   --theme-link-color: var(--cyan-500);
   --theme-link-hover: var(--cyan-300);
   --theme-highlight-rgb: 255, 239, 102;
   --theme-footer-background-rgb: 0, 0, 0;
-
-  /* Brand colors */
-  --brand-color-armada: #1b6c94;
-  --brand-color-summit: #B93A32;
-  --brand-color-kitmath: #F76707;
-  --brand-color-vault: #5a6370;
 
   /* Fonts */
   --sans-serif: -apple-system, BlinkMacSystemFont, sans-serif;

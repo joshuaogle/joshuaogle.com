@@ -6,7 +6,7 @@
 }
 
 .place::before {
-  background-color: var(--neutral-300);
+  background-color: var(--white);
   border-radius: 100%;
   box-shadow: 0 0 0 8px rgba(var(--theme-highlight-rgb), 0.15);
   content: "";
@@ -16,8 +16,8 @@
   position: absolute;
   top: 0.95rem;
   transform: translateX(-50%);
-  height: 6px;
-  width: 6px;
+  height: 5px;
+  width: 5px;
 }
 
 .details {

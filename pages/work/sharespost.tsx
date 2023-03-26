@@ -14,12 +14,12 @@ export const summary = {
     client_url: "http://sharespost.com",
   },
   theme: {
-    color: "#332D8D",
+    backgroundColor: "#332D8D",
+    backgroundImage: "url('/images/case-study-bg-sharespost.png')",
     accentColor: "#00B6F2",
     highlightRGB: "0, 182, 242",
     icon: "/images/case-study-logo-sharespost.svg",
     thumbnail: "/images/case-studies/sharespost-home.png",
-    background: "/images/case-study-bg-sharespost.png",
   },
   intro: "At thoughtbot, we helped one of the largest private securities firms make the process of buying and selling shares easy. Their existing process was very manual, relying on brokers to do almost everything. To help them scale even bigger, they would need to find a way to automate as much of the process. This would free up the brokers to provide better service to even more users.",
 }
@@ -34,7 +34,8 @@ const Sharespost = () => {
       <Layout>
         <style jsx global>{`
           :root {
-            --theme-background-color: ${summary.theme.color};
+            --theme-background-color: ${summary.theme.backgroundColor};
+            --theme-background-image: ${summary.theme.backgroundImage};
             --theme-accent-color: ${summary.theme.accentColor};
             --theme-highlight-rgb: ${summary.theme.highlightRGB};
           }
