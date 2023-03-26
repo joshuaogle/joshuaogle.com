@@ -8,7 +8,7 @@
 .place::before {
   background-color: var(--neutral-300);
   border-radius: 100%;
-  box-shadow: 0 0 0 8px var(--timeline-line-color);
+  box-shadow: 0 0 0 8px rgba(var(--theme-highlight-rgb), 0.15);
   content: "";
   display: block;
   left: calc(var(--timeline-line-width) / 2);
@@ -16,8 +16,8 @@
   position: absolute;
   top: 0.95rem;
   transform: translateX(-50%);
-  height: 8px;
-  width: 8px;
+  height: 6px;
+  width: 6px;
 }
 
 .details {

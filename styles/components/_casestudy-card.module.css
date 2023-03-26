@@ -21,10 +21,6 @@
   transform: scale(102%);
 }
 
-.card svg {
-  height: 3rem;
-}
-
 .card h4 {
   color: var(--white);
   font-size: 2rem;

@@ -1,12 +1,16 @@
 type Props = {
   caption: string,
-  image: string
+  image: string,
+  transparent: boolean,
 }
 
 const Example = ({ caption, image }: Props) => {
   return (
     <figure>
-      <img src={`/images/${image}`} className="case-study-example" />
+      <img
+        src={`/images/${image}`}
+        className="case-study-example"
+      />
       {caption && (
         <figcaption>
           {caption}

@@ -2,7 +2,7 @@ import Layout from '../../components/layout'
 import Head from 'next/head'
 import Intro from '../../components/intro'
 
-export const VaultSummary = {
+export const summary = {
   title: "Vault",
   meta: {
     date: "2021-10-31",
@@ -13,7 +13,7 @@ export const VaultSummary = {
     client_url: "http://vaultproject.io"
   },
   theme: {
-    color: "#000",
+    color: "rgb(52, 53, 54)",
     background: "",
     icon: "/images/case-study-logo-vault.svg",
     thumbnail: ""
@@ -28,13 +28,15 @@ const VaultCaseStudy = () => {
         <title>{`Joshua Ogle | Vault`}</title>
       </Head>
       <style jsx global>{`
-        --theme-background-color: #332D8D;
-        --theme-highlight-color: var(--white);
+        :root {
+          --theme-background-color: ${summary.theme.color};
+          --theme-highlight-color: var(--white);  
+        }
       `}</style>
     
       <Intro
-        title={VaultSummary.title}
-        date={VaultSummary.meta.date}
+        title={summary.title}
+        date={summary.meta.date}
       />
 
       <section>

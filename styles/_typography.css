@@ -84,7 +84,7 @@ svg {
 }
 
 mark {
-  background-color: rgb(var(--theme-highlight-rgb), 0.1);
+  background-color: rgb(var(--theme-highlight-rgb), 0.2);
   border-radius: 1.5rem 0.5rem;
   color: var(--theme-text-color);
   font-weight: var(--font-weight-regular);

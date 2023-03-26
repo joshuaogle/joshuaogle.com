@@ -2,9 +2,9 @@ import TimelineItem from './timeline-item'
 import CasestudyCard from './casestudy-card'
 import styles from '../styles/components/_timeline.module.css'
 
-import {VaultSummary} from '../pages/work/vault';
-import {StructureSummary} from '../pages/work/structure';
-import {SharespostSummary} from '../pages/work/sharespost';
+import {summary as VaultSummary} from '../pages/work/vault';
+import {summary as StructureSummary} from '../pages/work/structure';
+import {summary as SharespostSummary} from '../pages/work/sharespost';
 
 const Timeline = () => {
   return (

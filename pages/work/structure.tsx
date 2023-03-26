@@ -2,7 +2,7 @@ import Layout from '../../components/layout'
 import Head from 'next/head'
 import Intro from '../../components/intro'
 
-export const StructureSummary = {
+export const summary = {
   title: "Structure Design System",
   meta: {
     date: "2020-10-31",
@@ -30,13 +30,14 @@ const Structure = () => {
 
       <Layout>
         <style jsx global>{`
-          --theme-background-color: ${StructureSummary.theme.color};
-          --theme-highlight-color: var(--white);
+          :root {
+            --theme-background-color: ${summary.theme.color};
+          }
         `}</style>
       
         <Intro
-          title={StructureSummary.title}
-          date={StructureSummary.meta.date}
+          title={summary.title}
+          date={summary.meta.date}
         />
 
         <div className="inset inset--desktop">

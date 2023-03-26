@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Intro from '../../components/intro'
 import Example from '../../components/example'
 
-export const SharespostSummary = {
+export const summary = {
   title: "Sharespost",
   meta: {
     date: "2016-08-01",
@@ -15,6 +15,8 @@ export const SharespostSummary = {
   },
   theme: {
     color: "#332D8D",
+    accentColor: "#00B6F2",
+    highlightRGB: "0, 182, 242",
     icon: "/images/case-study-logo-sharespost.svg",
     thumbnail: "/images/case-studies/sharespost-home.png",
     background: "/images/case-study-bg-sharespost.png",
@@ -32,14 +34,15 @@ const Sharespost = () => {
       <Layout>
         <style jsx global>{`
           :root {
-            --theme-background-color: ${SharespostSummary.theme.color};
-            --theme-highlight-color: var(--white);  
+            --theme-background-color: ${summary.theme.color};
+            --theme-accent-color: ${summary.theme.accentColor};
+            --theme-highlight-rgb: ${summary.theme.highlightRGB};
           }
         `}</style>
       
         <Intro
-          title={SharespostSummary.title}
-          date={SharespostSummary.meta.date}
+          title={summary.title}
+          date={summary.meta.date}
         />
 
         <Example
