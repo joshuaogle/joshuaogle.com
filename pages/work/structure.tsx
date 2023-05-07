@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Intro from '../../components/intro'
 
 export const summary = {
-  title: "Structure Design System",
+  title: "HashiCorp Design System",
   meta: {
     date: "2020-10-31",
     role: "Design System Lead",

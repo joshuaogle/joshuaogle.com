@@ -6,7 +6,7 @@ export const summary = {
   title: "Vault",
   meta: {
     date: "2021-10-31",
-    role: "Product Design Lead, User Research",
+    role: "Design Lead, UX Research",
     time: "4 years",
     team: "1 Designer, 1 Developer",
     client: "HashiCorp",

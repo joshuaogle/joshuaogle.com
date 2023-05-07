@@ -1,28 +1,29 @@
 .card {
   /* background-image is not done with variables to prevent bug where bg disappears on hover*/
   --card-background-color: var(--theme-muted-color);
-  --card-highlight-rgb: var(--theme-highlight-rgb);
   --card-muted-color: var(--theme-muted-color);
-  --card-shadow-highlight: 0 1px 1px 1px rgba(var(--card-highlight-rgb), 0.25);
-  align-items: center;
+  --card-highlight-rgb: var(--theme-highlight-rgb);
+  --card-highlight: inset 0 1px 1px 1px rgba(var(--card-highlight-rgb), 0.25);
+  justify-content: center;
   background-color: var(--card-background-color);
   background-position: center center;
   background-size: cover;
   border-radius: var(--large-border-radius);
-  box-shadow: inset var(--card-shadow-highlight), var(--shadow-base);
+  box-shadow: var(--card-highlight), var(--shadow-low);
   break-inside: avoid;
   color: var(--white);
   display: flex;
+  flex: 1;
   flex-direction: column;
   margin: var(--small-spacing) 0;
   overflow: hidden;
-  padding: var(--base-spacing) var(--small-spacing);
+  padding: var(--large-spacing) var(--small-spacing);
   text-align: center;
-  transition: transform var(--fast-timing), box-shadow var(--fast-timing);
+  transition: transform var(--base-timing), box-shadow var(--slow-timing);
 }
 
 .card:hover {
-  box-shadow: inset var(--card-shadow-highlight), var(--shadow-high);
+  box-shadow: var(--card-highlight), var(--shadow-high);
   transform: scale(102%);
 }
 
@@ -39,7 +40,7 @@
 
 .meta {
   color: var(--card-muted-color);
-  margin-top: 0.5em;
+  margin-top: var(--smallest-spacing) 0;
 }
 
 .icon {
@@ -57,7 +58,7 @@
 }
 
 .thumbnail {
-  margin: var(--base-spacing) var(--large-spacing) 0;
+  margin: 0 var(--large-spacing);
   height: 10em;
   position: relative;
 }

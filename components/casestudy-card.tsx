@@ -27,9 +27,6 @@ const CasestudyCard = ({summary, href}: Props) => {
         <small className={styles.meta}>
           {summary.meta.role}
         </small>
-        <div className={styles.thumbnail}>
-          <img src={summary.theme.thumbnail} />
-        </div>
       </article>
     </a>
   )

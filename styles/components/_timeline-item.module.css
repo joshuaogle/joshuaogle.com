@@ -47,6 +47,7 @@
 
 .employment {
   display: block;
+  font-family: var(--heading-font);
   margin: var(--smallest-spacing) 0;
   text-transform: none;
 }

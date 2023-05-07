@@ -7,7 +7,7 @@ export const summary = {
   title: "Sharespost",
   meta: {
     date: "2016-08-01",
-    role: "Design & Front-End Development",
+    role: "Design Lead, Front-End",
     time: "9 months",
     team: "2 Designers, 3 Developers",
     client: "Sharespost",
