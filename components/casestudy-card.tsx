@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Link from 'next/link'
 import styles from '../styles/components/_casestudy-card.module.css'
 
 type Props = {
@@ -8,7 +8,7 @@ type Props = {
 
 const CasestudyCard = ({summary, href}: Props) => {
   return (
-    <a href={href}>
+    <Link href={href}>
       <article
         className={styles.card}
         style={{
@@ -28,7 +28,7 @@ const CasestudyCard = ({summary, href}: Props) => {
           {summary.meta.role}
         </small>
       </article>
-    </a>
+    </Link>
   )
 }
 

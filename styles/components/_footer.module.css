@@ -20,6 +20,14 @@
   }
 }
 
+.card a {
+  color: var(--theme-background-color);
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
 .title {
   font-size: 1.5rem
 }
@@ -37,6 +45,6 @@
 }
 
 .copyright a:hover {
-  color: var(--theme-link-hover);
+  color: var(--theme-text-color);
   text-decoration: underline;
 }

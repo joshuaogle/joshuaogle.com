@@ -3,6 +3,7 @@ import Article from '../interfaces/article'
 import { getAllArticles } from '../lib/api'
 import Layout from '../components/layout'
 import Timeline from '../components/timeline'
+import Testimonial from '../components/testimonial'
 import HeroArticle from '../components/hero-article'
 import styles from '../styles/pages/home.module.css'
 
@@ -34,6 +35,8 @@ export default function Index({ allArticles }: Props) {
       </header>
 
       <Timeline />
+
+      <Testimonial />
 
       {heroArticle && (
         <HeroArticle

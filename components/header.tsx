@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import styles from '../styles/components/_header.module.css'
 
 const Header = () => {
@@ -10,9 +11,9 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <nav>
-        <a href="/" className={styles.logoLink}>
+        <Link href="/" className={styles.logoLink}>
           {logo}
-        </a>
+        </Link>
       </nav>
     </header>
   )

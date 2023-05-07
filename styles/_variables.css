@@ -111,7 +111,7 @@
 
   /* Default theme */
   --theme-background-color: var(--neutral-900);
-  --theme-accent-color: var(--yellow-300);
+  --theme-accent-color: var(--yellow-500);
   --theme-muted-color: rgba(255, 255, 255, 0.5);
   --theme-text-color:  var(--neutral-200);
   --theme-link-color: var(--cyan-500);

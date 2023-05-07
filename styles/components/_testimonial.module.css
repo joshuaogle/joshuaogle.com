@@ -1,0 +1,41 @@
+.card {
+  background: var(--white);
+  border-radius: var(--large-border-radius);
+  color: var(--theme-background-color);
+  margin: 0;
+  padding: var(--base-spacing) var(--base-spacing) var(--base-spacing) var(--large-spacing);
+  position: relative;
+}
+
+.card::before {
+  color: var(--neutral-200);
+  content: "“";
+  font-family: Georgia, serif;
+  font-size: 8em;
+  line-height: 1;
+  position: absolute;
+  top: 0.5rem;
+  left: 1rem;
+}
+
+.container p {
+  margin: 0;
+  position: relative;
+}
+
+.author {
+  color: var(--red-500);
+  display: block;
+  font-family: var(--heading-font);
+  margin-bottom: 0;
+  margin-top: var(--smallest-spacing);
+}
+
+.icon {
+  box-shadow: none;
+  border-radius: 0;
+  display: inline-block;
+  margin: 0 0.2rem 0 0.4rem;
+  max-width: 1rem;
+  vertical-align: -0.1em;
+}

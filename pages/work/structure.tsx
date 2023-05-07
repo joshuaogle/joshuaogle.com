@@ -13,9 +13,9 @@ export const summary = {
     client_url: "http://hashicorp.com",
   },
   theme: {
-    backgroundColor: "#000",
+    backgroundColor: "#2e71e5",
     backgroundImage: "",
-    accentColor: "#000000",
+    accentColor: "#f2f2f3",
     highlightRGB: "46, 113, 229",
     icon: "/images/case-study-logo-structure.svg",
     thumbnail: "",

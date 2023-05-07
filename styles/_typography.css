@@ -97,45 +97,6 @@ mark {
   padding: 0 0.66rem 0.16rem;
 }
 
-blockquote {
-  background: var(--white);
-  border-radius: var(--large-border-radius);
-  color: var(--theme-background-color);
-  margin: 0;
-  padding: var(--base-spacing) var(--base-spacing) var(--base-spacing) var(--large-spacing);
-  position: relative;
-}
-
-blockquote::before {
-  color: var(--neutral-200);
-  content: "“";
-  font-family: Georgia, serif;
-  font-size: 8em;
-  line-height: 1;
-  position: absolute;
-  top: 0.5rem;
-  left: 1rem;
-}
-
-blockquote p {
-  margin: 0;
-  position: relative;
-}
-
-blockquote .quote-author {
-  color: var(--red-500);
-  display: block;
-  font-family: var(--heading-font);
-  margin-top: var(--smallest-spacing);
-}
-
-blockquote svg {
-  display: inline-block;
-  margin: 0 0.05rem 0 0.15rem;
-  max-width: 1rem;
-  vertical-align: -0.15em;
-}
-
 /* Code blocks */
 pre {
   background-color: var(--black);
