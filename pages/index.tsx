@@ -1,18 +1,17 @@
 import Head from 'next/head'
-import Article from '../interfaces/article'
-import { getAllArticles } from '../lib/api'
 import Layout from '../components/layout'
 import Timeline from '../components/timeline'
 import Testimonial from '../components/testimonial'
-import HeroArticle from '../components/hero-article'
+import ArticlesList from '../components/articles-list'
 import styles from '../styles/pages/home.module.css'
+import { getAllArticles } from '../lib/api'
+import Article from '../interfaces/article'
 
 type Props = {
   allArticles: Article[]
 }
 
 export default function Index({ allArticles }: Props) {
-  const heroArticle = allArticles[0]
   return (
     <Layout>
       <Head>
@@ -38,16 +37,7 @@ export default function Index({ allArticles }: Props) {
 
       <Testimonial />
 
-      {heroArticle && (
-        <HeroArticle
-          title={heroArticle.title}
-          coverImage={heroArticle.coverImage}
-          date={heroArticle.date}
-          author={heroArticle.author}
-          slug={heroArticle.slug}
-          excerpt={heroArticle.excerpt}
-        />
-      )}
+      <ArticlesList allArticles={allArticles} />
     </Layout>
   )
 }
@@ -57,8 +47,6 @@ export const getStaticProps = async () => {
     'title',
     'date',
     'slug',
-    'author',
-    'coverImage',
     'excerpt',
   ])
 

@@ -24,7 +24,7 @@ export default function Article({ article, moreArticles, preview }: Props) {
   return (
     <Layout preview={preview}>
       {router.isFallback ? (
-        <ArticleTitle>Loading…</ArticleTitle>
+        <p>Loading…</p>
       ) : (
         <>
           <article>

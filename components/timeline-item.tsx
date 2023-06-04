@@ -2,10 +2,10 @@ import Image from 'next/image'
 import styles from '../styles/components/_timeline-item.module.css'
 
 type Props = {
-  icon: String,
-  company: String,
-  title: String,
-  when: String,
+  icon: string,
+  company: string,
+  title: string,
+  when: string,
   children: React.ReactNode
 }
 

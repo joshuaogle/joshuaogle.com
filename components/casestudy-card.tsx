@@ -2,20 +2,21 @@ import Link from 'next/link'
 import styles from '../styles/components/_casestudy-card.module.css'
 
 type Props = {
-  summary: Array,
-  href: String,
+  summary?: any,
+  href: string,
 }
 
 const CasestudyCard = ({summary, href}: Props) => {
+  const theme = summary["theme"];
   return (
     <Link href={href}>
       <article
         className={styles.card}
         style={{
-          backgroundImage: summary.theme.backgroundImage,
-          "--card-background-color": summary.theme.backgroundColor,
-          "--card-accent-color": summary.theme.accentColor,
-          "--card-highlight-rgb": summary.theme.highlightRGB
+          backgroundImage: theme.backgroundImage,
+          //"--card-background-color": summary.theme.backgroundColor,
+          //"--card-accent-color": summary.theme.accentColor,
+          //"--card-highlight-rgb": summary.theme.highlightRGB
         }}
       >
         <div className={styles.icon}>

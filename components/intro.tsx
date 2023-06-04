@@ -3,12 +3,10 @@ import styles from '../styles/components/_intro.module.css'
 
 type Props = {
   title: string,
-  coverImage: string,
   date: string,
-  author: Author,
 }
 
-const Intro = ({ title, coverImage, date, author }: Props) => {
+const Intro = ({ title, date }: Props) => {
   return (
     <>
       <header className={styles.container} >

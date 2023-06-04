@@ -1,10 +1,8 @@
-import DateFormatter from './date-formatter'
-import CoverImage from './cover-image'
 import Link from 'next/link'
+import DateFormatter from './date-formatter'
 
 type Props = {
   title: string
-  coverImage: string
   date: string
   excerpt: string
   slug: string
@@ -12,17 +10,12 @@ type Props = {
 
 const ArticlePreview = ({
   title,
-  coverImage,
   date,
   excerpt,
-  author,
   slug,
 }: Props) => {
   return (
     <div>
-      <div>
-        <CoverImage slug={slug} title={title} src={coverImage} />
-      </div>
       <h3>
         <Link
           as={`/articles/${slug}`}

@@ -1,7 +1,7 @@
 type Props = {
   caption: string,
   image: string,
-  transparent: boolean,
+  transparent?: boolean,
 }
 
 const Example = ({ caption, image }: Props) => {

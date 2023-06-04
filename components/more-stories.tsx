@@ -16,9 +16,7 @@ const MoreStories = ({ articles }: Props) => {
           <ArticlePreview
             key={article.slug}
             title={article.title}
-            coverImage={article.coverImage}
             date={article.date}
-            author={article.author}
             slug={article.slug}
             excerpt={article.excerpt}
           />
