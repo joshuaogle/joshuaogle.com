@@ -42,12 +42,12 @@
 .caseStudies {
   display: flex;
   align-items: stretch;
-  justify-content: stretch;
+  justify-content: start;
   flex-direction: row;
   gap: 1rem;
 }
 
 .caseStudies > * {
   display: flex;
-  flex: 1;
+  flex: 0;
 }
