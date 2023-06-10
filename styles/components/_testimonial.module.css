@@ -1,14 +1,13 @@
 .card {
-  background: var(--white);
   border-radius: var(--large-border-radius);
-  color: var(--theme-background-color);
+  color: var(--theme-text-color);
   margin: 0;
   padding: var(--base-spacing) var(--base-spacing) var(--base-spacing) var(--large-spacing);
   position: relative;
 }
 
 .card::before {
-  color: var(--neutral-200);
+  color: var(--theme-muted-color);
   content: "“";
   font-family: Georgia, serif;
   font-size: 8em;
