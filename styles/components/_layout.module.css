@@ -5,6 +5,9 @@
 }
 
 .page {
+  background-color: var(--theme-page-color);
+  border-radius: var(--large-border-radius);
   margin: 0 auto;
   max-width: var(--page-max-width);
+  padding: var(--large-spacing);
 }

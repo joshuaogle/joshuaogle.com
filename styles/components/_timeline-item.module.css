@@ -6,7 +6,7 @@
 }
 
 .place::before {
-  background-color: var(--white);
+  background-color: var(--theme-text-color);
   border-radius: 100%;
   box-shadow: 0 0 0 8px rgba(var(--theme-highlight-rgb), 0.15);
   content: "";
@@ -32,7 +32,7 @@
 }
 
 .company {
-  color: var(--white);
+  color: var(--theme-text-color);
   font-size: 2rem;
   margin: 0;
 }

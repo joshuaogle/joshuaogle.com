@@ -1,5 +1,5 @@
 .intro {
-  animation: rise var(--slow-timing) ease-out;
+  animation: rise var(--slowest-timing) ease-out;
 }
 
 @media (min-width: 40em) {

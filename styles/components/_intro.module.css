@@ -24,7 +24,7 @@
 }
 
 .intro-meta {
-  color: var(--white);
+  color: var(--theme-muted-color);
   font-size: var(--small-font-size);
   font-weight: var(--font-weight-semibold);
   opacity: 0.5;

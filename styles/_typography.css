@@ -10,7 +10,7 @@ h4 {
 }
 
 h1 {
-  color: var(--white);
+  color: var(--theme-text-color);
   font-size: 3em;
 }
 
