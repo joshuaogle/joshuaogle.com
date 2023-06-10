@@ -4,6 +4,7 @@
   --card-muted-color: var(--theme-muted-color);
   --card-highlight-rgb: var(--theme-highlight-rgb);
   --card-highlight: inset 0 1px 0 0 rgba(var(--card-highlight-rgb), 0.25);
+  align-items: center;
   background-color: var(--card-background-color);
   background-position: center center;
   background-size: cover;
@@ -33,6 +34,6 @@
 }
 
 .card h4 {
-  font-size: 1.33rem;
+  font-size: 1.2em;
   margin-bottom: 0;
 }

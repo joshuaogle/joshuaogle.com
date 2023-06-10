@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Layout from '../components/layout'
+import Welcome from '../components/welcome'
 import Timeline from '../components/timeline'
 import Testimonial from '../components/testimonial'
 import ArticlesList from '../components/articles-list'
@@ -18,20 +19,7 @@ export default function Index({ allArticles }: Props) {
         <title>Joshua Ogle</title>
       </Head>
 
-      <header className={styles.intro}>
-        <div className={styles.portrait}>
-          <img src="/images/portrait.png" />
-        </div>
-        <div className={styles.introCopy}>
-          <h1 className={styles.introTitle}>
-            Hi, I'm Joshua
-          </h1>
-          <p>
-            I am a Product Designer at <a href="http://hashicorp.com" target="_new">Hashicorp</a>, living in Denver, Colorado.
-            I help make the cloud a better place to live and <mark>build things that people love</mark>.
-          </p>
-        </div>
-      </header>
+      <Welcome />
 
       <Timeline />
 
