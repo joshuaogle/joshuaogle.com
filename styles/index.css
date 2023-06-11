@@ -36,7 +36,7 @@ body {
   background-color: var(--theme-surface-color);
   border: 1px solid var(--theme-surface-border);
   border-radius: var(--large-border-radius);
-  box-shadow: var(--shadow-high);
+  box-shadow: var(--shadow-medium);
   padding: var(--large-spacing);
 }
 

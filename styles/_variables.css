@@ -175,7 +175,7 @@
 :root {
   --theme-background-color: var(--neutral-900);
   --theme-text-color: var(--white);
-  --theme-muted-color: rgba(255, 255, 255, 0.33);
+  --theme-muted-color: rgba(255, 255, 255, 0.25);
   --theme-link-color: var(--cyan-500);
   --theme-link-hover: var(--cyan-300);
   --theme-highlight-rgb:  255, 239, 102;

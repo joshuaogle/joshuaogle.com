@@ -1,8 +1,8 @@
 .container {
   animation: rise var(--slowest-timing) ease-out;
-  margin: 0 auto;
+  margin: 0 auto calc(var(--base-spacing) * -1);
   max-width: var(--page-max-width);
-  padding: var(--large-spacing);
+  padding: 0 var(--large-spacing);
 }
 
 @media (min-width: 40em) {
@@ -15,6 +15,7 @@
 }
 
 .portrait {
+  box-shadow: var(--shadow-high);
   flex: 2;
   margin: 0 auto;
   max-width: 50vw;
@@ -28,22 +29,11 @@
 }
 
 .title {
-  color: var(--theme-text-color);
+  color: var(--theme-muted-color);
+  font-size: 3.25rem;
+  line-height: 95%;
   margin-bottom: var(--smallest-spacing);
   position: relative;
-}
-
-.title::before {
-  background-image: url("/images/dot.svg");
-  background-size: 8px;
-  height: 34px;
-  width: 74px;
-  content: '';
-  display: none;
-  transform: translateX(calc(-100% - var(--small-spacing))) translateY(-50%);
-  position: absolute;
-  top: 50%;
-  left: 0;
 }
 
 @media (min-width: 40em) {
