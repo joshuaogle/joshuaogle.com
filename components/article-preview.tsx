@@ -1,22 +1,21 @@
 import Link from 'next/link'
 import DateFormatter from './date-formatter'
+import styles from '../styles/components/_article-preview.module.css'
 
 type Props = {
   title: string
   date: string
-  excerpt: string
   slug: string
 }
 
 const ArticlePreview = ({
   title,
   date,
-  excerpt,
   slug,
 }: Props) => {
   return (
-    <div>
-      <h3>
+    <div className={styles.container}>
+      <h3 className={styles.title}>
         <Link
           as={`/articles/${slug}`}
           href="/articles/[slug]"
@@ -25,10 +24,9 @@ const ArticlePreview = ({
           {title}
         </Link>
       </h3>
-      <div>
-        <DateFormatter dateString={date} />
+      <div className={styles.date}>
+        &mdash; <DateFormatter dateString={date} />
       </div>
-      <p>{excerpt}</p>
     </div>
   )
 }

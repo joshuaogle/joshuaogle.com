@@ -1,14 +1,13 @@
 .place {
   font-size: var(--small-font-size);
   margin: 0 0 var(--base-spacing);
-  padding: 0 0 var(--large-spacing) var(--base-spacing);
+  padding: 0 0 var(--base-spacing) var(--base-spacing);
   position: relative;
 }
 
 .place::before {
   background-color: var(--theme-text-color);
   border-radius: 100%;
-  box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.05);
   content: "";
   display: block;
   left: calc(var(--timeline-line-width) / 2);
@@ -20,12 +19,7 @@
   width: 5px;
 }
 
-.details {
-  flex: 1;
-}
-
 .case-studies {
-  flex: 0 0 32ch;
   display: flex;
   flex-direction: column;
   gap: var(--small-spacing);
@@ -33,7 +27,7 @@
 
 .company {
   color: var(--theme-text-color);
-  font-size: 2rem;
+  font-size: 1.75rem;
   margin: 0;
 }
 

@@ -27,7 +27,7 @@ const Timeline = () => {
           I helped hire our designers, define our process, and created our Product Design System named "Structure".
           Throughout my time at HashiCorp, I have been the design lead for <a href="http://hashicorp.com/products/vault" target="_new">Vault</a>, <a href="https://cloud.hashicorp.com/" target="_new">Vault Cloud</a>, and <a href="http://boundaryproject.io" target="_new">Boundary</a>.
         
-          <div className={styles.caseStudies} >
+          <div className={styles.caseStudies}>
             <CasestudyCard summary={VaultSummary} href="/work/vault" />
             <CasestudyCard summary={StructureSummary} href="/work/structure" />
           </div>
@@ -46,7 +46,9 @@ const Timeline = () => {
           Advising projects while leading design for client projects helped further my love for working with talented and multidisciplinary people.
         
           Summit
-          <CasestudyCard summary={SharespostSummary} href="/work/sharespost" />
+          <div className={styles.caseStudies}>
+            <CasestudyCard summary={SharespostSummary} href="/work/sharespost" />
+          </div>
         </TimelineItem>
 
         <TimelineItem

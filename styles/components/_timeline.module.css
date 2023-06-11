@@ -20,7 +20,7 @@
 .moreItem {
   font-size: var(--small-font-size);
   margin: 0 0 var(--base-spacing);
-  padding: 0 0 0 var(--large-spacing);
+  padding: 0 0 0 var(--base-spacing);
   position: relative;
 }
 

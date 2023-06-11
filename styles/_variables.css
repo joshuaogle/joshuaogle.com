@@ -116,9 +116,8 @@
   --font-weight-regular: 400;
   --font-weight-semibold: 600;
   --font-weight-black: 800;
-  --base-font-size: clamp(14px, 1.5vw, 22px);
-  --small-font-size: clamp(12px, 1.25vw, 18px);
-  --smallest-font-size: clamp(12px, 1.25vw, 16px);
+  --base-font-size: clamp(14px, 1.75vw, 22px);
+  --small-font-size: clamp(12px, 1.5vw, 18px);
   --large-font-size: 1.25rem;
 
   /* Spacing */

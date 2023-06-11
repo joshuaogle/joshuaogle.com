@@ -1,0 +1,12 @@
+.container {
+  align-items: middle;
+  justify-content: flex-end;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: var(--base-spacing);
+}
+
+.date {
+  flex: 0 0 8em;
+  color: var(--theme-muted-color);
+}

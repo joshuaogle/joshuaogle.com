@@ -14,19 +14,11 @@
   color: var(--white);
   display: flex;
   flex-direction: column;
-  gap: var(--small-spacing);
   margin: var(--small-spacing) 0;
   overflow: hidden;
-  padding: var(--base-spacing);
+  padding: var(--base-spacing) var(--small-spacing);
   transition: transform var(--base-timing), box-shadow var(--slow-timing);
   width: 24em;
-}
-
-.icon img {
-  border-radius: 0;
-  box-shadow: none;
-  height: 3rem;
-  margin: 0;
 }
 
 .card:hover {
@@ -34,11 +26,23 @@
   transform: scale(102%);
 }
 
-.card h4 {
+.icon {
+  border-radius: 0;
+  box-shadow: none;
+  height: 3rem;
+  margin: 0 0 var(--small-spacing);
+}
+
+.copy {
+  text-align: center;
+}
+
+.title {
   font-size: 1.2em;
   margin-bottom: 0;
 }
 
-.card small {
+.meta {
   color: rgba(255, 255, 255, 0.5);
+  margin: 0;
 }
