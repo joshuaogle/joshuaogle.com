@@ -109,17 +109,6 @@
   --green-200: #EEFCBF;
   --green-100: #F7FDDF;
 
-  /* Default theme */
-  --theme-background-color: var(--neutral-900);
-  --theme-page-color: var(--neutral-100);
-  --theme-accent-color: var(--yellow-500);
-  --theme-muted-color: rgba(0, 0, 0, 0.33);
-  --theme-text-color:  var(--neutral-900);
-  --theme-link-color: var(--cyan-500);
-  --theme-link-hover: var(--cyan-300);
-  --theme-highlight-rgb: 255, 239, 102;
-  --theme-footer-background-rgb: 0, 0, 0;
-
   /* Fonts */
   --sans-serif: -apple-system, BlinkMacSystemFont, sans-serif;
   --heading-font: "TiemposHeadline", Georgia, serif;
@@ -127,9 +116,9 @@
   --font-weight-regular: 400;
   --font-weight-semibold: 600;
   --font-weight-black: 800;
-  --base-font-size: clamp(14px, 1.5vw, 20px);
-  --small-font-size: clamp(12px, 1.3vw, 18px);
-  --smallest-font-size: clamp(12px, 1.5vw, 16px);
+  --base-font-size: clamp(14px, 1.5vw, 22px);
+  --small-font-size: clamp(12px, 1.25vw, 18px);
+  --smallest-font-size: clamp(12px, 1.25vw, 16px);
   --large-font-size: 1.25rem;
 
   /* Spacing */
@@ -143,7 +132,10 @@
   --break-small: 600px;
   --break-medium: 1000px;
   --break-large: 1400px;
-  --page-max-width: calc(66ch + var(--larger-spacing));
+  --page-min-width: 60vw;
+  --page-flex-width: 50rem;
+  --page-max-width: 90vw;
+  --page-width: clamp(var(--page-min-width), var(--page-flex-width), var(--page-max-width));
 
   /* Borders */
   --base-border-radius: 0.25rem;
@@ -171,8 +163,26 @@
   --md-12dp-u: 0 1.2rem 1.7rem 0 var(--md-u);
   --md-12dp-p: 0 0.5rem 2.2rem 0 var(--md-p);
   --md-12dp-a: 0 0.7rem 0.8rem 0 var(--md-a);
-  --shadow-low:    var(--md-2dp-u), var(--md-2dp-p), var(--md-2dp-a);
-  --shadow-base:   var(--md-4dp-u), var(--md-4dp-p), var(--md-4dp-a);
+  --shadow-none: var(--md-0),  var(--md-0),  var(--md-0);
+  --shadow-low: var(--md-2dp-u), var(--md-2dp-p), var(--md-2dp-a);
+  --shadow-base: var(--md-4dp-u), var(--md-4dp-p), var(--md-4dp-a);
   --shadow-medium: var(--md-8dp-u), var(--md-8dp-p), var(--md-8dp-a);
-  --shadow-high:   var(--md-12dp-u), var(--md-12dp-p), var(--md-12dp-a);
+  --shadow-high: var(--md-12dp-u), var(--md-12dp-p), var(--md-12dp-a);
+}
+
+
+/* Default theme */
+:root {
+  --theme-background-color: var(--neutral-900);
+  --theme-text-color: var(--white);
+  --theme-muted-color: rgba(255, 255, 255, 0.33);
+  --theme-link-color: var(--cyan-500);
+  --theme-link-hover: var(--cyan-300);
+  --theme-highlight-rgb:  255, 239, 102;
+}
+
+.surface {
+  --theme-surface-color: rgba(0, 0, 0, 0.75);
+  --theme-text-color: var(--neutral-100);
+  --theme-muted-color: rgba(255, 255, 255, 0.33);
 }

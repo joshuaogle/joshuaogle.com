@@ -27,11 +27,30 @@ body {
   transition: background-color var(--slow-timing);
 }
 
-img {
+.centered {
+  margin: 0 auto;
+  width: var(--page-width);
+}
+
+.surface {
+  background-color: var(--theme-surface-color);
   border-radius: var(--large-border-radius);
-  box-shadow: var(--shadow-base);
+  box-shadow: var(--shadow-high);
+  padding: var(--large-spacing);
 }
 
 section {
   padding: var(--large-spacing) 0;
+}
+
+section:first-child {
+  padding-top: 0;
+}
+
+section:last-child {
+  padding-bottom: 0;
+}
+
+img {
+  border-radius: var(--large-border-radius);
 }

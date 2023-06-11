@@ -5,8 +5,8 @@ import Welcome from '../components/welcome'
 import styles from '../styles/components/_layout.module.css';
 
 type Props = {
-  preview?: boolean
-  hasWelcome: false
+  preview: boolean
+  showWelcome: false
   children: React.ReactNode
 }
 
@@ -19,7 +19,7 @@ const Layout = ({ preview, showWelcome, children }: Props) => {
       {showWelcome &&
         <Welcome />
       }
-      <main className={styles.page}>
+      <main className={"centered surface"}>
         {children}
       </main>
       <Footer />

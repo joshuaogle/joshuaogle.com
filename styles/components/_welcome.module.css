@@ -1,9 +1,12 @@
-.intro {
+.container {
   animation: rise var(--slowest-timing) ease-out;
+  margin: 0 auto;
+  max-width: var(--page-max-width);
+  padding: var(--large-spacing);
 }
 
 @media (min-width: 40em) {
-  .intro {
+  .container {
     align-items: center;
     display: flex;
     flex-direction: row;
@@ -13,23 +16,24 @@
 
 .portrait {
   flex: 2;
-  margin: 0 auto var(--base-spacing);
+  margin: 0 auto;
   max-width: 50vw;
 }
 
 @media (min-width: 40em) {
-  .introCopy {
+  .textContainer {
     flex: 3;
     margin-left: var(--base-spacing);
   }
 }
 
-.introTitle {
+.title {
+  color: var(--theme-text-color);
   margin-bottom: var(--smallest-spacing);
   position: relative;
 }
 
-.introTitle::before {
+.title::before {
   background-image: url("/images/dot.svg");
   background-size: 8px;
   height: 34px;
@@ -43,7 +47,7 @@
 }
 
 @media (min-width: 40em) {
-  .introTitle::before {
+  .title::before {
     display: block;
   }
 }

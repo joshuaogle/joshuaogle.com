@@ -9,7 +9,7 @@
   background-position: center center;
   background-size: cover;
   border-radius: var(--large-border-radius);
-  box-shadow: var(--card-highlight), var(--shadow-low);
+  box-shadow: var(--card-highlight), var(--shadow-none);
   break-inside: avoid;
   color: var(--white);
   display: flex;
@@ -29,11 +29,15 @@
 }
 
 .card:hover {
-  box-shadow: var(--card-highlight), var(--shadow-high);
+  box-shadow: var(--card-highlight), var(--shadow-medium);
   transform: scale(102%);
 }
 
 .card h4 {
   font-size: 1.2em;
   margin-bottom: 0;
+}
+
+.card small {
+  color: rgba(255, 255, 255, 0.5);
 }

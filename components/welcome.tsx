@@ -8,12 +8,12 @@ type Props = {
 
 const Welcome = ({ title, date }: Props) => {
   return (
-    <header className={styles.intro}>
+    <header className={styles.container + " centered"}>
       <div className={styles.portrait}>
         <img src="/images/portrait.png" />
       </div>
-      <div className={styles.introCopy}>
-        <h1 className={styles.introTitle}>
+      <div className={styles.textContainer}>
+        <h1 className={styles.title}>
           Hi, I'm Joshua
         </h1>
         <p>
