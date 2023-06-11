@@ -13,6 +13,7 @@
   break-inside: avoid;
   color: var(--white);
   display: flex;
+  flex-direction: column;
   gap: var(--small-spacing);
   margin: var(--small-spacing) 0;
   overflow: hidden;

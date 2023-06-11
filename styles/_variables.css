@@ -182,7 +182,8 @@
 }
 
 .surface {
-  --theme-surface-color: rgba(0, 0, 0, 0.75);
+  --theme-surface-color: rgba(0, 0, 0, 0.5);
+  --theme-surface-border: rgba(0, 0, 0, 0.15);
   --theme-text-color: var(--neutral-100);
   --theme-muted-color: rgba(255, 255, 255, 0.33);
 }
