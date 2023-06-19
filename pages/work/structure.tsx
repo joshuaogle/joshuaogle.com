@@ -5,7 +5,7 @@ import Intro from '../../components/intro'
 export const summary = {
   title: "HashiCorp Design System",
   meta: {
-    date: "2020-10-31",
+    date: "2020",
     role: "Design System Lead",
     time: "4 years",
     team: "12 Designers",
@@ -42,7 +42,7 @@ const Structure = () => {
       
         <Intro
           title={summary.title}
-          date={summary.meta.date}
+          meta={summary.meta}
         />
 
         <div className="inset inset--desktop">

@@ -6,7 +6,7 @@ import Example from '../../components/example'
 export const summary = {
   title: "Sharespost",
   meta: {
-    date: "2016-08-01",
+    date: "2016",
     role: "Design Lead, Front-End",
     time: "9 months",
     team: "2 Designers, 3 Developers",
@@ -43,7 +43,7 @@ const Sharespost = () => {
       
         <Intro
           title={summary.title}
-          date={summary.meta.date}
+          meta={summary.meta}
         />
 
         <Example

@@ -6,12 +6,10 @@ type Props = {
 
 const ArticleBody = ({ content }: Props) => {
   return (
-    <div>
-      <div
-        className={markdownStyles['markdown']}
-        dangerouslySetInnerHTML={{ __html: content }}
-      />
-    </div>
+    <div
+      className={markdownStyles['markdown']}
+      dangerouslySetInnerHTML={{ __html: content }}
+    />
   )
 }
 

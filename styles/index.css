@@ -33,10 +33,12 @@ body {
 }
 
 .surface {
+  --background-color: rgba(var(--theme-surface-rgb), 75%);
   --fill-light: inset 1px 1px 1px rgba(var(--theme-highlight-rgb), 0.3);
   --key-light: inset -1px -1px 1px rgba(var(--theme-accent-rgb), 0.2);
-  background-color: rgba(var(--theme-surface-rgb), 85%);
-  box-shadow: var(--fill-light), var(--key-light), var(--shadow-high);
+  background: var(--background-color) url("/images/noise-transparent.png") repeat 0 0;
+  background-size: 100px;
+  box-shadow: var(--fill-light), var(--key-light);
   border-radius: var(--large-border-radius);
   padding: var(--large-spacing);
   position: relative;

@@ -5,7 +5,7 @@ import Intro from '../../components/intro'
 export const summary = {
   title: "Vault",
   meta: {
-    date: "2021-10-31",
+    date: "2021",
     role: "Design Lead, UX Research",
     time: "4 years",
     team: "1 Designer, 1 Developer",
@@ -39,7 +39,7 @@ const VaultCaseStudy = () => {
     
       <Intro
         title={summary.title}
-        date={summary.meta.date}
+        meta={summary.meta}
       />
 
       <section>

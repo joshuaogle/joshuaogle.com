@@ -1,4 +1,3 @@
-import DateFormatter from './date-formatter'
 import styles from '../styles/components/_welcome.module.css'
 
 type Props = {
