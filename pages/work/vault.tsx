@@ -15,8 +15,8 @@ export const summary = {
   theme: {
     backgroundColor: "rgb(52, 53, 54)",
     backgroundImage: "",
-    accentColor: "#000",
-    highlightRGB: "120, 120, 120",
+    accentRGB: "255, 236, 110",
+    highlightRGB: "255, 236, 110",
     icon: "/images/case-study-logo-vault.svg",
     thumbnail: ""
   },
@@ -32,8 +32,8 @@ const VaultCaseStudy = () => {
       <style jsx global>{`
         :root {
           --theme-background-color: ${summary.theme.backgroundColor};
-          --theme-accent-color: ${summary.theme.accentColor};
-          --theme-highlight-color: var(--white);
+          --theme-accent-rgb: ${summary.theme.accentRGB};
+          --theme-highlight-rgb: ${summary.theme.highlightRGB};
         }
       `}</style>
     

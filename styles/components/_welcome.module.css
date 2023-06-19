@@ -3,6 +3,8 @@
   margin: 0 auto calc(var(--base-spacing) * -1);
   max-width: var(--page-max-width);
   padding: 0 var(--large-spacing);
+  position: relative;
+  z-index: 3;
 }
 
 @media (min-width: 40em) {
@@ -15,10 +17,13 @@
 }
 
 .portrait {
-  box-shadow: var(--shadow-high);
   flex: 2;
   margin: 0 auto;
   max-width: 50vw;
+}
+
+.portrait img {
+  box-shadow: var(--shadow-high);
 }
 
 @media (min-width: 40em) {

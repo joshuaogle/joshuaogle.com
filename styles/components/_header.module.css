@@ -5,13 +5,14 @@
 }
 
 .logo {
-  color: var(--theme-muted-color);
+  color: rgb(var(--theme-highlight-rgb));
   display: block;
+  opacity: 0.5;
   transform: scaleX(-1) rotate(60deg);
-  transition: color var(--base-timing);
+  transition: opacity var(--base-timing);
   width: 2rem;
 }
 
 .logo:hover {
-  color: var(--theme-accent-color);
+  opacity: 1;
 }

@@ -16,7 +16,7 @@ export const summary = {
   theme: {
     backgroundColor: "#332D8D",
     backgroundImage: "url('/images/case-study-bg-sharespost.png')",
-    accentColor: "#00B6F2",
+    accentRGB: "200, 200, 200",
     highlightRGB: "0, 182, 242",
     icon: "/images/case-study-logo-sharespost.svg",
     thumbnail: "/images/case-studies/sharespost-home.png",
@@ -36,7 +36,7 @@ const Sharespost = () => {
           :root {
             --theme-background-color: ${summary.theme.backgroundColor};
             --theme-background-image: ${summary.theme.backgroundImage};
-            --theme-accent-color: ${summary.theme.accentColor};
+            --theme-accent-rgb: ${summary.theme.accentRGB};
             --theme-highlight-rgb: ${summary.theme.highlightRGB};
           }
         `}</style>

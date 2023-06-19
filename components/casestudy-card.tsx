@@ -14,7 +14,7 @@ const CasestudyCard = ({summary, href}: Props) => {
         style={{
           backgroundImage: summary.theme.backgroundImage,
           "--card-background-color": summary.theme.backgroundColor,
-          "--card-accent-color": summary.theme.accentColor,
+          "--card-accent-rgb": summary.theme.accentRGB,
           "--card-highlight-rgb": summary.theme.highlightRGB
         } as React.CSSProperties}
       >

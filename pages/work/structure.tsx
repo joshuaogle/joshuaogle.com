@@ -15,8 +15,8 @@ export const summary = {
   theme: {
     backgroundColor: "#2e71e5",
     backgroundImage: "",
-    accentColor: "#f2f2f3",
-    highlightRGB: "46, 113, 229",
+    accentRGB: "128, 64, 201",
+    highlightRGB: "96, 212, 220",
     icon: "/images/case-study-logo-structure.svg",
     thumbnail: "",
   },
@@ -27,7 +27,7 @@ const Structure = () => {
   return (
     <>
       <Head>
-        <title>{`Joshua Ogle | Work`}</title>
+        <title>{`Joshua Ogle | HashiCorp Design System`}</title>
       </Head>
 
       <Layout>
@@ -35,7 +35,7 @@ const Structure = () => {
           :root {
             --theme-background-color: ${summary.theme.backgroundColor};
             --theme-background-image: ${summary.theme.backgroundImage};
-            --theme-accent-color: ${summary.theme.accentColor};
+            --theme-accent-rgb: ${summary.theme.accentRGB};
             --theme-highlight-rgb: ${summary.theme.highlightRGB};
           }
         `}</style>

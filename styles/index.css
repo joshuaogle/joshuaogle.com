@@ -12,9 +12,9 @@ html {
 
 body {
   background: var(--theme-background-color);
+  background-image: radial-gradient(circle, var(--theme-background-color) 10%, rgb(var(--theme-surface-rgb)) 110%);
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-size: cover;
   color: var(--theme-text-color);
   font-family: var(--sans-serif);
   font-size: var(--base-font-size);
@@ -33,15 +33,17 @@ body {
 }
 
 .surface {
-  background-color: var(--theme-surface-color);
-  border: 1px solid var(--theme-surface-border);
+  --fill-light: inset 1px 1px 1px rgba(var(--theme-highlight-rgb), 0.3);
+  --key-light: inset -1px -1px 1px rgba(var(--theme-accent-rgb), 0.2);
+  background-color: rgba(var(--theme-surface-rgb), 85%);
+  box-shadow: var(--fill-light), var(--key-light), var(--shadow-high);
   border-radius: var(--large-border-radius);
-  box-shadow: var(--shadow-medium);
   padding: var(--large-spacing);
+  position: relative;
 }
 
 section {
-  padding: var(--large-spacing) 0;
+  padding: var(--base-spacing) 0;
 }
 
 section:first-child {

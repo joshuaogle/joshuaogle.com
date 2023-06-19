@@ -16,8 +16,7 @@ const Footer = () => {
       </p>
 
       <small className={styles.copyright}>
-        &copy; Joshua Ogle.&nbsp;
-        <a href="https://www.youtube.com/watch?v=du6TW4fKOmk" target="_blank">This website updated by witches.</a>&nbsp;
+        &copy;
         All rights reserved.
       </small>
     </footer>
