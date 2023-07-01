@@ -28,12 +28,12 @@ const Intro = ({ title, meta }: Props) => {
 
       
         <ul className={styles.meta}>
+          <MetaItem label="For" key="meta.client">
+            <a href={meta.client_url}>{meta.client}</a>
+          </MetaItem>
           <MetaItem label="Role" key="meta.role">{meta.role}</MetaItem>
           <MetaItem label="Time" key="meta.time">{meta.time}</MetaItem>
           <MetaItem label="Team" key="meta.team">{meta.team}</MetaItem>
-          <MetaItem label="Client" key="meta.client">
-            <a href={meta.client_url}>{meta.client}</a>
-          </MetaItem>
         </ul>
       </header>
     </>

@@ -12,11 +12,10 @@ const CasestudyCard = ({summary, href}: Props) => {
       <article
         className={styles.card}
         style={{
-          backgroundImage: summary.theme.backgroundImage,
           "--card-background-color": summary.theme.backgroundColor,
           "--card-accent-rgb": summary.theme.accentRGB,
           "--card-highlight-rgb": summary.theme.highlightRGB
-        } as React.CSSProperties}
+        }}
       >
         <img className={styles.icon} src={summary.theme.icon} />
         <div className={styles.copy}>

@@ -1,6 +1,7 @@
 .container {
+  --offset: calc(var(--base-spacing) * -1);
   animation: rise var(--slowest-timing) ease-out;
-  margin: 0 auto calc(var(--base-spacing) * -1);
+  margin: var(--large-spacing) auto var(--offset);
   max-width: var(--page-max-width);
   padding: 0 var(--large-spacing);
   position: relative;
@@ -34,7 +35,6 @@
 }
 
 .title {
-  color: var(--theme-muted-color);
   font-size: 3.25rem;
   line-height: 95%;
   margin-bottom: var(--smallest-spacing);

@@ -14,11 +14,8 @@ const Layout = ({ preview, showWelcome, children }: Props) => {
   return (
     <div className={styles.app}>
       <Meta />
-      <Header />
 
-      {showWelcome &&
-        <Welcome />
-      }
+      {showWelcome ? <Welcome /> :  <Header />}
       <main className={"centered surface"}>
         {children}
       </main>

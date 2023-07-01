@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: var(--large-spacing);
+  margin: var(--large-spacing) 0 0;
   position: relative;
   transform-origin: var(--base-spacing) 100%;
   z-index: 2;
@@ -16,19 +16,24 @@
 
 .meta {
   border-top: 1px solid var(--theme-muted-color);
-  list-style: none;
+  display: flex;
+  flex-direction: column;
+  font-size: var(--small-font-size);
+  gap: var(--small-spacing);
+  padding: var(--small-spacing) var(--base-spacing);
 }
 
-@media (min-width: 600px) {
+@media (min-width: 1000px) {
   .meta {
-    display: flex;
+    flex-direction: row;
+    gap: var(--base-spacing);
   }
 }
 
 .metaItem {
+  flex: 1;
   font-size: var(--small-font-size);
-  min-width: 8em;
-  padding: var(--small-spacing);
+  min-width: 6em;
 }
 
 .metaItem::before {

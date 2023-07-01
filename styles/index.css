@@ -24,7 +24,7 @@ body {
   min-height: 100%;
   overflow-x: hidden;
   padding: 0;
-  transition: background-color var(--slow-timing);
+  transition: background var(--slow-timing);
 }
 
 .centered {
