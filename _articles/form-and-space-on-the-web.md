@@ -1,14 +1,12 @@
 ---
 title: "Form and Space on the Web"
-date: "2017-02-14"
-tags: ["Design"]
-url: "https://robots.thoughtbot.com/form-and-space"
-path: "form-and-space"
-source: "thoughtbot"
-source_icon: "source-thoughtbot.svg"
-ogImage: {
+meta:
+  date: "2017-02-14"
+  url: "https://robots.thoughtbot.com/form-and-space"
+  source: "thoughtbot"
+  source_icon: "source-thoughtbot.svg"
+ogImage:
   url: "https://images.thoughtbot.com/cp-design-for-the-web/mrSKHmMGQSIPFYXGYCMT_elements-layers.png"
-}
 summary: "How to use space and depth to make your designs better. A journey into the scary (sounding) Gestalt theory."
 ---
 

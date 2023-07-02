@@ -1,14 +1,12 @@
 ---
 title: "Typography"
-date: "2017-03-07"
-tags: ["Design", "Typography"]
-url: "https://robots.thoughtbot.com/typography"
-path: "typography"
-source: "thoughtbot"
-source_icon: "source-thoughtbot.svg"
-ogImage: {
+meta:
+  date: "2017-03-07"
+  url: "https://robots.thoughtbot.com/typography"
+  source: "thoughtbot"
+  source_icon: "source-thoughtbot.svg"
+ogImage:
   url: "https://images.thoughtbot.com/cp-design-for-the-web/t74TMLcyS8SJjvQOnMMA_elements-typography-anatomy.png"
-}
 summary: "An overview of typography, from choosing the right typeface for your brand to combining fonts to make an impact."
 ---
 

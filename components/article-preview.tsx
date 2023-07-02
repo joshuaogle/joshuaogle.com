@@ -4,13 +4,13 @@ import styles from '../styles/components/_article-preview.module.css'
 
 type Props = {
   title: string
-  date: string
+  meta: string
   slug: string
 }
 
 const ArticlePreview = ({
   title,
-  date,
+  meta,
   slug,
 }: Props) => {
   return (
@@ -25,7 +25,7 @@ const ArticlePreview = ({
         </Link>
       </h3>
       <div className={styles.date}>
-        &mdash; <DateFormatter dateString={date} />
+        &mdash; <DateFormatter dateString={meta.date} />
       </div>
     </div>
   )

@@ -1,7 +1,8 @@
 .tabList {
+  --offset: calc(-1 * var(--base-spacing));
   justify-content: flex-end;
   display: flex;
-  margin: 0 0 var(--small-spacing) auto;
+  margin: var(--offset) var(--offset) var(--small-spacing) 0;
   position: relative;
   z-index: 2;
 }
@@ -27,9 +28,9 @@
   content: "Current";
 	display: inline-block;
 	border-radius: var(--large-border-radius);
-	background-color: rgba(var(--theme-highlight-rgb), 0.25);
+	background-color: var(--theme-background-color);
 	font-size: 0.75em;
-  margin: 0 0 0 0.5em;
+  margin: 0 0 0 0.25em;
   padding: 0.1em var(--smallest-spacing);
 }
 
@@ -46,7 +47,6 @@
 
 .tabGlider {
   background: black;;
-  box-shadow: inset -1px -1px rgba(255, 255, 255, 0.1);
   border-radius: 99px;
   left: 0;
   opacity: 0;
@@ -55,7 +55,7 @@
   width: 32px;
   top: 50%;
   transform: translateY(-50%);
-  transition: var(--base-timing) ease-in;
+  transition: width var(--fast-timing) ease-in, left var(--base-timing) ease-out, opacity var(--slow-timing) ease-in;
   z-index: -1;
 }
 

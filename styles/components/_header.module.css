@@ -4,15 +4,8 @@
   margin: var(--small-spacing) 0 var(--large-spacing);
 }
 
-.logo {
-  color: rgb(var(--theme-highlight-rgb));
-  display: block;
-  opacity: 0.5;
-  transform: scaleX(-1) rotate(60deg);
-  transition: opacity var(--base-timing);
-  width: 2rem;
-}
-
-.logo:hover {
-  opacity: 1;
+.header a {
+  color: rgb(var(--theme-highlight-rgb), 0.5);
+  font-size: var(--small-font-size);
+  font-weight: var(--font-weight-light);
 }

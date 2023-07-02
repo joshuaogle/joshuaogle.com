@@ -1,18 +1,16 @@
 ---
 title: "On Markup and Layout"
-date: "2017-03-14"
-tags: ["Design"]
-url: "https://robots.thoughtbot.com/on-markup-and-layout"
-path: "on-markup-and-layout"
-source: "thoughtbot"
-source_icon: "source-thoughtbot.svg"
-ogImage: {
+meta:
+  date: "2017-03-14"
+  url: "https://robots.thoughtbot.com/on-markup-and-layout"
+  source: "thoughtbot"
+  source_icon: "source-thoughtbot.svg"
+ogImage:
   url: "https://images.thoughtbot.com/cp-design-for-the-web/Z9ceWhcOQxauO5ync0CB_layout-pieces.png"
-}
-summary: "Let’s talk a bit what makes designing for the web a unique challenge."
+summary: "Let’s talk a bit about what makes designing for the web a unique challenge."
 ---
 
-Let’s talk a bit what makes designing for the web a unique challenge.
+Let’s talk a bit about what makes designing for the web a unique challenge.
 
 One part of the challenge is simply how to display content on a screen. It should work in a variety of resolutions and physical dimensions, should respond appropriately to a tap or a mouse click, and it should relate to the user what affordances are available to them. A browser will render plain text just fine, but that’s never what we want, so we have to give it a little help. It needs to know how to apply our styles but also how each piece of content relates to another or to use modern browser features. Browsers are increasingly using markup to allow your app to tap into the operating system for things like geolocation and hardware acceleration.
 

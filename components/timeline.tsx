@@ -48,7 +48,7 @@ const Timeline = () => {
               HashiCorp makes developer-focused infrastructure software, with products that span everything from secrets management to mesh networking. 
               I joined as the second product designer in what would soon become a 20+ person product design team.
               I helped hire our designers, define our process, and created our Product Design System named "Structure".
-              Throughout my time at HashiCorp, I have been the design lead for <a href="http://hashicorp.com/products/vault" target="_new">Vault</a>, <a href="https://cloud.hashicorp.com/" target="_new">Vault Cloud</a>, and <a href="http://boundaryproject.io" target="_new">Boundary</a>.
+              Throughout my time at HashiCorp, I have been the design lead for <a href="http://hashicorp.com/products/vault" target="_new">Vault</a> and <a href="http://boundaryproject.io" target="_new">Boundary</a>.
             
               <div className={styles.caseStudies}>
                 <CasestudyCard summary={VaultSummary} href="/work/vault" />

@@ -1,11 +1,10 @@
 ---
 title: "Color"
-date: "2017-02-07"
-tags: ["Design", "Color Theory", "Psychology"]
-url: "https://robots.thoughtbot.com/color"
-path: "color"
-source: "thoughtbot"
-source_icon: "source-thoughtbot.svg"
+meta:
+  date: "2017-02-07"
+  url: "https://robots.thoughtbot.com/color"
+  source: "thoughtbot"
+  source_icon: "source-thoughtbot.svg"
 ogImage: {
   url: "https://images.thoughtbot.com/cp-design-for-the-web/YXnBeXKAQk6sbYEVMJ0f_color-spectrum.png"
 }

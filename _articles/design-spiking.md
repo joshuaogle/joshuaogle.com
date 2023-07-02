@@ -1,14 +1,12 @@
 ---
 title: "Design Spiking"
-date: "2014-11-04"
-tags: ["Design", "Prototyping", "Design Sprints", "Consulting"]
-url: "https://robots.thoughtbot.com/design-spiking"
-path: "design-spiking"
-source: "thoughtbot"
-source_icon: "source-thoughtbot.svg"
-ogImage: {
+meta:
+  date: "2014-11-04"
+  url: "https://robots.thoughtbot.com/design-spiking"
+  source: "thoughtbot"
+  source_icon: "source-thoughtbot.svg"
+ogImage:
   url: "https://images.thoughtbot.com/design-spiking/sketch-path.png"
-}
 summary: "Let's take a look at some tricks from the Design Sprint toolkit to make sure our product is focusing the right things."
 ---
 

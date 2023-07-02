@@ -3,9 +3,14 @@ import type Author from './author'
 type ArticleType = {
   slug: string
   title: string
-  date: string
   author: Author
   excerpt: string
+  meta: {
+    date: string
+    source: string
+    source_icon: string
+    url: string
+  }
   ogImage: {
     url: string
   }

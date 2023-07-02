@@ -10,7 +10,7 @@
 }
 
 .title {
-  margin: 0;
+  margin-bottom: var(--smallest-spacing);
   text-align: center;
 }
 
@@ -20,7 +20,15 @@
   flex-direction: column;
   font-size: var(--small-font-size);
   gap: var(--small-spacing);
+  margin-top: var(--small-spacing);
   padding: var(--small-spacing) var(--base-spacing);
+}
+
+.icon {
+  display: inline-block;
+  height: 1.25em;
+  margin-right: 0.5em;
+  vertical-align: -0.33em;
 }
 
 @media (min-width: 1000px) {

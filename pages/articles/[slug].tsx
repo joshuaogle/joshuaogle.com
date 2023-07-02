@@ -34,7 +34,7 @@ export default function Article({ article, moreArticles, preview }: Props) {
             </Head>
             <Intro
               title={article.title}
-              date={article.date}
+              meta={article.meta}
             />
             <ArticleBody content={article.content} />
           </article>
@@ -55,6 +55,7 @@ export async function getStaticProps({ params }: Params) {
     'title',
     'date',
     'slug',
+    'meta',
     'content',
     'ogImage',
   ])

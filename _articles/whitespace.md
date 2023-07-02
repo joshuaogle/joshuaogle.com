@@ -1,14 +1,12 @@
 ---
 title: "Whitespace"
-date: "2017-03-14"
-tags: ["Design"]
-url: "https://robots.thoughtbot.com/whitespace"
-path: "whitespace"
-source: "thoughtbot"
-source_icon: "source-thoughtbot.svg"
-ogImage: {
+meta:
+  date: "2017-03-14"
+  url: "https://robots.thoughtbot.com/whitespace"
+  source: "thoughtbot"
+  source_icon: "source-thoughtbot.svg"
+ogImage:
   url: "https://images.thoughtbot.com/cp-design-for-the-web/zhquLBEGRP68MT3w8oZh_elements-white-space-micro-small.png"
-}
 summary: "Whitespace is probably the most under-appreciated yet impactful part of a good design."
 ---
 

@@ -1,14 +1,12 @@
 ---
 title: "Positioning Elements on the Web"
-date: "2017-04-04"
-tags: ["Design", "CSS"]
-url: "https://robots.thoughtbot.com/positioning"
-path: "positioning"
-source: "thoughtbot"
-source_icon: "source-thoughtbot.svg"
-ogImage: {
+meta:
+  date: "2017-04-04"
+  url: "https://robots.thoughtbot.com/positioning"
+  source: "thoughtbot"
+  source_icon: "source-thoughtbot.svg"
+ogImage:
   url: https://images.thoughtbot.com/cp-design-for-the-web/rJPfdQBaR1toJmmH87ao_layout-justify-content.pngg"
-}
 summary: "Choosing how to position an element in CSS is sometimes really a choice about what side effects are most acceptable."
 ---
 
