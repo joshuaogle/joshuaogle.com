@@ -13,9 +13,9 @@ export const summary = {
     client_url: "http://vaultproject.io"
   },
   theme: {
-    backgroundColor: "rgb(52, 53, 54)",
+    backgroundColor: "rgb(29, 30, 31)",
     backgroundImage: "",
-    highlightRGB: "255, 255, 255",
+    highlightRGB: "255, 236, 110",
     icon: "/images/case-study-logo-vault.svg",
     thumbnail: ""
   },

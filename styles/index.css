@@ -7,12 +7,12 @@
 }
 
 html {
-  background: var(--black);
+  background: var(--theme-background-color);
+  transition: background var(--slow-timing);
 }
 
 body {
-  background: var(--theme-background-color);
-  background-image: radial-gradient(circle, var(--theme-background-color) 10%, rgb(var(--theme-surface-rgb)) 125%);
+  background-image: radial-gradient(circle, transparent, rgb(var(--theme-surface-rgb)) 125%);
   background-attachment: fixed;
   background-repeat: no-repeat;
   color: var(--theme-text-color);
@@ -24,7 +24,6 @@ body {
   min-height: 100%;
   overflow-x: hidden;
   padding: 0;
-  transition: background var(--slow-timing);
 }
 
 .centered {
