@@ -3,6 +3,6 @@
 }
 
 .title {
-  color: rgb(var(--theme-highlight-rgb), 0.75);
+  color: var(--theme-muted-color);
   font-size: 1.75rem;
 }

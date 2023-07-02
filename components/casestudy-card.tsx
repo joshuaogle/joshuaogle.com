@@ -13,7 +13,6 @@ const CasestudyCard = ({summary, href}: Props) => {
         className={styles.card}
         style={{
           "--card-background-color": summary.theme.backgroundColor,
-          "--card-accent-rgb": summary.theme.accentRGB,
           "--card-highlight-rgb": summary.theme.highlightRGB
         }}
       >

@@ -42,7 +42,7 @@ const Timeline = () => {
             <TimelineDetails
               company="HashiCorp"
               when="2017-Present"
-              title="Sr Product Designer"
+              title="Staff Product Designer"
               icon="/images/timeline-hashicorp.svg"
             >
               HashiCorp makes developer-focused infrastructure software, with products that span everything from secrets management to mesh networking. 

@@ -12,7 +12,7 @@ html {
 
 body {
   background: var(--theme-background-color);
-  background-image: radial-gradient(circle, var(--theme-background-color) 10%, rgb(var(--theme-surface-rgb)) 110%);
+  background-image: radial-gradient(circle, var(--theme-background-color) 10%, rgb(var(--theme-surface-rgb)) 125%);
   background-attachment: fixed;
   background-repeat: no-repeat;
   color: var(--theme-text-color);
@@ -33,15 +33,27 @@ body {
 }
 
 .surface {
-  --background-color: rgba(var(--theme-surface-rgb), 75%);
-  --fill-light: inset 1px 1px 1px rgba(var(--theme-highlight-rgb), 0.3);
-  --key-light: inset -1px -1px 1px rgba(var(--theme-accent-rgb), 0.2);
-  background: var(--background-color) url("/images/noise-transparent.png") repeat 0 0;
+  background: rgb(var(--theme-surface-rgb)) url("/images/noise-transparent.png") repeat 0 0;
   background-size: 100px;
-  box-shadow: var(--fill-light), var(--key-light);
   border-radius: var(--large-border-radius);
   padding: var(--large-spacing);
   position: relative;
+  transform-style: preserve-3d;
+}
+
+.surface::before {
+  --border-start: rgba(var(--theme-highlight-rgb), 15%);
+  --border-middle: rgba(var(--theme-highlight-rgb), 5%);
+  --border-end: rgba(var(--theme-highlight-rgb), 0%);
+  background: linear-gradient(120deg, var(--border-start), var(--border-middle), var(--border-end));
+  border-radius: var(--large-border-radius);
+  content: " ";
+  position: absolute;
+  left: -1px;
+  right: -1px;
+  top: -1px;
+  bottom: -1px;
+  transform: translateZ(-1px);
 }
 
 section {

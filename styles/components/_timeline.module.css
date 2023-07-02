@@ -25,10 +25,11 @@
 }
 
 .tab:first-child::after {
-  content: "Current";
+  content: "Now";
 	display: inline-block;
 	border-radius: var(--large-border-radius);
-	background-color: var(--theme-background-color);
+	background-color: rgba(var(--theme-highlight-rgb), 15%);
+  color: rgba(var(--theme-highlight-rgb), 50%);
 	font-size: 0.75em;
   margin: 0 0 0 0.25em;
   padding: 0.1em var(--smallest-spacing);

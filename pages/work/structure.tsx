@@ -15,7 +15,6 @@ export const summary = {
   theme: {
     backgroundColor: "#2e71e5",
     backgroundImage: "",
-    accentRGB: "128, 64, 201",
     highlightRGB: "96, 212, 220",
     icon: "/images/case-study-logo-structure.svg",
     thumbnail: "",
@@ -35,7 +34,6 @@ const Structure = () => {
           :root {
             --theme-background-color: ${summary.theme.backgroundColor};
             --theme-background-image: ${summary.theme.backgroundImage};
-            --theme-accent-rgb: ${summary.theme.accentRGB};
             --theme-highlight-rgb: ${summary.theme.highlightRGB};
           }
         `}</style>

@@ -25,7 +25,7 @@ const Intro = ({ title, meta }: Props) => {
     <>
       <header className={styles.container} >
         <h1 className={styles.title}>{title}</h1>
-        <small>{meta.date}</small>
+        <small><DateFormatter dateString={meta.date} /></small>
       
         <ul className={styles.meta}>
           {meta.client && (
