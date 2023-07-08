@@ -133,8 +133,8 @@
   --font-weight-regular: 400;
   --font-weight-semibold: 600;
   --font-weight-black: 800;
-  --base-font-size: calc(var(--page-width) / 45);
-  --small-font-size: calc(var(--base-font-size) * 0.75);
+  --base-font-size: max(calc(var(--page-width) / 56), 16px);
+  --small-font-size: max(calc(var(--base-font-size) * 0.75), 14px);
 
   /* Borders */
   --base-border-radius: 0.25rem;
@@ -170,13 +170,27 @@
 }
 
 
-/* Default theme */
+
+/* Default dark theme */
 :root {
-  --theme-background-color: var(--neutral-800);
+  --theme-stark-color: black;
   --theme-text-color: var(--neutral-300);
   --theme-link-color: var(--cyan-500);
   --theme-link-hover: var(--cyan-300);
   --theme-highlight-rgb:  255, 239, 102;
   --theme-muted-color: rgba(255, 255, 255, 0.33);
   --theme-surface-rgb: 10, 9, 8;
+  --theme-background-color: var(--neutral-800);
+}
+
+/* Light theme */
+body.light-theme {
+  --theme-stark-color: white;
+  --theme-text-color: var(--neutral-900);
+  --theme-link-color: var(--cyan-600);
+  --theme-link-hover: var(--cyan-400);
+  --theme-highlight-rgb:  229, 193, 46;
+  --theme-muted-color: rgba(0, 0, 0, 0.4);
+  --theme-surface-rgb: 255, 255, 255;
+  --theme-background-color: white;
 }

@@ -129,7 +129,7 @@ figcaption,
   font-family: var(--heading-font);
   font-size: var(--small-font-size);
   font-weight: var(--font-weight-semibold);
-  letter-spacing: 0.033em;
+  letter-spacing: 0.05em;
   margin: var(--small-spacing) auto;
 }
 

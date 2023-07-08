@@ -13,7 +13,7 @@ export const summary = {
     client_url: "http://vaultproject.io"
   },
   theme: {
-    backgroundColor: "rgb(29, 30, 31)",
+    backgroundColor: "rgb(114, 114, 116)",
     backgroundImage: "",
     highlightRGB: "255, 236, 110",
     icon: "/images/case-study-logo-vault.svg",
@@ -41,34 +41,35 @@ const VaultCaseStudy = () => {
       />
 
       <section>
-        <div className="section-title">The challenge</div>
+        <div className="section-title">Background</div>
         <h2>It's hard to keep a secret</h2>
         <p>
           Modern software development requires a lot of moving parts
           from APIs to databases and infrastructure that changes by the minute.
-          That's a lot of passwords and credentials to keep track of.
           And to make things worse,
-          engineering teams at large companies are often in the hundreds or thousands of people.
+          engineering teams at large companies can grow to hundreds or thousands of people.
+          That's a lot of passwords, credentials, and other secrets to keep track of.
         </p>
+      </section>
 
+      <figure>
+          <img src="/source/images/case-studies/armada-device.png" />
+        <figcaption>
+          Vault summary image
+        </figcaption>
+      </figure>
+
+      <section>
+        <div className="section-title">Research</div>
+        <h2>Who watches the watchmen?</h2>
         <p>
           Text
         </p>
-
-        <figure>
-            <img src="/source/images/case-studies/armada-device.png" />
-          <figcaption>
-            Caption
-          </figcaption>
-        </figure>
       </section>
 
       <section>
-        <div className="section-title">The solution</div>
-        <h2>Making the cloud a safer place to live</h2>
-        <p>
-          Text
-        </p>
+        <h3>Design System</h3>
+        <p>text</p>
       </section>
 
       <section>
@@ -88,22 +89,19 @@ const VaultCaseStudy = () => {
       </section>
 
       <section>
-        <h3>Design System</h3>
-        <p>text</p>
-      </section>
-
-      <section>
         <h3>UI Guide</h3>
         <p>text</p>
       </section>
 
       <section>
         <h3>HCP Vault</h3>
-        <p>text</p>
+        <p>
+          In 2020, 
+        </p>
       </section>
 
       <section>
-        <div className="section-title">In Summary</div>
+        <div className="section-title">Results and reflection</div>
         <h2>Workflow-driven design</h2>
         <p>
           Text

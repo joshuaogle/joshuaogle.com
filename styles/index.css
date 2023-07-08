@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  background-image: radial-gradient(circle, transparent, rgb(var(--theme-surface-rgb)) 125%);
+  background-image: radial-gradient(circle, transparent, rgba(var(--theme-surface-rgb), 0.66));
   background-attachment: fixed;
   background-repeat: no-repeat;
   color: var(--theme-text-color);

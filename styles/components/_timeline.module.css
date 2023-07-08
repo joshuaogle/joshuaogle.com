@@ -25,18 +25,11 @@
 }
 
 .tab:first-child::after {
-  content: "Now";
-	display: inline-block;
-	border-radius: var(--large-border-radius);
-	background-color: rgba(var(--theme-highlight-rgb), 15%);
-  color: rgba(var(--theme-highlight-rgb), 50%);
-	font-size: 0.75em;
-  margin: 0 0 0 0.25em;
-  padding: 0.1em var(--smallest-spacing);
-}
-
-.tab:first-child {
-  padding-right: var(--smallest-spacing);
+  content: "● Now";
+  color: rgba(var(--theme-highlight-rgb), 0.5);
+	font-size: 0.8em;
+  font-weight: var(--font-weight-semibold);
+  margin: 0.1em 0 0 0.5em;
 }
 
 .icon {
@@ -47,13 +40,13 @@
 }
 
 .tabGlider {
-  background: black;;
+  background: var(--theme-stark-color);
+  border: 1px solid rgba(var(--theme-highlight-rgb), 0.1);
   border-radius: 99px;
   left: 0;
   opacity: 0;
   position: absolute;
   height: 32px;
-  width: 32px;
   top: 50%;
   transform: translateY(-50%);
   transition: width var(--fast-timing) ease-in, left var(--base-timing) ease-out, opacity var(--slow-timing) ease-in;

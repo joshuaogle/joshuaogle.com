@@ -9,7 +9,6 @@
   background-position: center center;
   background-size: cover;
   border-radius: var(--large-border-radius);
-  box-shadow: var(--card-highlight), var(--shadow-none);
   break-inside: avoid;
   color: var(--white);
   display: flex;
@@ -22,7 +21,6 @@
 }
 
 .card:hover {
-  box-shadow: var(--card-highlight), var(--shadow-medium);
   transform: scale(102%);
 }
 

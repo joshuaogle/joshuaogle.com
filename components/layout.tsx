@@ -19,6 +19,7 @@ const Layout = ({ preview, showWelcome, children }: Props) => {
       <main className={"centered surface"}>
         {children}
       </main>
+
       <Footer />
     </div>
   )
