@@ -184,7 +184,7 @@
 }
 
 /* Light theme */
-body.light-theme {
+html[data-prefers-color-scheme="light"] {
   --theme-stark-color: white;
   --theme-text-color: var(--neutral-900);
   --theme-link-color: var(--cyan-600);

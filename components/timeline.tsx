@@ -34,7 +34,7 @@ const Timeline = () => {
           <Tab className={styles.tab}>
             Brightbit
           </Tab>
-          <Tab className={styles.tab}>More</Tab>
+          <a href="https://linkedin.com/in/joshuaogle" target="_new" className={styles.tab}>More</a>
           <div className={styles.tabGlider} id="tab-glider" />
         </Tab.List>
         <Tab.Panels>
@@ -90,10 +90,6 @@ const Timeline = () => {
 
               Armada
             </TimelineDetails>
-          </Tab.Panel>
-
-          <Tab.Panel>
-          <a href="/files/joshuaogle-resume.pdf" target="_new">Read more work history on my resume</a>
           </Tab.Panel>
         </Tab.Panels>
       </Tab.Group>

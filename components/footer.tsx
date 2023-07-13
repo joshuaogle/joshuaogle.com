@@ -1,7 +1,13 @@
-import ThemeToggle from './theme-toggle';
-import styles from '../styles/components/_footer.module.css';
+import { Switch } from '@headlessui/react'
+import colorSchemeProvider from '../lib/colorSchemeProvider'
+import styles from '../styles/components/_footer.module.css'
 
 const Footer = () => {
+  const [ colorScheme, setColorScheme ] = colorSchemeProvider();
+  const changeColorScheme = (isDark) => {
+    isDark ? setColorScheme("dark") : setColorScheme("light");
+  } 
+
   return (
     <footer className={styles.footer}>
       <h2 className={styles.title}>
@@ -18,7 +24,18 @@ const Footer = () => {
         <a href="http://linkedin.com/in/joshuaogle">LinkedIn</a>
       </p>
 
-      <ThemeToggle />
+      <Switch
+        checked={colorScheme === "dark"}
+        onChange={changeColorScheme}
+        className={`${styles.switchBg} ${colorScheme === "dark" ? styles.switchBgOn : null}`}
+      >
+        <span className={styles.srOnly}>
+          Use setting
+        </span>
+        <span
+          aria-hidden="true"
+          className={`${styles.switch} ${colorScheme === "dark" ? styles.switchOn : null}`} />
+      </Switch>
 
       <small className={styles.copyright}>
         &copy;

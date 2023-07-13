@@ -1,11 +1,6 @@
 import styles from '../styles/components/_welcome.module.css'
 
-type Props = {
-  title: string,
-  date: string,
-}
-
-const Welcome = ({ title, date }: Props) => {
+const Welcome = () => {
   return (
     <header className={styles.container + " centered"}>
       <div className={styles.portrait}>

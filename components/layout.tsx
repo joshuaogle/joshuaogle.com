@@ -1,7 +1,9 @@
+import { useEffect, useState } from 'react';
 import Header from './header';
 import Footer from './footer';
 import Meta from './meta';
-import Welcome from '../components/welcome'
+import Welcome from '../components/welcome';
+import { colorScheme } from '../lib/colorSchemeProvider';
 import styles from '../styles/components/_layout.module.css';
 
 type Props = {
@@ -12,10 +14,11 @@ type Props = {
 
 const Layout = ({ preview, showWelcome, children }: Props) => {
   return (
-    <div className={styles.app}>
+    <div className={styles.app} >
       <Meta />
 
-      {showWelcome ? <Welcome /> :  <Header />}
+      {showWelcome ? <Welcome /> : <Header />}
+
       <main className={"centered surface"}>
         {children}
       </main>

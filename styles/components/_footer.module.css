@@ -6,3 +6,42 @@
   color: var(--theme-muted-color);
   font-size: 1.75rem;
 }
+
+.switchBg {
+  position: relative;
+  display: inline-flex;
+  width: calc(var(--smallest-spacing) + (var(--base-spacing) * 2) + var(--smallest-spacing));
+  flex: 0 0;
+  cursor: pointer;
+  background-color: var(--black);
+  border-radius: var(--base-spacing);
+  border: var(--smallest-spacing) solid transparent;
+  padding: 0;
+  transition: all var(--fast-timing) ease-in-out;
+}
+
+.switchBg:focus {
+  outline: none;
+}
+
+.switchBgOn {
+  background-color: var(--white);
+}
+
+.switch {
+  display: inline-block;
+  height: var(--base-spacing);
+  width: var(--base-spacing);
+  border-radius: 100%;
+  background-color: var(--white);
+  transition: all var(--fast-timing) ease-in-out;
+}
+
+.switchOn {
+  transform: translateX(100%);
+  background-color: var(--black);
+}
+
+.srOnly {
+  display: none;
+}
