@@ -2,6 +2,7 @@ h1,
 h2,
 h3,
 h4 {
+  color: var(--theme-heading-color);
   font-family: var(--heading-font);
   font-weight: var(--font-weight-semibold);
   letter-spacing: 0.015em;
@@ -10,7 +11,6 @@ h4 {
 }
 
 h1 {
-  color: var(--theme-text-color);
   font-size: 3em;
 }
 

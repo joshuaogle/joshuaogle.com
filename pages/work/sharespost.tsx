@@ -32,10 +32,11 @@ const Sharespost = () => {
 
       <Layout>
         <style jsx global>{`
-          :root {
+          :root body {
             --theme-background-color: ${summary.theme.backgroundColor};
             --theme-background-image: ${summary.theme.backgroundImage};
             --theme-highlight-rgb: ${summary.theme.highlightRGB};
+            --theme-heading-color: ${summary.theme.backgroundColor};
           }
         `}</style>
       
