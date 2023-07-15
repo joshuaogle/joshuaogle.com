@@ -1,13 +1,17 @@
 import { Switch } from '@headlessui/react'
-import { initColorScheme, getColorScheme, switchColorScheme } from '../lib/colorSchemeProvider'
 import styles from '../styles/components/_footer.module.css'
 
-const Footer = () => {
-  initColorScheme();
-  const colorScheme = getColorScheme();
-  const switchIsOn = colorScheme === "light";
+const Footer = ({ isDarkMode, setIsDarkMode }) => {
+  // called when theme button is pressed
+  const toggleColorScheme = () => {
+    const oldColorScheme = localStorage.getItem("colorScheme");
+    const newColorScheme = (oldColorScheme === "dark") ? "light" : "dark";
+    localStorage.setItem("colorScheme", newColorScheme);
+    setIsDarkMode(!isDarkMode);
+  };
+
   const ifSwitchIsOn = (cssClass) => {
-    return switchIsOn ? cssClass : '';
+    return !isDarkMode ? cssClass : '';
   }
 
   return (
@@ -27,8 +31,8 @@ const Footer = () => {
       </p>
 
       <Switch
-        checked={switchIsOn}
-        onChange={switchColorScheme}
+        checked={isDarkMode}
+        onChange={toggleColorScheme}
         className={`${styles.switchBg} ${ifSwitchIsOn(styles.switchBgOn)}`}
       >
         <span className={styles.srOnly}>
