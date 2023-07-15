@@ -1,12 +1,14 @@
 import { Switch } from '@headlessui/react'
-import colorSchemeProvider from '../lib/colorSchemeProvider'
+import { initColorScheme, getColorScheme, switchColorScheme } from '../lib/colorSchemeProvider'
 import styles from '../styles/components/_footer.module.css'
 
 const Footer = () => {
-  const [ colorScheme, setColorScheme ] = colorSchemeProvider();
-  const changeColorScheme = (isDark) => {
-    isDark ? setColorScheme("dark") : setColorScheme("light");
-  } 
+  initColorScheme();
+  const colorScheme = getColorScheme();
+  const switchIsOn = colorScheme === "light";
+  const ifSwitchIsOn = (cssClass) => {
+    return switchIsOn ? cssClass : '';
+  }
 
   return (
     <footer className={styles.footer}>
@@ -25,16 +27,17 @@ const Footer = () => {
       </p>
 
       <Switch
-        checked={colorScheme === "dark"}
-        onChange={changeColorScheme}
-        className={`${styles.switchBg} ${colorScheme === "dark" ? styles.switchBgOn : null}`}
+        checked={switchIsOn}
+        onChange={switchColorScheme}
+        className={`${styles.switchBg} ${ifSwitchIsOn(styles.switchBgOn)}`}
       >
         <span className={styles.srOnly}>
           Use setting
         </span>
         <span
           aria-hidden="true"
-          className={`${styles.switch} ${colorScheme === "dark" ? styles.switchOn : null}`} />
+          className={`${styles.switchIndicator} ${ifSwitchIsOn(styles.switchIndicatorOn)}`}
+        />
       </Switch>
 
       <small className={styles.copyright}>

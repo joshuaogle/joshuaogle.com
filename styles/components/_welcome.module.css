@@ -27,6 +27,11 @@
   box-shadow: var(--shadow-high);
 }
 
+html[data-prefers-color-scheme="light"] .portrait img {
+  box-shadow: var(--shadow-low);
+}
+
+
 .textContainer {
   padding: var(--base-spacing) 0;
 }

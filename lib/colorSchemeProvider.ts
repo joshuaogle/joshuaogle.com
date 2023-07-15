@@ -1,25 +1,35 @@
 import { useEffect, useState } from "react";
 
-function colorSchemeProvider() {
-  const [oldColorScheme, setColorScheme] = useState(
-    typeof window !== "undefined" ? localStorage.colorScheme : "dark"
-  );
-  console.log("old: " + oldColorScheme);
-  const newColorScheme = oldColorScheme === "dark" ? "light" : "dark";
-  console.log("new: " + newColorScheme);
 
-
-  useEffect(() => {
-    const root = window.document.documentElement;
-
-    root.setAttribute("data-prefers-color-scheme", newColorScheme);
-
-    if (typeof window !== "undefined") {
-      localStorage.setItem("colorScheme", newColorScheme);
-    }
-  }, [newColorScheme]);
-
-  return [oldColorScheme, setColorScheme];
+export const initColorScheme = () => {
+  const currentColorScheme = getColorScheme();
+  if (!!currentColorScheme) {
+    console.log("Init found a colorScheme (" + currentColorScheme + "), aligning to that");
+    setColorScheme(currentColorScheme);
+  } else {
+    console.log("Init could not find a colorScheme, defaulting to dark");
+    setColorScheme("dark");
+  }
 }
 
-export default colorSchemeProvider;
+export const getColorScheme = () => {
+  if (typeof window !== "undefined") {
+    const userPrefers = window.document.documentElement.getAttribute("data-prefers-color-scheme");
+    const OSPrefers = window.matchMedia?.("(prefers-color-scheme: light)").matches ? "light" : "dark";
+    console.log("GET userPrefers: " + userPrefers + " || OSPrefers: " + OSPrefers);
+    return userPrefers || OSPrefers;
+  }
+}
+
+export const setColorScheme = (colorScheme) => {
+  console.log("SET " + colorScheme);
+  if (typeof window !== "undefined") {
+    window.document.documentElement.setAttribute("data-prefers-color-scheme", colorScheme);
+    localStorage.setItem("colorScheme", colorScheme);
+  }
+}
+
+export const switchColorScheme = () => {
+  const currentColorScheme = getColorScheme();
+  setColorScheme(currentColorScheme === "dark" ? "light" : "dark");
+}

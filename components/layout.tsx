@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import Header from './header';
 import Footer from './footer';
 import Meta from './meta';

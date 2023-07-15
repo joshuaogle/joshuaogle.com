@@ -28,7 +28,7 @@
   background-color: var(--white);
 }
 
-.switch {
+.switchIndicator {
   display: inline-block;
   height: var(--base-spacing);
   width: var(--base-spacing);
@@ -37,7 +37,7 @@
   transition: all var(--fast-timing) ease-in-out;
 }
 
-.switchOn {
+.switchIndicatorOn {
   transform: translateX(100%);
   background-color: var(--black);
 }
