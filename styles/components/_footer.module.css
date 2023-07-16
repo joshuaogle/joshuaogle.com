@@ -7,6 +7,13 @@
   font-size: 1.75rem;
 }
 
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: var(--small-spacing) 0;
+}
+
 .links {
   display: flex;
   gap: var(--small-spacing);
@@ -23,16 +30,15 @@
 
 /* Color Scheme Switch */
 .switchBg {
-  position: relative;
-  display: inline-flex;
-  width: calc(var(--smallest-spacing) + (var(--base-spacing) * 2) + var(--smallest-spacing));
-  flex: 0 0;
-  cursor: pointer;
-  background-color: var(--black);
+  --border-width: calc(var(--smallest-spacing) / 2);
+  background-color: var(--theme-muted-color);
   border-radius: var(--base-spacing);
-  border: var(--smallest-spacing) solid transparent;
+  border: var(--border-width) solid transparent;
+  cursor: pointer;
+  display: inline-flex;
   padding: 0;
   transition: all var(--fast-timing) ease-in-out;
+  width: calc(var(--border-width) + (var(--base-spacing) * 2) + var(--border-width));
 }
 
 .switchBg:focus {
@@ -45,16 +51,18 @@
 
 .switchIndicator {
   display: inline-block;
-  height: var(--base-spacing);
-  width: var(--base-spacing);
   border-radius: 100%;
-  background-color: var(--white);
   transition: all var(--fast-timing) ease-in-out;
 }
 
 .switchIndicatorOn {
   transform: translateX(100%);
-  background-color: var(--black);
+}
+
+.switchIndicator svg {
+  color:  var(--theme-text-color);
+  height: var(--base-spacing);
+  width: var(--base-spacing);
 }
 
 .srOnly {

@@ -1,10 +1,10 @@
 import { Switch } from '@headlessui/react'
 import styles from '../styles/components/_footer.module.css'
-import Image from 'next/image'
 import IconGithub from '../public/images/icon-github.svg'
 import IconMastodon from '../public/images/icon-mastodon.svg'
 import IconDribbble from '../public/images/icon-dribbble.svg'
 import IconLinkedIn from '../public/images/icon-linkedin.svg'
+import IconColorScheme from '../public/images/color-scheme.svg'
 
 const Footer = ({ isDarkMode, setIsDarkMode }) => {
   // called when theme button is pressed
@@ -25,37 +25,42 @@ const Footer = ({ isDarkMode, setIsDarkMode }) => {
         You've got good taste, get in touch sometime
       </h2>
 
-      <p>
-        Say hi at <a href="mailto:joshua@joshuaogle.com">joshua@joshuaogle.com</a>.
-      </p>
-      <p className={styles.links}>
-        <a href="http://github.com/joshuaogle">
-          <IconGithub />
-        </a>
-        <a href="https://mastodon.social/@joshuaogle">
-          <IconMastodon />
-        </a>
-        <a href="http://dribbble.com/joshuaogle">
-          <IconDribbble />
-        </a>
-        <a href="http://linkedin.com/in/joshuaogle">
-          <IconLinkedIn />
-        </a>
-      </p>
-
-      <Switch
-        checked={isDarkMode}
-        onChange={toggleColorScheme}
-        className={`${styles.switchBg} ${ifSwitchIsOn(styles.switchBgOn)}`}
-      >
-        <span className={styles.srOnly}>
-          Use setting
+      <div className={ styles.icons }>
+        <span>
+          Say hi at <a href="mailto:joshua@joshuaogle.com">joshua@joshuaogle.com</a>.
         </span>
-        <span
-          aria-hidden="true"
-          className={`${styles.switchIndicator} ${ifSwitchIsOn(styles.switchIndicatorOn)}`}
-        />
-      </Switch>
+
+        <nav className={styles.links}>
+          <a href="https://mastodon.social/@joshuaogle">
+            <IconMastodon />
+          </a>
+          <a href="http://dribbble.com/joshuaogle">
+            <IconDribbble />
+          </a>
+          <a href="http://linkedin.com/in/joshuaogle">
+            <IconLinkedIn />
+          </a>
+          <a href="http://github.com/joshuaogle">
+            <IconGithub />
+          </a>
+        </nav>
+
+        <Switch
+          checked={isDarkMode}
+          onChange={toggleColorScheme}
+          className={`${styles.switchBg} ${ifSwitchIsOn(styles.switchBgOn)}`}
+        >
+          <span
+            aria-hidden="true"
+            className={`${styles.switchIndicator} ${ifSwitchIsOn(styles.switchIndicatorOn)}`}
+          >
+            <IconColorScheme />
+          </span>
+          <span className={styles.srOnly}>
+            Use setting
+          </span>
+        </Switch>
+      </div>
 
       <small className={styles.copyright}>
         &copy;

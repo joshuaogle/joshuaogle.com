@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <mask id="color-scheme-icon">
+    <circle fill="white" cx="16" cy="16" r="16" />
+    <circle fill="black" cx="16" cy="16" r="12" />
+    <rect fill="white" x="4" y="4" width="12" height="24" />
+  </mask>
+
+  <circle fill="currentColor" mask="url(#color-scheme-icon)" cx="16" cy="16" r="16" />
+</svg>
