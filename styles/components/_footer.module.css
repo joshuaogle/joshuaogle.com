@@ -31,7 +31,6 @@
 /* Color Scheme Switch */
 .switchBg {
   --border-width: calc(var(--smallest-spacing) / 2);
-  background-color: var(--theme-muted-color);
   border-radius: var(--base-spacing);
   border: var(--border-width) solid transparent;
   cursor: pointer;
@@ -43,10 +42,6 @@
 
 .switchBg:focus {
   outline: none;
-}
-
-.switchBgOn {
-  background-color: var(--white);
 }
 
 .switchIndicator {

@@ -48,7 +48,7 @@ const Footer = ({ isDarkMode, setIsDarkMode }) => {
         <Switch
           checked={isDarkMode}
           onChange={toggleColorScheme}
-          className={`${styles.switchBg} ${ifSwitchIsOn(styles.switchBgOn)}`}
+          className={`surface ${styles.switchBg} ${ifSwitchIsOn(styles.switchBgOn)}`}
         >
           <span
             aria-hidden="true"

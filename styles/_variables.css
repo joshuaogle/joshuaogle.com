@@ -192,7 +192,7 @@ html[data-prefers-color-scheme="light"] {
   --theme-muted-color: rgba(0, 0, 0, 0.4);
   --theme-surface-rgb: 255, 255, 255;
   --theme-heading-color: var(--theme-text-color);
-  --background-gradient-opacity: 0.8;
+  --background-gradient-opacity: 1;
 }
 
 html[data-prefers-color-scheme="dark"] {
