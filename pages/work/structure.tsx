@@ -35,6 +35,9 @@ const Structure = () => {
             --theme-background-color: ${summary.theme.backgroundColor};
             --theme-background-image: ${summary.theme.backgroundImage};
             --theme-highlight-rgb: ${summary.theme.highlightRGB};
+          }
+
+          html[data-prefers-color-scheme="light"] {
             --theme-heading-color: ${summary.theme.backgroundColor};
           }
         `}</style>

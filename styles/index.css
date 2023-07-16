@@ -12,7 +12,11 @@ html {
 }
 
 body {
-  background-image: radial-gradient(circle, transparent, rgba(var(--theme-surface-rgb), 0.66));
+  background-image: radial-gradient(
+    circle,
+    rgba(var(--theme-surface-rgb), 0),
+    rgba(var(--theme-surface-rgb), var(--background-gradient-opacity))
+  );
   background-attachment: fixed;
   background-repeat: no-repeat;
   color: var(--theme-text-color);

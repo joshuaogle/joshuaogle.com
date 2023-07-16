@@ -7,6 +7,21 @@
   font-size: 1.75rem;
 }
 
+.links {
+  display: flex;
+  gap: var(--small-spacing);
+}
+
+.links a {
+  color: var(--theme-text-color);
+}
+
+.links a svg {
+  height: var(--base-spacing);
+  width: var(--base-spacing);
+}
+
+/* Color Scheme Switch */
 .switchBg {
   position: relative;
   display: inline-flex;
