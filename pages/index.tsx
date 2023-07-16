@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Layout from '../components/layout'
 import Timeline from '../components/timeline'
+import ConsultingClients from '../components/consulting-clients'
 import ArticlesList from '../components/articles-list'
 import { getAllArticles } from '../lib/api'
 import Article from '../interfaces/article'
@@ -17,6 +18,8 @@ export default function Index({ allArticles }: Props) {
       </Head>
 
       <Timeline />
+
+      <ConsultingClients />
 
       <ArticlesList allArticles={allArticles} />
     </Layout>
