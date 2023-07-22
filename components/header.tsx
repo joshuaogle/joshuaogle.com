@@ -12,7 +12,7 @@ const Header = () => {
     <header className={styles.header}>
       <nav>
         <Link href="/" className={styles.logoLink}>
-          &lsaquo; Back
+          &#8592; Back
         </Link>
       </nav>
     </header>

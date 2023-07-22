@@ -4,7 +4,7 @@
 
 .title {
   color: var(--theme-muted-color);
-  font-size: 1.75rem;
+  font-size: 1.25rem;
 }
 
 .icons {
@@ -16,28 +16,41 @@
 
 .links {
   display: flex;
-  gap: var(--small-spacing);
+  gap: var(--smallest-spacing);
 }
 
 .links a {
-  color: var(--theme-text-color);
+  color: var(--theme-muted-color);
+  transition: color var(--base-timing);
+}
+
+.links a:hover {
+  color: var(--theme-link-hover);
 }
 
 .links a svg {
-  height: var(--base-spacing);
-  width: var(--base-spacing);
+  height: 1.5em;
+  width: 1.5em;
 }
 
 /* Color Scheme Switch */
 .switchBg {
   --border-width: calc(var(--smallest-spacing) / 2);
-  border-radius: var(--base-spacing);
+  border-radius: var(--large-spacing);
   border: var(--border-width) solid transparent;
   cursor: pointer;
   display: inline-flex;
   padding: 0;
-  transition: all var(--fast-timing) ease-in-out;
   width: calc(var(--border-width) + (var(--base-spacing) * 2) + var(--border-width));
+}
+
+.switchBg::before {
+  border-radius: 5em;
+  --spacing: calc((var(--smallest-spacing) / 2 * -1) - 1px);
+  top: var(--spacing);
+  left: var(--spacing);
+  right: var(--spacing);
+  bottom: var(--spacing);
 }
 
 .switchBg:focus {
@@ -47,7 +60,7 @@
 .switchIndicator {
   display: inline-block;
   border-radius: 100%;
-  transition: all var(--fast-timing) ease-in-out;
+  transition: all var(--base-timing) ease-in-out;
 }
 
 .switchIndicatorOn {
@@ -55,7 +68,7 @@
 }
 
 .switchIndicator svg {
-  color:  var(--theme-text-color);
+  color: var(--theme-text-color);
   height: var(--base-spacing);
   width: var(--base-spacing);
 }

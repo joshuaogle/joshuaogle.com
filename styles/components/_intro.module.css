@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: var(--large-spacing) 0;
+  margin: var(--base-spacing) 0;
   position: relative;
   transform-origin: var(--base-spacing) 100%;
   z-index: 2;
@@ -16,13 +16,13 @@
 
 .meta {
   justify-content: center;
-  border-top: 0.5px solid var(--theme-muted-color);
+  border-top: 1px solid rgba(var(--theme-surface-rgb), 0.25);
   display: flex;
   flex-direction: column;
   font-size: var(--small-font-size);
   gap: var(--small-spacing);
   margin-top: var(--smallest-spacing);
-  padding: var(--small-spacing) var(--base-spacing);
+  padding: var(--small-spacing) var(--small-spacing);
   width: 100%;
 }
 
@@ -41,6 +41,7 @@
 }
 
 .metaItem {
+  flex: 1;
   font-size: var(--small-font-size);
 }
 
@@ -51,6 +52,7 @@
 .metaItem label {
   color: var(--theme-muted-color);
   font-family: var(--heading-font);
+  font-weight: var(--font-weight-medium);
 }
 
 @keyframes rise {

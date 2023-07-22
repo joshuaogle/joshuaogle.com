@@ -122,7 +122,7 @@
   --break-large: 1400px;
   --page-min-width: 60vw;
   --page-flex-width: 50rem;
-  --page-max-width: 90vw;
+  --page-max-width: 80vw;
   --page-width: clamp(var(--page-min-width), var(--page-flex-width), var(--page-max-width));
 
 
@@ -147,9 +147,9 @@
   --slowest-timing: 1500ms;
 
   /* Elevations (from Material Design): */
-  --md-u: rgba(0, 0, 0, 0.2);
-  --md-p: rgba(0, 0, 0, 0.15);
-  --md-a: rgba(0, 0, 0, 0.1);
+  --md-u: rgba(var(--theme-surface-rgb), 0.1);
+  --md-p: rgba(var(--theme-surface-rgb), 0.05);
+  --md-a: rgba(var(--theme-surface-rgb), 0.025);
   --md-2dp-u: 0 0.0rem 0.4rem 0 var(--md-u);
   --md-2dp-p: 0 0.3rem 0.4rem 0 var(--md-p);
   --md-2dp-a: 0 0.1rem 0.5rem 0 var(--md-a);
@@ -176,10 +176,11 @@
   --theme-link-color: var(--cyan-500);
   --theme-link-hover: var(--cyan-300);
   --theme-highlight-rgb:  255, 239, 102;
-  --theme-muted-color: rgba(255, 255, 255, 0.33);
-  --theme-surface-rgb: 10, 9, 8;
+  --theme-muted-color: rgba(255, 255, 255, 1);
+  --theme-surface-rgb: 25, 22, 20;
   --theme-background-color: var(--neutral-800);
-  --background-gradient-opacity: 0.66;
+  --background-gradient-start: 0.25;
+  --background-gradient-end: 0.33;
 }
 
 /* Light theme */
@@ -189,10 +190,11 @@ html[data-prefers-color-scheme="light"] {
   --theme-link-color: var(--cyan-600);
   --theme-link-hover: var(--cyan-400);
   --theme-highlight-rgb: 120, 120, 120;
-  --theme-muted-color: rgba(0, 0, 0, 0.4);
+  --theme-muted-color: rgba(0, 0, 0, 0.33);
   --theme-surface-rgb: 255, 255, 255;
   --theme-heading-color: var(--theme-text-color);
-  --background-gradient-opacity: 1;
+  --background-gradient-start: 0.9;
+  --background-gradient-end: 0.8;
 }
 
 html[data-prefers-color-scheme="dark"] {

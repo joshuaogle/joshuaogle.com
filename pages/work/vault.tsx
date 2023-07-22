@@ -84,16 +84,24 @@ const VaultCaseStudy = () => {
             and as the the second product designer at HashiCorp.
           </p>
           <p>
-            Vault's open source project was already becoming the standard among open source users.
-            
-            
-            and a UI had recently been added to Vault's new enterprise offering.
-            It was more or less a visual representation of the command-line interface
-            and features often launched there first
-            before being supported by the web interface a few months later.
+            HashiCorp [had just announced Vault Enterprise](https://sports.yahoo.com/news/hashicorp-vault-enterprise-release-enables-150000673.html)
+            which marked an huge milestone.
+            Vault's open source project was already becoming the standard among open source users,
+            and it had quite a fan base.
+            The new Enterprise offering had a very exciting new UI
+            built by their (amazing) front-end developer
+            that was a straightforward representation of the API.
+            HashiCorp knew that the security engineers, platform engineers, and compliance officers,
+            that would be using the Enterprise version
+            needed a user interface that gave them more discoverability and visibility
+            into their secrets management environment.
           </p>
           <p>
-            Part of designing systems means you think a lot about how to make things reusable and composable.
+
+          </p>
+          <p>
+            Part of designing systems is spending time thinking about how to make things reusable and composable.
+            
             You don't get to start from scratch every day, so I think you should take advantage of it and do it right.
             These designs weren't just the future of Vault, it was the future of our whole design team.
             To help our next designers and help keep our products consistent,
@@ -131,7 +139,10 @@ const VaultCaseStudy = () => {
         <section>
           <h3>HCP Vault</h3>
           <p>
-            In 2020, 
+            {/* Start with why HCP is exciting and what Vault could become */}
+            {/* Mention research */}
+            {/* Show how easy it is */}
+            {/* Mention the future with VSS */}
           </p>
         </section>
 
@@ -139,7 +150,8 @@ const VaultCaseStudy = () => {
           <div className="section-title">Results and reflection</div>
           <h2>Workflow-driven design</h2>
           <p>
-            Text
+            {/* The importance of thinking in workflows */}
+            {/* Cybersecurity is important */}
           </p>
         </section>
       </div>

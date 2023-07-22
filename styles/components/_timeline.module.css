@@ -1,10 +1,18 @@
 .tabList {
   --offset: calc(-1 * var(--base-spacing));
   justify-content: flex-end;
-  display: flex;
+  display: none;
+  gap: var(--smallest-spacing);
   margin: var(--offset) var(--offset) var(--small-spacing) 0;
   position: relative;
   z-index: 2;
+}
+
+
+@media (min-width: 32em) {
+  .tabList {
+    display: flex;
+  }
 }
 
 .tab {
@@ -13,11 +21,10 @@
   align-items: center;
   color: var(--theme-muted-color);
   flex-direction: row;
-	font-size: var(--small-font-size);
+	font-size: 0.75rem;
 	font-weight: 500;
 	cursor: pointer;
-  padding: var(--smallest-spacing) var(--small-spacing);
-	transition: var(--base-timing) ease-in;
+  padding: 0 var(--smallest-spacing);
 }
 
 .tab[tabindex="0"] {
@@ -40,16 +47,18 @@
 }
 
 .tabGlider {
-  background: var(--theme-stark-color);
-  border: 1px solid rgba(var(--theme-highlight-rgb), 0.1);
+  background: rgba(var(--theme-surface-rgb), 0.5);
   border-radius: 99px;
   left: 0;
   opacity: 0;
   position: absolute;
-  height: 32px;
+  height: 1.75em;
   top: 50%;
   transform: translateY(-50%);
-  transition: width var(--fast-timing) ease-in, left var(--base-timing) ease-out, opacity var(--slow-timing) ease-in;
+  transition:
+    width var(--fast-timing) ease-in,
+    left var(--base-timing) ease-out,
+    opacity var(--slow-timing) ease-in;
   z-index: -1;
 }
 

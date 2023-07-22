@@ -5,9 +5,10 @@
   --card-highlight-rgb: var(--theme-highlight-rgb);
   --card-highlight: inset 0 1px 0 0 rgba(var(--card-highlight-rgb), 0.25);
   align-items: center;
+  background: transparent url("/images/noise-transparent.png") repeat 0 0;
+  background-size: 150px;
   background-color: var(--card-background-color);
   background-position: center center;
-  background-size: cover;
   border-radius: var(--large-border-radius);
   break-inside: avoid;
   color: var(--white);
@@ -16,7 +17,7 @@
   margin: var(--small-spacing) 0;
   overflow: hidden;
   padding: var(--base-spacing) var(--small-spacing);
-  transition: transform var(--base-timing), box-shadow var(--slow-timing);
+  transition: transform var(--base-timing) ease-in-out;
   width: 24em;
 }
 
@@ -37,7 +38,6 @@
 
 .title {
   color: var(--white);
-  font-size: 1.2em;
   margin-bottom: 0;
 }
 

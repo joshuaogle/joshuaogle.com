@@ -5,7 +5,7 @@
 }
 
 .header a {
-  color: rgb(var(--theme-highlight-rgb), 0.5);
+  color: var(--theme-muted-color);
   font-size: var(--small-font-size);
-  font-weight: var(--font-weight-light);
+  font-weight: var(--font-weight-normal);
 }

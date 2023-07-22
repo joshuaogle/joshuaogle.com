@@ -11,16 +11,16 @@ h4 {
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 2.33em;
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 1.75em;
 }
 
 h3 {
   color: var(--theme-muted-color);
-  font-size: 1.25em;
+  font-size: 1.33em;
 }
 
 ul {
@@ -73,7 +73,6 @@ a {
   color: var(--theme-link-color);
   font-weight: var(--font-weight-regular);
   text-decoration: none;
-  transition: color var(--base-timing);
 }
 
 a h2,
@@ -137,9 +136,10 @@ figcaption,
   color: var(--theme-muted-color);
   font-family: var(--heading-font);
   font-size: var(--small-font-size);
-  font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-medium);
   letter-spacing: 0.05em;
   margin: var(--small-spacing) auto;
+  mix-blend-mode: soft-light;
 }
 
 figure {

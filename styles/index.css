@@ -8,17 +8,14 @@
 
 html {
   background: var(--theme-background-color);
-  transition: background var(--slow-timing);
 }
 
 body {
   background-image: radial-gradient(
-    circle,
-    rgba(var(--theme-surface-rgb), 0.5),
-    rgba(var(--theme-surface-rgb), var(--background-gradient-opacity))
+    rgba(var(--theme-surface-rgb), var(--background-gradient-start)),
+    rgba(var(--theme-surface-rgb), var(--background-gradient-end))
   );
   background-attachment: fixed;
-  background-repeat: no-repeat;
   color: var(--theme-text-color);
   font-family: var(--sans-serif);
   font-size: var(--base-font-size);
@@ -36,27 +33,42 @@ body {
 }
 
 .surface {
-  background: rgb(var(--theme-surface-rgb)) url("/images/noise-transparent.png");
+  background: rgba(var(--theme-surface-rgb), 0.25);
   background-size: 100px;
   border-radius: var(--large-border-radius);
   padding: var(--large-spacing);
   position: relative;
+  box-shadow: var(--shadow-high);
 }
 
-/* Border behind surface */
+/* Border gradient */
 .surface::before {
-  --border-start: rgba(var(--theme-highlight-rgb), 15%);
-  --border-middle: rgba(var(--theme-highlight-rgb), 5%);
-  --border-end: rgba(var(--theme-highlight-rgb), 0%);
-  background: linear-gradient(120deg, var(--border-start), var(--border-middle), var(--border-end));
+  --border-start: rgba(var(--theme-highlight-rgb), 0.2);
+  --border-middle: rgba(var(--theme-highlight-rgb), 0);
+  --border-end: rgba(var(--theme-highlight-rgb), 0.1);
+  background: linear-gradient(
+    120deg,
+    var(--border-start),
+    var(--border-middle) 30%,
+    var(--border-middle) 70%,
+    var(--border-end)
+  );
   border-radius: var(--large-border-radius);
+  /* Put it behind */
   content: "";
+  padding: 1px;
   position: absolute;
-  left: -2px;
-  right: -2px;
-  top: -2px;
+  left: -1px;
+  right: -1px;
+  top: -1px;
   bottom: -1px;
   z-index: -1;
+  /* Mask */
+  -webkit-mask:
+     linear-gradient(#fff 0 0) content-box, 
+     linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
 }
 
 section {
