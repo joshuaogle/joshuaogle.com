@@ -1,7 +1,7 @@
 .header {
   justify-content: flex-start;
   display: flex;
-  margin: var(--small-spacing) 0 var(--large-spacing);
+  margin: var(--small-spacing) 0;
 }
 
 .header a {

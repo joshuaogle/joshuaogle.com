@@ -8,7 +8,7 @@ type Props = {
 const ArticlesList = ({ allArticles }: Props) => {
   return (
     <section>
-      <h2>Some light reading</h2>
+      <h2>Articles</h2>
       <p>I want the next generation of designers and developers to have an easier time learning than we did when I got getting started. That's why I spend time speaking at conferences and running workshops. I also worked on a book on Design for the Web (now a blog series) while working at thoughtbot.</p>
 
       <nav>

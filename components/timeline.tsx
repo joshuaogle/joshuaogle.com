@@ -34,7 +34,10 @@ const Timeline = () => {
           <Tab className={styles.tab}>
             Brightbit
           </Tab>
-          <a href="https://linkedin.com/in/joshuaogle" target="_new" className={styles.tab}>More</a>
+          <a href="https://linkedin.com/in/joshuaogle" target="_new" className={styles.tab}>
+            More
+            &#8599;
+          </a>
           <div className={styles.tabGlider} id="tab-glider" />
         </Tab.List>
         <Tab.Panels>

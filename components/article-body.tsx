@@ -7,7 +7,7 @@ type Props = {
 const ArticleBody = ({ content }: Props) => {
   return (
     <div
-      className={markdownStyles['markdown']}
+      className={`article-body ${markdownStyles['markdown']}`}
       dangerouslySetInnerHTML={{ __html: content }}
     />
   )

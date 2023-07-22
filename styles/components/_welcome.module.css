@@ -7,7 +7,7 @@
   z-index: 3;
 }
 
-@media (min-width: 48em) {
+@media (min-width: 32em) {
   .container {
     align-items: center;
     display: flex;
@@ -20,7 +20,7 @@
 .portrait {
   flex: 2;
   margin: 0 auto;
-  max-width: 50vw;
+  max-width: 12em;
 }
 
 .portrait img {
@@ -36,24 +36,10 @@ html[data-prefers-color-scheme="light"] .portrait img {
   padding: var(--base-spacing) 0;
 }
 
-@media (min-width: 48em) {
+@media (min-width: 32em) {
   .textContainer {
     flex: 3;
-    margin-left: var(--base-spacing);
-    padding: 0;
-  }
-}
-
-.title {
-  font-size: 3.25rem;
-  line-height: 95%;
-  margin-bottom: var(--smallest-spacing);
-  position: relative;
-}
-
-@media (min-width: 48em) {
-  .title::before {
-    display: block;
+    padding: var(--base-spacing);
   }
 }
 
