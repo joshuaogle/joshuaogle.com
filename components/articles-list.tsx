@@ -9,7 +9,12 @@ const ArticlesList = ({ allArticles }: Props) => {
   return (
     <section>
       <h2>Articles</h2>
-      <p>I want the next generation of designers and developers to have an easier time learning than we did when I got getting started. That's why I spend time speaking at conferences and running workshops. I also worked on a book on Design for the Web (now a blog series) while working at thoughtbot.</p>
+      <p>
+        I love mentoring new designers
+        and helping them learn the craft,
+        especially if it involves getting designers to be more technical
+        or our partners to get more creative.  
+      </p>
 
       <nav>
         {allArticles.map((article) => (

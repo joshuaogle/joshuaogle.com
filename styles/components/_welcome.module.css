@@ -1,5 +1,4 @@
 .container {
-  animation: rise var(--slowest-timing) ease-out;
   margin: var(--large-spacing) auto 0;
   max-width: var(--page-max-width);
   padding: 0 var(--small-spacing) 0 var(--large-spacing);
@@ -41,21 +40,5 @@ html[data-prefers-color-scheme="light"] .portrait img {
   .textContainer {
     flex: 3;
     padding: var(--base-spacing);
-  }
-}
-
-@keyframes rise {
-  0% {
-    opacity: 0;
-    transform: translateY(var(--base-spacing));
-  }
-
-  10% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
   }
 }

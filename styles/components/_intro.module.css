@@ -1,5 +1,4 @@
 .container {
-  animation: rise var(--slow-timing) ease-out;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,7 +40,6 @@
 }
 
 .metaItem {
-  flex: 1;
   font-size: var(--small-font-size);
 }
 
@@ -53,20 +51,4 @@
   color: var(--theme-muted-color);
   font-family: var(--heading-font);
   font-weight: var(--font-weight-medium);
-}
-
-@keyframes rise {
-  0% {
-    opacity: 0;
-    transform: translateY(var(--base-spacing));
-  }
-
-  10% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }

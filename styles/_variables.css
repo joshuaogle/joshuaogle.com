@@ -134,7 +134,7 @@
   --font-weight-semibold: 600;
   --font-weight-black: 800;
   --base-font-size: max(calc(var(--page-width) / 56), 16px);
-  --small-font-size: max(calc(var(--base-font-size) * 0.75), 14px);
+  --small-font-size: calc(var(--base-font-size) * 0.66);
 
   /* Borders */
   --base-border-radius: 0.25rem;
@@ -176,7 +176,7 @@
   --theme-link-color: var(--cyan-500);
   --theme-link-hover: var(--cyan-300);
   --theme-highlight-rgb:  255, 239, 102;
-  --theme-muted-color: rgba(255, 255, 255, 1);
+  --theme-muted-color: rgba(255, 255, 255, 0.5);
   --theme-surface-rgb: 25, 22, 20;
   --theme-background-color: var(--neutral-800);
   --background-gradient-start: 0.25;

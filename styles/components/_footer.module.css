@@ -41,16 +41,16 @@
   cursor: pointer;
   display: inline-flex;
   padding: 0;
-  width: calc(var(--border-width) + (var(--base-spacing) * 2) + var(--border-width));
+  width: calc(var(--border-width) + (var(--base-spacing) * 1.66) + var(--border-width));
 }
 
 .switchBg::before {
-  border-radius: 5em;
   --spacing: calc((var(--smallest-spacing) / 2 * -1) - 1px);
   top: var(--spacing);
   left: var(--spacing);
   right: var(--spacing);
   bottom: var(--spacing);
+  border-radius: 5em;
 }
 
 .switchBg:focus {
@@ -60,17 +60,25 @@
 .switchIndicator {
   display: inline-block;
   border-radius: 100%;
-  transition: all var(--base-timing) ease-in-out;
+  left: 0;
+  position: relative;
+  transition: left var(--base-timing) ease-in-out;
 }
 
 .switchIndicatorOn {
-  transform: translateX(100%);
+  left: calc(100% - var(--base-spacing));
 }
 
 .switchIndicator svg {
   color: var(--theme-text-color);
   height: var(--base-spacing);
   width: var(--base-spacing);
+  transition: transform 0s;
+  transition-delay: var(--fast-timing);
+}
+
+.switchIndicatorOn svg {
+  transform: scaleX(-1);
 }
 
 .srOnly {
