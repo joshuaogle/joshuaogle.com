@@ -11,8 +11,8 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <nav>
-        <Link href="/" className={styles.logoLink}>
-          &#8592; Back
+        <Link href="/" className={styles.backLink}>
+          &#8592; <span className={styles.backText}>Home</span>
         </Link>
       </nav>
     </header>

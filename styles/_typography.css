@@ -11,7 +11,7 @@ h4 {
 }
 
 h1 {
-  font-size: 2.33em;
+  font-size: 2.5em;
 }
 
 h2 {
@@ -94,8 +94,15 @@ svg {
 }
 
 mark {
-  background-color: rgb(var(--theme-highlight-rgb), 0.2);
+  background: linear-gradient(
+    90deg,
+    rgba(var(--theme-highlight-rgb), 0.25),
+    rgba(var(--theme-highlight-rgb), 0.20) 5%,
+    rgba(var(--theme-highlight-rgb), 0.18) 80%,
+    rgba(var(--theme-highlight-rgb), 0.15)
+  );
   border-radius: 1.5rem 0.5rem;
+  box-decoration-break: clone;
   color: var(--theme-text-color);
   font-weight: var(--font-weight-regular);
   padding: 0 0.66rem 0.16rem;
@@ -134,6 +141,7 @@ figcaption,
   font-size: var(--small-font-size);
   font-weight: var(--font-weight-medium);
   letter-spacing: 0.05em;
+  line-height: 200%;
   margin: var(--small-spacing) auto;
 }
 

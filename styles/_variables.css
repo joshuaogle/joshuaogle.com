@@ -1,10 +1,3 @@
-/* Convert a hex value to comma-delimited rgb values */
-/* In: #000 */
-/* Out: 0,0,0 */
-@function derive-rgb-values-from-hex($hex) {
-  @return red($hex), green($hex), blue($hex);
-}
-
 :root {
   /* Colors */
   --black: #000;
@@ -133,12 +126,13 @@
   --font-weight-regular: 400;
   --font-weight-semibold: 600;
   --font-weight-black: 800;
-  --base-font-size: max(calc(var(--page-width) / 56), 16px);
-  --small-font-size: calc(var(--base-font-size) * 0.66);
+  --base-font-size: max(calc(var(--page-width) / 48), 16px);
+  --small-font-size: calc(var(--base-font-size) * 0.75);
 
   /* Borders */
   --base-border-radius: 0.25rem;
   --large-border-radius: 1rem;
+  --surface-border-radius: 2rem;
 
   /* Timing */
   --base-timing: 250ms;
@@ -147,9 +141,9 @@
   --slowest-timing: 1500ms;
 
   /* Elevations (from Material Design): */
-  --md-u: rgba(var(--theme-surface-rgb), 0.1);
-  --md-p: rgba(var(--theme-surface-rgb), 0.05);
-  --md-a: rgba(var(--theme-surface-rgb), 0.025);
+  --md-u: rgba(var(--theme-shadow-rgb), 0.1);
+  --md-p: rgba(var(--theme-shadow-rgb), 0.05);
+  --md-a: rgba(var(--theme-shadow-rgb), 0.025);
   --md-2dp-u: 0 0.0rem 0.4rem 0 var(--md-u);
   --md-2dp-p: 0 0.3rem 0.4rem 0 var(--md-p);
   --md-2dp-a: 0 0.1rem 0.5rem 0 var(--md-a);
@@ -176,11 +170,12 @@
   --theme-link-color: var(--cyan-500);
   --theme-link-hover: var(--cyan-300);
   --theme-highlight-rgb:  255, 239, 102;
-  --theme-muted-color: rgba(255, 255, 255, 0.5);
-  --theme-surface-rgb: 25, 22, 20;
+  --theme-muted-color: rgba(255, 255, 255, 0.4);
+  --theme-surface-rgb: 30, 26, 22;
+  --theme-shadow-rgb: 30, 26, 22;
   --theme-background-color: var(--neutral-800);
-  --background-gradient-start: 0.25;
-  --background-gradient-end: 0.33;
+  --background-gradient-start: 0.15;
+  --background-gradient-end: 0.3;
 }
 
 /* Light theme */
@@ -189,12 +184,12 @@ html[data-prefers-color-scheme="light"] {
   --theme-text-color: var(--neutral-900);
   --theme-link-color: var(--cyan-600);
   --theme-link-hover: var(--cyan-400);
-  --theme-highlight-rgb: 120, 120, 120;
-  --theme-muted-color: rgba(0, 0, 0, 0.33);
+  --theme-muted-color: rgba(0, 0, 0, 0.4);
   --theme-surface-rgb: 255, 255, 255;
+  --theme-shadow-rgb: 30, 26, 22;
   --theme-heading-color: var(--theme-text-color);
   --background-gradient-start: 0.9;
-  --background-gradient-end: 0.8;
+  --background-gradient-end: 0.7;
 }
 
 html[data-prefers-color-scheme="dark"] {

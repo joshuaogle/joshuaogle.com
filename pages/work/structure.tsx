@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Intro from '../../components/intro'
 
 export const summary = {
-  title: "HashiCorp Design System",
+  title: "Structure",
   meta: {
     date: "2020",
     role: "Design System Lead",
@@ -26,7 +26,7 @@ const Structure = () => {
   return (
     <>
       <Head>
-        <title>{`Joshua Ogle | HashiCorp Design System`}</title>
+        <title>{`Joshua Ogle | Structure Design System`}</title>
       </Head>
 
       <Layout>
@@ -54,87 +54,83 @@ const Structure = () => {
         </div>
 
         <section>
-          <div className="section-title">The Challenge</div>
-          <h2>Find your fleet</h2>
+          <div className="section-title">Background</div>
+          <h2>A design system needs systems design, go figure</h2>
           <p>
-            <mark>Tracking assets and vehicles isn't easy.</mark>
-            The companies want as much information about their fleet as they can get, and they want it displayed in a simple way.
-            Armada was working on developing a set of tracking devices for several different scenarios.
+            I think when a lot of people think of design systems
+            they think about colorful galleries of buttons
+            and typography.
+            What I think about is noisy meetings
+            full of collaboration and friendly debate.
+            When I started at HashiCorp,
+            it was as the 2nd product designer
+            coming in to help make sense of these massive
+            (and massively popular)
+            developer tools.
+            We planned to grow the team by about 2x each year,
+            and we knew that would require a shared visual language,
+            and more importantly it would allow us to lean on each other
+            to make our individual products better.
           </p>
-
           <p>
-            Assets like trailers just need GPS tracking, but don't typically have their own battery power, so they were developing a device with a long-lasting rechargable battery.
-            Modern vehicles have a data port that can power a small GPS tracker and also provides it with some vehicle information like maintenance alerts.
-            Both devices would have an accelerometer included too, which means you can track things like speed warnings and sudden stops.
-            These devices could give you an incredible amount of insight into the location history and driver behavior.
-            But <mark>all of this information is useless without an easy to understand interface</mark> that provides this information in real-time.
+            I led our new Design Systems Working Group
+            where we worked together to define
+            and craft our visual language and rules.
+            Our products do very different things,
+            from secrets management to mesh networking and deployment automation,
+            but at the end of the day they're still interfaces for complicated infrastructure management
+            and that means the vast majority of our interfaces can be shared and improved together.
           </p>
-
-          <figure>
-            <img src="/source/images/case-studies/armada-device.png" />
-            <figcaption>
-              A device plugs into the car's data (OBD2) port to send readings and location data via a cellular chip
-            </figcaption>
-          </figure>
-        </section>
-
-        <section>
-          <div className="section-title">The Solution</div>
-          <h2>Getting the whole picture</h2>
           <p>
-            It was important to us to get a design into the browser as soon as possible in order to feel the experience across desktop, tablet and mobile devices.
-            We knew we weren't going to be ready to start on a native mobile app yet, so <mark>we wanted to make sure the mobile web was considered from the beginning</mark>.
-            We started with a quick whiteboarding session with myself and the lead developer.
-            Because we had a lot of experience working together, we were able to really quickly put together the structure of the app and describe the user experience.
-            After that, we dove straight in and started building the core functionality while I worked on creating the views that we whiteboarded.
+            We would need a tiered design system,
+            one that could bridge all of the products
+            and also ensure that we could start components
+            in our individual products
+            and then work on standardizing them
+            without slowing down feature delivery.
           </p>
-        </section>
-
-        <div className="inset inset--desktop">
-          <section>
-            <img src="case-studies/armada-users.png" />
-          </section>
-        </div>
-
-        <section>
           <p>
-            I think this process of iterative design is a powerful tool that not enough people get comfortable with.
-            A "waterfall" approach (one that starts with wireframes and then high-fidelity mockups before code even begins) ignores the fluid nature of the web and discourages experimentation.
-            Around this time, the device prototypes were ready and we were able to start testing them on our own cars.
-            Seeing the data and maps populate in real-time was <mark>magical</mark>, and not something you get to experience on every project.
-          </p>
-        </section>
-
-        <div className="inset inset--desktop">
-          <section>
-            <img src="case-studies/armada-user.png" />
-          </section>
-        </div>
-
-        <section>
-          <p>
-            Now that we had all of this data streaming in, we got to work on how to surface the most important parts to the users.
-            We started by allowing supervisors to opt-in to text or email notifications about bad behavior as it happened, so they can make sure their drivers were being safe.
-            The map view helps make the information seem immediate, and the right sidebar allows you to drill down into more specific information while keeping an eye on the big picture.
-            My favorite feature though is the trip history, which shows the current location and status of all of the vehicles and assets.
-            You can scrub through a timeline of activity, with the start and stop location for each trip laid out on the map.
-            All of this together made for a unique experience that was miles ahead of the competition.
+            I created a collaboration model
+            that focused on getting all the benefits of contribution
+            without the desigers feeling like it was a burden.
+            Product designers have to be pragmatic,
+            we know that features sometimes
+            have to get designed and built quickly,
+            and we don't get to do the rigor and documentation
+            that we would like.
+            When a component was needed by a second product,
+            we invested the time to review and migrate it
+            to the shared design system.
+            If your have a team of fewer than 12 designers,
+            I would highly recommend doing things this way.
+            Our shared design system grew to over 30 unique components
+            and that doesn't include the dozens that 
           </p>
         </section>
 
-        <div className="inset inset--desktop">
-          <section>
-            <img src="case-studies/armada-trips.png" />
-          </section>
-        </div>
+        <section>
+          <div className="section-title">Research</div>
+          <h2>Grassroots and growth</h2>
+          <p>
+            
+          </p>
+        </section>
 
         <section>
-          <div className="section-title">In Summary</div>
-          <h2>Never underestimate a small team</h2>
+          <div className="section-title">Results and reflection</div>
+          <h2>And for our next trick</h2>
           <p>
-            I'm really proud of the design work that we were able to accomplish and that they were on board with all of my crazy ideas.
-            The Armada team were fantastic to work with, and they've grown their operations and are doing well attracting new organizations.
-            We were able move efficiently thanks to a clear vision and a team that understood that <mark>you can build amazing things if you start small and iterate</mark>.
+            This grassroots approach worked well
+            until we grew big enough
+            to need proper design ops
+            and could convince leadership
+            that we needed a full-time team.
+            As design systems become a standard for product design,
+            so too have accessibility standards
+            and a shared community of people
+            who care about this side of the craft.
+            The design system team is approaching ten amazing people now,
+            including designers and engineers.
           </p>
         </section>
       </Layout>

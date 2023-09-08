@@ -1,11 +1,14 @@
 .header {
-  justify-content: flex-start;
-  display: flex;
-  margin: var(--small-spacing) 0;
+  float: left;
+  padding: 0;
 }
 
-.header a {
-  color: var(--theme-muted-color);
-  font-size: var(--small-font-size);
-  font-weight: var(--font-weight-normal);
+
+.backLink {
+  color: rgb(var(--theme-highlight-rgb));
+  font-size: 1.25rem;
+}
+
+.backText {
+  display: none;
 }

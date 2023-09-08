@@ -10,11 +10,9 @@ class Clients extends React.Component {
   render() {
     return (
       <section>
-        <h2>I've worked with some great clients</h2>
+        <h2>Design consulting</h2>
         <p>
-          I spent the fist half of my career consulting
-          for some of the biggest companies in the world
-          and startups just bringing their ideas to life.
+          I have led design projects from startups to big enterprise companies.
           No matter the size of the project, I believe in starting small, iterating quickly, and listening to what your users are telling you.
         </p>
         <div className={styles.logos}>

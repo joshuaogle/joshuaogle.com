@@ -3,7 +3,6 @@ import Header from './header';
 import Footer from './footer';
 import Meta from './meta';
 import Welcome from '../components/welcome';
-import styles from '../styles/components/_layout.module.css';
 
 type Props = {
   preview: boolean
@@ -40,7 +39,7 @@ const Layout = ({ preview, showWelcome, children }: Props) => {
   }, [isDarkMode]);
 
   return (
-    <div className={styles.app} >
+    <div className="app" >
       <Meta />
 
       {showWelcome ? <Welcome /> : <Header />}

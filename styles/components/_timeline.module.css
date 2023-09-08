@@ -3,7 +3,7 @@
   justify-content: flex-end;
   display: none;
   gap: var(--smallest-spacing);
-  margin: var(--offset) var(--offset) var(--small-spacing) 0;
+  margin: var(--offset) var(--offset) var(--base-spacing) 0;
   position: relative;
   z-index: 2;
 }

@@ -15,13 +15,12 @@
 
 .meta {
   justify-content: center;
-  border-top: 1px solid rgba(var(--theme-surface-rgb), 0.25);
+  border-top: 1px solid rgba(var(--theme-highlight-rgb), 0.1);
   display: flex;
   flex-direction: column;
   font-size: var(--small-font-size);
   gap: var(--small-spacing);
-  margin-top: var(--smallest-spacing);
-  padding: var(--small-spacing) var(--small-spacing);
+  padding: var(--small-spacing);
   width: 100%;
 }
 
@@ -40,6 +39,7 @@
 }
 
 .metaItem {
+  color: var(--theme-muted-color);
   font-size: var(--small-font-size);
 }
 
@@ -48,7 +48,14 @@
 }
 
 .metaItem label {
-  color: var(--theme-muted-color);
   font-family: var(--heading-font);
-  font-weight: var(--font-weight-medium);
+}
+
+.metaItem a {
+  color: var(--theme-muted-color);
+  text-decoration: underline;
+}
+
+.metaItem a:hover {
+  color: var(--theme-link-hover);
 }
