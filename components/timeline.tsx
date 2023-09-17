@@ -7,39 +7,16 @@ import styles from '../styles/components/_timeline.module.css'
 import {summary as VaultSummary} from '../pages/work/vault';
 import {summary as StructureSummary} from '../pages/work/structure';
 import {summary as SharespostSummary} from '../pages/work/sharespost';
+import LogoAmex from '../public/images/client-amex.svg'
+import LogoATT from '../public/images/client-att.svg'
+import LogoDollarShaveClub from '../public/images/client-dollarshaveclub.svg'
+import LogoExpedia from '../public/images/client-expedia.svg'
+import LogoSharespost from '../public/images/client-sharespost.svg'
 
 const Timeline = () => {
-  const highlightTab = (index) => {
-    const glider = document.getElementById("tab-glider");
-    const selectedTab = document.querySelectorAll(`button[tabindex]`)[index];
-    glider.style.width = `${selectedTab.offsetWidth}px`
-    glider.style.left = `${selectedTab.offsetLeft}px`
-    glider.style.opacity = "1"
-  }
-
-  useEffect(() => {
-    highlightTab(0);
-  })
-
   return (
     <section>
-      <Tab.Group onChange={(index) => highlightTab(index)}>
-        <Tab.List className={styles.tabList}>
-          <Tab className={styles.tab}>
-            HashiCorp
-          </Tab>
-          <Tab className={styles.tab}>
-            thoughtbot
-          </Tab>
-          <Tab className={styles.tab}>
-            Brightbit
-          </Tab>
-          <a href="https://linkedin.com/in/joshuaogle" target="_new" className={styles.tab}>
-            More
-            &#8599;
-          </a>
-          <div className={styles.tabGlider} id="tab-glider" />
-        </Tab.List>
+      <Tab.Group>
         <Tab.Panels>
           <Tab.Panel className={styles.tabPanel}>
             <TimelineDetails
@@ -50,12 +27,11 @@ const Timeline = () => {
             >
               HashiCorp makes developer-focused infrastructure software, spanning from secrets management to mesh networking to automated deployments. 
               I led design for some of our most important products and helped grow our design team from 2 designers to 30+ across seven products.
-              
-              <div className={styles.caseStudies}>
-                <CasestudyCard summary={VaultSummary} href="/work/vault" />
-                <CasestudyCard summary={StructureSummary} href="/work/structure" />
-              </div>
-            </TimelineDetails>
+            </TimelineDetails>              
+            <div className={styles.caseStudies}>
+              <CasestudyCard summary={VaultSummary} href="/work/vault" />
+              <CasestudyCard summary={StructureSummary} href="/work/structure" />
+            </div>
           </Tab.Panel>
 
           <Tab.Panel className={styles.tabPanel}>
@@ -71,11 +47,11 @@ const Timeline = () => {
               I helped mentor other designers and develop best practices such as thoughtbot's influential Product Design Sprint.
               Advising projects while leading design for client projects helped further my love for working with talented and multidisciplinary people.
 
-              Summit
-              <div className={styles.caseStudies}>
-                <CasestudyCard summary={SharespostSummary} href="/work/sharespost" />
-              </div>
             </TimelineDetails>
+            <div className={styles.caseStudies}>
+              Summit
+              <CasestudyCard summary={SharespostSummary} href="/work/sharespost" />
+            </div>
           </Tab.Panel>
 
           <Tab.Panel className={styles.tabPanel}>
@@ -88,11 +64,46 @@ const Timeline = () => {
               I co-founded the company and led design and front-end development for a team of seven.
               We focused on Ruby on Rails, Javascript and hybrid mobile apps, folding best practices from companies like thoughtbot into our own.
               Brightbit was one of the leading development shops in the region and I'm really proud of the company and team we built.
-
-              Armada
             </TimelineDetails>
+            <div className={styles.caseStudies}>
+              Armada
+            </div>
+          </Tab.Panel>
+
+          <Tab.Panel className={styles.tabPanel}>
+            <div className="surface">
+              <h2>Design consulting</h2>
+              <p>
+                I have led design projects from startups to big enterprise companies.
+                No matter the size of the project, I believe in starting small, iterating quickly, and listening to what your users are telling you.
+              </p>
+              <div className={styles.logos}>
+                  <LogoExpedia />
+                  <LogoDollarShaveClub />
+                  <LogoSharespost />
+                  <LogoAmex />
+                  <LogoATT />
+              </div>
+            </div>
           </Tab.Panel>
         </Tab.Panels>
+        <Tab.List className={styles.tabList}>
+          <Tab className={styles.tab}>
+            HashiCorp
+          </Tab>
+          <Tab className={styles.tab}>
+            thoughtbot
+          </Tab>
+          <Tab className={styles.tab}>
+            Brightbit
+          </Tab>
+          <Tab className={styles.tab}>
+            Consulting
+          </Tab>
+          <a href="https://linkedin.com/in/joshuaogle" target="_new">
+            &#8599;
+          </a>
+        </Tab.List>
       </Tab.Group>
     </section>
   )

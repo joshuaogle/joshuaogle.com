@@ -1,6 +1,7 @@
 import Layout from '../../components/layout'
 import Head from 'next/head'
 import Intro from '../../components/intro'
+import Example from '../../components/example'
 
 export const summary = {
   title: "Structure",
@@ -46,12 +47,6 @@ const Structure = () => {
           title={summary.title}
           meta={summary.meta}
         />
-
-        <div className="inset inset--desktop">
-          <section>
-            <img src="case-studies/armada-home.png" />
-          </section>
-        </div>
 
         <section>
           <div className="section-title">Background</div>
@@ -108,6 +103,20 @@ const Structure = () => {
           </p>
         </section>
 
+        <Example
+            image="work/structure-lists.png"
+            caption="Lists"
+          />
+
+        <Example
+            image="work/structure-tree.png"
+            caption="Tree"
+          />
+
+        <Example
+            image="work/structure-tree-views.png"
+            caption="Tree views"
+          />
         <section>
           <div className="section-title">Research</div>
           <h2>Grassroots and growth</h2>

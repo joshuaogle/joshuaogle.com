@@ -5,12 +5,11 @@
   --card-highlight-rgb: var(--theme-highlight-rgb);
   --card-highlight: inset 0 1px 0 0 rgba(var(--card-highlight-rgb), 0.25);
   background-color: var(--card-background-color);
-  border-radius: var(--large-border-radius);
+  border-radius: var(--base-border-radius);
   break-inside: avoid;
   color: var(--white);
   display: flex;
   flex-direction: column;
-  margin: var(--small-spacing) 0;
   overflow: hidden;
   position: relative;
   transition: transform var(--base-timing) ease-in-out;

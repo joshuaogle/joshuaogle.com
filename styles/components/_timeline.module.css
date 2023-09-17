@@ -1,42 +1,30 @@
 .tabList {
-  --offset: calc(-1 * var(--base-spacing));
-  justify-content: flex-end;
-  display: none;
+  align-items: center;
+  display: flex;
+  justify-content: center;
   gap: var(--smallest-spacing);
-  margin: var(--offset) var(--offset) var(--base-spacing) 0;
+  margin: var(--small-spacing);
   position: relative;
-  z-index: 2;
 }
 
-
-@media (min-width: 32em) {
-  .tabList {
-    display: flex;
-  }
+.tabList a {
+  color: var(--theme-muted-color);
 }
 
 .tab {
   all: unset;
-  display: flex;
-  align-items: center;
-  color: var(--theme-muted-color);
-  flex-direction: row;
-	font-size: 0.75rem;
-	font-weight: 500;
+  background: var(--theme-muted-color);
+  border-radius: 1rem;
 	cursor: pointer;
-  padding: 0 var(--smallest-spacing);
+  height: 0.5rem;
+	font-size: 0rem;
+  transition: all var(--base-timing);
+  width: 0.5rem;
 }
 
 .tab[tabindex="0"] {
-  color: var(--theme-text-color);
-}
-
-.tab:first-child::after {
-  content: "● Now";
-  color: rgba(var(--theme-highlight-rgb), 0.5);
-	font-size: 0.8em;
-  font-weight: var(--font-weight-semibold);
-  margin: 0.1em 0 0 0.5em;
+  background: var(--theme-text-color);
+  width: 2rem;
 }
 
 .icon {
@@ -46,31 +34,35 @@
   width: 1.5em;
 }
 
-.tabGlider {
-  background: rgba(var(--theme-surface-rgb), 0.5);
-  border-radius: 99px;
-  left: 0;
-  opacity: 0;
-  position: absolute;
-  height: 1.75em;
-  top: 50%;
-  transform: translateY(-50%);
-  transition:
-    width var(--fast-timing) ease-in,
-    left var(--base-timing) ease-out,
-    opacity var(--slow-timing) ease-in;
-  z-index: -1;
+.tabPanel {
+  display: flex;
+  gap: var(--small-spacing);
 }
 
 .caseStudies {
   display: flex;
   align-items: stretch;
-  justify-content: flex-start;
-  flex-direction: row;
-  gap: 1rem;
+  justify-content: stretch;
+  flex-direction: column;
+  gap: var(--small-spacing);
 }
 
 .caseStudies > * {
   display: flex;
-  width: min(50%, 20em);
+  align-items: stretch;
+  justify-content: stretch;
+  flex: 1;
+}
+
+.logos {
+  display: flex;
+  justify-content: space-around;
+  gap: var(--small-spacing);
+  margin: var(--base-spacing);
+}
+
+.logos svg {
+  color: var(--theme-muted-color);
+  flex: 1;
+  max-height: var(--large-spacing);
 }

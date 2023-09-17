@@ -20,7 +20,7 @@ const Footer = ({ isDarkMode, setIsDarkMode }) => {
   }
 
   return (
-    <footer className={`${styles.footer} centered`}>
+    <footer className={styles.footer + " centered"}>
       <h2 className={styles.title}>
         You've got good taste, get in touch sometime
       </h2>

@@ -146,10 +146,14 @@ figcaption,
 }
 
 figure {
-  padding: var(--base-spacing) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto var(--base-spacing);
 }
 
 figcaption {
+  margin: var(--small-spacing) 0;
   text-align: center;
 }
 

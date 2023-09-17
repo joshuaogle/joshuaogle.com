@@ -115,7 +115,7 @@
   --break-large: 1400px;
   --page-min-width: 60vw;
   --page-flex-width: 50rem;
-  --page-max-width: 80vw;
+  --page-max-width: 85vw;
   --page-width: clamp(var(--page-min-width), var(--page-flex-width), var(--page-max-width));
 
 
@@ -130,9 +130,9 @@
   --small-font-size: calc(var(--base-font-size) * 0.75);
 
   /* Borders */
-  --base-border-radius: 0.25rem;
-  --large-border-radius: 1rem;
-  --surface-border-radius: 2rem;
+  --base-border-radius: var(--smallest-spacing);
+  --surface-border-radius: var(--small-spacing);
+  --large-border-radius: var(--base-spacing);
 
   /* Timing */
   --base-timing: 250ms;

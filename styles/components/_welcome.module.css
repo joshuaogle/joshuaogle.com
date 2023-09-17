@@ -1,9 +1,6 @@
 .container {
-  margin: var(--large-spacing) auto 0;
-  max-width: var(--page-max-width);
-  padding: 0 var(--small-spacing) 0 var(--large-spacing);
+  padding: 20vh 5vw 10vh;
   position: relative;
-  z-index: 3;
 }
 
 @media (min-width: 32em) {

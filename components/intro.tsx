@@ -23,7 +23,7 @@ const MetaItem = ({ label, key, children }: Props) => {
 const Intro = ({ title, meta }: Props) => {
   return (
     <>
-      <header className={styles.container} >
+      <header className={styles.container + " centered"}>
         <h1 className={styles.title}>{title}</h1>
         <small><DateFormatter dateString={meta.date} /></small>
       

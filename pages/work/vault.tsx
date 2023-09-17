@@ -2,6 +2,7 @@ import Layout from '../../components/layout'
 import Head from 'next/head'
 import Link from 'next/link'
 import Intro from '../../components/intro'
+import Example from '../../components/example'
 
 export const summary = {
   title: "Vault",
@@ -77,17 +78,21 @@ const VaultCaseStudy = () => {
           </p>
         </section>
 
-        <figure>
-            <img src="/source/images/case-studies/armada-device.png" />
-          <figcaption>
-            Vault summary image. Enabling a secrets engine?
-          </figcaption>
-        </figure>
+        <Example
+            image="work/vault-home.png"
+            caption="Secrets Engines"
+          />
+
+        <Example
+            image="work/vault-mounts.png"
+            caption="Mounting Secrets Engines"
+          />
 
         <section>
           <div className="section-title">Research</div>
           <h2>The importance of Zero-Trust Security</h2>
           <p>
+            You do use a password manager, right?
             Keeping your own passwords secure is important
             to protect against fraud and identity theft,
             so imagine how much more important it is
@@ -114,6 +119,11 @@ const VaultCaseStudy = () => {
             where a new version of the product comes out every three to four months.
           </p>
         </section>
+
+        <Example
+            image="work/vault-idgroups.png"
+            caption="Identity groups"
+          />
 
         <section>
           <h3>Hello 1.0</h3>
@@ -150,6 +160,21 @@ const VaultCaseStudy = () => {
             that we couldn't imagine how to build without it.
           </p>
         </section>
+
+        <Example
+            image="work/hcpvault-wireframe.png"
+            caption="HCP Vault Wireframe"
+          />
+
+        <Example
+            image="work/hcpvault-overview.png"
+            caption="HCP Vault Overview"
+          />
+
+        <Example
+            image="work/hcpvault-seal.png"
+            caption="HCP Vault Seal"
+          />
 
         <section>
           <h3>Everybody could use a Guide</h3>

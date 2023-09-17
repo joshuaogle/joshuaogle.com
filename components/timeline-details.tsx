@@ -11,7 +11,7 @@ type Props = {
 
 const TimelineDetails = ({ icon, company, title, when, children }: Props) => {
   return (
-    <>
+    <div className="surface">
       <h3 className={styles.company}>
         <Image
           src={icon}
@@ -28,7 +28,7 @@ const TimelineDetails = ({ icon, company, title, when, children }: Props) => {
       <div className={styles.summary}>
         {children}
       </div>
-    </>
+    </div>
   )
 }
 

@@ -41,10 +41,8 @@ const Layout = ({ preview, showWelcome, children }: Props) => {
   return (
     <div className="app" >
       <Meta />
-
-      {showWelcome ? <Welcome /> : <Header />}
-
-      <main className={"centered surface"}>
+      <main>
+        {showWelcome ? <Welcome /> : <Header />}
         {children}
       </main>
 
