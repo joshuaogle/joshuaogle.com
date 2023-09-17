@@ -37,6 +37,7 @@
 .tabPanel {
   display: flex;
   gap: var(--small-spacing);
+  min-height: 50vw;
 }
 
 .caseStudies {

@@ -152,6 +152,10 @@ figure {
   margin: 0 auto var(--base-spacing);
 }
 
+figure .surface {
+  padding: var(--small-spacing);
+}
+
 figcaption {
   margin: var(--small-spacing) 0;
   text-align: center;

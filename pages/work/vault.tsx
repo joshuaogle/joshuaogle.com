@@ -46,7 +46,7 @@ const VaultCaseStudy = () => {
         meta={summary.meta}
       />
 
-      <div className={`article-body`}>
+      <div className={`article-body centered`}>
         <section>
           <div className="section-title">Background</div>
           <h2>It's hard to keep a secret</h2>

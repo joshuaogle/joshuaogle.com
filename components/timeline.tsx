@@ -78,11 +78,11 @@ const Timeline = () => {
                 No matter the size of the project, I believe in starting small, iterating quickly, and listening to what your users are telling you.
               </p>
               <div className={styles.logos}>
-                  <LogoExpedia />
-                  <LogoDollarShaveClub />
-                  <LogoSharespost />
-                  <LogoAmex />
-                  <LogoATT />
+                <LogoExpedia />
+                <LogoDollarShaveClub />
+                <LogoSharespost />
+                <LogoAmex />
+                <LogoATT />
               </div>
             </div>
           </Tab.Panel>

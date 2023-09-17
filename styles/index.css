@@ -31,7 +31,7 @@ body {
 }
 
 img {
-  border-radius: var(--large-border-radius);
+  border-radius: var(--base-border-radius);
 }
 
 @keyframes rise {
