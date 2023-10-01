@@ -11,7 +11,7 @@ type Props = {
 
 const TimelineDetails = ({ icon, company, title, when, children }: Props) => {
   return (
-    <div className="surface">
+    <div className={styles.employer}>
       <h3 className={styles.company}>
         <Image
           src={icon}

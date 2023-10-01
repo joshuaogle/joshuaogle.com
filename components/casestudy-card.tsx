@@ -9,7 +9,7 @@ type Props = {
 
 const CasestudyCard = ({summary, href}: Props) => {
   return (
-    <Link href={href}>
+    <Link href={href} className={styles.cardLink}>
       <article
         className={styles.card}
         style={{

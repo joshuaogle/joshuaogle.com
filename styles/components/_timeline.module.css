@@ -30,22 +30,16 @@
 .tabPanel {
   display: flex;
   gap: var(--small-spacing);
-  height: 50vh;
+  height: 30em;
 }
 
-/* Column of case studies cards */
 .caseStudies {
   display: flex;
   flex-direction: column;
-  flex: 0 0 50%;
-  gap: var(--small-spacing);
-}
-
-.caseStudies > * {
-  display: flex;
+  align-items: center;
+  justify-content: center;
   flex: 1;
 }
-
 
 /* Design consulting tab panel */
 .logos {

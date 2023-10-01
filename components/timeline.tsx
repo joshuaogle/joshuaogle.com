@@ -18,7 +18,7 @@ const Timeline = () => {
     <section>
       <Tab.Group>
         <Tab.Panels>
-          <Tab.Panel className={styles.tabPanel}>
+          <Tab.Panel className={`${styles.tabPanel} surface`}>
             <TimelineDetails
               company="HashiCorp"
               when="2017-Present"
@@ -34,7 +34,7 @@ const Timeline = () => {
             </div>
           </Tab.Panel>
 
-          <Tab.Panel className={styles.tabPanel}>
+          <Tab.Panel className={`${styles.tabPanel} surface`}>
             <TimelineDetails
               company="thoughtbot"
               when="2014-2016"
@@ -54,7 +54,7 @@ const Timeline = () => {
             </div>
           </Tab.Panel>
 
-          <Tab.Panel className={styles.tabPanel}>
+          <Tab.Panel className={`${styles.tabPanel} surface`}>
             <TimelineDetails
               company="Brightbit"
               when="2010-2014"
@@ -71,8 +71,8 @@ const Timeline = () => {
             </div>
           </Tab.Panel>
 
-          <Tab.Panel className={styles.tabPanel}>
-            <div className="surface">
+          <Tab.Panel className={`${styles.tabPanel} surface`}>
+            <div>
               <h2>Design consulting</h2>
               <p>
                 I have led design projects from startups to big enterprise companies.

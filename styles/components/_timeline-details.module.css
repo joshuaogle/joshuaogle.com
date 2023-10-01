@@ -1,3 +1,7 @@
+.employer {
+  width: 50%;
+}
+
 .place {
   font-size: var(--small-font-size);
   margin: 0 0 var(--base-spacing);
@@ -17,12 +21,6 @@
   transform: translateX(-50%);
   height: 5px;
   width: 5px;
-}
-
-.case-studies {
-  display: flex;
-  flex-direction: column;
-  gap: var(--small-spacing);
 }
 
 .company {

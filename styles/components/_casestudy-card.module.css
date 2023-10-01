@@ -1,3 +1,11 @@
+.cardLink {
+  display: block;
+}
+
+.cardLink:nth-child(2) {
+  transform: translate(var(--large-spacing), calc(-1 * var(--small-spacing)))
+}
+
 .card {
   /* background-image is not done with variables to prevent bug where bg disappears on hover*/
   --card-background-color: var(--theme-muted-color);
@@ -13,6 +21,8 @@
   overflow: hidden;
   position: relative;
   transition: transform var(--base-timing) ease-in-out;
+  height: 12em;
+  width: 20em;
 }
 
 .card:hover {
@@ -26,7 +36,7 @@
   gap: var(--smallest-spacing);
   align-content: center;
   justify-content: center;
-  padding: var(--base-spacing) var(--large-spacing);
+  padding: var(--base-spacing) var(--base-spacing) var(--small-spacing);
 }
 
 .icon {
@@ -50,7 +60,7 @@
 
 .thumbnail {
   flex: 1;
-  margin: 0 0 0 var(--small-spacing);
+  margin: 0 0 0 var(--base-spacing);
   max-height: 10vw;
   max-width: 100%;
   overflow: hidden;
