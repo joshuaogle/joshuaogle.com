@@ -13,7 +13,7 @@
 
 .tab {
   all: unset;
-  background: var(--theme-muted-color);
+  background-color: var(--theme-muted-color);
   border-radius: 1rem;
 	cursor: pointer;
   height: 0.5rem;
@@ -23,38 +23,31 @@
 }
 
 .tab[tabindex="0"] {
-  background: var(--theme-text-color);
+  background-color: var(--theme-text-color);
   width: 2rem;
-}
-
-.icon {
-  display: inline-block;
-  height: 1.5em;
-  margin-right: var(--smallest-spacing);
-  width: 1.5em;
 }
 
 .tabPanel {
   display: flex;
   gap: var(--small-spacing);
-  min-height: 50vw;
+  height: 50vh;
 }
 
+/* Column of case studies cards */
 .caseStudies {
   display: flex;
-  align-items: stretch;
-  justify-content: stretch;
   flex-direction: column;
+  flex: 0 0 50%;
   gap: var(--small-spacing);
 }
 
 .caseStudies > * {
   display: flex;
-  align-items: stretch;
-  justify-content: stretch;
   flex: 1;
 }
 
+
+/* Design consulting tab panel */
 .logos {
   display: flex;
   justify-content: space-around;

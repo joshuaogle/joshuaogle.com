@@ -18,7 +18,7 @@ export const summary = {
     backgroundImage: "",
     highlightRGB: "96, 212, 220",
     icon: "/images/case-study-logo-structure.svg",
-    thumbnail: "",
+    thumbnail: "/images/work/structure-lists.png",
   },
   intro: "Description.",
 }

@@ -23,7 +23,7 @@ const TimelineDetails = ({ icon, company, title, when, children }: Props) => {
         {company}
       </h3>
       <small className={styles.employment}>
-        {title}, {when}
+        {title} • {when}
       </small>
       <div className={styles.summary}>
         {children}

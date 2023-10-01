@@ -67,6 +67,7 @@ const Timeline = () => {
             </TimelineDetails>
             <div className={styles.caseStudies}>
               Armada
+              <CasestudyCard summary={SharespostSummary} href="/work/sharespost" />
             </div>
           </Tab.Panel>
 

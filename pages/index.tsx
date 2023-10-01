@@ -18,7 +18,9 @@ export default function Index({ allArticles }: Props) {
 
       <Timeline />
 
-      <ArticlesList allArticles={allArticles} />
+      <div className="centered">
+        <ArticlesList allArticles={allArticles} />
+      </div>
     </Layout>
   )
 }

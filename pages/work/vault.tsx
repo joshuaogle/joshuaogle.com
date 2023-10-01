@@ -19,7 +19,7 @@ export const summary = {
     backgroundImage: "",
     highlightRGB: "255, 236, 110",
     icon: "/images/case-study-logo-vault.svg",
-    thumbnail: ""
+    thumbnail: "/images/work/vault-home.png"
   },
   intro: "Description."
 }
