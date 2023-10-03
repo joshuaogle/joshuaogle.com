@@ -1,5 +1,24 @@
+import { useRouter } from 'next/router'
 import Link from 'next/link'
+import { Menu } from '@headlessui/react'
+import IconGithub from '../public/images/icon-github.svg'
+import IconMastodon from '../public/images/icon-mastodon.svg'
+import IconDribbble from '../public/images/icon-dribbble.svg'
+import IconLinkedIn from '../public/images/icon-linkedin.svg'
 import styles from '../styles/components/_header.module.css'
+
+const BackLink = () => {
+  const router = useRouter()
+  if (router.pathname != "/") {
+    return (
+      <nav>
+        <Link href="/" className={styles.backLink}>
+          &#8592; <span className={styles.backText}>Home</span>
+        </Link>
+      </nav>
+    )
+  }
+}
 
 const Header = () => {
   const logo = (
@@ -8,13 +27,41 @@ const Header = () => {
       <ellipse cx="35.65" cy="12.4" rx=".9" ry=".9" fill="currentColor"/>    
     </svg>
   )
+  
   return (
     <header className={styles.header}>
-      <nav>
-        <Link href="/" className={styles.backLink}>
-          &#8592; <span className={styles.backText}>Home</span>
-        </Link>
-      </nav>
+
+      <BackLink />
+
+      <Menu className={styles.menu}>
+        <Menu.Button className={styles.menuButton}>
+          👋
+        </Menu.Button>
+        <Menu.Items className={`${styles.menuItems} surface`}>
+          <h2 className={styles.title}>
+            You've got good taste, let's chat
+          </h2>
+
+          <div className={ styles.icons }>
+            <a href="mailto:joshua@joshuaogle.com">joshua@joshuaogle.com</a>
+
+            <nav className={styles.links}>
+              <a href="https://mastodon.social/@joshuaogle">
+                <IconMastodon />
+              </a>
+              <a href="http://dribbble.com/joshuaogle">
+                <IconDribbble />
+              </a>
+              <a href="http://linkedin.com/in/joshuaogle">
+                <IconLinkedIn />
+              </a>
+              <a href="http://github.com/joshuaogle">
+                <IconGithub />
+              </a>
+            </nav>
+          </div>
+        </Menu.Items>
+      </Menu>
     </header>
   )
 }

@@ -2,37 +2,6 @@
   padding: var(--large-spacing);
 }
 
-.title {
-  color: var(--theme-muted-color);
-  font-size: 1.25rem;
-}
-
-.icons {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: var(--small-spacing) 0;
-}
-
-.links {
-  display: flex;
-  gap: var(--smallest-spacing);
-}
-
-.links a {
-  color: var(--theme-muted-color);
-  transition: color var(--base-timing);
-}
-
-.links a:hover {
-  color: var(--theme-link-hover);
-}
-
-.links a svg {
-  height: 1.5em;
-  width: 1.5em;
-}
-
 /* Color Scheme Switch */
 .switchBg {
   --border-width: calc(var(--smallest-spacing) / 2);

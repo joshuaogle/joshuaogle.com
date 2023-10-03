@@ -21,47 +21,21 @@ const Footer = ({ isDarkMode, setIsDarkMode }) => {
 
   return (
     <footer className={styles.footer + " centered"}>
-      <h2 className={styles.title}>
-        You've got good taste, get in touch sometime
-      </h2>
-
-      <div className={ styles.icons }>
-        <span>
-          Say hi at <a href="mailto:joshua@joshuaogle.com">joshua@joshuaogle.com</a>.
-        </span>
-
-        <nav className={styles.links}>
-          <a href="https://mastodon.social/@joshuaogle">
-            <IconMastodon />
-          </a>
-          <a href="http://dribbble.com/joshuaogle">
-            <IconDribbble />
-          </a>
-          <a href="http://linkedin.com/in/joshuaogle">
-            <IconLinkedIn />
-          </a>
-          <a href="http://github.com/joshuaogle">
-            <IconGithub />
-          </a>
-        </nav>
-
-        <Switch
-          checked={isDarkMode}
-          onChange={toggleColorScheme}
-          className={`surface ${styles.switchBg} ${ifSwitchIsOn(styles.switchBgOn)}`}
+    <Switch
+        checked={isDarkMode}
+        onChange={toggleColorScheme}
+        className={`surface ${styles.switchBg} ${ifSwitchIsOn(styles.switchBgOn)}`}
+      >
+        <span
+          aria-hidden="true"
+          className={`${styles.switchIndicator} ${ifSwitchIsOn(styles.switchIndicatorOn)}`}
         >
-          <span
-            aria-hidden="true"
-            className={`${styles.switchIndicator} ${ifSwitchIsOn(styles.switchIndicatorOn)}`}
-          >
-            <IconColorScheme />
-          </span>
-          <span className={styles.srOnly}>
-            Use setting
-          </span>
-        </Switch>
-      </div>
-
+          <IconColorScheme />
+        </span>
+        <span className={styles.srOnly}>
+          Use setting
+        </span>
+      </Switch>
       <small className={styles.copyright}>
         &copy;
         All rights reserved.

@@ -1,8 +1,7 @@
 .header {
-  float: left;
-  padding: 0;
+  display: flex;
+  justify-content: space-between;
 }
-
 
 .backLink {
   color: rgb(var(--theme-highlight-rgb));
@@ -11,4 +10,55 @@
 
 .backText {
   display: none;
+}
+
+.menuButton,
+.menuItems {
+  position: fixed;
+  top: var(--small-spacing);
+  right: var(--base-spacing);
+  z-index: 100;
+}
+
+.menuButton {
+  appearance: none;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  font-size: 2em;
+}
+
+.menuItems {
+  background-color: rgba(var(--theme-surface-rgb), 0.75);
+  box-shadow: var(--mid-box-shadow);
+  color: var(--theme-text-color);
+  backdrop-filter: blur(var(--small-spacing));
+  padding: var(--base-spacing);
+  top: 4rem;
+  width: 15em;
+}
+
+.title {
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.links {
+  display: flex;
+  gap: var(--small-spacing);
+  margin-top: var(--small-spacing);
+}
+
+.links a {
+  color: var(--theme-muted-color);
+  transition: color var(--base-timing);
+}
+
+.links a:hover {
+  color: var(--theme-link-hover);
+}
+
+.links a svg {
+  height: 1.5em;
+  width: 1.5em;
 }

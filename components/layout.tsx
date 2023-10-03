@@ -6,11 +6,10 @@ import Welcome from '../components/welcome';
 
 type Props = {
   preview: boolean
-  showWelcome: false
   children: React.ReactNode
 }
 
-const Layout = ({ preview, showWelcome, children }: Props) => {
+const Layout = ({ preview, children }: Props) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   // check and reset theme
@@ -41,8 +40,10 @@ const Layout = ({ preview, showWelcome, children }: Props) => {
   return (
     <div className="app" >
       <Meta />
+
+      <Header />
+
       <main>
-        {showWelcome ? <Welcome /> : <Header />}
         {children}
       </main>
 

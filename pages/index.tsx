@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Layout from '../components/layout'
 import Timeline from '../components/timeline'
+import Welcome from '../components/welcome'
 import ArticlesList from '../components/articles-list'
 import { getAllArticles } from '../lib/api'
 import Article from '../interfaces/article'
@@ -11,10 +12,12 @@ type Props = {
 
 export default function Index({ allArticles }: Props) {
   return (
-    <Layout showWelcome={true}>
+    <Layout>
       <Head>
         <title>Joshua Ogle</title>
       </Head>
+
+      <Welcome />
 
       <Timeline />
 
