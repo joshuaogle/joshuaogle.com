@@ -1,5 +1,5 @@
 .container {
-  padding: 20vh 5vw 10vh;
+  padding: 20vh 5vw var(--large-spacing);
   position: relative;
 }
 

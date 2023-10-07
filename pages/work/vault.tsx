@@ -51,11 +51,12 @@ const VaultCaseStudy = () => {
           <div className="section-title">Background</div>
           <h2>It's hard to keep a secret</h2>
           <p>
-            Modern software development requires a lot of moving parts
-            from APIs to databases and infrastructure that changes by the minute.
-            And to make things worse,
+            Modern web applications require a lot of moving parts,
+            with dyanamic resources like servers, databases, and applications
+            that are deployed or changed every minute.
+            And to make things more complicated,
             engineering teams at large companies can grow to hundreds or thousands of people.
-            That's a lot of passwords, credentials, and other secrets to keep track of.
+            So how do you keep anything secure?
           </p>
           <p>
             We have a whole host of password managers these days,

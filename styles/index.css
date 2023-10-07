@@ -37,7 +37,7 @@ img {
 @keyframes rise {
   0% {
     opacity: 0;
-    transform: translateY(var(--small-spacing));
+    transform: translateY(var(--smallest-spacing));
   }
 
   100% {

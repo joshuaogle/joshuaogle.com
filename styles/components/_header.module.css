@@ -29,9 +29,6 @@
 }
 
 .menuItems {
-  background-color: rgba(var(--theme-surface-rgb), 0.75);
-  box-shadow: var(--mid-box-shadow);
-  color: var(--theme-text-color);
   backdrop-filter: blur(var(--small-spacing));
   padding: var(--base-spacing);
   top: 4rem;

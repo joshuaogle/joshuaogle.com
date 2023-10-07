@@ -113,11 +113,10 @@
   --break-small: 600px;
   --break-medium: 1000px;
   --break-large: 1400px;
-  --page-min-width: 60vw;
-  --page-flex-width: 50rem;
+  --page-min-width: 40vw;
+  --page-preferred-width: 50em;
   --page-max-width: 85vw;
-  --page-width: clamp(var(--page-min-width), var(--page-flex-width), var(--page-max-width));
-
+  --page-width: clamp(var(--page-min-width), var(--page-preferred-width), var(--page-max-width));
 
   /* Fonts */
   --sans-serif: -apple-system, BlinkMacSystemFont, sans-serif;
@@ -126,7 +125,7 @@
   --font-weight-regular: 400;
   --font-weight-semibold: 600;
   --font-weight-black: 800;
-  --base-font-size: max(calc(var(--page-width) / 48), 16px);
+  --base-font-size: calc(0.66em + 0.66vmax);
   --small-font-size: calc(var(--base-font-size) * 0.75);
 
   /* Borders */

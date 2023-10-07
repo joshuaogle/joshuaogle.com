@@ -38,7 +38,7 @@ const Layout = ({ preview, children }: Props) => {
   }, [isDarkMode]);
 
   return (
-    <div className="app" >
+    <div className="app">
       <Meta />
 
       <Header />
