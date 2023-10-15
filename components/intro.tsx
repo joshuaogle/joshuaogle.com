@@ -8,8 +8,8 @@ type Props = {
 
 const MetaItem = ({ label, key, children }: Props) => {
   const template = (
-    <li className={styles.metaItem}>
-      <label for={key}>
+    <li className={styles.metaItem} key="{key}">
+      <label>
         {label}
       </label>
       <div id="{key}">
@@ -29,15 +29,15 @@ const Intro = ({ title, meta }: Props) => {
       
         <ul className={styles.meta}>
           {meta.client && (
-            <MetaItem label="For" key="meta.client">
+            <MetaItem label="For">
               <a href={meta.client_url}>{meta.client}</a>
             </MetaItem>
           )}
-          <MetaItem label="Role" key="meta.role">{meta.role}</MetaItem>
-          <MetaItem label="Time" key="meta.time">{meta.time}</MetaItem>
-          <MetaItem label="Team" key="meta.team">{meta.team}</MetaItem>
+          <MetaItem label="Role">{meta.role}</MetaItem>
+          <MetaItem label="Time">{meta.time}</MetaItem>
+          <MetaItem label="Team">{meta.team}</MetaItem>
           {meta.source && (
-            <MetaItem label="Published by" key="meta.source">
+            <MetaItem label="Published by">
               <img className={styles.icon} src={`/images/${meta.source_icon}`} />
               <a href={meta.source_url}>{meta.source}</a>
             </MetaItem>

@@ -18,8 +18,8 @@
   overflow: hidden;
   position: relative;
   transition: transform var(--base-timing) ease-in-out;
-  height: 12em;
-  width: 20em;
+  height: 20vw;
+  width: 33vw;
   z-index: 1;
 }
 

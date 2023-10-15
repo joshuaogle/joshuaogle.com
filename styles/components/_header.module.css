@@ -1,11 +1,12 @@
 .header {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
 .backLink {
   color: rgb(var(--theme-highlight-rgb));
-  font-size: 1.25rem;
+  font-size: 2em;
 }
 
 .backText {
@@ -37,32 +38,27 @@
 
 .menuItems {
   backdrop-filter: blur(var(--small-spacing));
-  padding: var(--base-spacing);
+  padding: var(--small-spacing);
   top: 4rem;
   width: 15em;
 }
 
 .title {
-  font-size: 1.25rem;
+  font-size: 1.33rem;
   line-height: 1.2;
+  padding: var(--small-spacing) var(--small-spacing) 0;
 }
 
-.links {
+.link {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   gap: var(--small-spacing);
-  margin-top: var(--small-spacing);
-}
-
-.links a {
-  color: var(--theme-muted-color);
+  padding: var(--smallest-spacing) var(--small-spacing);
   transition: color var(--base-timing);
 }
 
-.links a:hover {
-  color: var(--theme-link-hover);
-}
-
-.links a svg {
+.link svg {
+  margin: 0;
   height: 1.5em;
   width: 1.5em;
 }
