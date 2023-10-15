@@ -1,0 +1,12 @@
+.logos {
+  display: flex;
+  justify-content: space-around;
+  gap: var(--small-spacing);
+  margin: var(--base-spacing);
+}
+
+.logos svg {
+  color: var(--theme-muted-color);
+  flex: 1;
+  max-height: var(--large-spacing);
+}

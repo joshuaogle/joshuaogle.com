@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import styles from '../styles/components/_timeline-details.module.css'
+import styles from '../styles/components/_timeline-item.module.css'
 
 type Props = {
   icon: string,
@@ -9,10 +9,10 @@ type Props = {
   children: React.ReactNode
 }
 
-const TimelineDetails = ({ icon, company, title, when, children }: Props) => {
+const TimelineItem = ({ icon, company, title, when, children }: Props) => {
   return (
-    <div className={styles.employer}>
-      <h3 className={styles.company}>
+    <div className={styles.details}>
+      <h3 className={styles.title}>
         <Image
           src={icon}
           height="32"
@@ -22,14 +22,14 @@ const TimelineDetails = ({ icon, company, title, when, children }: Props) => {
         />
         {company}
       </h3>
-      <small className={styles.employment}>
+      <small className={styles.subtitle}>
         {title} • {when}
       </small>
-      <div className={styles.summary}>
+      <p>
         {children}
-      </div>
+      </p>
     </div>
   )
 }
 
-export default TimelineDetails
+export default TimelineItem

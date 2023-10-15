@@ -29,11 +29,16 @@
 
 .tabPanel {
   display: flex;
-  gap: var(--small-spacing);
-  height: 30em;
+  gap: var(--large-spacing);
 }
 
-.caseStudies {
+@media (max-width: 80rem) {
+  .tabPanel {
+    flex-direction: column;
+  }
+}
+
+.cardContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,15 +46,21 @@
   flex: 1;
 }
 
+@media (max-width: 80rem) {
+  .cardContainer {
+    flex-direction: row;
+  }
+}
+
 /* Design consulting tab panel */
-.logos {
+.logoContainer {
   display: flex;
   justify-content: space-around;
   gap: var(--small-spacing);
   margin: var(--base-spacing);
 }
 
-.logos svg {
+.logoContainer svg {
   color: var(--theme-muted-color);
   flex: 1;
   max-height: var(--large-spacing);

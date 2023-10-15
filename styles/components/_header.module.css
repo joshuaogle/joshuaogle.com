@@ -20,6 +20,13 @@
   z-index: 100;
 }
 
+@media (max-width: 100em) {
+  .menuButton,
+  .menuItems {
+    position: absolute;
+  }
+}
+
 .menuButton {
   appearance: none;
   background: none;

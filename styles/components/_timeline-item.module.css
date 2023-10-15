@@ -1,0 +1,25 @@
+.details {
+  flex: 1;
+}
+
+.title {
+  color: var(--theme-text-color);
+  font-size: 1.75rem;
+  margin: 0;
+}
+
+.icon {
+  display: inline-block;
+  margin-right: 0.5rem;
+  max-height: 2rem;
+  max-width: 2rem;
+  vertical-align: -0.25rem;
+}
+
+.subtitle {
+  display: block;
+  font-family: var(--heading-font);
+  margin: var(--smallest-spacing) 0;
+  text-transform: none;
+}
+

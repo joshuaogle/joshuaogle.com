@@ -125,7 +125,7 @@
   --font-weight-regular: 400;
   --font-weight-semibold: 600;
   --font-weight-black: 800;
-  --base-font-size: calc(0.66em + 0.66vmax);
+  --base-font-size: calc(0.75em + 1vmax);
   --small-font-size: calc(var(--base-font-size) * 0.75);
 
   /* Borders */

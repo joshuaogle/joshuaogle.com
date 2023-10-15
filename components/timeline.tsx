@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { Tab } from '@headlessui/react'
-import TimelineDetails from './timeline-details'
-import CasestudyCard from './casestudy-card'
+import TimelineItem from './timeline-item'
+import TimelineCard from './timeline-card'
 import styles from '../styles/components/_timeline.module.css'
 
 import {summary as VaultSummary} from '../pages/work/vault';
@@ -19,7 +19,7 @@ const Timeline = () => {
       <Tab.Group>
         <Tab.Panels>
           <Tab.Panel className={`${styles.tabPanel} surface`}>
-            <TimelineDetails
+            <TimelineItem
               company="HashiCorp"
               when="2017-Present"
               title="Staff Product Designer"
@@ -27,15 +27,15 @@ const Timeline = () => {
             >
               HashiCorp makes developer-focused infrastructure software, spanning from secrets management to mesh networking to automated deployments. 
               I led design for some of our most important products and helped grow our design team from 2 designers to 30+ across seven products.
-            </TimelineDetails>              
-            <div className={styles.caseStudies}>
-              <CasestudyCard summary={VaultSummary} href="/work/vault" />
-              <CasestudyCard summary={StructureSummary} href="/work/structure" />
+            </TimelineItem>              
+            <div className={styles.cardContainer}>
+              <TimelineCard summary={VaultSummary} href="/work/vault" />
+              <TimelineCard summary={StructureSummary} href="/work/structure" />
             </div>
           </Tab.Panel>
 
           <Tab.Panel className={`${styles.tabPanel} surface`}>
-            <TimelineDetails
+            <TimelineItem
               company="thoughtbot"
               when="2014-2016"
               title="Sr Product Designer"
@@ -47,15 +47,15 @@ const Timeline = () => {
               I helped mentor other designers and develop best practices such as thoughtbot's influential Product Design Sprint.
               Advising projects while leading design for client projects helped further my love for working with talented and multidisciplinary people.
 
-            </TimelineDetails>
-            <div className={styles.caseStudies}>
+            </TimelineItem>
+            <div className={styles.cardContainer}>
               Summit
-              <CasestudyCard summary={SharespostSummary} href="/work/sharespost" />
+              <TimelineCard summary={SharespostSummary} href="/work/sharespost" />
             </div>
           </Tab.Panel>
 
           <Tab.Panel className={`${styles.tabPanel} surface`}>
-            <TimelineDetails
+            <TimelineItem
               company="Brightbit"
               when="2010-2014"
               title="Co-Founder & Design Lead"
@@ -64,10 +64,9 @@ const Timeline = () => {
               I co-founded the company and led design and front-end development for a team of seven.
               We focused on Ruby on Rails, Javascript and hybrid mobile apps, folding best practices from companies like thoughtbot into our own.
               Brightbit was one of the leading development shops in the region and I'm really proud of the company and team we built.
-            </TimelineDetails>
-            <div className={styles.caseStudies}>
-              Armada
-              <CasestudyCard summary={SharespostSummary} href="/work/sharespost" />
+            </TimelineItem>
+            <div className={styles.cardContainer}>
+              <TimelineCard summary={SharespostSummary} href="/work/sharespost" />
             </div>
           </Tab.Panel>
 
@@ -78,7 +77,7 @@ const Timeline = () => {
                 I have led design projects from startups to big enterprise companies.
                 No matter the size of the project, I believe in starting small, iterating quickly, and listening to what your users are telling you.
               </p>
-              <div className={styles.logos}>
+              <div className={styles.logoContainer}>
                 <LogoExpedia />
                 <LogoDollarShaveClub />
                 <LogoSharespost />
