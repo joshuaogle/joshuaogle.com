@@ -9,15 +9,15 @@ type Props = {
 
 const TimelineCard = ({summary, href}: Props) => {
   return (
-    <Link href={href} className={`${styles.cardLink} atvImg`}>
+    <Link href={href} className={styles.cardLink}>
       <article
-        className={`${styles.card} atvImg-layer`}
+        className={styles.card}
         style={{
           "--card-background-color": summary.theme.backgroundColor,
           "--card-highlight-rgb": summary.theme.highlightRGB
         }}
       >
-        <header className={`${styles.header}} atvImg-layer`}>
+        <header className={styles.header}>
           <img className={styles.icon} src={summary.theme.icon} />
           <h4 className={styles.title}>
             {summary.title}

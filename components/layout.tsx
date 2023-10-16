@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import Script from 'next/script'
 import Header from './header';
 import Footer from './footer';
 import Meta from './meta';
@@ -48,14 +47,6 @@ const Layout = ({ preview, children }: Props) => {
       </main>
 
       <Footer isDarkMode={ isDarkMode } setIsDarkMode={ setIsDarkMode } />
-
-      <Script
-        src="/assets/atvImg.js"
-        strategy="afterInteractive"
-        onLoad={() =>
-          atvImg()
-        }
-      />
     </div>
   )
 }
