@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { Tab } from '@headlessui/react'
 import TimelineItem from './timeline-item'
 import TimelineCard from './timeline-card'
@@ -49,7 +48,6 @@ const Timeline = () => {
 
             </TimelineItem>
             <div className={styles.cardContainer}>
-              Summit
               <TimelineCard summary={SharespostSummary} href="/work/sharespost" />
             </div>
           </Tab.Panel>

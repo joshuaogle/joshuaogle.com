@@ -7,7 +7,7 @@ type Props = {
 
 const ArticlesList = ({ allArticles }: Props) => {
   return (
-    <section>
+    <section className="centered">
       <h2>Articles</h2>
       <p>
         I love mentoring new designers

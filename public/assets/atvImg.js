@@ -57,8 +57,7 @@
  * inspiration when creating this plug-in.
  */
 
- function atvImg(){
-
+function atvImg(){
 	var d = document,
 		de = d.documentElement,
 		bd = d.getElementsByTagName('body')[0],
@@ -211,7 +210,5 @@
 		for(var ly=0;ly<totalLayers;ly++){
 			layers[ly].style.transform = '';
 		}
-
 	}
-
 }

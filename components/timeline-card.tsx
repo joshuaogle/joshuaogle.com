@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import Script from 'next/script'
 import styles from '../styles/components/_timeline-card.module.css'
 
 type Props = {
@@ -18,7 +17,7 @@ const TimelineCard = ({summary, href}: Props) => {
           "--card-highlight-rgb": summary.theme.highlightRGB
         }}
       >
-        <header className={styles.header}>
+        <header className={`${styles.header}} atvImg-layer`}>
           <img className={styles.icon} src={summary.theme.icon} />
           <h4 className={styles.title}>
             {summary.title}
@@ -28,10 +27,9 @@ const TimelineCard = ({summary, href}: Props) => {
           </small>
         </header>
       </article>
-      <Script src="../lib/atvImg" />
+
     </Link>
   )
-  atvImg()
 }
 
 export default TimelineCard
