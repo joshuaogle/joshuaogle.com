@@ -18,21 +18,17 @@
   overflow: hidden;
   position: relative;
   transition: transform var(--base-timing) ease-in-out;
+  z-index: 1;
   height: 20vw;
   width: 33vw;
-  z-index: 1;
-}
-
-.card:hover {
-  transform: scale(102%);
 }
 
 .header {
+  align-content: center;
   display: flex;
   flex-direction: column;
   flex: 1;
   gap: var(--smallest-spacing);
-  align-content: center;
   justify-content: center;
   padding: var(--base-spacing) var(--large-spacing);
 }
@@ -53,6 +49,7 @@
 .meta {
   color: rgba(255, 255, 255, 0.5);
   display: block;
+  line-height: 1;
   margin: 0;
 }
 

@@ -16,6 +16,7 @@
     "next": "latest",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-parallax-tilt": "^1.7.171",
     "remark": "^14.0.2",
     "remark-frontmatter": "^4.0.1",
     "remark-html": "^15.0.1",

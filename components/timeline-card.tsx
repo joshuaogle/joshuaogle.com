@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import Tilt from 'react-parallax-tilt';
 import styles from '../styles/components/_timeline-card.module.css'
 
 type Props = {
@@ -10,7 +11,11 @@ type Props = {
 const TimelineCard = ({summary, href}: Props) => {
   return (
     <Link href={href} className={styles.cardLink}>
-      <article
+      <Tilt
+        perspective={2000}
+        glareEnable={true}
+        glareMaxOpacity={0.2}
+        scale={1.02}
         className={styles.card}
         style={{
           "--card-background-color": summary.theme.backgroundColor,
@@ -26,8 +31,7 @@ const TimelineCard = ({summary, href}: Props) => {
             {summary.meta.role}
           </small>
         </header>
-      </article>
-
+      </Tilt>
     </Link>
   )
 }
