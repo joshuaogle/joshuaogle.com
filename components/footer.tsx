@@ -20,8 +20,13 @@ const Footer = ({ isDarkMode, setIsDarkMode }) => {
   }
 
   return (
-    <footer className={styles.footer + " centered"}>
-    <Switch
+    <footer className={styles.container + " centered"}>
+      <small className={styles.copyright}>
+        &copy;
+        All rights reserved.
+      </small>
+
+      <Switch
         checked={isDarkMode}
         onChange={toggleColorScheme}
         className={`surface ${styles.switchBg} ${ifSwitchIsOn(styles.switchBgOn)}`}
@@ -36,10 +41,6 @@ const Footer = ({ isDarkMode, setIsDarkMode }) => {
           Use setting
         </span>
       </Switch>
-      <small className={styles.copyright}>
-        &copy;
-        All rights reserved.
-      </small>
     </footer>
   )
 }

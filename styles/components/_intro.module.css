@@ -40,7 +40,7 @@
 
 .metaItem {
   color: var(--theme-muted-color);
-  font-size: var(--small-font-size);
+  font-size: var(--smallest-font-size);
 }
 
 .metaItem::before {
@@ -49,6 +49,7 @@
 
 .metaItem label {
   font-family: var(--heading-font);
+  font-size: var(--small-font-size);
 }
 
 .metaItem a {

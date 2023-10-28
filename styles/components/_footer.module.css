@@ -1,5 +1,12 @@
-.footer {
-  padding: var(--large-spacing);
+.container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: var(--large-spacing) 0;
+}
+
+.copyright {
+  margin: 0;
 }
 
 /* Color Scheme Switch */

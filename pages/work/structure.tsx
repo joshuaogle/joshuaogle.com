@@ -4,7 +4,7 @@ import Intro from '../../components/intro'
 import Example from '../../components/example'
 
 export const summary = {
-  title: "Structure",
+  title: "Structure Design System",
   meta: {
     date: "2020",
     role: "Design System Lead",
@@ -105,19 +105,15 @@ const Structure = () => {
           </section>
 
           <Example
-              image="work/structure-lists.png"
-              caption="Lists"
-            />
+            images={["work/structure-lists.png"]}
+            caption="Lists"
+          />
 
           <Example
-              image="work/structure-tree.png"
-              caption="Tree"
-            />
+            images={["work/structure-tree.png", "work/structure-tree-views.png"]}
+            caption="Tree"
+          />
 
-          <Example
-              image="work/structure-tree-views.png"
-              caption="Tree views"
-            />
           <section>
             <div className="section-title">Research</div>
             <h2>Grassroots and growth</h2>

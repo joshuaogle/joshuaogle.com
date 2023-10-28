@@ -18,6 +18,7 @@
   overflow: hidden;
   position: relative;
   transition: transform var(--base-timing) ease-in-out;
+  transform-style: preserve-3d;
   z-index: 1;
   height: 20vw;
   width: 33vw;
@@ -31,6 +32,7 @@
   gap: var(--smallest-spacing);
   justify-content: center;
   padding: var(--base-spacing) var(--large-spacing);
+  transform: translateZ(100px);
 }
 
 .icon {

@@ -12,7 +12,8 @@
 
 .surface {
   animation: rise var(--base-timing);
-  background: rgba(var(--theme-surface-rgb), 0.25);
+  backdrop-filter: blur(var(--small-spacing));
+  background: rgba(var(--theme-surface-rgb), 0.2);
   background-size: 100px;
   border-radius: var(--surface-border-radius);
   padding: var(--large-spacing);

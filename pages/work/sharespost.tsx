@@ -49,7 +49,7 @@ const Sharespost = () => {
         />
 
         <Example
-          image="case-studies/sharespost-chart.png"
+          images={["case-studies/sharespost-chart.png"]}
           caption="The home page greets users with an up-to-date evaluation of their holdings."
         />
 
@@ -69,7 +69,7 @@ const Sharespost = () => {
             </p>
 
             <Example
-              image="case-studies/sharespost-wires.png"
+              images={["case-studies/sharespost-wires.png"]}
               caption="One of the earliest 'wireflows' from our Product Design Sprint. More detail was added as we got closer to development."
             />
 
@@ -96,7 +96,7 @@ const Sharespost = () => {
             </p>
 
             <Example
-              image="case-studies/sharespost-sprint.jpg"
+              images={["case-studies/sharespost-sprint.jpg"]}
               caption="So much paper, so many ideas. Design Sprints are my favorite way to start a project"
             />
 
@@ -109,7 +109,7 @@ const Sharespost = () => {
             </p>
 
             <Example
-              image="case-studies/sharespost-invision.png"
+              images={["case-studies/sharespost-invision.png"]}
               caption="InVision is perfect for user testing at any stage of production"
             />
 
@@ -120,7 +120,7 @@ const Sharespost = () => {
           </section>
           
           <Example
-            image="case-studies/sharespost-home.png"
+            images={["case-studies/sharespost-home.png"]}
             caption="The home page greets users with an up-to-date evaluation of their holdings."
           />
 
@@ -142,7 +142,7 @@ const Sharespost = () => {
               </div>
 
               <Example
-                image="case-studies/sharespost-card.png"
+                images={["case-studies/sharespost-card.png"]}
                 caption="An early Opportunity Card wireframe"
               />
             </div>
@@ -157,7 +157,7 @@ const Sharespost = () => {
           </section>
 
           <Example
-            image="case-studies/sharespost-waterfall.png"
+            images={["case-studies/sharespost-waterfall.png"]}
             caption="The &ldquo;waterfall chart&rdquo; was the most technically difficult, but also the most informative."
           />
 
@@ -172,9 +172,8 @@ const Sharespost = () => {
             </p>
           </section>
 
-
           <Example
-            image="case-studies/sharespost-admin.png"
+            images={["case-studies/sharespost-admin.png"]}
             caption="The admin system that gives the brokers access to all of the data."
           />
 

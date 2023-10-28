@@ -145,20 +145,16 @@ figcaption,
   margin: var(--small-spacing) auto;
 }
 
-figure {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 auto var(--base-spacing);
-}
-
-figure .surface {
+figure,
+figure.surface {
+  display: inline-block;
   padding: var(--small-spacing);
+  text-align: center;
 }
 
 figcaption {
-  margin: var(--small-spacing) 0;
-  text-align: center;
+  font-size: var(--smallest-font-size);
+  margin: var(--smallest-spacing) 0 0;
 }
 
 .section-title {

@@ -127,6 +127,7 @@
   --font-weight-black: 800;
   --base-font-size: calc(0.75em + 1vmax);
   --small-font-size: calc(var(--base-font-size) * 0.75);
+  --smallest-font-size: calc(var(--base-font-size) * 0.66);
 
   /* Borders */
   --base-border-radius: var(--smallest-spacing);

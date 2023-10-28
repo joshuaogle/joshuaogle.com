@@ -69,19 +69,19 @@ const Timeline = () => {
           </Tab.Panel>
 
           <Tab.Panel className={`${styles.tabPanel} surface`}>
-            <div>
+            <div className={styles.logoBody}>
               <h2>Design consulting</h2>
               <p>
                 I have led design projects from startups to big enterprise companies.
                 No matter the size of the project, I believe in starting small, iterating quickly, and listening to what your users are telling you.
               </p>
-              <div className={styles.logoContainer}>
-                <LogoExpedia />
-                <LogoDollarShaveClub />
-                <LogoSharespost />
-                <LogoAmex />
-                <LogoATT />
-              </div>
+            </div>
+            <div className={styles.logoContainer}>
+              <LogoExpedia />
+              <LogoDollarShaveClub />
+              <LogoSharespost />
+              <LogoAmex />
+              <LogoATT />
             </div>
           </Tab.Panel>
         </Tab.Panels>

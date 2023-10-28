@@ -5,7 +5,7 @@ import Intro from '../../components/intro'
 import Example from '../../components/example'
 
 export const summary = {
-  title: "Vault",
+  title: "Vault Secrets Manager",
   meta: {
     date: "2021",
     role: "Design/Research Lead",
@@ -80,14 +80,9 @@ const VaultCaseStudy = () => {
         </section>
 
         <Example
-            image="work/vault-home.png"
-            caption="Secrets Engines"
-          />
-
-        <Example
-            image="work/vault-mounts.png"
-            caption="Mounting Secrets Engines"
-          />
+          images={["work/vault-home.png", "work/vault-mounts.png"]}
+          caption="Secrets Engines"
+        />
 
         <section>
           <div className="section-title">Research</div>
@@ -122,9 +117,9 @@ const VaultCaseStudy = () => {
         </section>
 
         <Example
-            image="work/vault-idgroups.png"
-            caption="Identity groups"
-          />
+          images={["work/vault-idgroups.png"]}
+          caption="Identity groups"
+        />
 
         <section>
           <h3>Hello 1.0</h3>
@@ -163,19 +158,13 @@ const VaultCaseStudy = () => {
         </section>
 
         <Example
-            image="work/hcpvault-wireframe.png"
-            caption="HCP Vault Wireframe"
-          />
-
-        <Example
-            image="work/hcpvault-overview.png"
-            caption="HCP Vault Overview"
-          />
-
-        <Example
-            image="work/hcpvault-seal.png"
-            caption="HCP Vault Seal"
-          />
+          images={[
+            "work/hcpvault-wireframe.png",
+            "work/hcpvault-overview.png",
+            "work/hcpvault-seal.png"
+          ]}
+          caption="HCP Vault Wireframe"
+        />
 
         <section>
           <h3>Everybody could use a Guide</h3>

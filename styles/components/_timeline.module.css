@@ -1,6 +1,7 @@
 .tabList {
   align-items: center;
   display: flex;
+  font-size: var(--smallest-font-size);
   justify-content: center;
   gap: var(--smallest-spacing);
   margin: var(--small-spacing);
@@ -16,15 +17,15 @@
   background-color: var(--theme-muted-color);
   border-radius: 1rem;
 	cursor: pointer;
-  height: 0.5rem;
+  height: 0.75rem;
 	font-size: 0rem;
   transition: all var(--base-timing);
-  width: 0.5rem;
+  width: 0.75rem;
 }
 
 .tab[tabindex="0"] {
   background-color: var(--theme-text-color);
-  width: 2rem;
+  width: 2.5rem;
 }
 
 .tabPanel {

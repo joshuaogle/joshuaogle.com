@@ -12,10 +12,13 @@ const TimelineCard = ({summary, href}: Props) => {
   return (
     <Link href={href} className={styles.cardLink}>
       <Tilt
-        perspective={2000}
         glareEnable={true}
         glareMaxOpacity={0.2}
         scale={1.02}
+        tiltMaxAngleX={15}
+        tiltMaxAngleY={20}
+        perspective={2000}
+        transitionSpeed={2000}
         className={styles.card}
         style={{
           "--card-background-color": summary.theme.backgroundColor,

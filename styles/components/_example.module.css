@@ -1,0 +1,28 @@
+.grid {
+  display: grid; 
+  grid-template-columns: repeat(8, 1fr); 
+  grid-template-rows: repeat(8, 1fr); 
+  grid-column-gap: var(--base-spacing);
+  grid-row-gap: var(--base-spacing);
+}
+
+.area[data-number="1"][data-of="1"] {
+  grid-area: 1 / 1 / 9 / 9;
+}
+
+.area[data-number="1"][data-of="2"] {
+  grid-area: 1 / 1 / 6 / 6;
+} 
+.area[data-number="2"][data-of="2"] {
+  grid-area: 4 / 4 / 9 / 9;
+}
+
+.area[data-number="1"][data-of="3"] {
+  grid-area: 2 / 1 / 6 / 7;
+}
+.area[data-number="2"][data-of="3"] {
+  grid-area: 1 / 5 / 4 / 9;;
+}
+.area[data-number="3"][data-of="3"] {
+  grid-area: 5 / 4 / 8 / 8;
+}
