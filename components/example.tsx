@@ -20,13 +20,11 @@ const Example = ({ caption, images }: Props) => {
           data-number={`${index + 1}-of-${of}`}
         >
           <Tilt
-            glareEnable={true}
-            glareMaxOpacity={0.2}
-            scale={1.02}
-            tiltMaxAngleX={10}
+            scale={1.05}
+            tiltMaxAngleX={5}
             tiltMaxAngleY={10}
             perspective={2000}
-            transitionSpeed={2000}
+            transitionSpeed={5000}
           >
             <figure key={filename} className='surface'>
               <img src={`/images/${filename}`}/>

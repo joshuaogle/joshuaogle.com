@@ -5,7 +5,7 @@
 }
 
 .backLink {
-  color: rgb(var(--theme-highlight-rgb));
+  color: var(--theme-text-color);
   font-size: 2em;
 }
 
@@ -32,6 +32,7 @@
   appearance: none;
   background: none;
   border: 0;
+  color: var(--theme-text-color);
   cursor: pointer;
   font-size: 2em;
 }

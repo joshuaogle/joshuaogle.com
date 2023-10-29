@@ -32,7 +32,7 @@ const Header = () => {
 
       <Menu as="nav" className={styles.menu}>
         <Menu.Button className={styles.menuButton}>
-          👋
+          &#9776;
         </Menu.Button>
 
         <Menu.Items className={`${styles.menuItems} surface`}>

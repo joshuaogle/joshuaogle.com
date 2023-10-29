@@ -1,7 +1,7 @@
 .grid {
   display: grid; 
   grid-template-columns: repeat(8, 1fr); 
-  grid-template-rows: repeat(8, 1fr); 
+  grid-template-rows: repeat(8, auto); 
   grid-column-gap: var(--base-spacing);
   grid-row-gap: var(--base-spacing);
 }
@@ -24,8 +24,8 @@
   grid-area: 2 / 1 / 6 / 7;
 }
 .area[data-number="2-of-3"] {
-  grid-area: 1 / 5 / 4 / 9;;
+  grid-area: 5 / 3 / 9 / 8;
 }
 .area[data-number="3-of-3"] {
-  grid-area: 5 / 4 / 8 / 8;
+  grid-area: 1 / 5 / 4 / 9;
 }

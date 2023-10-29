@@ -110,7 +110,9 @@ const Structure = () => {
           />
 
           <Example
-            images={["work/structure-tree.png", "work/structure-tree-views.png"]}
+            images={[
+              "work/structure-tree.png"
+            ]}
             caption="Tree"
           />
 

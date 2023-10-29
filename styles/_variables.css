@@ -188,8 +188,8 @@ html[data-prefers-color-scheme="light"] {
   --theme-surface-rgb: 255, 255, 255;
   --theme-shadow-rgb: 30, 26, 22;
   --theme-heading-color: var(--theme-text-color);
-  --background-gradient-start: 0.9;
-  --background-gradient-end: 0.7;
+  --background-gradient-start: 1;
+  --background-gradient-end: 1;
 }
 
 html[data-prefers-color-scheme="dark"] {

@@ -159,9 +159,9 @@ const VaultCaseStudy = () => {
 
         <Example
           images={[
-            "work/hcpvault-wireframe.png",
             "work/hcpvault-overview.png",
-            "work/hcpvault-seal.png"
+            "work/hcpvault-seal.png",
+            "work/hcpvault-wireframe.png"
           ]}
           caption="HCP Vault Wireframe"
         />
