@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import Tilt from 'react-parallax-tilt';
 import styles from '../styles/components/_timeline-card.module.css'
 
@@ -15,8 +14,8 @@ const TimelineCard = ({summary, href}: Props) => {
         glareEnable={true}
         glareMaxOpacity={0.2}
         scale={1.02}
-        tiltMaxAngleX={15}
-        tiltMaxAngleY={20}
+        tiltMaxAngleX={10}
+        tiltMaxAngleY={10}
         perspective={2000}
         transitionSpeed={2000}
         className={styles.card}
