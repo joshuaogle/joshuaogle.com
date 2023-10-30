@@ -16,7 +16,7 @@
 .menuButton,
 .menuItems {
   position: fixed;
-  top: var(--small-spacing);
+  top: var(--large-spacing);
   right: var(--base-spacing);
   z-index: 100;
 }
@@ -40,7 +40,7 @@
 .menuItems {
   backdrop-filter: blur(var(--small-spacing));
   padding: var(--small-spacing);
-  top: 4rem;
+  top: calc(var(--large-spacing) + 50px + var(--smallest-spacing));
   width: 15em;
 }
 

@@ -1,10 +1,16 @@
+import Image from 'next/image'
 import styles from '../styles/components/_welcome.module.css'
 
 const Welcome = () => {
   return (
     <header className={styles.container + " centered"}>
       <div className={styles.portrait}>
-        <img src="/images/portrait.png" />
+        <Image
+          src="/images/portrait.png"
+          height="548"
+          width="475"
+          alt="Joshua Ogle"
+        />
       </div>
       <div className={styles.textContainer}>
         <h1 className={styles.title}>

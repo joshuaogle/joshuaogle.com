@@ -1,5 +1,5 @@
 .container {
-  padding: 20vh 5vw var(--large-spacing);
+  padding: 10vw 5vw;
   position: relative;
 }
 
@@ -21,6 +21,7 @@
 
 .portrait img {
   box-shadow: var(--shadow-high);
+  height: auto;
 }
 
 html[data-prefers-color-scheme="light"] .portrait img {
