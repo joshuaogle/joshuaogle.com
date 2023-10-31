@@ -58,6 +58,7 @@ const BackLink = () => {
           height="48"
           width="80"
           alt="Home"
+          className="sketch"
         />
       </Link>
     )
@@ -72,6 +73,7 @@ const MenuLink = () => {
         height="50"
         width="69"
         alt="back"
+        className="sketch"
       />
     </Menu.Button>
   )

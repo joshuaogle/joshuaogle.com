@@ -19,7 +19,7 @@ export const summary = {
     backgroundImage: "",
     highlightRGB: "255, 236, 110",
     icon: "/images/case-study-logo-vault.svg",
-    thumbnail: "/images/work/vault-home.png"
+    thumbnail: "/images/case-studies/vault-home.png"
   },
   intro: "Description."
 }
@@ -51,23 +51,27 @@ const VaultCaseStudy = () => {
           <div className="section-title">Background</div>
           <h2>It's hard to keep a secret</h2>
           <p>
-            Modern web applications require a lot of moving parts,
-            with dyanamic resources like servers, databases, and applications
+            Modern web applications require a dizzying number of moving parts,
+            including dyanamic resources like servers, databases, and applications
             that are deployed or changed every minute.
             And to make things more complicated,
-            engineering teams at large companies can grow to hundreds or thousands of people.
+            engineering teams at large companies can grow to hundreds or thousands of people
+            all needing access to passwords and other secrets.
             So how do you keep anything secure?
           </p>
+          
+          <Example
+            images={["case-studies/vault-loader-dark.gif"]}
+            caption="Vault"
+          />
+
           <p>
-            We have a whole host of password managers these days,
+            There are a whole host of user-friendly password managers these days,
             that doesn't mean that people use them like they should.
-            Vault was made to allow developers
-            to integrate secure secrets management
+            Vault was made so that developers could integrate secrets management
             into their application from day 1
             and grow with them as they adopt more dynamic infrastructure.
-          </p>
-          <p>
-            This means that a lot of Vault's users technically aren't even human.
+            This means that a lot of Vault's users technically were't even human.
             The applications and bots that retrieve and store sensitive information
             all need to talk to each other and be sure of each other's identities.
             An application can authenticate to Vault,
@@ -77,12 +81,11 @@ const VaultCaseStudy = () => {
             and every single time the identity is checked again
             and the action is logged so it can be reviewed later.
           </p>
+          <p>
+            In 2017, I joined HashiCorp as the second product designer at the company
+            and got to work on the Vault team as its first designer.
+          </p>
         </section>
-
-        <Example
-          images={["work/vault-home.png", "work/vault-mounts.png"]}
-          caption="Secrets Engines"
-        />
 
         <section>
           <div className="section-title">Research</div>
@@ -99,30 +102,70 @@ const VaultCaseStudy = () => {
           <p>
             One of my favorite parts of my job
             is that I get to build things for engineers.
-            They've got everything you a designer would want
+            They've got everything a designer would want
             in an ideal user/customer.
             They're incredibly smart,
-            they care a lot about their workflows,
-            <mark>and boy do they have opinions</mark>.
-            I have some coding experience
+            they care a lot about how they work,
+            <mark>and boy do they have strong opinions</mark>.
+            I have years of coding experience
             and always appreciate when a library or framework is simple and powerful.
             Before HashiCorp,
-            I had experience working with Google's Design Sprint framework,
+            I had experience leading customers through Google's Design Sprint framework,
             spending a week taking something from initial concept and discovery on Monday
             to prototyping ideas with real users by Friday.
             This kind of lean user testing worked well for consulting clients,
-            but was going to need adjusting to match our long product release cycles
+            but would to be adjusted to match our long product release cycles
             where a new version of the product comes out every three to four months.
+          </p>
+
+          <Example
+            images={["case-studies/vault-idgroups.png"]}
+            caption="Identity groups"
+          />
+
+          <p>
+            Our customers were understandably very protective of their secrets environments.
+            We weren't going to get access to real data to see how they were using Vault,
+            and because the software runs in secure private networks,
+            we don't have any tracking or analytics in the app at all.
+            We relied on our network of enterprise customers and open-source users,
+            who range from experts in cybersecurity operations
+            to brand new developers using a secrets manager for the first time.
+            We used clickable prototypes in Figma to mock up workflows,
+            including flows between Vault and other apps like a terminal or services like AWS.
+            Our plan included lots of questions about their work,
+            how their teams are organized,
+            and how permissions are reviewed and approved.
+            We used all of this to build a map of personas that help us build a clear picture
+            of who they are and how they work.
+          </p>
+          <p>
+            HashiCorp is a remote-first company, all the way from founding to today,
+            through incredible growth and an IPO.
+            We embraced remote user research but also acknowledged its limitations.
+            That's why we also took opportunities
+            to do resarch in-person when we could
+            at our big events like HashiConf or our smaller HashiDays.
+            We would run small studies by appointment
+            or inviting people to participate between talks.
+            With our remote interviews giving us plenty of *qualitative* data,
+            we used these events to give us more *quantitiative* insight.
+            We had users go through several of our most important flows,
+            including onboarding and configuration,
+            storing and retrieving secrets,
+            and managing permissions for end-users.
+            If things weren't absolutely clear and obvious,
+            they would waste time going back to check and recheck that they did the right thing.
+            We refined and refined our designs to make sure they got things right the first time
+            and felt confident knowing that their data was secure,
+            comparing these results across many studies
+            which helped us prove that our efforts were working.
           </p>
         </section>
 
-        <Example
-          images={["work/vault-idgroups.png"]}
-          caption="Identity groups"
-        />
-
         <section>
-          <h3>Hello 1.0</h3>
+          <div className="section-title">Vault Web UI</div>
+          <h2>Hello 1.0</h2>
           <p>
             HashiCorp <a href="https://sports.yahoo.com/news/hashicorp-vault-enterprise-release-enables-150000673.html">had just announced Vault Enterprise</a>,
             which marked a big milestone.
@@ -136,38 +179,28 @@ const VaultCaseStudy = () => {
             needed a user interface that gave them more discoverability and visibility
             into their secrets management environment.
           </p>
-          <p>
-            I joined the Vault team as its first designer
-            and as the the second product designer at HashiCorp.
-          </p>
-          <p>
+          
+          <Example
+            images={["case-studies/vault-home.png", "case-studies/vault-mounts.png"]}
+            caption="Secrets Engines"
+          />
 
-          </p>
           <p>
             Part of designing systems is spending time thinking about how to make things reusable and composable.
-            
             You don't get to start from scratch every day, so I think you should take advantage of it and do it right.
             These designs weren't just the future of Vault, it was the future of our whole design team.
             To help our next designers and help keep our products consistent,
-            We <Link href="structure">created our first design system which I named Structure</Link>.
+            I led the working group that created <Link href="structure">our first design system named Structure</Link>.
             I suggested the name because I wanted it
             to feel so intrinsic to how we worked
             that it felt like the frame that we fill with what we care about,
-            that we couldn't imagine how to build without it.
+            that we couldn't imagine building without it.
           </p>
         </section>
 
-        <Example
-          images={[
-            "work/hcpvault-overview.png",
-            "work/hcpvault-seal.png",
-            "work/hcpvault-wireframe.png"
-          ]}
-          caption="HCP Vault Wireframe"
-        />
-
         <section>
-          <h3>Everybody could use a Guide</h3>
+          <div className="section-title">UI Guide</div>
+          <h2>Everybody could use a Guide</h2>
           <p>
             It should be no surprise that Vault does have a bit of a learning curve.
             Getting everything configured and integrated into your application takes hours
@@ -177,7 +210,8 @@ const VaultCaseStudy = () => {
             We want people to <mark>use best practices by default</mark> and feel confident that their data is safe.
           </p>
           <p>
-            I designed a new "Guide" component that helps you learn about how to use Vault.
+            I designed a new "Guide" component
+            that helps you learn about how to use Vault.
             I had a few important rules for the Guide:
           </p>
           <ul>
@@ -187,13 +221,11 @@ const VaultCaseStudy = () => {
             <li>Don't expect them to remember next time, so make it easy to find after it is closed.</li>
             <li>Our users are smart! <mark>Don't talk down to them.</mark></li>
           </ul>
-
-
-          {/* Show the guide greeting and in use */}
         </section>
 
         <section>
-          <h3>Easy, easier, easiest</h3>
+          <div className="section-title">Vault Cloud</div>
+          <h2>Easy, easier, easiest</h2>
           <p>
             The HashiCorp Cloud Platform (HCP) brings our multicloud automation tools into one place.
             This was especially exciting for Vault because this means
@@ -205,10 +237,18 @@ const VaultCaseStudy = () => {
             so I moved my focus to HCP Vault
             and left the core product in their good hands.
           </p>
-          {/* HCP Vault diagram */}
+
+          <Example
+            images={[
+              "case-studies/hcpvault-overview.png",
+              "case-studies/hcpvault-seal.png",
+              "case-studies/hcpvault-wireframe.png"
+            ]}
+            caption="HCP Vault Wireframe"
+          />
+
           <p>
-            Our Product Manager and I
-            started with dozens of customer interviews
+            Our Product Manager joined me for dozens of customer interviews
             where we heard a consistent story:
           </p>
           <blockquote>
@@ -222,21 +262,17 @@ const VaultCaseStudy = () => {
             and access management policies.
             And of course, we already had a deadline
             without knowing what it was we were going to build yet.
-            We made the hard decision to use HCP as a managed service provider,
+            We made the decision to use HCP as a managed service provider,
             without creating that fully embedded model quite yet.
             I designed a simple workflow for provisioning a Vault cluster
             and a friendly dashboard where you could see the cluster's status on HCP.
           </p>
-          {/* HCP Vault dashboard */}
           <p>
-            We launched HCP Vault in January 2021.
-            Within a week there were hundreds of new Vault clusters,
+            HCP Vault launched in January 2021.
+            Within a week there were hundreds of new Vault clusters
             created by customers varying from retail businesses and banks
-            to government entities I can't mention.
-            Secrets management was more accessible than ever.
-            I'm also excited that we're now bringing
-            that embedded secrets management dream
-            with Vault Secrets Sync.
+            to government entities I'm not allowed to mention.
+            <mark>Secrets management was more accessible than ever.</mark>
           </p>
         </section>
 
@@ -244,17 +280,13 @@ const VaultCaseStudy = () => {
           <div className="section-title">Results and reflection</div>
           <h2>Workflow-driven design</h2>
           <p>
-            If you are a product designer,
+            If you build or design software,
             I can't overemphasize the importance
             of learning systems design.
             Whether it is a simple mobile app
             or sophisticated access controls for highly dynamic infrastructure,
             contextualizing your design based on specific needs and workflows
             helps to ensure all of the parts work together.
-            It also helps your development team
-            understand what they are building,
-            making it possible to plan ahead
-            and 
             I'm proud of our team
             and I'm excited to see great UX design
             making highly technical software

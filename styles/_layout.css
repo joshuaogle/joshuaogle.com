@@ -56,3 +56,18 @@
 section {
   padding: var(--large-spacing) 0;
 }
+
+.sketch {
+  opacity: 0.66;
+  transition: opacity var(--fast-timing);
+}
+
+.sketch:hover {
+  opacity: 1;
+}
+
+html[data-prefers-color-scheme="light"] {
+  .sketch {
+    filter: invert();
+  }
+}

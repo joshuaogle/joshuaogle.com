@@ -48,20 +48,17 @@ const Sharespost = () => {
           meta={summary.meta}
         />
 
-        <Example
-          images={["case-studies/sharespost-chart.png"]}
-          caption="The home page greets users with an up-to-date evaluation of their holdings."
-        />
-
         <div className={`article-body centered`}>
           <section>
             <div className="section-title">
               The Challenge
             </div>
             <h2>
-              It's more interesting than it sounds
+              More interesting than it sounds
             </h2>
             <p>
+              When I mentioned to people that I was working on a financial app,
+              I think they imagined something 
               Financial apps may not sound like the most interesting thing to work on, but the thing I love most about consulting is diving deep into a new field.
               Even among financial apps, private securities are a unique challenge.
               Private securities are shares of stock in a company that isn't publically traded, so while
@@ -69,8 +66,12 @@ const Sharespost = () => {
             </p>
 
             <Example
-              images={["case-studies/sharespost-wires.png"]}
-              caption="One of the earliest 'wireflows' from our Product Design Sprint. More detail was added as we got closer to development."
+              images={[
+                "case-studies/sharespost-chart.png",
+                "case-studies/sharespost-card.png",
+                "case-studies/sharespost-wires.png"
+              ]}
+              caption="The home page greets users with an up-to-date evaluation of their holdings."
             />
 
             <p>
@@ -108,20 +109,18 @@ const Sharespost = () => {
               Having two designers on the same end also meant that we were able to quickly toss around ideas and soon all of the whiteboard walls were covered in sketches and flows.
             </p>
 
-            <Example
-              images={["case-studies/sharespost-invision.png"]}
-              caption="InVision is perfect for user testing at any stage of production"
-            />
-
             <p>
               We usually like to start designing in the browser as soon as possible, but since the developers had some very complicated back-end code to figure out we spent time polishing the wireframes into high-fidelity mockups.
               These mockups were refined in <a href="http://invisionapp.com" target="_new">InVision</a> so we could give the client a realistic look at how the views were connected.
             </p>
           </section>
-          
+
           <Example
-            images={["case-studies/sharespost-home.png"]}
-            caption="The home page greets users with an up-to-date evaluation of their holdings."
+            images={[
+              "case-studies/sharespost-invision.png",
+              "case-studies/sharespost-home.png"
+            ]}
+            caption="InVision is perfect for user testing at any stage of production"
           />
 
           <section>
@@ -140,11 +139,6 @@ const Sharespost = () => {
                   Buttons on the right give easy access to actions the user might want to take, including asking their broker to start the process of buying the stock.
                 </p>
               </div>
-
-              <Example
-                images={["case-studies/sharespost-card.png"]}
-                caption="An early Opportunity Card wireframe"
-              />
             </div>
 
             <p>

@@ -49,12 +49,11 @@
   color: var(--theme-text-color);
   height: var(--base-spacing);
   width: var(--base-spacing);
-  transition: transform 0s;
-  transition-delay: var(--fast-timing);
+  transition: transform var(--base-timing) ease-out;
 }
 
 .switchIndicatorOn svg {
-  transform: scaleX(-1);
+  transform: rotate(180deg);
 }
 
 .srOnly {

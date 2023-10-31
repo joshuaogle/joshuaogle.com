@@ -6,6 +6,7 @@ import styles from '../styles/components/_timeline.module.css'
 import {summary as VaultSummary} from '../pages/work/vault';
 import {summary as StructureSummary} from '../pages/work/structure';
 import {summary as SharespostSummary} from '../pages/work/sharespost';
+import {summary as ArmadaSummary} from '../pages/work/armada';
 import LogoAmex from '../public/images/client-amex.svg'
 import LogoATT from '../public/images/client-att.svg'
 import LogoDollarShaveClub from '../public/images/client-dollarshaveclub.svg'
@@ -64,7 +65,7 @@ const Timeline = () => {
               Brightbit was one of the leading development shops in the region and I'm really proud of the company and team we built.
             </TimelineItem>
             <div className={styles.cardContainer}>
-              <TimelineCard summary={SharespostSummary} href="/work/sharespost" />
+              <TimelineCard summary={ArmadaSummary} href="/work/armada" />
             </div>
           </Tab.Panel>
 
