@@ -17,7 +17,7 @@ const Welcome = () => {
           Hi, I'm Joshua
         </h1>
         <p>
-          Staff Product Designer at <a href="http://hashicorp.com" target="_new">Hashicorp</a>,
+          Software Designer at <a href="http://hashicorp.com" target="_new">Hashicorp</a>,
           creating developer tools and making the cloud a <mark>better place to live</mark>.
         </p>
       </div>

@@ -23,7 +23,7 @@ const Footer = ({ isDarkMode, setIsDarkMode }) => {
     <footer className={styles.container + " centered"}>
       <small className={styles.copyright}>
         &copy;
-        All rights reserved.
+        All rights reserved. This website updated by witches.
       </small>
 
       <Switch

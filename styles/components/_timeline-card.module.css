@@ -14,14 +14,15 @@
   break-inside: avoid;
   color: var(--white);
   display: flex;
+  font-size: 75%;
   flex-direction: column;
   overflow: hidden;
   position: relative;
   transition: transform var(--base-timing) ease-in-out;
   transform-style: preserve-3d;
   z-index: 1;
-  height: 20vw;
-  width: 33vw;
+  height: 22vw;
+  width: 18vw;
 }
 
 .header {
@@ -29,18 +30,23 @@
   display: flex;
   flex-direction: column;
   flex: 1;
-  gap: var(--smallest-spacing);
-  justify-content: center;
-  padding: var(--base-spacing) var(--large-spacing);
+  justify-content: space-between;
+  padding: var(--base-spacing) var(--base-spacing);
   transform: translateZ(100px);
 }
 
 .icon {
   border-radius: 0;
   box-shadow: none;
-  max-height: 2rem;
-  max-width: 2rem;
+  height: 3rem;
+  width: 4rem;
   margin: 0;
+}
+
+.titleContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--smallest-spacing);
 }
 
 .title {
@@ -55,16 +61,14 @@
   margin: 0;
 }
 
-.thumbnail {
-  flex: 1;
-  margin: 0 0 0 var(--base-spacing);
-  max-height: 10vw;
-  max-width: 100%;
-  overflow: hidden;
+.arrow {
+  height: 0;
+  opacity: 0;
+  margin: 0;
+  transition: all var(--base-timing);
 }
 
-.thumbnail img {
-  border-radius: 0;
-  border-top-left-radius: var(--base-border-radius);
-  height: auto;
+.card:hover .arrow {
+  height: 1em;
+  opacity: 1;
 }

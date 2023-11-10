@@ -1,5 +1,25 @@
-.details {
-  flex: 1;
+.itemContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--base-spacing);
+}
+
+@media (min-width: 1000px) {
+  .itemContainer {
+    flex-direction: row;
+  }
+
+  .textContainer,
+  .cardContainer {
+    flex: 1;
+  }
+}
+
+.cardContainer {
+  display: flex;
+  align-items: center;
+  gap: var(--small-spacing);
+  justify-content: center;
 }
 
 .title {

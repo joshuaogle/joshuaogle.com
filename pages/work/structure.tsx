@@ -4,7 +4,7 @@ import Intro from '../../components/intro'
 import Example from '../../components/example'
 
 export const summary = {
-  title: "Structure Design System",
+  title: "Structure",
   meta: {
     date: "2020",
     role: "Design System Lead",

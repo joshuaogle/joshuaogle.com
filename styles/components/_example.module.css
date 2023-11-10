@@ -4,6 +4,7 @@
   grid-template-rows: repeat(8, auto); 
   grid-column-gap: var(--base-spacing);
   grid-row-gap: var(--base-spacing);
+  text-align: center;
 }
 
 

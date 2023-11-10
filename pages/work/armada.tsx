@@ -5,10 +5,10 @@ import Intro from '../../components/intro'
 import Example from '../../components/example'
 
 export const summary = {
-  title: "Armada Fleet Management",
+  title: "Armada",
   meta: {
     date: "2015",
-    role: "Brand, Product Design & Development",
+    role: "Brand & Design",
     time: "1 year",
     team: "1 Designer, 1 Developer",
     client: "Armada Telematics",
@@ -18,7 +18,7 @@ export const summary = {
     backgroundColor: "rgb(27, 108, 148)",
     backgroundImage: "",
     highlightRGB: "2, 169, 242",
-    icon: "/images/case-study-logo-vault.svg",
+    icon: "/images/case-study-logo-armada.svg",
     thumbnail: "/images/case-studies/vault-home.png"
   },
   intro: "Description."

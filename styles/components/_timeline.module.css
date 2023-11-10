@@ -1,61 +1,20 @@
-.tabList {
-  align-items: center;
-  display: flex;
-  font-size: var(--smallest-font-size);
-  justify-content: center;
-  gap: var(--smallest-spacing);
-  margin: var(--small-spacing);
-  position: relative;
-}
-
-.tabList a {
-  color: var(--theme-muted-color);
-}
-
-.tab {
-  all: unset;
-  background-color: var(--theme-muted-color);
-  border-radius: 1rem;
-	cursor: pointer;
-  height: 0.75rem;
-	font-size: 0rem;
-  transition: all var(--base-timing);
-  width: 0.75rem;
-}
-
-.tab[tabindex="0"] {
-  background-color: var(--theme-text-color);
-  width: 2.5rem;
-}
-
-.tabPanel {
-  display: flex;
-  gap: var(--large-spacing);
-}
-
-@media (max-width: 80rem) {
-  .tabPanel {
-    flex-direction: column;
-  }
-}
-
-.cardContainer {
+.timelineList {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: var(--small-spacing);
-  justify-content: center;
+  gap: 10vw;
+}
+
+.itemContainer {
+  display: flex;
+  gap: var(--base-spacing);
+}
+
+.textContainer {
   flex: 1;
 }
 
-@media (max-width: 80rem) {
-  .cardContainer {
-    flex-direction: row;
-  }
-}
-
-/* Design consulting tab panel */
 .logoContainer {
+  flex: 1;
   display: flex;
   justify-content: space-around;
   gap: var(--small-spacing);

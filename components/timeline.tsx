@@ -1,6 +1,4 @@
-import { Tab } from '@headlessui/react'
 import TimelineItem from './timeline-item'
-import TimelineCard from './timeline-card'
 import styles from '../styles/components/_timeline.module.css'
 
 import {summary as VaultSummary} from '../pages/work/vault';
@@ -15,95 +13,61 @@ import LogoSharespost from '../public/images/client-sharespost.svg'
 
 const Timeline = () => {
   return (
-    <section>
-      <Tab.Group>
-        <Tab.Panels>
-          <Tab.Panel className={`${styles.tabPanel} surface`}>
-            <TimelineItem
-              company="HashiCorp"
-              when="2017-Present"
-              title="Staff Product Designer"
-              icon="/images/timeline-hashicorp.svg"
-            >
-              HashiCorp makes developer-focused infrastructure software, spanning from secrets management to mesh networking to automated deployments. 
-              I led design for some of our most important products and helped grow our design team from 2 designers to 30+ across seven products.
-            </TimelineItem>              
-            <div className={styles.cardContainer}>
-              <TimelineCard summary={VaultSummary} href="/work/vault" />
-              <TimelineCard summary={StructureSummary} href="/work/structure" />
-            </div>
-          </Tab.Panel>
+    <section className={`${styles.timelineList} surface`}>
+      <TimelineItem
+        company="HashiCorp"
+        when="2017-Present"
+        title="Staff Product Designer"
+        icon="/images/timeline-hashicorp.svg"
+        caseStudies={[
+          {summary: VaultSummary, href: "/work/vault"},
+          {summary: StructureSummary, href: "/work/structure"}
+        ]}>
+        HashiCorp makes developer-focused infrastructure software. 
+        I led design for some of our most important products and helped grow our design team from 2 designers to 30+ across seven products.
+      </TimelineItem>
 
-          <Tab.Panel className={`${styles.tabPanel} surface`}>
-            <TimelineItem
-              company="thoughtbot"
-              when="2014-2016"
-              title="Sr Product Designer"
-              icon="/images/timeline-thoughtbot.svg"
-            >
-              One of the biggest names in Ruby development and a model for how a consulting company should be run,
-              thoughtbot is known for their dedication to open-source and the startup community.
-              That love for openness and pride in their craft really does run through everything we did together.
-              I helped mentor other designers and develop best practices such as thoughtbot's influential Product Design Sprint.
-              Advising projects while leading design for client projects helped further my love for working with talented and multidisciplinary people.
+      <TimelineItem
+        company="thoughtbot"
+        when="2014-2016"
+        title="Sr Product Designer"
+        icon="/images/timeline-thoughtbot.svg"
+        caseStudies={[
+          {summary: SharespostSummary, href: "/work/sharespost"}
+        ]}>
+        thoughtbot is known for their dedication to open-source, openness, and pride in their craft.
+        I helped mentor other designers and develop best practices such as their influential Product Design Sprint.
+      </TimelineItem>
 
-            </TimelineItem>
-            <div className={styles.cardContainer}>
-              <TimelineCard summary={SharespostSummary} href="/work/sharespost" />
-            </div>
-          </Tab.Panel>
+      <TimelineItem
+        company="Brightbit"
+        when="2010-2014"
+        title="Co-Founder & Design Lead"
+        icon="/images/timeline-brightbit.svg"
+        caseStudies={[
+          {summary: ArmadaSummary, href: "/work/armada"}
+        ]}>
+        I co-founded the company and led design for a team of seven.
+        We focused on Ruby on Rails, Javascript and hybrid mobile apps, folding best practices from companies like thoughtbot into our own.
+      </TimelineItem>
 
-          <Tab.Panel className={`${styles.tabPanel} surface`}>
-            <TimelineItem
-              company="Brightbit"
-              when="2010-2014"
-              title="Co-Founder & Design Lead"
-              icon="/images/timeline-brightbit.svg"
-            >
-              I co-founded the company and led design and front-end development for a team of seven.
-              We focused on Ruby on Rails, Javascript and hybrid mobile apps, folding best practices from companies like thoughtbot into our own.
-              Brightbit was one of the leading development shops in the region and I'm really proud of the company and team we built.
-            </TimelineItem>
-            <div className={styles.cardContainer}>
-              <TimelineCard summary={ArmadaSummary} href="/work/armada" />
-            </div>
-          </Tab.Panel>
+      <div className={styles.itemContainer}>
+        <div className={styles.textContainer}>
+          <h2>Design consulting</h2>
+          <p>
+            I have led design projects from startups to big enterprise companies.
+            No matter the size of the project, I believe in starting small, iterating quickly, and listening to what your users are telling you.
+          </p>
+        </div>
 
-          <Tab.Panel className={`${styles.tabPanel} surface`}>
-            <div className={styles.logoBody}>
-              <h2>Design consulting</h2>
-              <p>
-                I have led design projects from startups to big enterprise companies.
-                No matter the size of the project, I believe in starting small, iterating quickly, and listening to what your users are telling you.
-              </p>
-            </div>
-            <div className={styles.logoContainer}>
-              <LogoExpedia />
-              <LogoDollarShaveClub />
-              <LogoSharespost />
-              <LogoAmex />
-              <LogoATT />
-            </div>
-          </Tab.Panel>
-        </Tab.Panels>
-        <Tab.List className={styles.tabList}>
-          <Tab className={styles.tab}>
-            HashiCorp
-          </Tab>
-          <Tab className={styles.tab}>
-            thoughtbot
-          </Tab>
-          <Tab className={styles.tab}>
-            Brightbit
-          </Tab>
-          <Tab className={styles.tab}>
-            Consulting
-          </Tab>
-          <a href="https://linkedin.com/in/joshuaogle" target="_new">
-            &#8599;
-          </a>
-        </Tab.List>
-      </Tab.Group>
+        <div className={styles.logoContainer}>
+          <LogoExpedia />
+          <LogoDollarShaveClub />
+          <LogoSharespost />
+          <LogoAmex />
+          <LogoATT />
+        </div>
+      </div>
     </section>
   )
 

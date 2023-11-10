@@ -5,10 +5,10 @@ import Intro from '../../components/intro'
 import Example from '../../components/example'
 
 export const summary = {
-  title: "Vault Secrets Manager",
+  title: "Vault",
   meta: {
     date: "2021",
-    role: "Design/Research Lead",
+    role: "Design Lead",
     time: "4 years",
     team: "1 Designer, 1 Developer",
     client: "HashiCorp",

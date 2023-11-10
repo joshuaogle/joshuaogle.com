@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import Tilt from 'react-parallax-tilt';
+import Image from 'next/image'
+import Tilt from 'react-parallax-tilt'
 import styles from '../styles/components/_timeline-card.module.css'
 
 type Props = {
@@ -25,13 +26,26 @@ const TimelineCard = ({summary, href}: Props) => {
         }}
       >
         <header className={styles.header}>
-          <img className={styles.icon} src={summary.theme.icon} />
-          <h4 className={styles.title}>
-            {summary.title}
-          </h4>
-          <small className={styles.meta}>
-            {summary.meta.role}
-          </small>
+          <Image
+            className={styles.icon}
+            src={summary.theme.icon}
+            height={24}
+            width={24}
+          />
+
+          <div className={styles.titleContainer}>
+            <h3 className={styles.title}>
+              {summary.title}
+            </h3>
+
+            <small className={styles.meta}>
+              {summary.meta.role}
+            </small>
+
+            <small className={styles.arrow}>
+              View details →
+            </small>
+          </div>
         </header>
       </Tilt>
     </Link>
