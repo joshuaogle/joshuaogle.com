@@ -1,11 +1,13 @@
 .timelineList {
   display: flex;
   flex-direction: column;
-  gap: 10vw;
+  gap: 15vw;
+  padding: 8vw;
 }
 
 .itemContainer {
   display: flex;
+  flex-direction: column;
   gap: var(--base-spacing);
 }
 
@@ -25,4 +27,15 @@
   color: var(--theme-muted-color);
   flex: 1;
   max-height: var(--large-spacing);
+}
+
+@media (min-width: 1000px) {
+  .itemContainer {
+    flex-direction: row;
+  }
+
+  .textContainer,
+  .logoContainer {
+    flex: 1;
+  }
 }

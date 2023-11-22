@@ -24,7 +24,7 @@ const Timeline = () => {
           {summary: StructureSummary, href: "/work/structure"}
         ]}>
         HashiCorp makes developer-focused infrastructure software. 
-        I led design for some of our most important products and helped grow our design team from 2 designers to 30+ across seven products.
+        I lead design for some of our most popular products and helped grow our design team from 2 designers to 30+ across seven teams.
       </TimelineItem>
 
       <TimelineItem

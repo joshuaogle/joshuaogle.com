@@ -50,14 +50,33 @@ const Structure = () => {
 
         <div className={`article-body centered`}>
           <section>
-            <div className="section-title">Background</div>
+            <div className="section-title">The challenge</div>
             <h2>Who designs the design system?</h2>
             <p>
-              I think when a lot of people think of design systems
+              When most people think of design systems
               they think about colorful galleries of buttons
               and typography.
-              What I think about is noisy meetings
+              What I think about is long noisy meetings
               full of collaboration and friendly debate.
+              Design systems are living things,
+              and only survive and grow if they are nurtured.
+              At HashiCorp, our Design System Working Group
+              was a thriving collaborative that included designers
+              from all of our products.
+            </p>
+            <p>
+              
+              {/* More about how I think about design systems */}
+            </p>
+          </section>
+
+          Example with buttons, colors, components
+
+          <section>
+            <div className="section-title">Background</div>
+            <h2>It was anarchy, like in a good way</h2>
+
+            <p>
               When I started at HashiCorp,
               it was as the 2nd product designer
               coming in to help make sense of these massive
@@ -97,6 +116,7 @@ const Structure = () => {
                 and then work on standardizing them
                 <mark>without slowing down feature delivery.</mark>
               </p>
+              {/* More about tierred system */}
 
               {/* Collaboration model example? */}
 

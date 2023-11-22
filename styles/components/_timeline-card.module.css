@@ -21,8 +21,8 @@
   transition: transform var(--base-timing) ease-in-out;
   transform-style: preserve-3d;
   z-index: 1;
-  height: 22vw;
-  width: 18vw;
+  height: 18em;
+  width: 14em;
 }
 
 .header {

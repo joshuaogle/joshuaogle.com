@@ -1,5 +1,5 @@
 .app {
-  padding: var(--large-spacing) 8vw  var(--base-spacing);
+  padding: var(--base-spacing);
   background: transparent url("/images/noise-transparent.png") repeat 0 0;
   background-size: 125px;
   background-attachment: fixed;
