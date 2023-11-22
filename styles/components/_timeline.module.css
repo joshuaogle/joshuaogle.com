@@ -1,6 +1,3 @@
-.timelineList {
-  display: flex;
-  flex-direction: column;
-  gap: 15vw;
-  padding: 8vw;
+.tabPanel {
+  animation: none;
 }

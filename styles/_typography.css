@@ -137,7 +137,7 @@ small,
 figcaption,
 .section-title {
   color: var(--theme-muted-color);
-  font-family: var(--heading-font);
+  font-family: var(--sans-serif);
   font-size: var(--small-font-size);
   font-weight: var(--font-weight-medium);
   letter-spacing: 0.05em;
