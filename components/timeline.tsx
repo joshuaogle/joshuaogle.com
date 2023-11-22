@@ -5,11 +5,6 @@ import {summary as VaultSummary} from '../pages/work/vault';
 import {summary as StructureSummary} from '../pages/work/structure';
 import {summary as SharespostSummary} from '../pages/work/sharespost';
 import {summary as ArmadaSummary} from '../pages/work/armada';
-import LogoAmex from '../public/images/client-amex.svg'
-import LogoATT from '../public/images/client-att.svg'
-import LogoDollarShaveClub from '../public/images/client-dollarshaveclub.svg'
-import LogoExpedia from '../public/images/client-expedia.svg'
-import LogoSharespost from '../public/images/client-sharespost.svg'
 
 const Timeline = () => {
   return (
@@ -50,24 +45,6 @@ const Timeline = () => {
         I co-founded the company and led design for a team of seven.
         We focused on Ruby on Rails, Javascript and hybrid mobile apps, folding best practices from companies like thoughtbot into our own.
       </TimelineItem>
-
-      <div className={styles.itemContainer}>
-        <div className={styles.textContainer}>
-          <h2>Design consulting</h2>
-          <p>
-            I have led design projects from startups to big enterprise companies.
-            No matter the size of the project, I believe in starting small, iterating quickly, and listening to what your users are telling you.
-          </p>
-        </div>
-
-        <div className={styles.logoContainer}>
-          <LogoExpedia />
-          <LogoDollarShaveClub />
-          <LogoSharespost />
-          <LogoAmex />
-          <LogoATT />
-        </div>
-      </div>
     </section>
   )
 

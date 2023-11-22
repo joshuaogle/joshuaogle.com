@@ -4,38 +4,3 @@
   gap: 15vw;
   padding: 8vw;
 }
-
-.itemContainer {
-  display: flex;
-  flex-direction: column;
-  gap: var(--base-spacing);
-}
-
-.textContainer {
-  flex: 1;
-}
-
-.logoContainer {
-  flex: 1;
-  display: flex;
-  justify-content: space-around;
-  gap: var(--small-spacing);
-  margin: var(--base-spacing);
-}
-
-.logoContainer svg {
-  color: var(--theme-muted-color);
-  flex: 1;
-  max-height: var(--large-spacing);
-}
-
-@media (min-width: 1000px) {
-  .itemContainer {
-    flex-direction: row;
-  }
-
-  .textContainer,
-  .logoContainer {
-    flex: 1;
-  }
-}
