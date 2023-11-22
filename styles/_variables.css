@@ -115,7 +115,7 @@
   --break-large: 1400px;
   --page-min-width: 30vw;
   --page-preferred-width: 50em;
-  --page-max-width: 66vw;
+  --page-max-width: 75vw;
   --page-width: clamp(var(--page-min-width), var(--page-preferred-width), var(--page-max-width));
 
   /* Fonts */
