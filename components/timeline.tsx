@@ -19,8 +19,8 @@ const timelineEvents = [
       {summary: ArmadaSummary, href: "/work/armada"}
     ],
     copy: "\
-      I co-founded the company and led design for a team of seven. \
-      We focused on Ruby on Rails, Javascript and hybrid mobile apps."
+      I co-founded a consultancy in Oklahoma City and led design for a team of seven. \
+      We worked with local startups to build Ruby on Rails, Javascript and hybrid mobile apps."
   },
   {
     title: "Taking companies from zero to launch",
@@ -68,7 +68,8 @@ const Timeline = () => {
                 enterTo="opacity-100"
                 leave="transition-opacity duration-150"
                 leaveFrom="opacity-100"
-                leaveTo="opacity-0">
+                leaveTo="opacity-0"
+                key={index}>
                 <Tab.Panel className={`${styles.tabPanel} surface`}>
                   <TimelineItem
                     company={event.company}
@@ -88,7 +89,10 @@ const Timeline = () => {
         <Tab.List className={styles.tabList}>
           {timelineEvents.map((event, index) => {
             return (
-              <Tab className={styles.tab}>
+              <Tab
+                className={styles.tab}
+                key={index}>
+                <span className={styles.tabDot} />
                 <span className={styles.tabLabel}>
                   {event.when}
                 </span>

@@ -16,6 +16,7 @@ const Example = ({ caption, images }: Props) => {
     >
       {images.map((filename, index) => (
         <div
+          key={index}
           className={styles.area}
           data-number={`${index + 1}-of-${of}`}
         >

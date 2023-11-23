@@ -1,13 +1,4 @@
-.cardLink {
-  display: block;
-}
-
 .card {
-  /* background-image is not done with variables to prevent bug where bg disappears on hover*/
-  --card-background-color: attr(data-bg-color var(--theme-muted-color));
-  --card-muted-color: var(--theme-muted-color);
-  --card-highlight-rgb: var(--theme-highlight-rgb);
-  --card-highlight: inset 0 1px 0 0 rgba(var(--card-highlight-rgb), 0.25);
   background-color: var(--card-background-color);
   background-image: var(--card-background-image);
   background-size: cover;
@@ -19,6 +10,7 @@
   display: flex;
   font-size: 75%;
   flex-direction: column;
+  justify-content: space-between;
   overflow: hidden;
   padding: var(--small-spacing);
   position: relative;
@@ -27,19 +19,11 @@
   z-index: 1;
   height: 14rem;
   width: 11rem;
+  z-index: 1;
 }
 
 .card:hover {
   box-shadow: var(--shadow-high);
-}
-
-.header {
-  align-content: center;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  justify-content: space-between;
-  transform: translateZ(100px);
 }
 
 .icon {

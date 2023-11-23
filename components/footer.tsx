@@ -1,9 +1,5 @@
 import Link from 'next/link'
 import { Switch } from '@headlessui/react'
-import IconGithub from '../public/images/icon-github.svg'
-import IconMastodon from '../public/images/icon-mastodon.svg'
-import IconDribbble from '../public/images/icon-dribbble.svg'
-import IconLinkedIn from '../public/images/icon-linkedin.svg'
 import IconColorScheme from '../public/images/color-scheme.svg'
 import styles from '../styles/components/_footer.module.css'
 

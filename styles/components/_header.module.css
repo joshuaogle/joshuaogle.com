@@ -16,7 +16,7 @@
 .menuButton,
 .menuItems {
   position: fixed;
-  top: var(--large-spacing);
+  top: 5vw;
   right: var(--base-spacing);
   z-index: 100;
 }

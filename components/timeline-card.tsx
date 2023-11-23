@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import Tilt from 'react-parallax-tilt'
+import { useMemo } from 'react'
 import styles from '../styles/components/_timeline-card.module.css'
 
 type Props = {
@@ -8,9 +9,17 @@ type Props = {
   href: string,
 }
 
-const TimelineCard = ({summary, href}: Props) => {
+const TimelineCard = ({ summary, href }: Props) => {
+  const cardStyle = useMemo(() => ({
+    "--card-background-color": `${summary.theme.backgroundColor}`,
+    "--card-background-image": `${summary.theme.backgroundImage || 'none'}`, // Provide a default value if not available
+  }), [summary.theme.backgroundColor, summary.theme.backgroundImage]);
+
   return (
-    <Link href={href} className={styles.cardLink}>
+    <Link
+      href={href}
+      style={cardStyle}
+    >
       <Tilt
         glareEnable={true}
         glareMaxOpacity={0.2}
@@ -20,34 +29,28 @@ const TimelineCard = ({summary, href}: Props) => {
         perspective={2000}
         transitionSpeed={2000}
         className={styles.card}
-        style={{
-          "--card-background-color": summary.theme.backgroundColor,
-          "--card-background-image": summary.theme.backgroundImage,
-          "--card-highlight-rgb": summary.theme.highlightRGB
-        }}
       >
-        <header className={styles.header}>
-          <Image
-            className={styles.icon}
-            src={summary.theme.icon}
-            height={24}
-            width={24}
-          />
+        <Image
+          alt={summary.title}
+          className={styles.icon}
+          src={summary.theme.icon}
+          height={24}
+          width={24}
+        />
 
-          <div className={styles.titleContainer}>
-            <h3 className={styles.title}>
-              {summary.title}
-            </h3>
+        <div className={styles.titleContainer}>
+          <h3 className={styles.title}>
+            {summary.title}
+          </h3>
 
-            <small className={styles.meta}>
-              {summary.meta.role}
-            </small>
+          <small className={styles.meta}>
+            {summary.meta.role}
+          </small>
 
-            <small className={styles.arrow}>
-              View details →
-            </small>
-          </div>
-        </header>
+          <small className={styles.arrow}>
+            View details →
+          </small>
+        </div>
       </Tilt>
     </Link>
   )

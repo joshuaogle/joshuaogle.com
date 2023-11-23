@@ -55,8 +55,8 @@ const BackLink = () => {
       <Link href="/" className={styles.backLink}>
         <Image
           src="/images/back.png"
-          height="48"
-          width="80"
+          height="36"
+          width="60"
           alt="Home"
           className="sketch"
         />
@@ -70,9 +70,9 @@ const MenuLink = () => {
     <Menu.Button className={styles.menuButton}>
       <Image
         src="/images/menu.png"
-        height="50"
-        width="69"
-        alt="back"
+        height="40"
+        width="59"
+        alt="Back"
         className="sketch"
       />
     </Menu.Button>

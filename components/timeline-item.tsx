@@ -36,8 +36,12 @@ const TimelineItem = ({title,  icon, company, role, caseStudies, children }: Pro
 
       {caseStudies &&
         <div className={styles.cardContainer}>
-          {caseStudies.map((study) => (
-            <TimelineCard summary={study.summary} href={study.href} />
+          {caseStudies.map((study, index) => (
+            <TimelineCard
+              summary={study.summary}
+              href={study.href}
+              key={index}
+            />
           ))}
         </div>
       }

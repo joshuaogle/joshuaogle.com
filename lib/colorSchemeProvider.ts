@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 
-
 export const initColorScheme = () => {
   const currentColorScheme = getColorScheme();
   if (!!currentColorScheme) {
