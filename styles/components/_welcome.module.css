@@ -1,21 +1,22 @@
 .container {
-  padding: 25vh 5vw 15vh;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   position: relative;
+  padding: 5vh 0 0;
 }
 
-@media (min-width: 32em) {
+@media (min-width: 36em) {
   .container {
-    align-items: center;
-    display: flex;
     flex-direction: row;
     margin-bottom: calc(var(--base-spacing) * -1);
     justify-content: center;
+    padding: 15vh 0 5vh;
   }
 }
 
 .portrait {
-  flex: 2;
-  margin: 0 auto;
+  flex: 1;
   max-width: 12em;
 }
 
@@ -30,13 +31,12 @@ html[data-prefers-color-scheme="light"] .portrait img {
 
 
 .textContainer {
-  margin-bottom: var(--base-spacing);
+  margin-bottom: var(--small-spacing);
   padding: var(--base-spacing) 0 0;
 }
 
 @media (min-width: 32em) {
   .textContainer {
-    flex: 3;
     padding: var(--base-spacing);
   }
 }

@@ -26,4 +26,6 @@
   color: var(--theme-muted-color);
   flex: 0 0 25%;
   margin: var(--small-spacing);
+  max-height: 4rem;
+  max-width: 6rem;
 }

@@ -6,8 +6,8 @@ h4 {
   font-family: var(--heading-font);
   font-weight: var(--font-weight-semibold);
   letter-spacing: 0.015em;
-  line-height: 1.1;
-  margin: 0 0 var(--small-spacing);
+  line-height: 1.2;
+  margin: 0 0 var(--smallest-spacing);
 }
 
 h1 {
@@ -139,8 +139,7 @@ figcaption,
   color: var(--theme-muted-color);
   font-family: var(--sans-serif);
   font-size: var(--small-font-size);
-  font-weight: var(--font-weight-medium);
-  letter-spacing: 0.05em;
+  font-weight: var(--font-weight-regular);
   line-height: 200%;
   margin: var(--small-spacing) auto;
 }

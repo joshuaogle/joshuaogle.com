@@ -103,7 +103,7 @@
   --green-100: #F7FDDF;
 
   /* Spacing */
-  --base-spacing: 2rem;
+  --base-spacing: 2.5rem;
   --small-spacing: calc(var(--base-spacing) / 2);
   --smallest-spacing: calc(var(--small-spacing) / 2);
   --large-spacing: calc(var(--base-spacing) * 2);
@@ -125,9 +125,9 @@
   --font-weight-regular: 400;
   --font-weight-semibold: 600;
   --font-weight-black: 800;
-  --base-font-size: calc(0.75em + 1vmax);
-  --small-font-size: calc(var(--base-font-size) * 0.75);
-  --smallest-font-size: calc(var(--base-font-size) * 0.66);
+  --base-font-size: calc(0.25em + 1.25vmax);
+  --small-font-size: calc(var(--base-font-size) * 0.8);
+  --smallest-font-size: calc(var(--base-font-size) * 0.6);
 
   /* Borders */
   --base-border-radius: var(--smallest-spacing);

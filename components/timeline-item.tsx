@@ -3,30 +3,31 @@ import TimelineCard from './timeline-card'
 import styles from '../styles/components/_timeline-item.module.css'
 
 type Props = {
+  title: string,
   icon: string,
   company: string,
-  title: string,
+  role: string,
   when: string,
-  caseStudies: array,
+  caseStudies: object,
   children: React.ReactNode
 }
 
-const TimelineItem = ({ icon, company, title, when, caseStudies, children }: Props) => {
+const TimelineItem = ({title,  icon, company, role, caseStudies, children }: Props) => {
   return (
     <div className={styles.itemContainer}>
       <div className={styles.textContainer}>
         <h3 className={styles.title}>
+          {title}
+        </h3>
+        <small className={styles.subtitle}>
           <Image
             src={icon}
-            height="32"
-            width="32"
+            height="20"
+            width="20"
             className={styles.icon}
             alt={company}
           />
-          {company}
-        </h3>
-        <small className={styles.subtitle}>
-          {title} • {when}
+          {company} • {role}
         </small>
         <p>
           {children}

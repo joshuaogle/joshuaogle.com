@@ -14,11 +14,12 @@ const Welcome = () => {
       </div>
       <div className={styles.textContainer}>
         <h1 className={styles.title}>
-          Hi, I'm Joshua
+          Joshua Ogle
         </h1>
         <p>
-          Software Designer at <a href="http://hashicorp.com" target="_new">Hashicorp</a>,
-          creating developer tools and making the cloud a <mark>better place to live</mark>.
+          Product Designer making the cloud
+          <br/>
+          a <mark>better place to live</mark>
         </p>
       </div>
     </header>

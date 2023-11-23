@@ -1,14 +1,9 @@
-.tabPanel {
-  animation: none;
-}
-
 .tabList {
   align-items: center;
   display: flex;
-  font-size: var(--smallest-font-size);
   justify-content: center;
   gap: var(--smallest-spacing);
-  margin: var(--small-spacing);
+  margin: var(--base-spacing) var(--small-spacing) var(--small-spacing);
   position: relative;
 }
 
@@ -21,13 +16,32 @@
   background-color: var(--theme-muted-color);
   border-radius: 1rem;
   cursor: pointer;
-  height: 0.75rem;
-  font-size: 0rem;
+  height: 0.5rem;
+  position: relative;
   transition: all var(--base-timing);
-  width: 0.75rem;
+  width: 0.5rem;
 }
 
 .tab[tabindex="0"] {
   background-color: var(--theme-text-color);
-  width: 2.5rem;
+  width: 3rem;
+}
+
+.tabLabel {
+  color: var(--theme-muted-color);
+  font-size: var(--small-font-size);
+  font-weight: var(--font-weight-medium);
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  left: 50%;
+  white-space: nowrap;
+  top: -0.5em;
+  transform: translateX(-50%) translateY(-100%);
+  transition: all var(--base-timing);
+}
+
+/* Always show the focused label */
+.tab[tabindex="0"] .tabLabel {
+  opacity: 1;
 }
