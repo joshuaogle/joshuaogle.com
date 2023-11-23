@@ -16,10 +16,9 @@ export const summary = {
   },
   theme: {
     backgroundColor: "rgb(27, 108, 148)",
-    backgroundImage: "",
+    backgroundImage: "url('/images/case-study-bg-armada.png')",
     highlightRGB: "2, 169, 242",
-    icon: "/images/case-study-logo-armada.svg",
-    thumbnail: "/images/case-studies/vault-home.png"
+    icon: "/images/case-study-logo-armada.svg"
   },
   intro: "Description."
 }

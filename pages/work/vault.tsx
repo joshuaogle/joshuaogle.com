@@ -18,8 +18,7 @@ export const summary = {
     backgroundColor: "rgb(114, 114, 116)",
     backgroundImage: "",
     highlightRGB: "255, 236, 110",
-    icon: "/images/case-study-logo-vault.svg",
-    thumbnail: "/images/case-studies/vault-home.png"
+    icon: "/images/case-study-logo-vault.svg"
   },
   intro: "Description."
 }

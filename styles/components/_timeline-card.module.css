@@ -4,11 +4,14 @@
 
 .card {
   /* background-image is not done with variables to prevent bug where bg disappears on hover*/
-  --card-background-color: var(--theme-muted-color);
+  --card-background-color: attr(data-bg-color var(--theme-muted-color));
   --card-muted-color: var(--theme-muted-color);
   --card-highlight-rgb: var(--theme-highlight-rgb);
   --card-highlight: inset 0 1px 0 0 rgba(var(--card-highlight-rgb), 0.25);
   background-color: var(--card-background-color);
+  background-image: var(--card-background-image);
+  background-size: cover;
+  background-position: center;
   border-radius: var(--base-border-radius);
   box-shadow: var(--shadow-base);
   break-inside: avoid;

@@ -22,6 +22,7 @@ const TimelineCard = ({summary, href}: Props) => {
         className={styles.card}
         style={{
           "--card-background-color": summary.theme.backgroundColor,
+          "--card-background-image": summary.theme.backgroundImage,
           "--card-highlight-rgb": summary.theme.highlightRGB
         }}
       >

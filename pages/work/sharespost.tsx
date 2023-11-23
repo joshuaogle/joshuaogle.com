@@ -17,8 +17,7 @@ export const summary = {
     backgroundColor: "#332D8D",
     backgroundImage: "url('/images/case-study-bg-sharespost.png')",
     highlightRGB: "0, 182, 242",
-    icon: "/images/case-study-logo-sharespost.svg",
-    thumbnail: "/images/case-studies/sharespost-home.png",
+    icon: "/images/case-study-logo-sharespost.svg"
   },
   intro: "At thoughtbot, we helped one of the largest private securities firms make the process of buying and selling shares easy. Their existing process was very manual, relying on brokers to do almost everything. To help them scale even bigger, they would need to find a way to automate as much of the process. This would free up the brokers to provide better service to even more users.",
 }
