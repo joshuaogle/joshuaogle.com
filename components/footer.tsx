@@ -31,13 +31,14 @@ const Footer = ({ isDarkMode, setIsDarkMode }) => {
       <small className={styles.copyright}>
         &copy;
         All rights reserved.
-        Made <GithubLink>by hand*</GithubLink> in Colorado.
+        &nbsp;
+        <GithubLink>Made by hand*</GithubLink> in Colorado.
       </small>
 
       <Switch
         checked={isDarkMode}
         onChange={toggleColorScheme}
-        className={`surface ${styles.switchBg} ${ifSwitchIsOn(styles.switchBgOn)}`}
+        className={`surface ${styles.switch} ${ifSwitchIsOn(styles.switchBgOn)}`}
       >
         <span
           aria-hidden="true"

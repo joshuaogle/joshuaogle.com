@@ -1,8 +1,7 @@
 .app {
   padding: var(--base-spacing);
   background: transparent url("/images/noise-transparent.png") repeat 0 0;
-  background-size: 125px;
-  background-attachment: fixed;
+  background-size: 200px 133px;
 }
 
 .centered {
@@ -12,7 +11,7 @@
 
 .surface {
   animation: rise var(--base-timing);
-  backdrop-filter: blur(var(--small-spacing));
+  backdrop-filter: blur(var(--smallest-spacing));
   background: rgba(var(--theme-surface-rgb), 0.2);
   background-size: 100px;
   border-radius: var(--surface-border-radius);

@@ -6,7 +6,7 @@
 
 .backLink {
   color: var(--theme-text-color);
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .backText {
@@ -34,12 +34,16 @@
   border: 0;
   color: var(--theme-text-color);
   cursor: pointer;
-  font-size: 2em;
+  font-size: 1.5em;
+}
+
+.menuButton:hover {
+  color: rgb(var(--theme-highlight-rgb));
 }
 
 .menuItems {
   backdrop-filter: blur(var(--small-spacing));
-  padding: var(--small-spacing);
+  padding: var(--smallest-spacing) var(--small-spacing);
   top: calc(var(--large-spacing) + 50px + var(--smallest-spacing));
   width: 15em;
 }
@@ -47,14 +51,14 @@
 .title {
   font-size: 1.33rem;
   line-height: 1.2;
-  padding: var(--small-spacing) var(--small-spacing) 0;
+  padding: var(--smallest-spacing) var(--smallest-spacing) 0;
 }
 
 .link {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   gap: var(--small-spacing);
-  padding: var(--smallest-spacing) var(--small-spacing);
+  padding: var(--smallest-spacing);
   transition: color var(--base-timing);
 }
 

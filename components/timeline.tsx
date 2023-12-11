@@ -54,23 +54,30 @@ const timelineEvents = [
 
 const Timeline = () => {
   const [tabIndex, setTabIndex] = useState(2);
+
+  const transitionClasses = {
+    enter: "tabTransition",
+    enterFrom: "tabHide",
+    enterTo: "tabShow",
+    leave: "tabTransition",
+    leaveFrom: "tabShow",
+    leaveTo: "tabHide"
+  }
+
   return (
     <section>
-      <Tab.Group selectedIndex={tabIndex} onChange={setTabIndex}>
+      <Tab.Group
+        selectedIndex={tabIndex}
+        onChange={setTabIndex}>
         <Tab.Panels>
           {timelineEvents.map((event, index) => {
             return (
               <Transition
-                appear={true}
+                key={index}
                 show={true}
-                enter="transition-opacity duration-75"
-                enterFrom="opacity-0"
-                enterTo="opacity-100"
-                leave="transition-opacity duration-150"
-                leaveFrom="opacity-100"
-                leaveTo="opacity-0"
-                key={index}>
-                <Tab.Panel className={`${styles.tabPanel} surface`}>
+                {...transitionClasses}>
+                
+                <Tab.Panel className='surface'>
                   <TimelineItem
                     company={event.company}
                     when={event.when}
@@ -85,7 +92,6 @@ const Timeline = () => {
             )
           })}
         </Tab.Panels>
-
         <Tab.List className={styles.tabList}>
           {timelineEvents.map((event, index) => {
             return (

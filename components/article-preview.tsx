@@ -15,6 +15,9 @@ const ArticlePreview = ({
 }: Props) => {
   return (
     <div className={styles.container}>
+      <small className={styles.date}>
+        <DateFormatter dateString={meta.date} />
+      </small>
       <h3 className={styles.title}>
         <Link
           as={`/articles/${slug}`}
@@ -24,9 +27,6 @@ const ArticlePreview = ({
           {title}
         </Link>
       </h3>
-      <div className={styles.date}>
-        &mdash; <DateFormatter dateString={meta.date} />
-      </div>
     </div>
   )
 }

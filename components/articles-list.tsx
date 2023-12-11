@@ -1,11 +1,14 @@
 import ArticlePreview from './article-preview'
 import Article from '../interfaces/article'
+import styles from '../styles/components/_article-list.module.css'
+
 
 type Props = {
   allArticles: Article[]
 }
 
 const ArticlesList = ({ allArticles }: Props) => {
+  const {latestArticle, olderArticles} = allArticles
   return (
     <section className="centered">
       <h2>Articles</h2>
@@ -16,7 +19,7 @@ const ArticlesList = ({ allArticles }: Props) => {
         or our partners to get more creative.  
       </p>
 
-      <nav>
+      <nav className={styles.list}>
         {allArticles.map((article) => (
           <ArticlePreview
             key={article.slug}

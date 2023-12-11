@@ -7,8 +7,8 @@ const Welcome = () => {
       <div className={styles.portrait}>
         <Image
           src="/images/portrait.png"
-          height="548"
-          width="475"
+          height="1200"
+          width="1200"
           alt="Joshua Ogle"
         />
       </div>
@@ -17,9 +17,8 @@ const Welcome = () => {
           Joshua Ogle
         </h1>
         <p>
-          Product Designer making the cloud
-          <br/>
-          a <mark>better place to live</mark>
+          Product Design Lead, making the
+          <br/>cloud a <mark>better place to live</mark>
         </p>
       </div>
     </header>

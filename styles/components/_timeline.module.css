@@ -48,3 +48,15 @@
 .tab[tabindex="0"] .tabLabel {
   opacity: 1;
 }
+
+.tabTransition {
+  transition: all 5s;
+}
+
+.tabHide {
+  opacity: 0;
+}
+
+.tabShow {
+  opacity: 100;
+}

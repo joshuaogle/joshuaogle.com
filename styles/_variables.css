@@ -113,9 +113,9 @@
   --break-small: 600px;
   --break-medium: 1000px;
   --break-large: 1400px;
-  --page-min-width: 30vw;
-  --page-preferred-width: 50em;
-  --page-max-width: 75vw;
+  --page-min-width: 40vw;
+  --page-preferred-width: 60em;
+  --page-max-width: 65vw;
   --page-width: clamp(var(--page-min-width), var(--page-preferred-width), var(--page-max-width));
 
   /* Fonts */
@@ -126,8 +126,8 @@
   --font-weight-semibold: 600;
   --font-weight-black: 800;
   --base-font-size: calc(0.25em + 1.25vmax);
-  --small-font-size: calc(var(--base-font-size) * 0.8);
-  --smallest-font-size: calc(var(--base-font-size) * 0.6);
+  --small-font-size: calc(var(--base-font-size) * 0.85);
+  --smallest-font-size: calc(var(--base-font-size) * 0.66);
 
   /* Borders */
   --base-border-radius: var(--smallest-spacing);
@@ -173,7 +173,7 @@
   --theme-muted-color: rgba(255, 255, 255, 0.4);
   --theme-surface-rgb: 30, 26, 22;
   --theme-shadow-rgb: 30, 26, 22;
-  --theme-background-color: var(--neutral-800);
+  --theme-background-color: var(--neutral-900);
   --background-gradient-start: 0.15;
   --background-gradient-end: 0.3;
 }

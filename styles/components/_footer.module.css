@@ -9,27 +9,29 @@
   margin: 0;
 }
 
+.copyright a {
+  color: var(--theme-muted-color);
+}
+
+.copyright a:hover {
+  color: var(--theme-link-hover);
+}
+
 /* Color Scheme Switch */
-.switchBg {
-  --border-width: calc(var(--smallest-spacing) / 2);
-  border-radius: var(--large-spacing);
-  border: var(--border-width) solid transparent;
+.switch {
+  --switch-size: 1.75rem;
+  border: none;
   cursor: pointer;
-  display: inline-flex;
-  padding: 0;
-  width: calc(var(--border-width) + (var(--base-spacing) * 1.66) + var(--border-width));
+  padding: calc(var(--switch-size) / 8);
+  text-align: left;
+  width: calc(var(--switch-size) * 2);
 }
 
-.switchBg::before {
-  --spacing: calc((var(--smallest-spacing) / 2 * -1) - 1px);
-  top: var(--spacing);
-  left: var(--spacing);
-  right: var(--spacing);
-  bottom: var(--spacing);
-  border-radius: 5em;
+.switch::before {
+  border-radius: var(--switch-size);
 }
 
-.switchBg:focus {
+.switch:focus {
   outline: none;
 }
 
@@ -42,13 +44,13 @@
 }
 
 .switchIndicatorOn {
-  left: calc(100% - var(--base-spacing));
+  left: calc(100% - var(--switch-size));
 }
 
 .switchIndicator svg {
   color: var(--theme-text-color);
-  height: var(--base-spacing);
-  width: var(--base-spacing);
+  height: var(--switch-size);
+  width: var(--switch-size);
   transition: transform var(--base-timing) ease-out;
 }
 

@@ -2,11 +2,12 @@
   align-items: center;
   display: flex;
   flex-direction: column;
+  gap: var(--small-spacing);
   position: relative;
   padding: 5vh 0 0;
 }
 
-@media (min-width: 36em) {
+@media (min-width: 600px) {
   .container {
     flex-direction: row;
     margin-bottom: calc(var(--base-spacing) * -1);
@@ -17,7 +18,7 @@
 
 .portrait {
   flex: 1;
-  max-width: 12em;
+  max-width: 16em;
 }
 
 .portrait img {
@@ -29,14 +30,6 @@ html[data-prefers-color-scheme="light"] .portrait img {
   box-shadow: var(--shadow-low);
 }
 
-
 .textContainer {
   margin-bottom: var(--small-spacing);
-  padding: var(--base-spacing) 0 0;
-}
-
-@media (min-width: 32em) {
-  .textContainer {
-    padding: var(--base-spacing);
-  }
 }

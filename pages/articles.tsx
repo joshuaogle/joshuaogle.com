@@ -17,7 +17,6 @@ export default function Articles({ allArticles }: Props) {
         </Head>
         
         <ArticlesList allArticles={allArticles} />
-        
       </Layout>
     </>
   )

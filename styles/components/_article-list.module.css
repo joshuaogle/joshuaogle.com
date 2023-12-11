@@ -1,0 +1,9 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--base-spacing);
+}
+
+.list * {
+  flex: 1 1 25%;
+}

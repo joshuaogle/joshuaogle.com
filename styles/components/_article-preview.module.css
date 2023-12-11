@@ -1,16 +1,3 @@
-.container {
-  align-items: baseline;
-  justify-content: flex-end;
-  display: flex;
-  flex-direction: row-reverse;
-  gap: var(--base-spacing);
-}
-
 .date {
-  color: var(--theme-muted-color);
-  flex: 0 0 8em;
   font-family: var(--heading-font);
-  font-size: var(--small-font-size);
-  font-weight: var(--font-weight-semibold);
-  letter-spacing: 0.033em;
 }
