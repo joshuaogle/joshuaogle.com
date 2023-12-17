@@ -1,36 +1,84 @@
-.tabList {
+/* Tab Panels */
+
+.tabPanels {
+  --tab-gap: calc(var(--smallest-spacing) / 2);
+  display: flex;
+  gap: var(--tab-gap);
+  transition: all var(--slow-timing) ease-out;
+  margin: 0 var(--base-spacing);
+}
+
+.tabPanels[data-is-active="2"] {
+  transform: translateX(calc(-200% - var(--tab-gap)));
+}
+
+.tabPanels[data-is-active="1"] {
+  transform: translateX(calc(-100% - (var(--tab-gap) / 2)));
+}
+
+.tabPanelContainer {
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  flex: 0 0 100%;
+}
+
+.tabPanel {
+  cursor: pointer;
+  transform: scale(0.94);
+  transition: all var(--slow-timing) ease-out;
+}
+
+.tabPanel:hover {
+  transform: scale(0.96);
+  transition: all var(--base-timing) ease-in-out;
+}
+
+.panelActive,
+.panelActive:hover {
+  cursor: default;
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+
+/* Tab links */
+
+.tabNavs {
+  --dot-size: 0.5rem;
   align-items: center;
   display: flex;
   justify-content: center;
   margin: var(--base-spacing) var(--small-spacing) var(--small-spacing);
 }
 
-.tabList a {
+.tabNavs a {
   color: var(--theme-muted-color);
 }
 
-.tab {
+.tabNav {
   all: unset;
   cursor: pointer;
-  padding: 0.25em;
+  padding: calc(var(--dot-size) / 2);
   position: relative;
 }
 
-.tabDot {
+.navDot {
   background-color: var(--theme-muted-color);
-  border-radius: 1rem;
+  border-radius: var(--dot-size);
   display: block;
-  height: 0.5rem;
+  height: var(--dot-size);
   transition: all var(--base-timing);
-  width: 0.5rem;
+  width: var(--dot-size);
 }
 
-.tab[tabindex="0"] .tabDot {
+.navActive .navDot {
   background-color: var(--theme-text-color);
   width: 3rem;
 }
 
-.tabLabel {
+.navLabel {
   color: var(--theme-muted-color);
   font-size: var(--small-font-size);
   font-weight: var(--font-weight-semibold);
@@ -44,19 +92,6 @@
   transition: all var(--base-timing);
 }
 
-/* Always show the focused label */
-.tab[tabindex="0"] .tabLabel {
+.navActive .navLabel {
   opacity: 1;
-}
-
-.tabTransition {
-  transition: all 5s;
-}
-
-.tabHide {
-  opacity: 0;
-}
-
-.tabShow {
-  opacity: 100;
 }

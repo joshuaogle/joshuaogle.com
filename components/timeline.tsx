@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { Tab, Transition } from '@headlessui/react'
 import TimelineItem from './timeline-item'
 import styles from '../styles/components/_timeline.module.css'
 
@@ -53,60 +52,60 @@ const timelineEvents = [
 ]
 
 const Timeline = () => {
-  const [tabIndex, setTabIndex] = useState(2);
-
-  const transitionClasses = {
-    enter: "tabTransition",
-    enterFrom: "tabHide",
-    enterTo: "tabShow",
-    leave: "tabTransition",
-    leaveFrom: "tabShow",
-    leaveTo: "tabHide"
-  }
+  const [activeIndex, setActiveIndex] = useState(2);
 
   return (
     <section>
-      <Tab.Group
-        selectedIndex={tabIndex}
-        onChange={setTabIndex}>
-        <Tab.Panels>
-          {timelineEvents.map((event, index) => {
-            return (
-              <Transition
-                key={index}
-                show={true}
-                {...transitionClasses}>
-                
-                <Tab.Panel className='surface'>
-                  <TimelineItem
-                    company={event.company}
-                    when={event.when}
-                    role={event.role}
-                    title={event.title}
-                    icon={event.icon}
-                    caseStudies={event.caseStudies}>
-                    {event.copy}
-                  </TimelineItem>
-                </Tab.Panel>
-              </Transition>
-            )
-          })}
-        </Tab.Panels>
-        <Tab.List className={styles.tabList}>
-          {timelineEvents.map((event, index) => {
-            return (
-              <Tab
-                className={styles.tab}
-                key={index}>
-                <span className={styles.tabDot} />
-                <span className={styles.tabLabel}>
-                  {event.when}
-                </span>
-              </Tab>
-            )
-          })}
-        </Tab.List>
-      </Tab.Group>
+      <div
+        className={styles.tabPanels}
+        data-is-active={activeIndex}>
+        {timelineEvents.map((event, panelIndex) => {
+          const tabPanelClasses = [
+            `surface`,
+            styles.tabPanel,
+            (panelIndex === activeIndex ? styles.panelActive : '')
+          ].join(' ')
+
+          return (
+            <div className={styles.tabPanelContainer}>
+              <div
+                onClick={() => setActiveIndex(panelIndex)}
+                className={tabPanelClasses}>
+                <TimelineItem
+                  company={event.company}
+                  when={event.when}
+                  role={event.role}
+                  title={event.title}
+                  icon={event.icon}
+                  caseStudies={event.caseStudies}>
+                  {event.copy}
+                </TimelineItem>
+              </div>
+            </div>
+          )
+        })}
+      </div>
+
+      <div className={styles.tabNavs}>
+        {timelineEvents.map((event, navIndex) => {
+          const navClasses = [
+            styles.tabNav,
+            (navIndex === activeIndex ? styles.navActive : '')
+          ].join(' ')
+
+          return (
+            <div
+              className={navClasses}
+              onClick={() => setActiveIndex(navIndex)}
+              key={navIndex}>
+              <span className={styles.navDot} />
+              <span className={styles.navLabel}>
+                {event.when}
+              </span>
+            </div>
+          )
+        })}
+      </div>
     </section>
   )
 
