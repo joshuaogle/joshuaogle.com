@@ -9,7 +9,7 @@
 
 html {
   background: var(--theme-background-color);
-  transition: all var(--slowest-timing) ease-in-out;
+  transition: all var(--slowest-timing) var(--fast-easing);
 }
 
 body {

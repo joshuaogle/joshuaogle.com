@@ -14,7 +14,7 @@
   overflow: hidden;
   padding: var(--small-spacing);
   position: relative;
-  transition: transform var(--base-timing) ease-in-out;
+  transition: transform var(--base-timing) var(--base-easing);
   transform-style: preserve-3d;
   z-index: 1;
   height: 14rem;
@@ -56,7 +56,7 @@
   height: 0;
   margin: 0;
   opacity: 0;
-  transition: all var(--base-timing);
+  transition: all var(--base-timing) var(--base-easing);
 }
 
 .card:hover .arrow {

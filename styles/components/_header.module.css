@@ -1,11 +1,16 @@
 .header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  position: relative;
 }
+
+
+
+/* ⬅ */
 
 .backLink {
   color: var(--theme-text-color);
+  display: block;
   font-size: 1.5em;
 }
 
@@ -13,11 +18,14 @@
   display: none;
 }
 
+
+
+/* 🍔 */
 .menuButton,
 .menuItems {
-  position: fixed;
-  top: 5vw;
-  right: var(--base-spacing);
+  position: relative;
+  top: 0;
+  right: 0;
   z-index: 100;
 }
 
@@ -42,19 +50,24 @@
 }
 
 .menuItems {
-  backdrop-filter: blur(var(--small-spacing));
+  --menu-button-height: 40px;
+  backdrop-filter: blur(var(--smallest-spacing));
   padding: var(--smallest-spacing) var(--small-spacing);
-  top: calc(var(--large-spacing) + 50px + var(--smallest-spacing));
+  top: calc(var(--menu-button-height) + var(--smallest-spacing));
   width: 15em;
 }
 
-.title {
+.menuItems:focus {
+  outline: none;
+}
+
+.menuTitle {
   font-size: 1.33rem;
   line-height: 1.2;
   padding: var(--smallest-spacing) var(--smallest-spacing) 0;
 }
 
-.link {
+.menuLink {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   gap: var(--small-spacing);
@@ -62,7 +75,7 @@
   transition: color var(--base-timing);
 }
 
-.link svg {
+.menuLink svg {
   margin: 0;
   height: 1.5em;
   width: 1.5em;

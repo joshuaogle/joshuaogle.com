@@ -40,7 +40,7 @@
   border-radius: 100%;
   left: 0;
   position: relative;
-  transition: left var(--base-timing) ease-in-out;
+  transition: left var(--base-timing) var(--base-easing);
 }
 
 .switchIndicatorOn {
@@ -51,7 +51,7 @@
   color: var(--theme-text-color);
   height: var(--switch-size);
   width: var(--switch-size);
-  transition: transform var(--base-timing) ease-out;
+  transition: transform var(--base-timing) var(--base-easing);
 }
 
 .switchIndicatorOn svg {

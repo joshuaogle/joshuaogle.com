@@ -9,7 +9,7 @@ import IconLinkedIn from '../public/images/icon-linkedin.svg'
 import styles from '../styles/components/_header.module.css'
 
 const Header = () => {
-  const Links = [
+  const menuLinks = [
     {label: "Mastodon", icon: IconMastodon, href: "https://mastodon.social/@joshuaogle"},
     {label: "Dribbble", icon: IconDribbble, href: "http://dribbble.com/joshuaogle"},
     {label: "LinkedIn", icon: IconLinkedIn, href: "http://linkedin.com/in/joshuaogle"},
@@ -20,25 +20,34 @@ const Header = () => {
     <header className={styles.header}>
       <BackLink />
 
-      <Menu as="nav" className={styles.menu}>
+      <Menu
+        as="nav"
+        className={styles.menu}>
         <MenuLink/>
 
         <Menu.Items className={`${styles.menuItems} surface`}>
-          <h2 className={styles.title} key="menuItemTitle">
+          <h2
+            className={styles.menuTitle}
+            key="menuItemTitle">
             You've got good taste, let's chat
           </h2>
 
           <Menu.Item key="menuItemEmail">
-            <a className={styles.link} href="mailto:joshua@joshuaogle.com">
+            <a
+              className={styles.menuLink}
+              href="mailto:joshua@joshuaogle.com">
               joshua@joshuaogle.com
             </a>
           </Menu.Item>
 
-          {Links.map((Link) => (
-            <Menu.Item key={Link.label}>
-              <a className={styles.link} href={Link.href} target="_new">
-                <Link.icon/>
-                {Link.label}
+          {menuLinks.map((menuLink) => (
+            <Menu.Item key={menuLink.label}>
+              <a
+                className={styles.menuLink}
+                href={menuLink.href}
+                target="_new">
+                <menuLink.icon/>
+                {menuLink.label}
               </a>
             </Menu.Item>
           ))}

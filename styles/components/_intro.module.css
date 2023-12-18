@@ -19,14 +19,7 @@
   flex-direction: column;
   font-size: var(--small-font-size);
   gap: var(--small-spacing);
-  padding: var(--large-spacing) 0;
-}
-
-.icon {
-  display: inline-block;
-  height: 1.25em;
-  margin-right: 0.5em;
-  vertical-align: -0.33em;
+  padding: var(--base-spacing) 0;
 }
 
 @media (min-width: 600px) {
@@ -34,6 +27,13 @@
     flex-direction: row;
     gap: var(--base-spacing);
   }
+}
+
+.icon {
+  display: inline-block;
+  height: 1.25em;
+  margin-right: 0.5em;
+  vertical-align: -0.33em;
 }
 
 .metaItem {

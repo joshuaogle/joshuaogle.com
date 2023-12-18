@@ -2,7 +2,7 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  gap: var(--small-spacing);
+  gap: var(--base-spacing);
   position: relative;
   padding: 5vh 0 0;
 }

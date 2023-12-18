@@ -139,6 +139,8 @@
   --fast-timing: 100ms;
   --slow-timing: 750ms;
   --slowest-timing: 1500ms;
+  --base-easing: cubic-bezier(.60, 0, 0, 1);
+  --fast-easing: ease-out;
 
   /* Elevations (from Material Design): */
   --md-u: rgba(var(--theme-shadow-rgb), 0.1);
@@ -169,19 +171,21 @@
   --theme-text-color: var(--neutral-300);
   --theme-link-color: var(--cyan-500);
   --theme-link-hover: var(--cyan-300);
+  --theme-heading-color: var(--neutral-100);
   --theme-highlight-rgb:  255, 239, 102;
   --theme-muted-color: rgba(255, 255, 255, 0.4);
   --theme-surface-rgb: 30, 26, 22;
   --theme-shadow-rgb: 30, 26, 22;
-  --theme-background-color: var(--neutral-900);
+  --theme-background-color: var(--neutral-800);
   --background-gradient-start: 0.15;
   --background-gradient-end: 0.3;
+  --background-dot-color: rgb(var(--theme-highlight-rgb));
 }
 
 /* Light theme */
 html[data-prefers-color-scheme="light"] {
   --theme-stark-color: white;
-  --theme-text-color: var(--neutral-900);
+  --theme-text-color: var(--neutral-700);
   --theme-link-color: var(--cyan-600);
   --theme-link-hover: var(--cyan-400);
   --theme-muted-color: rgba(0, 0, 0, 0.4);
@@ -190,8 +194,5 @@ html[data-prefers-color-scheme="light"] {
   --theme-heading-color: var(--theme-text-color);
   --background-gradient-start: 1;
   --background-gradient-end: 1;
-}
-
-html[data-prefers-color-scheme="dark"] {
-  --theme-heading-color: var(--white);
+  --background-dot-color: black;
 }

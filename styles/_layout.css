@@ -1,12 +1,16 @@
 .app {
   background: transparent url("/images/noise-transparent.png") repeat 0 0;
   background-size: 200px 166px;
+  background-attachment: fixed;
   padding: var(--base-spacing);
+  position: relative;
 }
 
 .app::before {
-  --dot-spacing: 1rem;
+  --dot-spacing: var(--small-spacing);
   --dot-position: calc(var(--dot-spacing) * -0.5);
+  --dot-starting-opacity: 0;
+  --dot-ending-opacity: 0.25;
   display: block;
   content: "";
   position: fixed;
@@ -14,11 +18,15 @@
   height: 100%;
   top: 0;
   left: 0;
-  z-index: -1;
-  background-image: radial-gradient(var(--theme-stark-color) 1px, transparent 0);
+  z-index: 0;
+  background-image: radial-gradient(var(--background-dot-color), 1px, transparent 0);
   background-size: var(--dot-spacing) var(--dot-spacing);
   background-position: cvar(--dot-position) var(--dot-position);
-  mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.15), transparent 125%);
+  mask-image: radial-gradient(
+    ellipse at center,
+    rgba(0,0,0,var(--dot-starting-opacity)) 50%,
+    rgba(0,0,0,var(--dot-ending-opacity)) 100%);
+  transition: all var(--slow-timing);
 }
 
 .centered {
