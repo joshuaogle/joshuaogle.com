@@ -37,7 +37,6 @@
 }
 
 .metaItem {
-  color: var(--theme-muted-color);
   font-size: var(--smallest-font-size);
 }
 
@@ -46,6 +45,7 @@
 }
 
 .metaItem label {
+  color: var(--theme-muted-color);
   font-family: var(--heading-font);
   font-size: var(--small-font-size);
 }

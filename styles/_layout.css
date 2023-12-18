@@ -4,9 +4,10 @@
   background-attachment: fixed;
   padding: var(--base-spacing);
   position: relative;
+  z-index: 1;
 }
 
-.app::before {
+.app::after {
   --dot-spacing: var(--small-spacing);
   --dot-position: calc(var(--dot-spacing) * -0.5);
   --dot-starting-opacity: 0;
@@ -18,7 +19,7 @@
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 0;
+  z-index: -1;
   background-image: radial-gradient(var(--background-dot-color), 1px, transparent 0);
   background-size: var(--dot-spacing) var(--dot-spacing);
   background-position: cvar(--dot-position) var(--dot-position);
@@ -42,9 +43,14 @@
   border-radius: var(--surface-border-radius);
   padding: var(--large-spacing);
   position: relative;
-  box-shadow: var(--shadow-base);
+  box-shadow: var(--shadow-low);
   width: auto;
+  transition: all var(--base-timing) var(--base-easing);
   z-index: 1;
+}
+
+.surface:hover {
+  box-shadow: var(--shadow-high);
 }
 
 /* Border gradient */

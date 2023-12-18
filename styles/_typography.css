@@ -5,14 +5,13 @@ h4 {
   color: var(--theme-heading-color);
   font-family: var(--heading-font);
   font-weight: var(--font-weight-semibold);
-  letter-spacing: 0.015em;
+  letter-spacing: 0.015rem;
   line-height: 1.2;
   margin: 0 0 var(--smallest-spacing);
 }
 
 h1 {
   font-size: 2.75em;
-  margin-bottom: 0;
 }
 
 h1 + small {
@@ -25,7 +24,7 @@ h2 {
 
 h3 {
   color: var(--theme-muted-color);
-  font-size: 1.5em;
+  font-size: 1.25em;
 }
 
 ul {
@@ -101,10 +100,9 @@ svg {
 mark {
   background: linear-gradient(
     90deg,
-    rgba(var(--theme-highlight-rgb), 0.25),
-    rgba(var(--theme-highlight-rgb), 0.20) 5%,
-    rgba(var(--theme-highlight-rgb), 0.18) 80%,
-    rgba(var(--theme-highlight-rgb), 0.15)
+    rgba(var(--theme-highlight-rgb), 0.24) 10%,
+    rgba(var(--theme-highlight-rgb), 0.16) 80%,
+    rgba(var(--theme-highlight-rgb), 0.24)
   );
   border-radius: 1.5rem 0.5rem;
   box-decoration-break: clone;
@@ -142,9 +140,10 @@ small,
 figcaption,
 .section-title {
   color: var(--theme-muted-color);
-  font-family: var(--sans-serif);
+  font-family: var(--heading-font);
   font-size: var(--small-font-size);
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-light);
+  letter-spacing: 0.05em;
   line-height: 200%;
   margin: var(--smallest-spacing) auto;
 }

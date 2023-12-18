@@ -36,7 +36,7 @@
 
 .subtitle {
   display: block;
-  margin: 0 0 var(--smallest-spacing);
+  margin: 0 0 var(--small-spacing);
   text-transform: none;
 }
 

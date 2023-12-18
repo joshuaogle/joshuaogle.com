@@ -30,6 +30,10 @@ body {
   padding: 0;
 }
 
+main {
+  position: relative;
+}
+
 img {
   border-radius: var(--base-border-radius);
 }

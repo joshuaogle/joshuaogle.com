@@ -125,7 +125,7 @@
   --font-weight-regular: 400;
   --font-weight-semibold: 600;
   --font-weight-black: 800;
-  --base-font-size: calc(0.25em + 1.25vmax);
+  --base-font-size: calc(0.25em + 1.15vmax);
   --small-font-size: calc(var(--base-font-size) * 0.85);
   --smallest-font-size: calc(var(--base-font-size) * 0.66);
 
@@ -194,5 +194,5 @@ html[data-prefers-color-scheme="light"] {
   --theme-heading-color: var(--theme-text-color);
   --background-gradient-start: 1;
   --background-gradient-end: 1;
-  --background-dot-color: black;
+  --background-dot-color: var(--theme-background-color);
 }

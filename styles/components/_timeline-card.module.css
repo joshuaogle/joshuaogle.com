@@ -4,7 +4,7 @@
   background-size: cover;
   background-position: center;
   border-radius: var(--base-border-radius);
-  box-shadow: var(--shadow-base);
+  box-shadow: var(--shadow-low);
   break-inside: avoid;
   color: var(--white);
   display: flex;
