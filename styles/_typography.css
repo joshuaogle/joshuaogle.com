@@ -5,7 +5,7 @@ h4 {
   color: var(--theme-heading-color);
   font-family: var(--heading-font);
   font-weight: var(--font-weight-semibold);
-  letter-spacing: 0.015rem;
+  letter-spacing: 0.1rem;
   line-height: 1.2;
   margin: 0 0 var(--smallest-spacing);
 }
@@ -150,9 +150,8 @@ figcaption,
 
 figure,
 figure.surface {
-  display: inline-block;
-  padding: var(--smallest-spacing);
-  text-align: center;
+  margin: 0;
+  padding: 3%;
 }
 
 figcaption {

@@ -37,15 +37,3 @@ main {
 img {
   border-radius: var(--base-border-radius);
 }
-
-@keyframes rise {
-  0% {
-    opacity: 0;
-    transform: translateY(var(--smallest-spacing));
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}

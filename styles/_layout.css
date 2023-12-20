@@ -36,7 +36,6 @@
 }
 
 .surface {
-  animation: rise var(--base-timing);
   backdrop-filter: blur(var(--smallest-spacing));
   background: rgba(var(--theme-surface-rgb), 0.2);
   background-size: 100px;
@@ -50,24 +49,35 @@
 }
 
 .surface:hover {
+  backdrop-filter: blur(var(--small-spacing));
   box-shadow: var(--shadow-high);
 }
 
 /* Border gradient */
+@property --surface-border-angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 120deg;
+}
 .surface::before {
-  --border-start: rgba(var(--theme-highlight-rgb), 0.2);
-  --border-middle: rgba(var(--theme-highlight-rgb), 0.05);
-  --border-end: rgba(var(--theme-highlight-rgb), 0.1);
-  background: linear-gradient(
-    120deg,
+  --border-start: rgba(var(--theme-highlight-rgb), 0.24);
+  --border-middle: rgba(var(--theme-highlight-rgb), 0.1);
+  --border-end: rgba(var(--theme-highlight-rgb), 0.16);
+  animation:
+    rotateBorder 15s
+    alternate infinite
+    linear;
+  background-image: linear-gradient(
+    var(--surface-border-angle),
     var(--border-start),
-    var(--border-middle) 25%,
-    var(--border-middle) 75%,
+    var(--border-middle) 33%,
+    var(--border-middle) 90%,
     var(--border-end)
   );
   border-radius: var(--surface-border-radius);
   /* Put it behind */
   content: "";
+  display: inline-block;
   padding: 1px;
   position: absolute;
   left: -1px;
@@ -83,6 +93,17 @@
   mask-composite: exclude;
 }
 
+@keyframes rotateBorder {
+  0%   {
+    --surface-border-angle: 120deg;
+    border-radius: var(--surface-border-radius);
+  }
+  100% {
+    --surface-border-angle: 480deg;
+    border-radius: var(--surface-border-radius);
+  }
+}
+
 section {
   padding: var(--large-spacing) 0;
 }
@@ -92,12 +113,12 @@ section {
   transition: opacity var(--fast-timing);
 }
 
-.sketch:hover {
-  opacity: 1;
-}
-
 html[data-prefers-color-scheme="light"] {
   .sketch {
     filter: invert();
   }
+}
+
+.sketch:hover {
+  opacity: 1;
 }

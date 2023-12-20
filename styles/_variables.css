@@ -143,26 +143,23 @@
   --fast-easing: ease-out;
 
   /* Elevations (from Material Design): */
-  --md-u: rgba(var(--theme-shadow-rgb), 0.1);
-  --md-p: rgba(var(--theme-shadow-rgb), 0.05);
-  --md-a: rgba(var(--theme-shadow-rgb), 0.025);
-  --md-2dp-u: 0 0.0rem 0.4rem 0 var(--md-u);
-  --md-2dp-p: 0 0.3rem 0.4rem 0 var(--md-p);
-  --md-2dp-a: 0 0.1rem 0.5rem 0 var(--md-a);
-  --md-4dp-u: 0 0.2rem 0.4rem 0 var(--md-u);
-  --md-4dp-p: 0 0.4rem 0.5rem 0 var(--md-p);
-  --md-4dp-a: 0 0.1rem 1.0rem 0 var(--md-a);
-  --md-8dp-u: 0 0.8rem 1.0rem 0 var(--md-u);
-  --md-8dp-p: 0 0.3rem 1.4rem 0 var(--md-p);
-  --md-8dp-a: 0 0.4rem 1.4rem 0 var(--md-a);
-  --md-12dp-u: 0 1.2rem 1.7rem 0 var(--md-u);
-  --md-12dp-p: 0 0.5rem 2.2rem 0 var(--md-p);
-  --md-12dp-a: 0 0.7rem 0.8rem 0 var(--md-a);
+  --md-0: rgba(var(--theme-shadow-rgb), 0);
+  --md-u: rgba(var(--theme-shadow-rgb), 0.4); /* Umbra */
+  --md-p: rgba(var(--theme-shadow-rgb), 0.2); /* Penumbra */
+  --md-a: rgba(var(--theme-shadow-rgb), 0.05); /* Ambient */
+  --md-1-u: 0 0.1rem 0.1rem 0 var(--md-u);
+  --md-2-u: 0 0.2rem 0.2rem 0 var(--md-u);
+  --md-3-u: 0 0.3rem 0.4rem 0 var(--md-u);
+  --md-1-p: 0 0.2rem 0.2rem 0 var(--md-p);
+  --md-2-p: 0 0.4rem 0.4rem 0 var(--md-p);
+  --md-3-p: 0 0.8rem 0.8rem 0 var(--md-p);
+  --md-1-a: 0 0.3rem 0.4rem 0 var(--md-a);
+  --md-2-a: 0 0.6rem 1.2rem 0 var(--md-a);
+  --md-3-a: 0 1.2rem 1.6rem 0 var(--md-a);
   --shadow-none: var(--md-0),  var(--md-0),  var(--md-0);
-  --shadow-low: var(--md-2dp-u), var(--md-2dp-p), var(--md-2dp-a);
-  --shadow-base: var(--md-4dp-u), var(--md-4dp-p), var(--md-4dp-a);
-  --shadow-medium: var(--md-8dp-u), var(--md-8dp-p), var(--md-8dp-a);
-  --shadow-high: var(--md-12dp-u), var(--md-12dp-p), var(--md-12dp-a);
+  --shadow-low: var(--md-1-u), var(--md-1-p), var(--md-1-a);
+  --shadow-medium: var(--md-2-u), var(--md-2-p), var(--md-2-a);
+  --shadow-high: var(--md-3-u), var(--md-3-p), var(--md-3-a);
 }
 
 /* Default dark theme */

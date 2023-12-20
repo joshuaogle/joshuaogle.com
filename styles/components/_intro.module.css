@@ -17,7 +17,6 @@
   justify-content: center;
   display: flex;
   flex-direction: column;
-  font-size: var(--small-font-size);
   gap: var(--small-spacing);
   padding: var(--base-spacing) 0;
 }
@@ -37,7 +36,7 @@
 }
 
 .metaItem {
-  font-size: var(--smallest-font-size);
+  font-size: var(--small-font-size);
 }
 
 .metaItem::before {
