@@ -126,6 +126,7 @@
   --font-weight-semibold: 600;
   --font-weight-black: 800;
   --base-font-size: calc(0.25em + 1.15vmax);
+  --large-font-size: calc(var(--base-font-size) * 1.25);
   --small-font-size: calc(var(--base-font-size) * 0.85);
   --smallest-font-size: calc(var(--base-font-size) * 0.66);
 
@@ -144,18 +145,18 @@
 
   /* Elevations (from Material Design): */
   --md-0: rgba(var(--theme-shadow-rgb), 0);
-  --md-u: rgba(var(--theme-shadow-rgb), 0.4); /* Umbra */
-  --md-p: rgba(var(--theme-shadow-rgb), 0.2); /* Penumbra */
+  --md-u: rgba(var(--theme-shadow-rgb), 0.2); /* Umbra */
+  --md-p: rgba(var(--theme-shadow-rgb), 0.1); /* Penumbra */
   --md-a: rgba(var(--theme-shadow-rgb), 0.05); /* Ambient */
   --md-1-u: 0 0.1rem 0.1rem 0 var(--md-u);
   --md-2-u: 0 0.2rem 0.2rem 0 var(--md-u);
-  --md-3-u: 0 0.3rem 0.4rem 0 var(--md-u);
+  --md-3-u: 0 0.8rem 0.4rem -0.5rem var(--md-u);
   --md-1-p: 0 0.2rem 0.2rem 0 var(--md-p);
   --md-2-p: 0 0.4rem 0.4rem 0 var(--md-p);
-  --md-3-p: 0 0.8rem 0.8rem 0 var(--md-p);
-  --md-1-a: 0 0.3rem 0.4rem 0 var(--md-a);
-  --md-2-a: 0 0.6rem 1.2rem 0 var(--md-a);
-  --md-3-a: 0 1.2rem 1.6rem 0 var(--md-a);
+  --md-3-p: 0 1.0rem 1.2rem -0.5rem var(--md-p);
+  --md-1-a: 0 0.5rem 0.5rem 0 var(--md-a);
+  --md-2-a: 0 1.0rem 1.0rem 0 var(--md-a);
+  --md-3-a: 0 2.5rem 1.5rem -0.5rem var(--md-a);
   --shadow-none: var(--md-0),  var(--md-0),  var(--md-0);
   --shadow-low: var(--md-1-u), var(--md-1-p), var(--md-1-a);
   --shadow-medium: var(--md-2-u), var(--md-2-p), var(--md-2-a);

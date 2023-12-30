@@ -23,6 +23,7 @@
 }
 
 .portrait img {
+  border-radius: var(--surface-border-radius);
   box-shadow: var(--shadow-high);
   height: auto;
 }

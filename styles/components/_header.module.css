@@ -52,9 +52,9 @@
 .menuItems {
   --menu-button-height: 40px;
   backdrop-filter: blur(var(--smallest-spacing));
-  padding: var(--smallest-spacing) var(--small-spacing);
+  padding: var(--smallest-spacing);
   top: calc(var(--menu-button-height) + var(--smallest-spacing));
-  width: 15em;
+  width: 16em;
 }
 
 .menuItems:focus {

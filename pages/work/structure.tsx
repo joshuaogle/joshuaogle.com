@@ -18,8 +18,7 @@ export const summary = {
     backgroundImage: "",
     highlightRGB: "96, 212, 220",
     icon: "/images/case-study-logo-structure.svg"
-  },
-  intro: "Description.",
+  }
 }
 
 const Structure = () => {
@@ -53,38 +52,36 @@ const Structure = () => {
             <h2>Who designs the design system?</h2>
             <p>
               When most people think of design systems
-              they think about colorful galleries of buttons
-              and typography.
+              they think about a colorful grid of buttons and typography.
               What I think about is long noisy meetings
-              full of collaboration and friendly debate.
+              full of collaboration, long comment threads, and friendly debate.
               Design systems are living things,
               and only survive and grow if they are nurtured.
-              At HashiCorp, our Design System Working Group
-              was a thriving collaborative that included designers
+              I led our Design System Working Group at HashiCorp,
+              a thriving collaborative that included designers
               from all of our products.
             </p>
             <p>
-              
+              Design systems aren't cops.
               {/* More about how I think about design systems */}
             </p>
           </section>
 
-          Example with buttons, colors, components
+          {/* Example: buttons, colors, components */}
 
           <section>
             <div className="section-title">Background</div>
-            <h2>It was anarchy, like in a good way</h2>
+            <h2>Growing grassroots</h2>
 
             <p>
-              When I started at HashiCorp,
-              it was as the 2nd product designer
+              I joined HashiCorp as the 2nd product designer
               coming in to help make sense of these massive
-              (and massively popular)
-              developer tools.
-              We planned to grow the team by about 2x each year,
-              and we knew that would require a shared visual language,
-              and more importantly it would allow us to lean on each other
-              to make our individual products better.
+              (and massively popular) developer tools.
+              We planned to grow the team by 2x each year,
+              and knew that would require a shared language,
+              and more importantly allow us to lean on each other
+              to make all of our products better
+              while still delivering our individual roadmaps.
             </p>
           </section>
 
@@ -107,6 +104,12 @@ const Structure = () => {
                 but at the end of the day they're still interfaces for complicated infrastructure management
                 and that means the vast majority of our interfaces can be shared and improved together.
               </p>
+
+              {/* TODO: Describe meetings, cadence */}
+              {/* Example: RFCs? */}
+              {/* TODO: More about tierred system */}
+              {/* TODO: Collaboration model example? */}
+
               <p>
                 We would need a tiered design system,
                 one that could bridge all of the products
@@ -114,12 +117,6 @@ const Structure = () => {
                 in our individual products
                 and then work on standardizing them
                 <mark>without slowing down feature delivery.</mark>
-              </p>
-              {/* More about tierred system */}
-
-              {/* Collaboration model example? */}
-
-              <p>
                 Product designers have to be pragmatic,
                 we know that features sometimes
                 have to get designed and built quickly,
@@ -136,28 +133,27 @@ const Structure = () => {
                 We proposed, reviewed, and debated every step as a team
                 and our system was better for it.
               </p>
-              {/* Component examples */}
-              {/* Figma example */}
+              {/* Example: Component examples */}
+              {/* Sketch: Sketch -> Figma */}
+              {/* Example: Figma example */}
           </section>
 
           <section>
             <div className="section-title">Results and reflection</div>
-            <h2>And for our next trick</h2>
+            <h2>This is your captain speaking, prepare for handoff</h2>
             <p>
-              If have a design team with up to twenty designers,
+              If you have a design team with up to twenty designers,
               I would highly recommend doing things this way.
               This grassroots approach worked well
-              until we grew big enough
-              to need proper design ops
-              and could convince leadership
-              that we needed a full-time team.
-              As design systems become a standard for product design,
+              until we grew big enough to need proper design ops
+              and could convince leadership to invest in a full-time team.
+              As design systems have become a standard for product design,
               so too have accessibility standards
               and a shared community of people
               who care about this side of the craft.
-              The design system team is approaching ten amazing people now,
-              including designers and engineers,
-              working on our new design system called Helios.
+              The HashiCorp Design System Team now
+              includes designers and engineers,
+              working full-time on <a href="https://helios.hashicorp.design">our new design system called Helios</a>.
             </p>
           </section>
         </div>

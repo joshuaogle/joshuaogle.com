@@ -34,6 +34,8 @@ main {
   position: relative;
 }
 
-img {
+img,
+video {
   border-radius: var(--base-border-radius);
+  max-width: 100%;
 }

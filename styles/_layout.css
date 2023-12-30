@@ -36,7 +36,7 @@
 }
 
 .surface {
-  backdrop-filter: blur(var(--smallest-spacing));
+  backdrop-filter: blur(1rem);
   background: rgba(var(--theme-surface-rgb), 0.2);
   background-size: 100px;
   border-radius: var(--surface-border-radius);
@@ -49,7 +49,7 @@
 }
 
 .surface:hover {
-  backdrop-filter: blur(var(--small-spacing));
+  backdrop-filter: blur(2rem);
   box-shadow: var(--shadow-high);
 }
 
@@ -60,9 +60,9 @@
   initial-value: 120deg;
 }
 .surface::before {
-  --border-start: rgba(var(--theme-highlight-rgb), 0.24);
+  --border-start: rgba(var(--theme-highlight-rgb), 0.2);
   --border-middle: rgba(var(--theme-highlight-rgb), 0.1);
-  --border-end: rgba(var(--theme-highlight-rgb), 0.16);
+  --border-end: rgba(var(--theme-highlight-rgb), 0.15);
   animation:
     rotateBorder 15s
     alternate infinite

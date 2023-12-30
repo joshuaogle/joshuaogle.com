@@ -19,8 +19,7 @@ export const summary = {
     backgroundImage: "url('/images/case-study-bg-armada.png')",
     highlightRGB: "2, 169, 242",
     icon: "/images/case-study-logo-armada.svg"
-  },
-  intro: "Description."
+  }
 }
 
 const VaultCaseStudy = () => {
