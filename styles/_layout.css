@@ -60,8 +60,8 @@
   initial-value: 120deg;
 }
 .surface::before {
-  --border-start: rgba(var(--theme-highlight-rgb), 0.2);
-  --border-middle: rgba(var(--theme-highlight-rgb), 0.1);
+  --border-start: rgba(var(--theme-highlight-rgb), 0.05);
+  --border-middle: rgba(var(--theme-highlight-rgb), 0.025);
   --border-end: rgba(var(--theme-highlight-rgb), 0.15);
   animation:
     rotateBorder 15s

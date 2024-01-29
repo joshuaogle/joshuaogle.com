@@ -5,6 +5,7 @@
 
 * {
   box-sizing: border-box;
+  transition: all var(--base-timing) var(--base-easing);
 }
 
 html {
