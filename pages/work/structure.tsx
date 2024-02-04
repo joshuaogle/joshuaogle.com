@@ -68,7 +68,12 @@ const Structure = () => {
               from all of our products.
             </p>
 
-            {/* Example: buttons, colors, components */}
+            <Example
+              images={[
+                "case-studies/structure-summary.png"
+              ]}
+              caption="Tokens and components in Structure"
+            />
 
             <p>
               When most people think of design systems
@@ -76,8 +81,8 @@ const Structure = () => {
               and nitpicky guidelines,
               but they're really made up of long noisy meetings
               full of collaboration, long comment threads, and friendly debate.
-              Design systems are living things,
-              and only grow and survive if they are nurtured.
+              <mark>Design systems are living things,
+              and only grow and survive if they are nurtured.</mark>
             </p>
           </section>
 
@@ -105,27 +110,6 @@ const Structure = () => {
               So collaboration was easy
               thanks to talented designers having a sense of ownership
               because they <em>really had it</em>.
-            </p>
-            <p>
-              <img src="/images/case-studies/structure-cop.png" />
-            </p>
-            <p>
-              Just like users of a product,
-              the designers are the ones who should be driving every decision.
-              The processes of using, adding to, or changing the design system
-              have to be as easy as possible,
-              because once it becomes a burden
-              they will naturally do more things without it
-              and the design system will rot.
-              Don't let that happen!
-              Contibuting must feel like a natural part of their design process.
-              Make sure that the team is engaged and heard,
-              making decisions democratically,
-              and getting quick answers to their requests.
-              Provide good reasoning in your documentation
-              and presentation of the design system
-              also helps designers learn from each other
-              and raises the bar for everyone.
             </p>
           </section>
 
@@ -160,7 +144,8 @@ const Structure = () => {
             <Example
               images={[
                 "case-studies/structure-welcome.png",
-                "case-studies/structure-spacing.png"
+                "case-studies/structure-spacing.png",
+                "case-studies/structure-colors.png"
               ]}
               caption="Starting in Sketch"
             />
@@ -180,6 +165,8 @@ const Structure = () => {
               that focused on making it as easy as possible to contribute
               so that we could make progress
               while still delivering each of our roadmaps.
+            </p>
+            <p>
               Components would start in their own files
               that inherited from Structure.
               Each team was responsible for maintaining these libraries,
@@ -192,13 +179,19 @@ const Structure = () => {
               The larger products that had two or three designers also got practice
               building and sharing their own components together,
               bringing some of these questions to the larger working group.
-            </p>
-            <p>
               If a designer needed something that didn't exist yet,
               they could build their own out of simpler components
               and if it seemed useful,
               other interested designers collaborated
               to bring it into the design system.
+            </p>
+
+            <Example
+              images={["case-studies/structure-icons.png"]}
+              caption="Structure included 120+ hand crafted icons for our product suite"
+            />
+
+            <p>
               HashiCorp creates developer tools
               and has a culture centered around craft and documentation
               built by developers who care a lot about their tools.
@@ -214,13 +207,14 @@ const Structure = () => {
               We proposed, reviewed, and debated every step as a team
               and our system was better for it.
             </p>
-
-            {/* Example: Component examples. not the tree */}
     
             <Example
               images={["case-studies/structure-tree.png"]}
-              caption="Tree"
+              caption="More complex components could take a month to get right"
             />
+
+
+    
           </section>
 
           <section>
@@ -274,6 +268,27 @@ const Structure = () => {
           <section>
             <div className="section-title">Results and reflection</div>
             <h2>All good things&hellip;</h2>
+            <p>
+              Just like users of a product,
+              the designers are the ones who should be driving every decision.
+              The processes of using, adding to, or changing the design system
+              have to be as easy as possible,
+              because once it becomes a burden
+              they will naturally do more things without it
+              and the design system will rot.
+              Don't let that happen!
+              Contibuting must feel like a natural part of their design process.
+              Make sure that the team is engaged and heard,
+              making decisions democratically,
+              and getting quick answers to their requests.
+              Provide good reasoning in your documentation
+              and presentation of the design system
+              also helps designers learn from each other
+              and raises the bar for everyone.
+            </p>
+            <p>
+              <img src="/images/case-studies/structure-cop.png" />
+            </p>
             <p>
               This grassroots approach worked well
               until we grew big enough to convince leadership
