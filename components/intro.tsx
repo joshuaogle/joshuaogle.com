@@ -1,26 +1,29 @@
 import DateFormatter from './date-formatter'
 import styles from '../styles/components/_intro.module.css'
 
-type Props = {
+type MetaProps = {
+  date: string;
+  client?: string;
+  client_url?: string;
+  role: string;
+  time: string;
+  team: string;
+  source?: string;
+  source_icon?: string;
+  source_url?: string;
+};
+
+type IntroProps = {
   title: string,
-  meta: string,
+  meta: MetaProps,
 }
 
-const MetaItem = ({ label, key, children }: Props) => {
-  const template = (
-    <li className={styles.metaItem} key="{key}">
-      <label>
-        {label}
-      </label>
-      <div id="{key}">
-        {children}
-      </div>
-    </li>
-  )
-  return children ? template : null
+type MetaItemProps = {
+  label: string,
+  children: React.ReactNode,
 }
 
-const Intro = ({ title, meta }: Props) => {
+const Intro = ({ title, meta }: IntroProps) => {
   return (
     <>
       <header className={styles.container + " centered"}>
@@ -48,6 +51,20 @@ const Intro = ({ title, meta }: Props) => {
       </header>
     </>
   )
+}
+
+const MetaItem = ({ label, children }: MetaItemProps) => {
+  const template = (
+    <li className={styles.metaItem}>
+      <label>
+        {label}
+      </label>
+      <div>
+        {children}
+      </div>
+    </li>
+  )
+  return children ? template : null
 }
 
 export default Intro

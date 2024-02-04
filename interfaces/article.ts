@@ -4,12 +4,14 @@ type ArticleType = {
   slug: string
   title: string
   author: Author
-  excerpt: string
   meta: {
     date: string
     source: string
     source_icon: string
     url: string
+    role?: string
+    time?: string
+    team?: string
   }
   ogImage: {
     url: string

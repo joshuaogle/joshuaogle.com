@@ -3,13 +3,19 @@ import Tilt from 'react-parallax-tilt';
 import ReactPlayer from 'react-player'
 import styles from '../styles/components/_example.module.css'
 
-type Props = {
-  images?: object,
-  video?: string,
-  caption: string,
+type ExampleProps = {
+  images?: string[];
+  video?: string;
+  caption: string;
 }
 
-const Example = ({ images, video, caption }: Props) => {
+type ExampleImageProps = {
+  filename: string;
+  index: number;
+  of: number;
+}
+
+const Example = ({ images, video, caption }: ExampleProps) => {
   const [hasWindow, setHasWindow] = useState(false);
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -49,10 +55,9 @@ const Example = ({ images, video, caption }: Props) => {
   )
 }
 
-const ExampleImage = ({filename, index, of}: Props) => {
+const ExampleImage = ({filename, index, of}: ExampleImageProps) => {
   return (
     <div
-      key={index}
       className={styles.area}
       data-number={`${index + 1}-of-${of}`}
     >

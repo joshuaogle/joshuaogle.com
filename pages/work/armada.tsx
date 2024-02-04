@@ -50,6 +50,7 @@ const VaultCaseStudy = () => {
             images={[
               "case-studies/armada-home.png"
             ]}
+            caption="Armada helps you track your feet in real-time"
           />
         </section>
 
@@ -71,9 +72,8 @@ const VaultCaseStudy = () => {
           </p>
 
           <Example
-            images={[
-              "case-studies/armada-device.png"
-            ]}
+            images={["case-studies/armada-device.png"]}
+            caption="An easy to install device"
           />
         </section>
 
@@ -90,9 +90,8 @@ const VaultCaseStudy = () => {
         </section>
 
         <Example
-          images={[
-            "case-studies/armada-users.png"
-          ]}
+          images={["case-studies/armada-users.png"]}
+          caption="It's easy to manage your team"
         />
 
         <section>
@@ -105,9 +104,8 @@ const VaultCaseStudy = () => {
         </section>
 
         <Example
-          images={[
-            "case-studies/armada-user.png"
-          ]}
+          images={["case-studies/armada-user.png"]}
+          caption="User details"
         />
 
         <section>
@@ -122,9 +120,8 @@ const VaultCaseStudy = () => {
         </section>
 
         <Example
-          images={[
-            "case-studies/armada-trips.png"
-          ]}
+          images={["case-studies/armada-trips.png"]}
+          caption="Trip history"
         />
 
         <section>

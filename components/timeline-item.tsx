@@ -2,17 +2,22 @@ import Image from 'next/image'
 import TimelineCard from './timeline-card'
 import styles from '../styles/components/_timeline-item.module.css'
 
-type Props = {
-  title: string,
-  icon: string,
-  company: string,
-  role: string,
-  when: string,
-  caseStudies: object,
-  children: React.ReactNode
+interface CaseStudy {
+  summary: string;
+  href: string;
 }
 
-const TimelineItem = ({title,  icon, company, role, caseStudies, children }: Props) => {
+type Props = {
+  title: string;
+  icon: string;
+  company: string;
+  role: string;
+  when: string;
+  caseStudies: CaseStudy[];
+  children: React.ReactNode;
+}
+
+const TimelineItem = ({ title, icon, company, role, caseStudies, children }: Props) => {
   return (
     <div className={styles.itemContainer}>
       <div className={styles.textContainer}>
@@ -22,10 +27,10 @@ const TimelineItem = ({title,  icon, company, role, caseStudies, children }: Pro
         <small className={styles.subtitle}>
           <Image
             src={icon}
+            alt={company}
             height="20"
             width="20"
             className={styles.icon}
-            alt={company}
           />
           {company} • {role}
         </small>
@@ -34,19 +39,19 @@ const TimelineItem = ({title,  icon, company, role, caseStudies, children }: Pro
         </p>
       </div>
 
-      {caseStudies &&
+      {caseStudies && (
         <div className={styles.cardContainer}>
           {caseStudies.map((study, index) => (
             <TimelineCard
+              key={index}
               summary={study.summary}
               href={study.href}
-              key={index}
             />
           ))}
         </div>
-      }
+      )}
     </div>
-  )
+  );
 }
 
-export default TimelineItem
+export default TimelineItem;

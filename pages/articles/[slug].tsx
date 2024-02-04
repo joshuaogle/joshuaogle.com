@@ -5,19 +5,16 @@ import Intro from '../../components/intro'
 import Layout from '../../components/layout'
 import { getArticleBySlug, getAllArticles } from '../../lib/api'
 import Head from 'next/head'
-import { CMS_NAME } from '../../lib/constants'
 import markdownToHtml from '../../lib/markdownToHtml'
 import type ArticleType from '../../interfaces/article'
 
 type Props = {
   article: ArticleType
-  moreArticles: ArticleType[]
   preview?: boolean
 }
 
-export default function Article({ article, moreArticles, preview }: Props) {
+export default function Article({ article, preview }: Props) {
   const router = useRouter()
-  const title = `${article.title} | Joshua Ogle`
   if (!router.isFallback && !article?.slug) {
     return <ErrorPage statusCode={404} />
   }
@@ -29,7 +26,7 @@ export default function Article({ article, moreArticles, preview }: Props) {
         <>
           <article>
             <Head>
-              <title>{title}</title>
+              <title>{article.title} | Joshua Ogle</title>
               <meta property="og:image" content={article.ogImage.url} />
             </Head>
             <Intro

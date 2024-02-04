@@ -8,7 +8,6 @@ type Props = {
 }
 
 const ArticlesList = ({ allArticles }: Props) => {
-  const {latestArticle, olderArticles} = allArticles
   return (
     <section className="centered">
       <h2>Articles</h2>
@@ -26,7 +25,6 @@ const ArticlesList = ({ allArticles }: Props) => {
             title={article.title}
             meta={article.meta}
             slug={article.slug}
-            excerpt={article.excerpt}
           />
         ))}
       </nav>

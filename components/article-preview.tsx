@@ -4,7 +4,9 @@ import styles from '../styles/components/_article-preview.module.css'
 
 type Props = {
   title: string
-  meta: string
+  meta: {
+    date: string
+  }
   slug: string
 }
 
