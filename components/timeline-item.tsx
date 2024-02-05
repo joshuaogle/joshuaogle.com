@@ -3,7 +3,7 @@ import TimelineCard from './timeline-card'
 import styles from '../styles/components/_timeline-item.module.css'
 
 interface CaseStudy {
-  summary: string;
+  summary: object;
   href: string;
 }
 

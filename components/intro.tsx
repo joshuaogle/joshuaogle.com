@@ -5,9 +5,9 @@ type MetaProps = {
   date: string;
   client?: string;
   client_url?: string;
-  role: string;
-  time: string;
-  team: string;
+  role?: string;
+  time?: string;
+  team?: string;
   source?: string;
   source_icon?: string;
   source_url?: string;
