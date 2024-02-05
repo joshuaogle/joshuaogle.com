@@ -18,7 +18,6 @@ const TimelineCard = ({ summary, href }: Props) => {
     <Link
       href={href}
       style={cardStyles}
-      className={styles.card}
     >
       <Tilt
         glareEnable={true}
