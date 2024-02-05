@@ -31,6 +31,7 @@ const Meta = () => {
         content={`A statically generated blog example using Next.js and ${CMS_NAME}.`}
       />
       <meta property="og:image" content={HOME_OG_IMAGE_URL} />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
     </Head>
   )
 }

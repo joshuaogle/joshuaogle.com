@@ -10,7 +10,6 @@ export default function Document() {
         <Main />
         <NextScript />
 
-
         <Script
           id="heap-analytics"
           strategy="afterInteractive"
