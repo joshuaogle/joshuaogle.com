@@ -10,6 +10,7 @@
 
 html {
   background: var(--theme-background-color);
+  overflow-x: hidden;
   transition: all var(--slowest-timing) var(--fast-easing);
 }
 

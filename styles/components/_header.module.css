@@ -62,7 +62,7 @@
 }
 
 .menuTitle {
-  font-size: 1.33rem;
+  font-size: 1.33em;
   line-height: 1.2;
   padding: var(--smallest-spacing) var(--smallest-spacing) 0;
 }

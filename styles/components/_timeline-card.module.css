@@ -8,7 +8,6 @@
   break-inside: avoid;
   color: var(--white);
   display: flex;
-  font-size: 75%;
   flex-direction: column;
   justify-content: space-between;
   overflow: hidden;
@@ -17,8 +16,8 @@
   transition: transform var(--base-timing) var(--base-easing);
   transform-style: preserve-3d;
   z-index: 1;
-  height: 14rem;
-  width: 11rem;
+  height: 18em;
+  width: 13em;
   z-index: 1;
 }
 
@@ -26,11 +25,18 @@
   box-shadow: var(--shadow-high);
 }
 
+@media (max-width: 900px) {
+  .card {
+    height: 15em;
+    width: 11em;
+  }
+}
+
 .icon {
   border-radius: 0;
   box-shadow: none;
-  height: 3rem;
-  width: 3rem;
+  height: 3em;
+  width: 4em;
   margin: 0;
 }
 

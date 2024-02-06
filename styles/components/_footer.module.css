@@ -19,7 +19,7 @@
 
 /* Color Scheme Switch */
 .switch {
-  --switch-size: 1.75rem;
+  --switch-size: 3em;
   border: none;
   cursor: pointer;
   padding: calc(var(--switch-size) / 8);

@@ -5,15 +5,20 @@
   display: flex;
   gap: var(--tab-gap);
   transition: all var(--slow-timing) var(--base-easing);
-  margin: 0 var(--base-spacing);
 }
 
-.tabPanels[data-is-active="2"] {
-  transform: translateX(calc(-200% - var(--tab-gap)));
+@media (min-width: 640px) {
+  .tabPanel {
+    margin: 0 var(--base-spacing);
+  }
 }
 
 .tabPanels[data-is-active="1"] {
-  transform: translateX(calc(-100% - (var(--tab-gap) / 2)));
+  transform: translateX(calc(-100% - var(--tab-gap)));
+}
+
+.tabPanels[data-is-active="2"] {
+  transform: translateX(calc(-200% - (var(--tab-gap) * 2)));
 }
 
 .tabPanelContainer {
@@ -25,6 +30,7 @@
 
 .tabPanel {
   cursor: pointer;
+  padding: var(--base-spacing);
   transform: scale(0.94);
   transition: all var(--slow-timing) var(--base-easing);
 }
@@ -34,9 +40,9 @@
   transition: all var(--base-timing) var(--base-easing);
 }
 
-@media (max-width: 800px) {
+@media (min-width: 640px) {
   .tabPanel {
-    padding: var(--base-spacing);
+    padding: var(--large-spacing);
   }
 }
 
