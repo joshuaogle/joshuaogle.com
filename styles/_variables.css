@@ -173,6 +173,7 @@
   --theme-highlight-rgb:  255, 239, 102;
   --theme-muted-color: rgba(255, 255, 255, 0.4);
   --theme-surface-rgb: 30, 26, 22;
+  --theme-surface-opacity: 0.15;
   --theme-shadow-rgb: 30, 26, 22;
   --theme-background-color: var(--neutral-800);
   --background-gradient-start: 0.15;
@@ -188,6 +189,7 @@ html[data-prefers-color-scheme="light"] {
   --theme-link-hover: var(--cyan-400);
   --theme-muted-color: rgba(0, 0, 0, 0.4);
   --theme-surface-rgb: 255, 255, 255;
+  --theme-surface-opacity: 0.4;
   --theme-shadow-rgb: 30, 26, 22;
   --theme-heading-color: var(--theme-text-color);
   --background-gradient-start: 1;

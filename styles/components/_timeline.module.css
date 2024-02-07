@@ -4,13 +4,8 @@
   --tab-gap: calc(var(--smallest-spacing) / 2);
   display: flex;
   gap: var(--tab-gap);
+  margin: 0 var(--small-spacing);
   transition: all var(--slow-timing) var(--base-easing);
-}
-
-@media (min-width: 640px) {
-  .tabPanel {
-    margin: 0 var(--base-spacing);
-  }
 }
 
 .tabPanels[data-is-active="1"] {

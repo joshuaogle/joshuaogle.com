@@ -37,7 +37,7 @@
 
 .surface {
   backdrop-filter: blur(1rem);
-  background: rgba(var(--theme-surface-rgb), 0.2);
+  background: rgba(var(--theme-surface-rgb), var(--theme-surface-opacity));
   background-size: 100px;
   border-radius: var(--surface-border-radius);
   padding: var(--large-spacing);
