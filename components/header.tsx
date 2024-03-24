@@ -6,6 +6,7 @@ import IconGithub from '../public/images/icon-github.svg'
 import IconMastodon from '../public/images/icon-mastodon.svg'
 import IconDribbble from '../public/images/icon-dribbble.svg'
 import IconLinkedIn from '../public/images/icon-linkedin.svg'
+import { DocumentArrowDownIcon } from '@heroicons/react/24/solid'
 import styles from '../styles/components/_header.module.css'
 
 const Header = () => {
@@ -13,7 +14,8 @@ const Header = () => {
     {label: "Mastodon", icon: IconMastodon, href: "https://mastodon.social/@joshuaogle"},
     {label: "Dribbble", icon: IconDribbble, href: "http://dribbble.com/joshuaogle"},
     {label: "LinkedIn", icon: IconLinkedIn, href: "http://linkedin.com/in/joshuaogle"},
-    {label: "Github", icon: IconGithub, href: "http://github.com/joshuaogle"}
+    {label: "Github", icon: IconGithub, href: "http://github.com/joshuaogle"},
+    {label: "Resume", icon: DocumentArrowDownIcon, href: "/files/joshuaogle-resume.pdf"}
   ]
 
   return (
