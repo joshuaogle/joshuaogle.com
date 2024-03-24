@@ -19,16 +19,20 @@
 
 /* Color Scheme Switch */
 .switch {
-  --switch-size: 3em;
+  --switch-size: 2.5em;
+  --indicator-highlight: inset 0 0.1em 0.15em -0.1em rgba(var(--theme-highlight-rgb));
+  background: var(--switch-bg);
   border: none;
+  border-radius: calc(var(--switch-size) * 2);
+  box-shadow: 0 0 0.05em 0.1em rgba(0,0,0,0.025);
   cursor: pointer;
   padding: calc(var(--switch-size) / 8);
   text-align: left;
-  width: calc(var(--switch-size) * 2);
+  width: calc(var(--switch-size) * 2.5);
 }
 
 .switch::before {
-  border-radius: var(--switch-size);
+  border-radius: calc(var(--switch-size) * 2);
 }
 
 .switch:focus {
@@ -37,10 +41,14 @@
 
 .switchIndicator {
   display: inline-block;
+  background: var(--switch-bg);
   border-radius: 100%;
+  height: var(--switch-size);
+  width: var(--switch-size);
   left: 0;
   position: relative;
   transition: left var(--base-timing) var(--base-easing);
+  box-shadow: 0 0 0.05em 0.1em rgba(0,0,0,0.05), var(--indicator-highlight), var(--shadow-low);
 }
 
 .switchIndicatorOn {

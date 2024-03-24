@@ -49,7 +49,7 @@
 }
 
 .surface:hover {
-  backdrop-filter: blur(2rem);
+  backdrop-filter: blur(1.6rem);
   box-shadow: var(--shadow-high);
 }
 

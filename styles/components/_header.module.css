@@ -23,17 +23,10 @@
 /* 🍔 */
 .menuButton,
 .menuItems {
-  position: relative;
+  position: absolute;
   top: 0;
   right: 0;
   z-index: 100;
-}
-
-@media (max-width: 100em) {
-  .menuButton,
-  .menuItems {
-    position: absolute;
-  }
 }
 
 .menuButton {
@@ -50,7 +43,6 @@
 
 .menuItems {
   --menu-button-height: 40px;
-  backdrop-filter: blur(var(--smallest-spacing));
   padding: var(--smallest-spacing);
   top: calc(var(--menu-button-height) + var(--smallest-spacing));
   width: 16em;

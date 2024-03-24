@@ -38,16 +38,15 @@ const Footer = ({ isDarkMode, setIsDarkMode }) => {
       <Switch
         checked={isDarkMode}
         onChange={toggleColorScheme}
-        className={`surface ${styles.switch} ${ifSwitchIsOn(styles.switchBgOn)}`}
+        className={`${styles.switch} ${ifSwitchIsOn(styles.switchBgOn)}`}
       >
         <span
           aria-hidden="true"
           className={`${styles.switchIndicator} ${ifSwitchIsOn(styles.switchIndicatorOn)}`}
         >
-          <IconColorScheme />
         </span>
         <span className={styles.srOnly}>
-          Use setting
+          Switch theme
         </span>
       </Switch>
     </footer>

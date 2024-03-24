@@ -76,12 +76,13 @@
   border-radius: var(--dot-size);
   display: block;
   height: var(--dot-size);
+  opacity: 0.33;
   transition: all var(--base-timing) var(--base-easing);
   width: var(--dot-size);
 }
 
 .navActive .navDot {
-  background-color: var(--theme-text-color);
+  opacity: 1;
   width: 3rem;
 }
 
