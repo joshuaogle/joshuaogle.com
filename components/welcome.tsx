@@ -6,7 +6,7 @@ const Welcome = () => {
     <header className={styles.container + " centered"}>
       <div className={styles.portrait}>
         <Image
-          src="/images/portrait.png"
+          src="/images/portrait.jpg"
           height="1200"
           width="1200"
           alt="Joshua Ogle"
