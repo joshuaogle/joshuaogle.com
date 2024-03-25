@@ -15,7 +15,7 @@ const Header = () => {
     {label: "Dribbble", icon: IconDribbble, href: "http://dribbble.com/joshuaogle"},
     {label: "LinkedIn", icon: IconLinkedIn, href: "http://linkedin.com/in/joshuaogle"},
     {label: "Github", icon: IconGithub, href: "http://github.com/joshuaogle"},
-    {label: "Resume", icon: DocumentArrowDownIcon, href: "/files/joshuaogle-resume.pdf"}
+    {label: "Resumé", icon: DocumentArrowDownIcon, href: "/files/joshuaogle-resume.pdf"}
   ]
 
   return (

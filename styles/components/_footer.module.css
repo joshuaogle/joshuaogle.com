@@ -18,13 +18,25 @@
 }
 
 /* Color Scheme Switch */
+.switchContainer {
+  display: flex;
+  align-items: center;
+  gap: var(--smallest-spacing);
+}
+
+.switchLabel {
+  color: var(--theme-muted-color);
+  width: 1.25em;
+  height: 1.25em;
+}
+
 .switch {
   --switch-size: 2.5em;
   --indicator-highlight: inset 0 0.1em 0.15em -0.1em rgba(var(--theme-highlight-rgb));
   background: var(--switch-bg);
   border: none;
   border-radius: calc(var(--switch-size) * 2);
-  box-shadow: 0 0 0.05em 0.1em rgba(0,0,0,0.025);
+  box-shadow: inset 0 0 5px 1px rgba(0,0,0,0.15);
   cursor: pointer;
   padding: calc(var(--switch-size) / 8);
   text-align: left;
@@ -48,7 +60,7 @@
   left: 0;
   position: relative;
   transition: left var(--base-timing) var(--base-easing);
-  box-shadow: 0 0 0.05em 0.1em rgba(0,0,0,0.05), var(--indicator-highlight), var(--shadow-low);
+  box-shadow: 0 0 3px 1px rgba(0,0,0,0.1), var(--indicator-highlight), var(--shadow-low);
 }
 
 .switchIndicatorOn {

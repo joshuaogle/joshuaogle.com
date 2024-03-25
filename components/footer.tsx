@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Switch } from '@headlessui/react'
-import IconColorScheme from '../public/images/color-scheme.svg'
+import { SunIcon } from '@heroicons/react/24/solid'
+import { MoonIcon } from '@heroicons/react/24/solid'
 import styles from '../styles/components/_footer.module.css'
 
 const GithubLink = ({children}) => {
@@ -35,20 +36,24 @@ const Footer = ({ isDarkMode, setIsDarkMode }) => {
         <GithubLink>Made by hand*</GithubLink> in Colorado.
       </small>
 
-      <Switch
-        checked={isDarkMode}
-        onChange={toggleColorScheme}
-        className={`${styles.switch} ${ifSwitchIsOn(styles.switchBgOn)}`}
-      >
-        <span
-          aria-hidden="true"
-          className={`${styles.switchIndicator} ${ifSwitchIsOn(styles.switchIndicatorOn)}`}
+      <div className={styles.switchContainer}>
+        <MoonIcon className={styles.switchLabel}/>
+        <Switch
+          checked={isDarkMode}
+          onChange={toggleColorScheme}
+          className={`${styles.switch} ${ifSwitchIsOn(styles.switchBgOn)}`}
         >
-        </span>
-        <span className={styles.srOnly}>
-          Switch theme
-        </span>
-      </Switch>
+          <span
+            aria-hidden="true"
+            className={`${styles.switchIndicator} ${ifSwitchIsOn(styles.switchIndicatorOn)}`}
+          >
+          </span>
+          <span className={styles.srOnly}>
+            Switch theme
+          </span>
+        </Switch>
+        <SunIcon className={styles.switchLabel}/>
+      </div>
     </footer>
   )
 }
