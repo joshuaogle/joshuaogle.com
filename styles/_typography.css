@@ -2,7 +2,7 @@ h1,
 h2,
 h3,
 h4 {
-  color: var(--theme-heading-color);
+  color: var(--heading-color);
   font-family: var(--heading-font);
   font-weight: var(--font-weight-semibold);
   letter-spacing: 0.1rem;
@@ -23,7 +23,7 @@ h2 {
 }
 
 h3 {
-  color: var(--theme-muted-color);
+  color: var(--muted-color);
   font-size: 1.25em;
 }
 
@@ -38,7 +38,7 @@ li {
 }
 
 li::before {
-  color: var(--theme-muted-color);
+  color: var(--muted-color);
   content: "•";
   display: inline-block;
   font-size: 1.5em;
@@ -70,7 +70,7 @@ p + ul {
 }
 
 a {
-  color: var(--theme-link-color);
+  color: var(--theme-action-color);
   font-weight: var(--font-weight-regular);
   text-decoration: none;
 }
@@ -78,12 +78,11 @@ a {
 a h2,
 a h3,
 a h3 {
-  color: var(--theme-link-color);
+  color: var(--theme-action-color);
 }
 
 a:hover {
-  color: var(--theme-link-hover);
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 strong {

@@ -24,7 +24,7 @@
 }
 
 .title {
-  color: var(--theme-text-color);
+  color: var(--text-color);
   font-size: 2em;
 }
 

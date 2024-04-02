@@ -146,10 +146,6 @@
   --fast-easing: ease-out;
 
   /* Elevations (from Material Design): */
-  --shadow-o-0: 0;
-  --shadow-o-u: 0.4;
-  --shadow-o-p: 0.2;
-  --shadow-o-a: 0.1;
   --md-0: rgba(var(--theme-shadow-rgb), var(--shadow-o-0));
   --md-u: rgba(var(--theme-shadow-rgb), var(--shadow-o-u)); /* Umbra */
   --md-p: rgba(var(--theme-shadow-rgb), var(--shadow-o-p)); /* Penumbra */
@@ -167,44 +163,42 @@
   --shadow-low: var(--md-1-u), var(--md-1-p), var(--md-1-a);
   --shadow-medium: var(--md-2-u), var(--md-2-p), var(--md-2-a);
   --shadow-high: var(--md-3-u), var(--md-3-p), var(--md-3-a);
+  --shadow-inset: inset var(--md-1-u), inset var(--md-1-p), inset var(--md-1-a);
+  --shadow-outline: 0 0 0 1px rgba(var(--theme-shadow-rgb), var(--shadow-o-u));
 }
 
 /* Default dark theme */
 :root {
-  --theme-stark-color: black;
-  --theme-text-color: var(--neutral-300);
-  --theme-link-color: var(--cyan-500);
-  --theme-link-hover: var(--cyan-300);
-  --theme-heading-color: var(--neutral-100);
-  --theme-highlight-rgb:  255, 239, 102;
-  --theme-muted-color: rgba(255, 255, 255, 0.33);
-  --theme-surface-rgb: 30, 26, 22;
-  --theme-surface-opacity: 0.15;
-  --theme-shadow-rgb: 30, 26, 22;
-  --theme-background-color: var(--neutral-900);
-  --background-gradient-start: 0.15;
-  --background-gradient-end: 0.3;
-  --background-dot-color: rgba(var(--theme-highlight-rgb), 0.66);
-  --switch-bg: var(--theme-background-color);
+  --stark-rgb: 0, 0, 0;
+  --text-color: var(--neutral-300);
+  --heading-color: var(--neutral-100);
+  --muted-color: rgba(255, 255, 255, 0.25);
+  --background-start: var(--neutral-800);
+  --background-end: var(--neutral-900);
+  --theme-color: var(--cyan-500);
+  --theme-action-color: var(--cyan-500);
+  --theme-highlight-rgb: 255, 239, 102;
+  --theme-shadow-rgb: 15, 13, 11;
+  --surface-opacity: 0.12;
+  --shadow-o-0: 0;
+  --shadow-o-u: 0.2;
+  --shadow-o-p: 0.1;
+  --shadow-o-a: 0.05;
 }
 
 /* Light theme */
 html[data-prefers-color-scheme="light"] {
+  --stark-rgb: 255, 255, 255;
+  --text-color: var(--neutral-700);
+  --heading-color: var(--neutral-900);
+  --muted-color: rgba(0, 0, 0, 0.33);
+  --background-start: var(--neutral-100);
+  --background-end: var(--neutral-200);
+  --theme-action-color: var(--cyan-600);
+  --theme-shadow-rgb: 15, 13, 11;
+  --surface-opacity: 0.5;
   --shadow-o-0: 0;
   --shadow-o-u: 0.075;
   --shadow-o-p: 0.05;
   --shadow-o-a: 0.025;
-  --theme-stark-color: white;
-  --theme-text-color: var(--neutral-700);
-  --theme-link-color: var(--cyan-600);
-  --theme-link-hover: var(--cyan-400);
-  --theme-muted-color: rgba(0, 0, 0, 0.4);
-  --theme-surface-rgb: 255, 255, 255;
-  --theme-surface-opacity: 0.4;
-  --theme-shadow-rgb: 30, 26, 22;
-  --theme-heading-color: var(--theme-text-color);
-  --background-gradient-start: 1;
-  --background-gradient-end: 1;
-  --background-dot-color: var(--theme-background-color);
-  --switch-bg: white;
 }

@@ -61,7 +61,7 @@
 }
 
 .tabNavs a {
-  color: var(--theme-muted-color);
+  color: var(--muted-color);
 }
 
 .tabNav {
@@ -72,7 +72,7 @@
 }
 
 .navDot {
-  background-color: var(--theme-muted-color);
+  background-color: var(--muted-color);
   border-radius: var(--dot-size);
   display: block;
   height: var(--dot-size);
@@ -87,7 +87,7 @@
 }
 
 .navLabel {
-  color: var(--theme-muted-color);
+  color: var(--muted-color);
   font-size: var(--small-font-size);
   font-weight: var(--font-weight-semibold);
   opacity: 0;

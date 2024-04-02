@@ -8,6 +8,7 @@
 }
 
 .app::after {
+  --dot-color: rgba(var(--stark-rgb), 0.25);
   --dot-spacing: var(--small-spacing);
   --dot-position: calc(var(--dot-spacing) * -0.5);
   --dot-starting-opacity: 0;
@@ -20,13 +21,9 @@
   top: 0;
   left: 0;
   z-index: -1;
-  background-image: radial-gradient(var(--background-dot-color), 1px, transparent 0);
+  background-image: radial-gradient(var(--dot-color), 1px, transparent 0);
   background-size: var(--dot-spacing) var(--dot-spacing);
-  background-position: cvar(--dot-position) var(--dot-position);
-  mask-image: radial-gradient(
-    ellipse at center,
-    rgba(0,0,0,var(--dot-starting-opacity)) 50%,
-    rgba(0,0,0,var(--dot-ending-opacity)) 100%);
+  background-position: var(--dot-position) var(--dot-position);
   transition: all var(--slow-timing);
 }
 
@@ -36,8 +33,8 @@
 }
 
 .surface {
-  backdrop-filter: blur(1rem);
-  background: rgba(var(--theme-surface-rgb), var(--theme-surface-opacity));
+  backdrop-filter: blur(0.5rem);
+  background: rgba(var(--stark-rgb), var(--surface-opacity));
   background-size: 100px;
   border-radius: var(--surface-border-radius);
   padding: var(--large-spacing);
@@ -49,7 +46,7 @@
 }
 
 .surface:hover {
-  backdrop-filter: blur(1.6rem);
+  backdrop-filter: blur(1rem);
   box-shadow: var(--shadow-high);
 }
 
@@ -75,6 +72,7 @@
     var(--border-end)
   );
   border-radius: var(--surface-border-radius);
+  box-shadow: var(--shadow-outline);
   /* Put it behind */
   content: "";
   display: inline-block;

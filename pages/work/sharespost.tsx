@@ -14,7 +14,7 @@ export const summary = {
     client_url: "http://sharespost.com",
   },
   theme: {
-    backgroundColor: "#332D8D",
+    color: "#332D8D",
     backgroundImage: "url('/images/case-study-bg-sharespost.png')",
     highlightRGB: "0, 182, 242",
     icon: "/images/case-study-logo-sharespost.svg"
@@ -32,13 +32,9 @@ const Sharespost = () => {
       <Layout>
         <style jsx global>{`
           :root {
-            --theme-background-color: ${summary.theme.backgroundColor};
-            --theme-background-image: ${summary.theme.backgroundImage};
+            --theme-color: ${summary.theme.color};
             --theme-highlight-rgb: ${summary.theme.highlightRGB};
-          }
-
-          html[data-prefers-color-scheme="light"] {
-            --theme-heading-color: ${summary.theme.backgroundColor};
+            --theme-background-image: ${summary.theme.backgroundImage};
           }
         `}</style>
       

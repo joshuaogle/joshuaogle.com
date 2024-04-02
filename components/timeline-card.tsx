@@ -10,7 +10,7 @@ type Props = {
 
 const TimelineCard = ({ summary, href }: Props) => {
   const cardStyles = {
-    '--card-background-color': summary.theme.backgroundColor,
+    '--card-background-color': summary.theme.color,
     '--card-background-image': (summary.theme.backgroundImage ? `url(${summary.theme.backgroundImage})` : 'none'),
   }as React.CSSProperties;
 

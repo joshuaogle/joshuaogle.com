@@ -8,19 +8,18 @@
 }
 
 html {
-  background: var(--theme-background-color);
+  background: var(--background-start);
   overflow-x: hidden;
-  transition: all var(--slowest-timing) var(--fast-easing);
 }
 
 body {
   background-image: radial-gradient(
     circle at bottom,
-    rgba(var(--theme-surface-rgb), var(--background-gradient-start)),
-    rgba(var(--theme-surface-rgb), var(--background-gradient-end))
+    var(--background--start),
+    var(--background--end)
   );
   background-attachment: fixed;
-  color: var(--theme-text-color);
+  color: var(--text-color);
   font-family: var(--sans-serif);
   font-size: var(--base-font-size);
   font-weight: var(--font-weight-light);

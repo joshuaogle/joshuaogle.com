@@ -15,7 +15,7 @@ export const summary = {
     client_url: "http://armadatracking.com"
   },
   theme: {
-    backgroundColor: "rgb(27, 108, 148)",
+    color: "rgb(27, 108, 148)",
     backgroundImage: "url('/images/case-study-bg-armada.png')",
     highlightRGB: "2, 169, 242",
     icon: "/images/case-study-logo-armada.svg"
@@ -30,12 +30,8 @@ const VaultCaseStudy = () => {
       </Head>
       <style jsx global>{`
         :root {
-          --theme-background-color: ${summary.theme.backgroundColor};
+          --theme-color: ${summary.theme.color};
           --theme-highlight-rgb: ${summary.theme.highlightRGB};
-        }
-
-        html[data-prefers-color-scheme="light"] {
-          --theme-heading-color: ${summary.theme.backgroundColor};
         }
       `}</style>
     
