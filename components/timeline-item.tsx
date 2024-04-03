@@ -21,9 +21,9 @@ const TimelineItem = ({ title, icon, company, role, caseStudies, children }: Pro
   return (
     <div className={styles.itemContainer}>
       <div className={styles.textContainer}>
-        <h3 className={styles.title}>
+        <h2 className={styles.title}>
           {title}
-        </h3>
+        </h2>
         <small className={styles.subtitle}>
           <Image
             src={icon}

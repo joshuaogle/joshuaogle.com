@@ -2,6 +2,7 @@ h1,
 h2,
 h3,
 h4 {
+  --heading-size: var(--base-font-size);
   color: var(--heading-color);
   font-family: var(--heading-font);
   font-weight: var(--font-weight-semibold);
@@ -11,7 +12,7 @@ h4 {
 }
 
 h1 {
-  font-size: 2.75rem;
+  font-size: 2.33rem;
 }
 
 h1 + small {
@@ -19,7 +20,7 @@ h1 + small {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.75rem;
 }
 
 h3 {

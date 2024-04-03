@@ -103,7 +103,7 @@
   --green-100: #F7FDDF;
 
   /* Spacing */
-  --bigger: 1.5;
+  --bigger: 1.33;
   --smaller: calc(1/var(--bigger));
   --base-spacing: 2rem;
   --small-spacing: calc(var(--base-spacing) * var(--smaller));
