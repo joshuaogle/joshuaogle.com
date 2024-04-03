@@ -18,6 +18,7 @@
   height: 100%;
   top: 0;
   left: 0;
+  position: absolute;
   z-index: -1;
   background-image: radial-gradient(var(--dot-color), 1px, transparent 0);
   background-size: var(--dot-spacing) var(--dot-spacing);
