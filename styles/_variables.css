@@ -127,7 +127,7 @@
   --font-weight-regular: 400;
   --font-weight-semibold: 600;
   --font-weight-black: 800;
-  --base-font-size: calc(0.66rem + 1vw);
+  --base-font-size: calc(0.5rem + 1vw);
   --large-font-size: calc(var(--base-font-size) * var(--bigger));
   --small-font-size: calc(var(--base-font-size) * var(--smaller));
   --smallest-font-size: calc(var(--base-font-size) * var(--smaller));
@@ -173,7 +173,7 @@
   --stark-rgb: 0, 0, 0;
   --text-color: var(--neutral-300);
   --heading-color: var(--neutral-100);
-  --muted-color: rgba(255, 255, 255, 0.25);
+  --muted-color: rgba(255, 255, 255, 0.33);
   --background-start: var(--neutral-900);
   --background-end: var(--black);
   --theme-color: var(--cyan-500);

@@ -26,6 +26,6 @@
   color: var(--muted-color);
   flex: 0 0 25%;
   margin: var(--smallest-spacing);
-  max-height: 3em;
-  max-width: 5em;
+  max-height: 3rem;
+  max-width: 5rem;
 }

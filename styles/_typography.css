@@ -11,7 +11,7 @@ h4 {
 }
 
 h1 {
-  font-size: 2.75em;
+  font-size: 2.75rem;
 }
 
 h1 + small {
@@ -19,12 +19,12 @@ h1 + small {
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 2rem;
 }
 
 h3 {
   color: var(--muted-color);
-  font-size: 1.25em;
+  font-size: 1.25rem;
 }
 
 ul {
@@ -41,7 +41,7 @@ li::before {
   color: var(--muted-color);
   content: "•";
   display: inline-block;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   line-height: 0;
   margin-left: calc(var(--small-spacing) * -1);
   margin-right: var(--smallest-spacing);
@@ -142,7 +142,7 @@ figcaption,
   font-family: var(--heading-font);
   font-size: var(--small-font-size);
   font-weight: var(--font-weight-light);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.05rem;
   line-height: 200%;
   margin: var(--smallest-spacing) auto;
 }
@@ -172,12 +172,12 @@ blockquote {
 blockquote::before {
   color: var(--muted-color);
   content: "“";
-  font-size: 6em;
+  font-size: 6rem;
   font-family: var(--heading-font);
-  left: -0.3em;
+  left: -0.3rem;
   opacity: 0.25;
   position: absolute;
-  top: -0.45em;
-  width: 1em;
+  top: -0.45rem;
+  width: 1rem;
   z-index: -1;
 }

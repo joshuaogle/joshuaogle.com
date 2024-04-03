@@ -9,6 +9,10 @@
 
 html {
   background: var(--background-start);
+  font-family: var(--sans-serif);
+  font-size: var(--base-font-size);
+  font-weight: var(--font-weight-light);
+  line-height: 1.5;
   overflow-x: hidden;
 }
 
@@ -20,10 +24,6 @@ body {
   );
   background-attachment: fixed;
   color: var(--text-color);
-  font-family: var(--sans-serif);
-  font-size: var(--base-font-size);
-  font-weight: var(--font-weight-light);
-  line-height: 1.5;
   margin: 0;
   min-height: 100%;
   overflow-x: hidden;

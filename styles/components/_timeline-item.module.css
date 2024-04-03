@@ -26,13 +26,13 @@
 
 .title {
   color: var(--text-color);
-  font-size: 2em;
+  font-size: 2rem;
 }
 
 .icon {
   display: inline-block;
-  margin-right: 0.5em;
-  vertical-align: -0.25rm;
+  margin-right: 0.5rem;
+  vertical-align: -0.33rem;
 }
 
 .subtitle {
