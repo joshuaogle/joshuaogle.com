@@ -40,6 +40,6 @@
 }
 
 .caption {
-  color: var(--theme-muted-color);
+  color: var(--muted-color);
   top: 100%;
 }

@@ -23,7 +23,7 @@
 }
 
 .logos svg {
-  color: var(--theme-muted-color);
+  color: var(--muted-color);
   flex: 0 0 25%;
   margin: var(--smallest-spacing);
   max-height: 3em;

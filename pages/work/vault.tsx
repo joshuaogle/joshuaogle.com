@@ -59,7 +59,7 @@ const VaultCaseStudy = () => {
               "case-studies/vault-loader-dark.gif",
               "case-studies/vault-keys.png"
             ]}
-            caption="X"
+            caption="Vault's first product color was slate gray"
           />
 
           <p>

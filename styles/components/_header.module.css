@@ -9,7 +9,7 @@
 /* ⬅ */
 
 .backLink {
-  color: var(--theme-muted-color);
+  color: var(--muted-color);
   display: block;
   font-size: 1.5em;
 }
@@ -22,7 +22,7 @@
 
 /* 🍔 */
 .menuButton,
-.menuItems {
+.menuList {
   position: absolute;
   top: 0;
   right: 0;
@@ -41,14 +41,19 @@
   color: rgb(var(--theme-highlight-rgb));
 }
 
-.menuItems {
+.menuList {
   --menu-button-height: 40px;
+  filter: none;
   padding: var(--smallest-spacing);
   top: calc(var(--menu-button-height) + var(--smallest-spacing));
   width: 16em;
 }
 
-.menuItems:focus {
+[data-healessui-state] .menuList {
+  filter: var(--motion-blur);
+}
+
+.menuList:focus {
   outline: none;
 }
 
@@ -68,6 +73,6 @@
 
 .menuLink svg {
   margin: 0;
-  height: 1.5em;
-  width: 1.5em;
+  height: 1.25em;
+  width: 1.25em;
 }

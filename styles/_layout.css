@@ -24,7 +24,6 @@
   background-image: radial-gradient(var(--dot-color), 1px, transparent 0);
   background-size: var(--dot-spacing) var(--dot-spacing);
   background-position: var(--dot-position) var(--dot-position);
-  transition: all var(--slow-timing);
 }
 
 .centered {
@@ -33,7 +32,7 @@
 }
 
 .surface {
-  backdrop-filter: blur(0.5rem);
+  backdrop-filter: blur(2rem);
   background: rgba(var(--stark-rgb), var(--surface-opacity));
   background-size: 100px;
   border-radius: var(--surface-border-radius);
@@ -46,7 +45,8 @@
 }
 
 .surface:hover {
-  backdrop-filter: blur(1rem);
+  --surface-opacity: 0.25;
+  backdrop-filter: blur(3rem);
   box-shadow: var(--shadow-high);
 }
 

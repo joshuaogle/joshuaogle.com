@@ -64,9 +64,9 @@ const ExampleImage = ({filename, index, of}: ExampleImageProps) => {
       <Tilt
         scale={1.05}
         tiltMaxAngleX={5}
-        tiltMaxAngleY={15}
+        tiltMaxAngleY={10}
         perspective={2000}
-        transitionSpeed={5000}
+        transitionSpeed={10000}
       >
         <figure key={filename} className='surface'>
           <img src={`/images/${filename}`} />

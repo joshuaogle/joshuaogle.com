@@ -27,7 +27,7 @@ const Header = () => {
         className={styles.menu}>
         <MenuLink/>
 
-        <Menu.Items className={`${styles.menuItems} surface`}>
+        <Menu.Items className={`${styles.menuList} surface`}>
           <h2
             className={styles.menuTitle}
             key="menuItemTitle">

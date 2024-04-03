@@ -82,7 +82,7 @@ a h3 {
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 strong {
@@ -138,7 +138,7 @@ pre  .m {
 small,
 figcaption,
 .section-title {
-  color: var(--theme-muted-color);
+  color: var(--muted-color);
   font-family: var(--heading-font);
   font-size: var(--small-font-size);
   font-weight: var(--font-weight-light);
@@ -170,7 +170,7 @@ blockquote {
 }
 
 blockquote::before {
-  color: var(--theme-muted-color);
+  color: var(--muted-color);
   content: "“";
   font-size: 6em;
   font-family: var(--heading-font);
