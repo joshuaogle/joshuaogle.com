@@ -19,7 +19,7 @@
 
 .portrait {
   flex: 1;
-  max-width: 16em;
+  max-width: 16rem;
 }
 
 .portrait img {

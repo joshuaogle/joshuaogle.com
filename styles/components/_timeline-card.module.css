@@ -1,5 +1,5 @@
 .card {
-  --card-height: 18em;
+  --card-height: 18rem;
   height: var(--card-height);
   width: calc(var(--card-height) * var(--smaller));
   background-color: var(--card-background-color);
@@ -28,8 +28,8 @@
 .icon {
   border-radius: 0;
   box-shadow: none;
-  height: 3em;
-  width: 4em;
+  height: 3rem;
+  width: 4rem;
   margin: 0;
 }
 
@@ -56,7 +56,7 @@
   opacity: 0;
   position: absolute;
   right: 0;
-  font-size: 3em;
+  font-size: 3rem;
   transition: all var(--base-timing) var(--base-easing);
 }
 
