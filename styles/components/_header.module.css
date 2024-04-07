@@ -42,14 +42,9 @@
 
 .menuList {
   --menu-button-height: 40px;
-  filter: none;
   padding: var(--smallest-spacing);
   top: calc(var(--menu-button-height) + var(--smaller-spacing));
   width: 16rem;
-}
-
-[data-healessui-state] .menuList {
-  filter: var(--motion-blur);
 }
 
 .menuList:focus {

@@ -22,8 +22,8 @@
 
 .switchLabel {
   color: var(--muted-color);
-  width: 1rem;
-  height: 1rem;
+  width: 0.75rem;
+  height: 0.75rem;
 }
 
 .switchLabel:last-child {
@@ -31,7 +31,7 @@
 }
 
 .switch {
-  --switch-size: 2rem;
+  --switch-size: 1.25rem;
   background: rgba(0, 0, 0, var(--shadow-o-u));
   border: none;
   border-radius: calc(var(--switch-size) * 2);
