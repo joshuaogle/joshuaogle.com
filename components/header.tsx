@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 import Image from 'next/image'
 import Link from 'next/link'
+import Surface from './surface'
 import { Menu } from '@headlessui/react'
 import IconGithub from '../public/images/icon-github.svg'
 import IconMastodon from '../public/images/icon-mastodon.svg'
@@ -27,32 +28,34 @@ const Header = () => {
         className={styles.menu}>
         <MenuLink/>
 
-        <Menu.Items className={`${styles.menuList} surface`}>
-          <h2
-            className={styles.menuTitle}
-            key="menuItemTitle">
-            You've got good taste, let's chat
-          </h2>
+        <Menu.Items className={`${styles.menuList}`}>
+          <Surface>
+            <h2
+              className={styles.menuTitle}
+              key="menuItemTitle">
+              You've got good taste, let's chat
+            </h2>
 
-          <Menu.Item key="menuItemEmail">
-            <a
-              className={styles.menuLink}
-              href="mailto:joshua@joshuaogle.com">
-              joshua@joshuaogle.com
-            </a>
-          </Menu.Item>
-
-          {menuLinks.map((menuLink) => (
-            <Menu.Item key={menuLink.label}>
+            <Menu.Item key="menuItemEmail">
               <a
                 className={styles.menuLink}
-                href={menuLink.href}
-                target="_new">
-                <menuLink.icon/>
-                {menuLink.label}
+                href="mailto:joshua@joshuaogle.com">
+                joshua@joshuaogle.com
               </a>
             </Menu.Item>
-          ))}
+
+            {menuLinks.map((menuLink) => (
+              <Menu.Item key={menuLink.label}>
+                <a
+                  className={styles.menuLink}
+                  href={menuLink.href}
+                  target="_new">
+                  <menuLink.icon/>
+                  {menuLink.label}
+                </a>
+              </Menu.Item>
+            ))}
+          </Surface>
         </Menu.Items>
       </Menu>
     </header>

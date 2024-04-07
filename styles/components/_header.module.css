@@ -43,7 +43,7 @@
 .menuList {
   --menu-button-height: 40px;
   padding: var(--smallest-spacing);
-  top: calc(var(--menu-button-height) + var(--smaller-spacing));
+  top: calc(var(--menu-button-height));
   width: 16rem;
 }
 
