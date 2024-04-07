@@ -1,37 +1,30 @@
 .container {
   align-items: center;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   gap: var(--small-spacing);
   position: relative;
-  padding: 10vh 0 0;
+  padding: 16vh 0 var(--larger-spacing);
 }
 
 @media (min-width: 600px) {
   .container {
     flex-direction: row;
-    gap: var(--base-spacing);
-    margin-bottom: calc(var(--base-spacing) * -1);
-    justify-content: center;
-    padding: 15vh 0 5vh;
   }
 }
 
 .portrait {
   flex: 1;
-  max-width: 16rem;
+  max-width: 10rem;
 }
 
 .portrait img {
   border-radius: var(--surface-border-radius);
-  box-shadow: var(--shadow-high);
+  box-shadow: var(--icon-border-radius);
   height: auto;
 }
 
 html[data-prefers-color-scheme="light"] .portrait img {
   box-shadow: var(--shadow-low);
-}
-
-.textContainer {
-  margin-bottom: var(--small-spacing);
 }

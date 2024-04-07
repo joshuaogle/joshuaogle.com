@@ -23,10 +23,10 @@ const TimelineCard = ({ summary, href }: Props) => {
         glareEnable={true}
         glareMaxOpacity={0.2}
         scale={1.02}
-        tiltMaxAngleX={5}
-        tiltMaxAngleY={10}
+        tiltMaxAngleX={10}
+        tiltMaxAngleY={15}
         perspective={2000}
-        transitionSpeed={10000}
+        transitionSpeed={2500}
         className={styles.card}
       >
         <Image
@@ -48,7 +48,7 @@ const TimelineCard = ({ summary, href }: Props) => {
           </small>
 
           <small className={styles.arrow}>
-            &rsaquo;
+            View more &rarr;
           </small>
         </div>
       </Tilt>

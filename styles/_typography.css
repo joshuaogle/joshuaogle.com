@@ -7,16 +7,12 @@ h4 {
   font-family: var(--heading-font);
   font-weight: var(--font-weight-semibold);
   letter-spacing: 0.1rem;
-  line-height: 1.2;
-  margin: 0 0 var(--smallest-spacing);
+  line-height: 1.25;
+  margin: 0 0 0.15em;
 }
 
 h1 {
-  font-size: 2.33rem;
-}
-
-h1 + small {
-  margin-top: 0;
+  font-size: 2.25rem;
 }
 
 h2 {
@@ -45,7 +41,7 @@ li::before {
   font-size: 1.5rem;
   line-height: 0;
   margin-left: calc(var(--small-spacing) * -1);
-  margin-right: var(--smallest-spacing);
+  margin-right: var(--smaller-spacing);
 }
 
 p {
@@ -145,7 +141,6 @@ figcaption,
   font-weight: var(--font-weight-light);
   letter-spacing: 0.05rem;
   line-height: 200%;
-  margin: var(--smallest-spacing) auto;
 }
 
 figure,
@@ -156,7 +151,7 @@ figure.surface {
 
 figcaption {
   font-size: var(--smallest-font-size);
-  margin: var(--smallest-spacing) 0 0;
+  margin: var(--smaller-spacing) 0 0;
 }
 
 .section-title {

@@ -15,7 +15,6 @@
   display: flex;
   align-items: center;
   gap: var(--small-spacing);
-  padding-bottom: var(--large-spacing);
   justify-content: center;
 }
 
@@ -37,7 +36,7 @@
 
 .subtitle {
   display: block;
-  margin: 0 0 var(--small-spacing);
+  margin: 0 0 var(--smaller-spacing);
   text-transform: none;
 }
 

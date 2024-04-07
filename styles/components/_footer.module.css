@@ -17,7 +17,7 @@
 .switchContainer {
   display: flex;
   align-items: center;
-  gap: var(--smallest-spacing);
+  gap: var(--smaller-spacing);
 }
 
 .switchLabel {

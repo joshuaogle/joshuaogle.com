@@ -1,6 +1,7 @@
 .app {
-  background: transparent url("/images/noise-transparent.png") repeat 0 0;
+  background: transparent url("/images/noise-transparent.png") repeat 50% 0;
   background-size: 200px 166px;
+  background-attachment: fixed;
   padding: var(--base-spacing);
   position: relative;
   z-index: 1;
@@ -23,6 +24,7 @@
   background-image: radial-gradient(var(--dot-color), 1px, transparent 0);
   background-size: var(--dot-spacing) var(--dot-spacing);
   background-position: var(--dot-position) var(--dot-position);
+  background-origin: 50% 0;
 }
 
 .centered {

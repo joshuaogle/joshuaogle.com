@@ -1,6 +1,7 @@
 .card {
-  height: 16rem;
-  width: 12rem;
+  --card-height: 15rem;
+  height: var(--card-height);
+  width: calc(var(--card-height) * var(--smaller));
   background-color: var(--card-background-color);
   background-image: var(--card-background-image);
   background-size: cover;
@@ -13,7 +14,7 @@
   flex-direction: column;
   justify-content: space-between;
   overflow: hidden;
-  padding: var(--small-spacing);
+  padding: var(--smaller-spacing);
   position: relative;
   transition: transform var(--base-timing) var(--base-easing);
   transform-style: preserve-3d;
@@ -40,7 +41,6 @@
 
 .title {
   color: var(--white);
-  margin-bottom: 0.25em;
 }
 
 .meta {
@@ -51,14 +51,16 @@
 }
 
 .arrow {
-  color: rgba(255, 255, 255, 0.33);
+  filter: var(--motion-blur);
+  height: 0;
+  margin: 0;
   opacity: 0;
-  position: absolute;
-  right: 0;
-  font-size: 3rem;
   transition: all var(--base-timing) var(--base-easing);
 }
 
 .card:hover .arrow {
-  right: 0;
+  filter: blur(0);
+  height: 1em;
+  margin-bottom: 1em;
+  opacity: 1;
 }

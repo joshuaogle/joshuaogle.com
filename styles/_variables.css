@@ -103,11 +103,12 @@
   --green-100: #F7FDDF;
 
   /* Spacing */
-  --bigger: 1.33;
+  --bigger: 1.4142; /* sqrt(2) */
   --smaller: calc(1/var(--bigger));
   --base-spacing: 2rem;
   --small-spacing: calc(var(--base-spacing) * var(--smaller));
-  --smallest-spacing: calc(var(--small-spacing) * var(--smaller));
+  --smaller-spacing: calc(var(--small-spacing) * var(--smaller));
+  --smallest-spacing: calc(var(--smaller-spacing) * var(--smaller));
   --large-spacing: calc(var(--base-spacing) * var(--bigger));
   --larger-spacing: calc(var(--large-spacing) * var(--bigger));
 
@@ -133,9 +134,10 @@
   --smallest-font-size: calc(var(--base-font-size) * var(--smaller));
 
   /* Borders */
-  --base-border-radius: var(--smallest-spacing);
+  --base-border-radius: var(--smaller-spacing);
   --surface-border-radius: var(--small-spacing);
   --large-border-radius: var(--base-spacing);
+  --app-border-radius: calc(2/9 * 100%);
 
   /* Timing */
   --base-timing: 250ms;

@@ -1,3 +1,5 @@
 .list {
-  gap: var(--base-spacing);
+  display: flex;
+  flex-direction: column;
+  gap: var(--smallest-spacing);
 }

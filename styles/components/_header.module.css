@@ -7,7 +7,6 @@
 
 
 /* ⬅ */
-
 .backLink {
   color: var(--muted-color);
   display: block;
@@ -45,7 +44,7 @@
   --menu-button-height: 40px;
   filter: none;
   padding: var(--smallest-spacing);
-  top: calc(var(--menu-button-height) + var(--smallest-spacing));
+  top: calc(var(--menu-button-height) + var(--smaller-spacing));
   width: 16rem;
 }
 
@@ -58,15 +57,15 @@
 }
 
 .menuTitle {
-  font-size: 1.33rem;
-  line-height: 1.2;
-  padding: var(--smallest-spacing) var(--smallest-spacing) 0;
+  font-size: 1.25rem;
+  line-height: 1.33;
+  padding: var(--smaller-spacing) var(--smaller-spacing) 0;
 }
 
 .menuLink {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
-  gap: var(--small-spacing);
+  gap: var(--smaller-spacing);
   padding: var(--smallest-spacing);
   transition: color var(--base-timing);
 }

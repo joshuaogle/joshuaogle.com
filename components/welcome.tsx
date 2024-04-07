@@ -17,8 +17,8 @@ const Welcome = () => {
           Joshua Ogle
         </h1>
         <p>
-          Product Design Lead, making the
-          <br/>cloud a <mark>better place to live</mark>
+          I'm a Product Designer, making the
+          <br/>internet a <mark>better place to live</mark>
         </p>
       </div>
     </header>
