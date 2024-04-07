@@ -21,6 +21,12 @@
   z-index: 1;
 }
 
+@media (max-width: 900px) {
+  .card {
+    --card-height: 13rem;
+  }
+}
+
 .card:hover {
   box-shadow: var(--shadow-high);
 }

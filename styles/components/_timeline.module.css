@@ -24,6 +24,7 @@
 }
 
 .tabPanel {
+  width: 100%;
   cursor: pointer;
   transform: scale(0.94);
   transition: all var(--slow-timing) var(--base-easing);
