@@ -1,7 +1,7 @@
 /* Tab Panels */
 
 .tabPanels {
-  --tab-gap: calc(var(--smaller-spacing) / 2);
+  --tab-gap: calc(var(--smallest-spacing) / 2);
   display: flex;
   gap: var(--tab-gap);
   margin: 0 var(--small-spacing);
@@ -25,19 +25,12 @@
 
 .tabPanel {
   cursor: pointer;
-  padding: var(--base-spacing);
   transform: scale(0.94);
   transition: all var(--slow-timing) var(--base-easing);
 }
 
 .tabPanel:hover {
   transform: scale(0.96);
-}
-
-@media (min-width: 640px) {
-  .tabPanel {
-    padding: var(--large-spacing);
-  }
 }
 
 .panelActive,

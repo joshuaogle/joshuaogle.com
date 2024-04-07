@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import Tilt from 'react-parallax-tilt';
 import ReactPlayer from 'react-player'
+import Surface from './surface'
 import styles from '../styles/components/_example.module.css'
 
 type ExampleProps = {
@@ -37,12 +38,14 @@ const Example = ({ images, video, caption }: ExampleProps) => {
       )}
 
       {hasWindow && video && (
-        <figure className='surface'>
-          <ReactPlayer
-            url={`/images/${video}`}
-            playing
-            muted
-          />
+        <figure>
+          <Surface>
+            <ReactPlayer
+              url={`/images/${video}`}
+              playing
+              muted
+            />
+          </Surface>
         </figure>
       )}
 
@@ -66,10 +69,12 @@ const ExampleImage = ({filename, index, of}: ExampleImageProps) => {
         tiltMaxAngleX={5}
         tiltMaxAngleY={10}
         perspective={2000}
-        transitionSpeed={5000}
+        transitionSpeed={10000}
       >
-        <figure key={filename} className='surface'>
-          <img src={`/images/${filename}`} />
+        <figure key={filename}>
+          <Surface>
+            <img src={`/images/${filename}`} />
+          </Surface>
         </figure>
       </Tilt>
     </div>    

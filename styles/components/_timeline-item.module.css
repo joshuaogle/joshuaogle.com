@@ -3,6 +3,7 @@
   align-items: center;
   gap: var(--small-spacing);
   max-width: 100%;
+  padding: var(--large-spacing);
 }
 
 @media (max-width: 900px) {

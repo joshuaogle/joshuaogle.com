@@ -13,7 +13,6 @@ const Timeline = () => {
         data-is-active={activeIndex}>
         {timelineEvents.map((event, panelIndex) => {
           const tabPanelClasses = [
-            `surface`,
             styles.tabPanel,
             (panelIndex === activeIndex ? styles.panelActive : '')
           ].join(' ')

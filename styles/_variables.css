@@ -117,8 +117,8 @@
   --break-medium: 1000px;
   --break-large: 1400px;
   --page-min-width: 30vw;
-  --page-preferred-width: 70ch;
-  --page-max-width: 80vw;
+  --page-preferred-width: 60ch;
+  --page-max-width: 90vw;
   --page-width: clamp(var(--page-min-width), var(--page-preferred-width), var(--page-max-width));
 
   /* Fonts */
@@ -128,13 +128,13 @@
   --font-weight-regular: 400;
   --font-weight-semibold: 600;
   --font-weight-black: 800;
-  --base-font-size: calc(0.75rem + 0.75vw);
+  --base-font-size: calc(0.66rem + 0.75vw);
   --large-font-size: calc(var(--base-font-size) * var(--bigger));
   --small-font-size: calc(var(--base-font-size) * var(--smaller));
   --smallest-font-size: calc(var(--base-font-size) * var(--smaller));
 
   /* Borders */
-  --base-border-radius: var(--smaller-spacing);
+  --base-border-radius: var(--smallest-spacing);
   --surface-border-radius: var(--small-spacing);
   --large-border-radius: var(--base-spacing);
   --app-border-radius: calc(2/9 * 100%);
@@ -163,6 +163,7 @@
   --md-2-a: 0.5rem 1.0rem 1.0rem 0 var(--md-a);
   --md-3-a: 1.25rem 2.5rem 2.5rem -0.5rem var(--md-a);
   --shadow-none: var(--md-0),  var(--md-0),  var(--md-0);
+  --shadow-lowest: var(--md-1-u);
   --shadow-low: var(--md-1-u), var(--md-1-p), var(--md-1-a);
   --shadow-medium: var(--md-2-u), var(--md-2-p), var(--md-2-a);
   --shadow-high: var(--md-3-u), var(--md-3-p), var(--md-3-a);
@@ -175,7 +176,6 @@
   --stark-rgb: 0, 0, 0;
   --text-color: var(--neutral-300);
   --heading-color: var(--neutral-100);
-  --muted-color: rgba(255, 255, 255, 0.33);
   --background-start: var(--neutral-900);
   --background-end: var(--black);
   --theme-color: var(--cyan-500);
@@ -183,6 +183,7 @@
   --theme-highlight-rgb: 255, 239, 102;
   --theme-shadow-rgb: 15, 13, 11;
   --surface-opacity: 0.18;
+  --muted-color: rgba(255, 255, 255, 0.33);
   --shadow-o-0: 0;
   --shadow-o-u: 0.2;
   --shadow-o-p: 0.1;
@@ -193,7 +194,7 @@
 html[data-prefers-color-scheme="light"] {
   --stark-rgb: 255, 255, 255;
   --text-color: var(--neutral-700);
-  --heading-color: var(--neutral-900);
+  --heading-color: var(--neutral-800);
   --muted-color: rgba(0, 0, 0, 0.33);
   --background-start: var(--neutral-100);
   --background-end: var(--neutral-200);
