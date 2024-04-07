@@ -153,15 +153,15 @@
   --md-u: rgba(var(--theme-shadow-rgb), var(--shadow-o-u)); /* Umbra */
   --md-p: rgba(var(--theme-shadow-rgb), var(--shadow-o-p)); /* Penumbra */
   --md-a: rgba(var(--theme-shadow-rgb), var(--shadow-o-a)); /* Ambient */
-  --md-1-u: 0.05rem 0.1rem 0.1rem 0 var(--md-u);
-  --md-2-u: 0.1rem 0.2rem 0.2rem 0 var(--md-u);
-  --md-3-u: 0.4rem 0.8rem 0.8rem -0.5rem var(--md-u);
-  --md-1-p: 0.1rem 0.2rem 0.2rem 0 var(--md-p);
-  --md-2-p: 0.2rem 0.4rem 0.4rem 0 var(--md-p);
-  --md-3-p: 0.5rem 1.0rem 1.0rem -0.5rem var(--md-p);
-  --md-1-a: 0.25rem 0.5rem 0.5rem 0 var(--md-a);
-  --md-2-a: 0.5rem 1.0rem 1.0rem 0 var(--md-a);
-  --md-3-a: 1.25rem 2.5rem 2.5rem -0.5rem var(--md-a);
+  --md-1-u: 0.05rem 0.075rem 0.1rem 0 var(--md-u);
+  --md-2-u: 0.1rem 0.15rem 0.2rem 0 var(--md-u);
+  --md-3-u: 0.4rem 0.6rem 0.8rem -0.5rem var(--md-u);
+  --md-1-p: 0.1rem 0.15rem 0.2rem 0 var(--md-p);
+  --md-2-p: 0.2rem 0.3rem 0.4rem 0 var(--md-p);
+  --md-3-p: 0.5rem 0.75rem 1.0rem -0.5rem var(--md-p);
+  --md-1-a: 0.25rem 0.33rem 0.5rem 0 var(--md-a);
+  --md-2-a: 0.5rem 0.75rem 1.0rem 0 var(--md-a);
+  --md-3-a: 1.25rem 1.75rem 2.5rem -0.5rem var(--md-a);
   --shadow-none: var(--md-0),  var(--md-0),  var(--md-0);
   --shadow-lowest: var(--md-1-u);
   --shadow-low: var(--md-1-u), var(--md-1-p), var(--md-1-a);

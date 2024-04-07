@@ -51,7 +51,9 @@
 }
 
 .arrow {
+  color: rgba(255, 255, 255, 0.5);
   filter: var(--motion-blur);
+  font-size: var(--smallest-font-size);
   height: 0;
   margin: 0;
   opacity: 0;
