@@ -96,9 +96,9 @@ svg {
 mark {
   background: linear-gradient(
     90deg,
-    rgba(var(--theme-highlight-rgb), 0.24) 10%,
-    rgba(var(--theme-highlight-rgb), 0.16) 80%,
-    rgba(var(--theme-highlight-rgb), 0.24)
+    rgba(var(--theme-highlight-rgb), 0.2) 10%,
+    rgba(var(--theme-highlight-rgb), 0.1) 80%,
+    rgba(var(--theme-highlight-rgb), 0.15)
   );
   border-radius: 1.5rem 0.5rem;
   box-decoration-break: clone;
