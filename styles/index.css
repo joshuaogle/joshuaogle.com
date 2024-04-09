@@ -18,9 +18,9 @@ html {
 
 body {
   background-image: radial-gradient(
-    circle at bottom,
-    var(--background--start),
-    var(--background--end)
+    circle at top,
+    var(--background-start),
+    var(--background-end)
   );
   background-attachment: fixed;
   color: var(--text-color);

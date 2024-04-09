@@ -1,5 +1,5 @@
 .surface {
-  backdrop-filter: blur(2rem);
+  backdrop-filter: blur(1rem);
   background: rgba(var(--stark-rgb), var(--surface-opacity));
   background-size: 100px;
   border-radius: var(--surface-border-radius);
@@ -13,7 +13,7 @@
 
 .surface:hover {
   --surface-opacity: 0.25;
-  backdrop-filter: blur(3rem);
+  backdrop-filter: blur(2rem);
   box-shadow: var(--shadow-high);
 }
 

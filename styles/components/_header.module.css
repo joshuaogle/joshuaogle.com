@@ -42,7 +42,7 @@
 
 .menuList {
   --menu-button-height: 40px;
-  padding: var(--smallest-spacing);
+  padding: 0 var(--smallest-spacing);
   top: calc(var(--menu-button-height));
   width: 16rem;
 }
@@ -58,11 +58,17 @@
 }
 
 .menuLink {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
   display: flex;
   gap: var(--smaller-spacing);
   padding: var(--smallest-spacing);
   transition: color var(--base-timing);
+}
+
+.menuLink:last-child {
+  border: none;
+  box-shadow: none;
 }
 
 .menuLink svg {
