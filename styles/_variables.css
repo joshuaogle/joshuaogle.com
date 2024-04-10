@@ -196,11 +196,11 @@ html[data-prefers-color-scheme="light"] {
   --text-color: var(--neutral-700);
   --heading-color: var(--neutral-800);
   --muted-color: rgba(0, 0, 0, 0.33);
-  --background-start: var(--neutral-100);
-  --background-end: var(--neutral-200);
+  --background-start: var(--neutral-200);
+  --background-end: var(--neutral-300);
   --theme-action-color: var(--cyan-600);
   --theme-shadow-rgb: 15, 13, 11;
-  --surface-opacity: 0.5;
+  --surface-opacity: 0.1;
   --shadow-o-0: 0;
   --shadow-o-u: 0.075;
   --shadow-o-p: 0.05;
