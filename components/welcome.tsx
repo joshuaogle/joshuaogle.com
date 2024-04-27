@@ -2,10 +2,27 @@ import Image from 'next/image'
 import Surface from './surface'
 import styles from '../styles/components/_welcome.module.css'
 
+const timeFormat = {
+  hour: 'numeric',
+  minute: 'numeric',
+  timeZone: 'America/Denver'
+};
+const currentTime = new Date();
+const formattedTime = currentTime.toLocaleTimeString('en-US', timeFormat);
+
+const Status = () => {
+  const isWeekend = currentTime.getDay() === 0 || currentTime.getDay() === 6;
+  const currentHour = new Date().getHours();
+  const isOnline = !isWeekend && currentHour >= 9 && currentHour < 17;
+
+  return (
+    <span className={styles.status}>
+      {isOnline ? 'Online' : 'Offline'}
+    </span>
+  );
+};
+
 const Welcome = () => {
-  const timeFormat = {  hour: 'numeric', minute: 'numeric'}
-  const currentTime = new Date().toLocaleTimeString('en-US', timeFormat);
- 
   return (
     <header className={styles.header}>
       <h1 className={styles.title}>
@@ -29,18 +46,13 @@ const Welcome = () => {
                 <span className={styles.name}>
                   Joshua Ogle
                 </span>
-
-                {currentTime && (
-                  <span className={styles.meta}>
-                    <span className={styles.status}>
-                      Active
-                    </span>
-
-                    <span className={styles.time}>
-                      {currentTime} local time
-                    </span>
+                &nbsp;
+                <span className={styles.meta}>
+                  <Status />
+                  <span className={styles.time}>
+                    ({formattedTime} local time)
                   </span>
-                )}
+                </span>
               </div>
 
               <p>
