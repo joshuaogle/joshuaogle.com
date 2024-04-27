@@ -1,7 +1,6 @@
 .app {
   background: transparent url("/images/noise-transparent.png") repeat 50% 0;
-  background-size: 200px 166px;
-  background-attachment: fixed;
+  background-size: 200px 100px;
   padding: var(--base-spacing);
   position: relative;
   z-index: 1;
