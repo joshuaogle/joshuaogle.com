@@ -6,17 +6,17 @@ h4 {
   color: var(--heading-color);
   font-family: var(--heading-font);
   font-weight: var(--font-weight-semibold);
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.025rem;
   line-height: 1.25;
   margin: 0 0 0.15em;
 }
 
 h1 {
-  font-size: 2.25rem;
+  font-size: 3rem;
 }
 
 h2 {
-  font-size: 1.75rem;
+  font-size: 2.25rem;
 }
 
 h3 {
@@ -104,7 +104,7 @@ mark {
   box-decoration-break: clone;
   color: var(--theme-text-color);
   font-weight: var(--font-weight-regular);
-  padding: 0 0.66rem 0.16rem;
+  padding: 0 0.33rem 0.16rem;
 }
 
 /* Code blocks */

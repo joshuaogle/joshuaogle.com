@@ -10,8 +10,6 @@
   --dot-color: rgba(128, 128, 128, 0.15);
   --dot-spacing: var(--small-spacing);
   --dot-position: calc(var(--dot-spacing) * -0.5);
-  --dot-starting-opacity: 0;
-  --dot-ending-opacity: 0.25;
   display: block;
   content: "";
   width: 100%;

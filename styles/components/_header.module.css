@@ -53,8 +53,7 @@
 
 .menuTitle {
   font-size: 1.25rem;
-  line-height: 1.33;
-  padding: var(--smaller-spacing) var(--smaller-spacing) 0;
+  padding: var(--smallest-spacing) var(--smallest-spacing) 0;
 }
 
 .menuLink {

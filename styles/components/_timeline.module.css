@@ -1,48 +1,5 @@
 /* Tab Panels */
 
-.tabPanels {
-  --tab-gap: calc(var(--smallest-spacing) / 2);
-  display: flex;
-  gap: var(--tab-gap);
-  margin: 0 var(--small-spacing);
-  transition: all var(--slow-timing) var(--base-easing);
-}
-
-.tabPanels[data-is-active="1"] {
-  transform: translateX(calc(-100% - var(--tab-gap)));
-}
-
-.tabPanels[data-is-active="2"] {
-  transform: translateX(calc(-200% - (var(--tab-gap) * 2)));
-}
-
-.tabPanelContainer {
-  display: flex;
-  align-items: stretch;
-  justify-content: stretch;
-  flex: 0 0 100%;
-}
-
-.tabPanel {
-  width: 100%;
-  cursor: pointer;
-  transform: scale(0.94);
-  transition: all var(--slow-timing) var(--base-easing);
-}
-
-.tabPanel:hover {
-  transform: scale(0.96);
-}
-
-.panelActive,
-.panelActive:hover {
-  cursor: default;
-  opacity: 1;
-  transform: scale(1);
-}
-
-
-
 /* Tab links */
 
 .tabNavs {

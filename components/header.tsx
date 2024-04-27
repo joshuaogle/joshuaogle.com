@@ -33,7 +33,7 @@ const Header = () => {
             <h2
               className={styles.menuTitle}
               key="menuItemTitle">
-              You've got good taste, let's chat
+              Let's chat
             </h2>
 
             <Menu.Item key="menuItemEmail">
