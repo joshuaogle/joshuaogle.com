@@ -134,7 +134,8 @@
   --smallest-font-size: calc(var(--base-font-size) * var(--smaller));
 
   /* Borders */
-  --base-border-radius: var(--smallest-spacing);
+  --small-border-radius: var(--smallest-spacing);
+  --base-border-radius: var(--smaller-spacing);
   --surface-border-radius: var(--small-spacing);
   --large-border-radius: var(--base-spacing);
   --app-border-radius: calc(2/9 * 100%);
@@ -182,7 +183,8 @@
   --theme-action-color: var(--cyan-500);
   --theme-highlight-rgb: 229, 193, 46;
   --theme-shadow-rgb: 15, 13, 11;
-  --surface-opacity: 0.15;
+  --surface-opacity: 0.25;
+  --surface-opacity-hover: 0.33;
   --muted-color: rgba(255, 255, 255, 0.33);
   --shadow-o-0: 0;
   --shadow-o-u: 0.2;
@@ -200,7 +202,8 @@ html[data-prefers-color-scheme="light"] {
   --background-end: var(--neutral-300);
   --theme-action-color: var(--cyan-600);
   --theme-shadow-rgb: 15, 13, 11;
-  --surface-opacity: 0.1;
+  --surface-opacity: 0.5;
+  --surface-opacity-hover: 1;
   --shadow-o-0: 0;
   --shadow-o-u: 0.075;
   --shadow-o-p: 0.05;

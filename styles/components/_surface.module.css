@@ -12,7 +12,7 @@
 }
 
 .surface:hover {
-  --surface-opacity: 0.2;
+  background: rgba(var(--stark-rgb), var(--surface-opacity-hover));
   backdrop-filter: blur(1rem);
   box-shadow: var(--shadow-high);
 }

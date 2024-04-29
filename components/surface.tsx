@@ -2,12 +2,14 @@ import styles from '../styles/components/_surface.module.css'
 
 type Props = {
   children: React.ReactNode,
-  props?: any
+  className?: string
 }
 
-const Surface = ({ children, props }: Props) => {
+const Surface = ({ children, className }: Props) => {
+  const classNames = className ? `${styles.surface} ${className}` : styles.surface;
+  
   return (
-    <div className={styles.surface} {...props}>
+    <div className={classNames}>
       {children}
     </div>
   )

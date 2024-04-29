@@ -16,9 +16,10 @@ export const summary = {
   },
   theme: {
     color: "#2e71e5",
-    backgroundImage: "",
+    backgroundColor: "var(--blue-800)",
     highlightRGB: "96, 212, 220",
-    icon: "/images/case-study-logo-structure.svg"
+    icon: "/images/case-study-logo-structure.svg",
+    preview: "/images/case-studies/structure-spacing.png",
   }
 }
 

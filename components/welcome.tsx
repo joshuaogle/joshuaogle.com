@@ -16,7 +16,7 @@ const Status = () => {
   const isOnline = !isWeekend && currentHour >= 9 && currentHour < 17;
 
   return (
-    <span className={styles.status}>
+    <span className={`${styles.status} ${isOnline ? styles.online : styles.offline}`}>
       {isOnline ? 'Online' : 'Offline'}
     </span>
   );
@@ -27,7 +27,7 @@ const Welcome = () => {
     <header className={styles.header}>
       <h1 className={styles.title}>
         Hi, I'm
-        <span class={styles.nameInTitle}>
+        <span className={styles.nameInTitle}>
           Joshua Ogle
         </span>
       </h1>

@@ -16,9 +16,10 @@ export const summary = {
   },
   theme: {
     color: "rgb(114, 114, 116)",
-    backgroundImage: "",
+    backgroundColor: "var(--slate-800)",
     highlightRGB: "255, 236, 110",
-    icon: "/images/case-study-logo-vault.svg"
+    icon: "/images/case-study-logo-vault.svg",
+    preview: "/images/case-studies/vault-methods.png",
   }
 }
 
