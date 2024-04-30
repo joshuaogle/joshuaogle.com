@@ -2,13 +2,16 @@ import { useState } from 'react'
 import timelineEvents from '../lib/timelineEvents'
 import Surface from './surface'
 import TimelineNav from './timelineNav'
+import TimelineEmployer from './timelineEmployer'
+import TimelinePreview from './timelinePreview'
 import styles from '../styles/components/_timeline.module.css'
 
 const Timeline = () => {
-  const [activeStudyIndex, setActiveStudy] = useState(2);
-  const [activeEmployerIndex, setActiveEmployer] = useState(1);
+  const [activeEmployerIndex, setActiveEmployer] = useState(2);
+  const [activeStudyIndex, setActiveStudy] = useState(1);
   const activeEmployer = timelineEvents[activeEmployerIndex];
   const activeStudy = activeEmployer.caseStudies[activeStudyIndex];
+  const timelineBackground = activeStudy.summary.theme.backgroundColor;
 
   const setActive = (employerIndex, studyIndex) => {
     setActiveStudy(studyIndex);
@@ -18,39 +21,19 @@ const Timeline = () => {
 
   return (
     <section>
+      <div className="centered">
+        <h2>Timeline</h2>
+      </div>
       <Surface className={styles.surface}>
         <div
           className={styles.timelineContainer}
-          style={{ backgroundColor: activeStudy.summary.theme.backgroundColor }}
+          style={{ "--timelineContainerBackground": timelineBackground }}
         >
           <TimelineNav timelineEvents={timelineEvents} activeStudyIndex={activeStudyIndex} setActive={setActive}/>
-          <div className={styles.employerContainer}>
-            {timelineEvents.map((employer, employerIndex) => (
-              <div
-                className={`${styles.employer} ${activeEmployerIndex === employerIndex ? 'active' : ''}`}
-                key={employerIndex}
-              >
-                {employer.company}
-                {employer.when}
-                {employer.role}
-                {employer.title}
-                {employer.copy}  
-              </div>
-            ))}
-          </div>
 
-          <div className={styles.previewContainer}>
-            {timelineEvents.map((employer) =>
-              employer.caseStudies.map((study, studyIndex) => (
-                <div className={styles.preview} key={studyIndex}>
-                  <img
-                    src={study.summary.theme.preview}
-                    alt={study.summary.title}
-                    className={`${styles.previewImage} ${activeStudyIndex === studyIndex ? 'active' : ''}`}
-                  />
-                </div>
-              ))
-            )}
+          <div className={styles.timelineContent}>
+            <TimelineEmployer employer={activeEmployer} />
+            <TimelinePreview timelineEvents={timelineEvents} activeStudyIndex={activeStudyIndex} />
           </div>
         </div>
       </Surface>

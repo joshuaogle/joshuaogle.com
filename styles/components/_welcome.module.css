@@ -20,6 +20,7 @@
 }
 
 .portrait {
+  border-radius: var(--app-border-radius);
   width: var(--portrait-size);
   height: auto;
 }
@@ -52,8 +53,8 @@
   border-radius: 50%;
   margin-right: 0.33rem;
   position: absolute;
-  top: calc(var(--portrait-size) + 0.25rem);
-  left: calc(var(--portrait-size) + 0.25rem);
+  top: var(--portrait-size);
+  left: var(--portrait-size);
   box-shadow: 0 0 0.125rem var(--surface-background-color);
 }
 
