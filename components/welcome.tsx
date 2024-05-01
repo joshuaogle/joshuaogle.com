@@ -6,7 +6,7 @@ const currentTime = new Date();
 const formattedTime = new Date().toLocaleTimeString('en-US', {
   hour: 'numeric',
   minute: 'numeric',
-  timeZone: 'America/Los_Angeles'
+  timeZone: 'America/Denver'
 });
 
 const Status = () => {
