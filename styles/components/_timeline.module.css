@@ -193,3 +193,7 @@
   transition: all var(--base-timing) var(--base-easing);
   z-index: 2;
 }
+
+.previewImage {
+  width: 100%;
+}

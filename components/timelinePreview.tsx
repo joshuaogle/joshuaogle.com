@@ -24,7 +24,7 @@ const TimelinePreview = ({timelineEvents, activeStudy, activeStudyIndex}: Props)
               <img
                 src={study.summary.theme.preview}
                 alt={study.summary.title}
-                className={activeStudyIndex === studyIndex ? 'active' : ''}
+                className={`${styles.previewImage} ${activeStudyIndex === studyIndex ? 'active' : ''}`}
               />
             </Surface>
           </div>
