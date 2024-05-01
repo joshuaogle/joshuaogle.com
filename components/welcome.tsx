@@ -2,15 +2,15 @@ import Image from 'next/image'
 import Surface from './surface'
 import styles from '../styles/components/_welcome.module.css'
 
-const timeFormat = {
+const currentTime = new Date();
+const formattedTime = new Date().toLocaleTimeString('en-US', {
   hour: 'numeric',
   minute: 'numeric',
-  timeZone: 'America/Denver'
-};
-const currentTime = new Date();
-const formattedTime = currentTime.toLocaleTimeString('en-US', timeFormat);
+  timeZone: 'America/Los_Angeles'
+});
 
 const Status = () => {
+  const currentTime = new Date();
   const isWorkweek = currentTime.getDay() !== 0 && currentTime.getDay() !== 6;
   const currentHour = currentTime.getHours();
   const isWorkingHours = currentHour >= 9 && currentHour < 17;

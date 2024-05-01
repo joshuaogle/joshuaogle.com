@@ -35,7 +35,6 @@ const Sharespost = () => {
           :root {
             --theme-color: ${summary.theme.color};
             --theme-highlight-rgb: ${summary.theme.highlightRGB};
-            --theme-background-image: ${summary.theme.backgroundImage};
           }
         `}</style>
       

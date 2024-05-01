@@ -3,8 +3,8 @@ import Link from 'next/link'
 import Surface from './surface'
 
 type Props = {
-  timelineEvents: Object,
-  activeStudy: Object,
+  timelineEvents: Array<any>,
+  activeStudy: any,
   activeStudyIndex: number
 }
 
@@ -19,7 +19,6 @@ const TimelinePreview = ({timelineEvents, activeStudy, activeStudyIndex}: Props)
             data-order={order++}
             data-relative-order={order - activeStudyIndex - 1}
             key={order}
-            className={styles.preview}
           >
             <Surface className={styles.surface}>
               <img

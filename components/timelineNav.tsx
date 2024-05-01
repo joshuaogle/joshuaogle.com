@@ -1,7 +1,7 @@
 import styles from '../styles/components/_timeline.module.css'
 
 type Props = {
-  timelineEvents: Array,
+  timelineEvents: Array<any>,
   activeStudyIndex: number,
   setActive: any
 }
