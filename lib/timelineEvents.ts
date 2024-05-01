@@ -9,7 +9,7 @@ const timelineEvents = [
     when: "2010 to 2014",
     role: "Design Director",
     icon: "/images/timeline-brightbit.svg",
-    title: "A small but mighty studio",
+    title: "Small but mighty",
     copy: "I co-founded a consultancy in Oklahoma City and led design for a team of seven. \
       We worked with local startups to build Ruby on Rails, Javascript and hybrid mobile apps.",
     caseStudies: [
@@ -21,7 +21,7 @@ const timelineEvents = [
     when: "2014 to 2016",
     role: "Sr Product Designer",
     icon: "/images/timeline-thoughtbot.svg",
-    title: "From zero to launch",
+    title: "Zero to launch",
     copy: "Known for their dedication to open-source and pride in their craft,\
       thoughtbot does software consulting right.\
       This is also where I found my love for mentoring other designers and developed their influential Product Design Sprint.",
@@ -34,7 +34,7 @@ const timelineEvents = [
     when: "2017 to Now",
     role: "Staff Product Designer",
     icon: "/images/timeline-hashicorp.svg",
-    title: "Better security by design",
+    title: "Secure by design",
     copy: "HashiCorp makes developer-focused infrastructure software. \
       I lead design for some of our most popular products and helped grow our design team from 2 designers to 30+ across seven teams.",
     caseStudies: [

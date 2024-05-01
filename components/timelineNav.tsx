@@ -2,29 +2,35 @@ import styles from '../styles/components/_timeline.module.css'
 
 type Props = {
   timelineEvents: Array,
-  activeStudyIndex: integer,
+  activeStudyIndex: number,
   setActive: any
 }
+
 const TimelineNav = ({timelineEvents, activeStudyIndex, setActive}: Props) => {
+  let order = 0;
   return (
     <div className={styles.timelineNav}>
       {timelineEvents.map((employer, employerIndex) =>
-        employer.caseStudies.map((study, studyIndex) => (
-          <button
-            key={study.summary.title}
-            className={`${styles.timelineNavButton} ${activeStudyIndex == studyIndex ? 'active' : ''}`}
-            style={{ backgroundColor: study.summary.theme.color }}
-            onClick={() => setActive(employerIndex, studyIndex)}
-          >
-            <img src={study.summary.theme.icon} alt={study.summary.title} />
-            <span className={styles.timelineNavLabel}>
-              {employer.when}
-            </span>
-          </button>
-        ))
+        employer.caseStudies.map((study, studyIndex) => {
+          const currentOrder = order;
+            const button = (
+            <div className={activeStudyIndex === currentOrder ? styles.timelineNavActive : ''}>
+              <button
+                key={study.summary.title}
+                className={styles.timelineNavButton}
+                style={{ backgroundColor: study.summary.theme.color }}
+                onClick={() => setActive(employerIndex, currentOrder)}
+              >
+              <img src={study.summary.theme.icon} alt={study.summary.title} />
+              </button>
+            </div>
+            );
+          order++;
+          return button;
+        })
       )}
     </div>
-  )
+  );
 }
 
-export default TimelineNav
+export default TimelineNav;

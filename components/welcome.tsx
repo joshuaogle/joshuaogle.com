@@ -11,9 +11,10 @@ const currentTime = new Date();
 const formattedTime = currentTime.toLocaleTimeString('en-US', timeFormat);
 
 const Status = () => {
-  const isWeekend = currentTime.getDay() === 0 || currentTime.getDay() === 6;
-  const currentHour = new Date().getHours();
-  const isOnline = !isWeekend && currentHour >= 9 && currentHour < 17;
+  const isWorkweek = currentTime.getDay() !== 0 && currentTime.getDay() !== 6;
+  const currentHour = currentTime.getHours();
+  const isWorkingHours = currentHour >= 9 && currentHour < 17;
+  const isOnline = isWorkingHours && isWorkweek;
 
   return (
     <span className={`${styles.status} ${isOnline ? styles.online : styles.offline}`}>

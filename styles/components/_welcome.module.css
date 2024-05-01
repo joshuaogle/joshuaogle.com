@@ -43,22 +43,21 @@
 }
 
 .status {
-  background-color: var(--neutral-900);
-  border: 1px solid var(--muted-color);
+  --offset: calc(var(--portrait-size) + 0.1rem);
+  background-color: var(--black);
   content: "";
   display: inline-block;
   font-size: 0;
-  height: 0.66rem;
-  width: 0.66rem;
+  height: 0.5rem;
+  width: 0.5rem;
   border-radius: 50%;
-  margin-right: 0.33rem;
   position: absolute;
-  top: var(--portrait-size);
-  left: var(--portrait-size);
-  box-shadow: 0 0 0.125rem var(--surface-background-color);
+  top: var(--offset);
+  left: var(--offset);
+  box-shadow: 0 0 0 3px var(--neutral-900);
 }
 
-.status.is-online {
+.status.online {
   background-color: var(--green-700);
 }
 

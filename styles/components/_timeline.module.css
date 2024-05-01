@@ -1,21 +1,33 @@
-.surface {
-  padding: var(--smallest-spacing);
-}
-
 .timelineContainer {
-  --timelineContainerBackground: var(--neutral-900);
-  background: radial-gradient(
-    circle at bottom,
-    var(--timelineContainerBackground),
-    var(--black)
-  );
+  background: var(--neutral-900);
   border-radius: var(--base-border-radius);
   box-shadow: var(--shadow-low), 0 -1px 0 0 rgba(255, 255, 255, 0.1);
   display: flex;
   flex-direction: column;
   padding: var(--small-spacing) var(--smallest-spacing) 0;
+  position: relative;
   gap: var(--large-spacing);
   transition: background var(--slow-timing) var(--base-easing);
+}
+
+.timelineContainer::after {
+  border-radius: var(--base-border-radius);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: radial-gradient(
+    circle at bottom,
+    rgba(var(--stark-rgb),var(--timeline-background-opacity-start)),
+    rgba(var(--stark-rgb),var(--timeline-background-opacity-end))
+  );
+  content: "";
+  z-index: 1;
+}
+
+.timelineContainer > * {
+  z-index: 2;
 }
 
 /* Tab Panels */
@@ -30,7 +42,6 @@
   border-radius: var(--app-border-radius);
   box-shadow: var(--shadow-low);
   cursor: pointer;
-  position: relative;
   height: 3rem;
   width: 3rem;
   padding: 0.5rem;
@@ -44,37 +55,25 @@
   border-radius: 0;
 }
 
-.timelineNavButton.active::before {
+.timelineNavActive {
+  position: relative;
+}
+
+.timelineNavActive::before {
+  --dot-size: 0.33rem;
+  content: "";
   background-color: var(--muted-color);
   border-radius: var(--dot-size);
+  content: "";
   display: block;
   height: var(--dot-size);
-  opacity: 0.33;
   transition: all var(--base-timing) var(--base-easing);
   width: var(--dot-size);
-}
-
-.timelineNavLabel {
-  filter: var(--motion-blur);
-  color: var(--muted-color);
-  font-size: var(--small-font-size);
-  font-weight: var(--font-weight-semibold);
-  opacity: 0;
-  pointer-events: none;
   position: absolute;
+  top: 110%;
   left: 50%;
-  white-space: nowrap;
-  top: 0;
-  transform: translateX(-50%) translateY(-100%);
-  transition: opacity var(--base-timing) var(--base-easing);
+  transform: translateX(-50%);
 }
-
-.timelineNavButton.active .timelineNavLabel {
-  filter: none;
-  opacity: 1;
-}
-
-
 
 /* Timeline Content */
 
@@ -93,17 +92,9 @@
   padding: var(--small-spacing);
 }
 
-.employer {
-  display: none;
-}
-
-.employer.active {
-  display: block;
-}
-
 .employerTitle {
   color: var(--muted-color);
-  font-size: 2rem; 
+  font-size: 1.5rem; 
 }
 
 .employerMeta {
@@ -125,19 +116,53 @@
 .previewContainer {
   flex: 7;
   height: 40vw;
+  margin: 0 var(--small-spacing);
   position: relative;
-  overflow: hidden;
 }
 
 .preview {
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: var(--base-border-radius);
-  padding: var(--smallest-spacing);
+  filter: blur(var(--motion-blur));
   position: absolute;
+  opacity: 0;
+  z-index: 1;
+  top: 100%;
+  transition: all var(--slow-timing) var(--base-easing);
 }
 
-.previewImage {
-  width: 100%;
-  height: auto;
-  border-radius: var(--small-border-radius);
+.preview[data-relative-order] {
+  filter: blur(none));
+}
+
+.preview[data-relative-order="0"] {
+  z-index: 1;
+  opacity: 1;
+  left: 0;
+  right: 0;
+  top: 0;
+  top: calc(3 * var(--small-spacing));
+}
+
+.preview[data-relative-order="-1"] {
+  --index: attr(data-relative-order);
+  z-index: -1;
+  opacity: 1;
+  left: var(--smallest-spacing);
+  right: var(--smallest-spacing);
+  top: calc(2 * var(--small-spacing));
+}
+
+.preview[data-relative-order="-2"] {
+  z-index: -2;
+  opacity: 1;
+  left: calc(2 * var(--smallest-spacing));
+  right: calc(2 * var(--smallest-spacing));
+  top: var(--small-spacing);
+}
+
+.preview[data-relative-order="-3"] {
+  z-index: -3;
+  opacity: 1;
+  left: calc(3 * var(--smallest-spacing));
+  right: calc(3 * var(--smallest-spacing));
+  top: 0;
 }

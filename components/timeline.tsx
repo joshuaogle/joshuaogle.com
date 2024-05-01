@@ -7,29 +7,31 @@ import TimelinePreview from './timelinePreview'
 import styles from '../styles/components/_timeline.module.css'
 
 const Timeline = () => {
-  const [activeEmployerIndex, setActiveEmployer] = useState(2);
-  const [activeStudyIndex, setActiveStudy] = useState(1);
+  const allStudies = timelineEvents.flatMap((employer) => employer.caseStudies);
+  const [activeEmployerIndex, setActiveEmployer] = useState(timelineEvents.length - 1);
+  const [activeStudyIndex, setActiveStudy] = useState(allStudies.length - 1);
   const activeEmployer = timelineEvents[activeEmployerIndex];
-  const activeStudy = activeEmployer.caseStudies[activeStudyIndex];
+  const activeStudy = allStudies[activeStudyIndex];
   const timelineBackground = activeStudy.summary.theme.backgroundColor;
 
   const setActive = (employerIndex, studyIndex) => {
-    setActiveStudy(studyIndex);
-    setActiveEmployer(employerIndex);
     console.log("Set active", employerIndex, studyIndex);
+    setActiveEmployer(employerIndex);
+    setActiveStudy(studyIndex);
   }
 
   return (
     <section>
-      <div className="centered">
-        <h2>Timeline</h2>
-      </div>
       <Surface className={styles.surface}>
         <div
           className={styles.timelineContainer}
-          style={{ "--timelineContainerBackground": timelineBackground }}
+          style={{ backgroundColor: timelineBackground }}
         >
-          <TimelineNav timelineEvents={timelineEvents} activeStudyIndex={activeStudyIndex} setActive={setActive}/>
+          <TimelineNav
+            timelineEvents={timelineEvents}
+            activeStudyIndex={activeStudyIndex}
+            setActive={setActive}
+          />
 
           <div className={styles.timelineContent}>
             <TimelineEmployer employer={activeEmployer} />
