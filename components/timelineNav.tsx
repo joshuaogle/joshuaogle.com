@@ -14,9 +14,10 @@ const TimelineNav = ({timelineEvents, activeStudyIndex, setActive}: Props) => {
         employer.caseStudies.map((study, studyIndex) => {
           const currentOrder = order;
             const button = (
-            <div className={activeStudyIndex === currentOrder ? styles.timelineNavActive : ''}>
+            <div
+              className={activeStudyIndex === currentOrder ? styles.timelineNavActive : ''}
+              key={study.summary.title}>
               <button
-                key={study.summary.title}
                 className={styles.timelineNavButton}
                 style={{ backgroundColor: study.summary.theme.color }}
                 onClick={() => setActive(employerIndex, currentOrder)}

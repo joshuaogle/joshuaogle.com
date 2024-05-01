@@ -19,7 +19,7 @@ export const summary = {
     backgroundColor: "var(--blue-800)",
     highlightRGB: "96, 212, 220",
     icon: "/images/case-study-logo-structure.svg",
-    preview: "/images/case-studies/structure-spacing.png",
+    preview: "/images/case-studies/structure-tree.png",
   }
 }
 

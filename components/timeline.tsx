@@ -15,7 +15,6 @@ const Timeline = () => {
   const timelineBackground = activeStudy.summary.theme.backgroundColor;
 
   const setActive = (employerIndex, studyIndex) => {
-    console.log("Set active", employerIndex, studyIndex);
     setActiveEmployer(employerIndex);
     setActiveStudy(studyIndex);
   }
@@ -35,7 +34,11 @@ const Timeline = () => {
 
           <div className={styles.timelineContent}>
             <TimelineEmployer employer={activeEmployer} />
-            <TimelinePreview timelineEvents={timelineEvents} activeStudyIndex={activeStudyIndex} />
+            <TimelinePreview
+              timelineEvents={timelineEvents}
+              activeStudy={activeStudy}
+              activeStudyIndex={activeStudyIndex}
+            />
           </div>
         </div>
       </Surface>

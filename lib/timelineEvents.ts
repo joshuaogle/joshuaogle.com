@@ -10,8 +10,8 @@ const timelineEvents = [
     role: "Design Director",
     icon: "/images/timeline-brightbit.svg",
     title: "Small but mighty",
-    copy: "I co-founded a consultancy in Oklahoma City and led design for a team of seven. \
-      We worked with local startups to build Ruby on Rails, Javascript and hybrid mobile apps.",
+    copy: "I co-founded a consultancy in OKC and led design for a team of seven. \
+      We helped Armada create a world class fleet management and tracking app.",
     caseStudies: [
       {summary: ArmadaSummary, href: "/work/armada"}
     ]
@@ -22,9 +22,8 @@ const timelineEvents = [
     role: "Sr Product Designer",
     icon: "/images/timeline-thoughtbot.svg",
     title: "Zero to launch",
-    copy: "Known for their dedication to open-source and pride in their craft,\
-      thoughtbot does software consulting right.\
-      This is also where I found my love for mentoring other designers and developed their influential Product Design Sprint.",
+    copy: "thoughtbot is for their love of open-source and pride in their craft.\
+      We created a dashboard for SharesPost to help users monitor their private shares",
     caseStudies: [
       {summary: SharespostSummary, href: "/work/sharespost"}
     ]

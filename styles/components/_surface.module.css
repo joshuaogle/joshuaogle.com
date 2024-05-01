@@ -5,7 +5,7 @@
   border-radius: var(--surface-border-radius);
   padding: var(--smallest-spacing);
   position: relative;
-  box-shadow: var(--shadow-low);
+  box-shadow: inset 0 0 1px 0 var(--muted-color), var(--shadow-low);
   width: auto;
   transition: all var(--base-timing) var(--base-easing);
   z-index: 1;
@@ -14,7 +14,7 @@
 .surface:hover {
   background: rgba(var(--stark-rgb), var(--surface-opacity-hover));
   backdrop-filter: blur(1rem);
-  box-shadow: var(--shadow-high);
+  box-shadow: inset 0 0 1px 0 var(--muted-color), var(--shadow-high);
 }
 
 /* Border gradient */

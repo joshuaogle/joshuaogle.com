@@ -32,7 +32,7 @@ const Example = ({ images, video, caption }: ExampleProps) => {
           data-examples={images.length}
         >
           {images.map((filename, index) => (
-            <ExampleImage filename={filename} index={index} of={images.length} />
+            <ExampleImage key={index} filename={filename} index={index} of={images.length} />
           ))}
         </div>
       )}

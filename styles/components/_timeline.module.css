@@ -89,12 +89,21 @@
 
 .employerContainer {
   flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: var(--small-spacing);
+}
+
+@media (max-width: 800px) {
+  .employerContainer {
+    display: none;
+  }
 }
 
 .employerTitle {
   color: var(--muted-color);
-  font-size: 1.5rem; 
+  font-size: 1.5rem;
 }
 
 .employerMeta {
@@ -117,52 +126,70 @@
   flex: 7;
   height: 40vw;
   margin: 0 var(--small-spacing);
+  overflow: hidden;
   position: relative;
 }
 
 .preview {
-  filter: blur(var(--motion-blur));
+  filter: blur(1rem);
   position: absolute;
+  display: block;
   opacity: 0;
   z-index: 1;
   top: 100%;
   transition: all var(--slow-timing) var(--base-easing);
 }
 
-.preview[data-relative-order] {
-  filter: blur(none));
-}
-
 .preview[data-relative-order="0"] {
+  filter: blur(0);
   z-index: 1;
   opacity: 1;
   left: 0;
   right: 0;
   top: 0;
-  top: calc(3 * var(--small-spacing));
+  top: 3rem;
 }
 
 .preview[data-relative-order="-1"] {
   --index: attr(data-relative-order);
+  filter: blur(0);
   z-index: -1;
   opacity: 1;
-  left: var(--smallest-spacing);
-  right: var(--smallest-spacing);
-  top: calc(2 * var(--small-spacing));
+  left: var(--base-spacing);
+  right: var(--base-spacing);
+  top: 2rem;
 }
 
 .preview[data-relative-order="-2"] {
+  filter: blur(0);
   z-index: -2;
   opacity: 1;
-  left: calc(2 * var(--smallest-spacing));
-  right: calc(2 * var(--smallest-spacing));
-  top: var(--small-spacing);
+  left: calc(2 * var(--base-spacing));
+  right: calc(2 * var(--base-spacing));
+  top: 1rem;
 }
 
 .preview[data-relative-order="-3"] {
+  filter: blur(0);
   z-index: -3;
   opacity: 1;
-  left: calc(3 * var(--smallest-spacing));
-  right: calc(3 * var(--smallest-spacing));
+  left: calc(3 * var(--base-spacing));
+  right: calc(3 * var(--base-spacing));
   top: 0;
+}
+
+.previewLink {
+  background-color: black;
+  border-radius: var(--large-border-radius);
+  padding: var(--smallest-spacing) var(--base-spacing);
+  text-align: center;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  position: absolute;
+  bottom: var(--small-spacing);
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all var(--base-timing) var(--base-easing);
+  z-index: 2;
 }
