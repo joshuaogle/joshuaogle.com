@@ -18,7 +18,7 @@ export const summary = {
     color: "#2e71e5",
     highlightRGB: "96, 212, 220",
     backgroundStart: "var(--blue-800)",
-    backgroundEnd: "var(--blue-600)",
+    backgroundEnd: "var(--blue-900)",
     icon: "/images/case-study-logo-structure.svg",
     preview: "/images/case-studies/structure-tree.png",
   }
@@ -36,7 +36,6 @@ const Structure = () => {
           :root {
             --theme-color: ${summary.theme.color};
             --theme-highlight-rgb: ${summary.theme.highlightRGB};
-            --heading-color: ${summary.theme.color};
           }
         `}</style>
       

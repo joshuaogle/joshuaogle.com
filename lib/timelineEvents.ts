@@ -6,7 +6,7 @@ import {summary as ArmadaSummary} from '../pages/work/armada';
 const timelineEvents = [
   {
     company: "Brightbit",
-    when: "2010 to 2014",
+    when: "2010-2014",
     role: "Design Director",
     icon: "/images/timeline-brightbit.svg",
     title: "Small but mighty",
@@ -18,7 +18,7 @@ const timelineEvents = [
   },
   {
     company: "thoughtbot",
-    when: "2014 to 2016",
+    when: "2014-2016",
     role: "Sr Product Designer",
     icon: "/images/timeline-thoughtbot.svg",
     title: "Zero to launch",
@@ -30,7 +30,7 @@ const timelineEvents = [
   },
   {
     company: "HashiCorp",
-    when: "2017 to Now",
+    when: "2017-Now",
     role: "Staff Product Designer",
     icon: "/images/timeline-hashicorp.svg",
     title: "Secure by design",

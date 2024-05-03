@@ -36,7 +36,6 @@ const VaultCaseStudy = () => {
         :root {
           --theme-color: ${summary.theme.color};
           --theme-highlight-rgb: ${summary.theme.highlightRGB};
-          --heading-color: ${summary.theme.headingColor};
         }
       `}</style>
     
