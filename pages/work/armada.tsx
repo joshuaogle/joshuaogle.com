@@ -16,8 +16,9 @@ export const summary = {
   },
   theme: {
     color: "rgb(27, 108, 148)",
-    backgroundColor: "rgb(13, 54, 74)",
     highlightRGB: "2, 169, 242",
+    backgroundStart: "rgb(13, 54, 74)",
+    backgroundEnd: "rgb(13, 54, 74)",
     icon: "/images/case-study-logo-armada.svg",
     preview: "/images/case-studies/armada-user.png",
   }
@@ -33,6 +34,7 @@ const VaultCaseStudy = () => {
         :root {
           --theme-color: ${summary.theme.color};
           --theme-highlight-rgb: ${summary.theme.highlightRGB};
+          --heading-color: ${summary.theme.color};
         }
       `}</style>
     

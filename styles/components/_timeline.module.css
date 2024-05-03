@@ -1,5 +1,24 @@
+/* Can't use css variables for initial value */
+@property --bg-start {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #2945A9;
+}
+
+@property --bg-end {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #5379EB;
+}
+
 .timelineContainer {
-  background: var(--neutral-900);
+  background: radial-gradient(
+    circle at bottom,
+    var(--bg-start),
+    var(--bg-end)
+  );
+  transition: --bg-start var(--slow-timing) var(--base-easing),
+              --bg-end var(--slow-timing) var(--base-easing);
   border-radius: var(--base-border-radius);
   box-shadow: var(--shadow-low), 0 -1px 0 0 rgba(255, 255, 255, 0.1);
   display: flex;
@@ -7,23 +26,6 @@
   padding: var(--small-spacing) var(--smallest-spacing) 0;
   position: relative;
   gap: var(--large-spacing);
-  transition: background var(--slow-timing) var(--base-easing);
-}
-
-.timelineContainer::after {
-  border-radius: var(--base-border-radius);
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: radial-gradient(
-    circle at bottom,
-    rgba(var(--stark-rgb),var(--timeline-background-opacity-start)),
-    rgba(var(--stark-rgb),var(--timeline-background-opacity-end))
-  );
-  content: "";
-  z-index: 1;
 }
 
 .timelineContainer > * {

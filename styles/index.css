@@ -3,6 +3,17 @@
 @import "_layout.css";
 @import "_fonts.css";
 
+@property --background-start {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: var(--neutral-800);
+}
+@property --background-end {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: var(--neutral-900);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -28,6 +39,7 @@ body {
   min-height: 100%;
   overflow-x: hidden;
   padding: 0;
+  transition: all var(--base-timing) var(--base-easing);
 }
   
 main {

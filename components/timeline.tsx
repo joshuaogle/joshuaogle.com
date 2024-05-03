@@ -12,11 +12,14 @@ const Timeline = () => {
   const [activeStudyIndex, setActiveStudy] = useState(allStudies.length - 1);
   const activeEmployer = timelineEvents[activeEmployerIndex];
   const activeStudy = allStudies[activeStudyIndex];
-  const timelineBackground = activeStudy.summary.theme.backgroundColor;
+  const [timelineBGStart, setTimelineBGStart] = useState(activeStudy.summary.theme.backgroundStart);
+  const [timelineBGEnd, setTimelineBGEnd] = useState(activeStudy.summary.theme.backgroundEnd);
 
-  const setActive = (employerIndex, studyIndex) => {
+  const setActive = (employerIndex, studyIndex, bgStart, bgEnd) => {
     setActiveEmployer(employerIndex);
     setActiveStudy(studyIndex);
+    setTimelineBGStart(bgStart);
+    setTimelineBGEnd(bgEnd);
   }
 
   return (
@@ -24,7 +27,10 @@ const Timeline = () => {
       <Surface className={styles.surface}>
         <div
           className={styles.timelineContainer}
-          style={{ backgroundColor: timelineBackground }}
+          style={{
+            "--bg-start": timelineBGStart,
+            "--bg-end": timelineBGEnd
+          }}
         >
           <TimelineNav
             timelineEvents={timelineEvents}

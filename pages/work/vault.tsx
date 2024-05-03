@@ -15,8 +15,11 @@ export const summary = {
     client_url: "http://vaultproject.io"
   },
   theme: {
-    color: "rgb(114, 114, 116)",
-    backgroundColor: "var(--neutral-800)",
+    color: "#0199CA",
+    highlightColor: "#FDD84A",
+    headingColor: "#FDD84A",
+    backgroundStart: "#3A3A3A",
+    backgroundEnd: "#020202",
     highlightRGB: "255, 236, 110",
     icon: "/images/case-study-logo-vault.svg",
     preview: "/images/case-studies/vault-home.png",
@@ -33,6 +36,7 @@ const VaultCaseStudy = () => {
         :root {
           --theme-color: ${summary.theme.color};
           --theme-highlight-rgb: ${summary.theme.highlightRGB};
+          --heading-color: ${summary.theme.headingColor};
         }
       `}</style>
     

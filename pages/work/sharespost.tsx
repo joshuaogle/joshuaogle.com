@@ -15,8 +15,10 @@ export const summary = {
   },
   theme: {
     color: "#332D8D",
-    backgroundColor: "var(--violet-800)",
     highlightRGB: "0, 182, 242",
+    headingColor: "#A166A6",
+    backgroundStart: "#2A254A",
+    backgroundEnd: "#171139",
     icon: "/images/case-study-logo-sharespost.svg",
     preview: "/images/case-studies/sharespost-home.png",
   },
@@ -35,6 +37,9 @@ const Sharespost = () => {
           :root {
             --theme-color: ${summary.theme.color};
             --theme-highlight-rgb: ${summary.theme.highlightRGB};
+            --heading-color: ${summary.theme.headingColor};
+            --background-start: ${summary.theme.backgroundStart};
+            --background-end: ${summary.theme.backgroundEnd};
           }
         `}</style>
       
