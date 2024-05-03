@@ -57,7 +57,7 @@ const Welcome = () => {
               </div>
 
               <p>
-                Product Designer working at <a href="https://hashicorp.com" target="_new">HashiCorp</a>,
+                I'm a Staff Product Designer @ <a href="https://hashicorp.com" target="_new">HashiCorp</a>,
                 making the internet a better place to live
               </p>
             </div>

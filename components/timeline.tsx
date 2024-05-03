@@ -30,7 +30,7 @@ const Timeline = () => {
           style={{
             "--bg-start": timelineBGStart,
             "--bg-end": timelineBGEnd
-          }}
+          } as React.CSSProperties}
         >
           <TimelineNav
             timelineEvents={timelineEvents}
