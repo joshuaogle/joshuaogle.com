@@ -33,7 +33,7 @@ const timelineEvents = [
     when: "2017-Now",
     role: "Staff Product Designer",
     icon: "/images/timeline-hashicorp.svg",
-    title: "Secure by design",
+    title: "Security in style",
     copy: "HashiCorp makes developer-focused infrastructure software. \
       I lead design for some of our most popular products and helped grow our design team from 2 designers to 30+ across seven teams.",
     caseStudies: [
