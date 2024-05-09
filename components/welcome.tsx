@@ -27,10 +27,8 @@ const Welcome = () => {
   return (
     <header className={styles.header}>
       <h1 className={styles.title}>
-        Hi, I'm
-        <span className={styles.nameInTitle}>
-          Joshua Ogle
-        </span>
+        Hi, I'm<br/>
+        Joshua
       </h1>
       <div className={styles.cardContainer}>
         <Surface>

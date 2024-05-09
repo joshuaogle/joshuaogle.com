@@ -183,8 +183,8 @@
   --theme-action-color: var(--cyan-500);
   --theme-highlight-rgb: 229, 193, 46;
   --theme-shadow-rgb: 15, 13, 11;
-  --surface-opacity: 0.25;
-  --surface-opacity-hover: 0.33;
+  --surface-opacity: 0.3;
+  --surface-opacity-hover: 0.35;
   --muted-color: rgba(255, 255, 255, 0.33);
   --shadow-o-0: 0;
   --shadow-o-u: 0.2;

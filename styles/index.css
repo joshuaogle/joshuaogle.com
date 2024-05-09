@@ -16,6 +16,19 @@ html {
   overflow-x: hidden;
 }
 
+/* Can't use css variables for initial value */
+@property --background-start {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #162973;
+}
+
+@property --background-end {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #0F1633;
+}
+
 body {
   background-image: radial-gradient(
     circle at top,

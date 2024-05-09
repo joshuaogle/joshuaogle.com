@@ -3,7 +3,25 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 25vh 0;
+  padding: 33vh 0;
+  position: relative;
+}
+
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: var(--background-start);
+  font-size: 18vw;
+  font-weight: var(--font-weight-black);
+  line-height: 85%;
+  opacity: 0.75;
+  mix-blend-mode: overlay;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  text-shadow: 0 -1px 1px rgba(0,0,0,0.1),
+               0 1px 1px rgba(255,255,255,0.05);
+  pointer-events: none;
 }
 
 .nameInTitle {
