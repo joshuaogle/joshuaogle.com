@@ -19,7 +19,7 @@ export const summary = {
     colorBGLight: "#373A42",
     colorBGDark: "#222",
     colorHighlight: "rgb(96, 212, 220)",
-    colorHeading: "#7C8797",
+    colorHeading: "#6A7786",
     icon: "/images/case-study-logo-vault.svg",
     preview: "/images/case-studies/vault-home.png",
   }

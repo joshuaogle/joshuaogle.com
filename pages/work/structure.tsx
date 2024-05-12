@@ -18,7 +18,7 @@ export const summary = {
     colorPrimary: "#2e71e5",
     colorBGLight: "#252A34",
     colorBGDark: "#0C0E12",
-    colorHeading: "#4180eb",
+    colorHeading: "#6F7682",
     colorHighlight: "rgb(96, 212, 220)",
     icon: "/images/case-study-logo-structure.svg",
     preview: "/images/case-studies/structure-tree.png",
@@ -223,7 +223,7 @@ const Structure = () => {
             <p>
               In 2020, after two years of using Sketch,
               we decided to migrate to Figma.
-              <Link href="https://figma.com" target="_blank">Figma</Link>
+              &nbsp;<Link href="https://figma.com" target="_blank">Figma</Link>&nbsp;
               was becoming very popular and it was easy to see why.
               The focus on collaboration would make it much easier
               to work together and with our product and engineering partners.

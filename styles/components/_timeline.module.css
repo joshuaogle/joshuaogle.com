@@ -96,6 +96,7 @@
 /* Employer */
 
 .employerContainer {
+  --muted-color: rgba(255, 255, 255, 0.5);
   flex: 3;
   padding: var(--large-spacing) var(--small-spacing) 0;
 }
@@ -104,11 +105,6 @@
   .employerContainer {
     display: none;
   }
-}
-
-.employerContainer * {
-  mix-blend-mode: overlay;
-  transition: all var(--base-timing) var(--base-easing);
 }
 
 .employerTitle {
@@ -126,6 +122,7 @@
 }
 
 .employerCopy {
+  color: white;
   font-size: var(--small-font-size);
 }
 
