@@ -3,13 +3,14 @@ import styles from '../styles/components/_timeline.module.css'
 
 type Props = {
   employer: any,
+  activeStudy: any
 }
 
 const TimelineEmployers = ({employer, activeStudy}: Props) => {
   return (
     <div
       className={styles.employerContainer}
-      style={{ "--theme-color-heading": activeStudy.summary.theme.colorHeading }}
+      style={{ "--theme-color-heading": activeStudy.summary.theme.colorHeading } as React.CSSProperties}
     >
       <div className={styles.employerMeta}>
         <small>
