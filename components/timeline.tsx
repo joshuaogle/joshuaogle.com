@@ -39,7 +39,10 @@ const Timeline = () => {
           />
 
           <div className={styles.timelineContent}>
-            <TimelineEmployer employer={activeEmployer} />
+            <TimelineEmployer
+              employer={activeEmployer}
+              activeStudy={activeStudy}
+            />
             <TimelinePreview
               timelineEvents={timelineEvents}
               activeStudy={activeStudy}

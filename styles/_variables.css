@@ -176,14 +176,14 @@
 :root {
   --stark-rgb: 0, 0, 0;
   --text-color: var(--neutral-300);
-  --heading-color: var(--neutral-500);
-  --background-start: var(--neutral-800);
-  --background-end: var(--neutral-900);
+  --theme-color-heading: var(--neutral-500);
+  --background-start: var(--theme-color-bg-light, --neutral-800);
+  --background-end: var(--theme-color-bg-dark, --neutral-900);
   --theme-action-color: var(--cyan-500);
   --theme-highlight-rgb: 229, 193, 46;
   --theme-shadow-rgb: 15, 13, 11;
-  --surface-opacity: 0.3;
-  --surface-opacity-hover: 0.35;
+  --surface-opacity: 0.22;
+  --surface-opacity-hover: 0.3;
   --muted-color: rgba(255, 255, 255, 0.33);
   --shadow-o-0: 0;
   --shadow-o-u: 0.2;
@@ -195,7 +195,7 @@
 html[data-prefers-color-scheme="light"] {
   --stark-rgb: 255, 255, 255;
   --text-color: var(--neutral-700);
-  --heading-color: var(--neutral-500);
+  --theme-color-heading: var(--neutral-500);
   --muted-color: rgba(0, 0, 0, 0.33);
   --background-start: var(--neutral-100);
   --background-end: var(--neutral-300);

@@ -18,7 +18,7 @@ export const summary = {
     colorBGLight: "rgb(13, 54, 74)",
     colorBGDark: "rgb(7, 26, 37)",
     colorHighlight: "rgb(2, 169, 242)",
-    colorHeading: "rgb(27, 108, 148)",
+    colorHeading: "#12A6EE",
     icon: "/images/case-study-logo-armada.svg",
     preview: "/images/case-studies/armada-user.png",
   }

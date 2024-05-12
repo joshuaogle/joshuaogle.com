@@ -20,13 +20,13 @@ html {
 @property --background-start {
   syntax: "<color>";
   inherits: true;
-  initial-value: #162973;
+  initial-value: #3D3734;
 }
 
 @property --background-end {
   syntax: "<color>";
   inherits: true;
-  initial-value: #0F1633;
+  initial-value: #262322;
 }
 
 body {
@@ -41,7 +41,8 @@ body {
   min-height: 100%;
   overflow-x: hidden;
   padding: 0;
-  transition: all var(--base-timing) var(--base-easing);
+  transition: --background-start var(--slow-timing) var(--base-easing),
+              --background-end var(--slow-timing) var(--base-easing);
 }
   
 main {

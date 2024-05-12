@@ -17,7 +17,7 @@ export const summary = {
     colorPrimary: "#332D8D",
     colorBGLight:"#2A254A",
     colorBGDark:"#171139",
-    colorHeading: "#A166A6",
+    colorHeading: "#0078B7",
     colorHighlight: "rgb(0, 182, 242)",
     icon: "/images/case-study-logo-sharespost.svg",
     preview: "/images/case-studies/sharespost-home.png",

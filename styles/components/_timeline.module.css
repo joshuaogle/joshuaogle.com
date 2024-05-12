@@ -2,13 +2,19 @@
 @property --bg-start {
   syntax: "<color>";
   inherits: true;
-  initial-value: #162973;
+  initial-value: #252A34;
 }
 
 @property --bg-end {
   syntax: "<color>";
   inherits: true;
-  initial-value: #0F1633;
+  initial-value: #0C0E12;
+}
+
+@property --heading-color {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #0C0E12;
 }
 
 .timelineContainer {
@@ -101,8 +107,8 @@
 }
 
 .employerContainer * {
-  color: rgba(255, 255, 255, 0.4);
   mix-blend-mode: overlay;
+  transition: all var(--base-timing) var(--base-easing);
 }
 
 .employerTitle {

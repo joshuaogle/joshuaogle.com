@@ -5,9 +5,12 @@ type Props = {
   employer: any,
 }
 
-const TimelineEmployers = ({employer}: Props) => {
+const TimelineEmployers = ({employer, activeStudy}: Props) => {
   return (
-    <div className={styles.employerContainer}>
+    <div
+      className={styles.employerContainer}
+      style={{ "--theme-color-heading": activeStudy.summary.theme.colorHeading }}
+    >
       <div className={styles.employerMeta}>
         <small>
           {employer.when}
