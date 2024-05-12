@@ -33,7 +33,7 @@ const TimelinePreview = ({timelineEvents, activeStudy, activeStudyIndex}: Props)
       <Link
         href={activeStudy.href}
         className={styles.previewLink}
-        style={{ backgroundColor: activeStudy.summary.theme.color }}
+        style={{ backgroundColor: activeStudy.summary.theme.colorPrimary}}
       >
         {activeStudy.summary.title}
         &nbsp;

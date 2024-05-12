@@ -14,11 +14,11 @@ export const summary = {
     client_url: "http://sharespost.com",
   },
   theme: {
-    color: "#332D8D",
-    highlightRGB: "0, 182, 242",
-    headingColor: "#A166A6",
-    backgroundStart: "#2A254A",
-    backgroundEnd: "#171139",
+    colorPrimary: "#332D8D",
+    colorBGLight:"#2A254A",
+    colorBGDark:"#171139",
+    colorHeading: "#A166A6",
+    colorHighlight: "rgb(0, 182, 242)",
     icon: "/images/case-study-logo-sharespost.svg",
     preview: "/images/case-studies/sharespost-home.png",
   },
@@ -35,10 +35,11 @@ const Sharespost = () => {
       <Layout>
         <style jsx global>{`
           :root {
-            --theme-color: ${summary.theme.color};
-            --theme-highlight-rgb: ${summary.theme.highlightRGB};
-            --background-start: ${summary.theme.backgroundStart};
-            --background-end: ${summary.theme.backgroundEnd};
+            --theme-color-primary: ${summary.theme.colorPrimary};
+            --theme-color-bg-light: ${summary.theme.colorBGLight};
+            --theme-color-bg-dark: ${summary.theme.colorBGDark};
+            --theme-color-heading: ${summary.theme.colorHeading};
+            --theme-color-highlight: ${summary.theme.colorHighlight};
           }
         `}</style>
       

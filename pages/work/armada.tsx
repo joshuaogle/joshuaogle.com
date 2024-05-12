@@ -1,6 +1,5 @@
 import Layout from '../../components/layout'
 import Head from 'next/head'
-import Link from 'next/link'
 import Intro from '../../components/intro'
 import Example from '../../components/example'
 
@@ -15,10 +14,11 @@ export const summary = {
     client_url: "http://armadatracking.com"
   },
   theme: {
-    color: "rgb(27, 108, 148)",
-    highlightRGB: "2, 169, 242",
-    backgroundStart: "rgb(13, 54, 74)",
-    backgroundEnd: "rgb(7, 26, 37)",
+    colorPrimary: "rgb(27, 108, 148)",
+    colorBGLight: "rgb(13, 54, 74)",
+    colorBGDark: "rgb(7, 26, 37)",
+    colorHighlight: "rgb(2, 169, 242)",
+    colorHeading: "rgb(27, 108, 148)",
     icon: "/images/case-study-logo-armada.svg",
     preview: "/images/case-studies/armada-user.png",
   }
@@ -32,8 +32,11 @@ const VaultCaseStudy = () => {
       </Head>
       <style jsx global>{`
         :root {
-          --theme-color: ${summary.theme.color};
-          --theme-highlight-rgb: ${summary.theme.highlightRGB};
+          --theme-color-primary: ${summary.theme.colorPrimary};
+          --theme-color-bg-light: ${summary.theme.colorBGLight};
+          --theme-color-bg-dark: ${summary.theme.colorBGDark};
+          --theme-color-heading: ${summary.theme.colorHeading};
+          --theme-color-highlight: ${summary.theme.colorHighlight};
         }
       `}</style>
     

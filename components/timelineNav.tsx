@@ -19,12 +19,12 @@ const TimelineNav = ({timelineEvents, activeStudyIndex, setActive}: Props) => {
               key={study.summary.title}>
               <button
                 className={styles.timelineNavButton}
-                style={{ backgroundColor: study.summary.theme.color }}
+                style={{ backgroundColor: study.summary.theme.colorPrimary }}
                 onClick={() => setActive(
                   employerIndex,
                   currentOrder,
-                  study.summary.theme.backgroundStart,
-                  study.summary.theme.backgroundEnd
+                  study.summary.theme.colorBGLight,
+                  study.summary.theme.colorBGDark
                 )}
               >
               <img src={study.summary.theme.icon} alt={study.summary.title} />

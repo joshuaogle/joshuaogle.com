@@ -12,8 +12,8 @@ const Timeline = () => {
   const [activeStudyIndex, setActiveStudy] = useState(allStudies.length - 1);
   const activeEmployer = timelineEvents[activeEmployerIndex];
   const activeStudy = allStudies[activeStudyIndex];
-  const [timelineBGStart, setTimelineBGStart] = useState(activeStudy.summary.theme.backgroundStart);
-  const [timelineBGEnd, setTimelineBGEnd] = useState(activeStudy.summary.theme.backgroundEnd);
+  const [timelineBGStart, setTimelineBGStart] = useState(activeStudy.summary.theme.brandBGLight);
+  const [timelineBGEnd, setTimelineBGEnd] = useState(activeStudy.summary.theme.brandBGDark);
 
   const setActive = (employerIndex, studyIndex, bgStart, bgEnd) => {
     setActiveEmployer(employerIndex);
