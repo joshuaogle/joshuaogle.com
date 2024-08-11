@@ -1,7 +1,6 @@
 import { useState } from 'react'  
 import timelineEvents from '../lib/timelineEvents'
 import Surface from './surface'
-import TimelineNav from './timelineNav'
 import TimelineEmployer from './timelineEmployer'
 import TimelinePreview from './timelinePreview'
 import styles from '../styles/components/_timeline.module.css'
@@ -32,12 +31,6 @@ const Timeline = () => {
             "--bg-end": timelineBGEnd
           } as React.CSSProperties}
         >
-          <TimelineNav
-            timelineEvents={timelineEvents}
-            activeStudyIndex={activeStudyIndex}
-            setActive={setActive}
-          />
-
           <div className={styles.timelineContent}>
             <TimelineEmployer
               employer={activeEmployer}

@@ -38,51 +38,6 @@
   z-index: 2;
 }
 
-/* Tab Panels */
-.timelineNav {
-  display: flex;
-  gap: var(--smallest-spacing);
-  justify-content: center;
-}
-
-.timelineNavButton {
-  border: 0;
-  border-radius: var(--app-border-radius);
-  box-shadow: var(--shadow-low);
-  cursor: pointer;
-  height: 3rem;
-  width: 3rem;
-  padding: 0.5rem;
-}
-
-.timelineNavButton:hover {
-  box-shadow: var(--shadow-high);
-}
-
-.timelineNavButton img {
-  border-radius: 0;
-}
-
-.timelineNavActive {
-  position: relative;
-}
-
-.timelineNavActive::before {
-  --dot-size: 0.33rem;
-  content: "";
-  background-color: var(--muted-color);
-  border-radius: var(--dot-size);
-  content: "";
-  display: block;
-  height: var(--dot-size);
-  transition: all var(--base-timing) var(--base-easing);
-  width: var(--dot-size);
-  position: absolute;
-  top: 110%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
 /* Timeline Content */
 
 .timelineContent {

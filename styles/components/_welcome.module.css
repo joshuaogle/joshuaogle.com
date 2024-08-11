@@ -14,7 +14,6 @@
   color: var(--background-start);
   font-size: 18vw;
   font-weight: var(--font-weight-black);
-  line-height: 85%;
   opacity: 0.75;
   mix-blend-mode: overlay;
   transform: translate(-50%, -50%);
