@@ -4,7 +4,9 @@ import Intro from '../../components/intro'
 import Example from '../../components/example'
 
 export const summary = {
-  title: "Armada",
+  title: "Tracking the whole fleet",
+  name: "Armada",
+  description: "I co-founded a consultancy in OKC and led design for a team of seven. We helped Armada create a world class fleet management and tracking app.",
   meta: {
     date: "2015",
     role: "Brand & Design",

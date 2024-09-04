@@ -1,49 +1,30 @@
-import { useState } from 'react'  
-import timelineEvents from '../lib/timelineEvents'
-import Surface from './surface'
-import TimelineEmployer from './timelineEmployer'
-import TimelinePreview from './timelinePreview'
+import Image from 'next/image'
 import styles from '../styles/components/_timeline.module.css'
 
+const EmployerLogo = ({ src, alt }: { src: string; alt: string }) => (
+  <Image
+    src={src}
+    alt={alt}
+    width={32}
+    height={32}
+    className={styles.employerLogo}
+  />
+);
+
 const Timeline = () => {
-  const allStudies = timelineEvents.flatMap((employer) => employer.caseStudies);
-  const [activeEmployerIndex, setActiveEmployer] = useState(timelineEvents.length - 1);
-  const [activeStudyIndex, setActiveStudy] = useState(allStudies.length - 1);
-  const activeEmployer = timelineEvents[activeEmployerIndex];
-  const activeStudy = allStudies[activeStudyIndex];
-  const [timelineBGStart, setTimelineBGStart] = useState(activeStudy.summary.theme.colorBGLight);
-  const [timelineBGEnd, setTimelineBGEnd] = useState(activeStudy.summary.theme.colorBGDark);
-
-  const setActive = (employerIndex, studyIndex, bgStart, bgEnd) => {
-    setActiveEmployer(employerIndex);
-    setActiveStudy(studyIndex);
-    setTimelineBGStart(bgStart);
-    setTimelineBGEnd(bgEnd);
-  }
-
   return (
-    <section>
-      <Surface className={styles.surface}>
-        <div
-          className={styles.timelineContainer}
-          style={{
-            "--bg-start": timelineBGStart,
-            "--bg-end": timelineBGEnd
-          } as React.CSSProperties}
-        >
-          <div className={styles.timelineContent}>
-            <TimelineEmployer
-              employer={activeEmployer}
-              activeStudy={activeStudy}
-            />
-            <TimelinePreview
-              timelineEvents={timelineEvents}
-              activeStudy={activeStudy}
-              activeStudyIndex={activeStudyIndex}
-            />
-          </div>
-        </div>
-      </Surface>
+    <section className="centered">
+      <p className={styles.textContent}>
+        I lead design for some of
+        <EmployerLogo src="/images/timeline-hashicorp.svg" alt="HashiCorp" />
+        <span className={styles.employerTitle}>HashiCorp's</span> most popular infrastructure automation products and helped grow our design team to 30+ designers across a dozen projects.
+        Before that I was at
+        <EmployerLogo src="/images/timeline-thoughtbot.svg" alt="thoughtbot" />
+        <span className={styles.employerTitle}>thoughtbot</span>,
+        where I led dozens of design sprints and helped clients get from zero to launch, and even co-founded my own consultancy
+        <EmployerLogo src="/images/timeline-brightbit.svg" alt="Brightbit" />
+        <span className={styles.employerTitle}>Brightbit</span>.
+      </p>
     </section>
   )
 }
