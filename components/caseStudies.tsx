@@ -9,12 +9,10 @@ const Timeline = () => {
         <h2>Case studies</h2>
       </div>
 
-      <div className="h-stack">
-        <div className={styles.list}>
-          {studies.slice(0).reverse().map((study) => (
-            <CaseStudyCard study={study} />
-          ))}
-        </div>
+      <div className={styles.list}>
+        {studies.slice(0).reverse().map((study) => (
+          <CaseStudyCard study={study} />
+        ))}
       </div>
     </section>
   )

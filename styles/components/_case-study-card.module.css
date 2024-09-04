@@ -4,24 +4,21 @@
 }
 
 .card {
-  --card-size: 66vmin;
-  --corner-radius: calc(var(--size) * 0.01);
-  --spine-radius: calc(var(--size) * 0.005);
+  --card-size: 26rem;
+  --corner-radius: calc(var(--card-size) * 0.04);
+  --spine-radius: calc(var(--card-size) * 0.01);
   --background-gradient: linear-gradient(-135deg, var(--bg-start) 5%, var(--bg-end));
   --spine-shadow: linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 8%);
-  --shadow-length: calc(100% - var(--card-position-y, 50%));
   background: var(--background-gradient), var(--spine-shadow);
   border-radius: var(--spine-radius) var(--corner-radius) var(--corner-radius) var(--spine-radius);
-  box-shadow: 
-    0 calc(var(--shadow-length) * 0.05) calc(var(--shadow-length) * 0.1) rgba(0, 0, 0, 0.2),
-    inset 5px 0 10px -5px rgba(0, 0, 0, 0.5),
-    inset -1px 1px 0 rgba(255, 255, 255, 0.1);
+  box-shadow: var(--shadow-low);
+  display: block;
   padding: var(--base-spacing);
-  height: var(--card-size);
-  width: calc(var(--card-size) * 0.8);
   position: relative;
   overflow: hidden;
   transition: box-shadow 0.3s ease;
+  height: var(--card-size);
+  width: calc(var(--card-size) * 0.8);
 }
 
 .card:hover {
@@ -30,19 +27,18 @@
 
 .textContent small {
   color: rgba(255, 255, 255, 0.5);
-  font-size: calc(var(--card-size) * 0.04);
 }
 
 .title {
   color: rgba(255, 255, 255, 0.66);
-  font-size: calc(var(--card-size) * 0.07);
+  font-size: 2rem;
 }
 
 .image {
   border-radius: 0.5vh;
   margin: 0;
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 10%;
   height: auto;
   width: 100%;

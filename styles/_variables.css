@@ -199,13 +199,13 @@ html[data-prefers-color-scheme="light"] {
   --theme-color-heading: var(--theme-color-bg-start);
   --muted-color: rgba(0, 0, 0, 0.33);
   --background-start: var(--neutral-050);
-  --background-end: var(--neutral-100);
+  --background-end: var(--neutral-200);
   --theme-action-color: var(--cyan-600);
   --theme-shadow-rgb: 15, 13, 11;
-  --surface-opacity: 0.25;
-  --surface-opacity-hover: 0.33;
+  --surface-opacity: 0.5;
+  --surface-opacity-hover: 0.66;
   --shadow-o-0: 0;
-  --shadow-o-u: 0.075;
-  --shadow-o-p: 0.05;
-  --shadow-o-a: 0.025;
+  --shadow-o-u: 0.1;
+  --shadow-o-p: 0.075;
+  --shadow-o-a: 0.05;
 }
