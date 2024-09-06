@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Tilt from 'react-parallax-tilt';
+import { ArrowRightIcon } from '@heroicons/react/24/solid'
 import styles from '../styles/components/_case-study-card.module.css'
 import { useEffect, useState, useRef } from 'react';
 
@@ -63,6 +64,13 @@ const TimelineCaseStudy = ({study}) => {
           className={styles.image}
         />
 
+        <div
+          className={styles.arrow}
+          style={{
+            backgroundColor: study.summary.theme.colorPrimary
+          } as React.CSSProperties}>
+          <ArrowRightIcon />
+        </div>
         <div className={styles.staples}></div>
       </Link>
     </Tilt>

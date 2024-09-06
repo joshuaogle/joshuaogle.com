@@ -7,14 +7,14 @@
   --card-size: 20rem;
   --corner-radius: calc(var(--card-size) * 0.04);
   --spine-radius: calc(var(--card-size) * 0.01);
-  --shadow-length: calc(var(--smaller-spacing) + (var(--proximity) * 0.075px));
-  --shadow-blur: calc(var(--smaller-spacing) + (var(--proximity) * 0.05px));
-  --shadow-spread: calc(var(--shadow-blur) * -0.5);
+  --shadow-length: calc(var(--smaller-spacing) + (var(--proximity) * 0.1px));
+  --shadow-blur: calc(var(--smaller-spacing) + (var(--proximity) * 0.025px));
+  --shadow-spread: calc(var(--proximity) * -0.05px);
   background: radial-gradient(at left center, var(--bg-start) 50%, var(--bg-end) 200%);
-  border-right: 0.5px solid rgba(255, 255, 255, 0.05);
-  border-top: 0.5px solid rgba(255, 255, 255, 0.2);
+  border-right: 1px solid var(--bg-end);
+  border-top: 1px solid var(--bg-start);
   border-radius: var(--spine-radius) var(--corner-radius) var(--corner-radius) var(--spine-radius);
-  box-shadow: 0 var(--shadow-length) var(--shadow-blur) var(--shadow-spread) rgba(0, 0, 0, 1);
+  box-shadow: 0 var(--shadow-length) var(--shadow-blur) var(--shadow-spread) rgba(0, 0, 0, 0.33);
   display: block;
   padding: var(--base-spacing);
   position: relative;
@@ -43,7 +43,6 @@
   width: calc(100% - (var(--base-spacing) * 2));
   height: auto;
   right: var(--base-spacing);
-  opacity: 0.25;
 }
 
 .staples {
@@ -74,4 +73,20 @@
 
 .staples::after {
   top: 75%;
+}
+
+.arrow {
+  background: black;
+  border-radius: 100%;
+  color: white;
+  display: block;
+  position: absolute;
+  bottom: var(--smaller-spacing);
+  right: var(--smaller-spacing);
+  width: var(--large-spacing);
+  padding: 2%;
+}
+
+.card:hover .arrow {
+  translate: scale(1), translate(0 0);
 }
