@@ -16,7 +16,7 @@ export const summary = {
     client_url: "http://armadatracking.com"
   },
   theme: {
-    colorPrimary: "rgb(27, 108, 148)",
+    colorPrimary: "#19A8EF",
     colorBGLight: "rgb(13, 54, 74)",
     colorBGDark: "rgb(7, 26, 37)",
     colorHighlight: "rgb(2, 169, 242)",
@@ -45,6 +45,7 @@ const VaultCaseStudy = () => {
       <Intro
         title={summary.title}
         meta={summary.meta}
+        theme={summary.theme}
       />
 
       <div className={`article-body centered`}>

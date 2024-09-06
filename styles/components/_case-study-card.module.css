@@ -1,28 +1,27 @@
 .cardContainer {
-  padding: var(--base-spacing) var(--large-spacing);
+  padding: var(--base-spacing) var(--large-spacing) var(--large-spacing);
   transition: padding var(--slow-timing) var(--base-easing);
 }
 
 .card {
-  --card-size: 26rem;
+  --card-size: 20rem;
   --corner-radius: calc(var(--card-size) * 0.04);
   --spine-radius: calc(var(--card-size) * 0.01);
-  --background-gradient: linear-gradient(-135deg, var(--bg-start) 5%, var(--bg-end));
-  --spine-shadow: linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 8%);
-  background: var(--background-gradient), var(--spine-shadow);
+  --shadow-length: calc(var(--smaller-spacing) + (var(--proximity) * 0.075px));
+  --shadow-blur: calc(var(--smaller-spacing) + (var(--proximity) * 0.05px));
+  --shadow-spread: calc(var(--shadow-blur) * -0.5);
+  background: radial-gradient(at left center, var(--bg-start) 50%, var(--bg-end) 200%);
+  border-right: 0.5px solid rgba(255, 255, 255, 0.05);
+  border-top: 0.5px solid rgba(255, 255, 255, 0.2);
   border-radius: var(--spine-radius) var(--corner-radius) var(--corner-radius) var(--spine-radius);
-  box-shadow: var(--shadow-low);
+  box-shadow: 0 var(--shadow-length) var(--shadow-blur) var(--shadow-spread) rgba(0, 0, 0, 1);
   display: block;
   padding: var(--base-spacing);
   position: relative;
   overflow: hidden;
   transition: box-shadow 0.3s ease;
   height: var(--card-size);
-  width: calc(var(--card-size) * 0.8);
-}
-
-.card:hover {
-  box-shadow: var(--shadow-high);
+  width: calc(var(--card-size) * 1.2);
 }
 
 .textContent small {
@@ -30,17 +29,49 @@
 }
 
 .title {
-  color: rgba(255, 255, 255, 0.66);
-  font-size: 2rem;
+  color: var(--primary);
+  font-size: 2.25rem;
+  line-height: 1.1;
 }
 
 .image {
   border-radius: 0.5vh;
   margin: 0;
   position: absolute;
-  top: 45%;
-  left: 10%;
+  top: 60%;
+  left: var(--base-spacing);
+  width: calc(100% - (var(--base-spacing) * 2));
   height: auto;
-  width: 100%;
-  right: -100%;
+  right: var(--base-spacing);
+  opacity: 0.25;
+}
+
+.staples {
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0));
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: var(--base-spacing);
+  z-index: 2;
+}
+
+.staples::before,
+.staples::after {
+  width: calc(var(--card-size) * 0.0025);
+  height: calc(var(--card-size) * 0.075);
+  background: silver linear-gradient(90deg, var(--neutral-900), var(--neutral-500));
+  border-radius: 1rem;
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 25%;
+  transform: translateY(-50%);
+  z-index: 3;
+}
+
+.staples::after {
+  top: 75%;
 }

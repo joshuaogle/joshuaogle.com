@@ -5,7 +5,7 @@ import Intro from '../../components/intro'
 import Example from '../../components/example'
 
 export const summary = {
-  title: "Infrastructure but in style",
+  title: "Style for your infrastructure",
   name: "Structure",
   meta: {
     date: "2020",
@@ -16,8 +16,8 @@ export const summary = {
     client_url: "http://hashicorp.com",
   },
   theme: {
-    colorPrimary: "#2e71e5",
-    colorBGLight: "#252A34",
+    colorPrimary: "rgb(92, 78, 229)",
+    colorBGLight: "#252A36",
     colorBGDark: "#0C0E12",
     colorHeading: "#6F7682",
     colorHighlight: "rgb(96, 212, 220)",
@@ -47,6 +47,7 @@ const Structure = () => {
         <Intro
           title={summary.title}
           meta={summary.meta}
+          theme={summary.theme}
         />
 
         <div className={`article-body centered`}>

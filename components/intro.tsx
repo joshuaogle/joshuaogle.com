@@ -16,6 +16,7 @@ type MetaProps = {
 type IntroProps = {
   title: string,
   meta: MetaProps,
+  theme: any,
 }
 
 type MetaItemProps = {
@@ -23,11 +24,18 @@ type MetaItemProps = {
   children: React.ReactNode,
 }
 
-const Intro = ({ title, meta }: IntroProps) => {
+const Intro = ({ title, meta, theme }: IntroProps) => {
   return (
     <>
       <header className={styles.container + " centered"}>
-        <h1 className={styles.title}>{title}</h1>
+        <h1
+          className={styles.title}
+          style={{
+            color: theme.colorPrimary
+          } as React.CSSProperties}
+          >
+          {title}
+        </h1>
         <small>
           {<DateFormatter dateString={meta.date} />}
         </small>

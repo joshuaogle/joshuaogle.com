@@ -198,7 +198,7 @@ html[data-prefers-color-scheme="light"] {
   --text-color: var(--neutral-700);
   --theme-color-heading: var(--theme-color-bg-start);
   --muted-color: rgba(0, 0, 0, 0.33);
-  --background-start: var(--neutral-050);
+  --background-start: var(--neutral-100);
   --background-end: var(--neutral-200);
   --theme-action-color: var(--cyan-600);
   --theme-shadow-rgb: 15, 13, 11;

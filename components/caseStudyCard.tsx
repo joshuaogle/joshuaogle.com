@@ -6,16 +6,17 @@ import { useEffect, useState, useRef } from 'react';
 const TimelineCaseStudy = ({study}) => {
   const [cardProximity, setCardProximity] = useState(100);
   const cardRef = useRef(null);
-
   useEffect(() => {
     const handleScroll = () => {
       if (cardRef.current) {
         const rect = cardRef.current.getBoundingClientRect();
-        const centerY = window.innerHeight / 2;
-        const distanceFromCenter = Math.abs(rect.top + rect.height / 2 - centerY);
-        const maxDistance = window.innerHeight / 2 + rect.height / 2;
-        const newProximity = 100 - (distanceFromCenter / maxDistance) * 100;
-        setCardProximity(Math.max(0, Math.min(100, Number(newProximity.toFixed(6)))));
+        const viewportTop = 0;
+        const viewportBottom = window.innerHeight;
+        const elementCenter = rect.top + rect.height / 2;
+        const distanceFromTop = Math.max(0, elementCenter - viewportTop);
+        if (rect.top < viewportBottom && rect.bottom > viewportTop) {
+          setCardProximity(distanceFromTop);
+        }
       }
     };
 
@@ -61,6 +62,8 @@ const TimelineCaseStudy = ({study}) => {
           src={study.summary.theme.preview}
           className={styles.image}
         />
+
+        <div className={styles.staples}></div>
       </Link>
     </Tilt>
   )

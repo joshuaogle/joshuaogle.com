@@ -7,7 +7,7 @@
 }
 
 .app::after {
-  --dot-color: rgba(128, 128, 128, 0.15);
+  --dot-color: rgba(128, 128, 128, 0.2);
   --dot-spacing: var(--small-spacing);
   --dot-position: calc(var(--dot-spacing) * -0.5);
   display: block;

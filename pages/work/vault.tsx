@@ -5,7 +5,7 @@ import Intro from '../../components/intro'
 import Example from '../../components/example'
 
 export const summary = {
-  title: "A cloud with fewer leaks",
+  title: "Keeping your secrets safe",
   name: "Vault",
   meta: {
     date: "2021",
@@ -16,7 +16,7 @@ export const summary = {
     client_url: "http://vaultproject.io"
   },
   theme: {
-    colorPrimary: "#7C8797",
+    colorPrimary: "rgb(255, 207, 37)",
     colorBGLight: "#373A42",
     colorBGDark: "#222",
     colorHighlight: "rgb(96, 212, 220)",
@@ -45,6 +45,7 @@ const VaultCaseStudy = () => {
       <Intro
         title={summary.title}
         meta={summary.meta}
+        theme={summary.theme}
       />
 
       <div className={`article-body centered`}>

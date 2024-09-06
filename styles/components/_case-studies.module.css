@@ -2,7 +2,7 @@
   --offset: calc(50vw - (var(--page-width) / 2) - var(--large-spacing));
   display: flex;
   flex-direction: row;
-  padding: 0 var(--offset);
+  padding: 0 var(--offset) var(--large-spacing);
   scroll-snap-type: x mandatory;
   scroll-padding-left: var(--offset);
   overflow-x: scroll;

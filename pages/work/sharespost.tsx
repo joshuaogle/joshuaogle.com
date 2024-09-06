@@ -4,7 +4,7 @@ import Intro from '../../components/intro'
 import Example from '../../components/example'
 
 export const summary = {
-  title: "Private securities for everyone",
+  title: "Private security platform",
   name: "Sharespost",
   meta: {
     date: "2016",
@@ -15,7 +15,7 @@ export const summary = {
     client_url: "http://sharespost.com",
   },
   theme: {
-    colorPrimary: "#332D8D",
+    colorPrimary: "#0096CB",
     colorBGLight:"#2A254A",
     colorBGDark:"#171139",
     colorHeading: "#0078B7",
@@ -47,6 +47,7 @@ const Sharespost = () => {
         <Intro
           title={summary.title}
           meta={summary.meta}
+          theme={summary.theme}
         />
 
         <div className={`article-body centered`}>
