@@ -4,7 +4,7 @@ import Intro from '../../components/intro'
 import Example from '../../components/example'
 
 export const summary = {
-  title: "Private security platform",
+  title: "Private securities made simple",
   name: "Sharespost",
   meta: {
     date: "2016",
@@ -15,7 +15,7 @@ export const summary = {
     client_url: "http://sharespost.com",
   },
   theme: {
-    colorPrimary: "#0096CB",
+    colorPrimary: "#0081BE",
     colorBGLight:"#2A254A",
     colorBGDark:"#171139",
     colorHeading: "#0078B7",

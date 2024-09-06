@@ -2,41 +2,19 @@ import Link from 'next/link'
 import Tilt from 'react-parallax-tilt';
 import { ArrowRightIcon } from '@heroicons/react/24/solid'
 import styles from '../styles/components/_case-study-card.module.css'
-import { useEffect, useState, useRef } from 'react';
 
 const TimelineCaseStudy = ({study}) => {
   const [cardProximity, setCardProximity] = useState(100);
-  const cardRef = useRef(null);
-  useEffect(() => {
-    const handleScroll = () => {
-      if (cardRef.current) {
-        const rect = cardRef.current.getBoundingClientRect();
-        const viewportTop = 0;
-        const viewportBottom = window.innerHeight;
-        const elementCenter = rect.top + rect.height / 2;
-        const distanceFromTop = Math.max(0, elementCenter - viewportTop);
-        if (rect.top < viewportBottom && rect.bottom > viewportTop) {
-          setCardProximity(distanceFromTop);
-        }
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Initial calculation
-
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   return (
     <Tilt
       scale={1.05}
       tiltMaxAngleX={5}
-      tiltMaxAngleY={10}
+      tiltMaxAngleY={15}
       perspective={2000}
       transitionSpeed={10000}
       className={styles.cardContainer}>
       <Link
-        ref={cardRef}
         href={study.href} 
         className={styles.card}
         style={{

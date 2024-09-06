@@ -15,13 +15,14 @@ const Timeline = () => {
   return (
     <section className="centered">
       <p className={styles.textContent}>
-        I lead design for some of
+        I lead UX design for
         <EmployerLogo src="/images/timeline-hashicorp.svg" alt="HashiCorp" />
-        <span className={styles.employerTitle}>HashiCorp's</span> most popular infrastructure automation products and helped grow our design team to 30+ designers across a dozen projects.
+        <span className={styles.employerTitle}>HashiCorp's</span> most trusted infrastructure automation tools and helped grow our design team to 40+ designers.
         Before that I was at
         <EmployerLogo src="/images/timeline-thoughtbot.svg" alt="thoughtbot" />
-        <span className={styles.employerTitle}>thoughtbot</span>,
-        where I led dozens of design sprints and helped clients get from zero to launch, and even co-founded my own consultancy
+        <span className={styles.employerTitle}>thoughtbot </span>
+        helping startups find their market,
+        and co-fouded a consultancy called
         <EmployerLogo src="/images/timeline-brightbit.svg" alt="Brightbit" />
         <span className={styles.employerTitle}>Brightbit</span>.
       </p>

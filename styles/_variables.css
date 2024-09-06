@@ -178,7 +178,7 @@
   --stark-rgb: 0, 0, 0;
   --text-color: var(--neutral-300);
   --theme-color-heading: var(--neutral-500);
-  --background-start: var(--theme-color-bg-light, --neutral-800);
+  --background-start: var(--theme-color-bg-light, --neutral-700);
   --background-end: var(--theme-color-bg-dark, --neutral-900);
   --theme-action-color: var(--cyan-500);
   --theme-highlight-rgb: 229, 193, 46;

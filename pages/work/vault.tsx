@@ -17,8 +17,8 @@ export const summary = {
   },
   theme: {
     colorPrimary: "rgb(255, 207, 37)",
-    colorBGLight: "#373A42",
-    colorBGDark: "#222",
+    colorBGLight: "#323940",
+    colorBGDark: "#272C31",
     colorHighlight: "rgb(96, 212, 220)",
     colorHeading: "#6A7786",
     icon: "/images/case-study-logo-vault.svg",

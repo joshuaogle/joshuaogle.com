@@ -7,21 +7,22 @@
   --card-size: 20rem;
   --corner-radius: calc(var(--card-size) * 0.04);
   --spine-radius: calc(var(--card-size) * 0.01);
-  --shadow-length: calc(var(--smaller-spacing) + (var(--proximity) * 0.1px));
-  --shadow-blur: calc(var(--smaller-spacing) + (var(--proximity) * 0.025px));
-  --shadow-spread: calc(var(--proximity) * -0.05px);
-  background: radial-gradient(at left center, var(--bg-start) 50%, var(--bg-end) 200%);
+  --shadow-length: calc(var(--proximity) * 0.2px);
+  --shadow-blur: calc(var(--smallest-spacing) + (var(--proximity) * 0.03px));
+  --shadow-spread: calc(var(--proximity) * -0.1px);
+  --shadow-opacity: calc(0.33 - var(--proximity) * 0.0001);
+  background: radial-gradient(at center bottom, var(--bg-start) 50%, var(--bg-end) 150%);
   border-right: 1px solid var(--bg-end);
-  border-top: 1px solid var(--bg-start);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--spine-radius) var(--corner-radius) var(--corner-radius) var(--spine-radius);
-  box-shadow: 0 var(--shadow-length) var(--shadow-blur) var(--shadow-spread) rgba(0, 0, 0, 0.33);
+  box-shadow: 0 var(--shadow-length) var(--shadow-blur) var(--shadow-spread) rgba(0, 0, 0, var(--shadow-opacity));
   display: block;
-  padding: var(--base-spacing);
+  padding: var(--small-spacing) var(--base-spacing);
   position: relative;
   overflow: hidden;
   transition: box-shadow 0.3s ease;
   height: var(--card-size);
-  width: calc(var(--card-size) * 1.2);
+  width: calc(var(--card-size) * 1.3);
 }
 
 .textContent small {
@@ -43,24 +44,25 @@
   width: calc(100% - (var(--base-spacing) * 2));
   height: auto;
   right: var(--base-spacing);
+  opacity: 0.5;
 }
 
 .staples {
-  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0));
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.33),rgba(0, 0, 0, 0.1) 15%, rgba(0, 0, 0, 0));
   display: block;
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
-  width: var(--base-spacing);
+  width: var(--small-spacing);
   z-index: 2;
 }
 
 .staples::before,
 .staples::after {
   width: calc(var(--card-size) * 0.0025);
-  height: calc(var(--card-size) * 0.075);
-  background: silver linear-gradient(90deg, var(--neutral-900), var(--neutral-500));
+  height: calc(var(--card-size) * 0.08);
+  background: silver linear-gradient(90deg, var(--neutral-900), var(--neutral-400));
   border-radius: 1rem;
   content: "";
   display: block;
@@ -83,10 +85,6 @@
   position: absolute;
   bottom: var(--smaller-spacing);
   right: var(--smaller-spacing);
-  width: var(--large-spacing);
+  width: var(--base-spacing);
   padding: 2%;
-}
-
-.card:hover .arrow {
-  translate: scale(1), translate(0 0);
 }

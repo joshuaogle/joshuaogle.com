@@ -5,13 +5,13 @@ import styles from '../styles/components/_case-studies.module.css'
 const Timeline = () => {
   return (
     <section>
-      <div class="centered">
+      <div className="centered">
         <h2>Case studies</h2>
       </div>
 
       <div className={styles.list}>
         {studies.slice(0).reverse().map((study) => (
-          <CaseStudyCard study={study} />
+          <CaseStudyCard key={study.summary.name} study={study} />
         ))}
       </div>
     </section>

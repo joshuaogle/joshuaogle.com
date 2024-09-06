@@ -17,8 +17,8 @@ export const summary = {
   },
   theme: {
     colorPrimary: "rgb(92, 78, 229)",
-    colorBGLight: "#252A36",
-    colorBGDark: "#0C0E12",
+    colorBGLight: "#272C38",
+    colorBGDark: "#030507",
     colorHeading: "#6F7682",
     colorHighlight: "rgb(96, 212, 220)",
     icon: "/images/case-study-logo-structure.svg",
