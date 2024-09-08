@@ -33,7 +33,7 @@ body {
   background-image: radial-gradient(
     circle at top,
     var(--background-start),
-    var(--background-end)
+    var(--background-end) 150vh
   );
   background-attachment: fixed;
   color: var(--text-color);
@@ -41,8 +41,8 @@ body {
   min-height: 100%;
   overflow-x: hidden;
   padding: 0;
-  transition: --background-start 3s var(--base-easing),
-              --background-end 3s var(--base-easing);
+  transition: --background-start 1.5s var(--fast-easing),
+              --background-end 1.5s var(--fast-easing);
 }
   
 main {
