@@ -16,9 +16,9 @@ export const summary = {
     client_url: "http://armadatracking.com"
   },
   theme: {
-    colorPrimary: "#19A8EF",
-    colorBGLight: "rgb(13, 54, 74)",
-    colorBGDark: "rgb(7, 26, 37)",
+    colorPrimary: "#1BA9EF",
+    colorBGLight: "#2D363A",
+    colorBGDark: "#21262D",
     colorHighlight: "rgb(2, 169, 242)",
     colorHeading: "#12A6EE",
     icon: "/images/case-study-logo-armada.svg",

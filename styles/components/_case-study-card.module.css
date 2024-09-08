@@ -4,16 +4,16 @@
 }
 
 .card {
-  --card-size: 20rem;
+  --card-size: 27rem;
   --corner-radius: calc(var(--card-size) * 0.04);
   --spine-radius: calc(var(--card-size) * 0.01);
-  --shadow-length: calc(var(--proximity) * 0.2px);
-  --shadow-blur: calc(var(--smallest-spacing) + (var(--proximity) * 0.03px));
-  --shadow-spread: calc(var(--proximity) * -0.1px);
-  --shadow-opacity: calc(0.33 - var(--proximity) * 0.0001);
-  background: radial-gradient(at center bottom, var(--bg-start) 50%, var(--bg-end) 150%);
+  --shadow-length: calc(var(--proximity) * 0.06vh);
+  --shadow-blur: calc(1vh + (var(--proximity) * 0.04vh));
+  --shadow-spread: calc(var(--proximity) * -0.016vh);
+  --shadow-opacity: calc(0.5 - var(--proximity) * 0.001);
+  background: radial-gradient(at left top, var(--bg-start) 30%, var(--bg-end) 200%);
   border-right: 1px solid var(--bg-end);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: var(--spine-radius) var(--corner-radius) var(--corner-radius) var(--spine-radius);
   box-shadow: 0 var(--shadow-length) var(--shadow-blur) var(--shadow-spread) rgba(0, 0, 0, var(--shadow-opacity));
   display: block;
@@ -22,7 +22,11 @@
   overflow: hidden;
   transition: box-shadow 0.3s ease;
   height: var(--card-size);
-  width: calc(var(--card-size) * 1.3);
+  width: calc(var(--card-size) * 1);
+}
+
+.textContent {
+  padding: var(--small-spacing);
 }
 
 .textContent small {
@@ -39,7 +43,7 @@
   border-radius: 0.5vh;
   margin: 0;
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: var(--base-spacing);
   width: calc(100% - (var(--base-spacing) * 2));
   height: auto;

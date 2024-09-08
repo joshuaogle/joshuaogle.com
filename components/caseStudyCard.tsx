@@ -2,9 +2,26 @@ import Link from 'next/link'
 import Tilt from 'react-parallax-tilt';
 import { ArrowRightIcon } from '@heroicons/react/24/solid'
 import styles from '../styles/components/_case-study-card.module.css'
+import { useState, useEffect } from 'react'
 
 const TimelineCaseStudy = ({study}) => {
-  const [cardProximity, setCardProximity] = useState(100);
+  const [cardProximity, setCardProximity] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const cardElement = document.querySelector(`.${styles.card}`);
+      if (cardElement) {
+        const cardTop = cardElement.getBoundingClientRect().top;
+        const cardHeight = cardElement.getBoundingClientRect().height;
+        const viewportHeight = window.innerHeight;
+        const proximityPercent = (cardTop + cardHeight) / viewportHeight;
+        setCardProximity(Math.min(proximityPercent * 100, 100));
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <Tilt
