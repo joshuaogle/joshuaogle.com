@@ -2,7 +2,7 @@
   --offset: calc(50vw - (var(--page-width) / 2) - var(--large-spacing));
   display: flex;
   flex-direction: row;
-  padding: 0 var(--offset) var(--large-spacing);
+  padding: 0 var(--offset) var(--base-spacing);
   scroll-snap-type: x mandatory;
   scroll-padding-left: var(--offset);
   overflow-x: scroll;
@@ -16,4 +16,24 @@
 
 .list::-webkit-scrollbar {
   display: none;
+}
+
+.indicatorContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 0.5em;
+  cursor: pointer;
+}
+
+.indicator {
+  width: 0.5em;
+  height: 0.5em;
+  background: var(--muted-color);
+  border-radius: var(--small-spacing);
+}
+
+.indicator.active {
+  background: white;
+  width: 2em;
 }
