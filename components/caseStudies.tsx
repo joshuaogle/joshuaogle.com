@@ -6,18 +6,18 @@ import { useState, useEffect, useRef } from 'react'
 const Timeline = () => {
   const listRef = useRef(null)
   const [activeStudyIndex, setActiveStudyIndex] = useState(0)
-  const [studyWidth, setStudyWidth] = useState(0) // New state for study width
+  const [studyWidth, setStudyWidth] = useState(0)
 
   useEffect(() => {
     const updateStudyWidth = () => {
-      const firstCard = listRef.current?.firstChild; // Get the first study card
+      const firstCard = listRef.current?.firstChild;
       if (firstCard) {
-        setStudyWidth(firstCard.clientWidth); // Set the width based on the first card
+        setStudyWidth(firstCard.clientWidth);
       }
     }
 
-    updateStudyWidth(); // Initial width calculation
-    window.addEventListener('resize', updateStudyWidth); // Update on resize
+    updateStudyWidth();
+    window.addEventListener('resize', updateStudyWidth);
 
     return () => window.removeEventListener('resize', updateStudyWidth);
   }, []);

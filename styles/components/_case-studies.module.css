@@ -27,13 +27,15 @@
 }
 
 .indicator {
-  width: 0.5em;
-  height: 0.5em;
+  width: 0.45em;
+  height: 0.45em;
   background: var(--muted-color);
   border-radius: var(--small-spacing);
+  transition: all var(--base-timing);
 }
 
 .indicator.active {
   background: white;
+  height: 0.5em;
   width: 2em;
 }

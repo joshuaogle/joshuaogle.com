@@ -16,7 +16,7 @@ type MetaProps = {
 type IntroProps = {
   title: string,
   meta: MetaProps,
-  theme: any,
+  theme?: any,
 }
 
 type MetaItemProps = {
@@ -25,13 +25,14 @@ type MetaItemProps = {
 }
 
 const Intro = ({ title, meta, theme }: IntroProps) => {
+  const themeColor = theme ? theme.colorPrimary : 'inherit'
   return (
     <>
       <header className={styles.container + " centered"}>
         <h1
           className={styles.title}
           style={{
-            color: theme.colorPrimary
+            color: themeColor
           } as React.CSSProperties}
           >
           {title}
