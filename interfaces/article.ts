@@ -12,6 +12,7 @@ type ArticleType = {
     role?: string
     time?: string
     team?: string
+    thumbnail?: string
   }
   content: string
 }

@@ -6,7 +6,7 @@ type Props = {
   title: string,
   meta: {
     date: string,
-    thumbnail: string
+    thumbnail?: string
   },
   slug: string
 }

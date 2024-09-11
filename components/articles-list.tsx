@@ -3,7 +3,6 @@ import Article from '../interfaces/article'
 import Surface from '../components/surface'
 import styles from '../styles/components/_article-list.module.css'
 
-
 type Props = {
   allArticles: Article[]
 }
