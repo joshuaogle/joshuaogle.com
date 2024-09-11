@@ -41,8 +41,8 @@ body {
   min-height: 100%;
   overflow-x: hidden;
   padding: 0;
-  transition: --background-start 1.5s var(--fast-easing),
-              --background-end 1.5s var(--fast-easing);
+  transition: --background-start 1.25s var(--fast-easing),
+              --background-end 1.25s var(--fast-easing);
 }
   
 main {
