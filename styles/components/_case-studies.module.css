@@ -8,6 +8,7 @@
   overflow-x: scroll;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  scroll-behavior: smooth;
 }
 
 .list > * {

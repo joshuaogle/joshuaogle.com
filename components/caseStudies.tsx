@@ -69,7 +69,7 @@ const Timeline = () => {
 
       <div ref={listRef} className={`${styles.list} ${styles.scrollSnap}`}>
         {studies.slice(0).reverse().map((study, index) => (
-          <CaseStudyCard key={study.summary.name} study={study} className={index === activeStudyIndex ? styles.active : ''} />
+          <CaseStudyCard key={study.summary.name} study={study} active={index === activeStudyIndex} />
         ))}
       </div>
     </section>
