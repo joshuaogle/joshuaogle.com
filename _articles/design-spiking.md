@@ -5,8 +5,7 @@ meta:
   url: "https://robots.thoughtbot.com/design-spiking"
   source: "thoughtbot"
   source_icon: "source-thoughtbot.svg"
-ogImage:
-  url: "https://images.thoughtbot.com/design-spiking/sketch-path.png"
+  thumbnail: "https://images.thoughtbot.com/design-spiking/sketch-path.png"
 summary: "Let's take a look at some tricks from the Design Sprint toolkit to make sure our product is focusing the right things."
 ---
 

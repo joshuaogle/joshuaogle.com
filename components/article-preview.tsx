@@ -3,33 +3,31 @@ import DateFormatter from './date-formatter'
 import styles from '../styles/components/_article-preview.module.css'
 
 type Props = {
-  title: string
+  title: string,
   meta: {
-    date: string
-  }
+    date: string,
+    thumbnail: string
+  },
   slug: string
 }
 
-const ArticlePreview = ({
-  title,
-  meta,
-  slug,
-}: Props) => {
+const ArticlePreview = ({title, meta, slug}: Props) => {
   return (
-    <div className={styles.container}>
+    <Link
+      as={`/articles/${slug}`}
+      href="/articles/[slug]"
+      className={styles.container}>
+      <img
+        src={meta.thumbnail}
+        alt={title}
+        className={styles.thumbnail} />
       <small className={styles.date}>
         <DateFormatter dateString={meta.date} />
       </small>
       <h3 className={styles.title}>
-        <Link
-          as={`/articles/${slug}`}
-          href="/articles/[slug]"
-          className="hover:underline"
-        >
-          {title}
-        </Link>
+        {title}
       </h3>
-    </div>
+    </Link>
   )
 }
 

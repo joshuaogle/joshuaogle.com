@@ -1,5 +1,6 @@
 import ArticlePreview from './article-preview'
 import Article from '../interfaces/article'
+import Surface from '../components/surface'
 import styles from '../styles/components/_article-list.module.css'
 
 
@@ -18,16 +19,17 @@ const ArticlesList = ({ allArticles }: Props) => {
         or our partners to get more creative.  
       </p>
 
-      <nav className={styles.list}>
-        {allArticles.map((article) => (
-          <ArticlePreview
-            key={article.slug}
-            title={article.title}
-            meta={article.meta}
-            slug={article.slug}
-          />
-        ))}
-      </nav>
+      <Surface>
+        <nav className={styles.list}>
+          {allArticles.sort((a, b) => new Date(b.meta.date).getTime() - new Date(a.meta.date).getTime()).map((article) => (
+            <ArticlePreview
+              key={article.slug}
+              title={article.title}
+              meta={article.meta}
+              slug={article.slug}/>
+          ))}
+        </nav>
+      </Surface>
     </section>
   )
 }

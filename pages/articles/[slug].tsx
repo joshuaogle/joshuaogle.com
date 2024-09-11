@@ -27,7 +27,7 @@ export default function Article({ article, preview }: Props) {
           <article>
             <Head>
               <title>{article.title} | Joshua Ogle</title>
-              <meta property="og:image" content={article.ogImage.url} />
+              <meta property="og:image" content={article.meta.thumbnail} />
             </Head>
             <Intro
               title={article.title}
@@ -54,7 +54,6 @@ export async function getStaticProps({ params }: Params) {
     'slug',
     'meta',
     'content',
-    'ogImage',
   ])
   const content = await markdownToHtml(article.content || '')
 

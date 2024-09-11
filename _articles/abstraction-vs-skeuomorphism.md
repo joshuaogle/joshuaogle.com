@@ -5,8 +5,7 @@ meta:
   url: "https://robots.thoughtbot.com/abstraction-vs-skeuomorphism"
   source: "thoughtbot"
   source_icon: "source-thoughtbot.svg"
-ogImage:
-  url: "https://images.thoughtbot.com/cp-design-for-the-web/Wr7f63ffSjKCWRNUEXag_elements-skeuomorphism-old.gif"
+  thumbnail: "https://images.thoughtbot.com/cp-design-for-the-web/Wr7f63ffSjKCWRNUEXag_elements-skeuomorphism-old.gif"
 summary: "The ebb and flow of skeuomorphism and how to effectively use it in your design."
 ---
 Early graphical user interfaces

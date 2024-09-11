@@ -53,23 +53,23 @@ const Timeline = () => {
 
   return (
     <section>
-      <div className="centered">
+      <div className={`centered ${styles.heading}`}>
         <h2>Case studies</h2>
+
+        <nav className={styles.indicatorContainer}>
+          {studies.slice(0).reverse().map((study, index) => (
+            <div
+              key={index}
+              className={`${styles.indicator} ${index === activeStudyIndex ? styles.active : ''}`}
+              onClick={() => handleIndicatorClick(index)}>
+            </div>
+          ))}
+        </nav>
       </div>
 
       <div ref={listRef} className={`${styles.list} ${styles.scrollSnap}`}>
         {studies.slice(0).reverse().map((study, index) => (
           <CaseStudyCard key={study.summary.name} study={study} />
-        ))}
-      </div>
-
-      <div className={styles.indicatorContainer}>
-        {studies.slice(0).reverse().map((study, index) => (
-          <div
-            key={index}
-            className={`${styles.indicator} ${index === activeStudyIndex ? styles.active : ''}`}
-            onClick={() => handleIndicatorClick(index)}>
-          </div>
         ))}
       </div>
     </section>

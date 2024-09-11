@@ -5,8 +5,7 @@ meta:
   url: "https://robots.thoughtbot.com/balance"
   source: "thoughtbot"
   source_icon: "source-thoughtbot.svg"
-ogImage:
-  url: "https://images.thoughtbot.com/cp-design-for-the-web/cVVAh3CdQqqBRE08qLYm_elements-balance-texture.png"
+  thumbnail: "https://images.thoughtbot.com/cp-design-for-the-web/cVVAh3CdQqqBRE08qLYm_elements-balance-texture.png"
 summary: "Keeping your content interesting and master the art of whitespace in this latest article on how to bring art principles to web design."
 ---
 

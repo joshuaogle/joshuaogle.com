@@ -13,9 +13,6 @@ type ArticleType = {
     time?: string
     team?: string
   }
-  ogImage: {
-    url: string
-  }
   content: string
 }
 

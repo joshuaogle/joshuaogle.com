@@ -18,12 +18,20 @@
   display: none;
 }
 
+.heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .indicatorContainer {
   display: flex;
   justify-content: center;
   width: 100%;
   gap: 0.5em;
   cursor: pointer;
+  flex: 0;
 }
 
 .indicator {
@@ -37,5 +45,5 @@
 .indicator.active {
   background: white;
   height: 0.5em;
-  width: 2em;
+  width: 1em;
 }

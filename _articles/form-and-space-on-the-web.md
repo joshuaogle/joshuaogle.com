@@ -5,8 +5,7 @@ meta:
   url: "https://robots.thoughtbot.com/form-and-space"
   source: "thoughtbot"
   source_icon: "source-thoughtbot.svg"
-ogImage:
-  url: "https://images.thoughtbot.com/cp-design-for-the-web/mrSKHmMGQSIPFYXGYCMT_elements-layers.png"
+  thumbnail: "https://images.thoughtbot.com/cp-design-for-the-web/mrSKHmMGQSIPFYXGYCMT_elements-layers.png"
 summary: "How to use space and depth to make your designs better. A journey into the scary (sounding) Gestalt theory."
 ---
 

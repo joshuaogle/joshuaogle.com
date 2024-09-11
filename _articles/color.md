@@ -5,9 +5,7 @@ meta:
   url: "https://robots.thoughtbot.com/color"
   source: "thoughtbot"
   source_icon: "source-thoughtbot.svg"
-ogImage: {
-  url: "https://images.thoughtbot.com/cp-design-for-the-web/YXnBeXKAQk6sbYEVMJ0f_color-spectrum.png"
-}
+  thumbnail: "https://images.thoughtbot.com/cp-design-for-the-web/YXnBeXKAQk6sbYEVMJ0f_color-spectrum.png"
 summary: "How color works and how to use it effectively. We'll also learn how to create palettes to help your brand make an impact."
 ---
 

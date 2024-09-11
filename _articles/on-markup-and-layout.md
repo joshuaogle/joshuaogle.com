@@ -5,8 +5,7 @@ meta:
   url: "https://robots.thoughtbot.com/on-markup-and-layout"
   source: "thoughtbot"
   source_icon: "source-thoughtbot.svg"
-ogImage:
-  url: "https://images.thoughtbot.com/cp-design-for-the-web/Z9ceWhcOQxauO5ync0CB_layout-pieces.png"
+  thumbnail: "https://images.thoughtbot.com/cp-design-for-the-web/Z9ceWhcOQxauO5ync0CB_layout-pieces.png"
 summary: "Let’s talk a bit about what makes designing for the web a unique challenge."
 ---
 

@@ -5,8 +5,7 @@ meta:
   url: "https://robots.thoughtbot.com/whitespace"
   source: "thoughtbot"
   source_icon: "source-thoughtbot.svg"
-ogImage:
-  url: "https://images.thoughtbot.com/cp-design-for-the-web/zhquLBEGRP68MT3w8oZh_elements-white-space-micro-small.png"
+  thumbnail: "https://images.thoughtbot.com/cp-design-for-the-web/zhquLBEGRP68MT3w8oZh_elements-white-space-micro-small.png"
 summary: "Whitespace is probably the most under-appreciated yet impactful part of a good design."
 ---
 

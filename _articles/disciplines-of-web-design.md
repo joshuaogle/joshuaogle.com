@@ -5,8 +5,7 @@ meta:
   url: "https://robots.thoughtbot.com/designing-for-the-web"
   source: "thoughtbot"
   source_icon: "source-thoughtbot.svg"
-ogImage:
-  url: "https://images.thoughtbot.com/cp-design-for-the-web/7SgT6LwCQHexdtwvtYIA_design-disciplines.png"
+  thumbnail: "https://images.thoughtbot.com/cp-design-for-the-web/7SgT6LwCQHexdtwvtYIA_design-disciplines.png"
 summary: "A map through the confusing territory of modern web design, and a history of how we got here."
 ---
 

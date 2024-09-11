@@ -5,8 +5,7 @@ meta:
   url: "https://robots.thoughtbot.com/positioning"
   source: "thoughtbot"
   source_icon: "source-thoughtbot.svg"
-ogImage:
-  url: https://images.thoughtbot.com/cp-design-for-the-web/rJPfdQBaR1toJmmH87ao_layout-justify-content.pngg"
+  thumbnail: "https://images.thoughtbot.com/cp-design-for-the-web/MwnTUG5TBaJHUM7hnMaw_layout-flex-direction.png"
 summary: "Choosing how to position an element in CSS is sometimes really a choice about what side effects are most acceptable."
 ---
 

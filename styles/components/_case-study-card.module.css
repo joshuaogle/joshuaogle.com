@@ -12,8 +12,8 @@
   --shadow-spread: calc(var(--proximity) * -0.016vh);
   --shadow-opacity: calc(0.5 - var(--proximity) * 0.001);
   background: radial-gradient(at left top, var(--bg-start) 30%, var(--bg-end) 200%);
-  border-right: 1px solid var(--bg-end);
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-right: 0.5px solid var(--bg-end);
+  border-top: 0.5px solid rgba(255, 255, 255, 0.15);
   border-radius: var(--spine-radius) var(--corner-radius) var(--corner-radius) var(--spine-radius);
   box-shadow: 0 var(--shadow-length) var(--shadow-blur) var(--shadow-spread) rgba(0, 0, 0, var(--shadow-opacity));
   display: block;
