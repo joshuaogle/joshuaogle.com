@@ -38,6 +38,7 @@
 }
 
 .image {
+  border-radius: var(--small-border-radius);
   box-shadow: var(--shadow-low);
   margin: 0;
   position: absolute;
