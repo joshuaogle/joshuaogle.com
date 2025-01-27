@@ -5,8 +5,6 @@
 
 .card {
   --card-size: 27rem;
-  --corner-radius: calc(var(--card-size) * 0.04);
-  --spine-radius: calc(var(--card-size) * 0.01);
   --shadow-length: calc(var(--proximity) * 0.06vh);
   --shadow-blur: calc(1vh + (var(--proximity) * 0.04vh));
   --shadow-spread: calc(var(--proximity) * -0.016vh);
@@ -14,7 +12,6 @@
   background: radial-gradient(at left top, var(--bg-start) 30%, var(--bg-end) 200%),
     radial-gradient(at center bottom, var(--primary) 30%, var(--primary) 0%);
   border-top: 0.5px solid rgba(255, 255, 255, 0.2);
-  border-radius: var(--spine-radius) var(--corner-radius) var(--corner-radius) var(--spine-radius);
   box-shadow: 0 var(--shadow-length) var(--shadow-blur) var(--shadow-spread) rgba(0, 0, 0, var(--shadow-opacity));
   display: block;
   padding: var(--small-spacing) var(--base-spacing);
