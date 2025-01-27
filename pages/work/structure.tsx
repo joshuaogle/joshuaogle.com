@@ -5,7 +5,7 @@ import Intro from '../../components/intro'
 import Example from '../../components/example'
 
 export const summary = {
-  title: "Style for your infrastructure",
+  title: "Infrastructure in style",
   name: "Structure",
   meta: {
     date: "2020",

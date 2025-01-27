@@ -51,6 +51,6 @@ main {
 
 img,
 video {
-  border-radius: var(--base-border-radius);
+  border-radius: var(--small-border-radius);
   max-width: 100%;
 }

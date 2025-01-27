@@ -30,7 +30,11 @@ const TimelineCaseStudy = ({study, active}) => {
         tiltMaxAngleX={5}
         tiltMaxAngleY={15}
         perspective={2000}
-        transitionSpeed={10000}>
+        transitionSpeed={10000}
+        glareEnable={true}
+        glareMaxOpacity={0.2}
+        glarePosition="top"
+        >
         <Link
           href={study.href} 
           className={styles.card}
@@ -41,16 +45,12 @@ const TimelineCaseStudy = ({study, active}) => {
             "--proximity": cardProximity
           } as React.CSSProperties}>
           <div className={styles.textContent}>
-            <small>
-              {study.summary.meta.date}
-            </small>
-
             <h3 className={styles.title}>
               {study.summary.title}
             </h3>
 
             <small>
-              {study.summary.name} • {study.summary.meta.role}
+              {study.summary.meta.date} • {study.summary.name} • {study.summary.meta.role}
             </small>
           </div>
 

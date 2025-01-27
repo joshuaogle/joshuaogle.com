@@ -6,7 +6,7 @@ h4 {
   font-family: var(--heading-font);
   font-weight: var(--font-weight-semibold);
   letter-spacing: 0.025rem;
-  line-height: 1.15;
+  line-height: 1.1;
   margin: 0 0 0.15em;
   transition: all var(--base-timing) var(--base-easing);
 }

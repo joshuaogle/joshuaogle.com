@@ -46,7 +46,7 @@ const Timeline = () => {
 
   const handleIndicatorClick = (index) => {
     listRef.current?.scrollTo({
-      left: index * (listRef.current?.clientWidth / 2),
+      left: index * studyWidth,
       behavior: 'smooth'
     })
   }
