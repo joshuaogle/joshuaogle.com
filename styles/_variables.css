@@ -137,7 +137,7 @@
   /* Borders */
   --small-border-radius: var(--smallest-spacing);
   --base-border-radius: var(--smaller-spacing);
-  --surface-border-radius: var(--smaller-spacing);
+  --surface-border-radius: var(--small-spacing);
   --large-border-radius: var(--base-spacing);
   --app-border-radius: calc(2/9 * 100%);
 
@@ -183,8 +183,8 @@
   --theme-action-color: var(--cyan-500);
   --theme-highlight-rgb: 229, 193, 46;
   --theme-shadow-rgb: 15, 13, 11;
-  --surface-opacity: 0.2;
-  --surface-opacity-hover: 0.24;
+  --surface-opacity: 0.18;
+  --surface-opacity-hover: 0.2;
   --muted-color: rgba(255, 255, 255, 0.33);
   --shadow-o-0: 0;
   --shadow-o-u: 0.2;
