@@ -1,6 +1,6 @@
 .container {
   border-top: 1px solid rgba(var(--theme-highlight-rgb), 0.08);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   gap: var(--smallest-spacing);
@@ -43,6 +43,7 @@
 .title {
   color: var(--text-color);
   font-size: 1rem;
+  text-decoration: underline;
 }
 
 .date {

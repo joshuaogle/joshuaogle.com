@@ -9,7 +9,8 @@
   --shadow-blur: calc(1vh + (var(--proximity) * 0.04vh));
   --shadow-spread: calc(var(--proximity) * -0.016vh);
   --shadow-opacity: calc(0.5 - var(--proximity) * 0.001);
-  background-image: radial-gradient(circle at top left, var(--bg-start) 50%, var(--bg-end) 150%);
+  background-image: radial-gradient(circle at 150% 150%, var(--primary) 0, transparent 40%),
+                    radial-gradient(circle at 50% 50%, var(--bg-start) 50%, var(--bg-end) 150%);
   border-top: 0.5px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 var(--shadow-length) var(--shadow-blur) var(--shadow-spread) rgba(0, 0, 0, var(--shadow-opacity));
   display: block;
@@ -87,5 +88,5 @@
   bottom: var(--smaller-spacing);
   right: var(--smaller-spacing);
   width: var(--base-spacing);
-  padding: 2%;
+  padding: 1%;
 }
