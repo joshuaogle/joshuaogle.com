@@ -45,13 +45,13 @@ const TimelineCaseStudy = ({study, active}) => {
             "--proximity": cardProximity
           } as React.CSSProperties}>
           <div className={styles.textContent}>
+            <small className={styles.meta}>
+              {study.summary.meta.date} • {study.summary.name} • {study.summary.meta.role}
+            </small>
+
             <h3 className={styles.title}>
               {study.summary.title}
             </h3>
-
-            <small>
-              {study.summary.meta.date} • {study.summary.name} • {study.summary.meta.role}
-            </small>
           </div>
 
           <img

@@ -1,5 +1,5 @@
 .list {
-  --offset: calc(50vw - (var(--page-width) / 2) - var(--large-spacing));
+  --offset: calc(50vw - (var(--page-width) / 2) - var(--base-spacing));
   display: flex;
   flex-direction: row;
   padding: 0 var(--offset) var(--base-spacing);

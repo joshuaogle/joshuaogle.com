@@ -1,10 +1,10 @@
 .cardContainer {
-  padding: var(--base-spacing) var(--large-spacing) var(--large-spacing);
+  padding: var(--base-spacing) var(--base-spacing) var(--large-spacing);
   transition: padding var(--slow-timing) var(--base-easing);
 }
 
 .card {
-  --card-size: 27rem;
+  --card-size: 21rem;
   --shadow-length: calc(var(--proximity) * 0.06vh);
   --shadow-blur: calc(1vh + (var(--proximity) * 0.04vh));
   --shadow-spread: calc(var(--proximity) * -0.016vh);
@@ -19,11 +19,14 @@
   overflow: hidden;
   transition: box-shadow 0.3s ease;
   height: var(--card-size);
-  width: var(--page-width);
+  width: calc(var(--card-size) * var(--bigger));
 }
 
 .textContent {
-  padding: var(--small-spacing);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 60%;
 }
 
 .textContent small {
@@ -32,9 +35,8 @@
 
 .title {
   color: var(--primary);
-  font-size: 3rem;
+  font-size: 2.66rem;
   width: 66%;
-  text-decoration: underline;
 }
 
 .image {
@@ -42,7 +44,7 @@
   box-shadow: var(--shadow-low);
   margin: 0;
   position: absolute;
-  top: 50%;
+  top: 66%;
   left: var(--base-spacing);
   width: calc(100% - (var(--base-spacing) * 2));
   height: auto;
