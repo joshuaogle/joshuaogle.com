@@ -33,30 +33,30 @@ const Welcome = () => {
       <div className={styles.cardContainer}>
         <Surface>
           <div className={styles.card}>
-            <Image
-              src="/images/portrait.jpg"
-              height="1200"
-              width="1200"
-              alt="Joshua Ogle"
-              className={styles.portrait}
-            />
+            <div className={styles.portraitContainer}>
+              <Image
+                src="/images/portrait.jpg"
+                height="1200"
+                width="1200"
+                alt="Joshua Ogle"
+                className={styles.portrait}
+              />
+              <Status />
+            </div>
             <div className={styles.textContainer}>
               <div className={styles.nameContainer}>
                 <span className={styles.name}>
                   Joshua Ogle
                 </span>
                 &nbsp;
-                <span className={styles.meta}>
-                  <Status />
-                  <span className={styles.time}>
-                    ({formattedTime} local time)
-                  </span>
+                <span className={styles.time}>
+                  ({formattedTime} local time)
                 </span>
               </div>
 
               <p>
-                I'm a Staff Product Designer @ <a href="https://hashicorp.com" target="_new">HashiCorp</a>,
-                making the internet a better place to live
+                Staff Product Designer @ <a href="https://hashicorp.com" target="_new">HashiCorp</a>,
+                making the cloud a better place to live
               </p>
             </div>
           </div>

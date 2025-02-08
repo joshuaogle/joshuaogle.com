@@ -1,5 +1,5 @@
 .header {
-  --portrait-size: 3.5rem;
+  --portrait-size: 8rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,10 +33,33 @@
   padding: 0.25rem;
 }
 
+.portraitContainer {
+  position: relative;
+  width: var(--portrait-size);
+}
+
 .portrait {
   border-radius: var(--app-border-radius);
-  width: var(--portrait-size);
   height: auto;
+}
+
+.status {
+  --offset: 0.5rem;
+  background-color: var(--black);
+  content: "";
+  display: inline-block;
+  font-size: 0;
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 50%;
+  position: absolute;
+  bottom: var(--offset);
+  right: var(--offset);
+  box-shadow: 0 0 0 2px var(--neutral-900);
+}
+
+.status.online {
+  background-color: var(--green-700);
 }
 
 .textContainer {
@@ -53,29 +76,11 @@
 }
 
 .time {
+  font-size: var(--smallest-font-size);
   color: var(--muted-color);
 }
 
-.status {
-  --offset: calc(var(--portrait-size) + 0.1rem);
-  background-color: var(--black);
-  content: "";
-  display: inline-block;
-  font-size: 0;
-  height: 0.5rem;
-  width: 0.5rem;
-  border-radius: 50%;
-  position: absolute;
-  top: var(--offset);
-  left: var(--offset);
-  box-shadow: 0 0 0 3px var(--neutral-900);
-}
-
-.status.online {
-  background-color: var(--green-700);
-}
-
 .textContainer p {
-  line-height: 1.5;
+  font-size: var(--smallest-font-size);
   margin: 0.15rem 0 0.25rem;
 }

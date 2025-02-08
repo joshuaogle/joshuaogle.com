@@ -54,15 +54,16 @@
 
 .menuTitle {
   font-size: 1.25rem;
-  padding: var(--smallest-spacing) var(--smallest-spacing) 0;
+  padding: var(--smallest-spacing) 0.5rem 0;
 }
 
 .menuLink {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
   display: flex;
-  gap: var(--smaller-spacing);
-  padding: var(--smallest-spacing);
+  align-items: center;
+  gap: var(--smallest-spacing);
+  padding: 0.5rem;
   transition: color var(--base-timing);
 }
 

@@ -126,10 +126,10 @@
   --smallest-font-size: calc(var(--base-font-size) * var(--smaller));
 
   /* Borders */
-  --small-border-radius: var(--smallest-spacing);
-  --base-border-radius: var(--smaller-spacing);
-  --surface-border-radius: var(--smaller-spacing);
   --large-border-radius: var(--base-spacing);
+  --base-border-radius: var(--smaller-spacing);
+  --surface-border-radius: var(--small-spacing);
+  --small-border-radius: var(--smallest-spacing);
   --app-border-radius: calc(2/9 * 100%);
 
   /* Timing */

@@ -6,7 +6,7 @@
   justify-content: space-between;
   gap: var(--smallest-spacing);
   position: relative;
-  padding: 0.25rem 0;
+  padding: 0.25rem var(--small-spacing);
 }
 
 .container:first-child {
@@ -19,7 +19,7 @@
 
 .title {
   color: var(--text-color);
-  font-size: var(--smallest-font-size);
+  font-size: var(--smaller-font-size);
 }
 
 .date {
