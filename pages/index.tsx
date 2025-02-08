@@ -4,7 +4,7 @@ import Welcome from '../components/welcome'
 import Timeline from '../components/timeline'
 import CaseStudies from '../components/caseStudies'
 import Consulting from '../components/consulting'
-import ArticlesList from '../components/articles-list'
+import ArticleList from '../components/article-list'
 import { getAllArticles } from '../lib/api'
 import Article from '../interfaces/article'
 
@@ -23,7 +23,7 @@ export default function Index({ allArticles }: Props) {
       <Timeline />
       <CaseStudies />
       <Consulting />
-      <ArticlesList allArticles={allArticles} />
+      <ArticleList allArticles={allArticles} />
     </Layout>
   )
 }

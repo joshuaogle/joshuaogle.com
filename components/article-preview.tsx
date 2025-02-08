@@ -8,26 +8,27 @@ type Props = {
     date: string,
     thumbnail?: string
   },
-  slug: string
+  slug: string,
+  onMouseEnter?: () => void,
+  onMouseLeave?: () => void
 }
 
-const ArticlePreview = ({title, meta, slug}: Props) => {
+const ArticlePreview = ({title, meta, slug, onMouseEnter, onMouseLeave}: Props) => {
   return (
-    <Link
-      as={`/articles/${slug}`}
-      href="/articles/[slug]"
-      className={styles.container}>
-      <img
-        src={meta.thumbnail}
-        alt={title}
-        className={styles.thumbnail} />
-      <small className={styles.date}>
-        <DateFormatter dateString={meta.date} />
-      </small>
-      <h3 className={styles.title}>
-        {title}
-      </h3>
-    </Link>
+    <div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+      <Link
+        as={`/articles/${slug}`}
+        href="/articles/[slug]"
+        className={styles.container}
+      >
+        <div className={styles.title}>
+          {title}
+        </div>
+        <small className={styles.date}>
+          <DateFormatter dateString={meta.date} />
+        </small>
+      </Link>
+    </div>
   )
 }
 

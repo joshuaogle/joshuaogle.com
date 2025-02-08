@@ -13,7 +13,7 @@ const Consulting = () => {
         <h2>Design consulting</h2>
         <p>
           I have led design projects from startups to big enterprise companies.
-          No matter the size of the project, I believe in starting small, iterating quickly, and listening to what your users are telling you.
+          No matter the size of the project, I believe in starting small, listening to what your users are telling you.
         </p>
       </div>
 

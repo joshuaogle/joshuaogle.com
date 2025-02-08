@@ -1,0 +1,17 @@
+.featuredRow,
+.secondaryRow {
+  display: grid;
+  gap: var(--small-spacing);
+  margin-bottom: var(--base-spacing);
+  width: 100%;
+  grid-auto-rows: 1fr;  /* Make all rows the same height */
+}
+
+.featuredRow {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.secondaryRow {
+  grid-template-columns: repeat(3, 1fr);
+}
+

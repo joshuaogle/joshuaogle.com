@@ -1,4 +1,12 @@
-module.exports = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  images: {
+    domains: [
+      'images.thoughtbot.com',
+      'res.cloudinary.com',  // keeping existing domains
+      'avatars.githubusercontent.com'
+    ],
+  },
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/i,
@@ -9,3 +17,5 @@ module.exports = {
     return config
   }
 }
+
+module.exports = nextConfig

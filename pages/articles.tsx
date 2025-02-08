@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Layout from '../components/layout'
-import ArticlesList from '../components/articles-list'
+import ArticleList from '../components/article-list'
 import { getAllArticles } from '../lib/api'
 import Article from '../interfaces/article'
 
@@ -16,7 +16,7 @@ export default function Articles({ allArticles }: Props) {
           <title>{`Joshua Ogle | Articles`}</title>
         </Head>
         
-        <ArticlesList allArticles={allArticles} />
+        <ArticleList allArticles={allArticles} />
       </Layout>
     </>
   )

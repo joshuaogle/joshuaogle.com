@@ -46,7 +46,7 @@ const TimelineCaseStudy = ({study, active}) => {
           } as React.CSSProperties}>
           <div className={styles.textContent}>
             <small className={styles.meta}>
-              {study.summary.meta.date} • {study.summary.name} • {study.summary.meta.role}
+              {study.summary.name} • {study.summary.meta.date} • {study.summary.meta.role}
             </small>
 
             <h3 className={styles.title}>
