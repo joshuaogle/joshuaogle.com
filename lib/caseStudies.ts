@@ -1,3 +1,5 @@
+import {summary as TransparentSessionsSummary} from '../pages/work/boundary-transparent-sessions';
+import {summary as BoundarySummary} from '../pages/work/boundary-session-recording';
 import {summary as VaultSummary} from '../pages/work/vault';
 import {summary as StructureSummary} from '../pages/work/structure';
 import {summary as SharespostSummary} from '../pages/work/sharespost';
@@ -13,12 +15,20 @@ const studies = [
     href: "/work/sharespost"
   },
   {
+    summary: StructureSummary,
+    href: "/work/structure"
+  },
+  {
     summary: VaultSummary,
     href: "/work/vault"
   },
   {
-    summary: StructureSummary,
-    href: "/work/structure"
+    summary: BoundarySummary,
+    href: "/work/boundary-session-recording"
+  },
+  {
+    summary: TransparentSessionsSummary,
+    href: "/work/boundary-transparent-sessions"
   }
 ]
 

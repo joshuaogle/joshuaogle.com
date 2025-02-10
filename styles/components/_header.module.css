@@ -43,7 +43,7 @@
 
 .menuList {
   --menu-button-height: 40px;
-  padding: 0 var(--smallest-spacing);
+  padding: 0 var(--smaller-spacing);
   top: calc(var(--menu-button-height));
   width: 16rem;
 }
@@ -54,7 +54,7 @@
 
 .menuTitle {
   font-size: 1.25rem;
-  padding: var(--smallest-spacing) 0.5rem 0;
+  padding: var(--smallest-spacing) var(--smallest-spacing) 0;
 }
 
 .menuLink {
@@ -63,7 +63,7 @@
   display: flex;
   align-items: center;
   gap: var(--smallest-spacing);
-  padding: 0.5rem;
+  padding: 0.5rem var(--smallest-spacing);
   transition: color var(--base-timing);
 }
 

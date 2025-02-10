@@ -15,10 +15,10 @@ export const summary = {
     client_url: "http://sharespost.com",
   },
   theme: {
-    colorPrimary: "#0081BE",
+    colorPrimary: "#00B7F1",
     colorBGLight:"#2A254A",
     colorBGDark:"#171139",
-    colorHeading: "#0078B7",
+    colorHeading: "#00B7F1",
     colorHighlight: "rgb(0, 182, 242)",
     icon: "/images/case-study-logo-sharespost.svg",
     preview: "/images/case-studies/sharespost-home.png",

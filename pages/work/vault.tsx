@@ -9,7 +9,7 @@ export const summary = {
   name: "Vault",
   meta: {
     date: "2021",
-    role: "Design Lead",
+    role: "Product Design Lead",
     time: "4 years",
     team: "2 Designers, 30+ Engineers",
     client: "HashiCorp",
@@ -18,7 +18,7 @@ export const summary = {
   theme: {
     colorPrimary: "rgb(255, 207, 37)",
     colorBGLight: "#272C31",
-    colorBGDark: "#0D0E12",
+    colorBGDark: "#000",
     colorHighlight: "rgb(96, 212, 220)",
     colorHeading: "#6A7786",
     icon: "/images/case-study-logo-vault.svg",
