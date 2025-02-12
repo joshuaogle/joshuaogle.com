@@ -21,8 +21,8 @@ export const summary = {
     colorBGDark: "#180507",
     colorHighlight: "rgb(96, 212, 220)",
     colorHeading: "rgb(239, 239, 241)",
-    icon: "/images/case-study-logo-vault.svg",
-    preview: "/images/case-studies/vault-home.png",
+    icon: "/images/case-study-logo-boundary.svg",
+    preview: "/images/case-studies/boundary-sr-rdp.png",
   }
 }
 
@@ -57,16 +57,9 @@ const BoundaryCaseStudy = () => {
             access is being used and identify anomalous behavior. While Boundary had 
             established itself as a powerful solution for secure access to dynamic 
             infrastructure, security teams were still relying on separate tools for 
-            monitoring and investigation. This created workflow friction and missed 
-            opportunities for deeper security insights.
+            monitoring and investigation, which are required for some of our biggest customers.
+            This created workflow friction and missed opportunities for deeper security insights.
           </p>
-
-          <Example
-            images={[
-              "case-studies/boundary-evolution.png"
-            ]}
-            caption="Evolution of security needs in modern infrastructure"
-          />
 
           <p>
             We saw an opportunity to expand Boundary's role beyond basic access management 
@@ -83,26 +76,19 @@ const BoundaryCaseStudy = () => {
           <div className="section-title">Growing design leadership</div>
           <h2>Elevating design's impact</h2>
           <p>
-            When I joined Boundary in 2021, our EPD partnership was being run primarily 
-            by Engineering and Product, with design notably absent from strategic planning. 
+            When I joined Boundary in 2021, the product was being run primarily 
+            by Engineering and Product Management, with design notably absent from strategic planning. 
             I worked to elevate design's role, ensuring we had an equal voice in roadmap 
             planning and strategy discussions. As the team grew from one to three designers, 
             I implemented a philosophy I've used successfully in early-stage design teams: 
             developing broad product knowledge before specializing.
           </p>
 
-          <Example
-            images={[
-              "case-studies/boundary-team.png"
-            ]}
-            caption="Team structure and collaborative process"
-          />
-
           <p>
             This approach proved particularly valuable for complex features like session recording. 
             Each designer could contribute meaningful feedback across the entire user journey, 
             having deep context about both access workflows and security requirements. 
-            We became equal partners in the Boundary Leadership Team (BLT), helping shape 
+            We became equal partners in the Boundary Leadership Team (BLT 🥪), helping shape 
             not just design execution but product strategy and direction.
           </p>
         </section>
@@ -120,7 +106,7 @@ const BoundaryCaseStudy = () => {
 
           <Example
             images={[
-              "case-studies/boundary-research.png"
+              "case-studies/boundary-sr-researchplan.png"
             ]}
             caption="Research synthesis and journey mapping"
           />
@@ -134,10 +120,29 @@ const BoundaryCaseStudy = () => {
             incident. These insights pushed our strategy <mark>beyond basic recording functionality 
             to build tools supporting sophisticated investigation workflows</mark>.
           </p>
+
+          <Example
+            images={[
+              "case-studies/boundary-sr-recordingfile.png"
+            ]}
+            caption="I worked with engineering team on a new recording file format"
+          />
+
+          <p>
+            We would also need a new recording file format,
+            based on the SSH protocol which is highly detailed
+            and convoluted. We needed to be able to recover the recording
+            even if disconnected in the middle of a session.
+            There are a lot of things that can go wrong during
+            SSH sessions and we needed to handle them gracefully
+            and explain to the users what happened and support playback
+            for partial recordings when possible. I helped with these discussions
+            to think through edge cases and learn more about the SSH spec.
+          </p>
         </section>
 
         <section>
-          <div className="section-title">System design & iInnovation</div>
+          <div className="section-title">System design & innovation</div>
           <h2>From conversation to innovation</h2>
           <p>
             Sometimes the best design solutions come from unexpected moments. During a cab ride 
@@ -151,17 +156,15 @@ const BoundaryCaseStudy = () => {
 
           <Example
             images={[
-              "case-studies/boundary-timeline.png"
+              "case-studies/boundary-sr-waveforms.png"
             ]}
             caption="Timeline visualization showing session activity patterns"
           />
 
           <p>
-            The waveform concept was more than just a visual flourish. Working closely with 
-            engineering leadership, we designed a system that could handle the demands of 
-            enterprise-scale deployments while maintaining smooth performance. Our integration 
-            with Vault provided seamless credential management, and we established the foundation 
-            for future expansion into the HashiCorp Cloud Platform. This collaboration exemplified 
+            The waveform concept was more than just a visual flourish. It was a whole new way
+            to represent what happened during a session at a glance, allowing the investigators
+            to move quickly and find related patterns at a glance. This collaboration exemplified 
             how <mark>cross-functional partnerships can lead to solutions that go beyond what 
             competitors offer</mark>, creating unique value for our users.
           </p>
@@ -179,10 +182,8 @@ const BoundaryCaseStudy = () => {
           </p>
 
           <Example
-            images={[
-              "case-studies/boundary-impact.png"
-            ]}
-            caption="Enterprise adoption and market impact"
+            video="case-studies/boundary-sr-recording.mp4"
+            caption="Transparent Sessions in action"
           />
 
           <p>
@@ -192,6 +193,13 @@ const BoundaryCaseStudy = () => {
             leadership perspective, this demonstrates how our user-centered approach shapes not 
             just product features, but company strategy.
           </p>
+
+          <Example
+            images={[
+              "case-studies/boundary-sr-blog.png"
+            ]}
+            caption="Session Recording announcement"
+          />
         </section>
 
         <section>
@@ -204,6 +212,13 @@ const BoundaryCaseStudy = () => {
             their access management, bringing on more simultaneous users connecting to an 
             ever-expanding set of targets.
           </p>
+
+          <Example
+            images={[
+              "case-studies/boundary-sr-rdp.png"
+            ]}
+            caption="Preparing for the future and RDP support"
+          />
 
           <p>
             This feature's success has influenced our broader product strategy, showing how 

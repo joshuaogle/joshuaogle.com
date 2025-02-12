@@ -17,12 +17,12 @@ export const summary = {
   },
   theme: {
     colorPrimary: "rgb(223, 70, 76)",
-    colorBGLight: "#180507",
-    colorBGDark: "#050102",
+    colorBGLight: "#252937",
+    colorBGDark: "#0C0C0E",
     colorHighlight: "rgb(96, 212, 220)",
-    colorHeading: "rgb(239, 239, 241)",
-    icon: "/images/case-study-logo-vault.svg",
-    preview: "/images/case-studies/vault-home.png",
+    colorHeading: "rgba(255, 255, 255, 0.33)",
+    icon: "/images/case-studies/case-study-logo-vault.svg",
+    preview: "/images/case-studies/boundary-ts-prototype-screen.png",
   }
 }
 
@@ -63,7 +63,8 @@ const TransparentSessionsCaseStudy = () => {
 
           <Example
             images={[
-              "case-studies/boundary-traditional.png"
+              "case-studies/boundary-ts-researchplan.png",
+              "case-studies/boundary-ts-workflows.png"
             ]}
             caption="Traditional access workflow vs. Transparent Sessions"
           />
@@ -92,9 +93,9 @@ const TransparentSessionsCaseStudy = () => {
 
           <Example
             images={[
-              "case-studies/boundary-alias.png"
+              "case-studies/boundary-ts-admin.png"
             ]}
-            caption="Evolution of the alias concept"
+            caption="Admin creating an alias for a target"
           />
 
           <p>
@@ -120,9 +121,17 @@ const TransparentSessionsCaseStudy = () => {
 
           <Example
             images={[
-              "case-studies/boundary-architecture.png"
+              "case-studies/boundary-ts-prototype.png"
             ]}
-            caption="Technical architecture and DNS flow"
+            caption="I built a prototype simulating switching between apps"
+          />
+
+          <Example
+            images={[
+              "case-studies/boundary-ts-prototype-section.png",
+              "case-studies/boundary-ts-prototype-screen.png"
+            ]}
+            caption="I took users through several workflows to see what they thought"
           />
 
           <p>
@@ -147,9 +156,16 @@ const TransparentSessionsCaseStudy = () => {
 
           <Example
             images={[
-              "case-studies/boundary-feedback.png"
+              "case-studies/boundary-ts-quotes.png"
             ]}
-            caption="User feedback and adoption metrics"
+            caption="The team loves hearing about research results"
+          />
+
+          <Example
+            images={[
+              "case-studies/boundary-ts-stats.png"
+            ]}
+            caption="The team loves hearing about research results"
           />
 
           <p>
@@ -170,6 +186,21 @@ const TransparentSessionsCaseStudy = () => {
             invisible, we've opened up possibilities for deeper integration with 
             enterprise infrastructure and workflows.
           </p>
+
+          <Example
+            images={[
+              "case-studies/boundary-ts-menubar.png",
+              "case-studies/boundary-ts-spotlight.png"
+            ]}
+            caption="We reimagined new form factors that Transparent Sessions enables"
+          />
+
+          <Example
+            images={[
+              "case-studies/boundary-ts-blog.png"
+            ]}
+            caption="Announcement for Transparent Sessions"
+          />
 
           <p>
             Looking ahead, we're exploring how this approach could extend to other 
