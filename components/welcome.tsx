@@ -35,7 +35,7 @@ const Welcome = () => {
           <div className={styles.card}>
             <div className={styles.portraitContainer}>
               <Image
-                src="/images/portrait.jpg"
+                src="/images/portrait.png"
                 height="1200"
                 width="1200"
                 alt="Joshua Ogle"
