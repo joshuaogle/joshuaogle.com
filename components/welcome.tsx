@@ -50,12 +50,12 @@ const Welcome = () => {
                 </span>
                 &nbsp;
                 <span className={styles.time}>
-                  ({formattedTime} local time)
+                  {formattedTime} local time
                 </span>
               </div>
 
               <p>
-                Staff Product Designer @ <a href="https://hashicorp.com" target="_new">HashiCorp</a>,
+                Design Principal at <a href="https://hashicorp.com" target="_new">HashiCorp</a> (an IBM company)
                 making the cloud a better place to live
               </p>
             </div>

@@ -27,7 +27,6 @@
 .card {
   align-items: center;
   display: flex;
-  align-items: flex-start;
   gap: var(--smaller-spacing);
   max-width: 24rem;
   padding: 0.25rem;
