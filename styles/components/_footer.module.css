@@ -1,8 +1,16 @@
 .container {
   align-items: center;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   padding: var(--large-spacing) 0;
+  gap: var(--base-spacing);
+}
+
+.bottomRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .copyright {
@@ -11,6 +19,30 @@
 
 .copyright a {
   color: var(--text-color);
+}
+
+/* Social Links */
+.socialLinks {
+  display: flex;
+  gap: var(--smaller-spacing);
+  align-items: center;
+}
+
+.socialLink {
+  color: var(--muted-color);
+  transition: color var(--base-timing) var(--base-easing);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.socialLink:hover {
+  color: var(--text-color);
+}
+
+.socialLink svg {
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 /* Color Scheme Switch */

@@ -5,13 +5,9 @@
 
 .card {
   --card-size: 21rem;
-  --shadow-length: calc(var(--proximity) * 0.06vh);
-  --shadow-blur: calc(1vh + (var(--proximity) * 0.04vh));
-  --shadow-spread: calc(var(--proximity) * -0.016vh);
-  --shadow-opacity: calc(0.5 - var(--proximity) * 0.001);
   background-image: radial-gradient(circle at 50% 50%, var(--bg-start) 50%, var(--bg-end) 150%);
   border-top: 0.5px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 var(--shadow-length) var(--shadow-blur) var(--shadow-spread) rgba(0, 0, 0, var(--shadow-opacity));
+  box-shadow: var(--shadow-low);
   display: block;
   padding: var(--small-spacing) var(--base-spacing);
   position: relative;
@@ -24,19 +20,22 @@
 .textContent {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   height: 60%;
+  gap: var(--smallest-spacing);
 }
 
 .meta {
   color: rgba(255, 255, 255, 0.33);
   mix-blend-mode: hard-light;
+  font-size: var(--small-font-size);
 }
 
 .title {
   color: var(--primary);
   font-size: 2.25rem;
   width: 66%;
+  margin-bottom: 0;
 }
 
 .image {
