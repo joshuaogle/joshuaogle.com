@@ -19,7 +19,7 @@ const Meta = () => {
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <meta
         name="description"
-        content={`Portfolio of Joshua Ogle, Design Principal at HashiCorp, an IBM company.`}
+        content={`Portfolio of Joshua Ogle, Principal Product Designer at HashiCorp, an IBM company.`}
       />
       <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
     </Head>
