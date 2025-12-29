@@ -59,6 +59,27 @@ const Example = ({ images, video, caption }: ExampleProps) => {
 }
 
 const ExampleImage = ({filename, index, of}: ExampleImageProps) => {
+  const [mounted, setMounted] = useState(false);
+  
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return (
+      <div
+        className={styles.area}
+        data-number={`${index + 1}-of-${of}`}
+      >
+        <figure key={filename}>
+          <Surface>
+            <img src={`/images/${filename}`} />
+          </Surface>
+        </figure>
+      </div>    
+    );
+  }
+
   return (
     <div
       className={styles.area}

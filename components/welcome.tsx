@@ -5,14 +5,24 @@ import styles from '../styles/components/_welcome.module.css'
 
 const Status = () => {
   const [isOnline, setIsOnline] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const currentTime = new Date();
     const isWorkweek = currentTime.getDay() !== 0 && currentTime.getDay() !== 6;
     const currentHour = currentTime.getHours();
     const isWorkingHours = currentHour >= 9 && currentHour < 17;
     setIsOnline(isWorkingHours && isWorkweek);
   }, []);
+
+  if (!mounted) {
+    return (
+      <span className={`${styles.status} ${styles.offline}`}>
+        Offline
+      </span>
+    );
+  }
 
   return (
     <span className={`${styles.status} ${isOnline ? styles.online : styles.offline}`}>
