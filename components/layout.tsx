@@ -13,6 +13,8 @@ const Layout = ({ preview, children }: Props) => {
 
   // check and reset theme
   const getColorScheme = () => {
+    if (typeof window === 'undefined') return;
+    
     const userPrefersDark = (localStorage.colorScheme === "dark");
     const OSPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
     const prefersDark = userPrefersDark || (!("colorScheme" in localStorage) && OSPrefersDark);
