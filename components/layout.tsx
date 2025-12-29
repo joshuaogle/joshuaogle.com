@@ -10,10 +10,11 @@ type Props = {
 
 const Layout = ({ preview, children }: Props) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   // check and reset theme
   const getColorScheme = () => {
-    if (typeof window === 'undefined') return;
+    if (typeof window === 'undefined') return false;
     
     const userPrefersDark = (localStorage.colorScheme === "dark");
     const OSPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -21,22 +22,19 @@ const Layout = ({ preview, children }: Props) => {
 
     if (prefersDark) {
       window.document.documentElement.setAttribute("data-prefers-color-scheme", "dark");
-      setIsDarkMode(true);
     } else {
       window.document.documentElement.setAttribute("data-prefers-color-scheme", "light");
-      setIsDarkMode(false);
     }
+    
+    return prefersDark;
   }
 
   // check theme on component mount
   useEffect(() => {
-    getColorScheme();
+    setMounted(true);
+    const prefersDark = getColorScheme();
+    setIsDarkMode(prefersDark);
   }, []);
-
-  // check and reset theme when `darkMode` changes
-  useEffect(() => {
-    getColorScheme();
-  }, [isDarkMode]);
 
   return (
     <div className="app">

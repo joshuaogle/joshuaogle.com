@@ -17,9 +17,11 @@ const Timeline = () => {
     }
 
     updateStudyWidth();
-    window.addEventListener('resize', updateStudyWidth);
-
-    return () => window.removeEventListener('resize', updateStudyWidth);
+    
+    if (typeof window !== 'undefined') {
+      window.addEventListener('resize', updateStudyWidth);
+      return () => window.removeEventListener('resize', updateStudyWidth);
+    }
   }, []);
 
   useEffect(() => {
