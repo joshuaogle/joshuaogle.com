@@ -1,4 +1,7 @@
 import Image from 'next/image'
+import Link from 'next/link'
+import { DocumentArrowDownIcon } from '@heroicons/react/24/solid'
+import IconLinkedIn from '../public/images/icon-linkedin.svg'
 import styles from '../styles/components/_timeline.module.css'
 
 const EmployerLogo = ({ src, alt }: { src: string; alt: string }) => (
@@ -26,6 +29,24 @@ const Timeline = () => {
         <EmployerLogo src="/images/timeline-brightbit.svg" alt="Brightbit" />
         <span className={styles.employerTitle}>Brightbit</span>.
       </p>
+      
+      <div className={styles.actionButtons}>
+        <a
+          className={styles.actionButton}
+          href="http://linkedin.com/in/joshuaogle"
+          target="_blank"
+          rel="noopener noreferrer">
+          <IconLinkedIn className={styles.actionIcon}/>
+          LinkedIn
+        </a>
+        <a
+          className={`${styles.actionButton} ${styles.actionButtonSecondary}`}
+          href="/files/joshuaogle-resume.pdf"
+          target="_blank">
+          <DocumentArrowDownIcon className={styles.actionIcon}/>
+          Resume
+        </a>
+      </div>
     </section>
   )
 }

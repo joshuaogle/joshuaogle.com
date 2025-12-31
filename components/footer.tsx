@@ -40,45 +40,45 @@ const Footer = ({ isDarkMode, setIsDarkMode }) => {
 
   return (
     <footer className={styles.container + " centered"}>
-      <div className={styles.socialLinks}>
-        {socialLinks.map((socialLink) => (
-          <a
-            key={socialLink.label}
-            className={styles.socialLink}
-            href={socialLink.href}
-            target="_new"
-            title={socialLink.label}>
-            <socialLink.icon/>
-          </a>
-        ))}
-      </div>
-
-      <div className={styles.bottomRow}>
+      <div className={styles.leftColumn}>
+        <div className={styles.socialLinks}>
+          {socialLinks.map((socialLink) => (
+            <a
+              key={socialLink.label}
+              className={styles.socialLink}
+              href={socialLink.href}
+              target="_new"
+              title={socialLink.label}>
+              <socialLink.icon/>
+            </a>
+          ))}
+        </div>
+        
         <small className={styles.copyright}>
           &copy;
           All rights reserved.
           &nbsp;
           <GithubLink>Made by hand*</GithubLink> in Colorado.
         </small>
+      </div>
 
-        <div className={styles.switchContainer}>
-          <MoonIcon className={styles.switchLabel}/>
-          <Switch
-            checked={isDarkMode}
-            onChange={toggleColorScheme}
-            className={`${styles.switch} ${ifSwitchIsOn(styles.switchBgOn)}`}
+      <div className={styles.switchContainer}>
+        <MoonIcon className={styles.switchLabel}/>
+        <Switch
+          checked={isDarkMode}
+          onChange={toggleColorScheme}
+          className={`${styles.switch} ${ifSwitchIsOn(styles.switchBgOn)}`}
+        >
+          <span
+            aria-hidden="true"
+            className={`${styles.switchIndicator} ${ifSwitchIsOn(styles.switchIndicatorOn)}`}
           >
-            <span
-              aria-hidden="true"
-              className={`${styles.switchIndicator} ${ifSwitchIsOn(styles.switchIndicatorOn)}`}
-            >
-            </span>
-            <span className={styles.srOnly}>
-              Switch theme
-            </span>
-          </Switch>
-          <SunIcon className={styles.switchLabel}/>
-        </div>
+          </span>
+          <span className={styles.srOnly}>
+            Switch theme
+          </span>
+        </Switch>
+        <SunIcon className={styles.switchLabel}/>
       </div>
     </footer>
   )

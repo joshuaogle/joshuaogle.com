@@ -1,16 +1,16 @@
 .container {
-  align-items: center;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
   padding: var(--large-spacing) 0;
   gap: var(--base-spacing);
 }
 
-.bottomRow {
+.leftColumn {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--smaller-spacing);
 }
 
 .copyright {

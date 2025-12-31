@@ -128,7 +128,7 @@
   /* Borders */
   --large-border-radius: var(--base-spacing);
   --base-border-radius: var(--smaller-spacing);
-  --surface-border-radius: var(--small-spacing);
+  --surface-border-radius: var(--smaller-spacing);
   --small-border-radius: var(--smallest-spacing);
   --app-border-radius: calc(2/9 * 100%);
 

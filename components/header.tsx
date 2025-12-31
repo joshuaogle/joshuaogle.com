@@ -1,7 +1,6 @@
 import { useRouter } from 'next/router'
 import Image from 'next/image'
 import Link from 'next/link'
-import { DocumentArrowDownIcon } from '@heroicons/react/24/solid'
 import styles from '../styles/components/_header.module.css'
 
 const Header = () => {
@@ -10,14 +9,6 @@ const Header = () => {
       <BackLink />
 
       <div className={styles.headerButtons}>
-        <a
-          className={`${styles.headerButton} ${styles.headerButtonSecondary}`}
-          href="/files/joshuaogle-resume.pdf"
-          target="_new">
-          <DocumentArrowDownIcon className={styles.headerIcon}/>
-          Resume
-        </a>
-
         <a
           className={styles.headerButton}
           href="mailto:joshua@joshuaogle.com">
