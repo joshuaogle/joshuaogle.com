@@ -7,6 +7,7 @@ const nextConfig = {
       'res.cloudinary.com',  // keeping existing domains
       'avatars.githubusercontent.com'
     ],
+    unoptimized: true,  // Disable optimization to prevent Netlify 500 errors
   },
   webpack(config) {
     config.module.rules.push({
