@@ -54,7 +54,10 @@ const Timeline = () => {
   }
 
   return (
-    <section>
+    <section 
+      style={{
+        "--active-primary": studies.slice(0).reverse()[activeStudyIndex]?.summary.theme.colorPrimary || "#000"
+      } as React.CSSProperties}>
       <div className={`centered ${styles.heading}`}>
         <h2>Case studies</h2>
 

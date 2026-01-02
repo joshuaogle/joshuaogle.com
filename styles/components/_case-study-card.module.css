@@ -4,7 +4,6 @@
 }
 
 .card {
-  --card-size: 21rem;
   background-image: radial-gradient(circle at 50% 50%, var(--bg-start) 50%, var(--bg-end) 150%);
   border-top: 0.5px solid rgba(255, 255, 255, 0.2);
   box-shadow: var(--shadow-low);
@@ -13,8 +12,8 @@
   position: relative;
   overflow: hidden;
   transition: box-shadow 0.3s ease;
-  height: var(--card-size);
-  width: calc(var(--card-size) * var(--bigger));
+  height: 26rem;
+  width: 26rem;
 }
 
 .textContent {
@@ -26,13 +25,12 @@
 }
 
 .meta {
-  color: rgba(255, 255, 255, 0.33);
-  mix-blend-mode: hard-light;
+  color: var(--primary);
   font-size: var(--small-font-size);
 }
 
 .title {
-  color: var(--primary);
+  color: white;
   font-size: 2.25rem;
   width: 66%;
   margin-bottom: 0;
@@ -51,33 +49,14 @@
 }
 
 .staples {
-  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.1) 15%, rgba(0, 0, 0, 0));
+  background: var(--primary);
   display: block;
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
-  width: var(--small-spacing);
+  width: 4px;
   z-index: 2;
-}
-
-.staples::before,
-.staples::after {
-  width: calc(var(--card-size) * 0.0025);
-  height: calc(var(--card-size) * 0.08);
-  background: silver linear-gradient(90deg, var(--neutral-900), var(--neutral-400));
-  border-radius: 1rem;
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 25%;
-  transform: translateY(-50%);
-  z-index: 3;
-}
-
-.staples::after {
-  top: 75%;
 }
 
 .arrow {
