@@ -2,7 +2,8 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: var(--large-spacing) 0;
+  padding-top: var(--large-spacing);
+  padding-bottom: var(--large-spacing);
   gap: var(--base-spacing);
 }
 

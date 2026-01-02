@@ -16,7 +16,7 @@ const ArticleFeature = ({ article }: Props) => {
       href="/articles/[slug]"
       className={styles.container}
     >
-      <Surface className={styles.surface}>
+      <div className={styles.content}>
         <div className={styles.imageContainer}>
           <Image 
             src={article.meta.thumbnail}
@@ -34,7 +34,7 @@ const ArticleFeature = ({ article }: Props) => {
             {article.title}
           </div>
         </div>
-      </Surface>
+      </div>
     </Link>
   )
 }
