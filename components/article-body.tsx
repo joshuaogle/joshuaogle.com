@@ -1,5 +1,3 @@
-import markdownStyles from './markdown-styles.module.css'
-
 type Props = {
   content: string
 }
@@ -7,7 +5,7 @@ type Props = {
 const ArticleBody = ({ content }: Props) => {
   return (
     <div
-      className={`article-body centered ${markdownStyles['markdown']}`}
+      className="article-body centered"
       dangerouslySetInnerHTML={{ __html: content }}
     />
   )

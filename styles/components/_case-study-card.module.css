@@ -13,7 +13,7 @@
   position: relative;
   overflow: hidden;
   transition: box-shadow 0.3s ease;
-  height: 26rem;
+  height: 24rem;
   width: 26rem;
 }
 
@@ -67,7 +67,7 @@
   width: 0.08rem;
   height: 2rem;
   background: silver linear-gradient(90deg, var(--neutral-300), var(--neutral-700));
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   display: block;
   position: absolute;
   left: -0.03rem;

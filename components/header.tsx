@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
-import Image from 'next/image'
 import Link from 'next/link'
+import { ArrowLeftIcon } from '@heroicons/react/24/solid'
 import styles from '../styles/components/_header.module.css'
 
 const Header = () => {
@@ -23,14 +23,8 @@ const BackLink = () => {
   const router = useRouter()
   if (router.pathname != "/") {
     return (
-      <Link href="/" className={styles.backLink}>
-        <Image
-          src="/images/back.png"
-          height="36"
-          width="60"
-          alt="Home"
-          className="sketch"
-        />
+      <Link href="/" className={styles.backButton}>
+        <ArrowLeftIcon className={styles.backIcon}/>
       </Link>
     )
   }
