@@ -26,7 +26,7 @@ const ArticleList = ({ allArticles }: Props) => {
         or our partners to get more creative.
       </p>
 
-      <div className={styles.featuredRow}>
+      <div className={styles.primaryRow}>
         {firstTwoArticles.map((article) => (
           <ArticleFeature key={article.slug} article={article} />
         ))}

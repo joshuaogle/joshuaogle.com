@@ -6,6 +6,7 @@ import IconGithub from '../public/images/icon-github.svg'
 import IconMastodon from '../public/images/icon-mastodon.svg'
 import IconDribbble from '../public/images/icon-dribbble.svg'
 import IconLinkedIn from '../public/images/icon-linkedin.svg'
+import { switchColorScheme, getColorScheme } from '../lib/colorSchemeProvider'
 import styles from '../styles/components/_footer.module.css'
 
 const GithubLink = ({children}) => {
@@ -28,10 +29,9 @@ const Footer = ({ isDarkMode, setIsDarkMode }) => {
 
   // called when theme button is pressed
   const toggleColorScheme = () => {
-    const oldColorScheme = localStorage.getItem("colorScheme");
-    const newColorScheme = (oldColorScheme === "dark") ? "light" : "dark";
-    localStorage.setItem("colorScheme", newColorScheme);
-    setIsDarkMode(!isDarkMode);
+    switchColorScheme();
+    const newScheme = getColorScheme();
+    setIsDarkMode(newScheme === "dark");
   };
 
   const ifSwitchIsOn = (cssClass) => {

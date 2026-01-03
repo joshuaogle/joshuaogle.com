@@ -1,13 +1,12 @@
-.featuredRow,
+.primaryRow,
 .secondaryRow {
   display: grid;
   gap: var(--small-spacing);
-  margin-bottom: var(--base-spacing);
   width: 100%;
   grid-auto-rows: 1fr;  /* Make all rows the same height */
 }
 
-.featuredRow {
+.primaryRow {
   grid-template-columns: repeat(2, 1fr);
 }
 
@@ -16,7 +15,7 @@
 }
 
 @media (max-width: 600px) {
-  .featuredRow,
+  .primaryRow,
   .secondaryRow {
     grid-template-columns: 1fr;
   }

@@ -36,6 +36,7 @@ const Layout = ({ preview, children }: Props) => {
     setIsDarkMode(prefersDark);
   }, []);
 
+
   return (
     <div className="app">
       <Meta />
