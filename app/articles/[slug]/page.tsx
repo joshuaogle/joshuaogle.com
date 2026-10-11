@@ -18,7 +18,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
-  const article = getArticleBySlug(slug, ['title', 'summary', 'meta'])
+  const article = getArticleBySlug(slug)
 
   return {
     title: article.title,
@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: article.title,
       description: article.summary,
       publishedTime: article.meta.date,
-      images: article.meta.thumbnail ? [article.meta.thumbnail] : undefined,
+      images: [article.meta.thumbnail],
     },
     twitter: { card: 'summary_large_image' },
   }
@@ -37,8 +37,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function ArticlePage({ params }: Props) {
   const { slug } = await params
-  const article = getArticleBySlug(slug, ['title', 'meta', 'content'])
-  const content = await markdownToHtml(article.content || '')
+  const article = getArticleBySlug(slug)
+  const content = await markdownToHtml(article.content)
 
   return (
     <article>

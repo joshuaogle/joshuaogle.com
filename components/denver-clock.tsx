@@ -1,20 +1,27 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useSyncExternalStore } from 'react'
 import styles from '../styles/components/_welcome.module.css'
 
 const TIME_ZONE = 'America/Denver'
+const MINUTE = 60_000
 
-// The current time in Denver, or null until mounted (the static HTML is built
-// ahead of time, so the server can't know what time the visitor arrives)
+function subscribe(onChange: () => void) {
+  const id = setInterval(onChange, MINUTE / 4)
+  return () => clearInterval(id)
+}
+
+// The current time, updated each minute, or null during server rendering and
+// hydration (the static HTML is built ahead of time, so the server can't know
+// when the visitor arrives). The snapshot is a whole-minute timestamp so it
+// stays stable between ticks.
 const useDenverNow = () => {
-  const [now, setNow] = useState<Date | null>(null)
-
-  useEffect(() => {
-    setNow(new Date())
-  }, [])
-
-  return now
+  const minute = useSyncExternalStore(
+    subscribe,
+    () => Math.floor(Date.now() / MINUTE),
+    () => null,
+  )
+  return minute === null ? null : new Date(minute * MINUTE)
 }
 
 const isWorkingHours = (date: Date) => {

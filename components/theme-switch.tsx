@@ -1,31 +1,27 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useSyncExternalStore } from 'react'
 import { Switch } from '@headlessui/react'
 import { SunIcon, MoonIcon } from '@heroicons/react/24/solid'
-import { getColorScheme, setColorScheme } from '../lib/color-scheme'
+import { getColorScheme, setColorScheme, subscribeToColorScheme } from '../lib/color-scheme'
 import styles from '../styles/components/_footer.module.css'
 
 const ThemeSwitch = () => {
-  // The real value comes from the <html> attribute set by the inline script in
-  // app/layout.tsx; read it after mount so server and client markup match
-  const [isDarkMode, setIsDarkMode] = useState(true)
-
-  useEffect(() => {
-    setIsDarkMode(getColorScheme() === 'dark')
-  }, [])
-
-  const handleChange = (dark: boolean) => {
-    setColorScheme(dark ? 'dark' : 'light')
-    setIsDarkMode(dark)
-  }
+  // The source of truth is the <html> attribute set by the inline script in
+  // app/layout.tsx. The server snapshot is a placeholder; the switch's
+  // position comes from CSS, so it's right before hydration either way.
+  const isDarkMode = useSyncExternalStore(
+    subscribeToColorScheme,
+    () => getColorScheme() === 'dark',
+    () => true,
+  )
 
   return (
     <div className={styles.switchContainer}>
       <MoonIcon className={styles.switchLabel}/>
       <Switch
         checked={isDarkMode}
-        onChange={handleChange}
+        onChange={(dark: boolean) => setColorScheme(dark ? 'dark' : 'light')}
         className={styles.switch}
       >
         <span

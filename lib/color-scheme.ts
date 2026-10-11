@@ -25,3 +25,10 @@ export function setColorScheme(colorScheme: ColorScheme) {
     // Storage can be unavailable (private mode, blocked cookies); the choice just won't persist
   }
 }
+
+// Notifies when the theme attribute changes, for useSyncExternalStore
+export function subscribeToColorScheme(onChange: () => void) {
+  const observer = new MutationObserver(onChange)
+  observer.observe(document.documentElement, { attributes: true, attributeFilter: [ATTRIBUTE] })
+  return () => observer.disconnect()
+}

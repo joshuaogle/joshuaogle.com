@@ -1,20 +1,21 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useSyncExternalStore } from 'react'
 
-// Whether the visitor has asked their OS for reduced motion. False until
-// mounted, since the server can't know.
+const QUERY = '(prefers-reduced-motion: reduce)'
+
+function subscribe(onChange: () => void) {
+  const query = window.matchMedia(QUERY)
+  query.addEventListener('change', onChange)
+  return () => query.removeEventListener('change', onChange)
+}
+
+// Whether the visitor has asked their OS for reduced motion. False during
+// server rendering and hydration, since the server can't know.
 export function usePrefersReducedMotion() {
-  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false)
-
-  useEffect(() => {
-    const query = window.matchMedia('(prefers-reduced-motion: reduce)')
-    const update = () => setPrefersReducedMotion(query.matches)
-
-    update()
-    query.addEventListener('change', update)
-    return () => query.removeEventListener('change', update)
-  }, [])
-
-  return prefersReducedMotion
+  return useSyncExternalStore(
+    subscribe,
+    () => window.matchMedia(QUERY).matches,
+    () => false,
+  )
 }

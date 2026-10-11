@@ -6,7 +6,7 @@ import { SITE_URL } from '@/lib/site'
 export const dynamic = 'force-static'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const articles = getAllArticles(['slug', 'meta'])
+  const articles = getAllArticles()
 
   return [
     { url: SITE_URL },

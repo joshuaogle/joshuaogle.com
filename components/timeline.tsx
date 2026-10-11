@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import { DocumentArrowDownIcon } from '@heroicons/react/24/solid'
 import IconLinkedIn from '../public/images/icon-linkedin.svg'
 import styles from '../styles/components/_timeline.module.css'

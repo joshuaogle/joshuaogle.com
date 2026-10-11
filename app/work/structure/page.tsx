@@ -1,9 +1,12 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import CaseStudyTheme from '@/components/case-study-theme'
 import Intro from '@/components/intro'
 import Example from '@/components/example'
 import { caseStudyMetadata, getCaseStudy } from '@/lib/case-studies'
+import migrationImage from '@/public/images/case-studies/structure-migration.png'
+import copImage from '@/public/images/case-studies/structure-cop.png'
 
 const study = getCaseStudy('structure')
 
@@ -213,9 +216,11 @@ export default function StructureCaseStudy() {
             to make maintaining things easier.
           </p>
           <p>
-            <img
-              src="/images/case-studies/structure-migration.png"
-              width="50%" />
+            <Image
+              src={migrationImage}
+              alt="The Sketch logo with an arrow pointing to the Figma logo"
+              sizes="380px"
+              style={{ width: '50%' }} />
           </p>
           <p>
             There would be a small learning curve
@@ -260,7 +265,10 @@ export default function StructureCaseStudy() {
             and raises the bar for everyone.
           </p>
           <p>
-            <img src="/images/case-studies/structure-cop.png" />
+            <Image
+              src={copImage}
+              alt="Lisa Simpson standing in front of a sign reading “Keep out… or enter. I'm a sign, not a cop.”"
+              sizes="(max-width: 800px) 100vw, 760px" />
           </p>
           <p>
             This grassroots approach worked well

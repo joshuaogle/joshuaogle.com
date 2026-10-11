@@ -1,4 +1,5 @@
 import DateFormatter from './date-formatter'
+import type { CaseStudyTheme } from '../lib/case-studies'
 import styles from '../styles/components/_intro.module.css'
 
 type MetaProps = {
@@ -16,7 +17,7 @@ type MetaProps = {
 type IntroProps = {
   title: string,
   meta: MetaProps,
-  theme?: any,
+  theme?: CaseStudyTheme,
 }
 
 type MetaItemProps = {
@@ -52,6 +53,7 @@ const Intro = ({ title, meta, theme }: IntroProps) => {
           <MetaItem label="Team">{meta.team}</MetaItem>
           {meta.source && (
             <MetaItem label="Published by">
+              {/* eslint-disable-next-line @next/next/no-img-element -- small SVG, nothing to optimize */}
               <img className={styles.icon} src={`/images/${meta.source_icon}`} alt="" />
               <a href={meta.source_url}>{meta.source}</a>
             </MetaItem>
