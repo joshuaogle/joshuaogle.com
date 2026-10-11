@@ -35,7 +35,8 @@ const Welcome = () => {
               </div>
 
               <p>
-                Principal Product Designer at <a href="https://www.ibm.com/security" target="_blank" rel="noopener noreferrer">IBM Security</a>{' '}
+                Principal Product Designer at IBM designing{' '}
+                <a href="https://www.hashicorp.com/en/products/security-lifecycle-management" target="_blank" rel="noopener noreferrer">HashiCorp Vault</a>,
                 making the cloud a better place to live
               </p>
             </div>
