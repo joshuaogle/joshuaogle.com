@@ -2,7 +2,7 @@
 title: "Typography"
 meta:
   date: "2017-03-07"
-  url: "https://robots.thoughtbot.com/typography"
+  source_url: "https://robots.thoughtbot.com/typography"
   source: "thoughtbot"
   source_icon: "source-thoughtbot.svg"
   thumbnail: "https://images.thoughtbot.com/cp-design-for-the-web/t74TMLcyS8SJjvQOnMMA_elements-typography-anatomy.png"

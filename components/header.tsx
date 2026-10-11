@@ -1,6 +1,4 @@
-import { useRouter } from 'next/router'
-import Link from 'next/link'
-import { ArrowLeftIcon } from '@heroicons/react/24/solid'
+import BackLink from './back-link'
 import styles from '../styles/components/_header.module.css'
 
 const Header = () => {
@@ -18,17 +16,5 @@ const Header = () => {
     </header>
   )
 }
-
-const BackLink = () => {
-  const router = useRouter()
-  if (router.pathname != "/") {
-    return (
-      <Link href="/" className={styles.backButton}>
-        <ArrowLeftIcon className={styles.backIcon}/>
-      </Link>
-    )
-  }
-}
-
 
 export default Header

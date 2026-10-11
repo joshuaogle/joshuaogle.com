@@ -12,8 +12,7 @@ type Props = {
 const ArticleFeature = ({ article }: Props) => {
   return (
     <Link
-      as={`/articles/${article.slug}`}
-      href="/articles/[slug]"
+      href={`/articles/${article.slug}`}
       className={styles.container}
     >
       <div className={styles.content}>

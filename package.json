@@ -16,7 +16,6 @@
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
     "react-parallax-tilt": "^1.7.346",
-    "react-player": "^3.4.0",
     "remark": "^15.0.1",
     "remark-frontmatter": "^5.0.0",
     "remark-html": "^16.0.1",

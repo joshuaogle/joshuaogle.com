@@ -1,11 +1,12 @@
 type ArticleType = {
   slug: string
   title: string
+  summary?: string
   meta: {
     date: string
     source: string
     source_icon: string
-    url: string
+    source_url: string
     role?: string
     time?: string
     team?: string

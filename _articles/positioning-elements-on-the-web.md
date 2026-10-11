@@ -2,7 +2,7 @@
 title: "Positioning Elements on the Web"
 meta:
   date: "2017-04-04"
-  url: "https://robots.thoughtbot.com/positioning"
+  source_url: "https://robots.thoughtbot.com/positioning"
   source: "thoughtbot"
   source_icon: "source-thoughtbot.svg"
   thumbnail: "https://images.thoughtbot.com/cp-design-for-the-web/MwnTUG5TBaJHUM7hnMaw_layout-flex-direction.png"

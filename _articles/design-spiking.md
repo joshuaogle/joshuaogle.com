@@ -2,7 +2,7 @@
 title: "Design Spiking"
 meta:
   date: "2014-11-04"
-  url: "https://robots.thoughtbot.com/design-spiking"
+  source_url: "https://robots.thoughtbot.com/design-spiking"
   source: "thoughtbot"
   source_icon: "source-thoughtbot.svg"
   thumbnail: "https://images.thoughtbot.com/design-spiking/sketch-path.png"

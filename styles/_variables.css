@@ -115,7 +115,7 @@
 
   /* Fonts */
   --sans-serif: -apple-system, BlinkMacSystemFont, sans-serif;
-  --heading-font: "TiemposHeadline", Georgia, serif;
+  --heading-font: var(--font-tiempos), Georgia, serif;
   --font-weight-light: 300;
   --font-weight-regular: 400;
   --font-weight-semibold: 600;

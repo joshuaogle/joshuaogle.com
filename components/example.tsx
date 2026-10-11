@@ -1,6 +1,5 @@
-import { useEffect, useState } from 'react'
-import Tilt from 'react-parallax-tilt';
-import ReactPlayer from 'react-player'
+import AutoplayVideo from './autoplay-video'
+import Tilt from './tilt'
 import Surface from './surface'
 import styles from '../styles/components/_example.module.css'
 
@@ -17,13 +16,6 @@ type ExampleImageProps = {
 }
 
 const Example = ({ images, video, caption }: ExampleProps) => {
-  const [hasWindow, setHasWindow] = useState(false);
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      setHasWindow(true);
-    }
-  }, []);
-
   return (
     <div className={styles.container}>
       {images && (
@@ -37,14 +29,10 @@ const Example = ({ images, video, caption }: ExampleProps) => {
         </div>
       )}
 
-      {hasWindow && video && (
+      {video && (
         <figure>
           <Surface>
-            <ReactPlayer
-              src={`/images/${video}`}
-              playing
-              muted
-            />
+            <AutoplayVideo src={`/images/${video}`} />
           </Surface>
         </figure>
       )}
@@ -59,27 +47,6 @@ const Example = ({ images, video, caption }: ExampleProps) => {
 }
 
 const ExampleImage = ({filename, index, of}: ExampleImageProps) => {
-  const [mounted, setMounted] = useState(false);
-  
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return (
-      <div
-        className={styles.area}
-        data-number={`${index + 1}-of-${of}`}
-      >
-        <figure key={filename}>
-          <Surface>
-            <img src={`/images/${filename}`} />
-          </Surface>
-        </figure>
-      </div>    
-    );
-  }
-
   return (
     <div
       className={styles.area}
@@ -92,13 +59,13 @@ const ExampleImage = ({filename, index, of}: ExampleImageProps) => {
         perspective={2000}
         transitionSpeed={10000}
       >
-        <figure key={filename}>
+        <figure>
           <Surface>
             <img src={`/images/${filename}`} />
           </Surface>
         </figure>
       </Tilt>
-    </div>    
+    </div>
   )
 }
 

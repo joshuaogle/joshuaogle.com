@@ -1,7 +1,6 @@
 @import "_variables.css";
 @import "_typography.css";
 @import "_layout.css";
-@import "_fonts.css";
 
 * {
   box-sizing: border-box;

@@ -2,7 +2,7 @@
 title: "Form and Space on the Web"
 meta:
   date: "2017-02-14"
-  url: "https://robots.thoughtbot.com/form-and-space"
+  source_url: "https://robots.thoughtbot.com/form-and-space"
   source: "thoughtbot"
   source_icon: "source-thoughtbot.svg"
   thumbnail: "https://images.thoughtbot.com/cp-design-for-the-web/mrSKHmMGQSIPFYXGYCMT_elements-layers.png"

@@ -94,7 +94,9 @@
               inset 0 1px 0 0 rgba(var(--theme-highlight-rgb), 0.25);
 }
 
-.switchIndicatorOn {
+/* Driven by the theme attribute (set before first paint), not React state,
+   so the switch is already in the right position when the page loads */
+:global(html[data-prefers-color-scheme="light"]) .switchIndicator {
   left: calc(100% - var(--switch-size));
 }
 

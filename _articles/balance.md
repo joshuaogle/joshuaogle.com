@@ -2,7 +2,7 @@
 title: "Balance"
 meta:
   date: "2017-02-21"
-  url: "https://robots.thoughtbot.com/balance"
+  source_url: "https://robots.thoughtbot.com/balance"
   source: "thoughtbot"
   source_icon: "source-thoughtbot.svg"
   thumbnail: "https://images.thoughtbot.com/cp-design-for-the-web/cVVAh3CdQqqBRE08qLYm_elements-balance-texture.png"

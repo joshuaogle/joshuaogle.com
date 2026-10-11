@@ -9,16 +9,13 @@ type Props = {
     thumbnail?: string
   },
   slug: string,
-  onMouseEnter?: () => void,
-  onMouseLeave?: () => void
 }
 
-const ArticlePreview = ({title, meta, slug, onMouseEnter, onMouseLeave}: Props) => {
+const ArticlePreview = ({title, meta, slug}: Props) => {
   return (
-    <div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+    <div>
       <Link
-        as={`/articles/${slug}`}
-        href="/articles/[slug]"
+        href={`/articles/${slug}`}
         className={styles.container}
       >
         <div className={styles.title}>
