@@ -25,6 +25,8 @@ imported as React components through SVGR, configured in `next.config.js`.
 - `components/`: server components by default; files starting with
   `'use client'` are the interactive pieces.
 - `styles/`: global CSS plus CSS modules in `styles/components/`.
+- `DESIGN.md`: design reasoning and inspiration for the redesign; its images
+  live in `docs/inspiration/` (outside `public/`, so they aren't deployed).
 
 ## Conventions
 
