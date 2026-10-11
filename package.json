@@ -8,7 +8,7 @@
     "build": "next build --webpack",
     "start": "next start",
     "lint": "eslint .",
-    "typecheck": "tsc",
+    "typecheck": "next typegen && tsc",
     "check": "npm run lint && npm run typecheck"
   },
   "dependencies": {
