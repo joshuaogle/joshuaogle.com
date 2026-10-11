@@ -10,5 +10,5 @@ export const metadata: Metadata = {
 export default function Articles() {
   const allArticles = getAllArticles(['title', 'meta', 'slug']) as Article[]
 
-  return <ArticleList allArticles={allArticles} />
+  return <ArticleList allArticles={allArticles} headingLevel="h1" />
 }

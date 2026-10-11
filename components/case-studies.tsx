@@ -61,13 +61,16 @@ const CaseStudies = () => {
       <div className={`centered ${styles.heading}`}>
         <h2>Case studies</h2>
 
-        <nav className={styles.indicatorContainer}>
+        <nav className={styles.indicatorContainer} aria-label="Case studies">
           {caseStudies.map((study, index) => (
-            <div
+            <button
               key={study.slug}
+              type="button"
               className={`${styles.indicator} ${index === activeStudyIndex ? styles.active : ''}`}
+              aria-label={`${study.name}: ${study.title}`}
+              aria-current={index === activeStudyIndex ? 'true' : undefined}
               onClick={() => handleIndicatorClick(index)}>
-            </div>
+            </button>
           ))}
         </nav>
       </div>

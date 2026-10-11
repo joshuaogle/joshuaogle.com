@@ -52,7 +52,7 @@ const Intro = ({ title, meta, theme }: IntroProps) => {
           <MetaItem label="Team">{meta.team}</MetaItem>
           {meta.source && (
             <MetaItem label="Published by">
-              <img className={styles.icon} src={`/images/${meta.source_icon}`} />
+              <img className={styles.icon} src={`/images/${meta.source_icon}`} alt="" />
               <a href={meta.source_url}>{meta.source}</a>
             </MetaItem>
           )}
@@ -65,9 +65,9 @@ const Intro = ({ title, meta, theme }: IntroProps) => {
 const MetaItem = ({ label, children }: MetaItemProps) => {
   const template = (
     <li className={styles.metaItem}>
-      <label>
+      <span className={styles.metaLabel}>
         {label}
-      </label>
+      </span>
       <div>
         {children}
       </div>

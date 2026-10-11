@@ -43,7 +43,7 @@
   content: none;
 }
 
-.metaItem label {
+.metaLabel {
   color: var(--muted-color);
   font-family: var(--heading-font);
   font-size: var(--small-font-size);

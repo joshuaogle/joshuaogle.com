@@ -75,8 +75,9 @@
   width: calc(var(--switch-size) * 2.5);
 }
 
-.switch:focus {
-  outline: none;
+.switch:focus-visible {
+  outline: 2px solid var(--text-color);
+  outline-offset: 2px;
 }
 
 .switchIndicator {
@@ -100,6 +101,15 @@
   left: calc(100% - var(--switch-size));
 }
 
+/* Hidden visually but still read by screen readers */
 .srOnly {
-  display: none;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }

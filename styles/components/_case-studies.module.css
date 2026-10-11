@@ -36,6 +36,10 @@
 }
 
 .indicator {
+  appearance: none;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
   width: 0.45em;
   height: 0.45em;
   background: var(--muted-color);
@@ -47,4 +51,8 @@
   background: var(--text-color);
   height: 0.5em;
   width: 1em;
+}
+.indicator:focus-visible {
+  outline: 2px solid var(--text-color);
+  outline-offset: 2px;
 }

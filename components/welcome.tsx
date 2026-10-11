@@ -35,7 +35,7 @@ const Welcome = () => {
               </div>
 
               <p>
-                Principal Product Designer at <a href="https://ibm.com" target="_new">IBM</a>{' '}
+                Principal Product Designer at <a href="https://ibm.com" target="_blank" rel="noopener noreferrer">IBM</a>{' '}
                 making the cloud a better place to live
               </p>
             </div>

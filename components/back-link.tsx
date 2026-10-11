@@ -12,7 +12,7 @@ const BackLink = () => {
   }
 
   return (
-    <Link href="/" className={styles.backButton}>
+    <Link href="/" className={styles.backButton} aria-label="Back to home">
       <ArrowLeftIcon className={styles.backIcon}/>
     </Link>
   )

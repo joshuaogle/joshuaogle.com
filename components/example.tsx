@@ -15,6 +15,7 @@ type ExampleImageProps = {
   filename: string;
   index: number;
   of: number;
+  caption: string;
 }
 
 const Example = ({ images, video, caption }: ExampleProps) => {
@@ -26,7 +27,7 @@ const Example = ({ images, video, caption }: ExampleProps) => {
           data-examples={images.length}
         >
           {images.map((filename, index) => (
-            <ExampleImage key={index} filename={filename} index={index} of={images.length} />
+            <ExampleImage key={index} filename={filename} index={index} of={images.length} caption={caption} />
           ))}
         </div>
       )}
@@ -34,7 +35,7 @@ const Example = ({ images, video, caption }: ExampleProps) => {
       {video && (
         <figure>
           <Surface>
-            <AutoplayVideo src={`/images/${video}`} />
+            <AutoplayVideo src={`/images/${video}`} label={caption} />
           </Surface>
         </figure>
       )}
@@ -51,7 +52,7 @@ const Example = ({ images, video, caption }: ExampleProps) => {
 // Case study images never render wider than the article column
 const EXAMPLE_IMAGE_SIZES = '(max-width: 800px) 100vw, 760px'
 
-const ExampleImage = async ({filename, index, of}: ExampleImageProps) => {
+const ExampleImage = async ({filename, index, of, caption}: ExampleImageProps) => {
   const { width, height } = await getImageSize(`images/${filename}`)
 
   return (
@@ -73,7 +74,7 @@ const ExampleImage = async ({filename, index, of}: ExampleImageProps) => {
               width={width}
               height={height}
               sizes={EXAMPLE_IMAGE_SIZES}
-              alt=""
+              alt={of > 1 ? `${caption} (${index + 1} of ${of})` : caption}
             />
           </Surface>
         </figure>

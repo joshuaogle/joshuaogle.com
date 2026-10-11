@@ -19,11 +19,11 @@ const Consulting = () => {
         </div>
 
         <div className={styles.logos}>
-          <LogoExpedia />
-          <LogoDollarShaveClub />
-          <LogoSharespost />
-          <LogoAmex />
-          <LogoATT />
+          <LogoExpedia role="img" aria-label="Expedia" />
+          <LogoDollarShaveClub role="img" aria-label="Dollar Shave Club" />
+          <LogoSharespost role="img" aria-label="Sharespost" />
+          <LogoAmex role="img" aria-label="American Express" />
+          <LogoATT role="img" aria-label="AT&T" />
         </div>
       </div>
     </section>

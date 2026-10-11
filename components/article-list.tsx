@@ -5,9 +5,11 @@ import ArticleFeature from './article-feature'
 
 type Props = {
   allArticles: Article[]
+  // h1 when the list is the whole page (/articles), h2 when it's a home page section
+  headingLevel?: 'h1' | 'h2'
 }
 
-const ArticleList = ({ allArticles }: Props) => {
+const ArticleList = ({ allArticles, headingLevel: Heading = 'h2' }: Props) => {
   // allArticles arrives sorted newest-first from lib/api
   const firstTwoArticles = allArticles.slice(0, 2)
   const nextThreeArticles = allArticles.slice(2, 5)
@@ -15,7 +17,7 @@ const ArticleList = ({ allArticles }: Props) => {
 
   return (
     <section className="centered">
-      <h2>Articles</h2>
+      <Heading>Articles</Heading>
       <p>
         I love mentoring new designers
         and helping them learn the craft,

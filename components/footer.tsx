@@ -22,9 +22,11 @@ const Footer = () => {
               key={socialLink.label}
               className={styles.socialLink}
               href={socialLink.href}
-              target="_new"
-              title={socialLink.label}>
-              <socialLink.icon/>
+              target="_blank"
+              rel="noopener noreferrer"
+              title={socialLink.label}
+              aria-label={socialLink.label}>
+              <socialLink.icon aria-hidden="true"/>
             </a>
           ))}
         </div>
@@ -35,7 +37,8 @@ const Footer = () => {
           &nbsp;
           <a
             href="https://github.com/joshuaogle/joshuaogle.com"
-            target="_new">
+            target="_blank"
+            rel="noopener noreferrer">
             Made by hand*
           </a> in Colorado.
         </small>

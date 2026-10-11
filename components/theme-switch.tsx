@@ -34,7 +34,7 @@ const ThemeSwitch = () => {
         >
         </span>
         <span className={styles.srOnly}>
-          Switch theme
+          Dark mode
         </span>
       </Switch>
       <SunIcon className={styles.switchLabel}/>
