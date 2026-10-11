@@ -100,7 +100,7 @@ and feels uncomfortable,
 but sometimes you may want to create tension,
 like if you are building
 an exciting and dynamic graphic area.
-Knowing how to tasetfully bend the rules
+Knowing how to tastefully bend the rules
 to create the right level of comfort
 and tension can make a great design.
 

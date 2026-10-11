@@ -21,7 +21,6 @@ export const summary = {
     colorBGDark: "#000",
     colorHighlight: "rgb(96, 212, 220)",
     colorHeading: "#6A7786",
-    icon: "/images/case-study-logo-vault.svg",
     preview: "/images/case-studies/vault-home.png",
   }
 }
@@ -54,7 +53,7 @@ const VaultCaseStudy = () => {
           <h2>It's hard to keep a secret</h2>
           <p>
             Modern web applications require a dizzying number of moving parts,
-            including dyanamic resources like servers, databases, and applications
+            including dynamic resources like servers, databases, and applications
             that are constantly being deployed and changed.
             And to make things more complicated,
             engineering teams at large companies can grow to hundreds or thousands of people
@@ -176,7 +175,7 @@ const VaultCaseStudy = () => {
 
           <p>
             I took the incredibly valuable opportunity
-            to do resarch in-person at HashiConf,
+            to do research in-person at HashiConf,
             our annual conference attended
             by some of our smartest and most invested users.
             I ran small studies by appointment
@@ -330,7 +329,7 @@ const VaultCaseStudy = () => {
             to bring our multicloud automation tools all into one place.
             This was especially exciting for Vault
             because this means you wouldn't have to worry
-            about privisioning, and deploying a Vault server,
+            about provisioning, and deploying a Vault server,
             we could do that for you.
             At this point, the Vault product design team had grown to four
             and we needed someone who understood the complexities

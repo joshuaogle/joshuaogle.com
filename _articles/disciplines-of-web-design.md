@@ -81,7 +81,7 @@ through a series of small choices and critiques.
 Visual design principles
 like <em>color</em>, <em>form</em>, <em>space</em>, and <em>rhythm</em>,
 as well as bigger concepts like <em>typography</em>
-and <em>abstraction</em> vs. <em>skeumorphism</em>
+and <em>abstraction</em> vs. <em>skeuomorphism</em>
 all include their own terminology
 and conventions that make it much easier
 to craft a design language

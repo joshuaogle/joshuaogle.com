@@ -1,9 +1,6 @@
-import type Author from './author'
-
 type ArticleType = {
   slug: string
   title: string
-  author: Author
   meta: {
     date: string
     source: string

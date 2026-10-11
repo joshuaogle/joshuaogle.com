@@ -20,7 +20,6 @@ export const summary = {
     colorBGDark:"#171139",
     colorHeading: "#00B7F1",
     colorHighlight: "rgb(0, 182, 242)",
-    icon: "/images/case-study-logo-sharespost.svg",
     preview: "/images/case-studies/sharespost-home.png",
   },
   intro: "At thoughtbot, we helped one of the largest private securities firms make the process of buying and selling shares easy. Their existing process was very manual, relying on brokers to do almost everything. To help them scale even bigger, they would need to find a way to automate as much of the process. This would free up the brokers to provide better service to even more users.",
@@ -63,7 +62,7 @@ const Sharespost = () => {
               I think they imagined something 
               Financial apps may not sound like the most interesting thing to work on, but the thing I love most about consulting is diving deep into a new field.
               Even among financial apps, private securities are a unique challenge.
-              Private securities are shares of stock in a company that isn't publically traded, so while
+              Private securities are shares of stock in a company that isn't publicly traded, so while
               it's easy to get a price for a company on the stock exchange, <mark>private companies require a lot more expertise</mark> to estimate the value with authority.
             </p>
 

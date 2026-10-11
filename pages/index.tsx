@@ -31,10 +31,8 @@ export default function Index({ allArticles }: Props) {
 export const getStaticProps = async () => {
   const allArticles = getAllArticles([
     'title',
-    'date',
     'meta',
     'slug',
-    'excerpt',
   ])
 
   return {

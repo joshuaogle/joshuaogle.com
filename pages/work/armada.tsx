@@ -21,7 +21,6 @@ export const summary = {
     colorBGDark: "#21262D",
     colorHighlight: "rgb(2, 169, 242)",
     colorHeading: "#12A6EE",
-    icon: "/images/case-study-logo-armada.svg",
     preview: "/images/case-studies/armada-user.png",
   }
 }
@@ -54,7 +53,7 @@ const VaultCaseStudy = () => {
             images={[
               "case-studies/armada-home.png"
             ]}
-            caption="Armada helps you track your feet in real-time"
+            caption="Armada helps you track your fleet in real-time"
           />
         </section>
 
@@ -68,7 +67,7 @@ const VaultCaseStudy = () => {
           </p>
 
           <p>
-            Assets like trailers just need GPS tracking, but don't typically have their own battery power, so they were developing a device with a long-lasting rechargable battery.
+            Assets like trailers just need GPS tracking, but don't typically have their own battery power, so they were developing a device with a long-lasting rechargeable battery.
             Modern vehicles have a data port that can power a small GPS tracker and also provides it with some vehicle information like maintenance alerts.
             Both devices would have an accelerometer included too, which means you can track things like speed warnings and sudden stops.
             These devices could give you an incredible amount of insight into the location history and driver behavior.

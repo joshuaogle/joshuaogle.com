@@ -25,7 +25,7 @@ const Timeline = () => {
         <EmployerLogo src="/images/timeline-thoughtbot.svg" alt="thoughtbot" />
         <span className={styles.employerTitle}>thoughtbot </span>
         helping startups find their market,
-        and co-fouded a consultancy called
+        and co-founded a consultancy called
         <EmployerLogo src="/images/timeline-brightbit.svg" alt="Brightbit" />
         <span className={styles.employerTitle}>Brightbit</span>.
       </p>

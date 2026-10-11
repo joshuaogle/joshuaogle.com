@@ -21,7 +21,6 @@ export const summary = {
     colorBGDark: "#030507",
     colorHeading: "#6F7682",
     colorHighlight: "rgb(96, 212, 220)",
-    icon: "/images/case-study-logo-structure.svg",
     preview: "/images/case-studies/structure-tree.png",
   }
 }
@@ -280,7 +279,7 @@ const Structure = () => {
               they will naturally do more things without it
               and the design system will rot.
               Don't let that happen!
-              Contibuting must feel like a natural part of their design process.
+              Contributing must feel like a natural part of their design process.
               Make sure that the team is engaged and heard,
               making decisions democratically,
               and getting quick answers to their requests.
@@ -311,7 +310,7 @@ const Structure = () => {
             <p>
               So that's the story of a design system
               from beginning to end
-              and I have a lot of thoughts on how I would do itall again.
+              and I have a lot of thoughts on how I would do it all again.
               But my best advice is from the things that we did right.
               If you have a design team with up to twenty designers,
               make sure you are focusing on collaboration and inclusion.

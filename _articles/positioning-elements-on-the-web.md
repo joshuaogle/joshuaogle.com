@@ -567,7 +567,7 @@ to the be natural size
 of the item.
 This can be thought of
 as the “breakpoint”
-at which the grow and shink properties
+at which the grow and shrink properties
 are triggered.
 
 *Order* controls the order

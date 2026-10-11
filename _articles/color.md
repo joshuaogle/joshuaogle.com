@@ -124,13 +124,13 @@ with very different colors
 include Coca-Cola, Chase, and Sprint.
 It is impossible to think of Coca-Cola
 without its particular shade of red.
-These brands try to be unfortgettable
+These brands try to be unforgettable
 by using bold colors and heavy repetition.
 
 You can keep the strong mental associations
 of a monochromatic color harmony
 while still branching out to neighboring colors.
-This is called <em>analagous</em> color harmony,
+This is called <em>analogous</em> color harmony,
 and can help give you more design options.
 
 <img src="https://images.thoughtbot.com/cp-design-for-the-web/GJAMIoIST2KZw4uLZWxk_color-analagous.png" alt="">
@@ -169,7 +169,7 @@ of equally strong hues.
 
 You can also move two of the colors closer together
 to create a sort of blending between
-analagous and triadic color harmonies.
+analogous and triadic color harmonies.
 This will give you both a close color relationship
 and another option
 for a little extra punch of color.

@@ -10,16 +10,15 @@ import type ArticleType from '../../interfaces/article'
 
 type Props = {
   article: ArticleType
-  preview?: boolean
 }
 
-export default function Article({ article, preview }: Props) {
+export default function Article({ article }: Props) {
   const router = useRouter()
   if (!router.isFallback && !article?.slug) {
     return <ErrorPage statusCode={404} />
   }
   return (
-    <Layout preview={preview}>
+    <Layout>
       {router.isFallback ? (
         <p>Loading…</p>
       ) : (
@@ -50,7 +49,6 @@ type Params = {
 export async function getStaticProps({ params }: Params) {
   const article = getArticleBySlug(params.slug, [
     'title',
-    'date',
     'slug',
     'meta',
     'content',

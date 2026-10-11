@@ -8,13 +8,10 @@ type Props = {
 }
 
 const ArticleList = ({ allArticles }: Props) => {
-  const sortedArticles = allArticles.sort((a, b) => 
-    new Date(b.meta.date).getTime() - new Date(a.meta.date).getTime()
-  )
-  
-  const firstTwoArticles = sortedArticles.slice(0, 2)
-  const nextThreeArticles = sortedArticles.slice(2, 5)
-  const remainingArticles = sortedArticles.slice(5)
+  // allArticles arrives sorted newest-first from lib/api
+  const firstTwoArticles = allArticles.slice(0, 2)
+  const nextThreeArticles = allArticles.slice(2, 5)
+  const remainingArticles = allArticles.slice(5)
 
   return (
     <section className="centered">

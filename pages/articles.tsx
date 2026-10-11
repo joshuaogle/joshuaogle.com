@@ -25,10 +25,8 @@ export default function Articles({ allArticles }: Props) {
 export const getStaticProps = async () => {
   const allArticles = getAllArticles([
     'title',
-    'date',
     'meta',
     'slug',
-    'excerpt',
   ])
 
   return {

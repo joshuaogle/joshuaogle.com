@@ -21,7 +21,6 @@ export const summary = {
     colorBGDark: "#180507",
     colorHighlight: "rgb(96, 212, 220)",
     colorHeading: "rgb(239, 239, 241)",
-    icon: "/images/case-study-logo-boundary.svg",
     preview: "/images/case-studies/boundary-sr-rdp.png",
   }
 }

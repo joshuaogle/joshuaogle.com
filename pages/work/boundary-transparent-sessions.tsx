@@ -21,7 +21,6 @@ export const summary = {
     colorBGDark: "#0C0C0E",
     colorHighlight: "rgb(96, 212, 220)",
     colorHeading: "rgba(255, 255, 255, 0.33)",
-    icon: "/images/case-studies/case-study-logo-vault.svg",
     preview: "/images/case-studies/boundary-ts-prototype-screen.png",
   }
 }

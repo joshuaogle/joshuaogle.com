@@ -77,7 +77,7 @@ const Welcome = () => {
                 </div>
 
                 <p>
-                  Principal Product Designer at <a href="https://hashicorp.com" target="_new">HashiCorp</a> (an IBM company)
+                  Principal Product Designer at <a href="https://ibm.com" target="_new">IBM</a>
                   making the cloud a better place to live
                 </p>
               </div>
@@ -119,7 +119,7 @@ const Welcome = () => {
               </div>
 
               <p>
-                Principal Product Designer at <a href="https://hashicorp.com" target="_new">HashiCorp</a> (an IBM company)
+                Principal Product Designer at <a href="https://ibm.com" target="_new">IBM</a>
                 making the cloud a better place to live
               </p>
             </div>
