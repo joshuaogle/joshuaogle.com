@@ -41,7 +41,7 @@ const Example = ({ images, video, caption }: ExampleProps) => {
         <figure>
           <Surface>
             <ReactPlayer
-              url={`/images/${video}`}
+              src={`/images/${video}`}
               playing
               muted
             />

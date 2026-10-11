@@ -2,10 +2,10 @@
 const nextConfig = {
   turbopack: {},
   images: {
-    domains: [
-      'images.thoughtbot.com',
-      'res.cloudinary.com',  // keeping existing domains
-      'avatars.githubusercontent.com'
+    remotePatterns: [
+      { protocol: 'https', hostname: 'images.thoughtbot.com' },
+      { protocol: 'https', hostname: 'res.cloudinary.com' },
+      { protocol: 'https', hostname: 'avatars.githubusercontent.com' },
     ],
     unoptimized: true,  // Disable optimization to prevent Netlify 500 errors
   },
