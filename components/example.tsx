@@ -1,6 +1,8 @@
+import Image from 'next/image'
 import AutoplayVideo from './autoplay-video'
 import Tilt from './tilt'
 import Surface from './surface'
+import { getImageSize } from '../lib/images'
 import styles from '../styles/components/_example.module.css'
 
 type ExampleProps = {
@@ -46,7 +48,12 @@ const Example = ({ images, video, caption }: ExampleProps) => {
   )
 }
 
-const ExampleImage = ({filename, index, of}: ExampleImageProps) => {
+// Case study images never render wider than the article column
+const EXAMPLE_IMAGE_SIZES = '(max-width: 800px) 100vw, 760px'
+
+const ExampleImage = async ({filename, index, of}: ExampleImageProps) => {
+  const { width, height } = await getImageSize(`images/${filename}`)
+
   return (
     <div
       className={styles.area}
@@ -61,7 +68,13 @@ const ExampleImage = ({filename, index, of}: ExampleImageProps) => {
       >
         <figure>
           <Surface>
-            <img src={`/images/${filename}`} />
+            <Image
+              src={`/images/${filename}`}
+              width={width}
+              height={height}
+              sizes={EXAMPLE_IMAGE_SIZES}
+              alt=""
+            />
           </Surface>
         </figure>
       </Tilt>

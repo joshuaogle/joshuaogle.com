@@ -43,7 +43,7 @@ export default function StructureCaseStudy() {
 
           <Example
             images={[
-              "case-studies/structure-study.png"
+              "case-studies/structure-summary.png"
             ]}
             caption="Tokens and components in Structure"
           />

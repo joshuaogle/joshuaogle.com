@@ -141,7 +141,7 @@ export default function VaultCaseStudy() {
 
           <Example
             images={[
-              "case-studies/vault-booth.png"
+              "case-studies/vault-booth.jpg"
             ]}
             caption="Vault UX Research at HashiConf"
           />

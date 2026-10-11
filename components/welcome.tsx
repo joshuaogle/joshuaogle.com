@@ -20,6 +20,8 @@ const Welcome = () => {
                 width="1200"
                 alt="Joshua Ogle"
                 className={styles.portrait}
+                sizes="120px"
+                priority
               />
               <Status />
             </div>

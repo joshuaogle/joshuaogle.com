@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRightIcon } from '@heroicons/react/24/solid'
 import Tilt from './tilt'
@@ -40,9 +41,11 @@ const CaseStudyCard = ({ study, active }: Props) => {
             </small>
           </div>
 
-          <img
+          <Image
             src={study.theme.preview}
             className={styles.image}
+            sizes="(max-width: 600px) 100vw, 430px"
+            alt=""
           />
 
           <div

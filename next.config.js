@@ -7,7 +7,6 @@ const nextConfig = {
       { protocol: 'https', hostname: 'res.cloudinary.com' },
       { protocol: 'https', hostname: 'avatars.githubusercontent.com' },
     ],
-    unoptimized: true,  // Disable optimization to prevent Netlify 500 errors
   },
   webpack(config) {
     // Import .svg files as React components via SVGR, and leave Next's

@@ -51,5 +51,6 @@ main {
 img,
 video {
   border-radius: var(--small-border-radius);
+  height: auto;
   max-width: 100%;
 }

@@ -1,4 +1,11 @@
 import type { Metadata } from 'next'
+import type { StaticImageData } from 'next/image'
+import boundaryTsPrototypeScreenPreview from '@/public/images/case-studies/boundary-ts-prototype-screen.png'
+import boundarySrRdpPreview from '@/public/images/case-studies/boundary-sr-rdp.png'
+import vaultHomePreview from '@/public/images/case-studies/vault-home.png'
+import structureTreePreview from '@/public/images/case-studies/structure-tree.png'
+import sharespostHomePreview from '@/public/images/case-studies/sharespost-home.png'
+import armadaUserPreview from '@/public/images/case-studies/armada-user.png'
 import { openGraphDefaults } from './site'
 
 export type CaseStudyTheme = {
@@ -7,7 +14,7 @@ export type CaseStudyTheme = {
   colorBGDark: string
   colorHeading: string
   colorHighlight: string
-  preview: string
+  preview: StaticImageData
 }
 
 export type CaseStudy = {
@@ -46,7 +53,7 @@ const transparentSessions: CaseStudy = {
     colorBGDark: "#0C0C0E",
     colorHighlight: "rgb(96, 212, 220)",
     colorHeading: "rgba(255, 255, 255, 0.33)",
-    preview: "/images/case-studies/boundary-ts-prototype-screen.png",
+    preview: boundaryTsPrototypeScreenPreview,
   }
 }
 
@@ -69,7 +76,7 @@ const sessionRecording: CaseStudy = {
     colorBGDark: "#180507",
     colorHighlight: "rgb(96, 212, 220)",
     colorHeading: "rgb(239, 239, 241)",
-    preview: "/images/case-studies/boundary-sr-rdp.png",
+    preview: boundarySrRdpPreview,
   }
 }
 
@@ -92,7 +99,7 @@ const vault: CaseStudy = {
     colorBGDark: "#000",
     colorHighlight: "rgb(96, 212, 220)",
     colorHeading: "#6A7786",
-    preview: "/images/case-studies/vault-home.png",
+    preview: vaultHomePreview,
   }
 }
 
@@ -115,7 +122,7 @@ const structure: CaseStudy = {
     colorBGDark: "#030507",
     colorHeading: "#6F7682",
     colorHighlight: "rgb(96, 212, 220)",
-    preview: "/images/case-studies/structure-tree.png",
+    preview: structureTreePreview,
   }
 }
 
@@ -138,7 +145,7 @@ const sharespost: CaseStudy = {
     colorBGDark:"#171139",
     colorHeading: "#00B7F1",
     colorHighlight: "rgb(0, 182, 242)",
-    preview: "/images/case-studies/sharespost-home.png",
+    preview: sharespostHomePreview,
   },
   description: "At thoughtbot, we helped one of the largest private securities firms make the process of buying and selling shares easy. Their existing process was very manual, relying on brokers to do almost everything. To help them scale even bigger, they would need to find a way to automate as much of the process. This would free up the brokers to provide better service to even more users.",
 }
@@ -163,7 +170,7 @@ const armada: CaseStudy = {
     colorBGDark: "#21262D",
     colorHighlight: "rgb(2, 169, 242)",
     colorHeading: "#12A6EE",
-    preview: "/images/case-studies/armada-user.png",
+    preview: armadaUserPreview,
   }
 }
 
@@ -199,7 +206,7 @@ export function caseStudyMetadata(study: CaseStudy): Metadata {
       type: 'article',
       title: study.pageTitle,
       description,
-      images: [study.theme.preview],
+      images: [study.theme.preview.src],
     },
     twitter: { card: 'summary_large_image' },
   }

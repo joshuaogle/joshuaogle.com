@@ -20,8 +20,8 @@ const ArticleFeature = ({ article }: Props) => {
           <Image 
             src={article.meta.thumbnail}
             alt={article.title}
-            priority
             className={styles.image}
+            sizes="(max-width: 600px) 100vw, 400px"
             fill
           />
         </div>
