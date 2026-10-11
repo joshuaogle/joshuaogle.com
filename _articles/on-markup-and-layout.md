@@ -2,7 +2,7 @@
 title: "On Markup and Layout"
 meta:
   date: "2017-03-14"
-  source_url: "https://robots.thoughtbot.com/on-markup-and-layout"
+  source_url: "https://thoughtbot.com/blog/on-markup-and-layout"
   source: "thoughtbot"
   source_icon: "source-thoughtbot.svg"
   thumbnail: "https://images.thoughtbot.com/cp-design-for-the-web/Z9ceWhcOQxauO5ync0CB_layout-pieces.png"

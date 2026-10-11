@@ -2,7 +2,7 @@
 title: "Color"
 meta:
   date: "2017-02-07"
-  source_url: "https://robots.thoughtbot.com/color"
+  source_url: "https://thoughtbot.com/blog/color"
   source: "thoughtbot"
   source_icon: "source-thoughtbot.svg"
   thumbnail: "https://images.thoughtbot.com/cp-design-for-the-web/YXnBeXKAQk6sbYEVMJ0f_color-spectrum.png"

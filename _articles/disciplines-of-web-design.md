@@ -2,7 +2,7 @@
 title: "Disciplines of Web Design"
 meta:
   date: "2017-01-31"
-  source_url: "https://robots.thoughtbot.com/designing-for-the-web"
+  source_url: "https://thoughtbot.com/blog/designing-for-the-web"
   source: "thoughtbot"
   source_icon: "source-thoughtbot.svg"
   thumbnail: "https://images.thoughtbot.com/cp-design-for-the-web/7SgT6LwCQHexdtwvtYIA_design-disciplines.png"

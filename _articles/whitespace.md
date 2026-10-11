@@ -2,7 +2,7 @@
 title: "Whitespace"
 meta:
   date: "2017-03-14"
-  source_url: "https://robots.thoughtbot.com/whitespace"
+  source_url: "https://thoughtbot.com/blog/whitespace"
   source: "thoughtbot"
   source_icon: "source-thoughtbot.svg"
   thumbnail: "https://images.thoughtbot.com/cp-design-for-the-web/zhquLBEGRP68MT3w8oZh_elements-white-space-micro-small.png"
