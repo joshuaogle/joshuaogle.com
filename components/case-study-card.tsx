@@ -7,12 +7,11 @@ import styles from '../styles/components/_case-study-card.module.css'
 
 type Props = {
   study: CaseStudy
-  active: boolean
 }
 
-const CaseStudyCard = ({ study, active }: Props) => {
+const CaseStudyCard = ({ study }: Props) => {
   return (
-    <div className={`${styles.cardContainer} ${active ? styles.active : ''}`}>
+    <div className={styles.cardContainer}>
       <Tilt
         scale={1.05}
         tiltMaxAngleX={5}

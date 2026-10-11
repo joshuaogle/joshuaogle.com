@@ -75,9 +75,9 @@ const CaseStudies = () => {
         </nav>
       </div>
 
-      <div ref={listRef} className={`${styles.list} ${styles.scrollSnap}`}>
-        {caseStudies.map((study, index) => (
-          <CaseStudyCard key={study.slug} study={study} active={index === activeStudyIndex} />
+      <div ref={listRef} className={styles.list}>
+        {caseStudies.map((study) => (
+          <CaseStudyCard key={study.slug} study={study} />
         ))}
       </div>
     </section>

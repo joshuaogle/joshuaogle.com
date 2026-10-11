@@ -42,7 +42,7 @@ export const Status = () => {
   const isOnline = now ? isWorkingHours(now) : false
 
   return (
-    <span className={`${styles.status} ${isOnline ? styles.online : styles.offline}`}>
+    <span className={isOnline ? `${styles.status} ${styles.online}` : styles.status}>
       {isOnline ? 'Online' : 'Offline'}
     </span>
   )
