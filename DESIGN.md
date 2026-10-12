@@ -8,7 +8,7 @@ Screenshots of past designs and full-size captures of everything below live in t
 
 The site is read by people hiring a Principal Designer or Design Director, so it should feel refined and elegant, never cheesy. The work leads, and the craft shows in restraint and precision rather than in decoration.
 
-- **The work leads.** Case studies are Apple-style cards: tall and rounded, with an eyebrow, a Tiempos headline and one line of detail at the top, the real screenshot bleeding off the bottom edge, and a + that opens the case study as a sheet over the page.
+- **The work leads.** Case studies are Apple-style cards: tall and rounded, with an eyebrow, a Tiempos headline and one line of detail at the top, the real screenshot bleeding off the bottom edge, and a liquid glass arrow button in the lower right that opens the case study as a sheet over the page.
 - **Sketching, not handoff.** The site is about creating, so the page sketches itself: faint pencil construction in each project's color drafts the layout, then fades, and a few graphite notes stay. A redline/spec version was tried and rejected for reading as handoff.
 - **Tiempos stays.** Tiempos Headline for display and notes (light italic for the notes, not a handwriting face); the system face for text.
 - **One special moment per view.** The card growing into its sheet is the move; hovers are slow and small, with no bounce.
