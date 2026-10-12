@@ -4,6 +4,18 @@ How joshuaogle.com looks and why. This records the thinking behind the 2027 rede
 
 Screenshots of past designs and full-size captures of everything below live in the JoshuaOgle.com Figma file: past designs each have a page ("2024 Dot grid", "2023 Glass Pane Design"), and this inspiration is in the Inspiration section of the "2027" page.
 
+## Direction
+
+The site is read by people hiring a Principal Designer or Design Director, so it should feel refined and elegant, never cheesy. The work leads, and the craft shows in restraint and precision rather than in decoration.
+
+- **The work leads.** Real screenshots on their project colors, with quiet two-line captions. One large, light serif sentence introduces me; everything around it stays small.
+- **Show craft as measurement, not ornament.** If the page draws on itself, it's straight hairline redlines with real values (sizes, gutters, ratios), the way a spec hands off to engineering, and then they fade.
+- **One special moment per view.** A single orchestrated transition (a tile growing into its case study) beats several small effects. Hovers are slow and small, with no bounce.
+- **Cut what reads as a theme.** Stickers, handwriting fonts, staples, scribbled circles and riso misregistration were each charming in the studies, but together they look like a costume. Paper texture stays, kept faint.
+- **Accent sparingly.** The project colors carry the page; a site accent appears only as a hairline or a small number.
+
+Studies: [Sketchbook Studies](https://claude.ai/artifact/JuTcLT4ReG4Z2DmXRkfX3G) (the playful version) and [Redline Studies](https://claude.ai/artifact/FtMqQUuXJZ95vC8MQYZ2La) (the refined revision of it). [Paper Button Studies](https://claude.ai/artifact/6ufVMPPhj8BK6eSxSN3Nw5) predates this direction; of its four, kinetic type fits best.
+
 ## Inspiration
 
 ### Rachel Chen
