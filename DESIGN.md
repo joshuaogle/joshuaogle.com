@@ -8,13 +8,13 @@ Screenshots of past designs and full-size captures of everything below live in t
 
 The site is read by people hiring a Principal Designer or Design Director, so it should feel refined and elegant, never cheesy. The work leads, and the craft shows in restraint and precision rather than in decoration.
 
-- **The work leads.** Real screenshots on their project colors, with quiet two-line captions. One large, light serif sentence introduces me; everything around it stays small.
-- **Show craft as measurement, not ornament.** If the page draws on itself, it's straight hairline redlines with real values (sizes, gutters, ratios), the way a spec hands off to engineering, and then they fade.
-- **One special moment per view.** A single orchestrated transition (a tile growing into its case study) beats several small effects. Hovers are slow and small, with no bounce.
-- **Cut what reads as a theme.** Stickers, handwriting fonts, staples, scribbled circles and riso misregistration were each charming in the studies, but together they look like a costume. Paper texture stays, kept faint.
-- **Accent sparingly.** The project colors carry the page; a site accent appears only as a hairline or a small number.
+- **The work leads.** Case studies are Apple-style cards: tall and rounded, with an eyebrow, a Tiempos headline and one line of detail at the top, the real screenshot bleeding off the bottom edge, and a + that opens the case study as a sheet over the page.
+- **Sketching, not handoff.** The site is about creating, so the page sketches itself: faint pencil construction in each project's color drafts the layout, then fades, and a few graphite notes stay. A redline/spec version was tried and rejected for reading as handoff.
+- **Tiempos stays.** Tiempos Headline for display and notes (light italic for the notes, not a handwriting face); the system face for text.
+- **One special moment per view.** The card growing into its sheet is the move; hovers are slow and small, with no bounce.
+- **Cut what reads as a theme.** Stickers, handwriting fonts, staples, scribbled circles and riso misregistration were each charming, but together they look like a costume. Paper texture stays, kept faint.
 
-Studies: [Sketchbook Studies](https://claude.ai/artifact/JuTcLT4ReG4Z2DmXRkfX3G) (the playful version) and [Redline Studies](https://claude.ai/artifact/FtMqQUuXJZ95vC8MQYZ2La) (the refined revision of it). [Paper Button Studies](https://claude.ai/artifact/6ufVMPPhj8BK6eSxSN3Nw5) predates this direction; of its four, kinetic type fits best.
+Studies: [Sketchbook Studies](https://claude.ai/artifact/JuTcLT4ReG4Z2DmXRkfX3G) (the first sketching pass), [Sketchbook Cards](https://claude.ai/artifact/4X7fCkmpyJKLY94xiDkjT9) (current: the cards and sheet above) and [Redline Studies](https://claude.ai/artifact/FtMqQUuXJZ95vC8MQYZ2La) (rejected). [Paper Button Studies](https://claude.ai/artifact/6ufVMPPhj8BK6eSxSN3Nw5) predates this direction; of its four, kinetic type fits best.
 
 ## Inspiration
 
