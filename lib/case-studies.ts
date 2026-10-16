@@ -6,6 +6,7 @@ import vaultHomePreview from '@/public/images/case-studies/vault-home.png'
 import structureTreePreview from '@/public/images/case-studies/structure-tree.png'
 import sharespostHomePreview from '@/public/images/case-studies/sharespost-home.png'
 import armadaUserPreview from '@/public/images/case-studies/armada-user.png'
+import boundarySrWaveformsCover from '@/public/images/case-studies/boundary-sr-waveforms.png'
 import { openGraphDefaults } from './site'
 
 export type CaseStudyTheme = {
@@ -15,6 +16,8 @@ export type CaseStudyTheme = {
   colorHeading: string
   colorHighlight: string
   preview: StaticImageData
+  // The image on the home page sketchbook cover, when it should differ from the preview
+  cover?: StaticImageData
 }
 
 export type CaseStudy = {
@@ -77,6 +80,7 @@ const sessionRecording: CaseStudy = {
     colorHighlight: "rgb(96, 212, 220)",
     colorHeading: "rgb(239, 239, 241)",
     preview: boundarySrRdpPreview,
+    cover: boundarySrWaveformsCover,
   }
 }
 
@@ -106,7 +110,7 @@ const vault: CaseStudy = {
 const structure: CaseStudy = {
   slug: 'structure',
   pageTitle: 'Structure Design System',
-  title: "Infrastructure in style",
+  title: "Structure Design System",
   name: "Structure",
   meta: {
     date: "2020",

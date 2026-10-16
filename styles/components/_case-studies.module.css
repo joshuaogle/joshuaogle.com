@@ -1,58 +1,29 @@
-.list {
-  --offset: calc(50vw - (var(--page-width) / 2) - var(--base-spacing));
-  display: flex;
-  flex-direction: row;
-  padding: 0 var(--offset) var(--base-spacing);
-  scroll-snap-type: x mandatory;
-  scroll-padding-left: var(--offset);
-  overflow-x: scroll;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  scroll-behavior: smooth;
-}
-
-.list > * {
-  scroll-snap-align: start;
-}
-
-.list::-webkit-scrollbar {
-  display: none;
+/* Wider than the reading column (--page-width) so three covers fit side by side */
+.section {
+  width: min(100% - var(--base-spacing) * 2, 72rem);
+  margin-inline: auto;
 }
 
 .heading {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  display: inline-block;
+  margin-bottom: var(--base-spacing);
 }
 
-.indicatorContainer {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  gap: 0.25em;
-  cursor: pointer;
-  flex: 0;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: calc(var(--large-spacing) + 1rem) var(--base-spacing);  /* extra row room for the ribbons */
+  padding-block: 6px 20px;
 }
 
-.indicator {
-  appearance: none;
-  border: 0;
-  cursor: pointer;
-  padding: 0;
-  width: 0.45em;
-  height: 0.45em;
-  background: var(--muted-color);
-  border-radius: var(--small-spacing);
-  transition: all var(--base-timing);
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
-.indicator.active {
-  background: var(--text-color);
-  height: 0.5em;
-  width: 1em;
-}
-.indicator:focus-visible {
-  outline: 2px solid var(--text-color);
-  outline-offset: 2px;
+@media (max-width: 560px) {
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }

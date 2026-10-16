@@ -1,0 +1,71 @@
+.root {
+  position: relative;
+}
+
+.guides,
+.inkLayer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.guides {
+  z-index: 0;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+.inkLayer {
+  z-index: 2;
+}
+
+/* Construction: faint pencil, faded away once the work has settled */
+.guide {
+  fill: none;
+  stroke: var(--pencil-construction);
+  stroke-width: 1;
+  stroke-linecap: round;
+  opacity: 0.25;
+  transition: opacity 1600ms ease;
+}
+
+.faded .guide {
+  opacity: 0;
+}
+
+/* Notes that stay */
+.ink {
+  fill: var(--pencil-graphite);
+}
+
+.note {
+  font-family: var(--font-hand), "Bradley Hand", cursive;
+  font-size: 17px;
+  fill: var(--pencil-graphite);
+  transition: opacity 500ms ease;
+}
+
+/* Revealable content: wiped in from the top once its outline is drafted.
+   Elements set --reveal-inset to let parts hang outside their box when shown. */
+.root [data-sketch-reveal] {
+  clip-path: inset(var(--reveal-inset, 0px));
+  transition: clip-path 700ms cubic-bezier(.6, .05, .2, 1);
+}
+
+.root[data-sketch="armed"] [data-sketch-reveal]:not([data-revealed]) {
+  clip-path: inset(0 0 100% 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .guide,
+  .note,
+  .root [data-sketch-reveal] {
+    transition: none;
+  }
+}

@@ -3,7 +3,7 @@ import Script from 'next/script'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
 import { colorSchemeScript } from '@/lib/color-scheme'
-import { tiempos } from '@/lib/fonts'
+import { hand, tiempos } from '@/lib/fonts'
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL, openGraphDefaults } from '@/lib/site'
 import '@/styles/index.css'
 
@@ -28,7 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     // The inline script sets data-prefers-color-scheme on <html> before React
     // hydrates, so the attribute intentionally differs from the server HTML
-    <html lang="en" className={tiempos.variable} suppressHydrationWarning>
+    <html lang="en" className={`${tiempos.variable} ${hand.variable}`} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: colorSchemeScript }} />
       </head>

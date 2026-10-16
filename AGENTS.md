@@ -7,7 +7,8 @@ Netlify (with `@netlify/plugin-nextjs`) behind Cloudflare. Production is
 ## Commands
 
 - `npm run dev`: local dev server
-- `npm run check`: lint + typecheck (CI also runs `npm run build`)
+- `npm run check`: lint + typecheck + tests (CI also runs `npm run build`)
+- `npm test`: Vitest unit tests (`*.test.ts` next to the code they cover)
 - `npm run build`: production build; every route is prerendered
 
 Node 22 (`.nvmrc`). Builds use webpack (`--webpack`) because SVGs are
@@ -25,6 +26,11 @@ imported as React components through SVGR, configured in `next.config.js`.
 - `components/`: server components by default; files starting with
   `'use client'` are the interactive pieces.
 - `styles/`: global CSS plus CSS modules in `styles/components/`.
+- `lib/pencil/`: the pencil drawing library. `geometry.ts` is pure, tested math
+  (construction lines, tapered strokes, arrows, loops); `draw.ts` animates it into
+  SVG. `components/sketch-layer.tsx` wraps a section: give it a `plan(measure)`
+  function (defined at module level) that returns guides and notes, and mark
+  elements with `data-sketch-id` (to measure) and `data-sketch-reveal` (to wipe in).
 - `DESIGN.md`: design reasoning and inspiration for the redesign; its images
   live in `docs/inspiration/` (outside `public/`, so they aren't deployed).
 
@@ -39,5 +45,7 @@ imported as React components through SVGR, configured in `next.config.js`.
 - Images: use `next/image`. Case study `<Example>` images take a filename under
   `public/images/` and read their dimensions at build time (`lib/images.ts`),
   so a missing file fails the build.
-- Motion (tilt, autoplay video) is skipped for `prefers-reduced-motion`.
+- Motion (tilt, autoplay video, pencil drawing) is skipped for `prefers-reduced-motion`.
+- Text in a brand color on a project's colors goes through `readableOn()` in
+  `lib/color.ts`, which lightens it just enough to pass WCAG contrast.
 - Kebab-case file names; component names match the file.

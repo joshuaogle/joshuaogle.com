@@ -1,4 +1,5 @@
 import localFont from 'next/font/local'
+import { Architects_Daughter } from 'next/font/google'
 
 export const tiempos = localFont({
   src: [
@@ -11,4 +12,12 @@ export const tiempos = localFont({
   ],
   variable: '--font-tiempos',
   adjustFontFallback: 'Times New Roman',
+})
+
+// Stand-in for handwriting in the pencil notes
+export const hand = Architects_Daughter({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-hand',
+  display: 'swap',
 })

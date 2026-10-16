@@ -186,6 +186,8 @@
   --surface-opacity: 0.25;
   --surface-opacity-hover: 0.4;
   --muted-color: rgba(255, 255, 255, 0.33);
+  --pencil-graphite: var(--neutral-300);      /* light graphite reads like silver pencil on dark paper */
+  --pencil-construction: var(--neutral-300);
   --shadow-o-0: 0;
   --shadow-o-u: 0.15;
   --shadow-o-p: 0.05;
@@ -198,6 +200,8 @@ html[data-prefers-color-scheme="light"] {
   --text-color: var(--neutral-700);
   --theme-color-heading: var(--theme-color-bg-start);
   --muted-color: rgba(0, 0, 0, 0.33);
+  --pencil-graphite: var(--neutral-700);
+  --pencil-construction: var(--neutral-700);
   --background-start: var(--neutral-100);
   --background-end: var(--neutral-200);
   --theme-action-color: var(--cyan-600);
