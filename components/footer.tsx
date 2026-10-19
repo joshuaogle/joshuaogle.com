@@ -35,12 +35,7 @@ const Footer = () => {
           &copy;
           All rights reserved.
           &nbsp;
-          <a
-            href="https://github.com/joshuaogle/joshuaogle.com"
-            target="_blank"
-            rel="noopener noreferrer">
-            Made by hand*
-          </a> in Colorado.
+          Made in Colorado.
         </small>
       </div>
 

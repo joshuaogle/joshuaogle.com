@@ -45,7 +45,19 @@ imported as React components through SVGR, configured in `next.config.js`.
 - Images: use `next/image`. Case study `<Example>` images take a filename under
   `public/images/` and read their dimensions at build time (`lib/images.ts`),
   so a missing file fails the build.
-- Motion (tilt, autoplay video, pencil drawing) is skipped for `prefers-reduced-motion`.
+- Motion (autoplay video, pencil drawing, hover lifts) is skipped for `prefers-reduced-motion`.
+- Case study images sit in `components/sketchbook-frame.tsx`; company and product
+  logos come from `lib/case-studies.ts` and render through `components/logo-stack.tsx`.
 - Text in a brand color on a project's colors goes through `readableOn()` in
   `lib/color.ts`, which lightens it just enough to pass WCAG contrast.
 - Kebab-case file names; component names match the file.
+
+<!-- BEGIN:nextjs-agent-rules -->
+
+## This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+
+<!-- END:nextjs-agent-rules -->

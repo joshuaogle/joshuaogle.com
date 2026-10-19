@@ -1,7 +1,8 @@
-import ArticlePreview from './article-preview'
+import Image from 'next/image'
+import Link from 'next/link'
 import Article from '../interfaces/article'
+import DateFormatter from './date-formatter'
 import styles from '../styles/components/_article-list.module.css'
-import ArticleFeature from './article-feature'
 
 type Props = {
   allArticles: Article[]
@@ -9,11 +10,10 @@ type Props = {
   headingLevel?: 'h1' | 'h2'
 }
 
+// The newest article gets its image; the rest are set as a quiet typographic list
 const ArticleList = ({ allArticles, headingLevel: Heading = 'h2' }: Props) => {
   // allArticles arrives sorted newest-first from lib/api
-  const firstTwoArticles = allArticles.slice(0, 2)
-  const nextThreeArticles = allArticles.slice(2, 5)
-  const remainingArticles = allArticles.slice(5)
+  const [featured, ...rest] = allArticles
 
   return (
     <section className="centered">
@@ -25,28 +25,43 @@ const ArticleList = ({ allArticles, headingLevel: Heading = 'h2' }: Props) => {
         or our partners to get more creative.
       </p>
 
-      <div className={styles.primaryRow}>
-        {firstTwoArticles.map((article) => (
-          <ArticleFeature key={article.slug} article={article} />
-        ))}
-      </div>
+      {featured && (
+        <Link href={`/articles/${featured.slug}`} className={styles.feature}>
+          <div className={styles.featureImage}>
+            <Image
+              src={featured.meta.thumbnail}
+              alt=""
+              sizes="(max-width: 700px) 100vw, 420px"
+              fill
+            />
+          </div>
+          <div className={styles.featureText}>
+            <small className={styles.meta}>
+              <DateFormatter dateString={featured.meta.date} />
+              <span aria-hidden> &middot; </span>
+              {featured.meta.source}
+            </small>
+            <h3 className={styles.featureTitle}>{featured.title}</h3>
+            {featured.summary && <p className={styles.summary}>{featured.summary}</p>}
+          </div>
+        </Link>
+      )}
 
-      <div className={styles.secondaryRow}>
-        {nextThreeArticles.map((article) => (
-          <ArticleFeature key={article.slug} article={article} />
+      <ol className={styles.list}>
+        {rest.map((article) => (
+          <li key={article.slug}>
+            <Link href={`/articles/${article.slug}`} className={styles.item}>
+              <span className={styles.itemText}>
+                <span className={styles.itemTitle}>{article.title}</span>
+                {article.summary && <span className={styles.summary}>{article.summary}</span>}
+              </span>
+              <small className={styles.itemDate}>
+                <DateFormatter dateString={article.meta.date} />
+              </small>
+            </Link>
+          </li>
         ))}
-      </div>
-
-      <nav className={styles.articleList}>
-        {remainingArticles.map((article) => (
-          <ArticlePreview
-            key={article.slug}
-            title={article.title}
-            meta={article.meta}
-            slug={article.slug}
-          />
-        ))}
-      </nav>
+      </ol>
     </section>
   )
 }

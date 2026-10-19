@@ -84,7 +84,7 @@ export function note(ink: Ink, tl: Timeline, spec: NoteSpec, ms: number, rand?: 
   label.textContent = text
   label.style.opacity = '0'
   const startX = anchor === 'end' ? at[0] + 6 : anchor === 'middle' ? at[0] : at[0] - 6
-  const a = arrow([startX, at[1] - 6], to, { bend, rand })
+  const a = arrow([startX, at[1] - 8], to, { bend, rand })
   inkStroke(ink, tl, a.shaft, a.shaftOutline, ms, 560)
   inkStroke(ink, tl, a.head, a.headOutline, ms + 520, 200, 10)
   tl.show(label, ms + 560)

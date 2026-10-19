@@ -1,0 +1,96 @@
+/* The project's cover material, from the case study theme, with the page set into it */
+.frame {
+  --light-x: 30%;
+  --light-y: 0%;
+  /* A little lighter than the page, which is the same color, so the cover stands off it */
+  --material: color-mix(in oklab, var(--theme-color-bg-light, #2B2A33) 86%, white);
+  --material-edge: color-mix(in oklab, var(--theme-color-bg-dark, #151419) 92%, white);
+  position: relative;
+  padding: 14px;
+  border-radius: 10px;
+  background: radial-gradient(circle at 50% 35%, var(--material) 45%, var(--material-edge) 160%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.22),  /* the top edge catching the light */
+    inset 0 -1px 0 rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(0, 0, 0, 0.45),
+    0 1px 2px rgba(0, 0, 0, 0.3),
+    0 10px 28px -12px rgba(0, 0, 0, 0.55);
+  transition: transform 400ms cubic-bezier(.2, .7, .3, 1), box-shadow 400ms cubic-bezier(.2, .7, .3, 1);
+}
+
+/* Leatherette grain, the same as the covers on the home page */
+.frame::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='2.2' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.9 -0.35'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E") 0 0 / 64px 64px;
+  opacity: 0.16;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+/* A soft sheen across the material, brighter where the light is */
+.frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background:
+    radial-gradient(circle at var(--light-x) var(--light-y), rgba(255, 255, 255, 0.2), transparent 40%),
+    linear-gradient(160deg, rgba(255, 255, 255, 0.08), transparent 35%);
+  mix-blend-mode: screen;
+  opacity: 0.45;
+  pointer-events: none;
+  transition: opacity 400ms ease;
+}
+
+.frame:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.26),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(0, 0, 0, 0.45),
+    0 2px 4px rgba(0, 0, 0, 0.25),
+    0 24px 44px -18px rgba(0, 0, 0, 0.65);
+}
+
+.frame:hover::after {
+  opacity: 1;
+}
+
+/* The page, pasted down: square, with the material's lip casting a thin shadow onto it */
+.page {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.35);
+}
+
+.page::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.35);
+  pointer-events: none;
+}
+
+.page img,
+.page video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .frame,
+  .frame::after {
+    transition: none;
+  }
+
+  .frame:hover {
+    transform: none;
+  }
+}

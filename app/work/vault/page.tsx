@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import CaseStudyTheme from '@/components/case-study-theme'
 import Intro from '@/components/intro'
+import LogoStack from '@/components/logo-stack'
 import Example from '@/components/example'
 import { caseStudyMetadata, getCaseStudy } from '@/lib/case-studies'
 
@@ -18,6 +19,7 @@ export default function VaultCaseStudy() {
         title={study.title}
         meta={study.meta}
         theme={study.theme}
+        logos={<LogoStack study={study} />}
       />
 
       <div className={`article-body centered`}>

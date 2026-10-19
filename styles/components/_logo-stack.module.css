@@ -1,0 +1,38 @@
+.stack {
+  display: inline-flex;
+  align-items: center;
+  flex: none;
+  vertical-align: middle;
+}
+
+.circle {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 1.7em;
+  height: 1.7em;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 0 2px var(--logo-ring, transparent);
+}
+
+.circle img {
+  display: block;
+  object-fit: contain;
+  border-radius: 0;
+}
+
+/* The product overlaps the company, slightly */
+.circle + .circle {
+  margin-left: -0.45em;
+}
+
+/* Product glyphs are white-on-transparent SVGs, so draw them as a mask in the glyph color */
+.product::after {
+  content: "";
+  position: absolute;
+  inset: 22%;
+  background: var(--glyph-color);
+  -webkit-mask: var(--glyph) center / contain no-repeat;
+  mask: var(--glyph) center / contain no-repeat;
+}

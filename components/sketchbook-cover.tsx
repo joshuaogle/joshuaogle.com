@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRightIcon } from '@heroicons/react/24/solid'
 import { readableOn } from '../lib/color'
+import LogoStack from './logo-stack'
 import { caseStudyHref, type CaseStudy } from '../lib/case-studies'
 import styles from '../styles/components/_sketchbook-cover.module.css'
 
@@ -33,7 +34,7 @@ const SketchbookCover = ({ study }: Props) => {
       <span className={styles.spine} aria-hidden="true" />
 
       <span className={styles.head}>
-        <span className={styles.eyebrow}>{study.name} &bull; {study.meta.date}</span>
+        <span className={styles.eyebrow}><LogoStack study={study} /><span>{study.name} &bull; {study.meta.date}</span></span>
         <span className={styles.title}>{study.title}</span>
       </span>
 

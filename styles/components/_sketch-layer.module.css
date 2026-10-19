@@ -46,7 +46,7 @@
 
 .note {
   font-family: var(--font-hand), "Bradley Hand", cursive;
-  font-size: 17px;
+  font-size: 24px;
   fill: var(--pencil-graphite);
   transition: opacity 500ms ease;
 }

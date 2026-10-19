@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import AutoplayVideo from './autoplay-video'
-import Tilt from './tilt'
-import Surface from './surface'
+import SketchbookFrame from './sketchbook-frame'
 import { getImageSize } from '../lib/images'
 import styles from '../styles/components/_example.module.css'
 
@@ -34,9 +33,9 @@ const Example = ({ images, video, caption }: ExampleProps) => {
 
       {video && (
         <figure>
-          <Surface>
+          <SketchbookFrame>
             <AutoplayVideo src={`/images/${video}`} label={caption} />
-          </Surface>
+          </SketchbookFrame>
         </figure>
       )}
 
@@ -60,25 +59,17 @@ const ExampleImage = async ({filename, index, of, caption}: ExampleImageProps) =
       className={styles.area}
       data-number={`${index + 1}-of-${of}`}
     >
-      <Tilt
-        scale={1.05}
-        tiltMaxAngleX={5}
-        tiltMaxAngleY={10}
-        perspective={2000}
-        transitionSpeed={10000}
-      >
-        <figure>
-          <Surface>
-            <Image
-              src={`/images/${filename}`}
-              width={width}
-              height={height}
-              sizes={EXAMPLE_IMAGE_SIZES}
-              alt={of > 1 ? `${caption} (${index + 1} of ${of})` : caption}
-            />
-          </Surface>
-        </figure>
-      </Tilt>
+      <figure>
+        <SketchbookFrame>
+          <Image
+            src={`/images/${filename}`}
+            width={width}
+            height={height}
+            sizes={EXAMPLE_IMAGE_SIZES}
+            alt={of > 1 ? `${caption} (${index + 1} of ${of})` : caption}
+          />
+        </SketchbookFrame>
+      </figure>
     </div>
   )
 }

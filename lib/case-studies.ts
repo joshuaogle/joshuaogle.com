@@ -20,6 +20,11 @@ export type CaseStudyTheme = {
   cover?: StaticImageData
 }
 
+// A logo shown in a circle. Company marks are used as-is; product glyphs (white on
+// transparent) are drawn as a mask in `glyph` color on the product's `color`.
+export type CompanyLogo = { name: string, src: string, background?: string, scale?: number }
+export type ProductLogo = { name: string, src: string, color: string, glyph: string }
+
 export type CaseStudy = {
   slug: string
   pageTitle: string
@@ -35,10 +40,15 @@ export type CaseStudy = {
     client_url: string
   }
   theme: CaseStudyTheme
+  company: CompanyLogo
+  // The product or client within the company, when there's a logo for it
+  product?: ProductLogo
 }
 
 const transparentSessions: CaseStudy = {
   slug: 'boundary-transparent-sessions',
+  company: { name: 'HashiCorp', src: '/images/timeline-hashicorp.svg' },
+  product: { name: 'Boundary', src: '/images/case-studies/case-study-logo-boundary.svg', color: 'rgb(223, 70, 76)', glyph: '#FFFFFF' },
   pageTitle: 'Boundary Transparent Sessions',
   title: "Transparent Sessions",
   name: "Boundary",
@@ -62,6 +72,8 @@ const transparentSessions: CaseStudy = {
 
 const sessionRecording: CaseStudy = {
   slug: 'boundary-session-recording',
+  company: { name: 'HashiCorp', src: '/images/timeline-hashicorp.svg' },
+  product: { name: 'Boundary', src: '/images/case-studies/case-study-logo-boundary.svg', color: 'rgb(223, 70, 76)', glyph: '#FFFFFF' },
   pageTitle: 'Boundary Session Recording',
   title: "Session Recording",
   name: "Boundary",
@@ -86,6 +98,8 @@ const sessionRecording: CaseStudy = {
 
 const vault: CaseStudy = {
   slug: 'vault',
+  company: { name: 'HashiCorp', src: '/images/timeline-hashicorp.svg' },
+  product: { name: 'Vault', src: '/images/case-studies/case-study-logo-vault.svg', color: 'rgb(255, 207, 37)', glyph: '#000000' },
   pageTitle: 'Vault',
   title: "Keeping your secrets safe",
   name: "Vault",
@@ -109,6 +123,8 @@ const vault: CaseStudy = {
 
 const structure: CaseStudy = {
   slug: 'structure',
+  company: { name: 'HashiCorp', src: '/images/timeline-hashicorp.svg' },
+  product: { name: 'Structure', src: '/images/case-studies/case-study-logo-structure.svg', color: 'rgb(92, 78, 229)', glyph: '#FFFFFF' },
   pageTitle: 'Structure Design System',
   title: "Structure Design System",
   name: "Structure",
@@ -132,6 +148,8 @@ const structure: CaseStudy = {
 
 const sharespost: CaseStudy = {
   slug: 'sharespost',
+  company: { name: 'thoughtbot', src: '/images/timeline-thoughtbot.svg' },
+  product: { name: 'Sharespost', src: '/images/case-studies/case-study-logo-sharespost.svg', color: '#00B7F1', glyph: '#FFFFFF' },
   pageTitle: 'Sharespost',
   title: "Securities made simple",
   name: "Sharespost",
@@ -156,6 +174,8 @@ const sharespost: CaseStudy = {
 
 const armada: CaseStudy = {
   slug: 'armada',
+  company: { name: 'Brightbit', src: '/images/timeline-brightbit.svg', background: '#1C1A19', scale: .62 },
+  product: { name: 'Armada', src: '/images/case-studies/case-study-logo-armada.svg', color: '#1BA9EF', glyph: '#FFFFFF' },
   pageTitle: 'Armada',
   title: "Tracking the whole fleet",
   name: "Armada",

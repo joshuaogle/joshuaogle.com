@@ -57,3 +57,11 @@
 .metaItem a:hover {
   color: var(--theme-link-hover);
 }
+
+/* Company name with its logo circles */
+.client {
+  --logo-ring: var(--background-start);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+}

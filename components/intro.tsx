@@ -18,6 +18,8 @@ type IntroProps = {
   title: string,
   meta: MetaProps,
   theme?: CaseStudyTheme,
+  // Logos to show beside the company name
+  logos?: React.ReactNode,
 }
 
 type MetaItemProps = {
@@ -25,7 +27,7 @@ type MetaItemProps = {
   children: React.ReactNode,
 }
 
-const Intro = ({ title, meta, theme }: IntroProps) => {
+const Intro = ({ title, meta, theme, logos }: IntroProps) => {
   const themeColor = theme ? theme.colorPrimary : 'inherit'
   return (
     <>
@@ -45,7 +47,10 @@ const Intro = ({ title, meta, theme }: IntroProps) => {
         <ul className={styles.meta}>
           {meta.client && (
             <MetaItem label="For">
-              <a href={meta.client_url}>{meta.client}</a>
+              <span className={styles.client}>
+                {logos}
+                <a href={meta.client_url}>{meta.client}</a>
+              </span>
             </MetaItem>
           )}
           <MetaItem label="Role">{meta.role}</MetaItem>
