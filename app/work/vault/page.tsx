@@ -22,7 +22,7 @@ export default function VaultCaseStudy() {
         logos={<LogoStack study={study} />}
       />
 
-      <div className={`article-body case-study centered`}>
+      <div className={`article-body centered`}>
         <section>
           <div className="section-title">Background</div>
           <h2>It's hard to keep a secret</h2>

@@ -21,7 +21,7 @@ export default function TransparentSessionsCaseStudy() {
         logos={<LogoStack study={study} />}
       />
 
-      <div className={`article-body case-study centered`}>
+      <div className={`article-body centered`}>
         <section>
           <div className="section-title">Background</div>
           <h2>The best security is invisible</h2>

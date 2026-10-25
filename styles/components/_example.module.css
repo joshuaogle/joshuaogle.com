@@ -1,18 +1,53 @@
-/* Figures in a case study, set like a magazine spread. The layout comes from the
-   images' size and kind (components/example.tsx). */
-.example {
-  margin: var(--large-spacing) 0;
-  padding: 0;  /* overrides the site-wide figure padding, so figures line up with the text */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--smallest-spacing);
+  margin: var(--base-spacing) 0;
 }
 
-.images {
-  display: grid;
-  gap: var(--small-spacing);
-  align-items: start;
+.grid {
+  display: grid; 
+  grid-template-columns: repeat(8, 1fr); 
+  grid-template-rows: repeat(8, auto); 
+  grid-column-gap: var(--base-spacing);
+  grid-row-gap: var(--base-spacing);
+  align-items: center;
+  justify-content: center;
 }
 
-.images img,
-.images video {
+/* 1 panel layout */
+.area[data-number="1-of-1"] {
+  grid-area: 1 / 1 / 9 / 9;
+}
+
+/* 2 panel layout */
+.area[data-number="1-of-2"] {
+  grid-area: 1 / 1 / 6 / 6;
+} 
+.area[data-number="2-of-2"] {
+  grid-area: 4 / 4 / 9 / 9;
+}
+
+/* 3 panel layout */
+.area[data-number="1-of-3"] {
+  grid-area: 2 / 1 / 6 / 7;
+}
+.area[data-number="2-of-3"] {
+  grid-area: 5 / 3 / 9 / 8;
+}
+.area[data-number="3-of-3"] {
+  grid-area: 1 / 5 / 4 / 9;
+}
+
+/* The work as it is: a soft corner and a hairline edge, no frame or effects */
+.figure {
+  margin: 0;
+}
+
+.figure img,
+.figure video {
   display: block;
   width: 100%;
   height: auto;
@@ -20,67 +55,7 @@
   box-shadow: 0 0 0 1px rgba(var(--theme-highlight-rgb), 0.12);
 }
 
-/* Small tracked capitals, like a magazine credit */
 .caption {
-  display: block;
-  margin-top: var(--smaller-spacing);
-  font-family: var(--sans-serif);
-  font-size: var(--smallest-font-size);
-  font-weight: var(--font-weight-regular);
-  letter-spacing: 0.14em;
-  line-height: 1.6;
-  text-transform: uppercase;
   color: var(--muted-color);
-}
-
-/* Wider than the text, centered on it */
-.example[data-layout="wide"] {
-  --width: min(100vw - var(--base-spacing) * 2, 72rem);
-  width: var(--width);
-  margin-left: calc(50% - var(--width) / 2);
-}
-
-/* Edge to edge, no frame, cropped so it never fills more than most of the screen */
-.example[data-layout="bleed"] {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-}
-
-.example[data-layout="bleed"] .images {
-  gap: 0;
-}
-
-.example[data-layout="bleed"] img {
-  max-height: 85vh;
-  object-fit: cover;
-  border-radius: 0;
-  box-shadow: none;
-}
-
-.example[data-layout="bleed"] .caption {
-  padding-inline: var(--base-spacing);
-  text-align: right;
-}
-
-/* Small or tall: a modest size in the column, and out in the margin beside the text
-   once there's room for it */
-.example[data-layout="inset"] {
-  width: min(100%, 22rem);
-  margin-inline: auto;
-}
-
-@media (min-width: 1280px) {
-  .example[data-layout="inset"] {
-    float: right;
-    clear: right;
-    width: 18rem;
-    margin: 0.4rem calc(-18rem - var(--large-spacing)) var(--base-spacing) 0;
-  }
-}
-
-/* On a phone, groups stack */
-@media (max-width: 600px) {
-  .images {
-    grid-template-columns: minmax(0, 1fr) !important;
-  }
+  top: 100%;
 }

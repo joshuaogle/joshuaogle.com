@@ -21,7 +21,7 @@ export default function ArmadaCaseStudy() {
         logos={<LogoStack study={study} />}
       />
 
-      <div className={`article-body case-study centered`}>
+      <div className={`article-body centered`}>
         <section>
           <Example
             images={[
