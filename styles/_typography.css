@@ -12,16 +12,16 @@ h4 {
 }
 
 h1 {
-  font-size: 2.75rem;
+  font-size: calc(2.75 * var(--heading-unit));
 }
 
 h2 {
-  font-size: 1.75rem;
+  font-size: calc(1.75 * var(--heading-unit));
 }
 
 h3 {
   color: var(--muted-color);
-  font-size: 1.25rem;
+  font-size: calc(1.25 * var(--heading-unit));
 }
 
 ul {

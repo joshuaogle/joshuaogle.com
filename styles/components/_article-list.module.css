@@ -34,7 +34,7 @@
 
 .featureTitle {
   margin: 0.35rem 0 0.5rem;
-  font: 600 clamp(1.375rem, 2.2vw, 1.75rem) / 1.12 var(--heading-font);
+  font: 600 calc(1.5 * var(--heading-unit)) / 1.12 var(--heading-font);
   color: var(--text-color);
   text-wrap: balance;
 }
@@ -76,7 +76,7 @@
 }
 
 .itemTitle {
-  font: 600 1.0625rem / 1.3 var(--heading-font);
+  font: 600 calc(1.0625 * var(--heading-unit)) / 1.3 var(--heading-font);
   color: var(--text-color);
   text-wrap: balance;
   transition: color var(--base-timing) var(--base-easing);

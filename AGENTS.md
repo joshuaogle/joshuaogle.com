@@ -50,6 +50,10 @@ imported as React components through SVGR, configured in `next.config.js`.
   logos come from `lib/case-studies.ts` and render through `components/logo-stack.tsx`.
 - Text in a brand color on a project's colors goes through `readableOn()` in
   `lib/color.ts`, which lightens it just enough to pass WCAG contrast.
+- Type sizes: text other than headings is sized in rem (or the `--*-font-size`
+  tokens, which are rem multiples), so it all keeps the same proportions as the root
+  size grows and caps at 18px. Headings are sized in `--heading-unit`, which grows a
+  little further on big screens. Don't use `--base-font-size` outside `<html>`.
 - Kebab-case file names; component names match the file.
 
 ## Dot grid system (planned)

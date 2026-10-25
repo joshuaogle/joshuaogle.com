@@ -127,6 +127,10 @@
   --large-font-size: calc(1rem * var(--bigger));
   --small-font-size: calc(1rem * var(--smaller));
   --smallest-font-size: calc(1rem * var(--smaller) * var(--smaller));
+  /* Text other than headings keeps the same proportions at every size, all in rem.
+     Headings size in this unit instead: the same as 1rem until body text stops growing
+     (about 800px wide), then up to 2.5px more by 1800px, so they grow a little on big screens. */
+  --heading-unit: calc(1rem + clamp(0px, (100vw - 800px) / 400, 2.5px));
 
   /* Borders */
   --large-border-radius: var(--large-spacing);
