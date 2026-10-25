@@ -17,7 +17,8 @@ imported as React components through SVGR, configured in `next.config.js`.
 ## Layout
 
 - `app/`: routes. `layout.tsx` holds site metadata, the theme script, fonts,
-  header/footer, and Heap analytics. `sitemap.ts` and `robots.ts` are generated.
+  header/footer. There's no analytics script; traffic comes from Cloudflare.
+  `sitemap.ts` and `robots.ts` are generated.
 - `app/work/<slug>/page.tsx`: one page per case study, with the copy inline in JSX.
 - `lib/case-studies.ts`: case study data (title, meta, theme colors, preview
   image) and metadata. The home page carousel reads it in order.
