@@ -22,10 +22,22 @@
   transform: translateY(-4px);
 }
 
-/* Drawn inside the cover, since its clip-path trims anything past the sides */
+/* The focus ring is drawn inside the cover, since its clip-path trims anything past the sides,
+   and as a layer above the grain, vignette and band, which would otherwise dim an outline.
+   White, like the title, so it reads on every cover in either theme. */
 .cover:focus-visible {
-  outline: 2px solid var(--text-color);
+  outline: 2px solid transparent;  /* still shows in forced-colors mode */
   outline-offset: -3px;
+}
+
+.cover:focus-visible::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  z-index: 4;
+  border: 2px solid #fff;
+  border-radius: calc(var(--radius) - 3px);
+  pointer-events: none;
 }
 
 /* Fine leatherette grain, and the cover darkening toward its edges */
@@ -193,6 +205,7 @@
   border-radius: 50%;
   overflow: hidden;
   color: #fff;
+  transition: transform 360ms cubic-bezier(.65, 0, .35, 1) 60ms;
 }
 
 .lens {
@@ -225,10 +238,6 @@
 /* Opening the book: the elastic band slides toward the edge, and the arrow follows it while staying on the cover */
 /* Motion: a thumb pushes the band against friction (slow start), it glides, then eases out as it reaches the edge,
    where it rolls over with gathering speed (ease-in). The arrow moves on exactly the band's curve and timing. */
-.arrow {
-  transition: transform 360ms cubic-bezier(.65, 0, .35, 1) 60ms;
-}
-
 /* Sliding off: the band travels to the cover's right edge and, over the last stretch, foreshortens to nothing
    as if rolling over the edge onto the back. The rounded clip trims it along the corner curve the whole way.
    Returning, it rolls back over the edge first, then slides home. */

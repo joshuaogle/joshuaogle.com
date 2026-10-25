@@ -28,17 +28,18 @@ export function shadeFor(r: number, g: number, b: number, tint: number[]) {
 const warp = (r: number) => 0.82 + 0.6 * r * r * r * r     // <1 magnifies the middle; >1 pulls the rim inward
 
 export function initSketchbookLens(root: HTMLElement) {
-  const tmp = document.createElement('canvas'), tctx = tmp.getContext('2d', { willReadFrequently: true })
-  const parse = document.createElement('canvas').getContext('2d')
-  if (!tctx || !parse) return () => {}
+  const tmp = document.createElement('canvas'), scratch = tmp.getContext('2d', { willReadFrequently: true })
+  const parser = document.createElement('canvas').getContext('2d')
+  if (!scratch || !parser) return () => {}
+  const tctx = scratch, parse = parser
 
   const tints = new WeakMap<HTMLElement, number[]>(), unreadable = new WeakSet<HTMLElement>()
   function tintOf(card: HTMLElement, go: HTMLElement) {
     let t = tints.get(card)
     if (!t) {
-      parse!.fillStyle = '#000'
-      parse!.fillStyle = getComputedStyle(card).getPropertyValue('--bg-start').trim() || '#0e0c0b'
-      const h = String(parse!.fillStyle).slice(1)   // canvas normalizes any CSS color to #rrggbb
+      parse.fillStyle = '#000'
+      parse.fillStyle = getComputedStyle(card).getPropertyValue('--bg-start').trim() || '#0e0c0b'
+      const h = String(parse.fillStyle).slice(1)   // canvas normalizes any CSS color to #rrggbb
       t = [0, 2, 4].map((i) => parseInt(h.slice(i, i + 2), 16))
       tints.set(card, t)
       go.style.setProperty('--tint', t.join(' '))
@@ -56,17 +57,17 @@ export function initSketchbookLens(root: HTMLElement) {
     const N = Math.ceil(2 * S * dpr), M = Math.round(2 * R * dpr)
     if (tmp.width !== N || tmp.height !== N) { tmp.width = N; tmp.height = N }   // resizing clears and reallocates; only do it when the size changes
     const ox = gx - S, oy = gy - S, k = dpr
-    tctx!.clearRect(0, 0, N, N)
+    tctx.clearRect(0, 0, N, N)
     const bw = BORDER * (ir.width / (img.offsetWidth || ir.width))
     const cx = ir.left + bw, cy = ir.top + bw, cw = ir.width - 2 * bw, ch = ir.height - 2 * bw
     // object-fit: cover; object-position: left top
     const sc = Math.max(cw / img.naturalWidth, ch / img.naturalHeight)
-    tctx!.save(); tctx!.beginPath(); tctx!.rect((cx - ox) * k, (cy - oy) * k, cw * k, ch * k); tctx!.clip()
-    tctx!.drawImage(img, (cx - ox) * k, (cy - oy) * k, img.naturalWidth * sc * k, img.naturalHeight * sc * k)
-    tctx!.restore()
+    tctx.save(); tctx.beginPath(); tctx.rect((cx - ox) * k, (cy - oy) * k, cw * k, ch * k); tctx.clip()
+    tctx.drawImage(img, (cx - ox) * k, (cy - oy) * k, img.naturalWidth * sc * k, img.naturalHeight * sc * k)
+    tctx.restore()
     let src: Uint8ClampedArray
     try {
-      src = tctx!.getImageData(0, 0, N, N).data
+      src = tctx.getImageData(0, 0, N, N).data
     } catch {
       // A cross-origin print without CORS can't be read: fall back to a flat shade
       unreadable.add(card)
