@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useId, useLayoutEffect, useRef, type ReactNode } from 'react'
-import { createTimeline, guide, note, svgEl, type Ink, type NoteSpec } from '../lib/pencil/draw'
+import { createTimeline, guide, hatch, note, svgEl, type Ink, type NoteSpec } from '../lib/pencil/draw'
 import type { Point } from '../lib/pencil/geometry'
 import styles from '../styles/components/_sketch-layer.module.css'
 
@@ -18,7 +18,9 @@ export type Measure = {
 }
 
 export type Guide = { from: Point, to: Point, color?: string }
-export type SketchPlan = { guides?: Guide[], notes?: NoteSpec[] }
+// A box shaded in with colored pencil hatching, standing in for content before it's revealed
+export type Hatch = { box: { x: number, y: number, w: number, h: number }, color: string, radius?: number }
+export type SketchPlan = { guides?: Guide[], hatches?: Hatch[], notes?: NoteSpec[] }
 
 type Props = {
   // Describes what to draw, from measurements of the rendered content.
@@ -30,13 +32,25 @@ type Props = {
 
 // The whole sequence takes TOTAL ms, from the first guide drawn to the last drawn back out.
 // Guides start within SPREAD ms however many there are, and each takes LINE ms to draw in
-// or out; revealed content wipes in from REVEAL_START, REVEAL_STEP apart.
-const TOTAL = 2000, LINE = 380, SPREAD = 420, REVEAL_START = 350, REVEAL_STEP = 90
+// or out. Hatches shade in from HATCH_START, HATCH_STEP apart; revealed content wipes in
+// over them from REVEAL_START, REVEAL_STEP apart.
+const TOTAL = 2000, LINE = 360, SPREAD = 300
+const HATCH_START = 150, HATCH_STEP = 70, HATCH_DURATION = 380
+const REVEAL_START = 750, REVEAL_STEP = 70
 const ERASE_START = TOTAL - SPREAD - LINE
 
+// Pencil grain: speckles marks so they don't read as flat vector
+function grain(defs: SVGDefsElement, id: string) {
+  const filter = svgEl('filter', { id, x: '-5%', y: '-5%', width: '110%', height: '110%' }, defs)
+  svgEl('feTurbulence', { type: 'fractalNoise', baseFrequency: 1.4, numOctaves: 1, seed: 3, result: 'n' }, filter)
+  svgEl('feColorMatrix', { in: 'n', type: 'matrix', values: '0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -1.5 1.35', result: 'speck' }, filter)
+  svgEl('feComposite', { in: 'SourceGraphic', in2: 'speck', operator: 'in' }, filter)
+}
+
 // A pencil layer over its children. When it scrolls into view it drafts faint
-// construction lines, reveals children marked data-sketch-reveal one by one, draws
-// handwritten notes, then draws the construction back out. The notes stay.
+// construction lines, shades in colored hatching where content will go, reveals
+// children marked data-sketch-reveal one by one over it, draws handwritten notes, then
+// draws the construction back out and clears the hatching. The notes stay.
 // Reduced motion, and sections already on screen at load, get the finished state.
 export default function SketchLayer({ plan, children, className }: Props) {
   const root = useRef<HTMLDivElement>(null)
@@ -80,11 +94,7 @@ export default function SketchLayer({ plan, children, className }: Props) {
 
     const makeInk = (): Ink => {
       const defs = svgEl('defs', {}, iSvg)
-      // Pencil grain: speckles the graphite so it doesn't read as flat vector
-      const filter = svgEl('filter', { id: `${idPrefix}-graphite`, x: '-5%', y: '-5%', width: '110%', height: '110%' }, defs)
-      svgEl('feTurbulence', { type: 'fractalNoise', baseFrequency: 1.4, numOctaves: 1, seed: 3, result: 'n' }, filter)
-      svgEl('feColorMatrix', { in: 'n', type: 'matrix', values: '0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -1.5 1.35', result: 'speck' }, filter)
-      svgEl('feComposite', { in: 'SourceGraphic', in2: 'speck', operator: 'in' }, filter)
+      grain(defs, `${idPrefix}-graphite`)
       const group = svgEl('g', { filter: `url(#${idPrefix}-graphite)` }, iSvg)
       return { svg: iSvg, defs, group, idPrefix, inkClass: styles.ink, noteClass: styles.note }
     }
@@ -109,7 +119,12 @@ export default function SketchLayer({ plan, children, className }: Props) {
       reset(gSvg, m.width, m.height)
       reset(iSvg, m.width, m.height)
       tl = createTimeline(false)
-      const { guides = [], notes = [] } = plan(m)
+      const { guides = [], hatches = [], notes = [] } = plan(m)
+      // Hatching sits under the guides, both behind the content
+      const defs = svgEl('defs', {}, gSvg)
+      grain(defs, `${idPrefix}-hatch-grain`)
+      const shading = svgEl('g', { class: styles.hatch, filter: `url(#${idPrefix}-hatch-grain)` }, gSvg)
+      hatches.forEach((h, i) => hatch(shading, defs, idPrefix, tl, h.box, h.color, HATCH_START + i * HATCH_STEP, { radius: h.radius, duration: HATCH_DURATION }))
       const g = svgEl('g', {}, gSvg)
       const step = guides.length > 1 ? SPREAD / (guides.length - 1) : 0
       const paths = guides.map((line, i) => guide(g, styles.guide, tl, line.from, line.to, i * step, { color: line.color, duration: LINE }))
@@ -119,6 +134,8 @@ export default function SketchLayer({ plan, children, className }: Props) {
       const ink = makeInk()
       notes.forEach(n => { t = note(ink, tl, n, t) })
       paths.forEach((path, i) => tl.erase(path, ERASE_START + i * step, LINE))
+      // The revealed content now covers the hatching; clear it so nothing shows past an edge on hover
+      tl.at(TOTAL, () => { shading.remove() })
       tl.at(Math.max(TOTAL, t), () => { el.dataset.sketch = 'done' })
     }
 

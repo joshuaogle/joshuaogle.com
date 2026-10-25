@@ -78,6 +78,22 @@ export function guide(group: SVGGElement, className: string, tl: Timeline, from:
   return path
 }
 
+// A box shaded in with narrow pencil hatching, lines running top right to bottom left,
+// laid down in a sweep from the box's top-left corner to its bottom-right
+export function hatch(group: SVGGElement, defs: SVGDefsElement, idPrefix: string, tl: Timeline, box: { x: number, y: number, w: number, h: number }, color: string, ms: number, { radius = 0, spacing = 5, duration = 380 } = {}) {
+  const { x, y, w, h } = box
+  const patternId = `${idPrefix}-h${++maskCount}`
+  // Vertical strokes turned 45° clockwise run from top right to bottom left
+  const pattern = svgEl('pattern', { id: patternId, patternUnits: 'userSpaceOnUse', width: spacing, height: spacing, patternTransform: 'rotate(45)' }, defs)
+  svgEl('line', { x1: spacing / 2, y1: 0, x2: spacing / 2, y2: spacing, stroke: color, 'stroke-width': 1 }, pattern)
+  const maskId = `${idPrefix}-m${++maskCount}`
+  const mask = svgEl('mask', { id: maskId, maskUnits: 'userSpaceOnUse', x: x - 10, y: y - 10, width: w + 20, height: h + 20 }, defs)
+  // One stroke along the diagonal, wide enough to cover the box; drawing it sweeps the shading in
+  const sweep = svgEl('path', { d: `M${x} ${y} L${x + w} ${y + h}`, fill: 'none', stroke: '#fff', 'stroke-width': w + h }, mask)
+  svgEl('rect', { x, y, width: w, height: h, rx: radius, fill: `url(#${patternId})`, mask: `url(#${maskId})` }, group)
+  tl.stroke(sweep, ms, duration)
+}
+
 export type NoteSpec = {
   text: string
   at: Point                         // where the text sits (its baseline start, or end for anchor 'end')

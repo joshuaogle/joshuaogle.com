@@ -31,7 +31,12 @@
   stroke: var(--pencil-construction);
   stroke-width: 1;
   stroke-linecap: round;
-  opacity: 0.25;
+  opacity: 0.18;
+}
+
+/* Colored pencil shading where content will be revealed */
+.hatch {
+  opacity: 0.55;
 }
 
 /* Notes that stay */
