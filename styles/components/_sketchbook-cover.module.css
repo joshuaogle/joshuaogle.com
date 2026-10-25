@@ -206,6 +206,7 @@
   overflow: hidden;
   color: #fff;
   transition: transform 360ms cubic-bezier(.65, 0, .35, 1) 60ms;
+  will-change: transform;  /* one stable layer, rather than Safari re-layering it as each slide starts and ends */
 }
 
 .lens {
@@ -228,11 +229,14 @@
   transition: background-color 200ms ease;
 }
 
+/* Its own layer, so Safari composites it above the lens canvas; painted into the button's
+   layer instead, it drops behind the canvas while the button slides */
 .arrow svg {
   position: relative;
   z-index: 2;
   width: 19.8px;
   height: 19.8px;
+  will-change: transform;
 }
 
 /* Opening the book: the elastic band slides toward the edge, and the arrow follows it while staying on the cover */
