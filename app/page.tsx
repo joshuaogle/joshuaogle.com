@@ -5,16 +5,17 @@ import Consulting from '@/components/consulting'
 import ArticleList from '@/components/article-list'
 import { getAllArticles } from '@/lib/api'
 
-export default function Home() {
-  const allArticles = getAllArticles()
+// Articles are hidden from the home page for now; they're still at /articles
+const SHOW_ARTICLES = false
 
+export default function Home() {
   return (
     <>
       <Welcome />
       <Timeline />
       <CaseStudies />
       <Consulting />
-      <ArticleList allArticles={allArticles} />
+      {SHOW_ARTICLES && <ArticleList allArticles={getAllArticles()} />}
     </>
   )
 }
