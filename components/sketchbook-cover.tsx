@@ -46,7 +46,7 @@ const SketchbookCover = ({ study }: Props) => {
           src={theme.cover ?? theme.preview}
           alt=""
           fill
-          sizes="(max-width: 540px) 80vw, (max-width: 860px) 40vw, 340px"
+          sizes="(max-width: 540px) 80vw, (max-width: 860px) 40vw, 400px"
           className={styles.printImage}
           data-lens-print
         />

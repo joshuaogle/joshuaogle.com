@@ -13,8 +13,6 @@ export type Measure = {
   // Elements marked data-sketch-id="name", in layer coordinates
   rect: (name: string) => Box | null
   rects: (name: string) => Box[]
-  // The four sides of a box, for outlining it
-  outline: (box: Box) => [Point, Point][]
 }
 
 export type Guide = { from: Point, to: Point, color?: string }
@@ -77,7 +75,6 @@ export default function SketchLayer({ plan, children, className }: Props) {
         width: base.width, height: base.height,
         rect: (name) => all(name)[0] ?? null,
         rects: all,
-        outline: ({ x, y, w, h }) => [[[x, y], [x + w, y]], [[x + w, y], [x + w, y + h]], [[x + w, y + h], [x, y + h]], [[x, y + h], [x, y]]],
       }
     }
 
