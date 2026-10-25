@@ -57,7 +57,8 @@ Decisions Joshua has made while reviewing designs. Follow them in new work.
 - **Left-align the intro**, with the title and meta lined up with the text column.
 - **Full-width image groupings:** groups of screenshots sit side by side at one height, wider than the text, and big photos run edge to edge. Place each image by its size and content rather than in one fixed collage.
 - **Related images go in a row.** It works because diagrams and small UI don't need to be shown large; a row of them at one height reads as one idea. An asymmetric, offset arrangement was tried and rejected.
-- **Project colors must read on the light paper.** A bright brand color like Vault's yellow fails there, so light theme uses a darker shade of it (Vault: `#9D7A00`, 3.2:1 for the large title); dark theme can use the brand color as is.
+- **Project colors must read on the light paper.** When the brand's primary color fails there, like Vault's yellow, light theme uses the brand's secondary color instead (Vault: black), not a darkened primary; dark theme can use the primary as is.
+- **Pull quotes:** large semibold Tiempos in the text column, with a big opening quote mark hanging in the margin in the project's color and an attribution line underneath. No rules.
 - **Eyebrows** (section labels) are plain text, with no line before them.
 - **No drop caps.**
 - **Captions in sentence case**, not all caps.
