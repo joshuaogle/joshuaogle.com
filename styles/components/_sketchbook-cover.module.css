@@ -1,7 +1,7 @@
 /* Sketchbook covers: flat and upright. Every size is relative to the cover's width
    (cqw or %), so the proportions hold from a phone to a wide desktop grid. */
 .cover {
-  --radius: 10px;
+  --radius: 14px;
   --inset: 12%;                    /* left edge shared by the eyebrow, title, print and ribbon */
   --reveal-inset: -6px 0 -36px 0;  /* lets the ribbon fold over the top and hang below; clips anything crossing the sides */
   /* Lifting the book: a quick rise that settles (ease-out), no overshoot */
