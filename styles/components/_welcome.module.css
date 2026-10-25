@@ -70,16 +70,17 @@
   font-weight: var(--font-weight-black);
 }
 
+/* One step under the page's body text: the name at body size, the rest at small */
 .meta {
-  font-size: var(--small-font-size);
+  font-size: 1rem;
 }
 
 .time {
-  font-size: var(--smallest-font-size);
+  font-size: var(--small-font-size);
   color: var(--muted-color);
 }
 
 .textContainer p {
-  font-size: var(--smallest-font-size);
+  font-size: var(--small-font-size);
   margin: 0.15rem 0 0.25rem;
 }
