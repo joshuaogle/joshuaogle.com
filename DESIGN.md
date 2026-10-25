@@ -40,3 +40,22 @@ Notes for using it here:
 - **One special button, not a button style.** It's at its best as the single primary action, like "Let's talk". On every link it would stop feeling special.
 - **The pen has no focus style.** It needs a `:focus-visible` treatment that fits the rim, and the press should stay subtle under `prefers-reduced-motion`.
 - **Skip `will-change: transform`** on buttons that rarely animate; it costs memory for no visible gain.
+
+## Feedback
+
+Decisions Joshua has made while reviewing designs. Follow them in new work.
+
+### Working in mockups
+
+- **Explore in artifacts first.** When we're exploring layouts, mock them up as artifacts and don't change the site's code until a direction is chosen.
+- **Always show light and dark.** Every mockup shows both themes.
+- **Stay in the site's own style.** New directions build on the existing look (the dot-grid paper, Tiempos headings over light sans body text, project colors, logo circles), not a new visual identity.
+
+### Case study pages
+
+- **Magazine-inspired, like Vogue or GQ:** a big, confident headline and photography given room, in the site's own type and colors.
+- **Left-align the intro**, with the title and meta lined up with the text column.
+- **Full-width image groupings:** groups of screenshots sit side by side at one height, wider than the text, and big photos run edge to edge. Place each image by its size and content rather than in one fixed collage.
+- **Eyebrows** (section labels) are plain text, with no line before them.
+- **No drop caps.**
+- **Captions in sentence case**, not all caps.
