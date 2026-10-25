@@ -56,6 +56,8 @@ Decisions Joshua has made while reviewing designs. Follow them in new work.
 - **Magazine-inspired, like Vogue or GQ:** a big, confident headline and photography given room, in the site's own type and colors.
 - **Left-align the intro**, with the title and meta lined up with the text column.
 - **Full-width image groupings:** groups of screenshots sit side by side at one height, wider than the text, and big photos run edge to edge. Place each image by its size and content rather than in one fixed collage.
+- **Asymmetry for small images:** small images, and big images of small UI, can sit off-center (offset, dropped lower, a caption in the space beside them), but every image stays within its own section.
+- **Project colors must read on the light paper.** A bright brand color like Vault's yellow fails there, so light theme uses a darker shade of it (Vault: `#9D7A00`, 3.2:1 for the large title); dark theme can use the brand color as is.
 - **Eyebrows** (section labels) are plain text, with no line before them.
 - **No drop caps.**
 - **Captions in sentence case**, not all caps.
