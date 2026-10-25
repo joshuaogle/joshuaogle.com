@@ -10,7 +10,7 @@ type Props = {
   headingLevel?: 'h1' | 'h2'
 }
 
-// The newest article gets its image; the rest are set as a quiet typographic list
+// The newest article gets its image; the rest are set as a quiet two-column list
 const ArticleList = ({ allArticles, headingLevel: Heading = 'h2' }: Props) => {
   // allArticles arrives sorted newest-first from lib/api
   const [featured, ...rest] = allArticles
@@ -51,13 +51,11 @@ const ArticleList = ({ allArticles, headingLevel: Heading = 'h2' }: Props) => {
         {rest.map((article) => (
           <li key={article.slug}>
             <Link href={`/articles/${article.slug}`} className={styles.item}>
-              <span className={styles.itemText}>
-                <span className={styles.itemTitle}>{article.title}</span>
-                {article.summary && <span className={styles.summary}>{article.summary}</span>}
-              </span>
-              <small className={styles.itemDate}>
+              <small className={styles.meta}>
                 <DateFormatter dateString={article.meta.date} />
               </small>
+              <span className={styles.itemTitle}>{article.title}</span>
+              {article.summary && <span className={styles.summary}>{article.summary}</span>}
             </Link>
           </li>
         ))}
