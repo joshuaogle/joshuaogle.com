@@ -10,10 +10,6 @@ Screenshots of past designs and full-size captures of everything below live in t
 
 [rachelchen.tech](https://www.rachelchen.tech)
 
-![Rachel Chen's home page: a large serif headline, "Rachel Chen is a product designer who builds for fun.", above a grid of project tiles](docs/inspiration/rachel-chen-home.jpg)
-
-![Further down the page: two columns of project tiles, each a short product video with a name, type and year caption](docs/inspiration/rachel-chen-projects.jpg)
-
 - **One sentence as the introduction.** A big serif headline does all the talking; everything around it is small, quiet sans.
 - **Work shown as moving product.** Each project tile is a short video of the actual interface, captioned with name, type and year ("Concept 2025", "Shipped 2026").
 - **A frame, not a page.** Name and side navigation stay put while the work scrolls inside the frame, with a faint noise texture over everything.
@@ -22,8 +18,6 @@ Screenshots of past designs and full-size captures of everything below live in t
 
 [cooper-house.com/projects](https://www.cooper-house.com/projects)
 
-![Cooper House's projects page: a large light serif "Projects" title on deep brown, filter tabs, and a three-column grid of photography](docs/inspiration/cooper-house-projects.jpg)
-
 - **One warm color carries the brand.** The whole page is a single deep brown; the photography supplies every other color.
 - **A big, light serif title and then straight into the work.** A dense three-column grid with filter tabs (Hospitality, Destinations, Real Estate, Lifestyle) and a grid/list toggle.
 - **Two-line captions.** Project name, then a one-line tagline.
@@ -31,12 +25,6 @@ Screenshots of past designs and full-size captures of everything below live in t
 ### Glass buttons
 
 [CodePen by Paco Coursey](https://codepen.io/pxco/pen/eYwNErz): "Fey.com light mode concept from @narative". Reposted by [Ridd on X](https://x.com/ridd_design/status/1892612694764904599) as "design twitter history": someone said the button was impossible to make with CSS, @tcosta said it was easy, and @pacocoursey built it.
-
-![Close-up of the glass button at rest: a pill with a thin bright rim and a long, soft shadow beneath it](docs/inspiration/glass-button-rest.png)
-
-![The same button pressed: slightly smaller, with the long shadow gone](docs/inspiration/glass-button-pressed.png)
-
-![Ridd's post showing the original exchange and the finished button](docs/inspiration/glass-button-x-post.png)
 
 How it's built, from the pen's source:
 
