@@ -61,3 +61,4 @@ Decisions Joshua has made while reviewing designs. Follow them in new work.
 - **Eyebrows** (section labels) are plain text, with no line before them.
 - **No drop caps.**
 - **Captions in sentence case**, not all caps.
+- **Captions align with their image's place:** left when the image sits in the text column, right when it breaks out of it (wide rows and full-bleed photos).
