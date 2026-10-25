@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRightIcon } from '@heroicons/react/24/solid'
 import { readableOn } from '../lib/color'
 import LogoStack from './logo-stack'
 import { caseStudyHref, type CaseStudy } from '../lib/case-studies'
@@ -11,7 +10,9 @@ type Props = {
 }
 
 // A case study as a sketchbook cover: the project's colors on leatherette, a spine
-// hinge, an elastic band, a ribbon in the brand color and the work pasted on as a print
+// hinge, an elastic band, a ribbon in the brand color and the work pasted on as a print.
+// On hover the band slides off the edge and the arrow follows; the arrow is liquid glass
+// drawn by lib/sketchbook-lens.ts from the print beneath it.
 const SketchbookCover = ({ study }: Props) => {
   const { theme } = study
   // The brand color, lightened just enough to pass WCAG AA (with a little margin for the grain)
@@ -21,8 +22,10 @@ const SketchbookCover = ({ study }: Props) => {
     <Link
       href={caseStudyHref(study)}
       className={styles.cover}
+      aria-label={`${study.name}: ${study.title}, ${study.meta.date}`}
       data-sketch-id="cover"
       data-sketch-reveal
+      data-lens
       style={{
         '--bg-start': theme.colorBGLight,
         '--bg-end': theme.colorBGDark,
@@ -43,15 +46,20 @@ const SketchbookCover = ({ study }: Props) => {
           src={theme.cover ?? theme.preview}
           alt=""
           fill
-          sizes="(max-width: 560px) 80vw, (max-width: 900px) 40vw, 300px"
+          sizes="(max-width: 540px) 80vw, (max-width: 860px) 40vw, 340px"
           className={styles.printImage}
+          data-lens-print
         />
       </span>
 
-      <span className={styles.band} aria-hidden="true" />
-      <span className={styles.ribbonTop} aria-hidden="true" />
+      {/* The band is trimmed to the cover's rounded shape wherever it slides */}
+      <span className={styles.bandClip} aria-hidden="true"><span className={styles.band} /></span>
       <span className={styles.ribbon} aria-hidden="true" />
-      <span className={styles.arrow} aria-hidden="true"><ArrowRightIcon /></span>
+      <span className={styles.ribbonTop} aria-hidden="true" />
+      <span className={styles.arrow} aria-hidden="true" data-lens-button>
+        <canvas className={styles.lens} />
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+      </span>
     </Link>
   )
 }

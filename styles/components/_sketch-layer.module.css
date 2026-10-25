@@ -52,10 +52,11 @@
 }
 
 /* Revealable content: wiped in from the top once its outline is drafted.
-   Elements set --reveal-inset to let parts hang outside their box when shown. */
+   Elements set --reveal-inset to let parts hang outside their box when shown, and
+   --reveal-transition to keep transitions of their own alongside the wipe. */
 .root [data-sketch-reveal] {
   clip-path: inset(var(--reveal-inset, 0px));
-  transition: clip-path 700ms cubic-bezier(.6, .05, .2, 1);
+  transition: var(--reveal-transition, clip-path 700ms cubic-bezier(.6, .05, .2, 1));
 }
 
 .root[data-sketch="armed"] [data-sketch-reveal]:not([data-revealed]) {
