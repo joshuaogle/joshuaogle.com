@@ -54,8 +54,8 @@ const Intro = ({ title, meta, theme, logos }: IntroProps) => {
             </MetaItem>
           )}
           <MetaItem label="Role">{meta.role}</MetaItem>
-          <MetaItem label="Time">{meta.time}</MetaItem>
           <MetaItem label="Team">{meta.team}</MetaItem>
+          <MetaItem label="Time">{meta.time}</MetaItem>
           {meta.source && (
             <MetaItem label="Published by">
               {/* eslint-disable-next-line @next/next/no-img-element -- small SVG, nothing to optimize */}
