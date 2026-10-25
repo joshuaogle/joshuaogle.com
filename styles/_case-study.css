@@ -1,0 +1,62 @@
+/* Case studies, set like a magazine feature (think Vogue or GQ): big confident
+   headlines, labels in small tracked capitals, a drop cap to open, and pull quotes
+   that stop you. Figures are in styles/components/_example.module.css. */
+
+.case-study .section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.9em;
+  margin-bottom: var(--small-spacing);
+  font-family: var(--sans-serif);
+  font-size: var(--smallest-font-size);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.18em;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: var(--text-color);
+}
+
+.case-study .section-title::before {
+  content: "";
+  flex: none;
+  width: 2.5rem;
+  height: 1px;
+  background: currentColor;
+}
+
+.case-study h2 {
+  font-size: calc(2.4 * var(--heading-unit));
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+/* The story opens with a drop cap */
+.case-study > section:first-of-type h2 + p::first-letter {
+  float: left;
+  margin: 0.06em 0.1em 0 0;
+  font-family: var(--heading-font);
+  font-size: 4.6em;
+  font-weight: var(--font-weight-black);
+  line-height: 0.8;
+  color: var(--theme-color-heading, var(--text-color));
+}
+
+.case-study blockquote {
+  margin: var(--large-spacing) 0;
+  padding: var(--base-spacing) 0;
+  border-top: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  font-family: var(--heading-font);
+  font-size: calc(2.1 * var(--heading-unit));
+  font-style: italic;
+  font-weight: var(--font-weight-light);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.case-study blockquote::before {
+  content: none;
+}

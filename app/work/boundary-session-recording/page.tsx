@@ -21,7 +21,7 @@ export default function SessionRecordingCaseStudy() {
         logos={<LogoStack study={study} />}
       />
 
-      <div className={`article-body centered`}>
+      <div className={`article-body case-study centered`}>
         <section>
         <div className="section-title">Background</div>
           <h2>Beyond access management</h2>

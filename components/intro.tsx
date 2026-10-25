@@ -31,7 +31,14 @@ const Intro = ({ title, meta, theme, logos }: IntroProps) => {
   const themeColor = theme ? theme.colorPrimary : 'inherit'
   return (
     <>
-      <header className={styles.container + " centered"}>
+      {/* Case studies (the ones with a theme) get a magazine-feature header: a tracked
+          kicker over a big headline. Articles keep the quieter one. */}
+      <header className={[styles.container, theme && styles.feature, 'centered'].filter(Boolean).join(' ')}>
+        {theme && (
+          <p className={styles.kicker}>
+            {meta.client}{meta.client && ' · '}<DateFormatter dateString={meta.date} />
+          </p>
+        )}
         <h1
           className={styles.title}
           style={{
@@ -40,9 +47,11 @@ const Intro = ({ title, meta, theme, logos }: IntroProps) => {
           >
           {title}
         </h1>
-        <small>
-          {<DateFormatter dateString={meta.date} />}
-        </small>
+        {!theme && (
+          <small>
+            {<DateFormatter dateString={meta.date} />}
+          </small>
+        )}
       
         <ul className={styles.meta}>
           {meta.client && (

@@ -25,7 +25,7 @@ export default function StructureCaseStudy() {
         logos={<LogoStack study={study} />}
       />
 
-      <div className={`article-body centered`}>
+      <div className={`article-body case-study centered`}>
         <section>
           <div className="section-title">The challenge</div>
           <h2>Who designs the design system?</h2>
