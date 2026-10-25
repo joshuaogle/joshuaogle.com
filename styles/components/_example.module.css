@@ -41,6 +41,20 @@
   grid-area: 1 / 5 / 4 / 9;
 }
 
+/* The work as it is: a soft corner and a hairline edge, no frame or effects */
+.figure {
+  margin: 0;
+}
+
+.figure img,
+.figure video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 0 0 1px rgba(var(--theme-highlight-rgb), 0.12);
+}
+
 .caption {
   color: var(--muted-color);
   top: 100%;

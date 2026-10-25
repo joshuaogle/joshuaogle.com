@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import AutoplayVideo from './autoplay-video'
-import SketchbookFrame from './sketchbook-frame'
 import { getImageSize } from '../lib/images'
 import styles from '../styles/components/_example.module.css'
 
@@ -32,10 +31,8 @@ const Example = ({ images, video, caption }: ExampleProps) => {
       )}
 
       {video && (
-        <figure>
-          <SketchbookFrame>
-            <AutoplayVideo src={`/images/${video}`} label={caption} />
-          </SketchbookFrame>
+        <figure className={styles.figure}>
+          <AutoplayVideo src={`/images/${video}`} label={caption} />
         </figure>
       )}
 
@@ -59,16 +56,14 @@ const ExampleImage = async ({filename, index, of, caption}: ExampleImageProps) =
       className={styles.area}
       data-number={`${index + 1}-of-${of}`}
     >
-      <figure>
-        <SketchbookFrame>
-          <Image
-            src={`/images/${filename}`}
-            width={width}
-            height={height}
-            sizes={EXAMPLE_IMAGE_SIZES}
-            alt={of > 1 ? `${caption} (${index + 1} of ${of})` : caption}
-          />
-        </SketchbookFrame>
+      <figure className={styles.figure}>
+        <Image
+          src={`/images/${filename}`}
+          width={width}
+          height={height}
+          sizes={EXAMPLE_IMAGE_SIZES}
+          alt={of > 1 ? `${caption} (${index + 1} of ${of})` : caption}
+        />
       </figure>
     </div>
   )

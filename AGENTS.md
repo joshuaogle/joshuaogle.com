@@ -53,8 +53,9 @@ imported as React components through SVGR, configured in `next.config.js`.
   `public/images/` and read their dimensions at build time (`lib/images.ts`),
   so a missing file fails the build.
 - Motion (autoplay video, pencil drawing, hover lifts) is skipped for `prefers-reduced-motion`.
-- Case study images sit in `components/sketchbook-frame.tsx`; company and product
-  logos come from `lib/case-studies.ts` and render through `components/logo-stack.tsx`.
+- Case study images and videos go through `<Example>` (`components/example.tsx`), shown
+  plainly with a hairline edge; company and product logos come from
+  `lib/case-studies.ts` and render through `components/logo-stack.tsx`.
 - Text in a brand color on a project's colors goes through `readableOn()` in
   `lib/color.ts`, which lightens it just enough to pass WCAG contrast.
 - Type sizes: text other than headings is sized in rem (or the `--*-font-size`
