@@ -19,7 +19,8 @@ function plan(m: Measure) {
   guides.push({ from: [left, heading.y + heading.h - 6], to: [right, heading.y + heading.h - 6] })
   const hatches: Hatch[] = covers.map(c => {
     const style = getComputedStyle(c.el)
-    return { box: c, color: style.getPropertyValue('--brand').trim(), radius: parseFloat(style.borderTopLeftRadius) }
+    const radii: Hatch['radii'] = [style.borderTopLeftRadius, style.borderTopRightRadius, style.borderBottomRightRadius, style.borderBottomLeftRadius]
+    return { box: c, color: style.getPropertyValue('--brand').trim(), radii }
   })
   return { guides, hatches }
 }

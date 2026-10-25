@@ -19,7 +19,8 @@ export type Measure = {
 
 export type Guide = { from: Point, to: Point, color?: string }
 // A box shaded in with colored pencil hatching, standing in for content before it's revealed
-export type Hatch = { box: { x: number, y: number, w: number, h: number }, color: string, radius?: number }
+// radii: the four corners, clockwise from top left, as CSS lengths
+export type Hatch = { box: { x: number, y: number, w: number, h: number }, color: string, radii?: [string, string, string, string] }
 export type SketchPlan = { guides?: Guide[], hatches?: Hatch[], notes?: NoteSpec[] }
 
 type Props = {
@@ -124,7 +125,11 @@ export default function SketchLayer({ plan, children, className }: Props) {
       hatches.forEach((h, i) => {
         const shade = document.createElement('div')
         shade.className = styles.hatch
-        Object.assign(shade.style, { left: `${h.box.x}px`, top: `${h.box.y}px`, width: `${h.box.w}px`, height: `${h.box.h}px`, borderRadius: `${h.radius ?? 0}px` })
+        const [topLeft, topRight, bottomRight, bottomLeft] = h.radii ?? ['0', '0', '0', '0']
+        Object.assign(shade.style, {
+          left: `${h.box.x}px`, top: `${h.box.y}px`, width: `${h.box.w}px`, height: `${h.box.h}px`,
+          borderTopLeftRadius: topLeft, borderTopRightRadius: topRight, borderBottomRightRadius: bottomRight, borderBottomLeftRadius: bottomLeft,
+        })
         shade.style.setProperty('--hatch-color', h.color)
         hLayer.appendChild(shade)
         tl.at(HATCH_START + i * HATCH_STEP, () => { shade.dataset.shaded = 'true' })
