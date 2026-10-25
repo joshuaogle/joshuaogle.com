@@ -55,7 +55,9 @@ imported as React components through SVGR, configured in `next.config.js`.
 ## Dot grid system (planned)
 
 A plan, not yet built: a draft from 2026-10-18, awaiting review. Until it lands, the site
-still uses the golden-ratio tokens in `styles/_variables.css`.
+still uses the golden-ratio tokens in `styles/_variables.css`. Since this was written,
+body text was capped at 18px (`--base-font-size`), because it grew too large on big
+screens; retune the type scale below to that before building it.
 
 ### Goal
 
