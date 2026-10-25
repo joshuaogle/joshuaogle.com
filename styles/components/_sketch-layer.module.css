@@ -2,6 +2,7 @@
   position: relative;
 }
 
+.hatches,
 .guides,
 .inkLayer {
   position: absolute;
@@ -12,6 +13,7 @@
   pointer-events: none;
 }
 
+.hatches,
 .guides {
   z-index: 0;
 }
@@ -34,9 +36,21 @@
   opacity: 0.18;
 }
 
-/* Colored pencil shading where content will be revealed */
+/* Colored pencil shading where content will be revealed: narrow strokes running top right
+   to bottom left, speckled by a tiled grain mask (an image, so it's rasterized once), and
+   swept in from the top-left corner */
 .hatch {
+  position: absolute;
   opacity: 0.55;
+  background: repeating-linear-gradient(135deg, var(--hatch-color) 0 1px, transparent 1px 5px);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.4' numOctaves='1' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 -1.5 1.35'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E") 0 0 / 64px 64px;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.4' numOctaves='1' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 -1.5 1.35'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E") 0 0 / 64px 64px;
+  clip-path: polygon(0 0, 0 0, 0 0);
+  transition: clip-path 380ms cubic-bezier(.45, .05, .25, 1);
+}
+
+.hatch[data-shaded] {
+  clip-path: polygon(0 0, 200% 0, 0 200%);
 }
 
 /* Notes that stay */
