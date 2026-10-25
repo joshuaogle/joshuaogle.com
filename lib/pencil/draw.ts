@@ -14,6 +14,8 @@ export type Timeline = {
   at: (ms: number, fn: () => void) => void
   // Draws a stroked path along its length
   stroke: (path: SVGPathElement, ms: number, duration?: number) => void
+  // Draws a stroked path back out: it retracts from its start toward its end
+  erase: (path: SVGPathElement, ms: number, duration?: number) => void
   show: (el: SVGElement | HTMLElement, ms: number) => void
   clear: () => void
 }
@@ -35,6 +37,12 @@ export function createTimeline(instant: boolean): Timeline {
         path.getBoundingClientRect() // commit the starting offset before animating
         path.style.transition = instant ? 'none' : `stroke-dashoffset ${duration}ms cubic-bezier(.45, .05, .25, 1)`
         path.style.strokeDashoffset = '0'
+      })
+    },
+    erase(path, ms, duration = 520) {
+      at(ms, () => {
+        path.style.transition = instant ? 'none' : `stroke-dashoffset ${duration}ms cubic-bezier(.45, .05, .25, 1)`
+        path.style.strokeDashoffset = String(-path.getTotalLength())
       })
     },
     show(el, ms) { at(ms, () => { el.style.opacity = '1' }) },
@@ -62,11 +70,12 @@ export function inkStroke(ink: Ink, tl: Timeline, centerline: Point[], outline: 
   tl.stroke(reveal, ms, duration)
 }
 
-// A construction line in the given group; returns when it starts drawing
-export function guide(group: SVGGElement, className: string, tl: Timeline, from: Point, to: Point, ms: number, { color, overshoot = 14, rand }: { color?: string, overshoot?: number, rand?: Rand } = {}) {
+// A construction line in the given group, drawn in starting at ms; returns its path
+export function guide(group: SVGGElement, className: string, tl: Timeline, from: Point, to: Point, ms: number, { color, overshoot = 14, rand, duration = 560 }: { color?: string, overshoot?: number, rand?: Rand, duration?: number } = {}) {
   const path = svgEl('path', { d: ruledLine(from[0], from[1], to[0], to[1], { overshoot, rand }), class: className }, group)
   if (color) path.style.stroke = color
-  tl.stroke(path, ms, 560)
+  tl.stroke(path, ms, duration)
+  return path
 }
 
 export type NoteSpec = {

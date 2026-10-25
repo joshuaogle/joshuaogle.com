@@ -25,18 +25,13 @@
   z-index: 2;
 }
 
-/* Construction: faint pencil, faded away once the work has settled */
+/* Construction: faint pencil, drawn back out once the work has settled */
 .guide {
   fill: none;
   stroke: var(--pencil-construction);
   stroke-width: 1;
   stroke-linecap: round;
   opacity: 0.25;
-  transition: opacity 1600ms ease;
-}
-
-.faded .guide {
-  opacity: 0;
 }
 
 /* Notes that stay */

@@ -28,11 +28,15 @@ type Props = {
   className?: string
 }
 
-const GUIDE_STEP = 70, REVEAL_STEP = 120, FADE_AFTER = 2400
+// The whole sequence takes TOTAL ms, from the first guide drawn to the last drawn back out.
+// Guides start within SPREAD ms however many there are, and each takes LINE ms to draw in
+// or out; revealed content wipes in from REVEAL_START, REVEAL_STEP apart.
+const TOTAL = 2000, LINE = 380, SPREAD = 420, REVEAL_START = 350, REVEAL_STEP = 90
+const ERASE_START = TOTAL - SPREAD - LINE
 
 // A pencil layer over its children. When it scrolls into view it drafts faint
 // construction lines, reveals children marked data-sketch-reveal one by one, draws
-// handwritten notes, then fades the construction away. The notes stay.
+// handwritten notes, then draws the construction back out. The notes stay.
 // Reduced motion, and sections already on screen at load, get the finished state.
 export default function SketchLayer({ plan, children, className }: Props) {
   const root = useRef<HTMLDivElement>(null)
@@ -104,19 +108,18 @@ export default function SketchLayer({ plan, children, className }: Props) {
       const m = measure()
       reset(gSvg, m.width, m.height)
       reset(iSvg, m.width, m.height)
-      gSvg.classList.remove(styles.faded)
       tl = createTimeline(false)
       const { guides = [], notes = [] } = plan(m)
       const g = svgEl('g', {}, gSvg)
-      guides.forEach((line, i) => guide(g, styles.guide, tl, line.from, line.to, 60 + i * GUIDE_STEP, { color: line.color }))
-      const revealStart = Math.min(1150, 60 + guides.length * GUIDE_STEP * .6)
+      const step = guides.length > 1 ? SPREAD / (guides.length - 1) : 0
+      const paths = guides.map((line, i) => guide(g, styles.guide, tl, line.from, line.to, i * step, { color: line.color, duration: LINE }))
       const reveals = [...el.querySelectorAll<HTMLElement>('[data-sketch-reveal]')]
-      reveals.forEach((n, i) => tl.at(revealStart + i * REVEAL_STEP, () => { n.dataset.revealed = 'true' }))
-      let t = revealStart + reveals.length * REVEAL_STEP + 500
+      reveals.forEach((n, i) => tl.at(REVEAL_START + i * REVEAL_STEP, () => { n.dataset.revealed = 'true' }))
+      let t = REVEAL_START + reveals.length * REVEAL_STEP
       const ink = makeInk()
       notes.forEach(n => { t = note(ink, tl, n, t) })
-      tl.at(t + FADE_AFTER, () => { gSvg.classList.add(styles.faded) })
-      tl.at(t + FADE_AFTER + 1700, () => { el.dataset.sketch = 'done' })
+      paths.forEach((path, i) => tl.erase(path, ERASE_START + i * step, LINE))
+      tl.at(Math.max(TOTAL, t), () => { el.dataset.sketch = 'done' })
     }
 
     let started = false
