@@ -71,9 +71,22 @@ export function inkStroke(ink: Ink, tl: Timeline, centerline: Point[], outline: 
 }
 
 // A construction line in the given group, drawn in starting at ms; returns its path
-export function guide(group: SVGGElement, className: string, tl: Timeline, from: Point, to: Point, ms: number, { color, overshoot = 14, rand, duration = 560 }: { color?: string, overshoot?: number, rand?: Rand, duration?: number } = {}) {
+export function guide(group: SVGGElement, className: string, tl: Timeline, from: Point, to: Point, ms: number, { color, overshoot = 14, rand, duration = 560, taper = 24 }: { color?: string, overshoot?: number, rand?: Rand, duration?: number, taper?: number } = {}) {
   const path = svgEl('path', { d: ruledLine(from[0], from[1], to[0], to[1], { overshoot, rand }), class: className }, group)
-  if (color) path.style.stroke = color
+  // The ends run out: the stroke fades to nothing over its first and last taper px,
+  // like a pencil landing and lifting (at most a fifth of the line at each end)
+  const svg = group.ownerSVGElement
+  if (svg && taper > 0) {
+    const defs = svg.querySelector('defs') ?? svg.insertBefore(svgEl('defs'), svg.firstChild)
+    const len = path.getTotalLength(), a = path.getPointAtLength(0), b = path.getPointAtLength(len)
+    const t = Math.min(taper / len, .2), id = `pencil-taper-${++maskCount}`
+    const gradient = svgEl('linearGradient', { id, gradientUnits: 'userSpaceOnUse', x1: a.x, y1: a.y, x2: b.x, y2: b.y }, defs)
+    for (const [offset, opacity] of [[0, 0], [t, 1], [1 - t, 1], [1, 0]]) {
+      const stop = svgEl('stop', { offset, 'stop-opacity': opacity }, gradient)
+      stop.style.stopColor = color ?? 'var(--pencil-construction)'
+    }
+    path.style.stroke = `url(#${id})`
+  } else if (color) path.style.stroke = color
   tl.stroke(path, ms, duration)
   return path
 }
