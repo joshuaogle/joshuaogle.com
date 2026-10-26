@@ -114,7 +114,7 @@ const vault: CaseStudy = {
   pageTitle: 'Vault',
   title: "Keeping the cloud’s secrets",
   name: "Vault",
-  dek: "How I led design for Vault’s first web UI and its launch as a managed cloud service, making secrets management usable by the people who run it.",
+  dek: "How I brought a web UI to Vault, an already popular CLI tool, and led its design through launch as a managed cloud service.",
   meta: {
     date: "2021",
     field: "Enterprise security",

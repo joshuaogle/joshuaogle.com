@@ -60,7 +60,7 @@ export default function VaultCaseStudy() {
               "case-studies/vault-loader-dark.gif",
               "case-studies/vault-keys.png"
             ]}
-            caption="Where we started: Vault’s first UI, in slate gray"
+            caption="Vault’s first product color was slate gray"
           />
 
           <Example
@@ -71,14 +71,14 @@ export default function VaultCaseStudy() {
 
         <section>
           <div className="section-title">My role</div>
-          <h2>From the first UI to the cloud</h2>
+          <h2>A UI for a CLI people already loved</h2>
           <p>
             As Product Design Lead for Vault, I owned the design of its web UI and, later, of HCP Vault.
             I worked alongside one other designer and a team of more than 30 engineers.
           </p>
           <RoleSplit
             led={[
-              'UI strategy for Vault and Vault Enterprise, from the first web UI through 1.0',
+              'UI strategy for Vault and Vault Enterprise',
               'In-person research at HashiConf',
               'The UI Guide, from concept to shipped component',
               'The HCP Vault provisioning workflow and dashboard',
