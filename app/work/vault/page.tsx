@@ -62,18 +62,23 @@ export default function VaultCaseStudy() {
             ]}
             caption="Where we started: Vault’s first UI, in slate gray"
           />
+
+          <Example
+            video="case-studies/vault-ui-011.mp4"
+            caption="Vault 0.11"
+          />
         </section>
 
         <section>
           <div className="section-title">My role</div>
-          <h2>From Vault 1.0 to the cloud</h2>
+          <h2>From the first UI to the cloud</h2>
           <p>
             As Product Design Lead for Vault, I owned the design of its web UI and, later, of HCP Vault.
             I worked alongside one other designer and a team of more than 30 engineers.
           </p>
           <RoleSplit
             led={[
-              'UI strategy for Vault 1.0 and Vault Enterprise',
+              'UI strategy for Vault and Vault Enterprise, from the first web UI through 1.0',
               'In-person research at HashiConf',
               'The UI Guide, from concept to shipped component',
               'The HCP Vault provisioning workflow and dashboard',
@@ -119,7 +124,7 @@ export default function VaultCaseStudy() {
                 hypothesis: 'Vault’s experts live in the CLI, so a web UI would mostly serve newcomers.',
                 verdict: 'new',
                 learning: 'The UI’s real audience was the people who configure and audit Vault: security, platform, and compliance engineers who needed visibility a terminal couldn’t give them.',
-                decision: 'Built the Vault 1.0 UI around discoverability, with secrets engines and auth methods in plain view.',
+                decision: 'Built the Vault UI around discoverability, with secrets engines and auth methods in plain view.',
               },
               {
                 hypothesis: 'Good documentation is enough to get a team set up.',
@@ -156,7 +161,7 @@ export default function VaultCaseStudy() {
               "case-studies/vault-secret-schema.png",
               "case-studies/vault-methods.png",
             ]}
-            caption="Secrets engines & auth methods in the Vault 1.0 UI"
+            caption="Secrets engines & auth methods in Vault"
           />
 
           <Example

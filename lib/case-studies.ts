@@ -117,7 +117,6 @@ const vault: CaseStudy = {
   dek: "How I led design for Vault’s first web UI and its launch as a managed cloud service, making secrets management usable by the people who run it.",
   meta: {
     date: "2021",
-    years: "2017–2021",
     field: "Enterprise security",
     role: "Product Design Lead",
     time: "4 years",

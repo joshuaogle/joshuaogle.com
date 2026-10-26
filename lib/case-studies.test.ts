@@ -13,7 +13,8 @@ describe('title colors', () => {
 
 describe('caseStudyKicker', () => {
   it('names the product, its field and its years', () => {
-    expect(caseStudyKicker(getCaseStudy('vault'))).toBe('HashiCorp Vault · Enterprise security · 2017–2021')
+    expect(caseStudyKicker({ ...getCaseStudy('vault'), meta: { ...getCaseStudy('vault').meta, years: '2016–2020' } }))
+      .toBe('HashiCorp Vault · Enterprise security · 2016–2020')
   })
 
   it("doesn't repeat a client named after the product, and falls back to the date", () => {
