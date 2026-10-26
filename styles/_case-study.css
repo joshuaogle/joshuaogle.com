@@ -1,0 +1,47 @@
+/* Case studies, set like a magazine feature (think Vogue or GQ) in the site's own type:
+   room between sections, plain tracked-capital labels, big Tiempos headings in the
+   project's color, and thin rules instead of boxes. Every text color here clears WCAG AA
+   (4.5:1), and nothing is lighter than weight 400. Figures are in _example.module.css. */
+
+.case-study > section {
+  padding: calc(var(--larger-spacing) * var(--bigger)) 0 0;
+}
+
+.case-study p,
+.case-study li {
+  font-weight: var(--font-weight-regular);
+}
+
+.case-study p a {
+  color: var(--readable-action-color);
+  text-decoration: underline;
+}
+
+/* Section eyebrows and small labels: plain text, no numbers, no line before them */
+.case-study .section-title,
+.case-study .label {
+  margin: 0 0 var(--small-spacing);
+  color: var(--text-color);
+  font-family: var(--sans-serif);
+  font-size: var(--smallest-font-size);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.18em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.case-study h2 {
+  margin-bottom: var(--small-spacing);
+  color: var(--theme-color-title);
+  font-size: calc(2.75 * var(--heading-unit));
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+/* Wider than the text column, centered on it, for findings, results and the like */
+.case-study .wide {
+  --width: min(100vw - var(--base-spacing) * 2, 64rem);
+  width: var(--width);
+  margin-left: calc(50% - var(--width) / 2);
+}

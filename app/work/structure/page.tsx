@@ -5,7 +5,11 @@ import CaseStudyTheme from '@/components/case-study-theme'
 import Intro from '@/components/intro'
 import LogoStack from '@/components/logo-stack'
 import Example from '@/components/example'
-import { caseStudyMetadata, getCaseStudy } from '@/lib/case-studies'
+import RoleSplit from '@/components/role-split'
+import Findings from '@/components/findings'
+import Outcomes from '@/components/outcomes'
+import NextCaseStudy from '@/components/next-case-study'
+import { caseStudyKicker, caseStudyMetadata, getCaseStudy } from '@/lib/case-studies'
 import migrationImage from '@/public/images/case-studies/structure-migration.png'
 import copImage from '@/public/images/case-studies/structure-cop.png'
 
@@ -23,9 +27,18 @@ export default function StructureCaseStudy() {
         meta={study.meta}
         theme={study.theme}
         logos={<LogoStack study={study} />}
+        kicker={caseStudyKicker(study)}
+        dek={study.dek}
       />
 
-      <div className={`article-body centered`}>
+      <div className="article-body centered case-study">
+        <Example
+          images={[
+            "case-studies/structure-summary.png"
+          ]}
+          caption="Tokens and components in Structure"
+        />
+
         <section>
           <div className="section-title">The challenge</div>
           <h2>Who designs the design system?</h2>
@@ -46,13 +59,6 @@ export default function StructureCaseStudy() {
             from all of our products.
           </p>
 
-          <Example
-            images={[
-              "case-studies/structure-summary.png"
-            ]}
-            caption="Tokens and components in Structure"
-          />
-
           <p>
             When most people think of design systems
             they picture colorful grids of buttons
@@ -62,6 +68,23 @@ export default function StructureCaseStudy() {
             <mark>Design systems are living things,
             and only grow and survive if they are nurtured.</mark>
           </p>
+        </section>
+
+        <section>
+          <div className="section-title">My role</div>
+          <h2>[What you were responsible for]</h2>
+          <p>
+            [One or two sentences on your role and who you worked with.]
+          </p>
+          <RoleSplit
+            led={[
+              'The Design System Working Group, with designers from every product',
+              'The collaboration model for contributing components',
+              'The migration from Sketch to Figma, all 300 components',
+              'A walkthrough and Q&A to teach the new system',
+            ]}
+            partners={['[Partner: what you did together]', '[Partner: what you did together]']}
+          />
         </section>
 
         <section>
@@ -246,7 +269,34 @@ export default function StructureCaseStudy() {
         </section>
 
         <section>
-          <div className="section-title">Results and reflection</div>
+          <div className="section-title">Findings &amp; decisions</div>
+          <h2>What we learned</h2>
+          <Findings
+            items={[
+              { hypothesis: '[What you believed going in]', verdict: 'confirmed', learning: '[What you learned]', decision: '[What you did about it]' },
+              { hypothesis: '[What you believed going in]', verdict: 'disproved', learning: '[What you learned]', decision: '[What you did about it]' },
+              { hypothesis: '[What you believed going in]', verdict: 'new', learning: '[What you learned]', decision: '[What you did about it]' },
+            ]}
+          />
+        </section>
+
+        <section>
+          <div className="section-title">Outcomes</div>
+          <h2>What changed</h2>
+          <Outcomes
+            results={[
+              { value: '30+', label: 'shared components in Structure, beyond those in each product' },
+              { value: '6', label: 'enterprise products on one design system' },
+              { value: '120+', label: 'hand-crafted icons for the product suite' },
+            ]}
+            customers={['[Result for customers]']}
+            business={['[Result for the business]']}
+            organization={['[Reuse across products, or people you grew]']}
+          />
+        </section>
+
+        <section>
+          <div className="section-title">Reflection</div>
           <h2>All good things&hellip;</h2>
           <p>
             Just like users of a product,
@@ -300,6 +350,8 @@ export default function StructureCaseStudy() {
             and listen to the designers who are using it.
           </p>
         </section>
+
+        <NextCaseStudy study={study} />
       </div>
     </>
   )

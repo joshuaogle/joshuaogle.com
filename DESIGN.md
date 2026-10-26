@@ -63,3 +63,12 @@ Decisions Joshua has made while reviewing designs. Follow them in new work.
 - **No drop caps.**
 - **Captions in sentence case**, not all caps.
 - **Captions align with their image's place:** left when the image sits in the text column, right when it breaks out of it (wide rows and full-bleed photos).
+- **Built for recruiters (Magazine v3, the "Principal" layout in the Case Study Layouts canvas):** every case study follows one order, so a reviewer finds the same things in the same place:
+  1. A header with a kicker (product · field · years), the title, a one-line summary, and the facts (For, Role, Team, Time, Scope, Users), then a hero image of the shipped work.
+  2. Context, then **My role**, split into "I led" and "With my partners", so Joshua's own work is clear from the team's.
+  3. The work, with research ending in **What we learned from research**: each hypothesis, a verdict (Confirmed, Disproved or New learning, as a word with a marker that doesn't rely on color), the learning set large, and a "So we" line with the decision it led to.
+  4. **Outcomes:** headline numbers, then results for customers, for the business, and for the organization.
+  5. **Reflection** ("What I'd do differently"), then the next case study and a way to get in touch.
+- **Key facts are real text**, never only in an image, so people and screening tools can both read them.
+- **Weight and contrast limits:** headlines at 600, nothing lighter than 400 at any size, and every text color at 4.5:1 or better, even large text. Muted text and links use `--readable-muted-color` and `--readable-action-color`.
+- **Thin rules instead of boxes:** a strong rule opens a group (role, outcomes, the first finding), hairlines separate the rest.

@@ -3,7 +3,11 @@ import CaseStudyTheme from '@/components/case-study-theme'
 import Intro from '@/components/intro'
 import LogoStack from '@/components/logo-stack'
 import Example from '@/components/example'
-import { caseStudyMetadata, getCaseStudy } from '@/lib/case-studies'
+import RoleSplit from '@/components/role-split'
+import Findings from '@/components/findings'
+import Outcomes from '@/components/outcomes'
+import NextCaseStudy from '@/components/next-case-study'
+import { caseStudyKicker, caseStudyMetadata, getCaseStudy } from '@/lib/case-studies'
 
 const study = getCaseStudy('boundary-transparent-sessions')
 
@@ -19,9 +23,16 @@ export default function TransparentSessionsCaseStudy() {
         meta={study.meta}
         theme={study.theme}
         logos={<LogoStack study={study} />}
+        kicker={caseStudyKicker(study)}
+        dek={study.dek}
       />
 
-      <div className={`article-body centered`}>
+      <div className="article-body centered case-study">
+        <Example
+          images={["case-studies/boundary-ts-prototype-screen.png"]}
+          caption="[Caption: the shipped product]"
+        />
+
         <section>
           <div className="section-title">Background</div>
           <h2>The best security is invisible</h2>
@@ -50,6 +61,25 @@ export default function TransparentSessionsCaseStudy() {
             Boundary from a security tool into essential infrastructure that IT 
             teams could deploy across their organizations.
           </p>
+        </section>
+
+        <section>
+          <div className="section-title">My role</div>
+          <h2>[What you were responsible for]</h2>
+          <p>
+            [One or two sentences on your role and who you worked with.]
+          </p>
+          <RoleSplit
+            led={[
+              'A prototype simulating switching between apps',
+              'User testing across several workflows',
+              '[What else you owned]',
+            ]}
+            partners={[
+              'Engineering: compatibility testing with ZScaler and Cisco AnyConnect',
+              '[Partner: what you did together]',
+            ]}
+          />
         </section>
 
         <section>
@@ -151,6 +181,18 @@ export default function TransparentSessionsCaseStudy() {
         </section>
 
         <section>
+          <div className="section-title">Findings &amp; decisions</div>
+          <h2>What we learned</h2>
+          <Findings
+            items={[
+              { hypothesis: '[What you believed going in]', verdict: 'confirmed', learning: '[What you learned]', decision: '[What you did about it]' },
+              { hypothesis: '[What you believed going in]', verdict: 'disproved', learning: '[What you learned]', decision: '[What you did about it]' },
+              { hypothesis: '[What you believed going in]', verdict: 'new', learning: '[What you learned]', decision: '[What you did about it]' },
+            ]}
+          />
+        </section>
+
+        <section>
           <div className="section-title">Future vision</div>
           <h2>Beyond traditional boundaries</h2>
           <p>
@@ -183,6 +225,34 @@ export default function TransparentSessionsCaseStudy() {
             Boundary as a pioneer in the next generation of security infrastructure.
           </p>
         </section>
+
+        <section>
+          <div className="section-title">Outcomes</div>
+          <h2>What changed</h2>
+          <Outcomes
+            results={[
+              { value: '[00%]', label: '[User metric]' },
+              { value: '[00]', label: '[Business metric]' },
+              { value: '[00]', label: '[Another result]' },
+            ]}
+            customers={[
+              'People reach protected tools at familiar addresses, without launching a client first',
+              '[Result for customers]',
+            ]}
+            business={['[Result for the business]']}
+            organization={['[Reuse across products, or people you grew]']}
+          />
+        </section>
+
+        <section>
+          <div className="section-title">Reflection</div>
+          <h2>What I’d do differently</h2>
+          <p>
+            [Two or three sentences. A real lesson, what surprised you, and how it shapes how you lead now.]
+          </p>
+        </section>
+
+        <NextCaseStudy study={study} />
       </div>
     </>
   )

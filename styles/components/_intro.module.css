@@ -58,6 +58,76 @@
   color: var(--theme-link-hover);
 }
 
+/* Case studies: a magazine-feature header, left-aligned with the text column */
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--small-spacing);
+  padding-top: clamp(4rem, 12vw, 9rem);
+}
+
+.kicker {
+  margin: 0;
+  color: var(--text-color);
+  font-size: var(--smallest-font-size);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.featureTitle {
+  max-width: 14ch;
+  margin: 0;
+  color: var(--theme-color-title);
+  font-size: clamp(calc(3.25 * var(--heading-unit)), 1rem + 7vw, calc(6.75 * var(--heading-unit)));
+  line-height: 0.94;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+/* The one-line summary, in italic like a magazine's standfirst */
+.dek {
+  max-width: 32ch;
+  margin: 0;
+  color: var(--text-color);
+  font-family: var(--heading-font);
+  font-size: calc(1.6 * var(--heading-unit));
+  font-style: italic;
+  font-weight: var(--font-weight-regular);
+  line-height: 1.25;
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  gap: var(--small-spacing) var(--large-spacing);
+  width: 100%;
+  margin: var(--small-spacing) 0 0;
+  padding-top: var(--small-spacing);
+  border-top: 1px solid var(--hairline-color);
+}
+
+.factLabel {
+  color: var(--readable-muted-color);
+  font-size: var(--smallest-font-size);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.factValue {
+  margin: 0.25rem 0 0;
+  color: var(--text-color);
+  font-size: var(--small-font-size);
+  font-weight: var(--font-weight-regular);
+}
+
+.factValue a {
+  color: var(--text-color);
+  text-decoration: underline;
+}
+
 /* Company name with its logo circles */
 .client {
   --logo-ring: var(--background-start);

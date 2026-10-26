@@ -9,6 +9,8 @@ type MetaProps = {
   role?: string;
   time?: string;
   team?: string;
+  scope?: string;
+  users?: string;
   source?: string;
   source_icon?: string;
   source_url?: string;
@@ -20,6 +22,9 @@ type IntroProps = {
   theme?: CaseStudyTheme,
   // Logos to show beside the company name
   logos?: React.ReactNode,
+  // Case studies: the line over the title, and the one under it
+  kicker?: string,
+  dek?: string,
 }
 
 type MetaItemProps = {
@@ -27,30 +32,60 @@ type MetaItemProps = {
   children: React.ReactNode,
 }
 
-const Intro = ({ title, meta, theme, logos }: IntroProps) => {
-  const themeColor = theme ? theme.colorPrimary : 'inherit'
+const Intro = (props: IntroProps) => props.theme ? <FeatureIntro {...props} /> : <ArticleIntro {...props} />
+
+// A case study opens like a magazine feature: the kicker, a big headline in the project's
+// color, a one-line summary, then the facts a reader checks first
+const FeatureIntro = ({ title, meta, logos, kicker, dek }: IntroProps) => {
+  return (
+    <header className={`${styles.feature} centered`}>
+      {kicker && <p className={styles.kicker}>{kicker}</p>}
+      <h1 className={styles.featureTitle}>{title}</h1>
+      {dek && <p className={styles.dek}>{dek}</p>}
+
+      <dl className={styles.facts}>
+        {meta.client && (
+          <Fact label="For">
+            <span className={styles.client}>
+              {logos}
+              <a href={meta.client_url}>{meta.client}</a>
+            </span>
+          </Fact>
+        )}
+        <Fact label="Role">{meta.role}</Fact>
+        <Fact label="Team">{meta.team}</Fact>
+        <Fact label="Time">{meta.time}</Fact>
+        <Fact label="Scope">{meta.scope}</Fact>
+        <Fact label="Users">{meta.users}</Fact>
+      </dl>
+    </header>
+  )
+}
+
+const Fact = ({ label, children }: MetaItemProps) => {
+  return children ? (
+    <div>
+      <dt className={styles.factLabel}>{label}</dt>
+      <dd className={styles.factValue}>{children}</dd>
+    </div>
+  ) : null
+}
+
+const ArticleIntro = ({ title, meta }: IntroProps) => {
   return (
     <>
       <header className={styles.container + " centered"}>
-        <h1
-          className={styles.title}
-          style={{
-            color: themeColor
-          } as React.CSSProperties}
-          >
+        <h1 className={styles.title}>
           {title}
         </h1>
         <small>
           {<DateFormatter dateString={meta.date} />}
         </small>
-      
+
         <ul className={styles.meta}>
           {meta.client && (
             <MetaItem label="For">
-              <span className={styles.client}>
-                {logos}
-                <a href={meta.client_url}>{meta.client}</a>
-              </span>
+              <a href={meta.client_url}>{meta.client}</a>
             </MetaItem>
           )}
           <MetaItem label="Role">{meta.role}</MetaItem>

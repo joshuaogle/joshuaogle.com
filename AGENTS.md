@@ -54,8 +54,21 @@ imported as React components through SVGR, configured in `next.config.js`.
   so a missing file fails the build.
 - Motion (autoplay video, pencil drawing, hover lifts) is skipped for `prefers-reduced-motion`.
 - Case study images and videos go through `<Example>` (`components/example.tsx`), shown
-  plainly with a hairline edge; company and product logos come from
+  plainly with a hairline edge. It places a figure by its images' size: big photos run
+  edge to edge, big screens and rows of related images break out wider than the text,
+  and small or tall captures stay in the column. Company and product logos come from
   `lib/case-studies.ts` and render through `components/logo-stack.tsx`.
+- Case study pages share one structure (see `DESIGN.md`): `<Intro>` with `kicker` and
+  `dek`, then inside `<div className="article-body centered case-study">` the hero
+  `<Example>`, sections with a `.section-title` eyebrow and an `h2`, and the parts built
+  as components: `RoleSplit`, `Findings`, `PullQuote`, `Outcomes` and `NextCaseStudy`.
+  Their styles are in `styles/_case-study.css` and the components' modules; add
+  `className="wide"` to break something out of the text column. Bracketed text is a
+  placeholder for copy that hasn't been written yet.
+- Project title colors come from `titleColors()` in `lib/color.ts`, set per theme by
+  `components/case-study-theme.tsx` as `--theme-color-title`. Light paper never gets a
+  darkened primary: give a brand whose primary fails there a `colorSecondary`, or it
+  falls back to ink. A test checks every case study passes AA in both themes.
 - Text in a brand color on a project's colors goes through `readableOn()` in
   `lib/color.ts`, which lightens it just enough to pass WCAG contrast.
 - Type sizes: text other than headings is sized in rem (or the `--*-font-size`

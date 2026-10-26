@@ -11,6 +11,8 @@ import { openGraphDefaults } from './site'
 
 export type CaseStudyTheme = {
   colorPrimary: string
+  // The brand's second color, for titles on light paper when the primary doesn't read there
+  colorSecondary?: string
   colorBGLight: string
   colorBGDark: string
   colorHeading: string
@@ -31,11 +33,20 @@ export type CaseStudy = {
   title: string
   name: string
   description?: string
+  // One line under the title: what Joshua did and what changed
+  dek: string
   meta: {
     date: string
+    // The span of the work, like "2017–2021", shown in place of the date when known
+    years?: string
+    // The kind of product, like "Enterprise security"
+    field?: string
     role: string
     time: string
     team: string
+    // What the work covered, and who it was for
+    scope: string
+    users: string
     client: string
     client_url: string
   }
@@ -52,11 +63,14 @@ const transparentSessions: CaseStudy = {
   pageTitle: 'Boundary Transparent Sessions',
   title: "Transparent Sessions",
   name: "Boundary",
+  dek: "[One line: what you did and what changed]",
   meta: {
     date: "2024",
     role: "Product Design Lead",
     time: "3 years",
     team: "3 Designers, 30+ Engineers",
+    scope: "[What the work covered]",
+    users: "[Who it was for]",
     client: "HashiCorp",
     client_url: "http://boundaryproject.io"
   },
@@ -77,11 +91,14 @@ const sessionRecording: CaseStudy = {
   pageTitle: 'Boundary Session Recording',
   title: "Session Recording",
   name: "Boundary",
+  dek: "[One line: what you did and what changed]",
   meta: {
     date: "2023",
     role: "Product Design Lead",
     time: "3 years",
     team: "3 Designers, 30+ Engineers",
+    scope: "[What the work covered]",
+    users: "[Who it was for]",
     client: "HashiCorp",
     client_url: "http://boundaryproject.io"
   },
@@ -101,18 +118,24 @@ const vault: CaseStudy = {
   company: { name: 'HashiCorp', src: '/images/timeline-hashicorp.svg' },
   product: { name: 'Vault', src: '/images/case-studies/case-study-logo-vault.svg', color: 'rgb(255, 207, 37)', glyph: '#000000' },
   pageTitle: 'Vault',
-  title: "Keeping your secrets safe",
+  title: "Keeping the cloud’s secrets",
   name: "Vault",
+  dek: "How I led design for Vault’s first web UI and its launch as a managed cloud service, making secrets management usable by the people who run it.",
   meta: {
     date: "2021",
+    years: "2017–2021",
+    field: "Enterprise security",
     role: "Product Design Lead",
     time: "4 years",
     team: "2 Designers, 30+ Engineers",
+    scope: "Vault Web UI, UI Guide, HCP Vault",
+    users: "Security, platform & compliance engineers",
     client: "HashiCorp",
     client_url: "http://vaultproject.io"
   },
   theme: {
     colorPrimary: "rgb(255, 207, 37)",
+    colorSecondary: "#000000",
     colorBGLight: "#272C31",
     colorBGDark: "#000",
     colorHighlight: "rgb(96, 212, 220)",
@@ -128,11 +151,14 @@ const structure: CaseStudy = {
   pageTitle: 'Structure Design System',
   title: "Structure Design System",
   name: "Structure",
+  dek: "[One line: what you did and what changed]",
   meta: {
     date: "2020",
     role: "Design System Lead",
     time: "4 years",
     team: "12 Designers",
+    scope: "[What the work covered]",
+    users: "[Who it was for]",
     client: "HashiCorp",
     client_url: "http://hashicorp.com",
   },
@@ -153,11 +179,14 @@ const sharespost: CaseStudy = {
   pageTitle: 'Sharespost',
   title: "Securities made simple",
   name: "Sharespost",
+  dek: "[One line: what you did and what changed]",
   meta: {
     date: "2016",
     role: "Design & Front-End",
     time: "9 months",
     team: "2 Designers, 3 Developers",
+    scope: "[What the work covered]",
+    users: "[Who it was for]",
     client: "Sharespost",
     client_url: "http://sharespost.com",
   },
@@ -179,12 +208,15 @@ const armada: CaseStudy = {
   pageTitle: 'Armada',
   title: "Tracking the whole fleet",
   name: "Armada",
+  dek: "[One line: what you did and what changed]",
   description: "I co-founded a consultancy in OKC and led design for a team of seven. We helped Armada create a world class fleet management and tracking app.",
   meta: {
     date: "2015",
     role: "Brand & Design",
     time: "1 year",
     team: "1 Designer, 1 Developer",
+    scope: "[What the work covered]",
+    users: "[Who it was for]",
     client: "Armada Telematics",
     client_url: "http://armadatracking.com"
   },
@@ -218,6 +250,17 @@ export function getCaseStudy(slug: string) {
 
 export function caseStudyHref(study: CaseStudy) {
   return `/work/${study.slug}`
+}
+
+// The line over a case study's title: the product, the kind of product, and when
+export function caseStudyKicker({ name, meta }: CaseStudy) {
+  const product = meta.client.includes(name) ? meta.client : `${meta.client} ${name}`
+  return [product, meta.field, meta.years ?? meta.date].filter(Boolean).join(' · ')
+}
+
+// The one after it in the home page order, back to the first after the last
+export function nextCaseStudy(study: CaseStudy) {
+  return caseStudies[(caseStudies.indexOf(study) + 1) % caseStudies.length]
 }
 
 export function caseStudyMetadata(study: CaseStudy): Metadata {

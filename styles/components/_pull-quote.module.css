@@ -1,0 +1,56 @@
+.pullQuote {
+  margin: var(--larger-spacing) 0;
+  padding: 0;
+}
+
+/* Undoes the site-wide blockquote: no faint giant mark behind it */
+.quote {
+  margin: 0;
+  font-size: inherit;
+  font-style: normal;
+}
+
+.quote::before {
+  content: none;
+}
+
+.quote p {
+  position: relative;
+  margin: 0;
+  color: var(--text-color);
+  font-family: var(--heading-font);
+  font-size: calc(2.1 * var(--heading-unit));
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+/* The opening mark hangs in the margin, so the quote's left edge stays on the text's */
+.quote p::before {
+  content: "“";
+  position: absolute;
+  top: -0.12em;
+  right: 100%;
+  padding-right: 0.06em;
+  color: var(--theme-color-title);
+  font-size: 2em;
+  line-height: 1;
+}
+
+.quote p::after {
+  content: "”";
+}
+
+.by {
+  margin: var(--small-spacing) 0 0;
+  color: var(--readable-muted-color);
+  font-family: var(--sans-serif);
+  font-size: var(--small-font-size);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: normal;
+}
+
+.by::before {
+  content: "— ";
+}

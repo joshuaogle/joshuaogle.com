@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { contrast, parseColor, readableOn } from './color'
+import { INK, contrast, parseColor, readableOn, titleColors } from './color'
 
 describe('parseColor', () => {
   it('reads hex and rgb() strings', () => {
@@ -33,5 +33,23 @@ describe('readableOn', () => {
     const result = readableOn('rgb(92, 78, 229)', '#272C38', 4.8)
     expect(contrast(parseColor(result), parseColor('#272C38'))).toBeGreaterThanOrEqual(4.8)
     expect(result).toBe('rgb(149, 140, 238)')
+  })
+})
+
+describe('titleColors', () => {
+  it('uses the primary on light paper when it passes', () => {
+    expect(titleColors({ primary: 'rgb(92, 78, 229)', darkBackground: '#272C38' }).light).toBe('rgb(92, 78, 229)')
+  })
+
+  it("falls back to the brand's secondary, never a darkened primary", () => {
+    expect(titleColors({ primary: 'rgb(255, 207, 37)', secondary: '#000000', darkBackground: '#272C31' }).light).toBe('#000000')
+  })
+
+  it('falls back to ink when there is no secondary', () => {
+    expect(titleColors({ primary: '#00B7F1', darkBackground: '#2A254A' }).light).toBe(INK)
+  })
+
+  it('keeps the primary on a dark background when it passes', () => {
+    expect(titleColors({ primary: 'rgb(255, 207, 37)', darkBackground: '#272C31' }).dark).toBe('rgb(255, 207, 37)')
   })
 })

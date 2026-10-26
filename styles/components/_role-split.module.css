@@ -1,0 +1,19 @@
+.split {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: var(--base-spacing) var(--large-spacing);
+  margin-top: var(--large-spacing);
+}
+
+/* Each list opens on a strong rule, like a magazine sidebar */
+.column {
+  padding-top: var(--small-spacing);
+  border-top: 1px solid var(--rule-color);
+}
+
+.column ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--smallest-spacing);
+  margin: 0 0 0 var(--small-spacing);
+}

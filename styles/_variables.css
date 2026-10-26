@@ -193,6 +193,13 @@
   --surface-opacity: 0.25;
   --surface-opacity-hover: 0.4;
   --muted-color: rgba(255, 255, 255, 0.33);
+  /* Secondary text and links that clear WCAG AA (4.5:1) on every project's background.
+     Case studies use these; nothing there is set lighter than weight 400 either. */
+  --readable-muted-color: var(--neutral-400);
+  --readable-action-color: var(--cyan-500);
+  /* Thin rules between parts of a page: a faint one, and a strong one that opens a section */
+  --hairline-color: color-mix(in srgb, var(--text-color) 22%, transparent);
+  --rule-color: color-mix(in srgb, var(--text-color) 75%, transparent);
   --pencil-graphite: var(--neutral-300);      /* light graphite reads like silver pencil on dark paper */
   --pencil-construction: var(--neutral-300);
   --shadow-o-0: 0;
@@ -207,6 +214,8 @@ html[data-prefers-color-scheme="light"] {
   --text-color: var(--neutral-700);
   --theme-color-heading: var(--theme-color-bg-start);
   --muted-color: rgba(0, 0, 0, 0.33);
+  --readable-muted-color: #625A53;
+  --readable-action-color: #195FA0;
   --pencil-graphite: var(--neutral-700);
   --pencil-construction: var(--neutral-700);
   --background-start: var(--neutral-100);
