@@ -61,10 +61,11 @@ imported as React components through SVGR, configured in `next.config.js`.
 - Case study pages share one structure (see `DESIGN.md`): `<Intro>` with `kicker` and
   `dek`, then inside `<div className="article-body centered case-study">` the hero
   `<Example>`, sections with a `.section-title` eyebrow and an `h2`, and the parts built
-  as components: `RoleSplit`, `Findings`, `PullQuote`, `Outcomes` and `NextCaseStudy`.
-  Their styles are in `styles/_case-study.css` and the components' modules; add
-  `className="wide"` to break something out of the text column. Bracketed text is a
-  placeholder for copy that hasn't been written yet.
+  as components: `RoleSplit`, `Findings`, `PullQuote`, `Stats`, `Outcomes` and
+  `NextCaseStudy`. Their styles are in `styles/_case-study.css` and the components'
+  modules; add `className="wide"` to break something out of the text column. A page
+  leaves out any part it has no real content for yet (no placeholder sections); Vault's
+  bracketed text marks copy still to write. Numbers go in `Stats` as text, not in images.
 - Project title colors come from `titleColors()` in `lib/color.ts`, set per theme by
   `components/case-study-theme.tsx` as `--theme-color-title`. Light paper never gets a
   darkened primary: give a brand whose primary fails there a `colorSecondary`, or it

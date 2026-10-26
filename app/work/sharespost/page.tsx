@@ -3,9 +3,6 @@ import CaseStudyTheme from '@/components/case-study-theme'
 import Intro from '@/components/intro'
 import LogoStack from '@/components/logo-stack'
 import Example from '@/components/example'
-import RoleSplit from '@/components/role-split'
-import Findings from '@/components/findings'
-import Outcomes from '@/components/outcomes'
 import NextCaseStudy from '@/components/next-case-study'
 import { caseStudyKicker, caseStudyMetadata, getCaseStudy } from '@/lib/case-studies'
 
@@ -30,7 +27,7 @@ export default function SharespostCaseStudy() {
       <div className="article-body centered case-study">
         <Example
           images={["case-studies/sharespost-home.png"]}
-          caption="[Caption: the shipped product]"
+          caption="The Sharespost home page"
         />
 
         <section>
@@ -61,18 +58,6 @@ export default function SharespostCaseStudy() {
             It would show news stories relevant to companies they have invested in or are watching.
             And most importantly, it would make it easy to let your broker know that you are interested in acquiring or selling stock in these companies.
           </p>
-        </section>
-
-        <section>
-          <div className="section-title">My role</div>
-          <h2>[What you were responsible for]</h2>
-          <p>
-            [One or two sentences on your role and who you worked with.]
-          </p>
-          <RoleSplit
-            led={['[What you owned]', '[What you led]', '[What you decided]']}
-            partners={['[Partner: what you did together]', '[Partner: what you did together]']}
-          />
         </section>
 
         <section>
@@ -156,33 +141,6 @@ export default function SharespostCaseStudy() {
             They could now easily edit company information, select opportunities for individual clients, and add items to the news feed from one interface.
             <mark>This made their jobs much easier</mark> and they were excited to start using it.
           </p>
-        </section>
-
-        <section>
-          <div className="section-title">Findings &amp; decisions</div>
-          <h2>What we learned</h2>
-          <Findings
-            items={[
-              { hypothesis: '[What you believed going in]', verdict: 'confirmed', learning: '[What you learned]', decision: '[What you did about it]' },
-              { hypothesis: '[What you believed going in]', verdict: 'disproved', learning: '[What you learned]', decision: '[What you did about it]' },
-              { hypothesis: '[What you believed going in]', verdict: 'new', learning: '[What you learned]', decision: '[What you did about it]' },
-            ]}
-          />
-        </section>
-
-        <section>
-          <div className="section-title">Outcomes</div>
-          <h2>What changed</h2>
-          <Outcomes
-            results={[
-              { value: '[00%]', label: '[User metric]' },
-              { value: '[00]', label: '[Business metric]' },
-              { value: '[00]', label: '[Another result]' },
-            ]}
-            customers={['[Result for customers]']}
-            business={['[Result for the business]']}
-            organization={['[Reuse across products, or people you grew]']}
-          />
         </section>
 
         <section>

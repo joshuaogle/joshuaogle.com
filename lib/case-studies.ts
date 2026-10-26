@@ -34,7 +34,7 @@ export type CaseStudy = {
   name: string
   description?: string
   // One line under the title: what Joshua did and what changed
-  dek: string
+  dek?: string
   meta: {
     date: string
     // The span of the work, like "2017–2021", shown in place of the date when known
@@ -45,8 +45,8 @@ export type CaseStudy = {
     time: string
     team: string
     // What the work covered, and who it was for
-    scope: string
-    users: string
+    scope?: string
+    users?: string
     client: string
     client_url: string
   }
@@ -63,14 +63,11 @@ const transparentSessions: CaseStudy = {
   pageTitle: 'Boundary Transparent Sessions',
   title: "Transparent Sessions",
   name: "Boundary",
-  dek: "[One line: what you did and what changed]",
   meta: {
     date: "2024",
     role: "Product Design Lead",
     time: "3 years",
     team: "3 Designers, 30+ Engineers",
-    scope: "[What the work covered]",
-    users: "[Who it was for]",
     client: "HashiCorp",
     client_url: "http://boundaryproject.io"
   },
@@ -91,14 +88,11 @@ const sessionRecording: CaseStudy = {
   pageTitle: 'Boundary Session Recording',
   title: "Session Recording",
   name: "Boundary",
-  dek: "[One line: what you did and what changed]",
   meta: {
     date: "2023",
     role: "Product Design Lead",
     time: "3 years",
     team: "3 Designers, 30+ Engineers",
-    scope: "[What the work covered]",
-    users: "[Who it was for]",
     client: "HashiCorp",
     client_url: "http://boundaryproject.io"
   },
@@ -151,14 +145,11 @@ const structure: CaseStudy = {
   pageTitle: 'Structure Design System',
   title: "Structure Design System",
   name: "Structure",
-  dek: "[One line: what you did and what changed]",
   meta: {
     date: "2020",
     role: "Design System Lead",
     time: "4 years",
     team: "12 Designers",
-    scope: "[What the work covered]",
-    users: "[Who it was for]",
     client: "HashiCorp",
     client_url: "http://hashicorp.com",
   },
@@ -179,14 +170,11 @@ const sharespost: CaseStudy = {
   pageTitle: 'Sharespost',
   title: "Securities made simple",
   name: "Sharespost",
-  dek: "[One line: what you did and what changed]",
   meta: {
     date: "2016",
     role: "Design & Front-End",
     time: "9 months",
     team: "2 Designers, 3 Developers",
-    scope: "[What the work covered]",
-    users: "[Who it was for]",
     client: "Sharespost",
     client_url: "http://sharespost.com",
   },
@@ -208,15 +196,12 @@ const armada: CaseStudy = {
   pageTitle: 'Armada',
   title: "Tracking the whole fleet",
   name: "Armada",
-  dek: "[One line: what you did and what changed]",
   description: "I co-founded a consultancy in OKC and led design for a team of seven. We helped Armada create a world class fleet management and tracking app.",
   meta: {
     date: "2015",
     role: "Brand & Design",
     time: "1 year",
     team: "1 Designer, 1 Developer",
-    scope: "[What the work covered]",
-    users: "[Who it was for]",
     client: "Armada Telematics",
     client_url: "http://armadatracking.com"
   },

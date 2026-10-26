@@ -3,9 +3,6 @@ import CaseStudyTheme from '@/components/case-study-theme'
 import Intro from '@/components/intro'
 import LogoStack from '@/components/logo-stack'
 import Example from '@/components/example'
-import RoleSplit from '@/components/role-split'
-import Findings from '@/components/findings'
-import Outcomes from '@/components/outcomes'
 import NextCaseStudy from '@/components/next-case-study'
 import { caseStudyKicker, caseStudyMetadata, getCaseStudy } from '@/lib/case-studies'
 
@@ -59,18 +56,6 @@ export default function ArmadaCaseStudy() {
         </section>
 
         <section>
-          <div className="section-title">My role</div>
-          <h2>[What you were responsible for]</h2>
-          <p>
-            [One or two sentences on your role and who you worked with.]
-          </p>
-          <RoleSplit
-            led={['[What you owned]', '[What you led]', '[What you decided]']}
-            partners={['[Partner: what you did together]', '[Partner: what you did together]']}
-          />
-        </section>
-
-        <section>
           <div className="section-title">The solution</div>
           <h2>Getting the whole picture</h2>
           <p>
@@ -110,33 +95,6 @@ export default function ArmadaCaseStudy() {
           <Example
             images={["case-studies/armada-trips.png"]}
             caption="Trip history"
-          />
-        </section>
-
-        <section>
-          <div className="section-title">Findings &amp; decisions</div>
-          <h2>What we learned</h2>
-          <Findings
-            items={[
-              { hypothesis: '[What you believed going in]', verdict: 'confirmed', learning: '[What you learned]', decision: '[What you did about it]' },
-              { hypothesis: '[What you believed going in]', verdict: 'disproved', learning: '[What you learned]', decision: '[What you did about it]' },
-              { hypothesis: '[What you believed going in]', verdict: 'new', learning: '[What you learned]', decision: '[What you did about it]' },
-            ]}
-          />
-        </section>
-
-        <section>
-          <div className="section-title">Outcomes</div>
-          <h2>What changed</h2>
-          <Outcomes
-            results={[
-              { value: '[00%]', label: '[User metric]' },
-              { value: '[00]', label: '[Business metric]' },
-              { value: '[00]', label: '[Another result]' },
-            ]}
-            customers={['[Result for customers]']}
-            business={['[Result for the business]']}
-            organization={['[Reuse across products, or people you grew]']}
           />
         </section>
 

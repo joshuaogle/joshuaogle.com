@@ -6,7 +6,6 @@ import Intro from '@/components/intro'
 import LogoStack from '@/components/logo-stack'
 import Example from '@/components/example'
 import RoleSplit from '@/components/role-split'
-import Findings from '@/components/findings'
 import Outcomes from '@/components/outcomes'
 import NextCaseStudy from '@/components/next-case-study'
 import { caseStudyKicker, caseStudyMetadata, getCaseStudy } from '@/lib/case-studies'
@@ -72,10 +71,7 @@ export default function StructureCaseStudy() {
 
         <section>
           <div className="section-title">My role</div>
-          <h2>[What you were responsible for]</h2>
-          <p>
-            [One or two sentences on your role and who you worked with.]
-          </p>
+          <h2>What I led</h2>
           <RoleSplit
             led={[
               'The Design System Working Group, with designers from every product',
@@ -83,7 +79,6 @@ export default function StructureCaseStudy() {
               'The migration from Sketch to Figma, all 300 components',
               'A walkthrough and Q&A to teach the new system',
             ]}
-            partners={['[Partner: what you did together]', '[Partner: what you did together]']}
           />
         </section>
 
@@ -269,18 +264,6 @@ export default function StructureCaseStudy() {
         </section>
 
         <section>
-          <div className="section-title">Findings &amp; decisions</div>
-          <h2>What we learned</h2>
-          <Findings
-            items={[
-              { hypothesis: '[What you believed going in]', verdict: 'confirmed', learning: '[What you learned]', decision: '[What you did about it]' },
-              { hypothesis: '[What you believed going in]', verdict: 'disproved', learning: '[What you learned]', decision: '[What you did about it]' },
-              { hypothesis: '[What you believed going in]', verdict: 'new', learning: '[What you learned]', decision: '[What you did about it]' },
-            ]}
-          />
-        </section>
-
-        <section>
           <div className="section-title">Outcomes</div>
           <h2>What changed</h2>
           <Outcomes
@@ -289,9 +272,6 @@ export default function StructureCaseStudy() {
               { value: '6', label: 'enterprise products on one design system' },
               { value: '120+', label: 'hand-crafted icons for the product suite' },
             ]}
-            customers={['[Result for customers]']}
-            business={['[Result for the business]']}
-            organization={['[Reuse across products, or people you grew]']}
           />
         </section>
 

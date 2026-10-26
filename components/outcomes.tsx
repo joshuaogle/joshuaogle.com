@@ -1,32 +1,32 @@
+import Stats, { type Stat } from './stats'
 import styles from '../styles/components/_outcomes.module.css'
 
 type Props = {
   // Headline numbers, each with a line saying what it counts
-  results: { value: string, label: string }[]
-  // What changed, for each audience
-  customers: React.ReactNode[]
-  business: React.ReactNode[]
-  organization: React.ReactNode[]
+  results?: Stat[]
+  // What changed, for each audience. A group with nothing in it is left out.
+  customers?: React.ReactNode[]
+  business?: React.ReactNode[]
+  organization?: React.ReactNode[]
 }
 
 // What changed: the numbers first, for a skimmer, then the results for customers, for the
 // business, and for the organization (reuse across products, people grown)
-const Outcomes = ({ results, customers, business, organization }: Props) => {
+const Outcomes = ({ results = [], customers = [], business = [], organization = [] }: Props) => {
+  const groups = [
+    { title: 'For customers', items: customers },
+    { title: 'For the business', items: business },
+    { title: 'For the organization', items: organization },
+  ].filter(group => group.items.length)
+
   return (
     <>
-      <ul className={`${styles.results} wide`} aria-label="Results">
-        {results.map(({ value, label }) => (
-          <li key={label} className={styles.result}>
-            <span className={styles.value}>{value}</span>
-            <span className={styles.resultLabel}>{label}</span>
-          </li>
-        ))}
-      </ul>
-      <div className={`${styles.groups} wide`}>
-        <Group title="For customers" items={customers} />
-        <Group title="For the business" items={business} />
-        <Group title="For the organization" items={organization} />
-      </div>
+      {results.length > 0 && <Stats items={results} />}
+      {groups.length > 0 && (
+        <div className={`${styles.groups} wide`}>
+          {groups.map(group => <Group key={group.title} {...group} />)}
+        </div>
+      )}
     </>
   )
 }

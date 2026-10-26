@@ -4,7 +4,6 @@ import Intro from '@/components/intro'
 import LogoStack from '@/components/logo-stack'
 import Example from '@/components/example'
 import RoleSplit from '@/components/role-split'
-import Findings from '@/components/findings'
 import Outcomes from '@/components/outcomes'
 import NextCaseStudy from '@/components/next-case-study'
 import { caseStudyKicker, caseStudyMetadata, getCaseStudy } from '@/lib/case-studies'
@@ -80,7 +79,6 @@ export default function SessionRecordingCaseStudy() {
               'Design’s seat in roadmap planning and strategy',
               'Growing the team from one to three designers',
               'The research plan for session recording',
-              '[What else you owned]',
             ]}
             partners={[
               'Backend lead: the waveform timeline visualization',
@@ -136,18 +134,6 @@ export default function SessionRecordingCaseStudy() {
             for partial recordings when possible. I helped with these discussions
             to think through edge cases and learn more about the SSH spec.
           </p>
-        </section>
-
-        <section>
-          <div className="section-title">Findings &amp; decisions</div>
-          <h2>What we learned from research</h2>
-          <Findings
-            items={[
-              { hypothesis: '[What you believed going in]', verdict: 'confirmed', learning: '[What you learned]', decision: '[What you did about it]' },
-              { hypothesis: '[What you believed going in]', verdict: 'disproved', learning: '[What you learned]', decision: '[What you did about it]' },
-              { hypothesis: '[What you believed going in]', verdict: 'new', learning: '[What you learned]', decision: '[What you did about it]' },
-            ]}
-          />
         </section>
 
         <section>
@@ -217,17 +203,13 @@ export default function SessionRecordingCaseStudy() {
           <Outcomes
             results={[
               { value: 'Gartner', label: 'recognition for Boundary in the PAM category' },
-              { value: '[00%]', label: '[User metric]' },
-              { value: '[00]', label: '[Business metric]' },
             ]}
-            customers={['[Result for customers]']}
             business={[
               'Enterprise customers including several big banks, Takeda Pharmaceuticals and DuckDuckGo',
               'Boundary became a “deal leader” for HashiCorp’s product suite',
             ]}
             organization={[
               'Design became an equal partner in Boundary’s product strategy',
-              '[Reuse across products, or people you grew]',
             ]}
           />
         </section>
@@ -257,14 +239,6 @@ export default function SessionRecordingCaseStudy() {
             needs. <mark>This positions us perfectly for the next phase of growth</mark> 
             as more organizations adopt dynamic infrastructure and need comprehensive security 
             solutions that are both powerful and approachable.
-          </p>
-        </section>
-
-        <section>
-          <div className="section-title">Reflection</div>
-          <h2>What I’d do differently</h2>
-          <p>
-            [Two or three sentences. A real lesson, what surprised you, and how it shapes how you lead now.]
           </p>
         </section>
 

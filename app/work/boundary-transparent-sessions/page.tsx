@@ -3,9 +3,7 @@ import CaseStudyTheme from '@/components/case-study-theme'
 import Intro from '@/components/intro'
 import LogoStack from '@/components/logo-stack'
 import Example from '@/components/example'
-import RoleSplit from '@/components/role-split'
-import Findings from '@/components/findings'
-import Outcomes from '@/components/outcomes'
+import Stats from '@/components/stats'
 import NextCaseStudy from '@/components/next-case-study'
 import { caseStudyKicker, caseStudyMetadata, getCaseStudy } from '@/lib/case-studies'
 
@@ -30,7 +28,7 @@ export default function TransparentSessionsCaseStudy() {
       <div className="article-body centered case-study">
         <Example
           images={["case-studies/boundary-ts-prototype-screen.png"]}
-          caption="[Caption: the shipped product]"
+          caption="A prototype of Transparent Sessions"
         />
 
         <section>
@@ -61,25 +59,6 @@ export default function TransparentSessionsCaseStudy() {
             Boundary from a security tool into essential infrastructure that IT 
             teams could deploy across their organizations.
           </p>
-        </section>
-
-        <section>
-          <div className="section-title">My role</div>
-          <h2>[What you were responsible for]</h2>
-          <p>
-            [One or two sentences on your role and who you worked with.]
-          </p>
-          <RoleSplit
-            led={[
-              'A prototype simulating switching between apps',
-              'User testing across several workflows',
-              '[What else you owned]',
-            ]}
-            partners={[
-              'Engineering: compatibility testing with ZScaler and Cisco AnyConnect',
-              '[Partner: what you did together]',
-            ]}
-          />
         </section>
 
         <section>
@@ -164,11 +143,14 @@ export default function TransparentSessionsCaseStudy() {
             caption="The team loves hearing about research results"
           />
 
-          <Example
-            images={[
-              "case-studies/boundary-ts-stats.png"
+          <Stats
+            label="Research results"
+            items={[
+              { value: '100%', label: 'thought that aliases were easy to configure and use' },
+              { value: '50%', label: <>stopped to ask about the <code>-name</code> and <code>-alias</code> flags in <code>alias create</code></> },
+              { value: '80%', label: 'needed more help to know how and where to use aliases' },
+              { value: '30%', label: <>thought <code>alias.project</code> suffixes would help organize their large org</> },
             ]}
-            caption="The team loves hearing about research results"
           />
 
           <p>
@@ -178,18 +160,6 @@ export default function TransparentSessionsCaseStudy() {
             it becomes an invisible layer that <mark>just handles secure access 
             without anyone having to think about it</mark>.
           </p>
-        </section>
-
-        <section>
-          <div className="section-title">Findings &amp; decisions</div>
-          <h2>What we learned</h2>
-          <Findings
-            items={[
-              { hypothesis: '[What you believed going in]', verdict: 'confirmed', learning: '[What you learned]', decision: '[What you did about it]' },
-              { hypothesis: '[What you believed going in]', verdict: 'disproved', learning: '[What you learned]', decision: '[What you did about it]' },
-              { hypothesis: '[What you believed going in]', verdict: 'new', learning: '[What you learned]', decision: '[What you did about it]' },
-            ]}
-          />
         </section>
 
         <section>
@@ -223,32 +193,6 @@ export default function TransparentSessionsCaseStudy() {
             into the background while maintaining rigorous controls, organizations 
             can finally achieve both security and usability</mark>. This positions 
             Boundary as a pioneer in the next generation of security infrastructure.
-          </p>
-        </section>
-
-        <section>
-          <div className="section-title">Outcomes</div>
-          <h2>What changed</h2>
-          <Outcomes
-            results={[
-              { value: '[00%]', label: '[User metric]' },
-              { value: '[00]', label: '[Business metric]' },
-              { value: '[00]', label: '[Another result]' },
-            ]}
-            customers={[
-              'People reach protected tools at familiar addresses, without launching a client first',
-              '[Result for customers]',
-            ]}
-            business={['[Result for the business]']}
-            organization={['[Reuse across products, or people you grew]']}
-          />
-        </section>
-
-        <section>
-          <div className="section-title">Reflection</div>
-          <h2>What I’d do differently</h2>
-          <p>
-            [Two or three sentences. A real lesson, what surprised you, and how it shapes how you lead now.]
           </p>
         </section>
 

@@ -1,17 +1,17 @@
 import styles from '../styles/components/_role-split.module.css'
 
 type Props = {
-  // What Joshua owned, and what was done together with partners
+  // What Joshua owned, and what was done together with partners (left out when empty)
   led: React.ReactNode[]
-  partners: React.ReactNode[]
+  partners?: React.ReactNode[]
 }
 
 // Two lists side by side, so a reader can tell Joshua's own work from the team's
-const RoleSplit = ({ led, partners }: Props) => {
+const RoleSplit = ({ led, partners = [] }: Props) => {
   return (
     <div className={styles.split}>
       <List title="I led" items={led} />
-      <List title="With my partners" items={partners} />
+      {partners.length > 0 && <List title="With my partners" items={partners} />}
     </div>
   )
 }
