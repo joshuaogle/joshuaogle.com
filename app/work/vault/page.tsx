@@ -5,6 +5,7 @@ import LogoStack from '@/components/logo-stack'
 import Example from '@/components/example'
 import RoleSplit from '@/components/role-split'
 import Findings from '@/components/findings'
+import Chapters from '@/components/chapters'
 import PullQuote from '@/components/pull-quote'
 import Outcomes from '@/components/outcomes'
 import NextCaseStudy from '@/components/next-case-study'
@@ -32,6 +33,14 @@ export default function VaultCaseStudy() {
         <Example
           images={["case-studies/hcpvault-overview.png"]}
           caption="HCP Vault cluster overview, shipped January 2021"
+        />
+
+        <Chapters
+          chapters={[
+            { id: 'web-ui', label: 'Vault Web UI' },
+            { id: 'ui-guide', label: 'UI Guide' },
+            { id: 'hcp-vault', label: 'HCP Vault' },
+          ]}
         />
 
         <section>
@@ -140,7 +149,7 @@ export default function VaultCaseStudy() {
           />
         </section>
 
-        <section>
+        <section id="web-ui">
           <div className="section-title">Vault Web UI</div>
           <h2>Launching Vault 1.0 at HashiConf</h2>
           <p>
@@ -171,7 +180,7 @@ export default function VaultCaseStudy() {
           />
         </section>
 
-        <section>
+        <section id="ui-guide">
           <div className="section-title">UI Guide</div>
           <h2>Everybody could use a Guide</h2>
           <p>
@@ -199,7 +208,7 @@ export default function VaultCaseStudy() {
           />
         </section>
 
-        <section>
+        <section id="hcp-vault">
           <div className="section-title">HCP Vault</div>
           <h2>Making easy even easier</h2>
           <p>

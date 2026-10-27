@@ -1,0 +1,42 @@
+.chapters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--smaller-spacing) var(--small-spacing);
+  margin-top: var(--large-spacing);
+  padding-top: var(--small-spacing);
+  border-top: 1px solid var(--hairline-color);
+}
+
+.chapters :global(.label) {
+  margin: 0;
+  color: var(--readable-muted-color);
+}
+
+.chapters ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--smaller-spacing) var(--base-spacing);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chapters li::before {
+  content: none;
+}
+
+.chapters a {
+  color: var(--text-color);
+  font-family: var(--heading-font);
+  font-size: calc(1.2 * var(--heading-unit));
+  font-weight: var(--font-weight-semibold);
+  text-decoration: underline;
+  text-decoration-color: var(--hairline-color);
+  text-underline-offset: 0.2em;
+}
+
+.chapters a:hover {
+  color: var(--theme-color-title);
+  text-decoration-color: currentColor;
+}

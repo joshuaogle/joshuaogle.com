@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import type { StaticImageData } from 'next/image'
-import boundaryTsPrototypeScreenPreview from '@/public/images/case-studies/boundary-ts-prototype-screen.png'
 import boundarySrRdpPreview from '@/public/images/case-studies/boundary-sr-rdp.png'
 import vaultHomePreview from '@/public/images/case-studies/vault-home.png'
 import structureTreePreview from '@/public/images/case-studies/structure-tree.png'
@@ -56,44 +55,25 @@ export type CaseStudy = {
   product?: ProductLogo
 }
 
-const transparentSessions: CaseStudy = {
-  slug: 'boundary-transparent-sessions',
+// Session Recording and Transparent Sessions, told as one story in two chapters. Their old
+// pages (/work/boundary-session-recording, /work/boundary-transparent-sessions) redirect here.
+const boundary: CaseStudy = {
+  slug: 'boundary',
   company: { name: 'HashiCorp', src: '/images/timeline-hashicorp.svg' },
   product: { name: 'Boundary', src: '/images/case-studies/case-study-logo-boundary.svg', color: 'rgb(223, 70, 76)', glyph: '#FFFFFF' },
-  pageTitle: 'Boundary Transparent Sessions',
-  title: "Transparent Sessions",
+  pageTitle: 'Boundary',
+  title: "The best security is invisible",
   name: "Boundary",
+  dek: "How I brought design into Boundary’s leadership, grew the team from one designer to three, and led design for Session Recording and Transparent Sessions.",
   meta: {
-    date: "2024",
-    role: "Product Design Lead",
-    time: "3 years",
+    date: "2025",
+    years: "2021–2025",
+    field: "Privileged access",
+    role: "Staff Product Designer",
+    time: "4 years",
     team: "3 Designers, 30+ Engineers",
-    client: "HashiCorp",
-    client_url: "http://boundaryproject.io"
-  },
-  theme: {
-    colorPrimary: "rgb(223, 70, 76)",
-    colorBGLight: "#252937",
-    colorBGDark: "#0C0C0E",
-    colorHighlight: "rgb(96, 212, 220)",
-    colorHeading: "rgba(255, 255, 255, 0.33)",
-    preview: boundaryTsPrototypeScreenPreview,
-  }
-}
-
-const sessionRecording: CaseStudy = {
-  slug: 'boundary-session-recording',
-  company: { name: 'HashiCorp', src: '/images/timeline-hashicorp.svg' },
-  product: { name: 'Boundary', src: '/images/case-studies/case-study-logo-boundary.svg', color: 'rgb(223, 70, 76)', glyph: '#FFFFFF' },
-  pageTitle: 'Boundary Session Recording',
-  title: "Session Recording",
-  name: "Boundary",
-  dek: "How I brought design into Boundary’s leadership and led design for Session Recording, which helped Boundary earn recognition in Gartner’s PAM category.",
-  meta: {
-    date: "2023",
-    role: "Product Design Lead",
-    time: "3 years",
-    team: "3 Designers, 30+ Engineers",
+    scope: "Session Recording, Transparent Sessions, desktop client",
+    users: "Security, platform & incident response teams",
     client: "HashiCorp",
     client_url: "http://boundaryproject.io"
   },
@@ -218,10 +198,9 @@ const armada: CaseStudy = {
 
 // Strongest first; this is the order the home page shows them in
 export const featuredCaseStudies: CaseStudy[] = [
-  sessionRecording,
+  boundary,
   vault,
   structure,
-  transparentSessions,
 ]
 
 // Consulting work from before HashiCorp, in the older layout. Unlisted: the pages still work

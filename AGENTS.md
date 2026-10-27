@@ -62,7 +62,9 @@ imported as React components through SVGR, configured in `next.config.js`.
   `dek`, then inside `<div className="article-body centered case-study">` the hero
   `<Example>`, sections with a `.section-title` eyebrow and an `h2`, and the parts built
   as components: `RoleSplit`, `Findings`, `PullQuote`, `Stats`, `Outcomes` and
-  `NextCaseStudy`. Their styles are in `styles/_case-study.css` and the components'
+  `NextCaseStudy`. A case study with several projects (Vault, Boundary) tells one story
+  in chapters: the shared context and role once at the top, a `Chapters` contents line
+  under the hero, then a `<section id>` per project with a "Project · Year" eyebrow. Their styles are in `styles/_case-study.css` and the components'
   modules; add `className="wide"` to break something out of the text column. A page
   leaves out any part it has no real content for yet (no placeholder sections); Vault's
   bracketed text marks copy still to write. Numbers go in `Stats` as text, not in images.
