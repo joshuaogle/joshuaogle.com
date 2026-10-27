@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { caseStudies, caseStudyKicker, getCaseStudy, nextCaseStudy } from './case-studies'
+import { caseStudies, caseStudyKicker, caseStudyMetadata, featuredCaseStudies, getCaseStudy, nextCaseStudy, unlistedCaseStudies } from './case-studies'
 import { LIGHT_PAPER, contrast, parseColor, titleColors } from './color'
 
 describe('title colors', () => {
@@ -24,7 +24,19 @@ describe('caseStudyKicker', () => {
 
 describe('nextCaseStudy', () => {
   it('goes back to the first after the last', () => {
-    expect(nextCaseStudy(caseStudies[caseStudies.length - 1])).toBe(caseStudies[0])
-    expect(nextCaseStudy(caseStudies[0])).toBe(caseStudies[1])
+    expect(nextCaseStudy(featuredCaseStudies[featuredCaseStudies.length - 1])).toBe(featuredCaseStudies[0])
+    expect(nextCaseStudy(featuredCaseStudies[0])).toBe(featuredCaseStudies[1])
+  })
+
+  it('never leads to an unlisted case study', () => {
+    caseStudies.forEach(study => expect(unlistedCaseStudies).not.toContain(nextCaseStudy(study)))
+    expect(nextCaseStudy(unlistedCaseStudies[0])).toBe(featuredCaseStudies[0])
+  })
+})
+
+describe('unlisted case studies', () => {
+  it('ask search engines not to index them', () => {
+    unlistedCaseStudies.forEach(study => expect(caseStudyMetadata(study).robots).toEqual({ index: false }))
+    featuredCaseStudies.forEach(study => expect(caseStudyMetadata(study).robots).toBeUndefined())
   })
 })

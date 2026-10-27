@@ -224,13 +224,17 @@ export const featuredCaseStudies: CaseStudy[] = [
   transparentSessions,
 ]
 
-// Consulting work from before HashiCorp, linked from the home page as "Earlier work"
-export const earlierCaseStudies: CaseStudy[] = [
+// Consulting work from before HashiCorp, in the older layout. Unlisted: the pages still work
+// for old links, but nothing on the site links to them and search engines are asked to skip
+// them. Move one up to featuredCaseStudies to list it again.
+export const unlistedCaseStudies: CaseStudy[] = [
   sharespost,
   armada,
 ]
 
-export const caseStudies: CaseStudy[] = [...featuredCaseStudies, ...earlierCaseStudies]
+export const caseStudies: CaseStudy[] = [...featuredCaseStudies, ...unlistedCaseStudies]
+
+export const isListed = (study: CaseStudy) => featuredCaseStudies.includes(study)
 
 export function getCaseStudy(slug: string) {
   const study = caseStudies.find((study) => study.slug === slug)
@@ -250,9 +254,11 @@ export function caseStudyKicker({ name, meta }: CaseStudy) {
   return [product, meta.field, meta.years ?? meta.date].filter(Boolean).join(' · ')
 }
 
-// The one after it in the home page order, back to the first after the last
+// The one after it in the home page order, back to the first after the last. Unlisted
+// case studies lead to the first one.
 export function nextCaseStudy(study: CaseStudy) {
-  return caseStudies[(caseStudies.indexOf(study) + 1) % caseStudies.length]
+  const i = featuredCaseStudies.indexOf(study)
+  return featuredCaseStudies[(i + 1) % featuredCaseStudies.length]
 }
 
 export function caseStudyMetadata(study: CaseStudy): Metadata {
@@ -260,6 +266,7 @@ export function caseStudyMetadata(study: CaseStudy): Metadata {
   return {
     title: study.pageTitle,
     description,
+    ...(!isListed(study) && { robots: { index: false } }),
     openGraph: {
       ...openGraphDefaults,
       type: 'article',
