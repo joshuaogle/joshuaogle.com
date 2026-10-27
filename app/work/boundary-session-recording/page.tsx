@@ -178,7 +178,7 @@ export default function SessionRecordingCaseStudy() {
 
           <Example
             video="case-studies/boundary-sr-recording.mp4"
-            caption="Transparent Sessions in action"
+            caption="Session Recording in action"
           />
 
           <p>

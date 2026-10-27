@@ -52,12 +52,18 @@ export default function TransparentSessionsCaseStudy() {
           />
 
           <p>
-            Our vision was ambitious: what if secure access could be so seamless 
-            that users wouldn't even know they were using it? <mark>Instead of 
-            building another tool that users have to think about, we could create 
-            invisible infrastructure that just works</mark>. This would transform 
-            Boundary from a security tool into essential infrastructure that IT 
+            Our vision was ambitious: what if secure access could be so seamless
+            that users wouldn't even know they were using it? <mark>Instead of
+            building another tool that users have to think about, we could create
+            invisible infrastructure that just works</mark>. This would transform
+            Boundary from a security tool into essential infrastructure that IT
             teams could deploy across their organizations.
+          </p>
+          <p>
+            I led design for Transparent Sessions, working alongside Boundary's
+            product manager and engineers. I built the prototype we tested with,
+            took users through it, and carried the experience from first concept
+            to launch with the team.
           </p>
         </section>
 
@@ -65,12 +71,10 @@ export default function TransparentSessionsCaseStudy() {
           <div className="section-title">Strategic vision</div>
           <h2>Access that just works</h2>
           <p>
-            The key insight came from watching users interact with protected 
-            resources. They didn't want to think about proxy addresses or 
-            connection protocols - they just wanted to access their tools using 
-            familiar URLs. This led to the concept of aliases, allowing users to 
-            create simple nicknames for their targets that work just like regular 
-            web addresses.
+            The key insight was simple: people didn't want to think about proxy
+            addresses or connection protocols. They just wanted to reach their
+            tools using familiar URLs. That led us to aliases, simple nicknames
+            for targets that work just like regular web addresses.
           </p>
 
           <Example
@@ -81,11 +85,9 @@ export default function TransparentSessionsCaseStudy() {
           />
 
           <p>
-            This wasn't just about simplifying URLs - it represented a fundamental 
-            shift in how organizations could approach access management. IT teams 
-            could now configure secure access patterns that would feel completely 
-            natural to their users. <mark>Security could finally get out of the 
-            way while still maintaining complete control</mark>.
+            Aliases changed what IT teams could offer: secure access that feels
+            natural to the people using it. <mark>Security could finally get out
+            of the way while still maintaining complete control</mark>.
           </p>
         </section>
 
@@ -99,6 +101,12 @@ export default function TransparentSessionsCaseStudy() {
             enterprise security tools. We conducted extensive compatibility testing 
             with common enterprise tools like ZScaler and Cisco AnyConnect, 
             ensuring our solution would work reliably in real-world environments.
+          </p>
+          <p>
+            The networking would take time to build, but the experience needed
+            testing now. So I built a prototype that simulated switching between
+            apps, and took users through several workflows to see where they
+            got stuck.
           </p>
 
           <Example
@@ -117,11 +125,10 @@ export default function TransparentSessionsCaseStudy() {
           />
 
           <p>
-            The desktop client needed to handle these connections seamlessly while 
-            maintaining security and performance. Through careful collaboration 
-            between design and engineering teams, we created an architecture that 
-            could manage complex networking operations while presenting a simple, 
-            intuitive interface to users.
+            The desktop client needed to handle these connections seamlessly while
+            maintaining security and performance. Design and engineering worked
+            through it together, so the client could manage complex networking
+            while showing people a simple interface.
           </p>
         </section>
 
@@ -129,18 +136,18 @@ export default function TransparentSessionsCaseStudy() {
           <div className="section-title">User impact</div>
           <h2>From complexity to clarity</h2>
           <p>
-            Early feedback from users validated our approach. One tester described 
-            the alias feature as "magical," noting how it transformed their daily 
-            workflow. IT teams particularly appreciated how it simplified onboarding, 
-            with one admin sharing that "users don't even realize they're using a 
-            security tool - they just know their stuff works."
+            Early feedback validated the approach. One tester described aliases
+            as "magical," noting how it transformed their daily workflow. Admins
+            appreciated how it simplified onboarding, with one sharing that
+            "users don't even realize they're using a security tool - they just
+            know their stuff works."
           </p>
 
           <Example
             images={[
               "case-studies/boundary-ts-quotes.png"
             ]}
-            caption="The team loves hearing about research results"
+            caption="What people said about aliases in testing"
           />
 
           <Stats
@@ -166,10 +173,8 @@ export default function TransparentSessionsCaseStudy() {
           <div className="section-title">Future vision</div>
           <h2>Beyond traditional boundaries</h2>
           <p>
-            Transparent Sessions represents more than just a feature - it's a new 
-            paradigm for how security tools can operate. By making security 
-            invisible, we've opened up possibilities for deeper integration with 
-            enterprise infrastructure and workflows.
+            Making security invisible opened up possibilities for deeper
+            integration with the infrastructure and workflows people already use.
           </p>
 
           <Example
@@ -188,11 +193,10 @@ export default function TransparentSessionsCaseStudy() {
           />
 
           <p>
-            Looking ahead, we're exploring how this approach could extend to other 
-            aspects of infrastructure security. <mark>When security tools can fade 
-            into the background while maintaining rigorous controls, organizations 
-            can finally achieve both security and usability</mark>. This positions 
-            Boundary as a pioneer in the next generation of security infrastructure.
+            The same approach could extend to other parts of infrastructure
+            security. <mark>When security tools can fade into the background while
+            maintaining rigorous controls, organizations can finally have both
+            security and usability</mark>.
           </p>
         </section>
 

@@ -88,6 +88,7 @@ const sessionRecording: CaseStudy = {
   pageTitle: 'Boundary Session Recording',
   title: "Session Recording",
   name: "Boundary",
+  dek: "How I brought design into Boundary’s leadership and led design for Session Recording, which helped Boundary earn recognition in Gartner’s PAM category.",
   meta: {
     date: "2023",
     role: "Product Design Lead",
@@ -117,6 +118,7 @@ const vault: CaseStudy = {
   dek: "How I brought a web UI to Vault, an already popular CLI tool, and led its design through launch as a managed cloud service.",
   meta: {
     date: "2021",
+    years: "2017–2021",
     field: "Enterprise security",
     role: "Product Design Lead",
     time: "4 years",
@@ -214,15 +216,21 @@ const armada: CaseStudy = {
   }
 }
 
-// Newest first; this is the order the home page carousel shows them in
-export const caseStudies: CaseStudy[] = [
-  transparentSessions,
+// Strongest first; this is the order the home page shows them in
+export const featuredCaseStudies: CaseStudy[] = [
   sessionRecording,
   vault,
   structure,
+  transparentSessions,
+]
+
+// Consulting work from before HashiCorp, linked from the home page as "Earlier work"
+export const earlierCaseStudies: CaseStudy[] = [
   sharespost,
   armada,
 ]
+
+export const caseStudies: CaseStudy[] = [...featuredCaseStudies, ...earlierCaseStudies]
 
 export function getCaseStudy(slug: string) {
   const study = caseStudies.find((study) => study.slug === slug)

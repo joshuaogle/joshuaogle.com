@@ -50,7 +50,8 @@ export default function VaultCaseStudy() {
             Vault’s most frequent users aren’t human:
             applications authenticate to it, check their permissions,
             and get back short-lived credentials.
-            Its CLI and API already had a devoted open source following.
+            Its CLI and API already had a devoted open source following,
+            and today HashiCorp’s tools are used by 85% of the Fortune 500.
             So a UI had to earn its place by helping the humans who configure and audit Vault,
             without getting in the way of the machines.
           </p>
@@ -82,12 +83,9 @@ export default function VaultCaseStudy() {
               'In-person research at HashiConf',
               'The UI Guide, from concept to shipped component',
               'The HCP Vault provisioning workflow and dashboard',
-              '[Mentoring the second designer]',
             ]}
             partners={[
               'Product Manager: dozens of customer interviews for HCP Vault',
-              '[Engineering: what you built together]',
-              '[Other partners: docs, support, sales]',
             ]}
           />
         </section>
@@ -207,6 +205,13 @@ export default function VaultCaseStudy() {
           <p>
             In 2020, the HashiCorp Cloud Platform (HCP) was created
             to bring our multicloud automation tools all into one place.
+            At this point, the Vault product design team had grown to four
+            and we needed someone who understood the complexities
+            of how our products fit together,
+            so I moved my focus to HCP Vault
+            and left the core product in their good hands.
+          </p>
+          <p>
             Our Product Manager joined me for dozens of customer interviews
             where we heard a consistent story:
           </p>
@@ -241,31 +246,15 @@ export default function VaultCaseStudy() {
           <Outcomes
             results={[
               { value: 'Hundreds', label: 'of Vault clusters created in HCP Vault’s first week' },
-              { value: '[00%]', label: '[User metric, e.g. time to first secret]' },
-              { value: '[00]', label: '[Business metric, e.g. enterprise adoption]' },
             ]}
             customers={[
               'Provisioning Vault became a guided workflow instead of a self-hosted setup',
-              '[Task time, errors, or satisfaction]',
             ]}
             business={[
               'Hundreds of HCP Vault clusters in the first week',
               'Customers from retail and banking to government',
-              '[Revenue, enterprise deals, or support load]',
-            ]}
-            organization={[
-              '[Patterns reused by other HashiCorp products]',
-              '[Design practice or people you grew]',
             ]}
           />
-        </section>
-
-        <section>
-          <div className="section-title">Reflection</div>
-          <h2>What I’d do differently</h2>
-          <p>
-            [Two or three sentences. A real lesson, what surprised you, and how it shapes how you lead now.]
-          </p>
         </section>
 
         <NextCaseStudy study={study} />

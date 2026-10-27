@@ -17,7 +17,6 @@ const NextCaseStudy = ({ study }: { study: CaseStudy }) => {
         </span>
       </Link>
       <div className={styles.contact}>
-        <p className={styles.statement}>Looking for a principal role designing developer tools and security products, fully remote.</p>
         <div className={styles.buttons}>
           <a className={styles.primaryButton} href="mailto:joshua@joshuaogle.com">Let’s talk</a>
           <a className={styles.button} href="/files/joshuaogle-resume.pdf">Résumé (PDF)</a>
