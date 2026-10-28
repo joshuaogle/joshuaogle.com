@@ -16,7 +16,7 @@ const Timeline = () => {
   return (
     <section className="centered">
       <p className={styles.textContent}>
-        I'm a Principal Product Designer at IBM. Before IBM acquired
+        Before IBM acquired
         <EmployerLogo src="/images/timeline-hashicorp.svg" />
         <span className={styles.employerTitle}>HashiCorp</span>, I spent eight years leading design for its most trusted infrastructure automation tools, and helped grow our design team to 40+ designers.
       </p>
@@ -27,7 +27,7 @@ const Timeline = () => {
         and at
         <EmployerLogo src="/images/timeline-brightbit.svg" />
         <span className={styles.employerTitle}>Brightbit</span>, the consultancy I co-founded.
-        Being a designer, a front-end developer and a founder taught me to see the whole product: what it takes to build, what it needs to earn, and who it's for.
+        Being a designer, a developer, a consultant and a founder has taught me to see the whole product: what it takes to build, what it needs to earn, and who it's for.
       </p>
     </section>
   )

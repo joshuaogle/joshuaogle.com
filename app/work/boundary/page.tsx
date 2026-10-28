@@ -83,7 +83,6 @@ export default function BoundaryCaseStudy() {
             partners={[
               'Backend lead: the waveform timeline visualization',
               'Engineering: a recording file format that survives dropped sessions',
-              'Product and Engineering leads: the Boundary Leadership Team',
             ]}
           />
         </section>

@@ -257,7 +257,7 @@ export default function VaultCaseStudy() {
               { value: 'Hundreds', label: 'of Vault clusters created in HCP Vault’s first week' },
             ]}
             customers={[
-              'Provisioning Vault became a guided workflow instead of a self-hosted setup',
+              'A web UI in both self-hosted and cloud Vault, with visibility into their setup that the CLI can’t give them',
             ]}
             business={[
               'Hundreds of HCP Vault clusters in the first week',
