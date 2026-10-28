@@ -42,7 +42,8 @@ const ERASE_START = TOTAL - SPREAD - LINE
 // construction lines, shades in colored hatching where content will go, reveals
 // children marked data-sketch-reveal one by one over it, draws handwritten notes, then
 // draws the construction back out and clears the hatching. The notes stay.
-// Reduced motion, and sections already on screen at load, get the finished state.
+// It plays whenever the section comes into view, including on screen at load; reduced
+// motion gets the finished state.
 export default function SketchLayer({ plan, children, className }: Props) {
   const root = useRef<HTMLDivElement>(null)
   const guidesSvg = useRef<SVGSVGElement>(null)
@@ -50,14 +51,13 @@ export default function SketchLayer({ plan, children, className }: Props) {
   const hatchLayer = useRef<HTMLDivElement>(null)
   const idPrefix = 'sk' + useId().replace(/[^a-zA-Z0-9]/g, '')
 
-  // Hide revealable content before first paint, but only if it will animate
+  // Hide revealable content before first paint, but only if it will animate. A section
+  // already on screen at load animates right away, since the observer below reports it at once.
   useLayoutEffect(() => {
     const el = root.current
     if (!el) return
     const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches
-    const r = el.getBoundingClientRect()
-    const onScreen = r.top < innerHeight * .85 && r.bottom > 0
-    el.dataset.sketch = reduce || onScreen ? 'done' : 'armed'
+    el.dataset.sketch = reduce ? 'done' : 'armed'
   }, [])
 
   useEffect(() => {
