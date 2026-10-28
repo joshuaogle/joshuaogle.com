@@ -6,20 +6,14 @@
 }
 
 .title {
-  margin-bottom: var(--small-spacing);
+  margin-bottom: var(--base-spacing);
 }
 
-.text {
-  font-family: var(--heading-font);
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
+/* Separate glass buttons set close together, like a row of iOS toolbar buttons */
 .buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--smallest-spacing);
-  margin-top: var(--base-spacing);
+  gap: 0.375rem;
 }
 
 /* Glass buttons, like the Let's talk button in the header */
