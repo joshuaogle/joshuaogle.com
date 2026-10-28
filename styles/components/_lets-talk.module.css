@@ -2,7 +2,7 @@
    matches the case study pages' sections. */
 .letsTalk {
   padding-top: calc(var(--larger-spacing) * var(--bigger));
-  padding-bottom: var(--larger-spacing);
+  padding-bottom: calc(var(--larger-spacing) * var(--bigger) * var(--bigger));
 }
 
 .title {
