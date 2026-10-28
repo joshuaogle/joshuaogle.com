@@ -25,8 +25,6 @@ type IntroProps = {
   // Case studies: the line over the title, and the one under it
   kicker?: string,
   dek?: string,
-  // Case studies: what the work achieved, listed with the facts
-  results?: string[],
 }
 
 type MetaItemProps = {
@@ -37,8 +35,8 @@ type MetaItemProps = {
 const Intro = (props: IntroProps) => props.theme ? <FeatureIntro {...props} /> : <ArticleIntro {...props} />
 
 // A case study opens like a magazine feature: the kicker, a big headline in the project's
-// color, a one-line summary, then the facts a reader checks first, ending with the results
-const FeatureIntro = ({ title, meta, logos, kicker, dek, results }: IntroProps) => {
+// color, a one-line summary, then the facts a reader checks first
+const FeatureIntro = ({ title, meta, logos, kicker, dek }: IntroProps) => {
   return (
     <header className={`${styles.feature} centered`}>
       {kicker && <p className={styles.kicker}>{kicker}</p>}
@@ -59,16 +57,6 @@ const FeatureIntro = ({ title, meta, logos, kicker, dek, results }: IntroProps) 
         <Fact label="Time">{meta.time}</Fact>
         <Fact label="Scope">{meta.scope}</Fact>
         <Fact label="Users">{meta.users}</Fact>
-        {results?.length ? (
-          <div className={styles.results}>
-            <dt className={styles.factLabel}>Results</dt>
-            <dd className={styles.factValue}>
-              <ul>
-                {results.map((result) => <li key={result}>{result}</li>)}
-              </ul>
-            </dd>
-          </div>
-        ) : null}
       </dl>
     </header>
   )

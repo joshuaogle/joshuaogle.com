@@ -6,6 +6,7 @@ import Intro from '@/components/intro'
 import LogoStack from '@/components/logo-stack'
 import Example from '@/components/example'
 import RoleSplit from '@/components/role-split'
+import Stats from '@/components/stats'
 import NextCaseStudy from '@/components/next-case-study'
 import { caseStudyKicker, caseStudyMetadata, getCaseStudy } from '@/lib/case-studies'
 import migrationImage from '@/public/images/case-studies/structure-migration.png'
@@ -27,7 +28,6 @@ export default function StructureCaseStudy() {
         logos={<LogoStack study={study} />}
         kicker={caseStudyKicker(study)}
         dek={study.dek}
-        results={study.results}
       />
 
       <div className="article-body centered case-study">
@@ -267,6 +267,13 @@ export default function StructureCaseStudy() {
         <section>
           <div className="section-title">Reflection</div>
           <h2>All good things&hellip;</h2>
+          <Stats
+            items={[
+              { value: '6', label: 'enterprise products on one design system' },
+              { value: '30+', label: 'shared components, beyond those in each product' },
+              { value: '120+', label: 'hand-crafted icons for the product suite' },
+            ]}
+          />
           <p>
             Just like users of a product,
             the designers are the ones who should be driving every decision.

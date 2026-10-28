@@ -34,8 +34,6 @@ export type CaseStudy = {
   description?: string
   // One line under the title: what Joshua did and what changed
   dek?: string
-  // What the work achieved, shown with the facts at the top so a skimmer sees it first
-  results?: string[]
   meta: {
     date: string
     // The span of the work, like "2017–2021", shown in place of the date when known
@@ -66,12 +64,6 @@ const boundary: CaseStudy = {
   pageTitle: 'Boundary',
   title: "The best security is invisible",
   name: "Boundary",
-  results: [
-    "Gartner recognition for Boundary in the PAM category",
-    "Enterprise customers including several big banks, Takeda Pharmaceuticals and DuckDuckGo",
-    "Boundary became a “deal leader” for HashiCorp’s product suite",
-    "100% of Transparent Sessions testers found aliases easy to configure and use",
-  ],
   dek: "How I brought design into Boundary’s leadership, guided a design team that grew from one to three, and led design for Session Recording and Transparent Sessions.",
   meta: {
     date: "2025",
@@ -103,11 +95,6 @@ const vault: CaseStudy = {
   pageTitle: 'Vault',
   title: "Keeping the cloud’s secrets",
   name: "Vault",
-  results: [
-    "Hundreds of HCP Vault clusters created in the first week",
-    "A web UI in both self-hosted and cloud Vault",
-    "Customers from retail and banking to government",
-  ],
   dek: "How I brought a web UI to Vault, an already popular CLI tool, and led its design through launch as a managed cloud service.",
   meta: {
     date: "2021",
@@ -139,11 +126,6 @@ const structure: CaseStudy = {
   pageTitle: 'Structure Design System',
   title: "Structure Design System",
   name: "Structure",
-  results: [
-    "6 enterprise products on one design system",
-    "30+ shared components, beyond those in each product",
-    "120+ hand-crafted icons for the product suite",
-  ],
   meta: {
     date: "2020",
     role: "Design System Lead",

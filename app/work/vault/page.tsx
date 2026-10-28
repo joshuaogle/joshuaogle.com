@@ -25,7 +25,6 @@ export default function VaultCaseStudy() {
         logos={<LogoStack study={study} />}
         kicker={caseStudyKicker(study)}
         dek={study.dek}
-        results={study.results}
       />
 
       <div className="article-body centered case-study">
@@ -235,6 +234,16 @@ export default function VaultCaseStudy() {
           </p>
         </section>
 
+        <section>
+          <div className="section-title">Results</div>
+          <h2>Secrets management for more teams</h2>
+          <p>
+            The web UI became part of both self-hosted and cloud Vault,
+            giving teams visibility into their setup that the CLI can’t.
+            HCP Vault saw hundreds of new clusters in its first week,
+            from customers in retail and banking to government.
+          </p>
+        </section>
 
         <NextCaseStudy study={study} />
       </div>

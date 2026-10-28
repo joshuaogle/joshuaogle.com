@@ -75,7 +75,7 @@ Decisions Joshua has made while reviewing designs. Follow them in new work.
   1. A header with a kicker (product · field · years), the title, a one-line summary, and the facts (For, Role, Team, Time, Scope, Users), then a hero image of the shipped work.
   2. Context, then **My role**, split into "I led" and "With my partners", so Joshua's own work is clear from the team's.
   3. The work, with research ending in **What we learned from research**: each hypothesis, a verdict (Confirmed, Disproved or New learning, as a word with a marker that doesn't rely on color), the learning set large, and a "So we" line with the decision it led to.
-  4. **Results:** listed with the facts under the title (`results` in `lib/case-studies.ts`), not in a section at the end, so a skimmer sees them first.
+  4. **Results:** the conclusion, a short paragraph on what the work achieved and then its numbers as `Stats`, before the next case study.
   5. **Reflection** ("What I'd do differently"), then the next case study and a way to get in touch.
 - **Key facts are real text**, never only in an image, so people and screening tools can both read them.
 - **Weight and contrast limits:** headlines at 600, nothing lighter than 400 at any size, and every text color at 4.5:1 or better, even large text. Muted text and links use `--readable-muted-color` and `--readable-action-color`.

@@ -62,9 +62,9 @@ imported as React components through SVGR, configured in `next.config.js`.
   `dek`, then inside `<div className="article-body centered case-study">` the hero
   `<Example>`, sections with a `.section-title` eyebrow and an `h2`, and the parts built
   as components: `RoleSplit`, `Findings`, `PullQuote`, `Stats` and
-  `NextCaseStudy` (a "Next:" button, then the home page's `LetsTalk`). Results aren't a
-  section: they're `results` in `lib/case-studies.ts`, listed with the facts under the
-  title. A case study with several projects (Vault, Boundary) tells one story in
+  `NextCaseStudy` (a "Next:" button, then the home page's `LetsTalk`). The last section
+  is the conclusion: a short paragraph on the results, then the numbers in `Stats`
+  (Structure's is its Reflection). A case study with several projects (Vault, Boundary) tells one story in
   chapters: the shared context and role once at the top, then a `<section id>` per
   project with a "Project · Year" eyebrow (`Chapters`, a contents line, is unused while
   its design is reworked). Their styles are in `styles/_case-study.css` and the components'

@@ -123,41 +123,6 @@
   font-weight: var(--font-weight-regular);
 }
 
-/* Results take the whole row, so each reads as a line of its own */
-.results {
-  grid-column: 1 / -1;
-}
-
-.results ul {
-  display: grid;
-  gap: 0.35rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.results li {
-  position: relative;
-  margin: 0;
-  padding-left: 1rem;
-}
-
-/* A dot in the project's color, in place of the global bullet (_typography.css) */
-.results li::before {
-  content: "";
-  display: block;
-  margin: 0;
-  font-size: inherit;
-  line-height: inherit;
-  position: absolute;
-  left: 0;
-  top: 0.6em;
-  width: 0.35rem;
-  height: 0.35rem;
-  border-radius: 50%;
-  background: var(--theme-color-title);
-}
-
 .factValue a {
   color: var(--text-color);
   text-decoration: underline;

@@ -24,7 +24,6 @@ export default function BoundaryCaseStudy() {
         logos={<LogoStack study={study} />}
         kicker={caseStudyKicker(study)}
         dek={study.dek}
-        results={study.results}
       />
 
       <div className="article-body centered case-study">
@@ -255,6 +254,23 @@ export default function BoundaryCaseStudy() {
           />
         </section>
 
+        <section>
+          <div className="section-title">Results</div>
+          <h2>A deal leader for HashiCorp</h2>
+          <p>
+            Session Recording earned Boundary recognition in Gartner’s PAM category
+            and brought in enterprise customers including several big banks,
+            Takeda Pharmaceuticals and DuckDuckGo.
+            Boundary became a “deal leader” for HashiCorp’s product suite,
+            and design became an equal partner in its product strategy.
+          </p>
+          <Stats
+            items={[
+              { value: 'Gartner', label: 'recognition for Boundary in the PAM category' },
+              { value: '100%', label: 'of Transparent Sessions testers found aliases easy to configure and use' },
+            ]}
+          />
+        </section>
 
         <NextCaseStudy study={study} />
       </div>
