@@ -1,14 +1,15 @@
-/* Nearly a full screen: short enough that the first two lines of the intro below peek in,
-   so it's clear the page continues. --peek is the site header above, the intro's top
-   padding, and two lines of its text. */
+/* Most of the first screen: the intro below starts about 20% up from the bottom, so a few
+   lines of it show and it's clear the page continues. --intro-at is where the intro's first
+   line lands; --above-intro is the site header and the intro's top padding. */
 .header {
   --portrait-size: 8rem;
-  --peek: 11.75rem;
+  --intro-at: 80svh;
+  --above-intro: 8.3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: max(calc(100svh - var(--peek)), 22rem);
+  min-height: max(calc(var(--intro-at) - var(--above-intro)), 22rem);
   position: relative;
 }
 
