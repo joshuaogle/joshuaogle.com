@@ -5,7 +5,6 @@ import LogoStack from '@/components/logo-stack'
 import Example from '@/components/example'
 import RoleSplit from '@/components/role-split'
 import Stats from '@/components/stats'
-import Outcomes from '@/components/outcomes'
 import NextCaseStudy from '@/components/next-case-study'
 import { caseStudyKicker, caseStudyMetadata, getCaseStudy } from '@/lib/case-studies'
 
@@ -25,6 +24,7 @@ export default function BoundaryCaseStudy() {
         logos={<LogoStack study={study} />}
         kicker={caseStudyKicker(study)}
         dek={study.dek}
+        results={study.results}
       />
 
       <div className="article-body centered case-study">
@@ -255,27 +255,6 @@ export default function BoundaryCaseStudy() {
           />
         </section>
 
-        <section>
-          <div className="section-title">Outcomes</div>
-          <h2>What changed</h2>
-          <Outcomes
-            results={[
-              { value: 'Gartner', label: 'recognition for Boundary in the PAM category' },
-              { value: '100%', label: 'of Transparent Sessions testers found aliases easy to configure and use' },
-            ]}
-            customers={[
-              'People reach protected tools at familiar addresses, without launching a client first',
-            ]}
-            business={[
-              'Enterprise customers including several big banks, Takeda Pharmaceuticals and DuckDuckGo',
-              'Boundary became a “deal leader” for HashiCorp’s product suite',
-            ]}
-            organization={[
-              'Design became an equal partner in Boundary’s product strategy',
-              'The design team grew from one designer to three',
-            ]}
-          />
-        </section>
 
         <NextCaseStudy study={study} />
       </div>

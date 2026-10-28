@@ -6,7 +6,6 @@ import Intro from '@/components/intro'
 import LogoStack from '@/components/logo-stack'
 import Example from '@/components/example'
 import RoleSplit from '@/components/role-split'
-import Outcomes from '@/components/outcomes'
 import NextCaseStudy from '@/components/next-case-study'
 import { caseStudyKicker, caseStudyMetadata, getCaseStudy } from '@/lib/case-studies'
 import migrationImage from '@/public/images/case-studies/structure-migration.png'
@@ -28,6 +27,7 @@ export default function StructureCaseStudy() {
         logos={<LogoStack study={study} />}
         kicker={caseStudyKicker(study)}
         dek={study.dek}
+        results={study.results}
       />
 
       <div className="article-body centered case-study">
@@ -263,17 +263,6 @@ export default function StructureCaseStudy() {
           </p>
         </section>
 
-        <section>
-          <div className="section-title">Outcomes</div>
-          <h2>What changed</h2>
-          <Outcomes
-            results={[
-              { value: '30+', label: 'shared components in Structure, beyond those in each product' },
-              { value: '6', label: 'enterprise products on one design system' },
-              { value: '120+', label: 'hand-crafted icons for the product suite' },
-            ]}
-          />
-        </section>
 
         <section>
           <div className="section-title">Reflection</div>

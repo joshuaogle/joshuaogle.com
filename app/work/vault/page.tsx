@@ -6,7 +6,6 @@ import Example from '@/components/example'
 import RoleSplit from '@/components/role-split'
 import Findings from '@/components/findings'
 import PullQuote from '@/components/pull-quote'
-import Outcomes from '@/components/outcomes'
 import NextCaseStudy from '@/components/next-case-study'
 import { caseStudyKicker, caseStudyMetadata, getCaseStudy } from '@/lib/case-studies'
 
@@ -26,6 +25,7 @@ export default function VaultCaseStudy() {
         logos={<LogoStack study={study} />}
         kicker={caseStudyKicker(study)}
         dek={study.dek}
+        results={study.results}
       />
 
       <div className="article-body centered case-study">
@@ -235,22 +235,6 @@ export default function VaultCaseStudy() {
           </p>
         </section>
 
-        <section>
-          <div className="section-title">Outcomes</div>
-          <h2>What changed</h2>
-          <Outcomes
-            results={[
-              { value: 'Hundreds', label: 'of Vault clusters created in HCP Vault’s first week' },
-            ]}
-            customers={[
-              'A web UI in both self-hosted and cloud Vault, with visibility into their setup that the CLI can’t give them',
-            ]}
-            business={[
-              'Hundreds of HCP Vault clusters in the first week',
-              'Customers from retail and banking to government',
-            ]}
-          />
-        </section>
 
         <NextCaseStudy study={study} />
       </div>
