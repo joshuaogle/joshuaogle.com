@@ -220,7 +220,7 @@
    muted text and links that clear WCAG AA (4.5:1), glass with a neutral edge and a soft
    lift, and covers that cast a shadow onto the page. */
 html[data-prefers-color-scheme="light"] {
-  --stark-rgb: 255, 253, 250;
+  --stark-rgb: 255, 255, 255;
   --text-color: var(--neutral-700);
   --theme-color-heading: var(--neutral-900);
   --muted-color: #625A53;
@@ -232,11 +232,11 @@ html[data-prefers-color-scheme="light"] {
   --background-end: #F1ECE4;
   --theme-action-color: #195FA0;
   --theme-shadow-rgb: 15, 13, 11;
-  --surface-opacity: 0.78;
+  --surface-opacity: 0.84;
   --surface-opacity-hover: 0.9;
   --paper-dot-color: rgba(112, 100, 86, 0.22);
-  --glass-edge-rgb: 77, 58, 40;
-  --glass-lift: 0 10px 30px -14px rgba(60, 40, 20, 0.3);
+  --glass-edge-rgb: 60, 56, 52;
+  --glass-lift: 0 10px 30px -14px rgba(40, 36, 32, 0.24);
   /* Pulled in (spread past the blur) so it stays inside the cover's width: the reveal clips
      covers at their sides, and only lets them hang over the top and bottom */
   --cover-lift: 0 1px 1px rgba(40, 25, 10, 0.25), 0 20px 26px -18px rgba(60, 40, 20, 0.55);
