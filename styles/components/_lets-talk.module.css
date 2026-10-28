@@ -27,8 +27,9 @@
   align-items: center;
   gap: 0.4em;
   padding: 0.75rem var(--small-spacing);  /* the inline padding and border are --button-inset */
-  border: 1px solid rgba(var(--theme-highlight-rgb), 0.12);
+  border: 1px solid rgba(var(--glass-edge-rgb), 0.12);
   border-radius: 1.5rem;
+  box-shadow: var(--glass-lift);
   background: rgba(var(--stark-rgb), var(--surface-opacity));
   backdrop-filter: blur(0.5rem);
   color: var(--text-color);

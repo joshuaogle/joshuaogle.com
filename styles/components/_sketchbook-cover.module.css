@@ -17,6 +17,7 @@
   color: #fff;
   text-decoration: none;
   background: radial-gradient(circle at 50% 40%, var(--bg-start) 50%, var(--bg-end) 150%);
+  box-shadow: var(--cover-lift);  /* in the light theme, a shadow onto the paper so it doesn't float */
   transition: var(--reveal-transition);
 }
 

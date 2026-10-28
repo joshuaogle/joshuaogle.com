@@ -30,6 +30,16 @@
   transition: --heading-color var(--base-timing) var(--base-easing);
 }
 
+/* On light paper the overlay blend turns the letters into a faint white smudge, so they're
+   pressed into the paper instead: a tint a little darker than the page, lit from below */
+:global(html[data-prefers-color-scheme="light"]) .title {
+  color: rgba(120, 92, 60, 0.08);
+  opacity: 1;
+  mix-blend-mode: normal;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8),
+               0 -1px 0 rgba(90, 66, 40, 0.1);
+}
+
 .card {
   align-items: center;
   display: flex;

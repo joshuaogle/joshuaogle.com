@@ -51,6 +51,14 @@ Decisions Joshua has made while reviewing designs. Follow them in new work.
 - **Always show light and dark.** Every mockup shows both themes.
 - **Stay in the site's own style.** New directions build on the existing look (the dot-grid paper, Tiempos headings over light sans body text, project colors, logo circles), not a new visual identity.
 
+### Themes
+
+- **Both themes are the same notebook.** Dark is warm brown paper; light is warm cream paper (`#F5EFE4` to `#EFE7DA`) with sepia dots, not a cool gray-white. A cold light theme reads as foggy next to the warm dark one.
+- **Ink for headings in light, and every text color clears AA** (4.5:1) in both themes, including muted text and links.
+- **Glass has a neutral edge.** Cards and buttons use `--glass-edge-rgb` (a hint of highlight on dark, ink on light) and a soft lift on light, never the yellow highlight on white.
+- **Covers cast a shadow on light paper** so they sit on the page; on dark paper they don't need one.
+- **The ghost letters are pressed into the paper** in light, rather than blended, which turns them into a smudge on near-white.
+
 ### Case study pages
 
 - **Magazine-inspired, like Vogue or GQ:** a big, confident headline and photography given room, in the site's own type and colors.
