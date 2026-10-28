@@ -76,7 +76,7 @@ export default function BoundaryCaseStudy() {
           <RoleSplit
             led={[
               'Design’s seat in roadmap planning and strategy',
-              'Growing the team from one to three designers',
+              'Leading the design team: planning their work, running critique, helping them work with their Engineering and Product partners, and helping them grow as designers',
               'The research plan for Session Recording',
               'The Transparent Sessions prototype and user testing',
             ]}

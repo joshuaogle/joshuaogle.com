@@ -64,7 +64,7 @@ const boundary: CaseStudy = {
   pageTitle: 'Boundary',
   title: "The best security is invisible",
   name: "Boundary",
-  dek: "How I brought design into Boundary’s leadership, grew the team from one designer to three, and led design for Session Recording and Transparent Sessions.",
+  dek: "How I brought design into Boundary’s leadership, guided a design team that grew from one to three, and led design for Session Recording and Transparent Sessions.",
   meta: {
     date: "2025",
     years: "2021–2025",

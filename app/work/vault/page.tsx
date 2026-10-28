@@ -128,22 +128,22 @@ export default function VaultCaseStudy() {
           <Findings
             items={[
               {
-                hypothesis: 'Vault’s experts live in the CLI, so a web UI would mostly serve newcomers.',
+                hypothesis: 'More non-technical people, like compliance teams and managers, were using Vault. A UI would help them and our usual users alike.',
                 verdict: 'new',
-                learning: 'The UI’s real audience was the people who configure and audit Vault: security, platform, and compliance engineers who needed visibility a terminal couldn’t give them.',
-                decision: 'Built the Vault UI around discoverability, with secrets engines and auth methods in plain view.',
+                learning: 'Both preferred the UI for searching and browsing, but our usual users still did their everyday work in the CLI or API.',
+                decision: 'Built the Vault UI around discoverability and visibility, alongside the CLI and API rather than replacing them.',
               },
               {
-                hypothesis: 'Good documentation is enough to get a team set up.',
-                verdict: 'disproved',
-                learning: 'Setup took hours, and many people split it over several days. Help had to live inside the workflow, not in another tab.',
+                hypothesis: 'The UI could help people with the things they usually needed documentation for.',
+                verdict: 'confirmed',
+                learning: 'People loved guided workflows, and links to the docs right where things got confusing.',
                 decision: 'Designed the UI Guide, which walks people through each workflow the first time and every time after.',
               },
               {
-                hypothesis: 'Teams want Vault, but running it themselves holds them back.',
-                verdict: 'confirmed',
-                learning: 'Setup, not Vault itself, was the barrier. Customers wanted its confidence without the headache of running it.',
-                decision: 'Designed HCP Vault’s provisioning workflow and cluster dashboard. Hundreds of clusters followed in the first week.',
+                hypothesis: 'Most customers would move to a managed, multi-cloud Vault.',
+                verdict: 'disproved',
+                learning: 'Many were moving to multi-cloud, but just as many would always self-host Vault to meet compliance requirements.',
+                decision: 'Designed HCP Vault for teams moving to the cloud, and kept the web UI in self-hosted Vault too.',
               },
             ]}
           />
