@@ -5,7 +5,6 @@ import LogoStack from '@/components/logo-stack'
 import Example from '@/components/example'
 import RoleSplit from '@/components/role-split'
 import Findings from '@/components/findings'
-import Chapters from '@/components/chapters'
 import PullQuote from '@/components/pull-quote'
 import Outcomes from '@/components/outcomes'
 import NextCaseStudy from '@/components/next-case-study'
@@ -31,16 +30,8 @@ export default function VaultCaseStudy() {
 
       <div className="article-body centered case-study">
         <Example
-          images={["case-studies/hcpvault-overview.png"]}
-          caption="HCP Vault cluster overview, shipped January 2021"
-        />
-
-        <Chapters
-          chapters={[
-            { id: 'web-ui', label: 'Vault Web UI' },
-            { id: 'ui-guide', label: 'UI Guide' },
-            { id: 'hcp-vault', label: 'HCP Vault' },
-          ]}
+          images={["case-studies/vault-home.png"]}
+          caption="Secrets engines in the Vault web UI"
         />
 
         <section>
@@ -164,11 +155,10 @@ export default function VaultCaseStudy() {
 
           <Example
             images={[
-              "case-studies/vault-home.png",
               "case-studies/vault-secret-schema.png",
               "case-studies/vault-methods.png",
             ]}
-            caption="Secrets engines & auth methods in Vault"
+            caption="Designing auth methods in Vault"
           />
 
           <Example
@@ -198,19 +188,15 @@ export default function VaultCaseStudy() {
             images={[
               "case-studies/vault-guide-methods.png",
               "case-studies/vault-guide-mobile.png",
+              "case-studies/vault-guide-flow.png",
             ]}
-            caption="Vault Guide in action"
-          />
-
-          <Example
-            images={["case-studies/vault-guide-flow.png"]}
-            caption="Designing a workflow for flexibility"
+            caption="The Vault Guide in action, and designing its workflow for flexibility"
           />
         </section>
 
         <section id="hcp-vault">
           <div className="section-title">HCP Vault</div>
-          <h2>Making easy even easier</h2>
+          <h2>Making “easy” even easier</h2>
           <p>
             In 2020, the HashiCorp Cloud Platform (HCP) was created
             to bring our multicloud automation tools all into one place.

@@ -3,11 +3,12 @@ import IconLinkedIn from '../public/images/icon-linkedin.svg'
 import LetsTalkSketch from './lets-talk-sketch'
 import styles from '../styles/components/_lets-talk.module.css'
 
-// The end of the home page: a way to get in touch for someone who's just seen the work.
-// The buttons are sketched in pencil and wipe in, like the case study covers above.
-const LetsTalk = () => {
+// The end of the home page and of each case study: a way to get in touch for someone
+// who's just seen the work. The buttons are sketched in pencil and wipe in, like the case
+// study covers. Inside a page that's already in the reading column, pass centered={false}.
+const LetsTalk = ({ centered = true }: { centered?: boolean }) => {
   return (
-    <section className={`${styles.letsTalk} centered`} aria-labelledby="lets-talk-title">
+    <section className={`${styles.letsTalk}${centered ? ' centered' : ''}`} aria-labelledby="lets-talk-title">
       <h2 id="lets-talk-title" className={styles.title}>Let's talk</h2>
       <LetsTalkSketch>
         <div className={styles.buttons}>

@@ -3,7 +3,6 @@ import CaseStudyTheme from '@/components/case-study-theme'
 import Intro from '@/components/intro'
 import LogoStack from '@/components/logo-stack'
 import Example from '@/components/example'
-import Chapters from '@/components/chapters'
 import RoleSplit from '@/components/role-split'
 import Stats from '@/components/stats'
 import Outcomes from '@/components/outcomes'
@@ -34,12 +33,6 @@ export default function BoundaryCaseStudy() {
           caption="The waveform timeline, which shows a session’s activity at a glance"
         />
 
-        <Chapters
-          chapters={[
-            { id: 'session-recording', label: 'Session Recording' },
-            { id: 'transparent-sessions', label: 'Transparent Sessions' },
-          ]}
-        />
 
         <section>
           <div className="section-title">Context</div>
