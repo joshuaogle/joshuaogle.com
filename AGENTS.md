@@ -34,7 +34,7 @@ imported as React components through SVGR, configured in `next.config.js`.
   lines with tapered ends), hatches (brand-colored skeletons, drawn as HTML and CSS
   so they stay cheap to animate) and notes, and mark elements with `data-sketch-id`
   (to measure) and `data-sketch-reveal` (to wipe in). The whole sequence, from the
-  first guide drawn to the last drawn back out, is 2 seconds; the timings are the
+  first guide drawn to the last drawn back out, is 1.5 seconds; the timings are the
   constants at the top of the file. `components/case-studies-sketch.tsx` is the one
   plan so far. Keep SVG filters and animated masks out of anything that moves:
   Safari repaints them every frame.

@@ -8,7 +8,7 @@
   --inset: 12%;                    /* left edge shared by the eyebrow, title, print and ribbon */
   --reveal-inset: -6px 0 -36px 0;  /* lets the ribbon fold over the top and hang below; clips anything crossing the sides */
   /* Lifting the book: a quick rise that settles (ease-out), no overshoot */
-  --reveal-transition: clip-path 700ms cubic-bezier(.6, .05, .2, 1), transform 320ms cubic-bezier(.25, 1, .5, 1);
+  --reveal-transition: clip-path 520ms cubic-bezier(.6, .05, .2, 1), transform 320ms cubic-bezier(.25, 1, .5, 1);
   position: relative;
   display: block;
   aspect-ratio: 1 / 1.27;

@@ -33,9 +33,9 @@ type Props = {
 // Guides start within SPREAD ms however many there are, and each takes LINE ms to draw in
 // or out. Hatches shade in from HATCH_START, HATCH_STEP apart (the sweep's length is in the
 // CSS); revealed content wipes in over them from REVEAL_START, REVEAL_STEP apart.
-const TOTAL = 2000, LINE = 360, SPREAD = 300
-const HATCH_START = 150, HATCH_STEP = 70
-const REVEAL_START = 750, REVEAL_STEP = 70
+const TOTAL = 1500, LINE = 280, SPREAD = 220
+const HATCH_START = 110, HATCH_STEP = 52
+const REVEAL_START = 560, REVEAL_STEP = 52
 const ERASE_START = TOTAL - SPREAD - LINE
 
 // A pencil layer over its children. When it scrolls into view it drafts faint
