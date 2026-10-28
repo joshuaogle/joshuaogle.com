@@ -1,0 +1,52 @@
+/* The home page's closing section, in the reading column with the intro. Spacing above
+   matches the case study pages' sections. */
+.letsTalk {
+  padding-top: calc(var(--larger-spacing) * var(--bigger));
+  padding-bottom: var(--larger-spacing);
+}
+
+.title {
+  margin-bottom: var(--small-spacing);
+}
+
+.text {
+  font-family: var(--heading-font);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--smallest-spacing);
+  margin-top: var(--base-spacing);
+}
+
+/* Glass buttons, like the LinkedIn and Resume buttons in the intro */
+.button {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  padding: 0.75rem var(--small-spacing);
+  border: 1px solid rgba(var(--theme-highlight-rgb), 0.12);
+  border-radius: 1.5rem;
+  background: rgba(var(--stark-rgb), var(--surface-opacity));
+  backdrop-filter: blur(0.5rem);
+  color: var(--text-color);
+  font-weight: 500;
+  text-decoration: none;
+  transition: all var(--base-timing) var(--base-easing);
+}
+
+.button:hover {
+  background: rgba(var(--stark-rgb), var(--surface-opacity-hover));
+  backdrop-filter: blur(1rem);
+  color: var(--text-color);
+}
+
+.icon {
+  width: 1rem;
+  height: 1rem;
+  margin: 0;
+  color: currentColor;
+}

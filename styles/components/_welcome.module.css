@@ -1,9 +1,14 @@
+/* Nearly a full screen: short enough that the first two lines of the intro below peek in,
+   so it's clear the page continues. --peek is the site header above, the intro's top
+   padding, and two lines of its text. */
 .header {
   --portrait-size: 8rem;
+  --peek: 11.75rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 33vh 0;
+  justify-content: center;
+  min-height: max(calc(100svh - var(--peek)), 22rem);
   position: relative;
 }
 

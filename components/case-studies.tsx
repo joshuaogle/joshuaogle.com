@@ -8,7 +8,11 @@ const CaseStudies = () => {
   return (
     <section className={styles.section} aria-labelledby="case-studies-title">
       <CaseStudiesSketch>
-        <h2 id="case-studies-title" className={styles.heading} data-sketch-id="heading">Case studies</h2>
+        {/* The heading lines up with the intro text; the covers break out wider, like a
+            wide figure on a case study page */}
+        <div className="centered">
+          <h2 id="case-studies-title" className={styles.heading} data-sketch-id="heading">Case studies</h2>
+        </div>
         <CaseStudyGrid>
           {featuredCaseStudies.map((study) => (
             <SketchbookCover key={study.slug} study={study} />
