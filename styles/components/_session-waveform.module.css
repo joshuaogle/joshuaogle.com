@@ -1,207 +1,164 @@
-/* The waveform (components/session-waveform.tsx), drawn as in the Session Recording design:
-   a white card, a session summary, then the timeline with its red playhead and Skip bands.
-   It's a piece of product UI, so it stays white in both themes, like a screenshot. */
+/* The waveform scrubber (components/session-waveform.tsx), measured from the Session
+   Recording playback design at 1x. It's product UI, so it looks the same in both themes.
+   Bar: 60px tall, 8px corners, 16px in on the left and 20px on the right.
+   Play button: 36px square, 4px corners; 42px to the time, which ends 12px before the track.
+   Track: 28px tall, 4px corners, 4px inside it to the first bar.
+   After the track: 24px to the length, 19px to the 18px full screen icon. */
 .example {
   margin: var(--large-spacing) 0;
   padding: 0;
 }
 
-.card {
+.player {
   --wave-up: #80D196;
   --wave-down: #5C9BE5;
   --wave-error: #E52228;
-  --playhead: #F24C53;
-  --ink: #1B1B1F;
-  --gray: #6E717A;
-  padding: 1.1rem 1.25rem 0.5rem;
-  border: 1px solid #E2E2E6;
-  border-radius: 12px;
-  background: #FFFFFF;
-  color: var(--ink);
-  font-family: var(--sans-serif);
-}
-
-/* Session summary: the name and length, then errors, bytes up and bytes down */
-.summary {
   display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-}
-
-.heading,
-.totals {
-  display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  margin: 0;
-}
-
-.heading {
-  gap: 0.6rem;
-}
-
-.totals {
-  gap: 1rem;
-  font-size: 0.875rem;
+  box-sizing: border-box;
+  height: 60px;
+  padding: 0 20px 0 16px;
+  border-radius: 8px;
+  background: #252937;
+  box-shadow: inset 0 1px 0 #3E445C, 0 6px 16px -6px rgba(17, 20, 31, 0.35);
+  color: #FFFFFF;
+  font-family: var(--sans-serif);
+  font-size: 14px;
+  line-height: 1;
   font-variant-numeric: tabular-nums;
 }
 
-.session {
-  font-size: 1.25rem;
-  font-weight: 500;
-  letter-spacing: -0.01em;
+/* Full screen: the bar centered on black */
+.player:fullscreen {
+  height: 100%;
+  padding: 0 5vw;
+  border-radius: 0;
+  background: #0C0C0E;
+  box-shadow: none;
 }
 
-.chip {
-  padding: 0.15rem 0.4rem;
-  border-radius: 4px;
-  background: #EBEEF2;
-  color: var(--gray);
-  font-size: 0.8125rem;
-}
-
-.warn {
-  display: inline-flex;
+.play {
+  display: flex;
+  flex: none;
   align-items: center;
-  gap: 0.25rem;
-  color: #E5484D;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 0;
+  border-radius: 4px;
+  background: #1060FF;
+  color: #FFFFFF;
+  cursor: pointer;
 }
 
-.warn svg {
+.play:hover {
+  background: #2E74FF;
+}
+
+.play svg,
+.fullscreen svg,
+.wave svg {
+  display: block;
   margin: 0;
 }
 
-.up { color: #2E9E54; }
-.down { color: #3478E0; }
-
-/* The timeline: room above for the Play pill, and below for the Skip labels */
-.stage {
-  position: relative;
-  margin-top: 0.75rem;
-  padding: 2rem 0 3.25rem;
-}
-
-/* Overlays that line up with the bars: the track's border and inline padding inset them */
-.lane {
-  position: absolute;
-  inset: 0 calc(0.6rem + 1px);
-  pointer-events: none;
+.time {
+  flex: none;
+  min-width: 26px;
+  margin: 0 12px 0 42px;
+  text-align: right;
 }
 
 .track {
-  position: relative;
-  z-index: 1;
-  padding: 0.35rem 0.6rem;
-  border: 1px solid #B9B9BE;
-  border-radius: 6px;
-  background: #FFFFFF;
-}
-
-.wave {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin: 0;
+  flex: 1;
+  min-width: 0;
+  box-sizing: border-box;
+  height: 28px;
+  padding: 0 4px;
+  border-radius: 4px;
+  background: #0C0C0E;
   cursor: ew-resize;
   touch-action: none;
 }
 
-.wave:focus-visible {
+.track:focus-visible {
   outline: 2px solid var(--wave-down);
-  outline-offset: 4px;
-  border-radius: 2px;
+  outline-offset: 2px;
 }
 
-.dash { fill: #C9C9CE; }
+/* The bars at their real size, from the left of the track; on a narrow screen they shrink
+   to fit, keeping their proportions */
+.wave {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.wave svg {
+  width: 100%;
+  height: auto;
+}
+
+.dots {
+  stroke: #353B4F;
+  stroke-width: 2;
+  stroke-dasharray: 2 2;
+}
+
 .barUp { fill: var(--wave-up); }
 .barDown { fill: var(--wave-down); }
 .barError { fill: var(--wave-error); }
 
-/* Pale bands behind the quiet stretches, each a button that skips over it */
-.skip {
+/* 12px, centered on the current bar */
+.knob {
   position: absolute;
-  top: 0.9rem;
-  bottom: 0;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.length {
+  flex: none;
+  margin: 0 19px 0 24px;
+  letter-spacing: 0.02em;
+}
+
+.fullscreen {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 0.15rem;
-  padding: 0 0 0.6rem;
+  flex: none;
+  padding: 0;
   border: 0;
-  border-radius: 10px;
-  background: #F6F6F8;
-  color: #8B8D94;
-  font: 500 0.75rem var(--sans-serif);
+  background: none;
+  color: #E4E4E6;
   cursor: pointer;
-  pointer-events: auto;
 }
 
-.skip:hover {
-  background: #EEEEF1;
-  color: var(--ink);
-}
-
-.skip svg {
-  margin: 0;
-}
-
-/* The playhead: a red line from the Play pill down past the track, ending in a small arrow */
-.playhead {
-  position: absolute;
-  top: 0;
-  bottom: 2.75rem;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transform: translateX(-50%);
-  transition: left 80ms linear;
-}
-
-.play {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.25rem;
-  padding: 0.2rem 0.6rem 0.2rem 0.5rem;
-  border: 0;
-  border-radius: 999px;
-  background: var(--playhead);
+.fullscreen:hover {
   color: #FFFFFF;
-  font: 500 0.8125rem var(--sans-serif);
-  white-space: nowrap;
-  cursor: pointer;
-  pointer-events: auto;
 }
 
-.play:hover {
-  background: #E03A41;
-}
+/* On a phone the length goes, and the gaps tighten so the track keeps room */
+@media (max-width: 520px) {
+  .player {
+    padding: 0 12px;
+  }
 
-.play svg {
-  margin: 0;
-}
+  .time {
+    margin: 0 8px 0 12px;
+  }
 
-.line {
-  position: relative;
-  flex: 1;
-  width: 2px;
-  background: var(--playhead);
-}
+  .length {
+    display: none;
+  }
 
-.line::after {
-  content: "";
-  position: absolute;
-  bottom: -1px;
-  left: 50%;
-  border: 4px solid transparent;
-  border-bottom-color: var(--playhead);
-  transform: translateX(-50%);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .playhead {
-    transition: none;
+  .fullscreen {
+    margin-left: 12px;
   }
 }
 
