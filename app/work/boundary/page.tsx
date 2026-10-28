@@ -29,8 +29,8 @@ export default function BoundaryCaseStudy() {
 
       <div className="article-body centered case-study">
         <Example
-          images={["case-studies/boundary-ts-spotlight.png"]}
-          caption="Transparent Sessions: search for a target, and you’re connected"
+          images={["case-studies/boundary-sr-playback.png"]}
+          caption="Session Recording: playing back a recorded SSH session, with its details"
         />
 
 
@@ -245,7 +245,10 @@ export default function BoundaryCaseStudy() {
           />
 
           <Example
-            images={["case-studies/boundary-ts-menubar.png"]}
+            images={[
+              "case-studies/boundary-ts-menubar.png",
+              "case-studies/boundary-ts-spotlight.png"
+            ]}
             caption="We reimagined new form factors that Transparent Sessions enables"
           />
 
@@ -262,15 +265,11 @@ export default function BoundaryCaseStudy() {
             Session Recording earned Boundary recognition in Gartner’s PAM category
             and brought in enterprise customers including several big banks,
             Takeda Pharmaceuticals and DuckDuckGo.
+            In testing, every Transparent Sessions tester found aliases easy
+            to configure and use.
             Boundary became a “deal leader” for HashiCorp’s product suite,
             and design became an equal partner in its product strategy.
           </p>
-          <Stats
-            items={[
-              { value: 'Gartner', label: 'recognition for Boundary in the PAM category' },
-              { value: '100%', label: 'of Transparent Sessions testers found aliases easy to configure and use' },
-            ]}
-          />
         </section>
 
         <NextCaseStudy study={study} />

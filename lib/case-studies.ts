@@ -1,11 +1,10 @@
 import type { Metadata } from 'next'
 import type { StaticImageData } from 'next/image'
-import boundarySrRdpPreview from '@/public/images/case-studies/boundary-sr-rdp.png'
 import vaultHomePreview from '@/public/images/case-studies/vault-home.png'
 import structureTreePreview from '@/public/images/case-studies/structure-tree.png'
 import sharespostHomePreview from '@/public/images/case-studies/sharespost-home.png'
 import armadaUserPreview from '@/public/images/case-studies/armada-user.png'
-import boundaryTsSpotlightCover from '@/public/images/case-studies/boundary-ts-spotlight.png'
+import boundarySrPlaybackPreview from '@/public/images/case-studies/boundary-sr-playback.png'
 import { openGraphDefaults } from './site'
 
 export type CaseStudyTheme = {
@@ -83,8 +82,7 @@ const boundary: CaseStudy = {
     colorBGDark: "#180507",
     colorHighlight: "rgb(96, 212, 220)",
     colorHeading: "rgb(239, 239, 241)",
-    preview: boundarySrRdpPreview,
-    cover: boundaryTsSpotlightCover,
+    preview: boundarySrPlaybackPreview,
   }
 }
 
