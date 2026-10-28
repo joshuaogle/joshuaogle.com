@@ -22,7 +22,7 @@
   margin-top: var(--base-spacing);
 }
 
-/* Glass buttons, like the LinkedIn and Resume buttons in the intro */
+/* Glass buttons, like the Let's talk button in the header */
 .button {
   display: flex;
   align-items: center;
