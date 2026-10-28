@@ -5,7 +5,7 @@ import vaultHomePreview from '@/public/images/case-studies/vault-home.png'
 import structureTreePreview from '@/public/images/case-studies/structure-tree.png'
 import sharespostHomePreview from '@/public/images/case-studies/sharespost-home.png'
 import armadaUserPreview from '@/public/images/case-studies/armada-user.png'
-import boundarySrWaveformsCover from '@/public/images/case-studies/boundary-sr-waveforms.png'
+import boundaryTsSpotlightCover from '@/public/images/case-studies/boundary-ts-spotlight.png'
 import { openGraphDefaults } from './site'
 
 export type CaseStudyTheme = {
@@ -84,7 +84,7 @@ const boundary: CaseStudy = {
     colorHighlight: "rgb(96, 212, 220)",
     colorHeading: "rgb(239, 239, 241)",
     preview: boundarySrRdpPreview,
-    cover: boundarySrWaveformsCover,
+    cover: boundaryTsSpotlightCover,
   }
 }
 

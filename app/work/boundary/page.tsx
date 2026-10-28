@@ -5,6 +5,7 @@ import LogoStack from '@/components/logo-stack'
 import Example from '@/components/example'
 import RoleSplit from '@/components/role-split'
 import Stats from '@/components/stats'
+import SessionWaveform from '@/components/session-waveform'
 import NextCaseStudy from '@/components/next-case-study'
 import { caseStudyKicker, caseStudyMetadata, getCaseStudy } from '@/lib/case-studies'
 
@@ -28,8 +29,8 @@ export default function BoundaryCaseStudy() {
 
       <div className="article-body centered case-study">
         <Example
-          images={["case-studies/boundary-sr-waveforms.png"]}
-          caption="The waveform timeline, which shows a session’s activity at a glance"
+          images={["case-studies/boundary-ts-spotlight.png"]}
+          caption="Transparent Sessions: search for a target, and you’re connected"
         />
 
 
@@ -73,7 +74,7 @@ export default function BoundaryCaseStudy() {
               'The Transparent Sessions prototype and user testing',
             ]}
             partners={[
-              'Backend lead: the waveform timeline visualization',
+              'Backend lead: the waveform timeline concept',
               'Engineering: a recording file format that survives dropped sessions',
             ]}
           />
@@ -132,10 +133,13 @@ export default function BoundaryCaseStudy() {
             Sometimes the best design solutions come from unexpected moments. During a cab ride
             to the airport after an offsite meeting, our backend lead and I found ourselves
             brainstorming ways to help users identify patterns in session activity.
-            That conversation led to our most innovative feature: a waveform timeline
-            that represents what happened during a session at a glance, so investigators
-            can move quickly and find related patterns.
+            That conversation led to our most innovative idea: a waveform timeline
+            that shows what happened during a session at a glance, so investigators
+            could move quickly and find related patterns. It didn’t make it into the
+            product, but you can try a working sketch of it here.
           </p>
+
+          <SessionWaveform />
 
           <Example
             video="case-studies/boundary-sr-recording.mp4"
@@ -241,10 +245,7 @@ export default function BoundaryCaseStudy() {
           />
 
           <Example
-            images={[
-              "case-studies/boundary-ts-menubar.png",
-              "case-studies/boundary-ts-spotlight.png"
-            ]}
+            images={["case-studies/boundary-ts-menubar.png"]}
             caption="We reimagined new form factors that Transparent Sessions enables"
           />
 

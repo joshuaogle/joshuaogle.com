@@ -239,9 +239,8 @@ export default function VaultCaseStudy() {
           <h2>Secrets management for more teams</h2>
           <p>
             The web UI became part of both self-hosted and cloud Vault,
-            giving teams visibility into their setup that the CLI can’t.
-            HCP Vault saw hundreds of new clusters in its first week,
-            from customers in retail and banking to government.
+            giving teams visibility into their setup that the CLI can’t,
+            for customers from retail and banking to government.
           </p>
         </section>
 

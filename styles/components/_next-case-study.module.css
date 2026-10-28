@@ -3,11 +3,9 @@
   margin-top: var(--section-gap);
 }
 
-/* Hangs into the margin by the button's padding and border, so "Next:" lines up with the
-   text above, like the Let's talk buttons below it */
 .next {
   display: flex;
-  margin-left: calc(-1 * (1.5rem + 1px));
+  justify-content: center;
 }
 
 /* A "continue reading" button, like the one at the end of an article in a news app:
@@ -17,7 +15,7 @@
   align-items: center;
   gap: 0.5em;
   max-width: 100%;
-  padding: 1rem 1.5rem;
+  padding: 0.7rem 1.2rem;
   border: 1px solid rgba(var(--glass-edge-rgb), 0.12);
   border-radius: 999px;
   box-shadow: var(--glass-lift);
@@ -36,20 +34,21 @@
 
 .label {
   color: var(--muted-color);
+  font-size: var(--small-font-size);
   font-weight: 500;
 }
 
 .title {
   font-family: var(--heading-font);
   font-weight: var(--font-weight-semibold);
-  font-size: 1.25rem;
+  font-size: 1.05rem;
   line-height: 1.2;
 }
 
 .button svg {
   flex: none;
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 1rem;
+  height: 1rem;
   margin: 0;
   transition: transform var(--base-timing) var(--base-easing);
 }

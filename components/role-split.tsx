@@ -10,7 +10,7 @@ type Props = {
 const RoleSplit = ({ led, partners = [] }: Props) => {
   return (
     <div className={styles.split}>
-      <List title="I led" items={led} />
+      <List title="What I did" items={led} />
       {partners.length > 0 && <List title="With my partners" items={partners} />}
     </div>
   )

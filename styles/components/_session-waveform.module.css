@@ -1,0 +1,147 @@
+/* The waveform sketch (components/session-waveform.tsx): a dark player like Boundary's
+   session playback, in the text column like the figures around it (_example.module.css) */
+.example {
+  margin: var(--large-spacing) 0;
+  padding: 0;
+}
+
+.player {
+  --wave-up: #63D08A;
+  --wave-down: #5B9BFF;
+  --wave-error: #FF6B6B;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem 1.1rem;
+  border-radius: 12px;
+  background: #0E0E12;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
+  color: #E8E8EC;
+  font-family: var(--sans-serif);
+  font-size: var(--small-font-size);
+}
+
+.header,
+.controls,
+.totals,
+.readout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.session {
+  font-weight: 600;
+}
+
+.chip {
+  padding: 0.1rem 0.45rem;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #B9B9C2;
+  font-size: var(--smallest-font-size);
+}
+
+.totals {
+  margin-left: auto;
+  font-variant-numeric: tabular-nums;
+}
+
+.up { color: var(--wave-up); }
+.down { color: var(--wave-down); }
+.error { color: var(--wave-error); }
+.idle { color: #8D8D97; }
+
+.track {
+  display: block;
+  width: 100%;
+  height: 4.5rem;
+  margin: 0;
+  border-radius: 6px;
+  background: #16161C;
+  cursor: ew-resize;
+  touch-action: none;
+}
+
+.track:focus-visible {
+  outline: 2px solid var(--wave-down);
+  outline-offset: 2px;
+}
+
+.baseline {
+  stroke: rgba(255, 255, 255, 0.18);
+  stroke-width: 1;
+  stroke-dasharray: 2 3;
+  vector-effect: non-scaling-stroke;
+}
+
+.barUp { fill: var(--wave-up); }
+.barDown { fill: var(--wave-down); }
+.barError { fill: var(--wave-error); }
+
+.playhead,
+.hover {
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+}
+
+.playhead { stroke: #FFFFFF; }
+.hover { stroke: rgba(255, 255, 255, 0.35); }
+
+.play,
+.skip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border: 0;
+  color: #FFFFFF;
+  font: inherit;
+  cursor: pointer;
+}
+
+/* Boundary's blue play button */
+.play {
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 6px;
+  background: #1563FF;
+}
+
+.skip {
+  min-height: 2.25rem;
+  padding: 0 0.75rem;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.play:hover { background: #3B7BFF; }
+.skip:hover { background: rgba(255, 255, 255, 0.16); }
+
+.play svg,
+.skip svg {
+  margin: 0;
+}
+
+.readout {
+  margin-left: auto;
+  font-variant-numeric: tabular-nums;
+}
+
+.time {
+  min-width: 2.75rem;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.caption {
+  display: block;
+  margin-top: var(--smaller-spacing);
+  color: var(--readable-muted-color);
+  font-family: var(--sans-serif);
+  font-size: var(--small-font-size);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: normal;
+  line-height: 1.5;
+}
