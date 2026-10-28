@@ -53,7 +53,7 @@ Decisions Joshua has made while reviewing designs. Follow them in new work.
 
 ### Themes
 
-- **Both themes are the same notebook.** Dark is warm brown paper; light is warm cream paper (`#F5EFE4` to `#EFE7DA`) with sepia dots, not a cool gray-white. A cold light theme reads as foggy next to the warm dark one.
+- **Both themes are the same notebook.** Dark is warm brown paper; light is off-white with a hint of warmth (`#F7F4EF` to `#F1ECE4`) and softly warm dots: not a cool gray-white, which reads as foggy next to the dark theme, and not cream, which was too warm.
 - **Ink for headings in light, and every text color clears AA** (4.5:1) in both themes, including muted text and links.
 - **Glass has a neutral edge.** Cards and buttons use `--glass-edge-rgb` (a hint of highlight on dark, ink on light) and a soft lift on light, never the yellow highlight on white.
 - **Covers cast a shadow on light paper** so they sit on the page; on dark paper they don't need one.

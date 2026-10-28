@@ -36,7 +36,7 @@ export function readableOn(color: string, background: string, target = 4.5): str
 }
 
 // The darker end of the light theme's paper (--background-end), where text has the least contrast
-export const LIGHT_PAPER = '#EFE7DA'
+export const LIGHT_PAPER = '#F1ECE4'
 // The site's ink (--neutral-900), for a brand with no secondary color to fall back on
 export const INK = '#262322'
 

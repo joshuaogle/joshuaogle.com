@@ -215,11 +215,12 @@
   --shadow-o-a: 0.025;
 }
 
-/* Light theme: warm paper, so it's the same notebook as the dark theme. Headings in ink,
+/* Light theme: off-white paper with a hint of warmth, so it's the same notebook as the dark
+   theme without turning cream. Headings in ink,
    muted text and links that clear WCAG AA (4.5:1), glass with a neutral edge and a soft
    lift, and covers that cast a shadow onto the page. */
 html[data-prefers-color-scheme="light"] {
-  --stark-rgb: 255, 252, 246;
+  --stark-rgb: 255, 253, 250;
   --text-color: var(--neutral-700);
   --theme-color-heading: var(--neutral-900);
   --muted-color: #625A53;
@@ -227,13 +228,13 @@ html[data-prefers-color-scheme="light"] {
   --readable-action-color: #195FA0;
   --pencil-graphite: var(--neutral-700);
   --pencil-construction: var(--neutral-700);
-  --background-start: #F5EFE4;
-  --background-end: #EFE7DA;
+  --background-start: #F7F4EF;
+  --background-end: #F1ECE4;
   --theme-action-color: #195FA0;
   --theme-shadow-rgb: 15, 13, 11;
   --surface-opacity: 0.78;
   --surface-opacity-hover: 0.9;
-  --paper-dot-color: rgba(120, 96, 70, 0.24);
+  --paper-dot-color: rgba(112, 100, 86, 0.22);
   --glass-edge-rgb: 77, 58, 40;
   --glass-lift: 0 10px 30px -14px rgba(60, 40, 20, 0.3);
   /* Pulled in (spread past the blur) so it stays inside the cover's width: the reveal clips
