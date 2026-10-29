@@ -8,6 +8,12 @@
   justify-content: center;
 }
 
+/* Let's talk starts a section's distance below, so Next reads as the end of the story and
+   Let's talk as its own closing part */
+.end > section {
+  padding-top: var(--section-gap);
+}
+
 /* A "continue reading" button, like the one at the end of an article in a news app:
    glass, like the Let's talk buttons, with the next title in the project's heading type */
 .button {
