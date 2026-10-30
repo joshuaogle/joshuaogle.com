@@ -6,7 +6,6 @@ import Intro from '@/components/intro'
 import LogoStack from '@/components/logo-stack'
 import Example from '@/components/example'
 import RoleSplit from '@/components/role-split'
-import Stats from '@/components/stats'
 import NextCaseStudy from '@/components/next-case-study'
 import { caseStudyKicker, caseStudyMetadata, getCaseStudy } from '@/lib/case-studies'
 import migrationImage from '@/public/images/case-studies/structure-migration.png'
@@ -267,13 +266,6 @@ export default function StructureCaseStudy() {
         <section>
           <div className="section-title">Reflection</div>
           <h2>All good things&hellip;</h2>
-          <Stats
-            items={[
-              { value: '6', label: 'enterprise products on one design system' },
-              { value: '30+', label: 'shared components, beyond those in each product' },
-              { value: '120+', label: 'hand-crafted icons for the product suite' },
-            ]}
-          />
           <p>
             Just like users of a product,
             the designers are the ones who should be driving every decision.
@@ -299,6 +291,9 @@ export default function StructureCaseStudy() {
               sizes="(max-width: 800px) 100vw, 760px" />
           </p>
           <p>
+            Structure grew to cover six enterprise products,
+            with more than 30 shared components beyond those in each product
+            and over 120 hand-crafted icons.
             This grassroots approach worked well
             until we grew big enough to convince leadership
             to invest in a full-time team.
