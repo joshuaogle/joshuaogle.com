@@ -103,7 +103,8 @@
   grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
   gap: var(--small-spacing) var(--large-spacing);
   width: 100%;
-  margin: var(--small-spacing) 0 0;
+  /* With the header's gap, this sits the facts just under the summary, as part of the header */
+  margin: calc(var(--small-spacing) * 0.4) 0 0;
   padding-top: var(--small-spacing);
   border-top: 1px solid var(--hairline-color);
 }

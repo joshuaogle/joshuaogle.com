@@ -5,7 +5,7 @@
    Track: 28px tall, 4px corners, 4px inside it to the first bar.
    After the track: 24px to the length, 19px to the 18px full screen icon. */
 .example {
-  margin: var(--large-spacing) 0;
+  margin: var(--larger-spacing) 0;
   padding: 0;
 }
 

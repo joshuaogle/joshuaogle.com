@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
   gap: var(--base-spacing) var(--large-spacing);
-  margin: var(--large-spacing) 0;
+  margin: var(--larger-spacing) 0;
   padding: 0;
   list-style: none;
 }

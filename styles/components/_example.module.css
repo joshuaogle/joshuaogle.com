@@ -1,7 +1,7 @@
 /* Figures in a case study. The layout comes from the images' size and kind
    (components/example.tsx). */
 .example {
-  margin: var(--large-spacing) 0;
+  margin: var(--larger-spacing) 0;
   padding: 0;  /* overrides the site-wide figure padding, so figures line up with the text */
 }
 
