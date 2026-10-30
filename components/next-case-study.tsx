@@ -8,7 +8,7 @@ import styles from '../styles/components/_next-case-study.module.css'
 const NextCaseStudy = ({ study }: { study: CaseStudy }) => {
   const next = nextCaseStudy(study)
   return (
-    <div className={styles.end}>
+    <div className={styles.end} data-case-study-end>
       <nav className={styles.next} aria-label="Next case study">
         <Link href={caseStudyHref(next)} className={styles.button}>
           <span className={styles.label}>Next:</span>

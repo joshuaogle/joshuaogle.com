@@ -24,10 +24,10 @@
   margin: calc(var(--larger-spacing) * var(--bigger)) 0 0;
 }
 
-/* Links to a section land with the eyebrow just below the top edge, rather than at the
-   top of the section's padding */
-.case-study > section[id] {
-  scroll-margin-top: calc(var(--base-spacing) - var(--section-gap));
+/* Jumping to a section (links, the On this page pill) lands with the eyebrow just below the
+   pill, rather than at the top of the section's padding */
+.case-study > section {
+  scroll-margin-top: calc(5rem - var(--section-gap));
 }
 
 .case-study p,

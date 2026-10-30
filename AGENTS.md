@@ -70,8 +70,9 @@ imported as React components through SVGR, configured in `next.config.js`.
   is the conclusion: a short paragraph on the results, then the numbers in `Stats`
   (Structure's is its Reflection). A case study with several projects (Vault, Boundary) tells one story in
   chapters: the shared context and role once at the top, then a `<section id>` per
-  project with a "Project · Year" eyebrow (`Chapters`, a contents line, is unused while
-  its design is reworked). Their styles are in `styles/_case-study.css` and the components'
+  project with a "Project · Year" eyebrow. Every case study gets the On this page pill
+  (`components/on-this-page.tsx`, from `app/work/layout.tsx`), which lists the sections by
+  their eyebrows, so a section needs a `.section-title`. Their styles are in `styles/_case-study.css` and the components'
   modules; add `className="wide"` to break something out of the text column. A page
   leaves out any part it has no real content for yet (no placeholder sections); Vault's
   bracketed text marks copy still to write. Numbers go in `Stats` as text, not in images.

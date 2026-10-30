@@ -1,0 +1,124 @@
+/* The On this page pill (components/on-this-page.tsx): glass like the site's other buttons,
+   with a near-solid fill instead of a backdrop blur, since it stays fixed over the page */
+.root {
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  transform: translate(-50%, -0.5rem);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--base-timing) var(--base-easing),
+              transform var(--base-timing) var(--base-easing);
+}
+
+.root[data-visible="true"] {
+  transform: translate(-50%, 0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.pill {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  max-width: calc(100vw - 2rem);
+  padding: 0.6rem 1.1rem;
+  border: 1px solid rgba(var(--glass-edge-rgb), 0.12);
+  border-radius: 999px;
+  box-shadow: var(--glass-lift), 0 2px 12px rgba(0, 0, 0, 0.12);
+  background: rgba(var(--stark-rgb), 0.98);
+  color: var(--text-color);
+  font: 500 var(--small-font-size) var(--sans-serif);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+/* Dark: the glass is a dark fill, solid enough to read over anything */
+:global(html[data-prefers-color-scheme="dark"]) .pill,
+:global(html[data-prefers-color-scheme="dark"]) .panel {
+  background: #1C1918;
+}
+
+.count {
+  color: var(--readable-muted-color);
+}
+
+.current {
+  overflow: hidden;
+  color: var(--theme-color-title);
+  font-weight: var(--font-weight-semibold);
+  text-overflow: ellipsis;
+}
+
+.chevron {
+  flex: none;
+  margin: 0;
+  color: var(--readable-muted-color);
+  transition: transform var(--base-timing) var(--base-easing);
+}
+
+.pill[aria-expanded="true"] .chevron {
+  transform: rotate(180deg);
+}
+
+.panel {
+  width: min(16rem, calc(100vw - 2rem));
+  padding: 0.5rem;
+  box-sizing: border-box;
+  border: 1px solid rgba(var(--glass-edge-rgb), 0.12);
+  border-radius: 1.1rem;
+  box-shadow: var(--glass-lift), 0 8px 28px rgba(0, 0, 0, 0.16);
+  background: rgb(var(--stark-rgb));
+}
+
+.panel ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Undoes the site-wide list bullet */
+.panel li {
+  margin: 0;
+  padding: 0;
+}
+
+.panel li::before {
+  content: none;
+}
+
+.item {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 0;
+  border-radius: 0.65rem;
+  background: none;
+  color: var(--readable-muted-color);
+  font: var(--small-font-size) var(--sans-serif);
+  text-align: left;
+  cursor: pointer;
+}
+
+.item:hover {
+  background: rgba(var(--glass-edge-rgb), 0.06);
+  color: var(--text-color);
+}
+
+.item[aria-current="location"] {
+  background: rgba(var(--glass-edge-rgb), 0.08);
+  color: var(--theme-color-title);
+  font-weight: var(--font-weight-semibold);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .root,
+  .chevron {
+    transition: none;
+  }
+}
