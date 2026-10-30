@@ -83,6 +83,10 @@ export default function SketchLayer({ plan, children, className }: Props) {
       svg.replaceChildren()
     }
 
+    // Grain goes on once the strokes have finished drawing: Safari repaints an SVG filter
+    // on every frame while what's under it moves
+    const grain = (ink: Ink) => ink.group.setAttribute('filter', `url(#${idPrefix}-graphite)`)
+
     const makeInk = (): Ink => {
       const defs = svgEl('defs', {}, iSvg)
       // Pencil grain: speckles the graphite so it doesn't read as flat vector
@@ -90,7 +94,7 @@ export default function SketchLayer({ plan, children, className }: Props) {
       svgEl('feTurbulence', { type: 'fractalNoise', baseFrequency: 1.4, numOctaves: 1, seed: 3, result: 'n' }, filter)
       svgEl('feColorMatrix', { in: 'n', type: 'matrix', values: '0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -1.5 1.35', result: 'speck' }, filter)
       svgEl('feComposite', { in: 'SourceGraphic', in2: 'speck', operator: 'in' }, filter)
-      const group = svgEl('g', { filter: `url(#${idPrefix}-graphite)` }, iSvg)
+      const group = svgEl('g', {}, iSvg)
       return { svg: iSvg, defs, group, idPrefix, inkClass: styles.ink, noteClass: styles.note }
     }
 
@@ -105,6 +109,7 @@ export default function SketchLayer({ plan, children, className }: Props) {
       hLayer.replaceChildren()
       tl = createTimeline(true)
       const ink = makeInk()
+      grain(ink)
       plan(m).notes?.forEach(n => note(ink, tl, n, 0))
       el.querySelectorAll<HTMLElement>('[data-sketch-reveal]').forEach(n => { n.dataset.revealed = 'true' })
       el.dataset.sketch = 'done'
@@ -142,7 +147,7 @@ export default function SketchLayer({ plan, children, className }: Props) {
       paths.forEach((path, i) => tl.erase(path, ERASE_START + i * step, LINE))
       // The revealed content now covers the hatching; clear it so nothing shows past an edge on hover
       tl.at(TOTAL, () => { hLayer.replaceChildren() })
-      tl.at(Math.max(TOTAL, t), () => { el.dataset.sketch = 'done' })
+      tl.at(Math.max(TOTAL, t), () => { grain(ink); el.dataset.sketch = 'done' })
     }
 
     let started = false

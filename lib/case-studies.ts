@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import type { StaticImageData } from 'next/image'
 import vaultHomePreview from '@/public/images/case-studies/vault-home.png'
 import structureTreePreview from '@/public/images/case-studies/structure-tree.png'
-import sharespostHomePreview from '@/public/images/case-studies/sharespost-home.png'
+import sharespostHomePreview from '@/public/images/case-studies/sharespost-home.jpg'
 import armadaUserPreview from '@/public/images/case-studies/armada-user.png'
-import boundarySrPlaybackPreview from '@/public/images/case-studies/boundary-sr-playback.png'
+import boundarySrPlaybackPreview from '@/public/images/case-studies/boundary-sr-playback.jpg'
 import { openGraphDefaults } from './site'
 
 export type CaseStudyTheme = {

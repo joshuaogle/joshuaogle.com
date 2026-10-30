@@ -29,7 +29,7 @@ export default function BoundaryCaseStudy() {
 
       <div className="article-body centered case-study">
         <Example
-          images={["case-studies/boundary-sr-playback.png"]}
+          images={["case-studies/boundary-sr-playback.jpg"]}
           caption="Session Recording: playing back a recorded SSH session, with its details"
         />
 
@@ -98,7 +98,7 @@ export default function BoundaryCaseStudy() {
           </p>
 
           <Example
-            images={["case-studies/boundary-sr-researchplan.png"]}
+            images={["case-studies/boundary-sr-researchplan.jpg"]}
             caption="Research synthesis and journey mapping"
           />
 
@@ -157,7 +157,7 @@ export default function BoundaryCaseStudy() {
 
           <Example
             images={[
-              "case-studies/boundary-sr-blog.png",
+              "case-studies/boundary-sr-blog.jpg",
               "case-studies/boundary-sr-rdp.png"
             ]}
             caption="The Session Recording announcement, and RDP support, which came next"
@@ -176,7 +176,7 @@ export default function BoundaryCaseStudy() {
 
           <Example
             images={[
-              "case-studies/boundary-ts-researchplan.png",
+              "case-studies/boundary-ts-researchplan.jpg",
               "case-studies/boundary-ts-workflows.png"
             ]}
             caption="Traditional access workflow vs. Transparent Sessions"
@@ -209,13 +209,13 @@ export default function BoundaryCaseStudy() {
           </p>
 
           <Example
-            images={["case-studies/boundary-ts-prototype.png"]}
+            images={["case-studies/boundary-ts-prototype.jpg"]}
             caption="I built a prototype simulating switching between apps"
           />
 
           <Example
             images={[
-              "case-studies/boundary-ts-prototype-section.png",
+              "case-studies/boundary-ts-prototype-section.jpg",
               "case-studies/boundary-ts-prototype-screen.png"
             ]}
             caption="I took users through several workflows to see what they thought"
@@ -230,7 +230,7 @@ export default function BoundaryCaseStudy() {
           </p>
 
           <Example
-            images={["case-studies/boundary-ts-quotes.png"]}
+            images={["case-studies/boundary-ts-quotes.jpg"]}
             caption="What people said about aliases in testing"
           />
 
@@ -246,14 +246,14 @@ export default function BoundaryCaseStudy() {
 
           <Example
             images={[
-              "case-studies/boundary-ts-menubar.png",
+              "case-studies/boundary-ts-menubar.jpg",
               "case-studies/boundary-ts-spotlight.png"
             ]}
             caption="We reimagined new form factors that Transparent Sessions enables"
           />
 
           <Example
-            images={["case-studies/boundary-ts-blog.png"]}
+            images={["case-studies/boundary-ts-blog.jpg"]}
             caption="Announcement for Transparent Sessions"
           />
         </section>

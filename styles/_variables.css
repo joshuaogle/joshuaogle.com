@@ -205,7 +205,8 @@
   /* The paper's dots, the edge and lift of glass (cards and buttons), and the shadow a
      sketchbook cover casts. On dark paper the glass edge is a hint of highlight and the
      covers need no shadow. */
-  --paper-dot-color: rgba(128, 128, 128, 0.2);
+  /* The paper's dot grid: one dot per tile, centered (styles/_layout.css spaces and places it) */
+  --paper-dots: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='1' fill='rgb(128,128,128)' fill-opacity='.2'/%3E%3C/svg%3E");
   --glass-edge-rgb: var(--theme-highlight-rgb);
   --glass-lift: 0 0 0 transparent;
   --cover-lift: none;
@@ -234,7 +235,7 @@ html[data-prefers-color-scheme="light"] {
   --theme-shadow-rgb: 15, 13, 11;
   --surface-opacity: 0.84;
   --surface-opacity-hover: 0.9;
-  --paper-dot-color: rgba(112, 100, 86, 0.22);
+  --paper-dots: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='1' fill='rgb(112,100,86)' fill-opacity='.22'/%3E%3C/svg%3E");
   --glass-edge-rgb: 60, 56, 52;
   --glass-lift: 0 10px 30px -14px rgba(40, 36, 32, 0.24);
   /* Pulled in (spread past the blur) so it stays inside the cover's width: the reveal clips

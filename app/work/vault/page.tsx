@@ -185,9 +185,9 @@ export default function VaultCaseStudy() {
 
           <Example
             images={[
-              "case-studies/vault-guide-methods.png",
-              "case-studies/vault-guide-mobile.png",
-              "case-studies/vault-guide-flow.png",
+              "case-studies/vault-guide-methods.jpg",
+              "case-studies/vault-guide-mobile.jpg",
+              "case-studies/vault-guide-flow.jpg",
             ]}
             caption="The Vault Guide in action, and designing its workflow for flexibility"
           />

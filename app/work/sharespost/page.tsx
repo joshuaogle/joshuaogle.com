@@ -26,7 +26,7 @@ export default function SharespostCaseStudy() {
 
       <div className="article-body centered case-study">
         <Example
-          images={["case-studies/sharespost-home.png"]}
+          images={["case-studies/sharespost-home.jpg"]}
           caption="The Sharespost home page"
         />
 
@@ -44,7 +44,7 @@ export default function SharespostCaseStudy() {
 
           <Example
             images={[
-              "case-studies/sharespost-chart.png",
+              "case-studies/sharespost-chart.jpg",
               "case-studies/sharespost-card.png",
               "case-studies/sharespost-wires.png"
             ]}
@@ -90,7 +90,7 @@ export default function SharespostCaseStudy() {
           <Example
             images={[
               "case-studies/sharespost-invision.png",
-              "case-studies/sharespost-home.png"
+              "case-studies/sharespost-home.jpg"
             ]}
             caption="InVision is perfect for user testing at any stage of production"
           />
@@ -117,7 +117,7 @@ export default function SharespostCaseStudy() {
           </p>
 
           <Example
-            images={["case-studies/sharespost-waterfall.png"]}
+            images={["case-studies/sharespost-waterfall.jpg"]}
             caption="The &ldquo;waterfall chart&rdquo; was the most technically difficult, but also the most informative."
           />
 
@@ -131,7 +131,7 @@ export default function SharespostCaseStudy() {
           </p>
 
           <Example
-            images={["case-studies/sharespost-admin.png"]}
+            images={["case-studies/sharespost-admin.jpg"]}
             caption="The admin system that gives the brokers access to all of the data."
           />
 

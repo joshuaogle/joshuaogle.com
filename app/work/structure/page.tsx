@@ -33,7 +33,7 @@ export default function StructureCaseStudy() {
       <div className="article-body centered case-study">
         <Example
           images={[
-            "case-studies/structure-summary.png"
+            "case-studies/structure-summary.jpg"
           ]}
           caption="Tokens and components in Structure"
         />
@@ -139,8 +139,8 @@ export default function StructureCaseStudy() {
 
           <Example
             images={[
-              "case-studies/structure-welcome.png",
-              "case-studies/structure-spacing.png",
+              "case-studies/structure-welcome.jpg",
+              "case-studies/structure-spacing.jpg",
               "case-studies/structure-colors.png"
             ]}
             caption="Starting in Sketch"

@@ -27,7 +27,7 @@ export default function ArmadaCaseStudy() {
       <div className="article-body centered case-study">
         <Example
           images={[
-            "case-studies/armada-home.png"
+            "case-studies/armada-home.jpg"
           ]}
           caption="Armada helps you track your fleet in real-time"
         />

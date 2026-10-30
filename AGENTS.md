@@ -53,6 +53,10 @@ imported as React components through SVGR, configured in `next.config.js`.
   `public/images/` and read their dimensions at build time (`lib/images.ts`),
   so a missing file fails the build.
 - Motion (autoplay video, pencil drawing, hover lifts) is skipped for `prefers-reduced-motion`.
+- Scrolling in Safari: no `background-attachment: fixed` (the window glow is a fixed `body::before` layer),
+  no page-tall gradients (the dots are a tiled image), and SVG filters only on things that have stopped
+  moving (the pencil grain goes on after the strokes finish). Videos are 1080p at most; screenshots are
+  JPEGs up to 2304px wide unless they need transparency.
 - Case study images and videos go through `<Example>` (`components/example.tsx`), shown
   plainly with a hairline edge. It places a figure by its images' size: big photos run
   edge to edge, big screens and rows of related images break out wider than the text,
@@ -148,7 +152,7 @@ Rules:
 
 ### 2. The dot grid
 
-- The dot grid lives on `.app::after` as now. `background-size` is `u u`.
+- The dot grid is a tiled SVG dot (`--paper-dots`) in `.app`'s background, as now. Its tile size is `u u`.
 - Horizontally the grid is centered on the page, so a dot column runs down the middle.
 - Vertically, dot rows sit at `0, u, 2u…` from the top of `.app`. Dots mark row
   boundaries: block tops land on dots, and lines of text sit in the band between two
