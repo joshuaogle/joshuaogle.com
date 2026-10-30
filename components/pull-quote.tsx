@@ -6,8 +6,8 @@ type Props = {
   by: string
 }
 
-// A quote set large in the text column, its opening mark hanging in the margin in the
-// project's color
+// A quote in the text column with a bar down its left in the project's color, like a
+// quote in a chat or notes app
 const PullQuote = ({ children, by }: Props) => {
   return (
     <figure className={styles.pullQuote}>

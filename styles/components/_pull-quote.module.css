@@ -1,6 +1,20 @@
+/* A bar down the left in the project's color, like a quote in a chat or notes app, with
+   the quote and who said it set beside it */
 .pullQuote {
+  position: relative;
   margin: var(--larger-spacing) 0;
-  padding: 0;
+  padding: 0.15em 0 0.15em 1.5rem;
+}
+
+.pullQuote::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 4px;
+  border-radius: 2px;
+  background: var(--theme-color-title);
 }
 
 /* Undoes the site-wide blockquote: no faint giant mark behind it */
@@ -19,23 +33,15 @@
   margin: 0;
   color: var(--text-color);
   font-family: var(--heading-font);
-  font-size: calc(2.1 * var(--heading-unit));
+  font-size: calc(1.6 * var(--heading-unit));
   font-weight: var(--font-weight-semibold);
-  line-height: 1.15;
+  line-height: 1.25;
   letter-spacing: -0.01em;
   text-wrap: balance;
 }
 
-/* The opening mark hangs in the margin, so the quote's left edge stays on the text's */
 .quote p::before {
   content: "“";
-  position: absolute;
-  top: -0.12em;
-  right: 100%;
-  padding-right: 0.06em;
-  color: var(--theme-color-title);
-  font-size: 2em;
-  line-height: 1;
 }
 
 .quote p::after {
