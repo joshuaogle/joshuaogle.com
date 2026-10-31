@@ -6,8 +6,8 @@ import styles from '../styles/components/_session-waveform.module.css'
 // A working version of the waveform scrubber from the Session Recording playback design,
 // at the design's sizes. Each bar is one 15-second tick of a recorded session: bytes sent
 // up (green) above the dotted line and bytes coming back (blue, or red for an error)
-// below it, with heights on a log scale. Playing moves through bursts of activity and
-// jumps over quiet stretches.
+// below it, with heights on a log scale. Playing moves at a watchable pace through bursts
+// of activity and fast-forwards through the quiet stretches between them.
 
 type Tick = { up: number, down: number, error: boolean }
 
@@ -19,7 +19,8 @@ const PER_DIGIT = 2   // bar height per digit of the byte count, up to 12px a si
 const HEIGHT = 28     // the track's height
 const MIDDLE = HEIGHT / 2
 const WIDTH = TICKS * STEP
-const PLAY_MS = 90
+const ACTIVE_MS = 220 // per tick while something is happening
+const QUIET_MS = 35   // per tick through a quiet stretch
 
 // Bursts of activity, by tick; the rest of the session is quiet
 const BURSTS: [number, number][] = [[0, 5], [15, 17], [24, 31], [38, 40], [45, 48], [60, 70]]
@@ -62,14 +63,6 @@ function formatLength(ticks: number) {
   return `${pad(Math.floor(seconds / 3600))}:${pad(Math.floor(seconds / 60) % 60)}:${pad(seconds % 60)}`
 }
 
-// The first busy tick after the quiet stretch that follows `from`
-function nextBurst(from: number) {
-  let i = from + 1
-  while (i < TICKS && isActive(SESSION[i])) i++
-  while (i < TICKS && !isActive(SESSION[i])) i++
-  return i < TICKS ? i : from
-}
-
 const SessionWaveform = () => {
   const [position, setPosition] = useState(0)
   const [playing, setPlaying] = useState(false)
@@ -77,21 +70,17 @@ const SessionWaveform = () => {
   const waveRef = useRef<HTMLDivElement>(null)
   const dragging = useRef(false)
 
-  // Playback moves a tick at a time through activity and jumps straight over quiet stretches
+  // Playback steps one tick at a time: slowly where something's happening, quickly where
+  // nothing is, and stops at the end
   useEffect(() => {
     if (!playing) return
-    const timer = setInterval(() => {
-      setPosition((current) => {
-        const next = isActive(SESSION[current + 1] ?? SESSION[current]) ? current + 1 : nextBurst(current)
-        if (next >= TICKS - 1 || next === current) {
-          setPlaying(false)
-          return TICKS - 1
-        }
-        return next
-      })
-    }, PLAY_MS)
-    return () => clearInterval(timer)
-  }, [playing])
+    const delay = isActive(SESSION[position]) ? ACTIVE_MS : QUIET_MS
+    const timer = setTimeout(() => {
+      if (position >= TICKS - 1) setPlaying(false)
+      else setPosition(position + 1)
+    }, delay)
+    return () => clearTimeout(timer)
+  }, [playing, position])
 
   const tickAt = (clientX: number) => {
     const rect = waveRef.current?.getBoundingClientRect()

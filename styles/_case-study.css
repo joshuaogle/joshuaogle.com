@@ -21,7 +21,9 @@
 /* The hero image starts the story: a clear step down from the header, and no margin under
    it, so the first section starts a section's distance below */
 .case-study > figure:first-child {
-  margin: calc(var(--larger-spacing) * var(--bigger)) 0 0;
+  /* Top and bottom only: a wide or full-bleed image sets its own left margin to center */
+  margin-top: calc(var(--larger-spacing) * var(--bigger));
+  margin-bottom: 0;
 }
 
 /* Jumping to a section (links, the On this page pill) lands with the eyebrow just below the
