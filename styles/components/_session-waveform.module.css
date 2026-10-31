@@ -1,0 +1,174 @@
+/* The waveform scrubber (components/session-waveform.tsx), measured from the Session
+   Recording playback design at 1x. It's product UI, so it looks the same in both themes.
+   Bar: 60px tall, 8px corners, 16px in on the left and 20px on the right.
+   Play button: 36px square, 4px corners; 42px to the time, which ends 12px before the track.
+   Track: 28px tall, 4px corners, 4px inside it to the first bar.
+   After the track: 24px to the length, 19px to the 18px full screen icon. */
+.example {
+  margin: var(--larger-spacing) 0;
+  padding: 0;
+}
+
+.player {
+  --wave-up: #80D196;
+  --wave-down: #5C9BE5;
+  --wave-error: #E52228;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  height: 60px;
+  padding: 0 20px 0 16px;
+  border-radius: 8px;
+  background: #252937;
+  box-shadow: inset 0 1px 0 #3E445C, 0 6px 16px -6px rgba(17, 20, 31, 0.35);
+  color: #FFFFFF;
+  font-family: var(--sans-serif);
+  font-size: 14px;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Full screen: the bar centered on black */
+.player:fullscreen {
+  height: 100%;
+  padding: 0 5vw;
+  border-radius: 0;
+  background: #0C0C0E;
+  box-shadow: none;
+}
+
+.play {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 0;
+  border-radius: 4px;
+  background: #1060FF;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.play:hover {
+  background: #2E74FF;
+}
+
+.play svg,
+.fullscreen svg,
+.wave svg {
+  display: block;
+  margin: 0;
+}
+
+.time {
+  flex: none;
+  min-width: 26px;
+  margin: 0 12px 0 42px;
+  text-align: right;
+}
+
+.track {
+  flex: 1;
+  min-width: 0;
+  box-sizing: border-box;
+  height: 28px;
+  padding: 0 4px;
+  border-radius: 4px;
+  background: #0C0C0E;
+  cursor: ew-resize;
+  touch-action: none;
+}
+
+.track:focus-visible {
+  outline: 2px solid var(--wave-down);
+  outline-offset: 2px;
+}
+
+/* The bars at their real size, from the left of the track; on a narrow screen they shrink
+   to fit, keeping their proportions */
+.wave {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.wave svg {
+  width: 100%;
+  height: auto;
+}
+
+.dots {
+  stroke: #353B4F;
+  stroke-width: 2;
+  stroke-dasharray: 2 2;
+}
+
+.barUp { fill: var(--wave-up); }
+.barDown { fill: var(--wave-down); }
+.barError { fill: var(--wave-error); }
+
+/* 12px, centered on the current bar */
+.knob {
+  position: absolute;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.length {
+  flex: none;
+  margin: 0 19px 0 24px;
+  letter-spacing: 0.02em;
+}
+
+.fullscreen {
+  display: flex;
+  flex: none;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #E4E4E6;
+  cursor: pointer;
+}
+
+.fullscreen:hover {
+  color: #FFFFFF;
+}
+
+/* On a phone the length goes, and the gaps tighten so the track keeps room */
+@media (max-width: 520px) {
+  .player {
+    padding: 0 12px;
+  }
+
+  .time {
+    margin: 0 8px 0 12px;
+  }
+
+  .length {
+    display: none;
+  }
+
+  .fullscreen {
+    margin-left: 12px;
+  }
+}
+
+.caption {
+  display: block;
+  margin-top: var(--smaller-spacing);
+  color: var(--readable-muted-color);
+  font-family: var(--sans-serif);
+  font-size: var(--small-font-size);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: normal;
+  line-height: 1.5;
+}

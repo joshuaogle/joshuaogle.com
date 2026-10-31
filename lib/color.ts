@@ -34,3 +34,19 @@ export function readableOn(color: string, background: string, target = 4.5): str
   }
   return 'rgb(255, 255, 255)'
 }
+
+// The darker end of the light theme's paper (--background-end), where text has the least contrast
+export const LIGHT_PAPER = '#F1ECE4'
+// The site's ink (--neutral-900), for a brand with no secondary color to fall back on
+export const INK = '#262322'
+
+// A project's title color in each theme. Dark theme uses the brand's primary as is, lightened
+// only if it fails on the project's background. Light paper never gets a darkened primary: a
+// primary that fails there gives way to the brand's secondary color, or to ink.
+export function titleColors({ primary, secondary, darkBackground }: { primary: string, secondary?: string, darkBackground: string }) {
+  const passesOnPaper = contrast(parseColor(primary), parseColor(LIGHT_PAPER)) >= 4.5
+  return {
+    light: passesOnPaper ? primary : (secondary ?? INK),
+    dark: readableOn(primary, darkBackground),
+  }
+}

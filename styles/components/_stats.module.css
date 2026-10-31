@@ -1,0 +1,41 @@
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: var(--base-spacing) var(--large-spacing);
+  margin: var(--larger-spacing) 0;
+  padding: 0;
+  list-style: none;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: var(--smallest-spacing);
+  padding-top: var(--small-spacing);
+  border-top: 1px solid var(--hairline-color);
+}
+
+.stat::before {
+  content: none;
+}
+
+.value {
+  color: var(--theme-color-title);
+  font-family: var(--heading-font);
+  font-size: calc(2.75 * var(--heading-unit));
+  font-weight: var(--font-weight-semibold);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.label {
+  color: var(--readable-muted-color);
+  font-size: var(--small-font-size);
+  line-height: 1.4;
+}
+
+.label code {
+  color: var(--text-color);
+  font-size: 0.95em;
+  white-space: nowrap;  /* a flag like -alias never breaks at its hyphen */
+}

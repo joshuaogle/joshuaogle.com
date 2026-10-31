@@ -3,7 +3,8 @@ import CaseStudyTheme from '@/components/case-study-theme'
 import Intro from '@/components/intro'
 import LogoStack from '@/components/logo-stack'
 import Example from '@/components/example'
-import { caseStudyMetadata, getCaseStudy } from '@/lib/case-studies'
+import NextCaseStudy from '@/components/next-case-study'
+import { caseStudyKicker, caseStudyMetadata, getCaseStudy } from '@/lib/case-studies'
 
 const study = getCaseStudy('sharespost')
 
@@ -19,19 +20,22 @@ export default function SharespostCaseStudy() {
         meta={study.meta}
         theme={study.theme}
         logos={<LogoStack study={study} />}
+        kicker={caseStudyKicker(study)}
+        dek={study.dek}
       />
 
-      <div className={`article-body centered`}>
+      <div className="article-body centered case-study">
+        <Example
+          images={["case-studies/sharespost-home.jpg"]}
+          caption="The Sharespost home page"
+        />
+
         <section>
-          <div className="section-title">
-            The Challenge
-          </div>
-          <h2>
-            More interesting than it sounds
-          </h2>
+          <div className="section-title">The challenge</div>
+          <h2>More interesting than it sounds</h2>
           <p>
             When I mentioned to people that I was working on a financial app,
-            I think they imagined something 
+            I think they imagined something
             Financial apps may not sound like the most interesting thing to work on, but the thing I love most about consulting is diving deep into a new field.
             Even among financial apps, private securities are a unique challenge.
             Private securities are shares of stock in a company that isn't publicly traded, so while
@@ -40,7 +44,7 @@ export default function SharespostCaseStudy() {
 
           <Example
             images={[
-              "case-studies/sharespost-chart.png",
+              "case-studies/sharespost-chart.jpg",
               "case-studies/sharespost-card.png",
               "case-studies/sharespost-wires.png"
             ]}
@@ -57,12 +61,8 @@ export default function SharespostCaseStudy() {
         </section>
 
         <section>
-          <div className="section-title">
-            The Solution
-          </div>
-          <h2>
-            Demystifying the strange world of stocks
-          </h2>
+          <div className="section-title">The solution</div>
+          <h2>Demystifying the strange world of stocks</h2>
 
           <p>
             As with most projects at thoughtbot, we started with a week-long Product Design Sprint.
@@ -86,17 +86,15 @@ export default function SharespostCaseStudy() {
             We usually like to start designing in the browser as soon as possible, but since the developers had some very complicated back-end code to figure out we spent time polishing the wireframes into high-fidelity mockups.
             These mockups were refined in <a href="http://invisionapp.com" target="_new">InVision</a> so we could give the client a realistic look at how the views were connected.
           </p>
-        </section>
 
-        <Example
-          images={[
-            "case-studies/sharespost-invision.png",
-            "case-studies/sharespost-home.png"
-          ]}
-          caption="InVision is perfect for user testing at any stage of production"
-        />
+          <Example
+            images={[
+              "case-studies/sharespost-invision.png",
+              "case-studies/sharespost-home.jpg"
+            ]}
+            caption="InVision is perfect for user testing at any stage of production"
+          />
 
-        <section>
           <p>
             Here's a look at one of those mockups.
             The home page prominently features an &ldquo;Estimated Valuation&rdquo; chart to summarize the user's portfolio over time.
@@ -104,15 +102,11 @@ export default function SharespostCaseStudy() {
             Some of the tabs on company pages feature this kind of chart at the top too, <mark>giving a nice summary before they dive into the details</mark>.
           </p>
 
-          <div className="split-layout">
-            <div className="split-primary">
-              <p>
-                One of the repeated design patterns around the site is the use of cards to contain information related to an opportunity.
-                The company name and logo give a nice visual differentiator, as well as a large graph that shows the estimated valuation of the company over time so you can tell at a glance if this is a good investment.
-                Buttons on the right give easy access to actions the user might want to take, including asking their broker to start the process of buying the stock.
-              </p>
-            </div>
-          </div>
+          <p>
+            One of the repeated design patterns around the site is the use of cards to contain information related to an opportunity.
+            The company name and logo give a nice visual differentiator, as well as a large graph that shows the estimated valuation of the company over time so you can tell at a glance if this is a good investment.
+            Buttons on the right give easy access to actions the user might want to take, including asking their broker to start the process of buying the stock.
+          </p>
 
           <p>
             Since we started the project with two designers, <mark>we were able to create the styleguide and design patterns much quicker than most projects</mark>.
@@ -121,14 +115,12 @@ export default function SharespostCaseStudy() {
             It's important to start getting user feedback as early as possible, so we put together a plan to deploy the pieces of the interface as they were ready.
             With a set of feature flags and a flexible layout system, we iteratively released the new system to VIP members for testing.
           </p>
-        </section>
 
-        <Example
-          images={["case-studies/sharespost-waterfall.png"]}
-          caption="The &ldquo;waterfall chart&rdquo; was the most technically difficult, but also the most informative."
-        />
+          <Example
+            images={["case-studies/sharespost-waterfall.jpg"]}
+            caption="The &ldquo;waterfall chart&rdquo; was the most technically difficult, but also the most informative."
+          />
 
-        <section>
           <p>
             The piece that took the longest was the waterfall chart.
             Depending on the class of your shares and when you acquired them, they would be valued differently.
@@ -137,14 +129,12 @@ export default function SharespostCaseStudy() {
             I designed the charts and wrote the javascript for them, and then the developers fed in the data in a simple format.
             The back-end that provides the data for this piece is extremely complicated, and frankly I'm glad I wasn't the one working on it.
           </p>
-        </section>
 
-        <Example
-          images={["case-studies/sharespost-admin.png"]}
-          caption="The admin system that gives the brokers access to all of the data."
-        />
+          <Example
+            images={["case-studies/sharespost-admin.jpg"]}
+            caption="The admin system that gives the brokers access to all of the data."
+          />
 
-        <section>
           <p>
             With all of this data, the brokers and admins needed a system to help them manage it all.
             We developed an admin system that makes it all simple <mark>and works well on mobile too</mark>.
@@ -154,13 +144,8 @@ export default function SharespostCaseStudy() {
         </section>
 
         <section>
-          <div className="section-title">
-            In Summary
-          </div>
-          <h2>
-            The best of both worlds
-          </h2>
-
+          <div className="section-title">Reflection</div>
+          <h2>The best of both worlds</h2>
           <p>
             This was probably the most complicated app that I worked on while at thoughtbot.
             The client had worked with us on another project and understood our process.
@@ -170,6 +155,8 @@ export default function SharespostCaseStudy() {
             It launches Fall 2016, just in time for their busiest season, and I can't wait to hear how it goes.
           </p>
         </section>
+
+        <NextCaseStudy study={study} />
       </div>
     </>
   )

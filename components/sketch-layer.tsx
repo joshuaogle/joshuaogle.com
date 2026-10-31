@@ -33,16 +33,17 @@ type Props = {
 // Guides start within SPREAD ms however many there are, and each takes LINE ms to draw in
 // or out. Hatches shade in from HATCH_START, HATCH_STEP apart (the sweep's length is in the
 // CSS); revealed content wipes in over them from REVEAL_START, REVEAL_STEP apart.
-const TOTAL = 2000, LINE = 360, SPREAD = 300
-const HATCH_START = 150, HATCH_STEP = 70
-const REVEAL_START = 750, REVEAL_STEP = 70
+const TOTAL = 1500, LINE = 280, SPREAD = 220
+const HATCH_START = 110, HATCH_STEP = 52
+const REVEAL_START = 560, REVEAL_STEP = 52
 const ERASE_START = TOTAL - SPREAD - LINE
 
 // A pencil layer over its children. When it scrolls into view it drafts faint
 // construction lines, shades in colored hatching where content will go, reveals
 // children marked data-sketch-reveal one by one over it, draws handwritten notes, then
 // draws the construction back out and clears the hatching. The notes stay.
-// Reduced motion, and sections already on screen at load, get the finished state.
+// It plays whenever the section comes into view, including on screen at load; reduced
+// motion gets the finished state.
 export default function SketchLayer({ plan, children, className }: Props) {
   const root = useRef<HTMLDivElement>(null)
   const guidesSvg = useRef<SVGSVGElement>(null)
@@ -50,14 +51,13 @@ export default function SketchLayer({ plan, children, className }: Props) {
   const hatchLayer = useRef<HTMLDivElement>(null)
   const idPrefix = 'sk' + useId().replace(/[^a-zA-Z0-9]/g, '')
 
-  // Hide revealable content before first paint, but only if it will animate
+  // Hide revealable content before first paint, but only if it will animate. A section
+  // already on screen at load animates right away, since the observer below reports it at once.
   useLayoutEffect(() => {
     const el = root.current
     if (!el) return
     const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches
-    const r = el.getBoundingClientRect()
-    const onScreen = r.top < innerHeight * .85 && r.bottom > 0
-    el.dataset.sketch = reduce || onScreen ? 'done' : 'armed'
+    el.dataset.sketch = reduce ? 'done' : 'armed'
   }, [])
 
   useEffect(() => {
@@ -83,6 +83,10 @@ export default function SketchLayer({ plan, children, className }: Props) {
       svg.replaceChildren()
     }
 
+    // Grain goes on once the strokes have finished drawing: Safari repaints an SVG filter
+    // on every frame while what's under it moves
+    const grain = (ink: Ink) => ink.group.setAttribute('filter', `url(#${idPrefix}-graphite)`)
+
     const makeInk = (): Ink => {
       const defs = svgEl('defs', {}, iSvg)
       // Pencil grain: speckles the graphite so it doesn't read as flat vector
@@ -90,7 +94,7 @@ export default function SketchLayer({ plan, children, className }: Props) {
       svgEl('feTurbulence', { type: 'fractalNoise', baseFrequency: 1.4, numOctaves: 1, seed: 3, result: 'n' }, filter)
       svgEl('feColorMatrix', { in: 'n', type: 'matrix', values: '0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -1.5 1.35', result: 'speck' }, filter)
       svgEl('feComposite', { in: 'SourceGraphic', in2: 'speck', operator: 'in' }, filter)
-      const group = svgEl('g', { filter: `url(#${idPrefix}-graphite)` }, iSvg)
+      const group = svgEl('g', {}, iSvg)
       return { svg: iSvg, defs, group, idPrefix, inkClass: styles.ink, noteClass: styles.note }
     }
 
@@ -105,6 +109,7 @@ export default function SketchLayer({ plan, children, className }: Props) {
       hLayer.replaceChildren()
       tl = createTimeline(true)
       const ink = makeInk()
+      grain(ink)
       plan(m).notes?.forEach(n => note(ink, tl, n, 0))
       el.querySelectorAll<HTMLElement>('[data-sketch-reveal]').forEach(n => { n.dataset.revealed = 'true' })
       el.dataset.sketch = 'done'
@@ -142,7 +147,7 @@ export default function SketchLayer({ plan, children, className }: Props) {
       paths.forEach((path, i) => tl.erase(path, ERASE_START + i * step, LINE))
       // The revealed content now covers the hatching; clear it so nothing shows past an edge on hover
       tl.at(TOTAL, () => { hLayer.replaceChildren() })
-      tl.at(Math.max(TOTAL, t), () => { el.dataset.sketch = 'done' })
+      tl.at(Math.max(TOTAL, t), () => { grain(ink); el.dataset.sketch = 'done' })
     }
 
     let started = false

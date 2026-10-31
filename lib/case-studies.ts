@@ -1,16 +1,16 @@
 import type { Metadata } from 'next'
 import type { StaticImageData } from 'next/image'
-import boundaryTsPrototypeScreenPreview from '@/public/images/case-studies/boundary-ts-prototype-screen.png'
-import boundarySrRdpPreview from '@/public/images/case-studies/boundary-sr-rdp.png'
 import vaultHomePreview from '@/public/images/case-studies/vault-home.png'
 import structureTreePreview from '@/public/images/case-studies/structure-tree.png'
-import sharespostHomePreview from '@/public/images/case-studies/sharespost-home.png'
+import sharespostHomePreview from '@/public/images/case-studies/sharespost-home.jpg'
 import armadaUserPreview from '@/public/images/case-studies/armada-user.png'
-import boundarySrWaveformsCover from '@/public/images/case-studies/boundary-sr-waveforms.png'
+import boundarySrPlaybackPreview from '@/public/images/case-studies/boundary-sr-playback.jpg'
 import { openGraphDefaults } from './site'
 
 export type CaseStudyTheme = {
   colorPrimary: string
+  // The brand's second color, for titles on light paper when the primary doesn't read there
+  colorSecondary?: string
   colorBGLight: string
   colorBGDark: string
   colorHeading: string
@@ -31,11 +31,20 @@ export type CaseStudy = {
   title: string
   name: string
   description?: string
+  // One line under the title: what Joshua did and what changed
+  dek?: string
   meta: {
     date: string
+    // The span of the work, like "2017–2021", shown in place of the date when known
+    years?: string
+    // The kind of product, like "Enterprise security"
+    field?: string
     role: string
     time: string
     team: string
+    // What the work covered, and who it was for
+    scope?: string
+    users?: string
     client: string
     client_url: string
   }
@@ -45,43 +54,25 @@ export type CaseStudy = {
   product?: ProductLogo
 }
 
-const transparentSessions: CaseStudy = {
-  slug: 'boundary-transparent-sessions',
+// Session Recording and Transparent Sessions, told as one story in two chapters. Their old
+// pages (/work/boundary-session-recording, /work/boundary-transparent-sessions) redirect here.
+const boundary: CaseStudy = {
+  slug: 'boundary',
   company: { name: 'HashiCorp', src: '/images/timeline-hashicorp.svg' },
   product: { name: 'Boundary', src: '/images/case-studies/case-study-logo-boundary.svg', color: 'rgb(223, 70, 76)', glyph: '#FFFFFF' },
-  pageTitle: 'Boundary Transparent Sessions',
-  title: "Transparent Sessions",
+  pageTitle: 'Boundary',
+  title: "The best security is invisible",
   name: "Boundary",
+  dek: "How I brought design into Boundary’s leadership, guided a design team that grew from one to three, and led design for Session Recording and Transparent Sessions.",
   meta: {
-    date: "2024",
-    role: "Product Design Lead",
-    time: "3 years",
+    date: "2025",
+    years: "2021–2025",
+    field: "Privileged access",
+    role: "Staff Product Designer",
+    time: "4 years",
     team: "3 Designers, 30+ Engineers",
-    client: "HashiCorp",
-    client_url: "http://boundaryproject.io"
-  },
-  theme: {
-    colorPrimary: "rgb(223, 70, 76)",
-    colorBGLight: "#252937",
-    colorBGDark: "#0C0C0E",
-    colorHighlight: "rgb(96, 212, 220)",
-    colorHeading: "rgba(255, 255, 255, 0.33)",
-    preview: boundaryTsPrototypeScreenPreview,
-  }
-}
-
-const sessionRecording: CaseStudy = {
-  slug: 'boundary-session-recording',
-  company: { name: 'HashiCorp', src: '/images/timeline-hashicorp.svg' },
-  product: { name: 'Boundary', src: '/images/case-studies/case-study-logo-boundary.svg', color: 'rgb(223, 70, 76)', glyph: '#FFFFFF' },
-  pageTitle: 'Boundary Session Recording',
-  title: "Session Recording",
-  name: "Boundary",
-  meta: {
-    date: "2023",
-    role: "Product Design Lead",
-    time: "3 years",
-    team: "3 Designers, 30+ Engineers",
+    scope: "Session Recording, Transparent Sessions, desktop client",
+    users: "Security, platform & incident response teams",
     client: "HashiCorp",
     client_url: "http://boundaryproject.io"
   },
@@ -91,8 +82,7 @@ const sessionRecording: CaseStudy = {
     colorBGDark: "#180507",
     colorHighlight: "rgb(96, 212, 220)",
     colorHeading: "rgb(239, 239, 241)",
-    preview: boundarySrRdpPreview,
-    cover: boundarySrWaveformsCover,
+    preview: boundarySrPlaybackPreview,
   }
 }
 
@@ -101,18 +91,24 @@ const vault: CaseStudy = {
   company: { name: 'HashiCorp', src: '/images/timeline-hashicorp.svg' },
   product: { name: 'Vault', src: '/images/case-studies/case-study-logo-vault.svg', color: 'rgb(255, 207, 37)', glyph: '#000000' },
   pageTitle: 'Vault',
-  title: "Keeping your secrets safe",
+  title: "Keeping the cloud’s secrets",
   name: "Vault",
+  dek: "How I brought a web UI to Vault, an already popular CLI tool, and led its design through launch as a managed cloud service.",
   meta: {
     date: "2021",
+    years: "2017–2021",
+    field: "Enterprise security",
     role: "Product Design Lead",
     time: "4 years",
     team: "2 Designers, 30+ Engineers",
+    scope: "Vault Web UI, UI Guide, HCP Vault",
+    users: "Security, platform & compliance engineers",
     client: "HashiCorp",
     client_url: "http://vaultproject.io"
   },
   theme: {
     colorPrimary: "rgb(255, 207, 37)",
+    colorSecondary: "#000000",
     colorBGLight: "#272C31",
     colorBGDark: "#000",
     colorHighlight: "rgb(96, 212, 220)",
@@ -198,15 +194,24 @@ const armada: CaseStudy = {
   }
 }
 
-// Newest first; this is the order the home page carousel shows them in
-export const caseStudies: CaseStudy[] = [
-  transparentSessions,
-  sessionRecording,
+// Strongest first; this is the order the home page shows them in
+export const featuredCaseStudies: CaseStudy[] = [
+  boundary,
   vault,
   structure,
+]
+
+// Consulting work from before HashiCorp, in the older layout. Unlisted: the pages still work
+// for old links, but nothing on the site links to them and search engines are asked to skip
+// them. Move one up to featuredCaseStudies to list it again.
+export const unlistedCaseStudies: CaseStudy[] = [
   sharespost,
   armada,
 ]
+
+export const caseStudies: CaseStudy[] = [...featuredCaseStudies, ...unlistedCaseStudies]
+
+export const isListed = (study: CaseStudy) => featuredCaseStudies.includes(study)
 
 export function getCaseStudy(slug: string) {
   const study = caseStudies.find((study) => study.slug === slug)
@@ -220,11 +225,25 @@ export function caseStudyHref(study: CaseStudy) {
   return `/work/${study.slug}`
 }
 
+// The line over a case study's title: the product, the kind of product, and when
+export function caseStudyKicker({ name, meta }: CaseStudy) {
+  const product = meta.client.includes(name) ? meta.client : `${meta.client} ${name}`
+  return [product, meta.field, meta.years ?? meta.date].filter(Boolean).join(' · ')
+}
+
+// The one after it in the home page order, back to the first after the last. Unlisted
+// case studies lead to the first one.
+export function nextCaseStudy(study: CaseStudy) {
+  const i = featuredCaseStudies.indexOf(study)
+  return featuredCaseStudies[(i + 1) % featuredCaseStudies.length]
+}
+
 export function caseStudyMetadata(study: CaseStudy): Metadata {
   const description = study.description ?? `${study.title}: a ${study.name} case study by Joshua Ogle.`
   return {
     title: study.pageTitle,
     description,
+    ...(!isListed(study) && { robots: { index: false } }),
     openGraph: {
       ...openGraphDefaults,
       type: 'article',

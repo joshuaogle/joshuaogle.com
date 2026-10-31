@@ -34,7 +34,7 @@ imported as React components through SVGR, configured in `next.config.js`.
   lines with tapered ends), hatches (brand-colored skeletons, drawn as HTML and CSS
   so they stay cheap to animate) and notes, and mark elements with `data-sketch-id`
   (to measure) and `data-sketch-reveal` (to wipe in). The whole sequence, from the
-  first guide drawn to the last drawn back out, is 2 seconds; the timings are the
+  first guide drawn to the last drawn back out, is 1.5 seconds; the timings are the
   constants at the top of the file. `components/case-studies-sketch.tsx` is the one
   plan so far. Keep SVG filters and animated masks out of anything that moves:
   Safari repaints them every frame.
@@ -53,9 +53,33 @@ imported as React components through SVGR, configured in `next.config.js`.
   `public/images/` and read their dimensions at build time (`lib/images.ts`),
   so a missing file fails the build.
 - Motion (autoplay video, pencil drawing, hover lifts) is skipped for `prefers-reduced-motion`.
+- Scrolling in Safari: no `background-attachment: fixed` (the window glow is a fixed `body::before` layer),
+  no page-tall gradients (the dots are a tiled image), and SVG filters only on things that have stopped
+  moving (the pencil grain goes on after the strokes finish). Videos are 1080p at most; screenshots are
+  JPEGs up to 2304px wide unless they need transparency.
 - Case study images and videos go through `<Example>` (`components/example.tsx`), shown
-  plainly with a hairline edge; company and product logos come from
+  plainly with a hairline edge. It places a figure by its images' size: big photos run
+  edge to edge, big screens and rows of related images break out wider than the text,
+  and small or tall captures stay in the column. Company and product logos come from
   `lib/case-studies.ts` and render through `components/logo-stack.tsx`.
+- Case study pages share one structure (see `DESIGN.md`): `<Intro>` with `kicker` and
+  `dek`, then inside `<div className="article-body centered case-study">` the hero
+  `<Example>`, sections with a `.section-title` eyebrow and an `h2`, and the parts built
+  as components: `RoleSplit`, `Findings`, `PullQuote`, `Stats` and
+  `NextCaseStudy` (a "Next:" button, then the home page's `LetsTalk`). The last section
+  is the conclusion: a short paragraph on the results, then the numbers in `Stats`
+  (Structure's is its Reflection). A case study with several projects (Vault, Boundary) tells one story in
+  chapters: the shared context and role once at the top, then a `<section id>` per
+  project with a "Project · Year" eyebrow. Every case study gets the On this page pill
+  (`components/on-this-page.tsx`, from `app/work/layout.tsx`), which lists the sections by
+  their eyebrows, so a section needs a `.section-title`. Their styles are in `styles/_case-study.css` and the components'
+  modules; add `className="wide"` to break something out of the text column. A page
+  leaves out any part it has no real content for yet (no placeholder sections); Vault's
+  bracketed text marks copy still to write. Numbers go in `Stats` as text, not in images.
+- Project title colors come from `titleColors()` in `lib/color.ts`, set per theme by
+  `components/case-study-theme.tsx` as `--theme-color-title`. Light paper never gets a
+  darkened primary: give a brand whose primary fails there a `colorSecondary`, or it
+  falls back to ink. A test checks every case study passes AA in both themes.
 - Text in a brand color on a project's colors goes through `readableOn()` in
   `lib/color.ts`, which lightens it just enough to pass WCAG contrast.
 - Type sizes: text other than headings is sized in rem (or the `--*-font-size`
@@ -129,7 +153,7 @@ Rules:
 
 ### 2. The dot grid
 
-- The dot grid lives on `.app::after` as now. `background-size` is `u u`.
+- The dot grid is a tiled SVG dot (`--paper-dots`) in `.app`'s background, as now. Its tile size is `u u`.
 - Horizontally the grid is centered on the page, so a dot column runs down the middle.
 - Vertically, dot rows sit at `0, u, 2u…` from the top of `.app`. Dots mark row
   boundaries: block tops land on dots, and lines of text sit in the band between two

@@ -51,6 +51,14 @@ Decisions Joshua has made while reviewing designs. Follow them in new work.
 - **Always show light and dark.** Every mockup shows both themes.
 - **Stay in the site's own style.** New directions build on the existing look (the dot-grid paper, Tiempos headings over light sans body text, project colors, logo circles), not a new visual identity.
 
+### Themes
+
+- **Both themes are the same notebook.** Dark is warm brown paper; light is off-white with a hint of warmth (`#F7F4EF` to `#F1ECE4`) and softly warm dots: not a cool gray-white, which reads as foggy next to the dark theme, and not cream, which was too warm.
+- **Ink for headings in light, and every text color clears AA** (4.5:1) in both themes, including muted text and links.
+- **Glass has a neutral edge.** Cards and buttons use `--glass-edge-rgb` (a hint of highlight on dark, ink on light) and a soft lift on light, never the yellow highlight on white.
+- **Covers cast a shadow on light paper** so they sit on the page; on dark paper they don't need one.
+- **The ghost letters are pressed into the paper** in light, rather than blended, which turns them into a smudge on near-white.
+
 ### Case study pages
 
 - **Magazine-inspired, like Vogue or GQ:** a big, confident headline and photography given room, in the site's own type and colors.
@@ -63,3 +71,12 @@ Decisions Joshua has made while reviewing designs. Follow them in new work.
 - **No drop caps.**
 - **Captions in sentence case**, not all caps.
 - **Captions align with their image's place:** left when the image sits in the text column, right when it breaks out of it (wide rows and full-bleed photos).
+- **Built for recruiters (Magazine v3, the "Principal" layout in the Case Study Layouts canvas):** every case study follows one order, so a reviewer finds the same things in the same place:
+  1. A header with a kicker (product · field · years), the title, a one-line summary, and the facts (For, Role, Team, Time, Scope, Users), then a hero image of the shipped work.
+  2. Context, then **My role**, split into "What I did" and "With my partners", so Joshua's own work is clear from the team's.
+  3. The work, with research ending in **What we learned from research**: each hypothesis, a verdict (Confirmed, Disproved or New learning, as a word with a marker that doesn't rely on color), the learning set large, and a "So we" line with the decision it led to.
+  4. **Results:** the conclusion, a short paragraph on what the work achieved and then its numbers as `Stats`, before the next case study.
+  5. **Reflection** ("What I'd do differently"), then the next case study and a way to get in touch.
+- **Key facts are real text**, never only in an image, so people and screening tools can both read them.
+- **Weight and contrast limits:** headlines at 600, nothing lighter than 400 at any size, and every text color at 4.5:1 or better, even large text. Muted text and links use `--readable-muted-color` and `--readable-action-color`.
+- **Thin rules instead of boxes:** a strong rule opens a group (role, the first finding), hairlines separate the rest.

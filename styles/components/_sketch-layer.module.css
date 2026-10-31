@@ -49,7 +49,7 @@
   -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.4' numOctaves='1' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 -1.5 1.35'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E") 0 0 / 64px 64px;
   mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.4' numOctaves='1' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 -1.5 1.35'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E") 0 0 / 64px 64px;
   clip-path: polygon(0 0, 0 0, 0 0);
-  transition: clip-path 380ms cubic-bezier(.45, .05, .25, 1);
+  transition: clip-path 290ms cubic-bezier(.45, .05, .25, 1);
 }
 
 .hatch[data-shaded] {
@@ -73,7 +73,7 @@
    --reveal-transition to keep transitions of their own alongside the wipe. */
 .root [data-sketch-reveal] {
   clip-path: inset(var(--reveal-inset, 0px));
-  transition: var(--reveal-transition, clip-path 700ms cubic-bezier(.6, .05, .2, 1));
+  transition: var(--reveal-transition, clip-path 520ms cubic-bezier(.6, .05, .2, 1));
 }
 
 .root[data-sketch="armed"] [data-sketch-reveal]:not([data-revealed]) {

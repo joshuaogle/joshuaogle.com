@@ -184,37 +184,63 @@
 :root {
   --stark-rgb: 0, 0, 0;
   --text-color: var(--neutral-300);
-  --theme-color-heading: var(--neutral-500);
-  --background-start: var(--theme-color-bg-light, --neutral-800);
-  --background-end: var(--theme-color-bg-dark, --neutral-900);
+  --theme-color-heading: var(--neutral-400);  /* 5.2:1 on the paper; --neutral-500 was 2.7:1 */
+  --background-start: var(--theme-color-bg-light, var(--neutral-800));
+  --background-end: var(--theme-color-bg-dark, var(--neutral-900));
   --theme-action-color: var(--cyan-500);
   --theme-highlight-rgb: 229, 193, 46;
   --theme-shadow-rgb: 15, 13, 11;
   --surface-opacity: 0.25;
   --surface-opacity-hover: 0.4;
   --muted-color: rgba(255, 255, 255, 0.33);
+  /* Secondary text and links that clear WCAG AA (4.5:1) on every project's background.
+     Case studies use these; nothing there is set lighter than weight 400 either. */
+  --readable-muted-color: var(--neutral-400);
+  --readable-action-color: var(--cyan-500);
+  /* Thin rules between parts of a page: a faint one, and a strong one that opens a section */
+  --hairline-color: color-mix(in srgb, var(--text-color) 22%, transparent);
+  --rule-color: color-mix(in srgb, var(--text-color) 75%, transparent);
   --pencil-graphite: var(--neutral-300);      /* light graphite reads like silver pencil on dark paper */
   --pencil-construction: var(--neutral-300);
+  /* The paper's dots, the edge and lift of glass (cards and buttons), and the shadow a
+     sketchbook cover casts. On dark paper the glass edge is a hint of highlight and the
+     covers need no shadow. */
+  /* The paper's dot grid: one dot per tile, centered (styles/_layout.css spaces and places it) */
+  --paper-dots: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='1' fill='rgb(128,128,128)' fill-opacity='.2'/%3E%3C/svg%3E");
+  --glass-edge-rgb: var(--theme-highlight-rgb);
+  --glass-lift: 0 0 0 transparent;
+  --cover-lift: none;
   --shadow-o-0: 0;
   --shadow-o-u: 0.15;
   --shadow-o-p: 0.05;
   --shadow-o-a: 0.025;
 }
 
-/* Light theme */
+/* Light theme: off-white paper with a hint of warmth, so it's the same notebook as the dark
+   theme without turning cream. Headings in ink,
+   muted text and links that clear WCAG AA (4.5:1), glass with a neutral edge and a soft
+   lift, and covers that cast a shadow onto the page. */
 html[data-prefers-color-scheme="light"] {
   --stark-rgb: 255, 255, 255;
   --text-color: var(--neutral-700);
-  --theme-color-heading: var(--theme-color-bg-start);
-  --muted-color: rgba(0, 0, 0, 0.33);
+  --theme-color-heading: var(--neutral-900);
+  --muted-color: #625A53;
+  --readable-muted-color: #625A53;
+  --readable-action-color: #195FA0;
   --pencil-graphite: var(--neutral-700);
   --pencil-construction: var(--neutral-700);
-  --background-start: var(--neutral-100);
-  --background-end: var(--neutral-200);
-  --theme-action-color: var(--cyan-600);
+  --background-start: #F7F4EF;
+  --background-end: #F1ECE4;
+  --theme-action-color: #195FA0;
   --theme-shadow-rgb: 15, 13, 11;
-  --surface-opacity: 0.5;
-  --surface-opacity-hover: 0.66;
+  --surface-opacity: 0.84;
+  --surface-opacity-hover: 0.9;
+  --paper-dots: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='1' fill='rgb(112,100,86)' fill-opacity='.22'/%3E%3C/svg%3E");
+  --glass-edge-rgb: 60, 56, 52;
+  --glass-lift: 0 10px 30px -14px rgba(40, 36, 32, 0.24);
+  /* Pulled in (spread past the blur) so it stays inside the cover's width: the reveal clips
+     covers at their sides, and only lets them hang over the top and bottom */
+  --cover-lift: 0 1px 1px rgba(40, 25, 10, 0.25), 0 20px 26px -18px rgba(60, 40, 20, 0.55);
   --shadow-o-0: 0;
   --shadow-o-u: 0.1;
   --shadow-o-p: 0.075;

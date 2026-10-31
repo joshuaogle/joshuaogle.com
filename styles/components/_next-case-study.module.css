@@ -1,0 +1,71 @@
+/* The end of a case study: the next one, then Let's talk (components/lets-talk.tsx) */
+.end {
+  margin-top: var(--section-gap);
+}
+
+.next {
+  display: flex;
+  justify-content: center;
+}
+
+/* Let's talk starts a section's distance below, so Next reads as the end of the story and
+   Let's talk as its own closing part */
+.end > section {
+  padding-top: var(--section-gap);
+}
+
+/* A "continue reading" button, like the one at the end of an article in a news app:
+   glass, like the Let's talk buttons, with the next title in the project's heading type */
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  max-width: 100%;
+  padding: 0.7rem 1.2rem;
+  border: 1px solid rgba(var(--glass-edge-rgb), 0.12);
+  border-radius: 999px;
+  box-shadow: var(--glass-lift);
+  background: rgba(var(--stark-rgb), var(--surface-opacity));
+  backdrop-filter: blur(0.5rem);
+  color: var(--text-color);
+  text-decoration: none;
+  transition: all var(--base-timing) var(--base-easing);
+}
+
+.button:hover {
+  background: rgba(var(--stark-rgb), var(--surface-opacity-hover));
+  backdrop-filter: blur(1rem);
+  color: var(--text-color);
+}
+
+.label {
+  color: var(--muted-color);
+  font-size: var(--small-font-size);
+  font-weight: 500;
+}
+
+.title {
+  font-family: var(--heading-font);
+  font-weight: var(--font-weight-semibold);
+  font-size: 1.05rem;
+  line-height: 1.2;
+}
+
+.button svg {
+  flex: none;
+  width: 1rem;
+  height: 1rem;
+  margin: 0;
+  transition: transform var(--base-timing) var(--base-easing);
+}
+
+.button:hover svg {
+  transform: translateX(0.2em);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button,
+  .button svg {
+    transition: none;
+  }
+}

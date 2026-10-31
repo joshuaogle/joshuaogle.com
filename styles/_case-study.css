@@ -1,0 +1,82 @@
+/* Case studies, set like a magazine feature (think Vogue or GQ) in the site's own type:
+   room between sections, plain tracked-capital labels, big Tiempos headings in the
+   project's color, and thin rules instead of boxes. Every text color here clears WCAG AA
+   (4.5:1), and nothing is lighter than weight 400. Figures are in _example.module.css. */
+
+.case-study {
+  --section-gap: calc(var(--larger-spacing) * var(--bigger) * var(--bigger) * var(--bigger));
+}
+
+/* Spacing groups what belongs together: a section's eyebrow, heading and text sit close,
+   figures get room around them, and every section starts the same distance after the one
+   before, whatever it ended with */
+.case-study > section {
+  padding: var(--section-gap) 0 0;
+}
+
+.case-study > section > :last-child {
+  margin-bottom: 0;
+}
+
+/* The hero image starts the story: a clear step down from the header, and no margin under
+   it, so the first section starts a section's distance below */
+.case-study > figure:first-child {
+  /* Top and bottom only: a wide or full-bleed image sets its own left margin to center */
+  margin-top: calc(var(--larger-spacing) * var(--bigger));
+  margin-bottom: 0;
+}
+
+/* Jumping to a section (links, the On this page pill) lands with the eyebrow just below the
+   pill, rather than at the top of the section's padding */
+.case-study > section {
+  scroll-margin-top: calc(5rem - var(--section-gap));
+}
+
+.case-study p,
+.case-study li {
+  font-weight: var(--font-weight-regular);
+}
+
+.case-study p a {
+  color: var(--readable-action-color);
+  text-decoration: underline;
+}
+
+/* Section eyebrows and small labels: plain text, no numbers, no line before them */
+.case-study .section-title,
+.case-study .label {
+  margin: 0 0 var(--small-spacing);
+  color: var(--text-color);
+  font-family: var(--sans-serif);
+  font-size: var(--smallest-font-size);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.18em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+/* The eyebrow belongs to its heading, so it sits just above it */
+.case-study .section-title {
+  margin-bottom: 0.55rem;
+}
+
+/* A section's heading sits closer to its text than paragraphs do to each other */
+.case-study > section > h2 {
+  margin-bottom: 0.9rem;
+}
+
+.case-study h2 {
+  margin-bottom: var(--small-spacing);
+  color: var(--theme-color-title);
+  font-size: calc(2.75 * var(--heading-unit));
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+/* Wider than the text column, centered on it, for findings, results and the like */
+.case-study .wide {
+  --width: min(100vw - var(--base-spacing) * 2, 64rem);
+  width: var(--width);
+  margin-left: calc(50% - var(--width) / 2);
+}
