@@ -23,9 +23,9 @@
 }
 
 .surface::before {
-  --border-start: rgba(var(--theme-highlight-rgb), 0.12);
-  --border-middle: rgba(var(--theme-highlight-rgb), 0.05);
-  --border-end: rgba(var(--theme-highlight-rgb), 0.15);
+  --border-start: rgba(var(--glass-edge-rgb), 0.12);
+  --border-middle: rgba(var(--glass-edge-rgb), 0.05);
+  --border-end: rgba(var(--glass-edge-rgb), 0.15);
   animation: rotateBorder 12s infinite linear;
   background-image: linear-gradient(
     var(--surface-border-angle),

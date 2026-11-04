@@ -9,63 +9,75 @@ type ExampleProps = {
   caption: string;
 }
 
-type ExampleImageProps = {
-  filename: string;
-  index: number;
-  of: number;
-  caption: string;
+// Where a figure sits, decided by its images' size and kind: big photos run edge to edge,
+// big screens break out of the text column, and small or tall captures stay in it
+type Layout = 'bleed' | 'wide' | 'column'
+
+type Size = { width: number, height: number }
+
+const isPhoto = (filename: string) => /\.jpe?g$/i.test(filename)
+const isSmall = ({ width, height }: Size) => width < 1000 || width / height < 1
+
+function layoutFor(filename: string, size: Size): Layout {
+  if (isPhoto(filename) && size.width >= 2400) return 'bleed'
+  if (isSmall(size) || size.width < 1400) return 'column'
+  return 'wide'
 }
 
-const Example = ({ images, video, caption }: ExampleProps) => {
-  return (
-    <div className={styles.container}>
-      {images && (
-        <div
-          className={styles.grid}
-          data-examples={images.length}
-        >
-          {images.map((filename, index) => (
-            <ExampleImage key={index} filename={filename} index={index} of={images.length} caption={caption} />
-          ))}
-        </div>
-      )}
+// Related images go in a row at one height, which needs room: a group breaks out of the
+// column unless every image in it is small
+function groupLayout(filenames: string[], sizes: Size[]): Layout {
+  const layouts = filenames.map((filename, i) => layoutFor(filename, sizes[i]))
+  if (layouts.length === 1) return layouts[0]
+  if (layouts.every(l => l === 'bleed')) return 'bleed'
+  if (sizes.every(isSmall)) return 'column'
+  return 'wide'
+}
 
-      {video && (
-        <figure className={styles.figure}>
+const SIZES: Record<Layout, string> = {
+  bleed: '100vw',
+  wide: '(max-width: 1200px) 100vw, 1152px',
+  column: '(max-width: 800px) 100vw, 760px',
+}
+
+const Example = async ({ images, video, caption }: ExampleProps) => {
+  if (video) {
+    return (
+      <figure className={styles.example} data-layout="wide">
+        <div className={styles.images}>
           <AutoplayVideo src={`/images/${video}`} label={caption} />
-        </figure>
-      )}
+        </div>
+        {caption && <figcaption className={styles.caption}>{caption}</figcaption>}
+      </figure>
+    )
+  }
 
-      {caption && (
-        <small className={styles.caption}>
-          {caption}
-        </small>
-      )}
-    </div>
-  )
-}
+  if (!images?.length) return null
 
-// Case study images never render wider than the article column
-const EXAMPLE_IMAGE_SIZES = '(max-width: 800px) 100vw, 760px'
-
-const ExampleImage = async ({filename, index, of, caption}: ExampleImageProps) => {
-  const { width, height } = await getImageSize(`images/${filename}`)
+  const sizes = await Promise.all(images.map((filename) => getImageSize(`images/${filename}`)))
+  const layout = groupLayout(images, sizes)
+  // Each column is as wide as its image's aspect ratio, so a row of images shares one height
+  const columns = sizes.map(({ width, height }) => `${(width / height).toFixed(3)}fr`).join(' ')
+  const imageSizes = images.length > 1 && layout !== 'bleed'
+    ? `(max-width: 600px) 100vw, ${Math.round((layout === 'wide' ? 1152 : 760) / images.length)}px`
+    : SIZES[layout]
 
   return (
-    <div
-      className={styles.area}
-      data-number={`${index + 1}-of-${of}`}
-    >
-      <figure className={styles.figure}>
-        <Image
-          src={`/images/${filename}`}
-          width={width}
-          height={height}
-          sizes={EXAMPLE_IMAGE_SIZES}
-          alt={of > 1 ? `${caption} (${index + 1} of ${of})` : caption}
-        />
-      </figure>
-    </div>
+    <figure className={styles.example} data-layout={layout}>
+      <div className={styles.images} style={{ gridTemplateColumns: columns }}>
+        {images.map((filename, index) => (
+          <Image
+            key={filename}
+            src={`/images/${filename}`}
+            width={sizes[index].width}
+            height={sizes[index].height}
+            sizes={imageSizes}
+            alt={images.length > 1 ? `${caption} (${index + 1} of ${images.length})` : caption}
+          />
+        ))}
+      </div>
+      {caption && <figcaption className={styles.caption}>{caption}</figcaption>}
+    </figure>
   )
 }
 

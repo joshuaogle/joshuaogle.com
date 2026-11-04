@@ -6,16 +6,12 @@ import styles from '../styles/components/_welcome.module.css'
 const Welcome = () => {
   return (
     <header className={styles.header}>
-      <h1 className={styles.title}>
-        Hi, I'm<br/>
-        Joshua
-      </h1>
       <div className={styles.cardContainer}>
         <Surface>
           <div className={styles.card}>
             <div className={styles.portraitContainer}>
               <Image
-                src="/images/portrait.png"
+                src="/images/portrait.jpg"
                 height="1200"
                 width="1200"
                 alt="Joshua Ogle"
@@ -27,9 +23,10 @@ const Welcome = () => {
             </div>
             <div className={styles.textContainer}>
               <div className={styles.nameContainer}>
-                <span className={styles.name}>
+                {/* The page's heading, set like the rest of the card */}
+                <h1 className={styles.name}>
                   Joshua Ogle
-                </span>
+                </h1>
                 &nbsp;
                 <LocalTime />
               </div>

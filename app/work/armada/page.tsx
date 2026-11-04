@@ -3,7 +3,8 @@ import CaseStudyTheme from '@/components/case-study-theme'
 import Intro from '@/components/intro'
 import LogoStack from '@/components/logo-stack'
 import Example from '@/components/example'
-import { caseStudyMetadata, getCaseStudy } from '@/lib/case-studies'
+import NextCaseStudy from '@/components/next-case-study'
+import { caseStudyKicker, caseStudyMetadata, getCaseStudy } from '@/lib/case-studies'
 
 const study = getCaseStudy('armada')
 
@@ -19,20 +20,20 @@ export default function ArmadaCaseStudy() {
         meta={study.meta}
         theme={study.theme}
         logos={<LogoStack study={study} />}
+        kicker={caseStudyKicker(study)}
+        dek={study.dek}
       />
 
-      <div className={`article-body centered`}>
-        <section>
-          <Example
-            images={[
-              "case-studies/armada-home.png"
-            ]}
-            caption="Armada helps you track your fleet in real-time"
-          />
-        </section>
+      <div className="article-body centered case-study">
+        <Example
+          images={[
+            "case-studies/armada-home.jpg"
+          ]}
+          caption="Armada helps you track your fleet in real-time"
+        />
 
         <section>
-          <div className="section-title">The Challenge</div>
+          <div className="section-title">The challenge</div>
           <h2>Find your fleet</h2>
           <p>
             <mark>Tracking assets and vehicles isn't easy.</mark>
@@ -55,7 +56,7 @@ export default function ArmadaCaseStudy() {
         </section>
 
         <section>
-          <div className="section-title">The Solution</div>
+          <div className="section-title">The solution</div>
           <h2>Getting the whole picture</h2>
           <p>
             It was important to us to get a design into the browser as soon as possible in order to feel the experience across desktop, tablet and mobile devices.
@@ -64,28 +65,24 @@ export default function ArmadaCaseStudy() {
             Because we had a lot of experience working together, we were able to really quickly put together the structure of the app and describe the user experience.
             After that, we dove straight in and started building the core functionality while I worked on creating the views that we whiteboarded.
           </p>
-        </section>
 
-        <Example
-          images={["case-studies/armada-users.png"]}
-          caption="It's easy to manage your team"
-        />
+          <Example
+            images={["case-studies/armada-users.png"]}
+            caption="It's easy to manage your team"
+          />
 
-        <section>
           <p>
             I think this process of iterative design is a powerful tool that not enough people get comfortable with.
             A "waterfall" approach (one that starts with wireframes and then high-fidelity mockups before code even begins) ignores the fluid nature of the web and discourages experimentation.
             Around this time, the device prototypes were ready and we were able to start testing them on our own cars.
             Seeing the data and maps populate in real-time was <mark>magical</mark>, and not something you get to experience on every project.
           </p>
-        </section>
 
-        <Example
-          images={["case-studies/armada-user.png"]}
-          caption="User details"
-        />
+          <Example
+            images={["case-studies/armada-user.png"]}
+            caption="User details"
+          />
 
-        <section>
           <p>
             Now that we had all of this data streaming in, we got to work on how to surface the most important parts to the users.
             We started by allowing supervisors to opt-in to text or email notifications about bad behavior as it happened, so they can make sure their drivers were being safe.
@@ -94,15 +91,15 @@ export default function ArmadaCaseStudy() {
             You can scrub through a timeline of activity, with the start and stop location for each trip laid out on the map.
             All of this together made for a unique experience that was miles ahead of the competition.
           </p>
+
+          <Example
+            images={["case-studies/armada-trips.png"]}
+            caption="Trip history"
+          />
         </section>
 
-        <Example
-          images={["case-studies/armada-trips.png"]}
-          caption="Trip history"
-        />
-
         <section>
-          <div className="section-title">In Summary</div>
+          <div className="section-title">Reflection</div>
           <h2>Never underestimate a small team</h2>
           <p>
             I'm really proud of the design work that we were able to accomplish and that they were on board with all of my crazy ideas.
@@ -110,6 +107,8 @@ export default function ArmadaCaseStudy() {
             We were able move efficiently thanks to a clear vision and a team that understood that <mark>you can build amazing things if you start small and iterate</mark>.
           </p>
         </section>
+
+        <NextCaseStudy study={study} />
       </div>
     </>
   )

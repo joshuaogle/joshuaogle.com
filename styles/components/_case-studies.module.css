@@ -1,7 +1,10 @@
-/* Wider than the reading column (--page-width) so three covers fit side by side */
+/* The covers break out of the reading column to the same width as a wide figure on a case
+   study page (64rem), while the heading stays in the column with the intro. Spacing above
+   matches the case study pages' sections. */
 .section {
-  width: min(100% - var(--base-spacing) * 2, 72rem);
+  width: min(100% - var(--base-spacing) * 2, 64rem);
   margin-inline: auto;
+  padding-top: calc(var(--larger-spacing) * var(--bigger));
 }
 
 .heading {
@@ -12,7 +15,7 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 60px clamp(28px, 6vw, 72px);  /* the row gap leaves room for the 18px ribbon tails */
+  gap: 60px clamp(24px, 3vw, 36px);  /* the row gap leaves room for the 18px ribbon tails */
   padding-block: 6px 30px;
 }
 

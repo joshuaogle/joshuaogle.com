@@ -1,61 +1,75 @@
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: var(--smallest-spacing);
-  margin: var(--base-spacing) 0;
+/* Figures in a case study. The layout comes from the images' size and kind
+   (components/example.tsx). */
+.example {
+  margin: var(--larger-spacing) 0;
+  padding: 0;  /* overrides the site-wide figure padding, so figures line up with the text */
 }
 
-.grid {
-  display: grid; 
-  grid-template-columns: repeat(8, 1fr); 
-  grid-template-rows: repeat(8, auto); 
-  grid-column-gap: var(--base-spacing);
-  grid-row-gap: var(--base-spacing);
-  align-items: center;
-  justify-content: center;
-}
-
-/* 1 panel layout */
-.area[data-number="1-of-1"] {
-  grid-area: 1 / 1 / 9 / 9;
-}
-
-/* 2 panel layout */
-.area[data-number="1-of-2"] {
-  grid-area: 1 / 1 / 6 / 6;
-} 
-.area[data-number="2-of-2"] {
-  grid-area: 4 / 4 / 9 / 9;
-}
-
-/* 3 panel layout */
-.area[data-number="1-of-3"] {
-  grid-area: 2 / 1 / 6 / 7;
-}
-.area[data-number="2-of-3"] {
-  grid-area: 5 / 3 / 9 / 8;
-}
-.area[data-number="3-of-3"] {
-  grid-area: 1 / 5 / 4 / 9;
+.images {
+  display: grid;
+  gap: var(--small-spacing);
+  align-items: start;
 }
 
 /* The work as it is: a soft corner and a hairline edge, no frame or effects */
-.figure {
-  margin: 0;
-}
-
-.figure img,
-.figure video {
+.images img,
+.images video {
   display: block;
   width: 100%;
   height: auto;
   border-radius: 6px;
-  box-shadow: 0 0 0 1px rgba(var(--theme-highlight-rgb), 0.12);
+  box-shadow: 0 0 0 1px var(--hairline-color);
 }
 
+/* Sentence case, aligned with the image's place: left in the text column, right when the
+   figure breaks out of it */
 .caption {
-  color: var(--muted-color);
-  top: 100%;
+  display: block;
+  margin-top: var(--smaller-spacing);
+  color: var(--readable-muted-color);
+  font-family: var(--sans-serif);
+  font-size: var(--small-font-size);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: normal;
+  line-height: 1.5;
+}
+
+.example[data-layout="wide"] .caption,
+.example[data-layout="bleed"] .caption {
+  text-align: right;
+}
+
+/* Wider than the text, centered on it */
+.example[data-layout="wide"] {
+  --width: min(100vw - var(--base-spacing) * 2, 64rem);
+  width: var(--width);
+  margin-left: calc(50% - var(--width) / 2);
+}
+
+/* Edge to edge, no frame, cropped so it never fills more than most of the screen */
+.example[data-layout="bleed"] {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+
+.example[data-layout="bleed"] .images {
+  gap: 0;
+}
+
+.example[data-layout="bleed"] img {
+  max-height: min(85vh, 44rem);
+  object-fit: cover;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.example[data-layout="bleed"] .caption {
+  padding-inline: var(--base-spacing);
+}
+
+/* On a phone, rows stack */
+@media (max-width: 600px) {
+  .images {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
 }

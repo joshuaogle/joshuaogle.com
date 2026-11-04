@@ -1,6 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   turbopack: {},
+  // The two Boundary case studies became one, told in chapters
+  async redirects() {
+    return [
+      { source: '/work/boundary-session-recording', destination: '/work/boundary#session-recording', permanent: true },
+      { source: '/work/boundary-transparent-sessions', destination: '/work/boundary#transparent-sessions', permanent: true },
+    ]
+  },
   images: {
     remotePatterns: [
       { protocol: 'https', hostname: 'images.thoughtbot.com' },

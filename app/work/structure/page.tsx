@@ -5,7 +5,9 @@ import CaseStudyTheme from '@/components/case-study-theme'
 import Intro from '@/components/intro'
 import LogoStack from '@/components/logo-stack'
 import Example from '@/components/example'
-import { caseStudyMetadata, getCaseStudy } from '@/lib/case-studies'
+import RoleSplit from '@/components/role-split'
+import NextCaseStudy from '@/components/next-case-study'
+import { caseStudyKicker, caseStudyMetadata, getCaseStudy } from '@/lib/case-studies'
 import migrationImage from '@/public/images/case-studies/structure-migration.png'
 import copImage from '@/public/images/case-studies/structure-cop.png'
 
@@ -23,9 +25,18 @@ export default function StructureCaseStudy() {
         meta={study.meta}
         theme={study.theme}
         logos={<LogoStack study={study} />}
+        kicker={caseStudyKicker(study)}
+        dek={study.dek}
       />
 
-      <div className={`article-body centered`}>
+      <div className="article-body centered case-study">
+        <Example
+          images={[
+            "case-studies/structure-summary.jpg"
+          ]}
+          caption="Tokens and components in Structure"
+        />
+
         <section>
           <div className="section-title">The challenge</div>
           <h2>Who designs the design system?</h2>
@@ -46,13 +57,6 @@ export default function StructureCaseStudy() {
             from all of our products.
           </p>
 
-          <Example
-            images={[
-              "case-studies/structure-summary.png"
-            ]}
-            caption="Tokens and components in Structure"
-          />
-
           <p>
             When most people think of design systems
             they picture colorful grids of buttons
@@ -62,6 +66,19 @@ export default function StructureCaseStudy() {
             <mark>Design systems are living things,
             and only grow and survive if they are nurtured.</mark>
           </p>
+        </section>
+
+        <section>
+          <div className="section-title">My role</div>
+          <h2>What I led</h2>
+          <RoleSplit
+            led={[
+              'The Design System Working Group, with designers from every product',
+              'The collaboration model for contributing components',
+              'The migration from Sketch to Figma, all 300 components',
+              'A walkthrough and Q&A to teach the new system',
+            ]}
+          />
         </section>
 
         <section>
@@ -121,8 +138,8 @@ export default function StructureCaseStudy() {
 
           <Example
             images={[
-              "case-studies/structure-welcome.png",
-              "case-studies/structure-spacing.png",
+              "case-studies/structure-welcome.jpg",
+              "case-studies/structure-spacing.jpg",
               "case-studies/structure-colors.png"
             ]}
             caption="Starting in Sketch"
@@ -245,8 +262,9 @@ export default function StructureCaseStudy() {
           </p>
         </section>
 
+
         <section>
-          <div className="section-title">Results and reflection</div>
+          <div className="section-title">Reflection</div>
           <h2>All good things&hellip;</h2>
           <p>
             Just like users of a product,
@@ -273,6 +291,9 @@ export default function StructureCaseStudy() {
               sizes="(max-width: 800px) 100vw, 760px" />
           </p>
           <p>
+            Structure grew to cover six enterprise products,
+            with more than 30 shared components beyond those in each product
+            and over 120 hand-crafted icons.
             This grassroots approach worked well
             until we grew big enough to convince leadership
             to invest in a full-time team.
@@ -300,6 +321,8 @@ export default function StructureCaseStudy() {
             and listen to the designers who are using it.
           </p>
         </section>
+
+        <NextCaseStudy study={study} />
       </div>
     </>
   )

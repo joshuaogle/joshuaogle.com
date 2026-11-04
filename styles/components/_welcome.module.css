@@ -1,27 +1,16 @@
+/* Most of the first screen: the intro below starts about 20% up from the bottom, so a few
+   lines of it show and it's clear the page continues. --intro-at is where the intro's first
+   line lands; --above-intro is the site header and the intro's top padding. */
 .header {
   --portrait-size: 8rem;
+  --intro-at: 80svh;
+  --above-intro: 8.3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 33vh 0;
+  justify-content: center;
+  min-height: max(calc(var(--intro-at) - var(--above-intro)), 22rem);
   position: relative;
-}
-
-.title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  color: var(--background-start);
-  font-size: 18vw;
-  font-weight: var(--font-weight-black);
-  opacity: 0.75;
-  mix-blend-mode: overlay;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  text-shadow: 0 -1px 1px rgba(0,0,0,0.1),
-               0 1px 1px rgba(255,255,255,0.05);
-  pointer-events: none;
-  transition: --heading-color var(--base-timing) var(--base-easing);
 }
 
 .card {
@@ -66,8 +55,14 @@
   flex-direction: column;
 }
 
+/* The page's h1, set inline like the rest of the card rather than as a heading */
 .name {
+  display: inline;
+  margin: 0;
+  color: inherit;
+  font: inherit;
   font-weight: var(--font-weight-black);
+  letter-spacing: normal;
 }
 
 /* One step under the page's body text: the name at body size, the rest at small */
