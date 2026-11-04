@@ -57,7 +57,6 @@ Decisions Joshua has made while reviewing designs. Follow them in new work.
 - **Ink for headings in light, and every text color clears AA** (4.5:1) in both themes, including muted text and links.
 - **Glass has a neutral edge.** Cards and buttons use `--glass-edge-rgb` (a hint of highlight on dark, ink on light) and a soft lift on light, never the yellow highlight on white.
 - **Covers cast a shadow on light paper** so they sit on the page; on dark paper they don't need one.
-- **The ghost letters are pressed into the paper** in light, rather than blended, which turns them into a smudge on near-white.
 
 ### Case study pages
 

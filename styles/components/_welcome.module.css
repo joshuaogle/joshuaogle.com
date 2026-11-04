@@ -13,33 +13,6 @@
   position: relative;
 }
 
-.title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  color: var(--background-start);
-  font-size: 18vw;
-  font-weight: var(--font-weight-black);
-  opacity: 0.75;
-  mix-blend-mode: overlay;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  text-shadow: 0 -1px 1px rgba(0,0,0,0.1),
-               0 1px 1px rgba(255,255,255,0.05);
-  pointer-events: none;
-  transition: --heading-color var(--base-timing) var(--base-easing);
-}
-
-/* On light paper the overlay blend turns the letters into a faint white smudge, so they're
-   pressed into the paper instead: a tint a little darker than the page, lit from below */
-:global(html[data-prefers-color-scheme="light"]) .title {
-  color: rgba(100, 90, 78, 0.08);
-  opacity: 1;
-  mix-blend-mode: normal;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8),
-               0 -1px 0 rgba(80, 70, 60, 0.1);
-}
-
 .card {
   align-items: center;
   display: flex;
@@ -82,8 +55,14 @@
   flex-direction: column;
 }
 
+/* The page's h1, set inline like the rest of the card rather than as a heading */
 .name {
+  display: inline;
+  margin: 0;
+  color: inherit;
+  font: inherit;
   font-weight: var(--font-weight-black);
+  letter-spacing: normal;
 }
 
 /* One step under the page's body text: the name at body size, the rest at small */
